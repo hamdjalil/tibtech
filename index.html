@@ -30,6 +30,13 @@
             font-family: 'Audiowide', sans-serif;
         }
 
+        .gradient-text {
+            background: linear-gradient(to left, #FBCD82, #FF745A, #F465B9, #945CF1);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
         .noto {
             font-family: "NotoSerif";
         }
@@ -52,20 +59,80 @@
             position: relative;
             left: -10px;
         }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .email-input {
+            padding-block: 0px;
+            padding-inline: 0px;
+            border-radius: 5px;
+            padding: 8px 8px 8px 8px;
+            border: 1px solid black;
+            box-sizing: border-box;
+        }
+
+        .button {
+            border-radius: 5px;
+            background: linear-gradient(to left, #FBCD82, #FF745A, #F465B9, #945CF1);
+            padding-top: 8px;
+            padding-bottom: 8px;
+            color: white;
+            cursor: pointer;
+        }
+
+        .animated-text {
+            font-size: 40px;
+        }
+
+        .left-column {
+            padding: 20px; 
+            row-gap: 20px; 
+            width: 60%;
+        }
+
+        @media only screen and (max-width: 992px) {
+            .top-row {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .animated-text {
+                font-size: 24px;
+            }
+
+            .left-column {
+                width: 80%;
+            }
+        }
     </style>
 </head>
 
-<body style="background-color: rgb(198, 198, 198);">
+<body style="background-color: rgb(255, 255, 255);">
     <div class="center-col" style="row-gap: 60px;">
+        <!-- top row -->
         <div class="center-row top-row" style="width: 100%;">
+
+            <!-- Left column -->
             <div class="center-col" style="flex: 1">
-                <div class="" style="width: 100%; padding-top: 20px;">
+                <div class="center-col text-center left-column">
                     <img src="/assets/logo.svg" style="height: 100px;" />
+                    <div class="audiowide" style="font-size: 23px;">Multimodal Healthcare</div>
+                    <div class="noto center-col">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        <br><br><br>
+                        <div class="center-col" style="width: 100%; row-gap: 10px;">
+                            <input class="email-input" type="text" placeholder="you@your-work-email.com" style="width: 100%;">
+                            <div class="button" style="width: 100%;">Request a demo</div>
+                        </div>
+                    </div>
                 </div>
-                <div>Request a Demo</div>
             </div>
-            <div class="center-row" style="flex: 1">
-                <div class="center-col noto" style="margin: 40px; font-size: 27px;">
+
+            <!-- Animated text -->
+            <div class="center-row animated-text" style="flex: 1;">
+                <div class="center-col noto">
                     <div>We're your AI-first</div>
                     <div>
                         <span ref={element} class="gradient-text"></span>
@@ -75,6 +142,8 @@
                 </div>
             </div>
         </div>
+        
+        <!-- experience -->
         <div class="center-col audiowide" style="row-gap: 5px; margin-top: 100px;">
             <div class="experience-title" style="font-size: 25px; font-weight: bold; margin-bottom: 20px;">
                 Our Experience
@@ -96,6 +165,8 @@
                 <img src="/assets/experience/academia/7.png" height="40" />
             </div>
         </div>
+        
+        <!-- bottom copyright  -->
         <div class="center-col" style="margin-top: 40px;">© Tibbling AI · All Rights Reserved</div>
     </div>
 </body>
