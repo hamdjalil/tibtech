@@ -128,11 +128,18 @@
             top: -5px;
         }
 
+        .demo {
+            width: 80%;
+        }
 
         @media only screen and (max-width: 992px) {
             .top-row {
                 flex-direction: column;
                 gap: 60px;
+            }
+
+            .demo {
+                width: 100%;
             }
 
             .left-column {
@@ -168,7 +175,7 @@
                 <div class="center-col text-center left-column">
                     <img src="/assets/logo.svg" style="height: 100px;" />
                     <div class="audiowide" style="font-size: 23px;">Multimodal Healthtech</div>
-                    <div class="noto center-col" style="width: 80%;">
+                    <div class="noto center-col demo">
                         <div class="center-col" style="width: 100%; row-gap: 10px;">
                             <input class="email-input" type="text" placeholder="you@your-work-email.com" style="width: 100%;">
                             <div class="button" style="width: 100%;">Request a demo</div>
