@@ -92,18 +92,65 @@
             width: 60%;
         }
 
+        .experience-row {
+            gap: 20px;
+        }
+
+        .title {
+            font-size: 25px; 
+            font-weight: bold; 
+            margin-bottom: 20px;
+        }
+
+        .intro {
+            gap: 40px;
+            padding: 20px;
+        }
+
+        .intro > div {
+            gap: 10px;
+            transition: all 300ms;
+            cursor: pointer;
+            position: relative;
+            top: 0;
+        }
+
+        .experience-row > img {
+            transition: all 300ms;
+            position: relative;
+            top: 0;
+            cursor: pointer;
+        }
+
+        .intro > div:hover, .experience-row > img:hover  {
+            opacity: 0.5;
+            top: -5px;
+        }
+
+
         @media only screen and (max-width: 992px) {
             .top-row {
                 flex-direction: column;
-                gap: 20px;
-            }
-
-            .animated-text {
-                font-size: 24px;
+                gap: 60px;
             }
 
             .left-column {
                 width: 80%;
+            }
+
+            .intro {
+                flex-direction: column;
+            }
+        }
+
+        @media only screen and (max-width: 640px) {
+            .experience-row {
+                flex-direction: column;
+                row-gap: 20px;
+            }
+
+            .animated-text {
+                font-size: 24px;
             }
         }
     </style>
@@ -143,25 +190,50 @@
             </div>
         </div>
         
+        <!-- who we are -->
+        <div class="center-col text-center audiowide" style="margin: 130px 30px 100px 30px;">
+            <div class="title" style="width: 100%;">
+                Who We Are
+            </div>
+            <div class="center-row intro">
+                <div class="center-col noto">
+                    <img src="/assets/intro/search.png" height="80" >
+                    <div>AI Researchers</div>
+                </div>
+                <div class="center-col noto">
+                    <img src="/assets/intro/coding.png" height="80" >
+                    <div>Software Engineers</div>
+                </div>
+                <div class="center-col noto">
+                    <img src="/assets/intro/enzyme.png" height="80" >
+                    <div>Scientists</div>
+                </div>
+                <div class="center-col noto">
+                    <img src="/assets/intro/lightbulb.png" height="80" >
+                    <div>Product Leaders</div>
+                </div>
+            </div>
+        </div>
+
         <!-- experience -->
-        <div class="center-col audiowide" style="row-gap: 5px; margin-top: 100px;">
-            <div class="experience-title" style="font-size: 25px; font-weight: bold; margin-bottom: 20px;">
+        <div class="center-col audiowide" style="row-gap: 5px;">
+            <div class="title">
                 Our Experience
             </div>
-            <div class="experience-row center-row" style="column-gap: 20px; row-gap: 10px;">
+            <div class="experience-row center-row">
                 <img src="/assets/experience/industry/1.png" height="30" />
                 <img src="/assets/experience/industry/2.svg" height="70" />
-                <img src="/assets/experience/industry/3.png" height="40" />
+                <img src="/assets/experience/industry/3.png" height="50" />
                 <img src="/assets/experience/industry/4.png" height="40" />
-                <img src="/assets/experience/industry/5.png" height="40" />
+                <img src="/assets/experience/industry/5.png" height="50" />
             </div>
-            <div class="experience-row center-row" style="column-gap: 20px; row-gap: 10px;">
+            <div class="experience-row center-row">
                 <img src="/assets/experience/academia/1.svg" height="70" />
                 <img src="/assets/experience/academia/2.png" height="18" />
                 <img src="/assets/experience/academia/3.svg" height="60" />
                 <img src="/assets/experience/academia/4.png" height="40" />
                 <img src="/assets/experience/academia/5.png" height="40" />
-                <img src="/assets/experience/academia/6.png" height="40" />
+                <img src="/assets/experience/academia/6.png" height="60" />
                 <img src="/assets/experience/academia/7.png" height="40" />
             </div>
         </div>
