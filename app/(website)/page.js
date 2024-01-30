@@ -1,3 +1,5 @@
+'use client'
+
 import { useEffect, useRef } from "react";
 
 export default function Home() {
@@ -21,7 +23,6 @@ export default function Home() {
     const textRoutine = async (ele) => {
       while (1) {
         for (let title of titles) {
-          console.log(title)
           for (let c of title) {
             ele.innerHTML += c
             await sleep(50);
@@ -38,53 +39,52 @@ export default function Home() {
     }
 
     textRoutine(element.current)
+    console.log("here")
 
   }, [])
 
   return (
-    <body style="background-color: rgb(198, 198, 198);">
-      <div class="center-col" style="row-gap: 60px;">
-        <div class="center-row top-row" style="width: 100%;">
-          <div class="center-col" style="flex: 1">
-            <div class="" style="width: 100%; padding-top: 20px;">
-              <img src="assets/logo.svg" style="height: 100px;" />
-            </div>
-            <div>Request a Demo</div>
+    <div className="center-col gap-16 bg-slate-400 h-full">
+      <div className="center-row top-row w-full">
+        <div className="center-col flex-1">
+          <div className="w-full pt-5">
+            <img src="/assets/logo.svg" className="h-[100px]" />
           </div>
-          <div class="center-row" style="flex: 1">
-            <div class="center-col noto" style="margin: 40px; font-size: 27px;">
-              <div>We're your AI-first</div>
-              <div>
-                <span ref={element} class="gradient-text"></span>
-                <span class="blinker">|</span>
-              </div>
-              <div>to help get it done</div>
+          <div>Request a Demo</div>
+        </div>
+        <div className="center-row flex-1">
+          <div className="center-col noto m-10 text-[27px]">
+            <div>We're your AI-first</div>
+            <div>
+              <span ref={element} className="gradient-text"></span>
+              <span className="blinker">|</span>
             </div>
+            <div>to help get it done</div>
           </div>
         </div>
-        <div class="center-col audiowide" style="row-gap: 5px; margin-top: 100px;">
-          <div class="experience-title" style="font-size: 25px; font-weight: bold; margin-bottom: 20px;">
-            Our Experience
-          </div>
-          <div class="experience-row center-row" style="column-gap: 20px; row-gap: 10px;">
-            <img src="assets/experience/industry/1.png" height="30" />
-            <img src="assets/experience/industry/2.svg" height="70" />
-            <img src="assets/experience/industry/3.png" height="40" />
-            <img src="assets/experience/industry/4.png" height="40" />
-            <img src="assets/experience/industry/5.png" height="40" />
-          </div>
-          <div class="experience-row center-row" style="column-gap: 20px; row-gap: 10px;">
-            <img src="assets/experience/academia/1.svg" height="70" />
-            <img src="assets/experience/academia/2.png" height="18" />
-            <img src="assets/experience/academia/3.svg" height="60" />
-            <img src="assets/experience/academia/4.png" height="40" />
-            <img src="assets/experience/academia/5.png" height="40" />
-            <img src="assets/experience/academia/6.png" height="40" />
-            <img src="assets/experience/academia/7.png" height="40" />
-          </div>
-        </div>
-        <div class="center-col" style="margin-top: 40px;">© Tibbling AI · All Rights Reserved</div>
       </div>
-    </body>
+      <div className="center-col audiowide gap-1 mt-[100px]">
+        <div className="experience-title text-[25px] font-bold mb-5">
+          Our Experience
+        </div>
+        <div className="experience-row center-row gap-5">
+          <img src="/assets/experience/industry/1.png" className="h-[30px]" />
+          <img src="/assets/experience/industry/2.svg" className="h-[70px]" />
+          <img src="/assets/experience/industry/3.png" className="h-[40px]" />
+          <img src="/assets/experience/industry/4.png" className="h-[40px]" />
+          <img src="/assets/experience/industry/5.png" className="h-[40px]" />
+        </div>
+        <div className="experience-row center-row gap-5">
+          <img src="/assets/experience/academia/1.svg" className="h-[70px]" />
+          <img src="/assets/experience/academia/2.png" className="h-[18px]" />
+          <img src="/assets/experience/academia/3.svg" className="h-[60px]" />
+          <img src="/assets/experience/academia/4.png" className="h-[40px]" />
+          <img src="/assets/experience/academia/5.png" className="h-[40px]" />
+          <img src="/assets/experience/academia/6.png" className="h-[40px]" />
+          <img src="/assets/experience/academia/7.png" className="h-[40px]" />
+        </div>
+      </div>
+      <div className="center-col mt-10">© Tibbling AI · All Rights Reserved</div>
+    </div>
   );
 }
