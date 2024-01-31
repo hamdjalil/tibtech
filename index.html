@@ -83,6 +83,7 @@
             padding-bottom: 8px;
             color: white;
             cursor: pointer;
+            border: none;
         }
 
         .animated-text {
@@ -174,10 +175,12 @@
                     <img src="/assets/logo.svg" style="height: 100px;" />
                     <div class="audiowide" style="font-size: 23px;">Multimodal Healthtech</div>
                     <div class="noto center-col demo">
-                        <div class="center-col" style="width: 100%; row-gap: 10px;">
-                            <input class="email-input" type="text" placeholder="you@your-work-email.com" style="width: 100%;">
-                            <div class="button" style="width: 100%;">Request a demo</div>
-                        </div>
+                        <form action="https://formspree.io/f/xvoezewb" method="POST" id="#demo-form" style="width: 100%">
+                            <div class="center-col" style="width: 100%; row-gap: 10px;">
+                                <input class="email-input" type="text" placeholder="you@your-work-email.com" name="email" style="width: 100%;" required>
+                                <button type="submit" class="button" style="width: 100%;">Request a demo</button>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -266,7 +269,6 @@
     const textRoutine = async (ele) => {
         while (1) {
             for (let title of titles) {
-                console.log(title)
                 for (let c of title) {
                     ele.innerHTML += c
                     await sleep(50);
@@ -284,5 +286,10 @@
 
     textRoutine(element)
 </script>
-
+<script>
+    function submitForm() {
+        document.getElementById("#demo-form").submit();
+        console.log("here")
+    }
+</script>
 </html>
