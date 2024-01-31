@@ -11,7 +11,6 @@
     <title>Tibbling AI</title>
 
     <style>
-
         .center-col {
             display: flex;
             flex-flow: column wrap;
@@ -30,6 +29,18 @@
             font-family: 'Audiowide', sans-serif;
         }
 
+        @font-face {
+            font-family: "NotoSerif";
+            src: url("/assets/Noto_Serif/NotoSerif-VariableFont_wdth\,wght.ttf");
+        }
+        .noto {
+            font-family: "NotoSerif";
+        }
+        
+        .text-center {
+            text-align: center;
+        }
+
         .gradient-text {
             background: linear-gradient(to left, #FBCD82, #FF745A, #F465B9, #945CF1);
             background-clip: text;
@@ -37,13 +48,9 @@
             -webkit-text-fill-color: transparent;
         }
 
-        .noto {
-            font-family: "NotoSerif";
-        }
-
-        @font-face {
-            font-family: "NotoSerif";
-            src: url("/assets/Noto_Serif/NotoSerif-VariableFont_wdth\,wght.ttf");
+        .top-row {
+            flex-direction: column;
+            gap: 60px;
         }
 
         @keyframes blinking {
@@ -58,10 +65,6 @@
             animation-iteration-count: infinite;
             position: relative;
             left: -10px;
-        }
-
-        .text-center {
-            text-align: center;
         }
 
         .email-input {
@@ -89,8 +92,8 @@
 
         .left-column {
             padding: 20px; 
-            row-gap: 20px; 
-            width: 60%;
+            gap: 30px; 
+            width: 100%;
         }
 
         .experience-row {
@@ -133,11 +136,6 @@
         }
 
         @media only screen and (max-width: 992px) {
-            .top-row {
-                flex-direction: column;
-                gap: 60px;
-            }
-
             .demo {
                 width: 100%;
             }
@@ -168,10 +166,10 @@
 <body style="background-color: rgb(255, 255, 255);">
     <div class="center-col" style="row-gap: 60px;">
         <!-- top row -->
-        <div class="center-row top-row" style="width: 100%;">
+        <div class="center-col" style="width: 100%; gap: 60px">
 
             <!-- Left column -->
-            <div class="center-col" style="flex: 1">
+            <div class="center-col" style="flex: 1; width: 100%; max-width: 700px;">
                 <div class="center-col text-center left-column">
                     <img src="/assets/logo.svg" style="height: 100px;" />
                     <div class="audiowide" style="font-size: 23px;">Multimodal Healthtech</div>
