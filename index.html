@@ -172,14 +172,27 @@
 <body style="background-color: rgb(255, 255, 255);">
     <div class="center-col" style="row-gap: 60px;">
         <!-- top row -->
-        <div class="center-col" style="width: 100%; gap: 60px">
+        <div class="center-row" style="width: 100%; gap: 60px">
 
             <!-- Left column -->
             <div class="center-col" style="flex: 1; width: 100%; max-width: 700px;">
                 <div class="center-col text-center left-column">
+                    <!-- Logo -->
                     <img src="/assets/logo.svg" style="height: 100px;" />
                     <div class="audiowide" style="font-size: 23px;">Multimodal Healthtech</div>
-                    <img src="/assets/TibbTech.svg" style="height: 600px;" >
+                    
+                    <!-- Animated text -->
+                    <div class="center-row animated-text" style="flex: 1;">
+                        <div class="center-col noto">
+                            <div>We're your AI-first</div>
+                            <div>
+                                <span ref={element} class="gradient-text"></span>
+                                <span class="blinker">|</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- get in touch form -->
                     <div class="noto center-col demo">
                         <form action="https://formspree.io/f/xvoezewb" method="POST" id="#demo-form" style="width: 100%">
                             <div class="center-col" style="width: 100%; row-gap: 10px;">
@@ -192,17 +205,11 @@
                 </div>
             </div>
 
-            <!-- Animated text -->
-            <div class="center-row animated-text" style="flex: 1;">
-                <div class="center-col noto">
-                    <div>We're your AI-first</div>
-                    <div>
-                        <span ref={element} class="gradient-text"></span>
-                        <span class="blinker">|</span>
-                    </div>
-                    <div>to help get it done</div>
-                </div>
+            <div class="center-col" style="flex: 1; width: 100%; max-width: 700px;">
+                <img src="/assets/TibbTech.svg" style="height: 600px;" >
             </div>
+
+            
         </div>
         
         <!-- who we are -->
