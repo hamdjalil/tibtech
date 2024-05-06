@@ -71,7 +71,7 @@
             padding-block: 0px;
             padding-inline: 0px;
             border-radius: 5px;
-            padding: 8px 8px 8px 8px;
+            padding: 12px;
             border: 1px solid black;
             box-sizing: border-box;
             font-family: Arial, Helvetica, sans-serif;
@@ -266,7 +266,7 @@
                 <!-- Animated text -->
                 <div class="center-row animated-text" style="flex: 1;">
                     <div class="center-col noto">
-                        <div>We're your AI-first</div>
+                        <div>We're your Multimodal AI partner in</div>
                         <div>
                             <span ref={element} class="gradient-text"></span>
                             <span class="blinker">|</span>
@@ -279,8 +279,8 @@
                     <form action="https://formspree.io/f/xvoezewb" method="POST" id="#demo-form" style="width: 100%">
                         <div class="center-col" style="width: 100%; row-gap: 10px;">
                             <input class="input-style-1" type="text" placeholder="you@your-work-email.com" name="email" style="width: 100%;" required>
-                            <textarea class="input-style-1" type="text" placeholder="Your Message (Optional)" name="message" style="width: 100%; height: 70px;"></textarea>
-                            <button type="submit" class="button" style="width: 100%;">Get in touch</button>
+                            <!-- <textarea class="input-style-1" type="text" placeholder="Your Message (Optional)" name="message" style="width: 100%; height: 70px;"></textarea> -->
+                            <button type="submit" class="button" style="width: 100%;">Request a demo</button>
                         </div>
                     </form>
                 </div>
@@ -292,26 +292,41 @@
         
         <!-- who we are -->
         <div class="center-col text-center audiowide" style="margin: 80px 30px 80px 30px;">
-            <div id="team"  class="title" style="width: 100%;">
+            <div class="title" style="width: 100%;">
                 Who We Are
             </div>
             <div class="center-row intro">
                 <div class="center-col noto">
-                    <img src="/assets/intro/search.png" height="80" >
+                    <img src="/assets/intro/search.png" height="50" >
                     <div>AI Researchers</div>
                 </div>
-                <div class="center-col noto">
-                    <img src="/assets/intro/coding.png" height="80" >
+                <div id="team" class="center-col noto">
+                    <img src="/assets/intro/coding.png" height="50" >
                     <div>Software Engineers</div>
                 </div>
                 <div class="center-col noto">
-                    <img src="/assets/intro/enzyme.png" height="80" >
+                    <img src="/assets/intro/enzyme.png" height="50" >
                     <div>Scientists</div>
                 </div>
                 <div class="center-col noto">
-                    <img src="/assets/intro/lightbulb.png" height="80" >
+                    <img src="/assets/intro/lightbulb.png" height="50" >
                     <div>Product Leaders</div>
                 </div>
+            </div>
+        </div>
+
+        <!-- partners -->
+        <div class="center-col audiowide" style="row-gap: 5px; margin-bottom: 80px;">
+            <div class="title">
+                Our Partners
+            </div>
+            <div class="experience-row center-row">
+                <img src="/assets/experience/partners/Stanley.jpg" height="40" />
+                <img src="/assets/experience/partners/Broad.png" height="30" />
+                <img src="/assets/experience/partners/HMS.png" height="35" />
+                <img src="/assets/experience/partners/7.png" height="35" />
+                <img src="/assets/experience/partners/2.png" height="20" />
+                <img src="/assets/experience/partners/znzlogo.jpg" height="40" />
             </div>
         </div>
 
@@ -329,11 +344,10 @@
             </div>
             <div class="experience-row center-row">
                 <img src="/assets/experience/academia/1.svg" height="80" />
-                <img src="/assets/experience/academia/2.png" height="28" />
-                <img src="/assets/experience/academia/3.svg" height="70" />
+                <img src="/assets/experience/academia/EPFL_NeuroX.png" height="30" />
                 <img src="/assets/experience/academia/5.png" height="50" />
                 <img src="/assets/experience/academia/6.png" height="70" />
-                <img src="/assets/experience/academia/7.png" height="50" />
+                <img src="/assets/experience/academia/WCM.png" height="70" />
             </div>
         </div>
         
@@ -345,10 +359,9 @@
     
     const element = document.getElementsByClassName('gradient-text')[0]
     const titles = [
-        "health-tech partner",
-        "drug discovery explorer",
-        "bioimaging analyst",
-        "multimodal data cruncher"
+        "drug discovery",
+        "healthcare",
+        "rehabilitation",
     ]
 
     const sleep = async (delay) => {
