@@ -356,7 +356,38 @@
     </div>
 </body>
 <script>
-    
+    const routes = {
+        '/': 'index.html',
+        '/research/animalformer': 'research/animalformer/index.html'
+    };
+
+    function loadContent(url) {
+        fetch(url)
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById('content').innerHTML = html;
+            })
+            .catch(err => console.error('Failed to load page:', err));
+    }
+
+    function router() {
+        const path = window.location.pathname;
+        const route = routes[path] || routes['/'];
+        loadContent(route);
+    }
+
+    window.addEventListener('popstate', router);
+
+    document.addEventListener('DOMContentLoaded', () => {
+        router();
+        document.querySelectorAll('a[data-link]').forEach(link => {
+            link.addEventListener('click', function (e) {
+                e.preventDefault();
+                window.history.pushState(null, '', link.href);
+                router();
+            });
+        });
+    });
     const element = document.getElementsByClassName('gradient-text')[0]
     const titles = [
         "drug discovery",
