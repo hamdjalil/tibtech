@@ -219,35 +219,44 @@ h2, h3, h4, h5, h6 {
 }
 
 .navigate-button {
-    margin: 20px 0;
-    display: flex;
-    justify-content: center;
-    gap: 20px; /* Add space between buttons */
-}
-
-.navigate-button {
-    margin: 20px 0;
-    display: flex;
-    justify-content: center;
-    gap: 20px; /* Add space between buttons */
+    display: inline-block;
     padding: 10px 20px;
-    margin: 0 10px;
+    margin: 10px;
     background-color: #bfbdbd;
     color: white;
     border: none;
-    border-radius: 50px;
+    border-radius: 10px; /* Reduced border-radius for more rectangular shape */
     cursor: pointer;
     font-family: 'Inter Tight', sans-serif;
     font-size: 1em;
     transition: background-color 0.3s, transform 0.3s; /* Add smooth transition */
     -webkit-text-size-adjust: 100%;
+    text-align: center;
 }
-
 
 .navigate-button:hover {
     background-color: #8d8d8d;
     transform: scale(1.05); /* Slightly enlarge the button on hover */
 }
+
+.navigate-button:focus {
+    background-color: rgb(0, 0, 0);
+}
+
+.button-container {
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column; /* Stack buttons vertically on small screens */
+    align-items: center; /* Center buttons horizontally */
+    gap: 10px; /* Add space between buttons */
+}
+
+@media (min-width: 600px) {
+    .button-container {
+        flex-direction: row; /* Arrange buttons horizontally on larger screens */
+    }
+}
+
 .navigate-button:focus {
     background-color:rgb(0, 0, 0);
   }
