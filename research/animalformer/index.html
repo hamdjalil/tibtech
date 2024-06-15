@@ -9,15 +9,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body style="background-color: rgb(255, 255, 255); padding-top: 100px;">
+    <a href="https://tibbtech.com/" target="_blank">
     <div id="navbar" class="noto">
-        <a href="/" class="logo-link">
-            <img src="logo.svg" class="logo" />
-        </a>        <!-- <div onclick="toggleNav(event)">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" style="width: 30px; height: 30px; cursor: pointer">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-            </svg>              
-        </div> -->
-    </div>
+            <img src="logo.svg" style="height: 100%;" />
+            <!-- <div onclick="toggleNav(event)">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" style="width: 30px; height: 30px; cursor: pointer">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>              
+            </div> -->
+        </div>
+    </a>
     <!-- <div id="hidden-nav"> 
         <div onclick="toggleNav()" style="position: absolute; top: 10px; right: 30px">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" style="width: 20px; height: 20px;">
@@ -107,9 +108,9 @@
                         <button id = 'resting_btn' onclick="showSection('resting', this)" class="navigate-button">Resting Analysis</button>
                     </div>
                     <div id="running" class="behavior-section" >
-                        <img src="AnimalFormer_figures/Figure_3_running.drawio.svg" alt="Running Image" class="inline-image">
+                        <img src="AnimalFormer_figures/Figure_3_Running.drawio.svg" alt="Running Image" class="inline-image">
                         <p class="caption">Figure 2: Qualitative outputs of our framework depicting running frames with keypoints and bounding boxes illustrating movement dynamics. </p>
-                        <img src="AnimalFormer_figures/Figure_2_running.drawio.svg" alt="Running Image" class="inline-image">
+                        <img src="AnimalFormer_figures/Figure_2_Running.drawio.svg" alt="Running Image" class="inline-image">
                         <p class="caption">Figure 3: A. UMAP representation of the unique gait patterns of the sheep extracted from their running videos. B.
                             Speed profile of the animal extracted at the commencement, midpoint, and conclusion of their running videos. C. The unique clusters of
                             existing sheep gait patterns. </p>
@@ -135,7 +136,7 @@
                     <div id="grazing" class="behavior-section" style="display:none;">
                         <img src="AnimalFormer_figures/Figure_3_grazing.drawio.svg" alt="Grazing Image" class="inline-image">
                         <p class="caption">Figure 2: Qualitative outputs of our framework depicting Grazing frames showcasing sheep engaged in feeding with extracted poses and segmentation masks highlighting the focus areas. </p>
-                        <img src="AnimalFormer_figures/Figure_2_grazing.drawio.svg" alt="Grazing Image" class="inline-image">
+                        <img src="AnimalFormer_figures/Figure_2_Grazing.drawio.svg" alt="Grazing Image" class="inline-image">
                         <p class="caption">Figure 3: The grazing activity of the sheep in herds vs single</p>
                         <!-- <div class="right-align-image">
                         </div> -->
@@ -205,10 +206,9 @@
 
                         <h6>Learn more about AnimalFormer</h6>
                         <div class="info-button-container">
-                            <ul><button onclick="navigateTopaper()" >Read our paper</button></ul>
+                            <ul><button onclick="navigateTopaper()" >Read our paper in</button></ul>
                             <ul><button onclick="navigateToposter()" >View our poster</button></ul>
-                            <ul><button onclick="sendEmail()" >Contact us</button></ul>
-
+                            <ul><button onclick="sendEmail()" >Contact Us</button></ul>
                         </div>
 
                     </div>
@@ -301,7 +301,7 @@
         
         document.addEventListener('DOMContentLoaded', function () {
             var video = document.getElementById('AnimalFormer_video');
-            video.playbackRate = 2;
+            video.playbackRate = 1.5;
             video.play();
         });
 
@@ -314,8 +314,10 @@
         }
 
         function sendEmail() {
-            window.location.href = 'mailto:connect@tibbtech.com'; // Replace with the relevant email address
+            var email = 'asim@tibbtech.com'; // Replace with your email address
+            window.location.href = `mailto:${email}`;
         }
+  
         
     </script>
 </body>
