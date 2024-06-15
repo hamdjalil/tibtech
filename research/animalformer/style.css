@@ -12,9 +12,14 @@ body {
 }
 
 .head {
+    margin-top: -15px;
     text-align: center; /* Left-align all headings */
     font-family: 'Inter Tight', serif;
     font-size: 2em;
+}
+
+h1 {
+    font-family: 'Inter Tight', serif;
 }
 
 h2, h3, h4, h5, h6 {
