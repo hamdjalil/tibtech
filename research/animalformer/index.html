@@ -34,8 +34,8 @@
             <p class="author-info">Tibbling Technologies</p>
             <div class="slider">
                 <!-- <img src="AnimalFormer_figures/AnimalFormer_Updated_Sheep_Only_Faster.gif" alt="Main Image" class="main-image"> -->
-                <video controls autoplay muted loop id="AnimalFormer_video" class = "video">
-                    <source src="AnimalFormer_figures/animalformer.mp4" type="video/mp4">
+                <video controls autoplay muted loop id="AnimalFormer_video" class = "video" >
+                    <source src="AnimalFormer_figures/AnimalFormer Animation.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
                 <!-- <img src="018 (run side)_73.png" alt="Main Image" class="main-image">
@@ -100,14 +100,15 @@
                         <p>Our detailed analysis of a sheep dataset showcases the capabilities of our AnimalFormer framework, focusing on gait, running, grazing, and resting behaviors. Through precise data-driven insights, we illustrate how such comprehensive monitoring can enhance understanding and management of livestock behaviors, serving as a model for broader applications in precision farming.</p>
                     </div>
                     <div class="button-container">
-                        <button id = 'running_btn' onclick="showSection('running', this)">Gait and Speed Analysis</button>
-                        <button id = 'grazing_btn' onclick="showSection('grazing', this)">Grazing Analysis</button>
-                        <button id = 'resting_btn' onclick="showSection('resting', this)">Resting Analysis</button>
+
+                        <button id = 'running_btn' onclick="showSection('running', this)" class="navigate-button default-focused">Gait and Speed Analysis</button>
+                        <button id = 'grazing_btn' onclick="showSection('grazing', this)" class="navigate-button">Grazing Analysis</button>
+                        <button id = 'resting_btn' onclick="showSection('resting', this)" class="navigate-button">Resting Analysis</button>
                     </div>
                     <div id="running" class="behavior-section" >
-                        <img src="AnimalFormer_figures/Figure_3_running.drawio.svg" alt="Running Image" class="inline-image">
+                        <img src="AnimalFormer_figures/Figure_3_Running.drawio.svg" alt="Running Image" class="inline-image">
                         <p class="caption">Figure 2: Qualitative outputs of our framework depicting running frames with keypoints and bounding boxes illustrating movement dynamics. </p>
-                        <img src="AnimalFormer_figures/Figure_2_running.drawio.svg" alt="Running Image" class="inline-image">
+                        <img src="AnimalFormer_figures/Figure_2_Running.drawio.svg" alt="Running Image" class="inline-image">
                         <p class="caption">Figure 3: A. UMAP representation of the unique gait patterns of the sheep extracted from their running videos. B.
                             Speed profile of the animal extracted at the commencement, midpoint, and conclusion of their running videos. C. The unique clusters of
                             existing sheep gait patterns. </p>
@@ -133,7 +134,7 @@
                     <div id="grazing" class="behavior-section" style="display:none;">
                         <img src="AnimalFormer_figures/Figure_3_grazing.drawio.svg" alt="Grazing Image" class="inline-image">
                         <p class="caption">Figure 2: Qualitative outputs of our framework depicting Grazing frames showcasing sheep engaged in feeding with extracted poses and segmentation masks highlighting the focus areas. </p>
-                        <img src="AnimalFormer_figures/Figure_2_grazing.drawio.svg" alt="Grazing Image" class="inline-image">
+                        <img src="AnimalFormer_figures/Figure_2_Grazing.drawio.svg" alt="Grazing Image" class="inline-image">
                         <p class="caption">Figure 3: The grazing activity of the sheep in herds vs single</p>
                         <!-- <div class="right-align-image">
                         </div> -->
@@ -223,7 +224,7 @@
         var nav_open = false
         let hidden_nav = document.getElementById("hidden-nav")
         // document.getElementById('running_btn').addEventListener("focus", focusFunction);
-        document.getElementById("running_btn").focus()
+        // document.getElementById("running_btn").focus()
         
         document.addEventListener('click', (e) => {
             if (nav_open && !hidden_nav.contains(e.target)) {
@@ -276,7 +277,7 @@
         //     document.getElementById("running_btn").style.backgroundColor = "red";
         // }
         // Function to show the selected behavior section
-        function showSection(section, button) {
+        function showSection(section, clickedButton) {
             var sections = document.getElementsByClassName("behavior-section");
             for (var i = 0; i < sections.length; i++) {
                 sections[i].style.display = "none";
@@ -284,11 +285,20 @@
             
             document.getElementById(section).style.display = "block";
 
+            
+            var buttons = document.getElementsByClassName('navigate-button');
+            console.log(buttons);
+            for (var i = 0; i < buttons.length; i++) {
+                buttons[i].classList.remove('default-focused');
+            }
+            // Add active class to the clicked button
+            clickedButton.classList.add('default-focused');
         }
+
         
         document.addEventListener('DOMContentLoaded', function () {
             var video = document.getElementById('AnimalFormer_video');
-            video.playbackRate = 1.5;
+            video.playbackRate = 2;
             video.play();
         });
 
