@@ -10,8 +10,9 @@
 </head>
 <body style="background-color: rgb(255, 255, 255); padding-top: 100px;">
     <div id="navbar" class="noto">
-        <img src="logo.svg" style="height: 100%;" />
-        <!-- <div onclick="toggleNav(event)">
+        <a href="/" class="logo-link">
+            <img src="logo.svg" class="logo" />
+        </a>        <!-- <div onclick="toggleNav(event)">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" style="width: 30px; height: 30px; cursor: pointer">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
             </svg>              
@@ -204,8 +205,10 @@
 
                         <h6>Learn more about AnimalFormer</h6>
                         <div class="info-button-container">
-                            <ul><button onclick="navigateTopaper()" >Read our paper in CVPR Workshop</button></ul>
+                            <ul><button onclick="navigateTopaper()" >Read our paper</button></ul>
                             <ul><button onclick="navigateToposter()" >View our poster</button></ul>
+                            <ul><button onclick="sendEmail()" >Contact us</button></ul>
+
                         </div>
 
                     </div>
@@ -309,7 +312,10 @@
         function navigateTopaper() {
             window.open('https://drive.google.com/file/d/1m8TC_P4CmLFXP3G4qYYjsmEiZUZokXls/view?usp=sharing',  '_blank'); // Replace with your desired URL
         }
-  
+
+        function sendEmail() {
+            window.location.href = 'mailto:connect@tibbtech.com'; // Replace with the relevant email address
+        }
         
     </script>
 </body>

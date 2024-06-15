@@ -306,6 +306,14 @@ h2, h3, h4, h5, h6 {
     
 }
 
-/* .clear {
-    clear: both;
-  } */
+/* Ensure the anchor tag does not affect the image size */
+.logo-link {
+    display: inline-block;
+    height: 100%;
+}
+
+/* Ensure the logo image maintains its size */
+.logo {
+    height: 100%;
+    display: block;
+}
