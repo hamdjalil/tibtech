@@ -169,11 +169,12 @@ h6 {
     max-width: 850px; /* Adjust this value as needed */
     text-align: left;
     font-family: 'Inter Tight', serif;
+    
 }
 
 .inline-image {
     width: 100%;
-    max-width: 1000px; /* Adjust this value as needed */
+    max-width: 1200px; /* Adjust this value as needed */
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin-top: 10px;
