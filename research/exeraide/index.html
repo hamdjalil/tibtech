@@ -35,8 +35,9 @@
     <main class="main-container">
         <section class="hero">
             <h1>ExerAIde</h1>
-            <h2 class="head">AI-assisted Multimodal Diagnosis for <br> Enhanced Sports Performance and Personalised Rehabilitation</h2>
-            <p class="author-info">Tibbling Technologies</p>
+            <p class="title">AI-assisted Multimodal Diagnosis for <br> Enhanced Sports Performance and Personalised Rehabilitation</p>
+            <p class="author-info">June 18, 2024</p>
+            <p class="author-info">By Qazi & Asim <br> Tibbling Technologies</p>
             <div class="slider">
                 <!-- <img src="AnimalFormer_figures/AnimalFormer_Updated_Sheep_Only_Faster.gif" alt="Main Image" class="main-image"> -->
                 <video controls autoplay muted loop id="ExerAIde_video" class = "video" >
@@ -54,7 +55,7 @@
         <section class="content">
             <article class="post">
                 <div class="post-container">
-                    <div class="post-text">
+                    <div class="post-text-2">
                         <!-- <h3>What's under the hood?</h3> -->
                         <p>
                             In the world of rehabilitation, one-size-fits-all treatment plans are quickly becoming a thing of the past. Personalized therapy is at the forefront of this change, offering tailored treatment plans that address each individual's unique needs. This approach speeds up recovery by focusing on the specific physiological aspects that require attention.
@@ -71,18 +72,18 @@
 
             <article class="post">
                 <div class="post-container">
-                    <div class="post-text">
+                    <div class="post-text-2">
                         <h3>Enter: ExerAIde</h3>
-                        <img src="Rehab_figures/Figure 1 CV4Sports-Page-3.drawio.svg" alt="Image 1" class="inline-image">
-                    <p class="caption">
-                        Figure 1: Our comprehensive analysis framework designed for personalized therapy. It provides a clear overview of the data flow and processing steps within our end-to-end solution, demonstrating how advanced machine learning techniques are employed to analyze and improve joint movements for optimized rehabilitation.
-                    </p>
                         <p>
                             The demand for personalized therapy that caters to individual needs is more crucial than ever. Enter ExerAIde, our cutting-edge solution that uses the power of machine learning to provide customized sports therapy, ensuring optimal recovery and performance.
                         </p>
                     </div>
+                    <img src="Rehab_figures/Figure 1 CV4Sports-Page-3.drawio.svg" alt="Image 1" class="inline-image-2">
+                    <p class="caption">
+                        Figure 1: Our comprehensive analysis framework designed for personalized therapy. It provides a clear overview of the data flow and processing steps within our end-to-end solution, demonstrating how advanced machine learning techniques are employed to analyze and improve joint movements for optimized rehabilitation.
+                    </p>
                     <br>
-                    <div class="post-text">
+                    <div class="post-text-2">
                         <p>
                             ExerAIde offers a scalable solution adaptable to various rehabilitation needs, from sports injuries to physiotherapy. Delivering critical insights for optimizing recovery protocols, monitoring progress, and enhancing therapeutic interventions, ExerAIde transcends traditional methodologies. It facilitates precision rehabilitation and proactive health monitoring through advanced motion analysis, without the need for invasive procedures or constant supervision. The non-invasive nature of ExerAIde ensures minimal discomfort to patients, leading to more accurate assessments and a deeper understanding of their recovery process.                        
                         </p>
@@ -93,22 +94,22 @@
                 <br>
                 <article>
                     <div class="post-container">
-                        <div class = "post-text">
+                        <div class = "post-text-2">
                             <h2>ExerAIde in Action</h2>
-                            <img src="Rehab_figures/Skeleton_figure.svg" alt="Image 2", class="inline-image">
+                    <p>
+                        ExerAIde utilizes advanced motion analysis techniques to enhance rehabilitation exercises. By capturing skeletal motion during exercises at distinct time frames, it visualizes joint positions and displacement fields, highlighting differences in movement patterns. ExerAIde employs a Random Forest Classifier (RFC), which significantly outperforms other classifiers such as SVM, AdaBoost, XGBoost, and Logistic Regression. This ensures a high level of accuracy in identifying critical joints and distinguishing between healthy and unhealthy movements. Additionally, the strong alignment of ExerAIde’s joint importance ranking with actual displacement fields validates its effectiveness. This allows therapists to develop highly personalized therapy programs, leading to better recovery outcomes and improved patient performance.
+                    </p>
+                        </div>
+                        <img src="Rehab_figures/Skeleton_figure.svg" alt="Image 2", class="inline-image-2">
                     <p class="caption">Figure 2: Left) Visualization of the skeletal motion and the displacement fields.<br> 
                         Mid) Performance comparison with other methods.<br>
                         Right) Spearman correlation comparison, depicting the strong alignment of our framework’s joint importance ranking with the ground truth displacement fields.
                     </p>
-                    <p>
-                        ExerAIde utilizes advanced motion analysis techniques to enhance rehabilitation exercises. By capturing skeletal motion during exercises at distinct time frames, it visualizes joint positions and displacement fields, highlighting differences in movement patterns. ExerAIde employs a Random Forest Classifier (RFC), which significantly outperforms other classifiers such as SVM, AdaBoost, XGBoost, and Logistic Regression. This ensures a high level of accuracy in identifying critical joints and distinguishing between healthy and unhealthy movements. Additionally, the strong alignment of ExerAIde’s joint importance ranking with actual displacement fields validates its effectiveness. This allows therapists to develop highly personalized therapy programs, leading to better recovery outcomes and improved patient performance.
-                    </p>
-                    <br>
-                            <img src="Rehab_figures/Figure 2 CV4Sports-Page-1.svg" alt="Image 1" class="inline-image">
+                    <img src="Rehab_figures/Figure 2 CV4Sports-Page-1.svg" alt="Image 3" class="inline-image-2">
                             <p class="caption">
                                 Figure 3: Comparative analysis of healthy vs. unhealthy movements across nine exercises in standing and sitting positions. Depth sensor images (upper panel) show exercises with corresponding VQ-VAE-derived embeddings (lower panel), where red and green dots indicate unhealthy and healthy movements. Keypoints colored by importance, with blue circles highlighting significant joints for distinguishing movement quality, emphasize the critical role of specific joints in rehabilitation assessment.
                             </p>
-                            <br>
+                            <div class = "post-text-2">
                             <p>
                                 To further enhance the analysis, ExerAIde incorporates Vector Quantized Variational AutoEncoder (VQ-VAE) derived quantized latent space embeddings. This technique provides a comprehensive view of movement quality across various exercises. In the comparative analysis shown, the top row displays depth sensor images of a subject performing nine different exercises in both standing and sitting positions. These images provide a visual reference for the range of motion involved in each exercise.
 
@@ -123,12 +124,10 @@
             <br>
             <article class="post">
                 <div class="post-container">
-                    <div class="post-text">
+                    
+                    <div class="post-text-2">
                         <h2>Rehabilitation</h2>
-                        <img src="Rehab_figures/Figure_3_resized.svg" alt="Image 1" class="inline-image">
-                        <p class="caption">
-                            Figure 4: Qualitative analysis of exercises in standing position with keypoints overlaid on each frame, capturing motion range. A heatmap gradient (yellow to black) indicates joint importance based on RFC findings, aiding visual comparison of execution quality. The bottom-right lists the most significant joints for each exercise, offering a comprehensive understanding of movement dynamics.
-                        </p>
+                    
                         <p>
                             To further support rehabilitation and physiotherapy efforts, ExerAIde provides a qualitative analysis across a temporal sequence of frames for each exercise in standing position, as depicted in Figure 4. By superimposing keypoints on each frame, ExerAIde captures the full range of motion for each exercise. The heatmap gradient indicates joint importance based on RFC findings, ranging from low (yellow) to high (black), which aids in the visual comparison of execution quality.
 
@@ -139,94 +138,17 @@
                             Furthermore, this detailed feedback allows therapists to modify exercises in real-time, ensuring that patients perform movements correctly and avoid potentially harmful patterns. The visualization of joint importance also helps in educating patients about their movements, fostering better engagement and compliance with their rehabilitation program. Overall, ExerAIde's advanced analysis capabilities make it an invaluable tool for enhancing rehabilitation and physiotherapy outcomes, promoting optimal recovery and improved patient performance.
                         </p>
                     </div>
-                    
-                    <!-- <div class="button-container">
-                        <button onclick="showSection('running', this)"  class="navigate-button default-focused">Sports Rehabilitation</button>
-                        <button onclick="showSection('grazing', this)" class="navigate-button">Physiotherapy</button>
-                        <button onclick="showSection('resting', this)" class="navigate-button">Elderly Care</button>
-                    </div>
-                    <div id="running" class="behavior-section" >
-                        <img src="Rehab_figures/Figure_3_Running.drawio.svg" alt="Running Image" class="inline-image">
-                        <p class="caption">Figure 2: Qualitative outputs of our framework depicting running frames with keypoints and bounding boxes illustrating movement dynamics. </p>
-                        <div class="post-text">
-                            <p>
-                                Sheep, as prey animals, often exhibit flight responses, making running a common behavior that can reveal much about their gaits and speed. By analyzing running videos of individual sheep, we can extract various poses using UMAP embeddings, as illustrated in Figure 3 (A). Each color in the figure represents poses of different animals, showing that while most poses cluster closely, some are more dispersed.
-                            </p>
-                        </div>
-                        <br>
-                        <div> -->
-                            
-                        <!-- </div> -->
-                        <!-- <div class="post-text">
-                            <p>
-                                We validate this observation by clustering the poses into 10 unique groups (Figure 3 (C)). Despite the independence of running patterns among sheep, some share gait patterns, evidenced by overlapping clusters. Figure 3 (D) shows individual sheep’s poses within these clusters. For instance, sheep IDs 025 and 011 have most poses within clusters 9 and 1, respectively. Even sheep with dynamic gait patterns, like ID 014, exhibit most poses in a primary cluster with a few spread across others.
-                            </p>
-                            <img src="Rehab_figures/Figure_2_Running.drawio.svg" alt="Running Image" class="inline-image">
-                            <p class="caption">Figure 3: A. UMAP representation of the unique gait patterns of the sheep extracted from their running videos. B.
-                                Speed profile of the animal extracted at the commencement, midpoint, and conclusion of their running videos. C. The unique clusters of
-                                existing sheep gait patterns. </p>
-                            
-                            <p>
-                                Pose estimation alone offers insights into gait patterns, but speed analysis is crucial for assessing health. Figure 3 (B) displays speed trends at different intervals, showing that sheep with fewer dynamic gait patterns tend to run faster. For example, ID 025, with limited poses, is the fastest, whereas ID 014, with many poses, is slower. This suggests a trade-off between speed and movement variety, aligning with the principles of locomotive efficiency, where consistent movements enhance speed.
-                            </p>
-                            <br>
-                            <p>
-                                Understanding gait diversity and speed has practical implications, such as identifying health issues and optimizing herd management, making this research valuable for both academic and agricultural applications.
-                            </p>
-                        </div>
-                    </div>
-                    <div id="grazing" class="behavior-section" style="display:none;">
-                        <img src="Rehab_figures/Figure_3_grazing.drawio.svg" alt="Running Image" class="inline-image">
-                        <p class="caption">Figure 2: Qualitative outputs of our framework depicting Grazing frames showcasing sheep engaged in feeding with extracted poses and segmentation masks highlighting the focus areas. </p>
-                        
-                        <div class="post-text">
-                            <p>
-                                Using advanced animal detection and pose estimation, we analyzed and compared the grazing patterns of sheep in isolated settings versus when they are in a flock. Our findings, illustrated in Figure 3 (E), reveal that sheep exhibit more substantial grazing activity when isolated compared to when they are part of a herd. This increased grazing in solitude is attributed to the absence of social stimuli and potential threats, allowing sheep to focus more intently on feeding.
-                            </p>
-                            <p>
-                                In controlled environments devoid of predators or environmental stressors, sheep show reduced vigilance behavior, which is typically heightened in group settings. Our observations support this principle, indicating that solitary sheep take advantage of safety and tranquility to maximize food intake. In contrast, when sheep graze in groups, their feeding is often interrupted by social interactions such as establishing hierarchies or bonding, leading to less overall food consumption.
-                            </p>
-                            <br>
-                            <p>
-                                Quantitative data from our analysis clearly contrasts the two scenarios: isolated sheep show consistent feeding patterns with minimal interruptions, while herd grazing patterns are interspersed with non-feeding activities. This study provides valuable insights into the grazing behaviors of domestic sheep, which can help enhance farm management practices and optimize feeding strategies to improve animal well-being and productivity.
-                            </p>
-                            <br>
-                            <p>
-                                In summary, our analysis indicates that in controlled scenarios, sheep graze more when alone compared to being in a herd, likely due to fewer distractions and social obligations. However, these findings are based on brief observational periods. A long-term study could reveal different dynamics, as sheep might exhibit varying grazing intensities over extended periods. Our insights are also limited by the dataset scope, which did not capture extended durations or include variables like environmental shifts and detailed social interactions.
-                            </p>
-                        </div>
-                    </div>
-                    <div id="resting" class="behavior-section" style="display:none;">
-                        <img src="Rehab_figures/Figure_3_resting.drawio.svg" alt="Running Image" class="inline-image">
-                        <p class="caption" >Figure 2: Qualitative outputs of our framework depicting resting frames with segmentation masks delineating individual sheep in a state of repose. </p>
-                        <div class="post-text">
-                            <p>
-                                In Figure 3, the UMAP scatterplots display the resting postures of sheep from both front and side views. Each data point represents an individual instance of a sheep's resting posture. The clustering of points indicates patterns of similarity: tighter clusters suggest more consistent and homogeneous behavior patterns.
-                            </p>
-                            <br>
-                            <p>
-                                The left plot, showing the front view, and the right plot, showing the side view, reveal that sheep tend to maintain a consistent resting posture when alone, evidenced by the tightly clustered gray points. This homogeneity is likely due to the absence of external stimuli, leading to uniform resting positions.
-                            </p>
-                            <div class="right-align-image">
-                                <img src="Rehab_figures/Figure_2_resting.drawio.svg" alt="Resting Image">
-                                <p class="caption">Figure 3: UMAP representation of the unique resting pattern of the animals in herd vs single.</p>
-                            </div>
-                            <p>
-                                In contrast, the brown clusters, representing sheep resting in a herd, show a more scattered distribution. This indicates a greater diversity in resting postures, potentially due to social dynamics within the herd or spatial constraints. The scattered clusters suggest that sheep in a herd may change their resting positions more frequently or adopt different postures compared to when they are alone.
-                            </p>
-                            <br>
-                            <p>
-                                These UMAP visualizations provide a compelling visual summary of the differences between solitary and social resting states in sheep. This insight is crucial for understanding sheep behavior in controlled environments and has significant implications for animal welfare and livestock management. The findings align with our observations of grazing behaviors, reinforcing the notion that sheep display more uniform behaviors when solitary. Such insights are pivotal for enhancing livestock management and welfare practices in animal husbandry.
-                            </p>
 
-                        </div>
-                    </div> -->
+                    <img src="Rehab_figures/Figure_3_resized.svg" alt="Image 4" class="inline-image-2">
+                        <p class="caption">
+                            Figure 4: Qualitative analysis of exercises in standing position with keypoints overlaid on each frame, capturing motion range. A heatmap gradient (yellow to black) indicates joint importance based on RFC findings, aiding visual comparison of execution quality. The bottom-right lists the most significant joints for each exercise, offering a comprehensive understanding of movement dynamics.
+                        </p>
                     
                 </div>
             </article>
             <article>
                 <div class="post-container">
-                    <div class = "post-text">
+                    <div class = "post-text-2">
                         <h2>Conclusion</h2>
                         <p>
                             ExerAIde leverages advanced motion analysis techniques to significantly enhance rehabilitation and physiotherapy programs. By providing detailed visualizations and insights into joint movements, it allows therapists to design highly personalized and effective therapy plans. The use of a Random Forest Classifier ensures accurate identification of critical joints, while the integration of VQ-VAE-derived embeddings aids in distinguishing healthy from unhealthy movements. ExerAIde not only boosts rehabilitation outcomes but also empowers patients and therapists with valuable data, leading to better recovery and overall performance.
@@ -234,10 +156,10 @@
                         <br>
                         <h6>Learn more about ExerAIde</h6>
                         <div class="info-button-container">
-                            <ul><button class="info-button" onclick="navigateTopaper()" >Read our paper in CVPR Workshop<i class="fas fa-external-link-alt"></i>
+                            <ul><button class="info-button" onclick="navigateTopaper()" >Read our paper in CVPR 2024<i class="fas fa-external-link-alt"></i>
                             </button></ul>
-                            <ul><button class="info-button" onclick="navigateToposter()" >View our poster <i class="fas fa-external-link-alt"></i>
-                            </button></ul>
+                            <!-- <ul><button class="info-button" onclick="navigateToposter()" >View our poster <i class="fas fa-external-link-alt"></i>
+                            </button></ul> -->
                         </div>
 
                         <div class="noto center-col demo post-container">

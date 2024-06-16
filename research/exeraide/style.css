@@ -18,14 +18,27 @@ body {
     font-size: 2em;
 }
 
+.title {
+    font-size: 0.8em;
+    color: #666;
+    font-family: 'Inter Tight', serif;
+    margin-bottom: 20px;
+}
+
 h1 {
     font-family: 'Inter Tight', serif;
 }
 
-h2, h3, h4, h5, h6 {
+h2, h3, h4, h5 {
     text-align: left; /* Left-align all headings */
     font-family: 'Inter Tight', serif;
     font-size: 2em;
+}
+
+h6 {
+    text-align: left; /* Left-align all headings */
+    font-family: 'Inter Tight', serif;
+    font-size: 1em;
 }
 
 #navbar {
@@ -91,7 +104,7 @@ h2, h3, h4, h5, h6 {
     font-size: 0.9em;
     color: #666;
     font-family: 'Lora', serif;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .hero .slider {
@@ -153,14 +166,23 @@ h2, h3, h4, h5, h6 {
 
 .post-text {
     width: 100%;
+    max-width: 1200px; /* Adjust this value as needed */
+    text-align: left;
+    font-family: 'Inter Tight', serif;
+    
+}
+
+.post-text-2 {
+    width: 100%;
     max-width: 850px; /* Adjust this value as needed */
     text-align: left;
     font-family: 'Inter Tight', serif;
+    
 }
 
 .inline-image {
     width: 100%;
-    max-width: 700px; /* Adjust this value as needed */
+    max-width: 1200px; /* Adjust this value as needed */
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin-top: 10px;
@@ -168,6 +190,18 @@ h2, h3, h4, h5, h6 {
     margin-left: 20px;
     margin-right: 20px;
     float: center; 
+    /* Make the image float to the right of the text */
+}
+
+.inline-image-2 {
+    width: 200%;
+    max-width: 1200px; /* Adjust this value as needed */
+    border-radius: 10px;
+    float: center; 
+    margin-top: 10px;
+    margin-bottom: 15px; /* Added margin-bottom for spacing */
+    margin-left: 20px;
+    margin-right: 20px;
     /* Make the image float to the right of the text */
 }
 
@@ -310,9 +344,6 @@ h2, h3, h4, h5, h6 {
     font-size: 0.9em; /* Adjust icon size */
 }
 
-/* .behavior-section {
-    display: none;
-} */
 .active-button {
     background-color: yellow; /* Change to your desired color */
 }
@@ -326,7 +357,7 @@ h2, h3, h4, h5, h6 {
     /* display: flex; */
     align-items: center;
     justify-content: center;
-    width: 75%; /* Adjust the width as needed */
+    width: 80%; /* Adjust the width as needed */
     max-width: 700%;
     height: auto;
     border:none;
@@ -551,4 +582,28 @@ h2, h3, h4, h5, h6 {
         font-size: 24px;
         line-height: normal;
     }
+}
+
+.social-follow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    font-family: 'Inter Tight', sans-serif;
+    font-size: 0.8em;
+}
+
+.social-follow span {
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+.social-follow a {
+    text-decoration: none;
+    color: #000;
+    font-size: 1.5em;
+}
+
+.social-follow a:hover {
+    color: #121213; /* Change the color on hover if desired */
 }
