@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ExerAIde</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Lora:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+</head>
+<body style="background-color: rgb(255, 255, 255); padding-top: 100px;">
+    <a href="https://tibbtech.com/" target="_blank">
+    <div id="navbar" class="noto">
+            <img src="logo.svg" style="height: 100%;" />
+            <!-- <div onclick="toggleNav(event)">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" style="width: 30px; height: 30px; cursor: pointer">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>              
+            </div> -->
+        </div>
+    </a>
+    <!-- <div id="hidden-nav"> 
+        <div onclick="toggleNav()" style="position: absolute; top: 10px; right: 30px">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" style="width: 20px; height: 20px;">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+            </svg>              
+        </div>  
+        <div onclick="scrollEle('about')">About</div>
+        <div onclick="scrollEle('contact-section')">Contact</div>
+        <div onclick="scrollEle('team')">Team</div>
+    </div> -->
+
+    <main class="main-container">
+        <section class="hero">
+            <h1>ExerAIde</h1>
+            <h2 class="head">AI-assisted Multimodal Diagnosis for <br> Enhanced Sports Performance and Personalised Rehabilitation</h2>
+            <p class="author-info">Tibbling Technologies</p>
+            <div class="slider">
+                <!-- <img src="AnimalFormer_figures/AnimalFormer_Updated_Sheep_Only_Faster.gif" alt="Main Image" class="main-image"> -->
+                <video controls autoplay muted loop id="ExerAIde_video" class = "video" >
+                    <source src="Rehab_figures/ExerAIde - Animation.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <!-- <img src="018 (run side)_73.png" alt="Main Image" class="main-image">
+                <img src="annotated_image.png" alt="Main Image 2" class="main-image" style="display: none;">
+                <div class="slider-controls">
+                    <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+                    <button class="next" onclick="changeSlide(1)">&#10095;</button> -->
+                <!-- </div> -->
+            </div>
+        </section>
+        <section class="content">
+            <article class="post">
+                <div class="post-container">
+                    <div class="post-text">
+                        <!-- <h3>What's under the hood?</h3> -->
+                        <p>
+                            In the world of rehabilitation, one-size-fits-all treatment plans are quickly becoming a thing of the past. Personalized therapy is at the forefront of this change, offering tailored treatment plans that address each individual's unique needs. This approach speeds up recovery by focusing on the specific physiological aspects that require attention.
+                        </p>
+                        <br>
+                        <p>
+                            With the advent of machine learning, we now have powerful tools to analyze complex biological data like never before. This technology helps pinpoint the exact movements and joints that need improvement, allowing therapists to create highly customized rehabilitation programs. These individualized plans ensure that patients receive the most effective care possible, making recovery faster and more efficient. Personalized therapy is proving to be a game-changer in the field, promising better outcomes for everyone, whether they're recovering from a sports injury or dealing with other physical challenges.
+                        </p>
+                    </div>
+                   
+                    
+                </div>
+            </article>
+
+            <article class="post">
+                <div class="post-container">
+                    <div class="post-text">
+                        <h3>Enter: ExerAIde</h3>
+                        <img src="Rehab_figures/Figure 1 CV4Sports-Page-3.drawio.svg" alt="Image 1" class="inline-image">
+                    <p class="caption">
+                        Figure 1: Our comprehensive analysis framework designed for personalized therapy. It provides a clear overview of the data flow and processing steps within our end-to-end solution, demonstrating how advanced machine learning techniques are employed to analyze and improve joint movements for optimized rehabilitation.
+                    </p>
+                        <p>
+                            The demand for personalized therapy that caters to individual needs is more crucial than ever. Enter ExerAIde, our cutting-edge solution that uses the power of machine learning to provide customized sports therapy, ensuring optimal recovery and performance.
+                        </p>
+                    </div>
+                    <br>
+                    <div class="post-text">
+                        <p>
+                            ExerAIde offers a scalable solution adaptable to various rehabilitation needs, from sports injuries to physiotherapy. Delivering critical insights for optimizing recovery protocols, monitoring progress, and enhancing therapeutic interventions, ExerAIde transcends traditional methodologies. It facilitates precision rehabilitation and proactive health monitoring through advanced motion analysis, without the need for invasive procedures or constant supervision. The non-invasive nature of ExerAIde ensures minimal discomfort to patients, leading to more accurate assessments and a deeper understanding of their recovery process.                        
+                        </p>
+
+                        <br> 
+                </div>
+        
+                <br>
+                <article>
+                    <div class="post-container">
+                        <div class = "post-text">
+                            <h2>ExerAIde in Action</h2>
+                            <img src="Rehab_figures/Skeleton_figure.svg" alt="Image 2", class="inline-image">
+                    <p class="caption">Figure 2: Left) Visualization of the skeletal motion and the displacement fields.<br> 
+                        Mid) Performance comparison with other methods.<br>
+                        Right) Spearman correlation comparison, depicting the strong alignment of our framework’s joint importance ranking with the ground truth displacement fields.
+                    </p>
+                    <p>
+                        ExerAIde utilizes advanced motion analysis techniques to enhance rehabilitation exercises. By capturing skeletal motion during exercises at distinct time frames, it visualizes joint positions and displacement fields, highlighting differences in movement patterns. ExerAIde employs a Random Forest Classifier (RFC), which significantly outperforms other classifiers such as SVM, AdaBoost, XGBoost, and Logistic Regression. This ensures a high level of accuracy in identifying critical joints and distinguishing between healthy and unhealthy movements. Additionally, the strong alignment of ExerAIde’s joint importance ranking with actual displacement fields validates its effectiveness. This allows therapists to develop highly personalized therapy programs, leading to better recovery outcomes and improved patient performance.
+                    </p>
+                    <br>
+                            <img src="Rehab_figures/Figure 2 CV4Sports-Page-1.svg" alt="Image 1" class="inline-image">
+                            <p class="caption">
+                                Figure 3: Comparative analysis of healthy vs. unhealthy movements across nine exercises in standing and sitting positions. Depth sensor images (upper panel) show exercises with corresponding VQ-VAE-derived embeddings (lower panel), where red and green dots indicate unhealthy and healthy movements. Keypoints colored by importance, with blue circles highlighting significant joints for distinguishing movement quality, emphasize the critical role of specific joints in rehabilitation assessment.
+                            </p>
+                            <br>
+                            <p>
+                                To further enhance the analysis, ExerAIde incorporates Vector Quantized Variational AutoEncoder (VQ-VAE) derived quantized latent space embeddings. This technique provides a comprehensive view of movement quality across various exercises. In the comparative analysis shown, the top row displays depth sensor images of a subject performing nine different exercises in both standing and sitting positions. These images provide a visual reference for the range of motion involved in each exercise.
+
+                                The lower panel of the analysis presents scatter plots that correspond to each exercise, where red and green dots represent unhealthy and healthy movements, respectively. The keypoints are colored based on their importance, determined by the RFC, using an inferno heatmap color scheme from low (yellow) to high (black) importance. Notably, blue circles highlight the joints with the maximum distance between centroids of healthy and unhealthy clusters, emphasizing their crucial role in distinguishing movement quality.
+                                
+                                This visualization underscores the importance of specific joints in assessing movement patterns and helps therapists pinpoint areas that require more focused attention. By leveraging this detailed and visually intuitive analysis, ExerAIde enables more effective monitoring and adjustment of rehabilitation programs, ultimately leading to improved patient outcomes.
+                            </p>
+                        </div>
+                    </div>
+                </article>
+
+            <br>
+            <article class="post">
+                <div class="post-container">
+                    <div class="post-text">
+                        <h2>Rehabilitation</h2>
+                        <img src="Rehab_figures/Figure_3_resized.svg" alt="Image 1" class="inline-image">
+                        <p class="caption">
+                            Figure 4: Qualitative analysis of exercises in standing position with keypoints overlaid on each frame, capturing motion range. A heatmap gradient (yellow to black) indicates joint importance based on RFC findings, aiding visual comparison of execution quality. The bottom-right lists the most significant joints for each exercise, offering a comprehensive understanding of movement dynamics.
+                        </p>
+                        <p>
+                            To further support rehabilitation and physiotherapy efforts, ExerAIde provides a qualitative analysis across a temporal sequence of frames for each exercise in standing position, as depicted in Figure 4. By superimposing keypoints on each frame, ExerAIde captures the full range of motion for each exercise. The heatmap gradient indicates joint importance based on RFC findings, ranging from low (yellow) to high (black), which aids in the visual comparison of execution quality.
+
+                            Each exercise is meticulously analyzed frame by frame, showcasing how different joints contribute to the overall movement. This detailed analysis allows therapists to identify which joints are most critical during specific exercises. The bottom-right corner of the figure lists the most significant joints in descending order of importance for each exercise, providing a comprehensive understanding of movement dynamics.
+
+                            ExerAIde's detailed motion analysis is particularly beneficial for rehabilitation and physiotherapy. By focusing on the most critical joints, therapists can design targeted exercises that address specific weaknesses or issues. This ensures that rehabilitation programs are both effective and efficient, leading to faster and more complete recovery. The temporal analysis helps in tracking progress over time, allowing for adjustments in therapy plans based on the evolving needs of the patient.
+
+                            Furthermore, this detailed feedback allows therapists to modify exercises in real-time, ensuring that patients perform movements correctly and avoid potentially harmful patterns. The visualization of joint importance also helps in educating patients about their movements, fostering better engagement and compliance with their rehabilitation program. Overall, ExerAIde's advanced analysis capabilities make it an invaluable tool for enhancing rehabilitation and physiotherapy outcomes, promoting optimal recovery and improved patient performance.
+                        </p>
+                    </div>
+                    
+                    <!-- <div class="button-container">
+                        <button onclick="showSection('running', this)"  class="navigate-button default-focused">Sports Rehabilitation</button>
+                        <button onclick="showSection('grazing', this)" class="navigate-button">Physiotherapy</button>
+                        <button onclick="showSection('resting', this)" class="navigate-button">Elderly Care</button>
+                    </div>
+                    <div id="running" class="behavior-section" >
+                        <img src="Rehab_figures/Figure_3_Running.drawio.svg" alt="Running Image" class="inline-image">
+                        <p class="caption">Figure 2: Qualitative outputs of our framework depicting running frames with keypoints and bounding boxes illustrating movement dynamics. </p>
+                        <div class="post-text">
+                            <p>
+                                Sheep, as prey animals, often exhibit flight responses, making running a common behavior that can reveal much about their gaits and speed. By analyzing running videos of individual sheep, we can extract various poses using UMAP embeddings, as illustrated in Figure 3 (A). Each color in the figure represents poses of different animals, showing that while most poses cluster closely, some are more dispersed.
+                            </p>
+                        </div>
+                        <br>
+                        <div> -->
+                            
+                        <!-- </div> -->
+                        <!-- <div class="post-text">
+                            <p>
+                                We validate this observation by clustering the poses into 10 unique groups (Figure 3 (C)). Despite the independence of running patterns among sheep, some share gait patterns, evidenced by overlapping clusters. Figure 3 (D) shows individual sheep’s poses within these clusters. For instance, sheep IDs 025 and 011 have most poses within clusters 9 and 1, respectively. Even sheep with dynamic gait patterns, like ID 014, exhibit most poses in a primary cluster with a few spread across others.
+                            </p>
+                            <img src="Rehab_figures/Figure_2_Running.drawio.svg" alt="Running Image" class="inline-image">
+                            <p class="caption">Figure 3: A. UMAP representation of the unique gait patterns of the sheep extracted from their running videos. B.
+                                Speed profile of the animal extracted at the commencement, midpoint, and conclusion of their running videos. C. The unique clusters of
+                                existing sheep gait patterns. </p>
+                            
+                            <p>
+                                Pose estimation alone offers insights into gait patterns, but speed analysis is crucial for assessing health. Figure 3 (B) displays speed trends at different intervals, showing that sheep with fewer dynamic gait patterns tend to run faster. For example, ID 025, with limited poses, is the fastest, whereas ID 014, with many poses, is slower. This suggests a trade-off between speed and movement variety, aligning with the principles of locomotive efficiency, where consistent movements enhance speed.
+                            </p>
+                            <br>
+                            <p>
+                                Understanding gait diversity and speed has practical implications, such as identifying health issues and optimizing herd management, making this research valuable for both academic and agricultural applications.
+                            </p>
+                        </div>
+                    </div>
+                    <div id="grazing" class="behavior-section" style="display:none;">
+                        <img src="Rehab_figures/Figure_3_grazing.drawio.svg" alt="Running Image" class="inline-image">
+                        <p class="caption">Figure 2: Qualitative outputs of our framework depicting Grazing frames showcasing sheep engaged in feeding with extracted poses and segmentation masks highlighting the focus areas. </p>
+                        
+                        <div class="post-text">
+                            <p>
+                                Using advanced animal detection and pose estimation, we analyzed and compared the grazing patterns of sheep in isolated settings versus when they are in a flock. Our findings, illustrated in Figure 3 (E), reveal that sheep exhibit more substantial grazing activity when isolated compared to when they are part of a herd. This increased grazing in solitude is attributed to the absence of social stimuli and potential threats, allowing sheep to focus more intently on feeding.
+                            </p>
+                            <p>
+                                In controlled environments devoid of predators or environmental stressors, sheep show reduced vigilance behavior, which is typically heightened in group settings. Our observations support this principle, indicating that solitary sheep take advantage of safety and tranquility to maximize food intake. In contrast, when sheep graze in groups, their feeding is often interrupted by social interactions such as establishing hierarchies or bonding, leading to less overall food consumption.
+                            </p>
+                            <br>
+                            <p>
+                                Quantitative data from our analysis clearly contrasts the two scenarios: isolated sheep show consistent feeding patterns with minimal interruptions, while herd grazing patterns are interspersed with non-feeding activities. This study provides valuable insights into the grazing behaviors of domestic sheep, which can help enhance farm management practices and optimize feeding strategies to improve animal well-being and productivity.
+                            </p>
+                            <br>
+                            <p>
+                                In summary, our analysis indicates that in controlled scenarios, sheep graze more when alone compared to being in a herd, likely due to fewer distractions and social obligations. However, these findings are based on brief observational periods. A long-term study could reveal different dynamics, as sheep might exhibit varying grazing intensities over extended periods. Our insights are also limited by the dataset scope, which did not capture extended durations or include variables like environmental shifts and detailed social interactions.
+                            </p>
+                        </div>
+                    </div>
+                    <div id="resting" class="behavior-section" style="display:none;">
+                        <img src="Rehab_figures/Figure_3_resting.drawio.svg" alt="Running Image" class="inline-image">
+                        <p class="caption" >Figure 2: Qualitative outputs of our framework depicting resting frames with segmentation masks delineating individual sheep in a state of repose. </p>
+                        <div class="post-text">
+                            <p>
+                                In Figure 3, the UMAP scatterplots display the resting postures of sheep from both front and side views. Each data point represents an individual instance of a sheep's resting posture. The clustering of points indicates patterns of similarity: tighter clusters suggest more consistent and homogeneous behavior patterns.
+                            </p>
+                            <br>
+                            <p>
+                                The left plot, showing the front view, and the right plot, showing the side view, reveal that sheep tend to maintain a consistent resting posture when alone, evidenced by the tightly clustered gray points. This homogeneity is likely due to the absence of external stimuli, leading to uniform resting positions.
+                            </p>
+                            <div class="right-align-image">
+                                <img src="Rehab_figures/Figure_2_resting.drawio.svg" alt="Resting Image">
+                                <p class="caption">Figure 3: UMAP representation of the unique resting pattern of the animals in herd vs single.</p>
+                            </div>
+                            <p>
+                                In contrast, the brown clusters, representing sheep resting in a herd, show a more scattered distribution. This indicates a greater diversity in resting postures, potentially due to social dynamics within the herd or spatial constraints. The scattered clusters suggest that sheep in a herd may change their resting positions more frequently or adopt different postures compared to when they are alone.
+                            </p>
+                            <br>
+                            <p>
+                                These UMAP visualizations provide a compelling visual summary of the differences between solitary and social resting states in sheep. This insight is crucial for understanding sheep behavior in controlled environments and has significant implications for animal welfare and livestock management. The findings align with our observations of grazing behaviors, reinforcing the notion that sheep display more uniform behaviors when solitary. Such insights are pivotal for enhancing livestock management and welfare practices in animal husbandry.
+                            </p>
+
+                        </div>
+                    </div> -->
+                    
+                </div>
+            </article>
+            <article>
+                <div class="post-container">
+                    <div class = "post-text">
+                        <h2>Conclusion</h2>
+                        <p>
+                            ExerAIde leverages advanced motion analysis techniques to significantly enhance rehabilitation and physiotherapy programs. By providing detailed visualizations and insights into joint movements, it allows therapists to design highly personalized and effective therapy plans. The use of a Random Forest Classifier ensures accurate identification of critical joints, while the integration of VQ-VAE-derived embeddings aids in distinguishing healthy from unhealthy movements. ExerAIde not only boosts rehabilitation outcomes but also empowers patients and therapists with valuable data, leading to better recovery and overall performance.
+                        </p>
+                        <br>
+                        <h6>Learn more about ExerAIde</h6>
+                        <div class="info-button-container">
+                            <ul><button class="info-button" onclick="navigateTopaper()" >Read our paper in CVPR Workshop<i class="fas fa-external-link-alt"></i>
+                            </button></ul>
+                            <ul><button class="info-button" onclick="navigateToposter()" >View our poster <i class="fas fa-external-link-alt"></i>
+                            </button></ul>
+                        </div>
+
+                        <div class="noto center-col demo post-container">
+                            <form action="https://formspree.io/f/xvoezewb" method="POST" id="#demo-form" style="width: 100%">
+                                <div class="center-col" style="width: 73%; row-gap: 10px;">
+                                    <input class="input-style-1" type="text" placeholder="you@your-work-email.com" name="email" style="width: 100%;" required>
+                                    <!-- <textarea class="input-style-1" type="text" placeholder="Your Message (Optional)" name="message" style="width: 100%; height: 70px;"></textarea> -->
+                                    <button type="submit" class="button" style="width: 100%;">Request a demo</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <!-- Add more articles as needed -->
+        </section>
+    </main>
+    <footer>
+            <div class="footer-container center-col" style="margin-top: 40px;">© Tibbling Technologies · All Rights Reserved</div>
+    </footer>
+
+    <script>
+        var nav_open = false
+        let hidden_nav = document.getElementById("hidden-nav")
+        // document.getElementById('running_btn').addEventListener("focus", focusFunction);
+        // document.getElementById("running_btn").focus()
+        
+        document.addEventListener('click', (e) => {
+            if (nav_open && !hidden_nav.contains(e.target)) {
+                toggleNav()
+            }
+        })
+
+        function toggleNav(e) {
+            nav_open = hidden_nav.style.right == "0px"
+            hidden_nav.style.right = nav_open ? "-300px" : "0px"
+            nav_open = !nav_open
+
+            // we do not want this event to propagate to the window event listener
+            e?.stopPropagation()
+        }
+
+        function scrollEle(ele) {
+            toggleNav()
+            document.getElementById(ele).scrollIntoView({ behavior: 'smooth', block: "center", inline: "nearest" })
+        }
+
+        // Slider functionality
+        // var slideIndex = 0;
+        // showSlides(slideIndex);
+
+        // function changeSlide(n) {
+        //     showSlides(slideIndex += n);
+        // }
+        
+        // function showSlides(n) {
+        //     var i;
+        //     var slides = document.getElementsByClassName("main-image");
+        //     if (n >= slides.length) { slideIndex = 0 }
+        //     if (n < 0) { slideIndex = slides.length - 1 }
+        //     for (i = 0; i < slides.length; i++) {
+        //         slides[i].style.display = "none";
+        //     }
+        //     slides[slideIndex].style.display = "block";
+        // }
+
+        // Automatic slideshow
+        // setInterval(function() {
+        //     changeSlide(1);
+        // }, 3000); // Change image every 3 seconds
+
+        
+        // function focusFunction(){
+        //     //Write your script here
+        //     console.log('Focused');
+        //     document.getElementById("running_btn").style.backgroundColor = "red";
+        // }
+        // Function to show the selected behavior section
+        function showSection(section, clickedButton) {
+            var sections = document.getElementsByClassName("behavior-section");
+            for (var i = 0; i < sections.length; i++) {
+                sections[i].style.display = "none";
+                }
+            
+            document.getElementById(section).style.display = "block";
+
+            
+            var buttons = document.getElementsByClassName('navigate-button');
+            console.log(buttons);
+            for (var i = 0; i < buttons.length; i++) {
+                buttons[i].classList.remove('default-focused');
+            }
+            // Add active class to the clicked button
+            clickedButton.classList.add('default-focused');
+        }
+
+        
+        document.addEventListener('DOMContentLoaded', function () {
+            var video = document.getElementById('ExerAIde_video');
+            video.playbackRate = 2;
+            video.play();
+        });
+
+        function navigateToposter() {
+            window.open('https://drive.google.com/file/d/1EEhOGXEp0sE8qcHuevv5VA2oPMP3sjht/view?usp=sharing',  '_blank'); // Replace with your desired URL
+        }
+
+        function navigateTopaper() {
+            window.open('https://openaccess.thecvf.com/content/CVPR2024W/CVsports/papers/Qazi_ExerAIde_AI-assisted_Multimodal_Diagnosis_for_Enhanced_Sports_Performance_and_Personalised_CVPRW_2024_paper.pdf',  '_blank'); // Replace with your desired URL
+        }
+
+        function sendEmail() {
+            var email = 'asim@tibbtech.com'; // Replace with your email address
+            window.location.href = `mailto:${email}`;
+        }
+  
+        
+    </script>
+</body>
+</html>

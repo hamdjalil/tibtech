@@ -18,14 +18,27 @@ body {
     font-size: 2em;
 }
 
+.title {
+    font-size: 0.9em;
+    color: #666;
+    font-family: 'Lora', serif;
+    margin-bottom: 20px;
+}
+
 h1 {
     font-family: 'Inter Tight', serif;
 }
 
-h2, h3, h4, h5, h6 {
+h2, h3, h4, h5 {
     text-align: left; /* Left-align all headings */
     font-family: 'Inter Tight', serif;
     font-size: 2em;
+}
+
+h6 {
+    text-align: left; /* Left-align all headings */
+    font-family: 'Inter Tight', serif;
+    font-size: 1em;
 }
 
 #navbar {
@@ -91,7 +104,7 @@ h2, h3, h4, h5, h6 {
     font-size: 0.9em;
     color: #666;
     font-family: 'Lora', serif;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .hero .slider {
@@ -160,7 +173,7 @@ h2, h3, h4, h5, h6 {
 
 .inline-image {
     width: 100%;
-    max-width: 700px; /* Adjust this value as needed */
+    max-width: 1000px; /* Adjust this value as needed */
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin-top: 10px;
@@ -310,9 +323,6 @@ h2, h3, h4, h5, h6 {
     font-size: 0.9em; /* Adjust icon size */
 }
 
-/* .behavior-section {
-    display: none;
-} */
 .active-button {
     background-color: yellow; /* Change to your desired color */
 }

@@ -34,9 +34,10 @@
 
     <main class="main-container">
         <section class="hero">
-            <h1>AnimalFormer </h1>
-            <h2 class="head"> Multimodal Vision Framework for <br> Behavior-based Precision Livestock Farming </h2>
-            <p class="author-info">Tibbling Technologies</p>
+            <h1>AnimalFormer: an AI Framework for Livestock Farming</h1>
+            <p class="title"> Multimodal Vision Framework for Behavior-based Precision Livestock Farming </p>
+            <p class="author-info">June 18, 2024</p>
+            <p class="author-info">By Taha Razzaq, Ahmed Qazi & Asim Iqbal <br> Tibbling Technologies</p>
             <div class="slider">
                 <!-- <img src="AnimalFormer_figures/AnimalFormer_Updated_Sheep_Only_Faster.gif" alt="Main Image" class="main-image"> -->
                 <video controls autoplay muted loop id="AnimalFormer_video" class = "video" >
@@ -101,7 +102,7 @@
             <article class="post">
                 <div class="post-container">
                     <div class="post-text">
-                        <h2>Comprehensive Analysis of Livestock Behavior</h2>
+                        <h2>Multimodal AI driven Livestock Behavior</h2>
                         <p>Our detailed analysis of a sheep dataset showcases the capabilities of our AnimalFormer framework, focusing on gait, running, grazing, and resting behaviors. Through precise data-driven insights, we illustrate how such comprehensive monitoring can enhance understanding and management of livestock behaviors, serving as a model for broader applications in precision farming.</p>
                     </div>
                     <div class="button-container">
@@ -110,15 +111,15 @@
                         <button id = 'grazing_btn' onclick="showSection('grazing', this)" class="navigate-button">Grazing Analysis</button>
                         <button id = 'resting_btn' onclick="showSection('resting', this)" class="navigate-button">Resting Analysis</button>
                     </div>
-                    <div id="running" class="behavior-section" >
+                    <div id="running" class="behavior-section post-container" >
                         <img src="AnimalFormer_figures/Figure_3_running.drawio.svg" alt="Running Image" class="inline-image">
                         <p class="caption">Figure 2: Qualitative outputs of our framework depicting running frames with keypoints and bounding boxes illustrating movement dynamics. </p>
                         <img src="AnimalFormer_figures/Figure_2_running.drawio.svg" alt="Running Image" class="inline-image">
                         <p class="caption">Figure 3: A. UMAP representation of the unique gait patterns of the sheep extracted from their running videos. B.
                             Speed profile of the animal extracted at the commencement, midpoint, and conclusion of their running videos. C. The unique clusters of
                             existing sheep gait patterns. </p>
-                      
-                        <div class="post-text">
+
+                        <div class="post-text post-container">
                             <p>
                                 Sheep, as prey animals, often exhibit flight responses, making running a common behavior that can reveal much about their gaits and speed. By analyzing running videos of individual sheep, we can extract various poses using UMAP embeddings, as illustrated in Figure 3 (A). Each color in the figure represents poses of different animals, showing that while most poses cluster closely, some are more dispersed.
                             </p>
@@ -136,15 +137,13 @@
                             </p>
                         </div>
                     </div>
-                    <div id="grazing" class="behavior-section" style="display:none;">
+                    <div id="grazing" class="behavior-section post-container" style="display:none;">
                         <img src="AnimalFormer_figures/Figure_3_grazing.drawio.svg" alt="Grazing Image" class="inline-image">
                         <p class="caption">Figure 2: Qualitative outputs of our framework depicting Grazing frames showcasing sheep engaged in feeding with extracted poses and segmentation masks highlighting the focus areas. </p>
                         <img src="AnimalFormer_figures/Figure_2_grazing.drawio.svg" alt="Grazing Image" class="inline-image">
                         <p class="caption">Figure 3: The grazing activity of the sheep in herds vs single</p>
-                        <!-- <div class="right-align-image">
-                        </div> -->
                         
-                        <div class="post-text">
+                        <div class="post-text post-container">
                             <p>
                                 Using advanced animal detection and pose estimation, we analyzed and compared the grazing patterns of sheep in isolated settings versus when they are in a flock. Our findings, illustrated in Figure 3, reveal that sheep exhibit more substantial grazing activity when isolated compared to when they are part of a herd. This increased grazing in solitude is attributed to the absence of social stimuli and potential threats, allowing sheep to focus more intently on feeding.
                             </p>
@@ -162,7 +161,7 @@
                             </p>
                         </div>
                     </div>
-                    <div id="resting" class="behavior-section" style="display:none;">
+                    <div id="resting" class="behavior-section post-container" style="display:none;">
                         <img src="AnimalFormer_figures/Figure_3_resting.drawio.svg" alt="Resting Image" class="inline-image">
                         <p class="caption" >Figure 2: Qualitative outputs of our framework depicting resting frames with segmentation masks delineating individual sheep in a state of repose. </p>
                         <img src="AnimalFormer_figures/Figure_2_resting.drawio.svg" alt="Resting Image" class="inline-image">
@@ -170,7 +169,7 @@
                         <!-- <div class="right-align-image">
                             
                         </div> -->
-                        <div class="post-text">
+                        <div class="post-text post-container">
                             <p>
                                 In Figure 3, the UMAP scatterplots display the resting postures of sheep from both front and side views. Each data point represents an individual instance of a sheep's resting posture. The clustering of points indicates patterns of similarity: tighter clusters suggest more consistent and homogeneous behavior patterns.
                             </p>
@@ -212,11 +211,11 @@
                                     Read our paper in CVPR Workshop<i class="fas fa-external-link-alt"></i>
                                 </button>
                             </ul>
-                            <ul>
+                            <!-- <ul>
                                 <button class="info-button" onclick="navigateToposter()">
                                     View our poster <i class="fas fa-external-link-alt"></i>
                                 </button>
-                            </ul>
+                            </ul> -->
                         </div>
                         
                         <!-- <div class="info-button-container">
@@ -313,7 +312,6 @@
                 }
             
             document.getElementById(section).style.display = "block";
-
             
             var buttons = document.getElementsByClassName('navigate-button');
             console.log(buttons);
