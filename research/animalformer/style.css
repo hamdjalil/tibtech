@@ -583,3 +583,27 @@ h6 {
         line-height: normal;
     }
 }
+
+.social-follow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    font-family: 'Inter Tight', sans-serif;
+    font-size: 0.8em;
+}
+
+.social-follow span {
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+.social-follow a {
+    text-decoration: none;
+    color: #000;
+    font-size: 1.5em;
+}
+
+.social-follow a:hover {
+    color: #121213; /* Change the color on hover if desired */
+}
