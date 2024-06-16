@@ -182,7 +182,7 @@ h6 {
 
 .inline-image {
     width: 100%;
-    max-width: 1200px; /* Adjust this value as needed */
+    max-width: 2600px; /* Adjust this value as needed */
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin-top: 10px;
@@ -194,7 +194,7 @@ h6 {
 }
 
 .inline-image-2 {
-    width: 200%;
+    width: 100%;
     max-width: 1200px; /* Adjust this value as needed */
     border-radius: 10px;
     float: center; 
