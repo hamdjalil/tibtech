@@ -55,7 +55,7 @@
         <section class="content">
             <article class="post">
                 <div class="post-container">
-                    <div class="post-text">
+                    <div class="post-text-2">
                         <!-- <h3>What's under the hood?</h3> -->
                         <p>
                             The fusion of computer vision and deep learning has revolutionized non-contact animal monitoring systems, becoming a cornerstone in modern agriculture. 
@@ -75,7 +75,7 @@
 
             <article class="post">
                 <div class="post-container">
-                    <div class="post-text">
+                    <div class="post-text-2">
                         <h3>Introducing AnimalFormer</h3>
                         <p>
                             We are excited to introduce AnimalFormer, a groundbreaking non-contact, multimodal AI framework designed for comprehensive livestock behavior analysis. Leveraging state-of-the-art models, AnimalFormer offers a holistic view of animal activities such as grazing, running, and resting, using an open-source sheep dataset. This innovative framework combines advanced techniques like ViTPose, GroundingDINO, and HQSAM for nuanced pose estimation and precise segmentation, capturing detailed movements and interactions.
@@ -86,7 +86,7 @@
                     <p class="caption">
                         Figure 1: Our integrated analysis framework, designed for comprehensive animal behavioral understanding demonstrated on a sheep dataset. This block diagram provides a clear overview of the data flow and processing steps within our end-to-end solution.
                     </p>
-                    <div class="post-text">
+                    <div class="post-text-2">
                         <p>
                             AnimalFormer provides a scalable solution adaptable to various livestock species and farm sizes, delivering critical insights for optimizing feed efficiency, monitoring health, and improving breeding programs. This novel approach transcends existing methodologies, facilitating precision livestock farming and proactive health monitoring through raw video data, without the need for invasive tagging or interaction. The non-invasive nature of AnimalFormer ensures minimal stress to animals, leading to more accurate observations and a deeper understanding of their well-being.
                         </p>
@@ -101,7 +101,7 @@
 
             <article class="post">
                 <div class="post-container">
-                    <div class="post-text">
+                    <div class="post-text-2">
                         <h2>Multimodal AI driven Livestock Behavior</h2>
                         <p>Our detailed analysis of a sheep dataset showcases the capabilities of our AnimalFormer framework, focusing on gait, running, grazing, and resting behaviors. Through precise data-driven insights, we illustrate how such comprehensive monitoring can enhance understanding and management of livestock behaviors, serving as a model for broader applications in precision farming.</p>
                     </div>
@@ -111,15 +111,16 @@
                         <button id = 'grazing_btn' onclick="showSection('grazing', this)" class="navigate-button">Grazing Analysis</button>
                         <button id = 'resting_btn' onclick="showSection('resting', this)" class="navigate-button">Resting Analysis</button>
                     </div>
-                    <div id="running" class="behavior-section post-container post-text" >
-                        <img src="AnimalFormer_figures/Figure_3_running.drawio.svg" alt="Running Image" class="inline-image-2">
+                    <div id="running" class="behavior-section" >
+                        <img src="AnimalFormer_figures/Figure_3_running.drawio.svg" alt="Running Image" class="inline-image-2 ">
                         <p class="caption">Figure 2: Qualitative outputs of our framework depicting running frames with keypoints and bounding boxes illustrating movement dynamics. </p>
                         <img src="AnimalFormer_figures/Figure_2_running.drawio.svg" alt="Running Image" class="inline-image-2">
                         <p class="caption">Figure 3: A. UMAP representation of the unique gait patterns of the sheep extracted from their running videos. B.
                             Speed profile of the animal extracted at the commencement, midpoint, and conclusion of their running videos. C. The unique clusters of
                             existing sheep gait patterns. </p>
 
-                        <div class="post-text post-container">
+                        <div class="post-container">
+                            <div class="post-text-2">
                             <p>
                                 Sheep, as prey animals, often exhibit flight responses, making running a common behavior that can reveal much about their gaits and speed. By analyzing running videos of individual sheep, we can extract various poses using UMAP embeddings, as illustrated in Figure 3 (A). Each color in the figure represents poses of different animals, showing that while most poses cluster closely, some are more dispersed.
                             </p>
@@ -136,15 +137,17 @@
                                 Understanding gait diversity and speed has practical implications, such as identifying health issues and optimizing herd management, making this research valuable for both academic and agricultural applications.
                             </p>
                         </div>
+                        </div>
 
                     </div>
-                    <div id="grazing" class="behavior-section post-container post-text" style="display:none;">
+                    <div id="grazing" class="behavior-section" style="display:none;">
                         <img src="AnimalFormer_figures/Figure_3_grazing.drawio.svg" alt="Grazing Image" class="inline-image-2">
                         <p class="caption">Figure 2: Qualitative outputs of our framework depicting Grazing frames showcasing sheep engaged in feeding with extracted poses and segmentation masks highlighting the focus areas. </p>
                         <img src="AnimalFormer_figures/Figure_2_grazing.drawio.svg" alt="Grazing Image" class="inline-image-2">
                         <p class="caption">Figure 3: The grazing activity of the sheep in herds vs single</p>
                         
-                        <div class="post-text">
+                        <div class="post-container">
+                            <div class="post-text-2">
                             <p>
                                 Using advanced animal detection and pose estimation, we analyzed and compared the grazing patterns of sheep in isolated settings versus when they are in a flock. Our findings, illustrated in Figure 3, reveal that sheep exhibit more substantial grazing activity when isolated compared to when they are part of a herd. This increased grazing in solitude is attributed to the absence of social stimuli and potential threats, allowing sheep to focus more intently on feeding.
                             </p>
@@ -161,14 +164,16 @@
                                 In summary, our analysis indicates that in controlled scenarios, sheep graze more when alone compared to being in a herd, likely due to fewer distractions and social obligations. However, these findings are based on brief observational periods. A long-term study could reveal different dynamics, as sheep might exhibit varying grazing intensities over extended periods. Our insights are also limited by the dataset scope, which did not capture extended durations or include variables like environmental shifts and detailed social interactions.
                             </p>
                         </div>
+                    </div>
 
                     </div>
-                    <div id="resting" class="behavior-section post-container post-text" style="display:none;">
+                    <div id="resting" class="behavior-section" style="display:none;">
                         <img src="AnimalFormer_figures/Figure_3_resting.drawio.svg" alt="Resting Image" class="inline-image-2">
                         <p class="caption" >Figure 2: Qualitative outputs of our framework depicting resting frames with segmentation masks delineating individual sheep in a state of repose. </p>
                         <img src="AnimalFormer_figures/Figure_2_resting.drawio.svg" alt="Resting Image" class="inline-image-2">
                         <p class="caption">Figure 3: UMAP representation of the unique resting pattern of the animals in herd vs single.</p>
-                        <div class="post-text">
+                        <div class="post-container">
+                            <div class="post-text-2">
                             <p>
                                 In Figure 3, the UMAP scatterplots display the resting postures of sheep from both front and side views. Each data point represents an individual instance of a sheep's resting posture. The clustering of points indicates patterns of similarity: tighter clusters suggest more consistent and homogeneous behavior patterns.
                             </p>
@@ -185,6 +190,7 @@
                                 These UMAP visualizations provide a compelling visual summary of the differences between solitary and social resting states in sheep. This insight is crucial for understanding sheep behavior in controlled environments and has significant implications for animal welfare and livestock management. The findings align with our observations of grazing behaviors, reinforcing the notion that sheep display more uniform behaviors when solitary. Such insights are pivotal for enhancing livestock management and welfare practices in animal husbandry.
                             </p>
                         </div>
+                        </div>
 
                     </div>
                     
@@ -192,7 +198,7 @@
             </article>
             <article>
                 <div class="post-container">
-                    <div class = "post-text">
+                    <div class = "post-text-2">
                         <h2>Conclusion</h2>
                         <p>
                             Our innovative multimodal AI-based vision framework, AnimalFormer, integrates cutting-edge models to deliver comprehensive behavioral analytics tailored for precision livestock farming. By analyzing a sample sheep dataset, we demonstrated the framework's capability to provide detailed insights into various activities, including running, grazing, and resting. This framework transcends traditional monitoring methods by offering non-invasive, in-depth behavioral analysis without the need for additional hardware like RFID tags. This not only reduces stress on animals but also ensures more accurate data collection, leading to better health and productivity outcomes.

@@ -172,6 +172,14 @@ h6 {
     
 }
 
+.post-text-2 {
+    width: 100%;
+    max-width: 850px; /* Adjust this value as needed */
+    text-align: left;
+    font-family: 'Inter Tight', serif;
+    
+}
+
 .inline-image {
     width: 100%;
     max-width: 1200px; /* Adjust this value as needed */
@@ -186,15 +194,14 @@ h6 {
 }
 
 .inline-image-2 {
-    width: 100%;
-    max-width: 1600px; /* Adjust this value as needed */
+    width: 200%;
+    max-width: 1200px; /* Adjust this value as needed */
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    float: center; 
     margin-top: 10px;
     margin-bottom: 15px; /* Added margin-bottom for spacing */
     margin-left: 20px;
     margin-right: 20px;
-    float: center; 
     /* Make the image float to the right of the text */
 }
 
