@@ -408,20 +408,8 @@
         '/': 'index.html',
         '/research/animalformer': 'research/animalformer/index.html',
         '/research/exeraide': 'research/exeraide/index.html',
-        '/research/neurn': 'https://neurnai.github.io/'
+        '/research/neurn': 'research/neurn/index.html'
         };
-
-    const path = window.location.pathname;
-    if (routes[path]) {
-        if (routes[path].startsWith('http')) {
-            window.location.href = routes[path];
-        } else {
-            window.location.href = routes[path];
-        }
-    } else {
-        // Handle 404 or redirect to a default page
-        window.location.href = '/404.html';
-    }
 
     function loadContent(url) {
         fetch(url)
