@@ -407,9 +407,23 @@
     const routes = {
         '/': 'index.html',
         '/research/animalformer': 'research/animalformer/index.html',
-        '/research/exeraide': 'research/exeraide/index.html',
-        '/research/neurn': 'https://neurnai.github.io/'
-    };
+        '/research/exeraide': 'research/exeraide/index.html'
+        };
+
+    app.get(Object.keys(routes), (req, res) => {
+        const route = routes[req.path];
+        if (route) {
+            res.sendFile(route, { root: __dirname });
+        } else if (req.path === '/research/neurn') {
+            res.redirect('https://neurnai.github.io/');
+        } else {
+            res.status(404).send('Not Found');
+        }
+    });
+    
+    app.listen(3000, () => {
+        console.log('Server is running on port 3000');
+    });
 
     function loadContent(url) {
         fetch(url)
