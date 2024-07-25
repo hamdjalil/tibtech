@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Refined Dropdown Navbar</title>
+    <link href="https://cdn.tailwindcss.com" rel="stylesheet">
+    <style>
+        a {
+            text-decoration: none;
+        }
+
+        .navbar {
+            font-family: 'Arial', sans-serif;
+            background: #ffffff; /* Bright background for contrast */
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 20px;
+            width: 100%;
+            box-shadow:0 0.8px 0px 0 rgba(0, 0, 0, 0.2);
+
+        }
+
+        .navbar-logo, .landing-logo {
+            cursor: pointer;
+        }
+
+        .navbar-list {
+            padding-right: 50px;
+            list-style: none;
+            margin: 0;
+            display: flex;
+            align-items: center;
+        }
+        .navbar-list .navbar-logo {
+    width: 24px; /* Set the width of the SVG */
+    height: 24px; /* Set the height of the SVG */
+    fill: currentColor; /* Use current text color for the SVG fill */
+    transition: transform 0.3s ease; /* Add transition effect */
+}
+
+.navbar-list > li:hover .navbar-logo,
+.navbar-list > li:focus-within .navbar-logo {
+    transform: rotate(90deg); /* Rotate the SVG on hover/focus */
+}
+
+
+        .navbar-list > li:hover,
+        .navbar-list > li:focus-within {
+            background: #dbdbdb;
+            padding: 15px 20px;
+            margin: 0 -10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .navbar-list > li {
+            color: #fff;
+            padding: 1rem;
+            position: relative;
+            transition: background-color 0.3s ease, padding 0.3s ease, margin 0.3s ease;
+        }
+
+        .navbar-list > li a {
+            color: #fff;
+            padding: 0.5rem 1rem;
+        }
+
+        .dropdown {
+            display: none;
+            position: absolute;
+            background: #2d2b2b6a;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.25);
+            border-radius: 4px;
+            overflow: hidden;
+            top: 100%;
+            right: 0;
+            min-width: 12rem;
+            transition: all 0.3s ease;
+            padding: 10px 0px 20px 0px; /* Remove padding to eliminate empty space */
+
+        }
+
+        .dropdown li {
+            list-style-type: none;
+        }
+
+        .dropdown li a {
+            display: block;
+            white-space: nowrap;
+            padding: 30zpx 30px; /* Increase padding to make the items longer */
+        }
+
+        .dropdown li:hover,
+        .dropdown li:focus {
+            background: #202020;
+        }
+
+        .navbar-list > li:hover > .dropdown,
+        .navbar-list > li:focus-within > .dropdown {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar" role="navigation">
+        <img src="/assets/logo.svg" alt="Logo" style="height: 50px;">
+        <ul class="navbar-list">
+            <li>
+                <a href="#" aria-haspopup="true">
+                    <svg class="navbar-logo" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="black">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                    </svg>
+                </a>
+                <ul class="dropdown">
+                    <li><a href="#" onclick="scrollEle('about')">About</a></li>
+                    <li><a href="#" onclick="scrollEle('contact-section')">Contact</a></li>
+                    <li><a href="#" onclick="scrollEle('team')">Discover Tibbling Ai</a></li>
+                    <li><a href="#" onclick="scrollEle('team')"></a></li>
+
+                </ul>
+            </li>
+        </ul>
+    </nav>
+</body>
+</html>

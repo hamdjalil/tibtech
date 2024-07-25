@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-38PESE35X3"></script>
@@ -20,6 +20,16 @@
     <title>Tibbling AI</title>
 
     <style>
+       body, html {
+    font-family: 'Montserrat', sans-serif; /* Apply Montserrat font */
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: white; /* Ensures the background color is white */
+    display: flex;
+    flex-direction: column;
+}
+
         .center-col {
             display: flex;
             flex-flow: column wrap;
@@ -34,17 +44,7 @@
             justify-content: center;
         }
 
-        .audiowide {
-            font-family: 'Audiowide', sans-serif;
-        }
-
-        @font-face {
-            font-family: "NotoSerif";
-            src: url("/assets/Noto_Serif/NotoSerif-VariableFont_wdth\,wght.ttf");
-        }
-        .noto {
-            font-family: "NotoSerif";
-        }
+       
         
         .text-center {
             text-align: center;
@@ -173,7 +173,7 @@
             height: 100%;
             width: 300px;
             /* background-color: #36454F; */
-            background-color: #373737;
+            background-color: #aaaaaa;
             right: -300px;
             transition: all 0.5s;
             color: white;
@@ -282,7 +282,7 @@
     
     <!-- navbar -->
     <div id="navbar" class="noto">
-        <img src="/assets/logo.svg" style="height: 100%;" />
+        <img src="/assets/logo.svg" class="landing-logo"style="height: 100%;" />
         <div onclick="toggleNav(event)">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" style="width: 30px; height: 30px; cursor: pointer">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />

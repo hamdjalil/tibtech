@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<style>
+    
+        a {
+            text-decoration: none;
+        }
+    
+        .navbar {
+            font-family: 'Arial', sans-serif;
+            background: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px 20px; /* Increased padding at top and bottom */
+            width: 100%;
+            height: 25px; /* Added a fixed height for more space */
+            box-shadow: 0 0.8px 0px 0 rgba(0, 0, 0, 0.2);
+        }
+    
+        .navbar-list {
+            padding-right: 80px;
+            list-style: none;
+            margin: 0;
+            display: flex;
+            align-items: center;
+        }
+    
+        .navbar-list > li {
+            color: #000;
+            padding: 15px 20px;
+            transition: background-color 0.3s ease;
+        }
+    
+        .navbar-list > li:hover,
+        .navbar-list > li:focus {
+            background: #dbdbdb;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+    
+        .navbar-list > li a {
+            color: #000;
+            padding: 0.5rem 1rem;
+        }
+    
+</style>
+
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar" role="navigation">
+        <img src="logos/logo.svg" alt="Logo" style="height: 50px;">
+        <ul class="navbar-list">
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">About Tibbling</a></li>
+        </ul>
+    </nav>
+
+    
+
+    <div class="container">
+        <div class="page-title">
+            <h1>Publications</h1>
+            <p class="description">Explore our applications of Multimodal AI in healthcare</p>
+        </div>
+
+        <!-- Cards for blogs (added through script.js) -->
+        <div class="card-container">
+            <div class="divider">
+            <div class="section-heading">
+                <h class="section-title">Latest research news</h>
+                <p class="description">Discover our groundbreaking work from the lab</p>
+            </div>
+            <div class="view-all-button">
+            <a href="blog-posts.html" >view all posts</a>
+        </div>
+        </div>
+            <div id="blog-cards" class="blog-cards"></div>
+            
+        </div>
+    </div>
+
+        <!-- List of papers added through research-papers.js -->
+         <div class="second-container">
+    
+            <p class="second-description">Publications <br><span class="sub-description">explore our papers below</span></p>
+            <div class="list-container" id="publication-lists"></div>
+         </div>
+
+        <!-- FOOTER -->
+        <footer>
+            <div class="footer-container center-col" style="margin-top: 30px;">
+                <div class="social-follow">
+                    <span>Follow us on</span>
+                    <a href="https://x.com/tibbtech?mx=2" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+                </div>
+                © Tibbling Technologies · All Rights Reserved
+            </div>
+        </footer>
+    
+
+    <script src="script.js"></script>
+    <script src="research-papers.js"></script>
+
+    <!-- Javascript for navbar -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+    let lastScrollTop = 0; // Variable to store the last scroll position
+    const navbar = document.getElementById('navbar'); // Get the navbar element
+
+    window.addEventListener("scroll", function() {
+        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        
+        if (scrollTop > lastScrollTop) {
+            // Downscroll code
+            navbar.style.top = "-80px"; // Adjust this value to match the navbar's height
+        } else {
+            // Upscroll code
+            navbar.style.top = "0px";
+        }
+        lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // Update lastScrollTop to current position
+    }, false);
+});
+
+        var nav_open = false
+        let hidden_nav = document.getElementById("hidden-nav");
+
+        document.addEventListener('click', (e) => {
+            if (nav_open && !hidden_nav.contains(e.target)) {
+                toggleNav();
+            }
+        });
+
+        function toggleNav(e) {
+            nav_open = hidden_nav.style.right == "0px";
+            hidden_nav.style.right = nav_open ? "-300px" : "0px";
+            nav_open = !nav_open;
+            e?.stopPropagation();
+        }
+
+        function scrollEle(ele) {
+            toggleNav();
+            document.getElementById(ele).scrollIntoView({behavior: 'smooth', block: "center", inline: "nearest"});
+        }
+    </script>
+</body>
+</html>

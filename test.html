@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-38PESE35X3"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-38PESE35X3');
+    </script>
+
+    <title>Tibbling AI</title>
+
+    <style>
+        .center-col {
+            display: flex;
+            flex-flow: column wrap;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .center-row {
+            display: flex;
+            flex-flow: row wrap;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .audiowide {
+            font-family: 'Audiowide', sans-serif;
+        }
+
+        @font-face {
+            font-family: "NotoSerif";
+            src: url("/assets/Noto_Serif/NotoSerif-VariableFont_wdth\,wght.ttf");
+        }
+        .noto {
+            font-family: "NotoSerif";
+        }
+        
+        .text-center {
+            text-align: center;
+        }
+
+        .gradient-text {
+            background: linear-gradient(to left, #FBCD82, #FF745A, #F465B9, #945CF1);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .top-row {
+            flex-direction: column;
+            gap: 60px;
+        }
+
+        @keyframes blinking {
+            0% { opacity: 0; }
+            50% { opacity: 1; }
+            100% { opacity: 0; }
+        }
+
+        .blinker {
+            animation-name: blinking;
+            animation-duration: 500ms;
+            animation-iteration-count: infinite;
+            position: relative;
+            left: -10px;
+        }
+
+        .input-style-1 {
+            padding-block: 0px;
+            padding-inline: 0px;
+            border-radius: 5px;
+            padding: 12px;
+            border: 1px solid black;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .input-style-1::placeholder {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .button {
+            border-radius: 5px;
+            background: linear-gradient(to left, #FBCD82, #FF745A, #F465B9, #945CF1);
+            padding-top: 8px;
+            padding-bottom: 8px;
+            color: white;
+            cursor: pointer;
+            border: none;
+        }
+
+        .animated-text {
+            font-size: 50px;
+            line-height: 80px;
+        }
+
+        #contact-section {
+            padding: 20px; 
+            gap: 50px; 
+            width: 100%;
+        }
+
+        .experience-row {
+            gap: 20px;
+        }
+
+        .title {
+            font-size: 25px; 
+            font-weight: bold; 
+            margin-bottom: 20px;
+        }
+
+        .intro {
+            gap: 40px;
+            padding: 20px;
+        }
+
+        .intro > div {
+            gap: 10px;
+            transition: all 300ms;
+            cursor: pointer;
+            position: relative;
+            top: 0;
+        }
+
+        .experience-row > img {
+            transition: all 300ms;
+            position: relative;
+            top: 0;
+            cursor: pointer;
+        }
+
+        .intro > div:hover, .experience-row > img:hover  {
+            opacity: 0.5;
+            top: -5px;
+        }
+
+        .demo {
+            width: 80%;
+        }
+
+        #navbar {
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 10px 40px 10px 40px;
+            box-sizing: border-box;
+            background-color: white;
+            box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2);
+            z-index: 19;
+        }
+
+        #hidden-nav {
+            position: fixed;
+            z-index: 20;
+            top: 0;
+            height: 100%;
+            width: 300px;
+            /* background-color: #36454F; */
+            background-color:#333945  ;
+            right: -300px;
+            transition: all 0.2s;
+            color: white;
+            padding: 60px 30px;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            row-gap: 30px;
+        }
+
+        #hidden-nav > div:hover{
+            cursor: pointer;
+            opacity: 0.5;
+        }
+
+        .tagline {
+            font-size: 22px;
+            text-align: center;
+            margin: 20px;
+        }
+
+        .social-follow {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 20px;
+            font-family: 'Inter Tight', sans-serif;
+            font-size: 0.8em;
+        }
+        
+        .social-follow span {
+            margin-right: 10px;
+            font-weight: bold;
+        }
+        
+        .social-follow a {
+            text-decoration: none;
+            color: #000;
+            font-size: 1.5em;
+        }
+        
+        .social-follow a:hover {
+            color: #121213; /* Change the color on hover if desired */
+        }
+
+        .footer-container {
+            background: #fff;
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .center-col {
+            display: flex;
+            flex-flow: column wrap;
+            align-items: center;
+            justify-content: center;
+        }
+
+        @keyframes ping {
+            0% { transform: scale(1); }
+            50% { transform: scale(0.98); opacity: 0.7; }
+            100% { transform: scale(1); }
+        }
+
+        .landing-logo {
+            animation-name: ping;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+        }
+
+        @media only screen and (max-width: 992px) {
+            .demo {
+                width: 100%;
+            }
+
+            #contact-section {
+                width: 80%;
+            }
+
+            .intro {
+                flex-direction: column;
+            }
+        }
+
+        @media only screen and (max-width: 640px) {
+            .experience-row {
+                flex-direction: column;
+                row-gap: 20px;
+            }
+
+            .animated-text {
+                font-size: 24px;
+                line-height: normal;
+            }
+        
+        }
+    </style>
+</head>
+
+<body style="background-color: rgb(255, 255, 255); padding-top: 100px;">
+    
+    <!-- navbar -->
+    <div id="navbar" class="noto">
+        <img src="/assets/logo.svg" class="landing-logo"style="height: 100%;" />
+        <div onmouseover="toggleNav(event)">
+            <svg class="navbar-logo" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" style="width: 30px; height: 30px; cursor: pointer">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>              
+        </div>
+        
+    </div>
+    <div id="hidden-nav"> 
+        
+        <div onclick="scrollEle('about')">About</div>
+        <div onclick="scrollEle('contact-section')">Contact</div>
+        <div onclick="scrollEle('team')">Discover Tibbling Ai</div>
+    </div>
+
+    <div class="center-col" style="row-gap: 60px;">
+        <!-- About section -->
+        <div class="center-col" style="flex: 1; width: 100%; max-width: 700px;">
+            <div id="about" class="noto tagline">
+                We are a research-driven artificial intelligence company with a deep focus in multimodal healthtech.
+            </div>
+            <img class="landing-logo" src="/assets/TibbTech.svg" style="width: 80%;" >
+        </div>
+
+        <!-- Contact section -->
+        <div class="center-col" style="flex: 1; width: 100%; max-width: 700px;">
+            <div id="contact-section" class="center-col text-center">
+                <!-- Animated text -->
+                <div class="center-row animated-text" style="flex: 1;">
+                    <div class="center-col noto">
+                        <div>We're your Multimodal AI partner in</div>
+                        <div>
+                            <span ref={element} class="gradient-text"></span>
+                            <span class="blinker">|</span>
+                        </div>
+                    </div>
+                </div>
+                    
+                <!-- get in touch form -->
+                <div class="noto center-col demo">
+                    <form action="https://formspree.io/f/xvoezewb" method="POST" id="#demo-form" style="width: 100%">
+                        <div class="center-col" style="width: 100%; row-gap: 10px;">
+                            <input class="input-style-1" type="text" placeholder="you@your-work-email.com" name="email" style="width: 100%;" required>
+                            <!-- <textarea class="input-style-1" type="text" placeholder="Your Message (Optional)" name="message" style="width: 100%; height: 70px;"></textarea> -->
+                            <button type="submit" class="button" style="width: 100%;">Request a demo</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+
+        <!-- Team sections -->
+        
+        <!-- who we are -->
+        <div class="center-col text-center audiowide" style="margin: 80px 30px 80px 30px;">
+            <div class="title" style="width: 100%;">
+                Who We Are
+            </div>
+            <div class="center-row intro">
+                <div class="center-col noto">
+                    <img src="/assets/intro/search.png" height="50" >
+                    <div>AI Researchers</div>
+                </div>
+                <div id="team" class="center-col noto">
+                    <img src="/assets/intro/coding.png" height="50" >
+                    <div>Software Engineers</div>
+                </div>
+                <div class="center-col noto">
+                    <img src="/assets/intro/enzyme.png" height="50" >
+                    <div>Scientists</div>
+                </div>
+                <div class="center-col noto">
+                    <img src="/assets/intro/lightbulb.png" height="50" >
+                    <div>Product Leaders</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- partners -->
+        <div class="center-col audiowide" style="row-gap: 5px; margin-bottom: 80px;">
+            <div class="title">
+                Our Partners
+            </div>
+            <div class="experience-row center-row">
+                <img src="/assets/experience/partners/Stanley.jpg" height="40" />
+                <img src="/assets/experience/partners/Broad.png" height="30" />
+                <img src="/assets/experience/partners/HMS.png" height="35" />
+                <img src="/assets/experience/partners/7.png" height="35" />
+                <img src="/assets/experience/partners/2.png" height="20" />
+                <img src="/assets/experience/partners/znzlogo.jpg" height="40" />
+            </div>
+        </div>
+
+        <!-- experience -->
+        <div class="center-col audiowide" style="row-gap: 5px;">
+            <div class="title">
+                Our Experience
+            </div>
+            <div class="experience-row center-row">
+                <img src="/assets/experience/industry/1.png" height="30" />
+                <img src="/assets/experience/industry/2.svg" height="70" />
+                <img src="/assets/experience/industry/3.png" height="50" />
+                <img src="/assets/experience/industry/4.png" height="40" />
+                <img src="/assets/experience/industry/5.png" height="50" />
+            </div>
+            <div class="experience-row center-row">
+                <img src="/assets/experience/academia/1.svg" height="90" />
+                <img src="/assets/experience/academia/EPFL_NeuroX.png" height="50" />
+                <img src="/assets/experience/academia/5.png" height="50" />
+                <img src="/assets/experience/academia/6.png" height="80" />
+                <!-- <img src="/assets/experience/academia/WCM.png" height="70" /> -->
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-container center-col" style="margin-top: 30px;">
+            <div class="social-follow">
+                <span>Follow us on</span>
+                <a href="https://x.com/tibbtech?mx=2" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+            </div>
+            © Tibbling Technologies · All Rights Reserved
+        </div>
+    </footer>
+</body>
+<script>
+    const routes = {
+        '/': 'index.html',
+        '/research/animalformer': 'research/animalformer/index.html',
+        '/research/exeraide': 'research/exeraide/index.html',
+        '/research/neurn': 'research/neurn/index.html'
+        };
+
+    function loadContent(url) {
+        fetch(url)
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById('content').innerHTML = html;
+            })
+            .catch(err => console.error('Failed to load page:', err));
+    }
+
+    function router() {
+        const path = window.location.pathname;
+        const route = routes[path] || routes['/'];
+        loadContent(route);
+    }
+
+    window.addEventListener('popstate', router);
+
+    document.addEventListener('DOMContentLoaded', () => {
+        router();
+        document.querySelectorAll('a[data-link]').forEach(link => {
+            link.addEventListener('click', function (e) {
+                e.preventDefault();
+                window.history.pushState(null, '', link.href);
+                router();
+            });
+        });
+    });
+    const element = document.getElementsByClassName('gradient-text')[0]
+    const titles = [
+        "drug discovery",
+        "healthcare",
+        "rehabilitation",
+    ]
+
+    const sleep = async (delay) => {
+        return new Promise((res, _) => {
+            setTimeout(res, delay)
+        })
+    }
+
+    const textRoutine = async (ele) => {
+        while (1) {
+            for (let title of titles) {
+                for (let c of title) {
+                    ele.innerHTML += c
+                    await sleep(50);
+                }
+
+                await sleep(500);
+
+                for (let i = title.length - 2; i >= 0; i--) {
+                    ele.innerHTML = title.slice(0, i)
+                    await sleep(50);
+                }
+            }
+        }
+    }
+
+    textRoutine(element)
+</script>
+<script>
+    var nav_open = false;
+    let hidden_nav = document.getElementById("hidden-nav");
+
+    document.addEventListener('mouseover', (e) => {
+        if (nav_open && !hidden_nav.contains(e.target) && !e.target.closest('#navbar')) {
+            toggleNav();
+        }
+    });
+
+    function toggleNav(e) {
+        nav_open = hidden_nav.style.right == "0px";
+        hidden_nav.style.right = nav_open ? "-300px" : "0px";
+        nav_open = !nav_open;
+
+        // we do not want this event to propagate to the window event listener
+        e?.stopPropagation();
+    }
+
+    function scrollEle(ele) {
+        toggleNav();
+        document.getElementById(ele).scrollIntoView({ behavior: 'smooth', block: "center", inline: "nearest" });
+    }
+
+ 
+</script>
+
