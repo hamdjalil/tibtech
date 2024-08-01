@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Inter+Tight:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">   
+     <style>
+        body {
+            font-family: 'Montserrat', sans-serif; /* Apply Montserrat globally */
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline; /* Underline links on hover */
+        }
+        .hero {
+            position: relative;
+            width: 100%;
+            height: 120vh;
+            background: url('profilePicture.jpg') center top/cover no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            filter: brightness(70%) saturate(110%); /* Darkens and increases saturation */
+        }
+        .hero-content {
+            position: absolute;
+            top: 60%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            max-width: 600px; /* Adjust this value to set the width of the content */
+        }
+        .hero h1 {
+            font-weight:500;
+            padding-top:31.25rem;
+            font-size: 4.1em;
+            font-family: 'Montserrat', serif;
+            margin: 0;
+            line-height: 1;
+        }
+        .hero h2 {
+            font-size: 1.5em;
+            font-family: 'Montserrat', serif;
+            color: inherit;
+        }
+        .scroll-down-button svg {
+    height: 48px;
+    width: 48px;
+    fill: white; /* Color of the icon */
+    transition: transform 0.3s ease;
+    animation: bobbing 1s ease-in-out infinite; /* Adds the bobbing animation */
+}
+
+@keyframes bobbing {
+    0%, 100% {
+        transform: translateY(0); /* Start at the initial position */
+    }
+    50% {
+        transform: translateY(-5px); /* Move up */
+    }
+}
+.flexer {
+    display:flex;
+}
+
+
+/* Common container width for alignment */
+.container {
+    max-width: 1200px; /* Adjust as needed for your layout */
+    margin: 0 auto;
+    padding: 0 1.25rem; /* Optional: Add padding for some space around the content */
+}
+
+/* Education section */
+.education-section {
+    display: block;
+    padding: 0.625rem;
+}
+
+.education-title {
+    margin-top: 0;
+    margin-bottom: 0.625rem;
+    font-size: 2.5em;
+    color: #000000;
+    font-family: 'Montserrat', 'Inter-tight'; 
+    font-weight: 500; 
+    line-height: 1.2;
+}
+
+.education-entry {
+    margin-bottom: 1.25rem;
+    padding: 0.9375rem;
+    background-color: white;
+}
+
+.education-logos {
+    display: flex;
+    width: 25rem;
+    height: 3.75rem;
+    padding-bottom: 1.25rem;
+}
+
+/* About Me section */
+.aboutme-section {
+    display: block;
+    padding: 0.625rem;
+    text-align: left;
+}
+
+.aboutme-title {
+    margin-top: 0;
+    margin-bottom: 0.625rem;
+    font-size: 2.5em;
+    color: #000000;
+    font-family: 'Montserrat', 'Inter-tight'; 
+    font-weight: 500; 
+    line-height: 1.2;
+}
+
+.aboutme-section .flexer {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 5px;
+}
+
+.aboutme-section p {
+    font-size: 0.9em;
+    line-height: 1.6;
+    max-width: 60%;
+    font-family: 'Montserrat', sans-serif;
+    text-align: left;
+    margin-top: 0px;
+}
+
+.aboutme-section div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+}
+
+/* Card container */
+.card-container {
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+}
+
+.card {
+    max-width: 31.25rem;
+    max-width: 50rem;
+    background-color: white;
+    border-radius: 8px;
+    width: 18.75rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 0.625rem;
+    flex: 0 0 30%;
+    transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.1);
+}
+
+.card-header {
+    background-color: #eaeaea;
+    padding: 16px;
+    text-align: center;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card-logo {
+    max-width: 200px;
+    max-height: 200px;
+    display: block;
+    margin: 0 auto 8px auto;
+}
+.card-header p {
+    font-size: 12px;
+    color: #666;
+    margin: 0;
+}
+
+.card-body {
+    padding: 16px;
+}
+
+.card-body .card-date {
+    font-size: 14px;
+    color: #999;
+    margin: 0 0 8px 0;
+}
+
+.card-body h3 {
+    font-size: 18px;
+    color: #333;
+    margin: 0 0 8px 0;
+}
+
+.card-body .card-participant {
+    font-size: 14px;
+    color: #999;
+    margin: 0;
+    text-align: left;
+}
+
+.experience-section {
+    display: block;
+    padding: 0.625rem;
+}
+
+.experience-title {
+    margin-top: 0;
+    margin-bottom: 0.625rem;
+    font-size: 2.5em;
+    color: #000000;
+    font-family: 'Montserrat', 'Inter-tight'; 
+    font-weight: 500; 
+    line-height: 1.2;
+}
+
+/* Publications CSS */
+.list-container {
+    display: flex;
+    flex-direction: column;
+    margin-right: auto;
+}
+
+.publication-title {
+    margin-top: 0;
+    margin-bottom: 0.625rem;
+    padding-right: 25rem;
+    padding-bottom: 0px;
+    padding-left: 0.625rem;
+    font-size: 2.5em;
+    color: #000000;
+    font-family: 'Montserrat', 'Inter-tight'; 
+    font-weight: 500; 
+    line-height: 1.2;
+}
+
+.list {
+    position: relative;
+    display: flex;
+    background: white;
+    justify-content: space-between;
+    padding-top: 0.625rem;
+    padding-bottom: 0.625rem;
+    padding-left: 3.75rem;
+    padding-right: 3.75rem;
+    cursor: pointer;
+    transition: box-shadow 0.3s, transform 0.2s;
+    border-bottom: 1.5px solid #ccc;
+}
+
+.list:hover {
+    border-bottom-color: blue;
+}
+
+.list .date {
+    padding-left: 1.25rem;
+    padding-top: 1.25rem;
+    flex-basis: 20%;
+    font-size: 16px;
+    color: #666;
+    white-space: nowrap;
+}
+
+.list-body {
+    flex-grow: 1;
+    padding-left: 0.625rem;
+}
+
+.list-body.title {
+    margin: 0px;
+    font-size: 18px;
+    font-weight: semi-bold;
+    color: #333;
+}
+
+.list-body .authors {
+    margin: 2px;
+    font-size: 16px;
+    color: #666;
+}
+
+.list-body .conference {
+    padding-top: 5px;
+    font-size: 0.8rem;
+    margin: 2px;
+    color: #000000;
+}
+.list .arrow {
+    fill: none;           /* Ensures the SVG doesn't have a fill color */
+    stroke: #333;         /* Sets the color of the stroke to a dark gray */
+    stroke-width: 2px;    /* Sets the thickness of the lines in the SVG */
+    transition: transform 0.3s ease-in-out; /* Smooth transformation on hover or any state change */
+    cursor: pointer;      /* Changes the cursor to a pointer when hovering over the arrow */
+}
+
+.list:hover .arrow {
+    transform: translateX(10px); /* Moves the arrow 10 pixels to the right when the list item is hovered */
+}
+
+
+  /* Navbar css */
+
+  #navbar {
+    height: 5rem;
+    width: 100%; /* Ensures full width */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 0.625rem 2.5rem;
+    box-sizing: border-box;
+    background-color: rgba(255, 255, 255, 0); /* Start with transparent background */
+    z-index: 19;
+    transition: background-color 2s ease-in-out; /* Smooth transition for background color */
+}
+
+
+#navbar.scrolled {
+    background-color: rgba(255, 255, 255, 1); /* Transition to white background when scrolled */
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: background-color 1s ease-in-out; /* Smooth transition for background color */
+}
+
+
+#hidden-nav {
+    position: fixed; /* Fixed position */
+    z-index: 20; /* Above the main navbar for overlay effect */
+    top: 0; /* Aligns to the top of the viewport */
+    height: 100%; /* Full height of the viewport */
+    width: 18.75rem; /* Width of the hidden navigation */
+    background-color: #aaaaaa; /* Background color */
+    right: -300px; /* Starts hidden to the right of the viewport */
+    transition: right 0.5s; /* Smooth transition for sliding in/out */
+    color: white; /* Text color */
+    padding: 3.75rem 1.875rem; /* Padding inside the hidden navigation */
+    box-sizing: border-box; /* Includes padding in width and height calculations */
+    font-family: Arial, Helvetica, sans-serif; /* Font family for text */
+    font-size: 1.25rem; /* Font size for text */
+    display: flex; /* Enables the use of flexbox properties */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    row-gap: 1.875rem; /* Space between items */
+}
+
+#hidden-nav > div:hover {
+    cursor: pointer; /* Changes the cursor to indicate clickable items */
+    opacity: 0.5; /* Transparency effect on hover */
+}
+
+.footer-container {
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1); /* Box shadow on top, creating a slight elevation effect */
+    text-align: center; /* Center the text inside the footer */
+    padding: 20px 0; /* Padding for top and bottom */
+    font-size: 14px; /* Appropriate font size for footer text */
+    background-color: #f8f9fa; /* Background color for visibility of the shadow */
+    width: 100%; /* Ensure it spans the full width of the viewport */
+}
+.social-follow {
+    align-items: center;
+    justify-content: center;
+    margin-top: 1.25rem;
+    font-family: 'Inter Tight', sans-serif;
+    font-size: 0.8em;
+}
+.social-follow a {
+        text-decoration: none;
+        color: #000;
+        font-size: 4em; /* Increase icon size */
+        transition: color 0.3s, transform 0.3s; /* Smooth transition for hover effects */
+}
+.social-follow a:hover {
+        color: #121213; /* Change the color on hover */
+        transform: scale(1.2); /* Slightly enlarge the icon on hover */
+}
+.social-follow a {
+    text-decoration: none;
+    color: #000;
+    font-size: 4em; /* Increase icon size */
+    transition: color 0.3s, transform 0.3s; /* Smooth transition for hover effects */
+    margin: 0 0.625rem; /* Add horizontal margin */
+}
+@media (max-width: 920px) {
+    .list .arrow {
+    display:none;
+}
+.hero-content {
+            position: absolute;
+            top: 55%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            max-width: 600px; /* Adjust this value to set the width of the content */
+        }
+
+.list-container {
+    flex-direction: column;
+    }
+
+    .publication-title {
+        padding-right: 1rem; /* Reduce padding for smaller screens */
+        font-size: 1.5em; /* Smaller font size for titles on smaller screens */
+    }
+
+    .list {
+        display:inline;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .list .date {
+        padding-left: 0.5rem;
+        padding-bottom: 0.5rem;
+        font-size: 14px; /* Smaller font size for date on smaller screens */
+    }
+
+    .list-body {
+        padding-left: 0.5rem;
+    }
+
+    .list-body.title {
+        font-size: 16px; /* Smaller font size for list body title */
+    }
+
+    .list-body .authors, .list-body .conference {
+        font-size: 14px; /* Smaller font size for authors and conference */
+    }
+
+
+}
+
+
+
+@media (max-width: 768px) {
+    .hero-content {
+            position: absolute;
+            top: 45%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            max-width: 600px; /* Adjust this value to set the width of the content */
+        }
+    .education-section {
+            display: block;
+            padding: 1.25rem;
+
+    }
+    .flexer {
+        display:grid;
+        grid-template-columns: 1fr auto 1fr; 
+        gap: 1.25rem; 
+
+    }
+    .experience-section {
+        display: block;
+        padding: 1.25rem;
+    }
+    .card-container {
+        display:grid;
+        grid-template-columns: 1fr 1fr; /* Equal spacing */
+        gap: 1.25rem; /* Space between items */
+
+}
+.list .arrow {
+       display:none;
+}
+.list-container {
+        flex-direction: column;
+}
+
+.publication-title {
+        padding-right: 1rem; /* Reduce padding for smaller screens */
+        font-size: 1.5em; /* Smaller font size for titles on smaller screens */
+    }
+
+.list {
+        display:inline;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .list .date {
+        padding-left: 0.5rem;
+        padding-bottom: 0.5rem;
+        font-size: 14px; /* Smaller font size for date on smaller screens */
+    }
+
+    .list-body {
+        padding-left: 0.5rem;
+    }
+
+    .list-body.title {
+        font-size: 16px; /* Smaller font size for list body title */
+    }
+
+    .list-body .authors, .list-body .conference {
+        font-size: 14px; /* Smaller font size for authors and conference */
+    }
+}
+@media (max-width: 640px) {
+    .hero-content {
+            position: absolute;
+            top: 45%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            max-width: 600px; /* Adjust this value to set the width of the content */
+        }
+    .education-section {
+            display: block;
+            padding: 1.25rem;
+
+    }
+    .flexer {
+        display:flex;
+        justify-content: space-between;
+    }
+    .experience-section {
+    display: block;
+    padding: 1.25rem;
+    }
+    .card-container {
+   
+    justify-content: space-between;
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+}
+.list .arrow {
+    display:none;
+}
+.list-container {
+        flex-direction: column;
+    }
+
+    .publication-title {
+        padding-right: 1rem; /* Reduce padding for smaller screens */
+        font-size: 1.5em; /* Smaller font size for titles on smaller screens */
+    }
+
+    .list {
+        display:inline;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .list .date {
+        padding-left: 0.5rem;
+        padding-bottom: 0.5rem;
+        font-size: 14px; /* Smaller font size for date on smaller screens */
+    }
+
+    .list-body {
+        padding-left: 0.5rem;
+    }
+
+    .list-body.title {
+        font-size: 16px; /* Smaller font size for list body title */
+    }
+
+    .list-body .authors, .list-body .conference {
+        font-size: 14px; /* Smaller font size for authors and conference */
+    }
+
+}
+@media (max-width: 640px) {
+    .flexer{
+        display:block;
+    }
+}
+
+
+
+    </style>
+
+
+</head>
+<body>
+   <!-- NAVBAR -->
+   <div id="navbar" class="noto">
+    <img src="assets/logo.svg" class="landing-logo" style="height: 100%;">
+    <div onclick="toggleNav(event)">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" style="width: 1.875rem; height: 1.875rem; cursor: pointer">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+        </svg>              
+    </div>
+</div>
+
+<div id="hidden-nav"> 
+    <div onclick="toggleNav()" style="position: absolute; top: 0.625rem; right: 1.875rem">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" style="width: 1.25rem; height: 1.25rem;">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+        </svg>              
+    </div>  
+    <div onclick="scrollEle('about')">About</div>
+    <div onclick="scrollEle('contact-section')">Contact</div>
+    <div onclick="scrollEle('team')">Team</div>
+</div>
+
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>
+                <span>Asim Iqbal</span>
+            </h1>
+            <a href="https://tibbtech.com/">
+                <h2>Founder & CEO, Tibbling Technologies</h2>
+            </a>
+            <a href="#nextSection" class="scroll-down-button">
+                <svg fill="#000000" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+                width="50rem" height="50rem" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
+           <g>
+               <path d="M49.288,59.647c0.383,0.348,0.863,0.519,1.342,0.519c0.076,0,0.151-0.015,0.228-0.023c0.028,0.001,0.057,0.008,0.085,0.008
+                   c0.545,0,1.088-0.222,1.482-0.657l15.231-16.804c0.742-0.818,0.68-2.083-0.139-2.824c-0.818-0.743-2.083-0.679-2.824,0.139
+                   L50.656,55.49L35.169,41.453c-0.819-0.744-2.083-0.68-2.824,0.139c-0.742,0.818-0.68,2.083,0.139,2.824L49.288,59.647z"/>
+               <path d="M50,83.214c18.449,0,33.458-15.009,33.458-33.457c0-18.449-15.009-33.458-33.458-33.458
+                   c-18.448,0-33.457,15.009-33.457,33.458C16.543,68.205,31.552,83.214,50,83.214z M50,20.299c16.243,0,29.458,13.215,29.458,29.458
+                   c0,16.242-13.215,29.457-29.458,29.457c-16.242,0-29.457-13.215-29.457-29.457C20.543,33.514,33.758,20.299,50,20.299z"/>
+           </g>
+           </svg>
+            </a>
+        </div>
+       
+    </section>
+
+    <div id="nextSection">
+        <!-- Content to scroll to -->
+
+        <section class="aboutme-section">
+            <div>
+                <div class="aboutme-title" style="font-family: 'Montserrat';">About</div>
+                <div style="width: 50%; height: 2px; background-color: #000; margin-top: 0px; margin-bottom: 1.25rem; margin-left: 0;"></div>
+    
+            </div>
+            <!-- <div class="flexer"> -->
+                <p>
+                    Dr. Asim Iqbal is the Founder & CEO of Tibbling Technologies, where he leads the Artificial Intelligence division. With a Master's and Ph.D. 
+                    in Machine Learning and Computational Neuroscience from the Univeristy & ETH Zürich, Dr. Iqbal brings extensive expertise in developing 
+                    innovative Multimodal AI systems for healthcare applications.
+                    <br><br>
+                    Dr. Iqbal also holds the position of Adjunct Assistant Professor at Weill Cornell Medicine in New York and has previously worked as a Machine
+                    Learning Scientist at Google X, Cajal Neuroscience, EPFL, and IBM Research.
+                    At Tibbling Technologies, Dr. Iqbal leads a team of Ph.D. scientists
+                    and engineers, collaborating with renowned institutions like the Broad Institute and Harvard Medical School to develop cutting-edge AI products for healthcare applications. His research work is published in top AI venues, including Nature Machine Intelligence and CVPR.
+                </p>
+            <!-- </div> -->
+        </section>
+
+        
+       <!-- Education Section -->
+       <section class="education-section">
+        <div>
+            <p class="education-title" style="font-family: 'Montserrat';">Education</p>
+            <div style="width: 50%; height: 2px; background-color: #000; margin-top: 0px; margin-bottom: 1.25rem; margin-left: 0;"></div>
+
+        </div>
+        <div class="flexer">
+
+        <div class="card">
+            <div class="card-header">
+                <img src="epfl-logo.svg" alt="Allen Institute Logo" class="card-logo">
+            </div>
+            <div class="card-body">
+                <p class="card-date">Summer 2018</p>
+                <h3>Summer Workshop On The Dynamic Brain (SWODB)</h3>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+
+            <div class="flexer">
+                <img src="photoshopped_eth_logo-removebg-preview.png" alt="eth logo" class="card-logo">
+                <!-- <img src="University of Zurich UZH.png" alt="eth Logo" class="card-logo"> -->
+            </div>
+
+            </div>
+            <div class="card-body">
+                <p class="card-date">Summer 2018</p>
+                <h3>Summer Workshop On The Dynamic Brain (SWODB)</h3>
+            </div>
+        </div>
+
+    </div>
+    
+        
+    </section>        
+    
+
+
+
+    <!-- experience section -->
+    <section class="experience-section">
+
+    <div>
+    <p class="experience-title">Experience</p>    </div>
+    <div style="width: 50%; height: 2px; background-color: #000; margin-top: 0px; margin-bottom: 0.625rem; margin-left: 0;"></div>
+
+    <div id="experience" class="experience-container">
+        <div class="card-container">
+            <div class="card">
+                <div class="card-header">
+                    <img src="Burke_WCM_CoBrand_RGB_No_Tagline_Final.svg" alt="BNIxWCM Logo" class="card-logo">
+                    <p>Burke Neurological Institute, Weil Cornell Medicine, NYC, New York</p>
+                </div>
+                <div class="card-body">
+                    <p class="card-date">2023-Present</p>
+                    <h3>Adjunct Assistant Professor</h3>
+                    <p class="card-participant" style="text-align: left;">Worked on developing algorithms to analyse whisker detection in mouse somatosensory tasks through LeapMotion device</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <img src="assets/cajal-neuroscience.png" alt="Cajal Neuroscience Logo" class="card-logo">
+                    <p>Cajal Neuroscience, Seattle, Washington</p>
+                </div>
+                <div class="card-body">
+                    <p class="card-date">2021-2022</p>
+                    <h3>Lead Machine Learning Scientist</h3>
+                    <p class="card-participant" style="text-align: left;">For discovering novel solutions for neurodegenerative disorders through Ai-based drug discovery</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <img src="assets/google-logo-9834.png" alt="Google Logo" class="card-logo">
+                    <p>The Moonshot Factory, Mountain View, California</p>
+                </div>
+                <div class="card-body">
+                    <p class="card-date">2019-2020</p>
+                    <h3>Machine Learning Scientist Intern</h3>
+                    <p class="card-participant" style="text-align: left;">Intern on a NeuroMoonshot (Project Amber)</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <img src="assets/Allen_Institute_logo.png" alt="Allen Institute Logo" class="card-logo">
+                    <p>Allen Institute and Washington University in Seattle, Washington</p>
+                </div>
+                <div class="card-body">
+                    <p class="card-date">Summer 2018</p>
+                    <h3>Summer Workshop On The Dynamic Brain (SWODB)</h3>
+                    <p class="card-participant" style="text-align: left;">Worked on developing a deep neural network-based decoder to predict the neural responses in the mouse cortex</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <img src="assets/64f58f62a2dc9a5e08a1102b_ibmr.png" alt="IBM Logo" class="card-logo">
+                    <p>IBM Research-Almaden, San Jose, California</p>
+                </div>
+                <div class="card-body">
+                    <p class="card-date">Summer 2016</p>
+                    <h3>Research Intern with Brain-inspired Computing Team</h3>
+                    <p class="card-participant" style="text-align: left;">Classification of hand gestures through deep learning and its implementation on TrueNorth neuromorphic chip</p>
+                </div>
+            </div>
+
+            
+
+            <div class="card">
+                <div class="card-header">
+                    <img src="assets/MIT_Logo_PNG(1).png" alt="MIT Logo" class="card-logo">
+                    <p>Massachusetts Institute of Technology at Cambridge, Massachusetts</p>
+                </div>
+                <div class="card-body">
+                    <p class="card-date">2015-2016</p>
+                    <h3>Visiting Researcher in Brain and Cognitive Sciences Department</h3>
+                    <p class="card-participant" style="text-align: left;">Worked on predicting neural responses in primate visual cortex through performance optimized deep neural networks</p>
+                </div>
+            </div>
+
+            
+        </div>
+    </div>
+    </section>
+
+
+        <!-- Publication section -->
+
+       
+        <!-- List of papers added through research-papers.js -->
+        <div class="publication-title">Publications</div>
+            <div style="width: 50%; height: 2px; background-color: #000; margin-top: 0px; margin-bottom: 1.875rem; margin-left: 0.625rem;"></div>
+       
+        <div class="list-container" id="publication-lists"></div>
+        
+     
+    <script src="about.js"></script>
+
+  
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            © Tibbling Technologies · All Rights Reserved
+        </div>
+    </footer>
+</body>
+
+
+
+<!-- smooth scroll for scroll-button -->
+<script>
+document.querySelector('.scroll-down-button').addEventListener('click', function(e) {
+    e.preventDefault();
+    const href = this.getAttribute('href');
+    const offsetTop = document.querySelector(href).offsetTop;
+
+    scroll({
+        top: offsetTop,
+        behavior: "smooth"
+    });
+});
+</script>
+
+<script>
+    
+document.addEventListener("DOMContentLoaded", () => {
+let lastScrollTop = 0; // Variable to store the last scroll position
+const navbar = document.getElementById('navbar'); // Get the navbar element
+
+window.addEventListener("scroll", function() {
+    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    
+    if (scrollTop > lastScrollTop) {
+        // Downscroll code
+        navbar.style.top = "-15rem"; // Adjust this value to match the navbar's height
+    } else {
+        // Upscroll code
+        navbar.style.top = "0px";
+    }
+    lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // Update lastScrollTop to current position
+}, false);
+});
+
+    var nav_open = false
+    let hidden_nav = document.getElementById("hidden-nav");
+
+    document.addEventListener('click', (e) => {
+        if (nav_open && !hidden_nav.contains(e.target)) {
+            toggleNav();
+        }
+    });
+
+    function toggleNav(e) {
+        nav_open = hidden_nav.style.right == "0px";
+        hidden_nav.style.right = nav_open ? "-300px" : "0px";
+        nav_open = !nav_open;
+        e?.stopPropagation();
+    }
+
+    function scrollEle(ele) {
+        toggleNav();
+        document.getElementById(ele).scrollIntoView({behavior: 'smooth', block: "center", inline: "nearest"});
+    }
+
+
+                                        // Reset scroll behavior when scrolled to top
+                                        window.addEventListener('scroll', function() {
+                                        if (window.scrollY <= 50) {
+                                            allowScroll = true; // Re-enable scrolling when the user scrolls back to the top
+                                        }
+                                    });
+
+                                    document.addEventListener('DOMContentLoaded', function() {
+                                    var navbar = document.getElementById('navbar');
+                                    window.addEventListener('scroll', function() {
+                                        // Add 'scrolled' class to the navbar based on the scroll position
+                                        if (window.pageYOffset > 250) {
+                                            navbar.classList.add('scrolled');
+                                        } else {
+                                            navbar.classList.remove('scrolled');
+                                        }
+                                    });
+                                });
+
+
+</script>
+</html>
