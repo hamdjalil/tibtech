@@ -188,7 +188,7 @@ listContainer.appendChild(list);
 // Update the event listener for each list to local store the publication ID and redirect
 list.addEventListener('click', () => {
     sessionStorage.setItem('selectedPublicationId', data.id);  // Use sessionStorage instead of localStorage
-    window.open('abstract/', '_blank');  // Open abstract.html in a new tab
+    window.open('publications/abstract/', '_blank');  // Open abstract.html in a new tab
 });
 
 }
