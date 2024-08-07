@@ -134,13 +134,25 @@
     margin-top: 5px;
 }
 
+.aboutme-section {
+    width: 60%; /* Default for desktop view */
+    padding: 0.625rem;
+    text-align: left;
+}
+
 .aboutme-section p {
     font-size: 0.9em;
     line-height: 1.6;
-    max-width: 60%;
+    max-width: 100%;
     font-family: 'Montserrat', sans-serif;
     text-align: left;
     margin-top: 0px;
+}
+
+@media only screen and (max-width: 768px) {
+    .aboutme-section {
+        width: 100%; /* Full width for mobile view */
+    }
 }
 
 .aboutme-section div {
