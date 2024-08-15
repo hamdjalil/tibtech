@@ -640,6 +640,7 @@
 </head>
 <body>
    <!-- NAVBAR -->
+   <a href="https://tibbtech.com/"> 
    <div id="navbar" class="noto">
     <img src="assets/logo.svg" class="landing-logo" style="height: 100%;">
     <div onclick="toggleNav(event)">
@@ -878,6 +879,11 @@ document.querySelector('.scroll-down-button').addEventListener('click', function
 </script>
 
 <script>
+
+function scrollEle(ele) {
+    toggleNav();
+    document.getElementById(ele).scrollIntoView({behavior: 'smooth', block: "center", inline: "nearest"});
+}
     
 document.addEventListener("DOMContentLoaded", () => {
 let lastScrollTop = 0; // Variable to store the last scroll position
@@ -913,30 +919,25 @@ window.addEventListener("scroll", function() {
         e?.stopPropagation();
     }
 
-    function scrollEle(ele) {
-        toggleNav();
-        document.getElementById(ele).scrollIntoView({behavior: 'smooth', block: "center", inline: "nearest"});
+
+    // Reset scroll behavior when scrolled to top
+    window.addEventListener('scroll', function() {
+    if (window.scrollY <= 50) {
+        allowScroll = true; // Re-enable scrolling when the user scrolls back to the top
     }
+});
 
-
-                                        // Reset scroll behavior when scrolled to top
-                                        window.addEventListener('scroll', function() {
-                                        if (window.scrollY <= 50) {
-                                            allowScroll = true; // Re-enable scrolling when the user scrolls back to the top
-                                        }
-                                    });
-
-                                    document.addEventListener('DOMContentLoaded', function() {
-                                    var navbar = document.getElementById('navbar');
-                                    window.addEventListener('scroll', function() {
-                                        // Add 'scrolled' class to the navbar based on the scroll position
-                                        if (window.pageYOffset > 250) {
-                                            navbar.classList.add('scrolled');
-                                        } else {
-                                            navbar.classList.remove('scrolled');
-                                        }
-                                    });
-                                });
+    document.addEventListener('DOMContentLoaded', function() {
+    var navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', function() {
+        // Add 'scrolled' class to the navbar based on the scroll position
+        if (window.pageYOffset > 250) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+    });
+});
 
 
 </script>
