@@ -372,7 +372,7 @@
     box-sizing: border-box;
     background-color: rgba(255, 255, 255, 0); /* Start with transparent background */
     z-index: 19;
-    transition: background-color 2s ease-in-out; /* Smooth transition for background color */
+    transition: top 0.3s ease-in-out, background-color 0.5s ease-in-out; /* Adjusted transition timing */
 }
 
 
@@ -880,64 +880,41 @@ document.querySelector('.scroll-down-button').addEventListener('click', function
 
 <script>
 
-function scrollEle(ele) {
-    toggleNav();
-    document.getElementById(ele).scrollIntoView({behavior: 'smooth', block: "center", inline: "nearest"});
-}
-    
 document.addEventListener("DOMContentLoaded", () => {
-let lastScrollTop = 0; // Variable to store the last scroll position
-const navbar = document.getElementById('navbar'); // Get the navbar element
+    let lastScrollTop = 0;
+    const navbar = document.getElementById('navbar');
+    const navbarHeight = navbar.offsetHeight;
+    const offsetThreshold = 500; // The y offset threshold for triggering the background change
 
-window.addEventListener("scroll", function() {
-    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    
-    if (scrollTop > lastScrollTop) {
-        // Downscroll code
-        navbar.style.top = "-15rem"; // Adjust this value to match the navbar's height
-    } else {
-        // Upscroll code
-        navbar.style.top = "0px";
-    }
-    lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // Update lastScrollTop to current position
-}, false);
-});
+    window.addEventListener("scroll", function() {
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
-    var nav_open = false
-    let hidden_nav = document.getElementById("hidden-nav");
-
-    document.addEventListener('click', (e) => {
-        if (nav_open && !hidden_nav.contains(e.target)) {
-            toggleNav();
-        }
-    });
-
-    function toggleNav(e) {
-        nav_open = hidden_nav.style.right == "0px";
-        hidden_nav.style.right = nav_open ? "-300px" : "0px";
-        nav_open = !nav_open;
-        e?.stopPropagation();
-    }
-
-
-    // Reset scroll behavior when scrolled to top
-    window.addEventListener('scroll', function() {
-    if (window.scrollY <= 50) {
-        allowScroll = true; // Re-enable scrolling when the user scrolls back to the top
-    }
-});
-
-    document.addEventListener('DOMContentLoaded', function() {
-    var navbar = document.getElementById('navbar');
-    window.addEventListener('scroll', function() {
-        // Add 'scrolled' class to the navbar based on the scroll position
-        if (window.pageYOffset > 250) {
-            navbar.classList.add('scrolled');
+        // Handle navbar transparency at the top of the page
+        if (scrollTop <= offsetThreshold) {
+            navbar.style.backgroundColor = "rgba(255, 255, 255, 0)";
+            navbar.style.top = "0";  // Make sure navbar is visible at the top
         } else {
-            navbar.classList.remove('scrolled');
+            navbar.style.backgroundColor = "rgba(255, 255, 255, 1)"; // Add background color when scrolled
         }
+
+        // Handle navbar hide/show on scroll
+        if (scrollTop > lastScrollTop) {
+            // Scrolling down
+            if (scrollTop > offsetThreshold) {
+                navbar.style.top = `-${navbarHeight}px`; // Hide navbar
+            }
+        } else {
+            // Scrolling up
+            navbar.style.top = "0"; // Show navbar
+        }
+
+        lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // Update lastScrollTop to current position
     });
 });
+
+
+
+
 
 
 </script>
