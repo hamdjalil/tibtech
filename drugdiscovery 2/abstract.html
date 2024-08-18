@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<style>
+    body, html {
+    font-family: 'Montserrat', sans-serif; /* Montserrat is now the primary font */
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: white;
+}
+
+.abstract-container {
+    max-width: 1600px; /* Restrict the maximum width */
+    margin: 100px auto; /* Center the container */
+    padding: 40px; /* Padding inside the container */
+}
+.title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.date {
+    color: #666;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.abstract-buttons {
+     margin-top: 10px;
+}
+.abstract-container p1 {
+        color: #000000; 
+        font-size: 50px; /* Set font size */
+        font-weight: 600px; /* Make the font bold */
+        margin-bottom:50px;
+}
+.abstract-container .title-container{
+    line-height: 1.2;
+
+    justify-content: center; /* Center horizontally */
+    align-items: center;     /* Center vertically */
+    text-align: left;      /* Ensure text inside is centered */
+    margin: auto;            /* Center the container within its parent */
+    width: 70%;              /* Limit width to 70% of its parent */
+
+
+}
+    .button-container {
+        display: flex;
+        align-items: center;
+        margin-top: 20px; /* Add some space above the button container */
+}
+
+.button, .view-btn {
+        display: inline-flex;
+        align-items: center;
+        padding: 10px 20px;
+        margin-right: 10px; /* Space between buttons */
+        background-color: #000000; /* Primary button color */
+        color: white;
+        font-size: 14px;
+        font-weight: bold;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s, transform 0.2s; /* Smooth transition for hover effects */
+        text-decoration: none; /* Removes underline from links if any */
+        outline: none; /* Removes default focus outline */
+}
+
+.button:hover, .view-btn:hover,
+.button:focus, .view-btn:focus {
+        background-color: #9c9ea0; /* Darker shade on hover */
+        transform: translateY(-2px); /* Slight lift on hover */
+}
+
+.icon-arrow {
+        margin-left: 10px; /* Space between text and icon */
+        height: 20px; /* Consistent icon size */
+        width: 20px;
+        fill: currentColor; /* Icon color matches the text color */
+}
+
+.button:focus, .view-btn:focus {
+    border: 2px solid #ffcc00; /* Focus style for accessibility */
+}
+
+
+.share-popup {
+    display: none;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    z-index: 1000;
+}
+
+.share-popup a, .share-popup abstract-button {
+    display: block;
+    margin: 5px 0;
+}
+.abstract-header{
+    font-family: 'Georgia', serif; /* Setting Georgia for improved readability */
+    font-weight:bold;
+font-size:24px;
+margin-top:300;
+margin-bottom:0;
+}
+.abstract{
+    line-height: 1.3;
+    
+
+}
+
+.paragraph-container {
+    font-family: 'Georgia', serif; /* Setting Georgia for improved readability */
+    font-size: 18px; /* Optimal size for reading on digital screens */
+    line-height: 1.6; /* Spacing between lines to enhance readability */
+    color: #333; /* Softer black reduces strain on eyes */
+    padding: 20px; /* Adds space around the text */
+    background-color: #fff; /* A white background to ensure contrast */
+    margin: 20px 0; /* Adds vertical space around the paragraph container */
+    text-align: justify; /* Justifies the text for a clean, aligned appearance */
+    max-width: 700px; /* Limits the width to enhance readability */
+    margin-left: auto; /* Centers the container horizontally */
+    margin-right: auto;
+}
+
+
+    /* Share button css */
+
+        .centered-flex {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #FEFEFE;
+            font-family: 'Montserrat', sans-serif;
+        }
+        .social-btn-wrap {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            cursor: pointer;
+            width: 180px;
+            height: 40px;
+            background-color: #EEEEED;
+            will-change: transform;
+            border-radius: 5px; /* Ensure the inner container also has the same border-radius */
+
+            transition: all .2s ease-in-out;
+        }
+        .social-btn-wrap:hover {
+            transform: scale(1.1);
+        }
+        .social-btn-label {
+            padding-left:20px;
+            padding-right:20px;
+            position: absolute;
+            z-index: 99;
+            width: 160px;
+            height: 40px;
+            font-size: 14px;
+            font-weight:bold;
+            text-align: center;
+            line-height: 40px;            color: #EEEEED;
+            background-color: #000000;
+            transition: all 1.2s ease;
+            transition-delay: .25s;
+        }
+        .social-icons-container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 180px;
+            height: 302px;
+            border-radius: 0px;
+        }
+        .social-icon {
+            opacity: 0;
+            font-size: 28px;
+            color: #1F1E1E;
+            transform: scale(.1);
+            transition: all .3s ease;
+        }
+        .social-btn-wrap:hover .social-icon {
+            opacity: 1;
+            transform: scale(1);
+        }
+        .social-btn-wrap:hover .social-btn-label {
+            transform: translateX(-280px);
+        }
+        .spacer {
+            padding-left:20px;
+        }
+
+
+        /* Navbar css */
+
+    #navbar {
+    height: 80px;
+    display: flex;
+    align-items: center; /* Centers items vertically within the navbar */
+    justify-content: space-between; /* Distributes space between and around content items */
+    position: fixed; /* Fixed position to keep the navbar at the top on scrolling */
+    top: 0;
+    left: 0;
+    width: 100%; /* Full width of the viewport */
+    padding: 10px 40px; /* Padding around the content inside the navbar */
+    box-sizing: border-box; /* Includes padding and border in the element's total width and height */
+    background-color: white; /* Background color of the navbar */
+    z-index: 19; /* Makes sure the navbar is above other content */
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: top 0.3s ease-in-out; /* Smooth transition for hiding/showing the navbar */
+}
+
+#hidden-nav {
+    position: fixed; /* Fixed position */
+    z-index: 20; /* Above the main navbar for overlay effect */
+    top: 0; /* Aligns to the top of the viewport */
+    height: 100%; /* Full height of the viewport */
+    width: 300px; /* Width of the hidden navigation */
+    background-color: #aaaaaa; /* Background color */
+    right: -300px; /* Starts hidden to the right of the viewport */
+    transition: right 0.5s; /* Smooth transition for sliding in/out */
+    color: white; /* Text color */
+    padding: 60px 30px; /* Padding inside the hidden navigation */
+    box-sizing: border-box; /* Includes padding in width and height calculations */
+    font-family: Arial, Helvetica, sans-serif; /* Font family for text */
+    font-size: 20px; /* Font size for text */
+    display: flex; /* Enables the use of flexbox properties */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    row-gap: 30px; /* Space between items */
+}
+
+#hidden-nav > div:hover {
+    cursor: pointer; /* Changes the cursor to indicate clickable items */
+    opacity: 0.5; /* Transparency effect on hover */
+}
+.footer-container {
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1); /* Box shadow on top, creating a slight elevation effect */
+    text-align: center; /* Center the text inside the footer */
+    padding: 20px 0; /* Padding for top and bottom */
+    font-size: 14px; /* Appropriate font size for footer text */
+    background-color: #f8f9fa; /* Background color for visibility of the shadow */
+    width: 100%; /* Ensure it spans the full width of the viewport */
+}
+
+
+
+@media only screen and (min-width: 720px) {
+    #navbar {
+        position: fixed; /* Keep the navbar fixed at all viewport sizes */
+        top: 0; /* Always at the top */
+        width: 100%; /* Full viewport width */
+        transition: top 0.3s ease-in-out; /* Smooth transition for vertical movement */
+    }
+}
+
+                /* For screens with width less than 600px */
+        @media only screen and (max-width: 600px) {
+
+        .abstract-container {
+            margin-top:120px;
+            padding: 20px; /* Smaller padding */
+        }
+        .abstract-container p1{
+            font-size: 25px; /* Reduced margin */
+        }
+
+        .title, .date {
+            font-size: 15px; /* Smaller font sizes for title and date */
+        }
+
+        .paragraph-container {
+            font-size: 16px; /* Smaller font size for content */
+            padding: 15px; /* Adjust padding */
+            max-width: 100%; /* Full width */
+        }
+
+
+        #navbar, #hidden-nav {
+            font-size: 14px; /* Smaller font size for navigation */
+        }
+
+        .footer-container {
+            font-size: 14px; /* Smaller text in footer */
+        }
+        
+        .abstract-header {
+            font-size: 18px; /* Smaller font size for abstract header */
+        }
+    }
+
+</style>
+<body>
+
+     <!-- NAVBAR -->
+ <div id="navbar" class="noto">
+    <img src="logo.svg" class="landing-logo" style="height: 100%;">
+    <!-- <p class="research">Research</p> -->
+    <div onclick="toggleNav(event)">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" style="width: 30px; height: 30px; cursor: pointer">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+        </svg>              
+    </div>
+</div>
+
+<div id="hidden-nav"> 
+    <div onclick="toggleNav()" style="position: absolute; top: 10px; right: 30px">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" style="width: 20px; height: 20px;">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+        </svg>              
+    </div>  
+    <div onclick="scrollEle('about')">About</div>
+    <div onclick="scrollEle('contact-section')">Contact</div>
+    <div onclick="scrollEle('team')">Team</div>
+</div>
+
+
+
+    <div class="abstract-container">
+        <div class='title-container'>
+            <p1>Publication Title</p1>
+        
+        <p class="date">Publication Date</p>
+
+        <div class="button-container">
+            <button id="viewBtn" class="view-btn" onclick="window.open('https://example.com/publication.pdf', '_blank')">
+                View Publication
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-arrow">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+            </button>  
+    </div>
+    </div>
+
+
+        <div class="paragraph-container">
+        <p class="abstract-header">Abstract</p>
+        <p class="abstract">Abstract</p>
+
+        <p>Authors <br> <span class="authors">Authors' names</span> </p><br></p>
+    
+
+        <p>Venue<br><span class="venue">Conference Venue</span></p>
+
+    </div>
+    
+</div>
+<footer>
+    <div class="footer-container">
+        © Tibbling Technologies · All Rights Reserved
+    </div>
+</footer>
+ 
+    <script src="script.js"></script>
+</body>
+
+
+<!-- js to search from using the id from local storage -->
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const publications = [
+        {
+            id: 1,
+            date: '2019',
+            title: 'Developing Brain Atlas through Deep Learning ',
+            authors: 'Rahel Kastli, Rasmus Vighagen, Alexander van der Bourg, Ali Özgür Argunsah, Asim Iqbal, Fabian F. Voigt, ... ',
+            conference: 'Nature Publishing Group',
+            abstract: "Neuroscientists have devoted significant effort into the creation of standard brain reference atlases for high-throughput registration of anatomical regions of interest. However, variability in brain size and form across individuals poses a significant challenge for such reference atlases. To overcome these limitations, we introduce a fully automated deep neural networkbased method (SeBRe) for registration through Segmenting Brain Regions of interest with minimal human supervision. We demonstrate the validity of our method on brain images from different mouse developmental time points, across a range of neuronal markers and imaging modalities. We further assess the performance of our method on images from MR-scanned human brains. Our registration method can accelerate brain-wide exploration of region-specific changes in brain development and, by simply segmenting brain regions of interest for highthroughput brain-wide analysis, provides an alternative to existing complex brain registration techniques.",
+            url: 'https://arxiv.org/pdf/1807.03440'
+        },
+        {
+            id: 2,
+            date: '2020',
+            title: 'Developmental divergence of sensory stimulus representation in cortical interneurons',
+            authors: 'Rahel Kastli, Rasmus Vighagen, Alexander van der Bourg, Ali Özgür Argunsah, Asim Iqbal, Fabian F. Voigt, ... ',
+            conference: 'NATURE COMMUNICATIONS',
+            abstract: 'Vasocative-intestinal-peptide (VIP+) and somatostatin (SST+) interneurons are involved in modulating barrel cortex activity and perception during active whisking. Here we identify a developmental transition point of structural and functional rearrangements onto these interneurons around the start of active sensation at P14. Using in vivo two-photon Ca2+ imaging, we find that before P14, both interneuron types respond stronger to a multi-whisker stimulus, whereas after P14 their responses diverge, with VIP+ cells losing their multi-whisker preference and SST+ neurons enhancing theirs. Additionally, we find that Ca2+ signaling dynamics increase in precision as the cells and network mature. Rabies virus tracings followed by tissue clearing, as well as photostimulation-coupled electrophysiology reveal that SST+ cells receive higher cross-barrel inputs compared to VIP+ neurons at both time points. In addition, whereas prior to P14 both cell types receive direct input from the sensory thalamus, after P14 VIP+ cells show reduced inputs and SST+ cells largely shift to motor-related thalamic nuclei.',
+            url: 'https://www.nature.com/articles/s41467-020-19427-z.epdf?sharing_token=_A3i0M9DSZr8mjZoBciHZdRgN0jAjWel9jnR3ZoTv0O4nlEKn8gH8hYnpQyBThyJCelp_hJsCNAXEchOQ6MTj5Gmm-FuaOPipr0gwgobC07EJU6mzv8iXE7mX1VKMBEqM5HIzC8FoObblf7LkshCnJM4QoDxvFYERN3a9abjUXY%3D'
+        },
+        {
+            id: 3,
+            date: '2020',
+            title: 'Exploring Intensity Invariance in Deep Neural Networks for Brain Image Registration',
+            authors: 'Hassan Mahmood, Asim Iqbal, Syed Muhammad Shamsul Islam.',
+            conference: 'ICML 2024',
+            abstract: 'Image registration is a widely-used technique in analysing large scale datasets that are captured through various imaging modalities and techniques in biomedical imaging such as MRI, X-Rays, etc. These datasets are typically collected from various sites and under different imaging protocols using a variety of scanners. Such heterogeneity in the data collection process causes inhomogeneity or variation in intensity (brightness) and noise distribution. These variations play a detrimental role in the performance of image registration, segmentation and detection algorithms. Classical image registration methods are computationally expensive but are able to handle these artifacts relatively better. However, deep learning-based techniques are shown to be computationally efficient for automated brain registration but are sensitive to the intensity variations. In this study, we investigate the effect of variation in intensity distribution among input image pairs for deep learning-based image registration methods. We find a performance degradation of these models when brain image pairs with different intensity distribution are presented even with similar structures. To overcome this limitation, we incorporate a structural similarity-based loss function in a deep neural network and test its performance on the validation split separated before training as well as on a completely unseen new dataset. We report that the deep learning models trained with structure similarity-based loss seems to perform better for both datasets. This investigation highlights a possible performance limiting factor in deep learning-based registration models and suggests a potential solution to incorporate the intensity distribution variation in the input image pairs. Our code and models are available at https://github.com/hassaanmahmood/DeepIntense',
+            url: 'https://arxiv.org/pdf/2009.10058'
+        },
+        {
+            id: 4,
+            date: '21 July 2024',
+            title: 'Levels of AGI for Operationalizing Progress on the Path to AGI',
+            authors: 'Meredith Ringel Morris, et al.',
+            conference: 'ICML 2024',
+            abstract: 'Further discussion on methodological approaches to AGI development, emphasizing scalability and ethical considerations.',
+            url: 'https://proceedings.icml.cc/paper/2024'
+        },
+        {
+            id: 5,
+            date: '21 July 2024',
+            title: 'Levels of AGI for Operationalizing Progress on the Path to AGI',
+            authors: 'Meredith Ringel Morris, et al.',
+            conference: 'ICML 2024',
+            abstract: 'Analysis of the impact of AGI technologies on various sectors, with proposals for future research directions.',
+            url: 'https://proceedings.icml.cc/paper/2024'
+        },
+        {
+            id: 7,
+            date: '21 July 2024',
+            title: 'Levels of AGI for Operationalizing Progress on the Path to AGI',
+            authors: 'Meredith Ringel Morris, et al.',
+            conference: 'ICML 2024',
+            abstract: 'Conclusion of the series with a comprehensive review of AGI advancements and predictions for next-generation AI systems.',
+            url: 'https://proceedings.icml.cc/paper/2024'
+        },
+        {
+            id: 8,
+            date: '21 July 2024',
+            title: 'Levels of AGI for Operationalizing Progress on the Path to AGI',
+            authors: 'Meredith Ringel Morris, et al.',
+            conference: 'ICML 2024',
+            abstract: 'Conclusion of the series with a comprehensive review of AGI advancements and predictions for next-generation AI systems.',
+            url: 'https://proceedings.icml.cc/paper/2024'
+        },
+        {
+            id: 9,
+            date: '21 July 2024',
+            title: 'Levels of AGI for Operationalizing Progress on the Path to AGI',
+            authors: 'Meredith Ringel Morris, et al.',
+            conference: 'ICML 2024',
+            abstract: 'Conclusion of the series with a comprehensive review of AGI advancements and predictions for next-generation AI systems.',
+            url: 'https://proceedings.icml.cc/paper/2024'
+        },
+        {
+            id: 10,
+            date: '21 July 2024',
+            title: 'Levels of AGI for Operationalizing Progress on the Path to AGI',
+            authors: 'Meredith Ringel Morris, et al.',
+            conference: 'ICML 2024',
+            abstract: 'Conclusion of the series with a comprehensive review of AGI advancements and predictions for next-generation AI systems.',
+            url: 'https://proceedings.icml.cc/paper/2024'
+        },
+        {
+            id: 11,
+            date: '21 July 2024',
+            title: 'Levels of AGI for Operationalizing Progress on the Path to AGI',
+            authors: 'Meredith Ringel Morris, et al.',
+            conference: 'ICML 2024',
+            abstract: 'Conclusion of the series with a comprehensive review of AGI advancements and predictions for next-generation AI systems.',
+            url: 'https://proceedings.icml.cc/paper/2024'
+        },
+        {
+            id: 12,
+            date: '21 July 2024',
+            title: 'Levels of AGI for Operationalizing Progress on the Path to AGI',
+            authors: 'Meredith Ringel Morris, et al.',
+            conference: 'ICML 2024',
+            abstract: 'Conclusion of the series with a comprehensive review of AGI advancements and predictions for next-generation AI systems.',
+            url: 'https://proceedings.icml.cc/paper/2024'
+        },
+        {
+            id: 13,
+            date: '21 July 2024',
+            title: 'Levels of AGI for Operationalizing Progress on the Path to AGI',
+            authors: 'Meredith Ringel Morris, et al.',
+            conference: 'ICML 2024',
+            abstract: 'Conclusion of the series with a comprehensive review of AGI advancements and predictions for next-generation AI systems.',
+            url: 'https://proceedings.icml.cc/paper/2024'
+        }
+        ];
+
+                
+
+            const selectedPublicationId = sessionStorage.getItem('selectedPublicationId');  // Retrieve from sessionStorage
+
+const publication = publications.find(pub => pub.id === Number(selectedPublicationId));
+
+if (publication) {
+    document.querySelector('p1').textContent = publication.title;
+    document.querySelector('.date').textContent = publication.date;
+    document.querySelector('.authors').textContent = publication.authors;
+    document.querySelector('.venue').textContent = publication.conference;
+    document.querySelector('.abstract').textContent = publication.abstract;
+          // Set the URL for the View and Download buttons
+        const viewButton = document.getElementById('viewBtn');
+
+        // Update View button to open the publication in a new tab
+        viewButton.onclick = () => window.open(publication.url, '_blank');
+
+        // Set the href for the download button
+
+} else {
+    document.querySelector('.abstract-container').innerHTML = '<p>No publication data available.</p>';
+}
+});
+
+</script>
+
+
+
+
+
+ <!-- Javascript for navbar -->
+ <script>
+    document.addEventListener("DOMContentLoaded", () => {
+let lastScrollTop = 0; // Variable to store the last scroll position
+const navbar = document.getElementById('navbar'); // Get the navbar element
+
+window.addEventListener("scroll", function() {
+    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    
+    if (scrollTop > lastScrollTop) {
+        // Downscroll code
+        navbar.style.top = "-80px"; // Adjust this value to match the navbar's height
+    } else {
+        // Upscroll code
+        navbar.style.top = "0px";
+    }
+    lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // Update lastScrollTop to current position
+}, false);
+});
+
+    var nav_open = false
+    let hidden_nav = document.getElementById("hidden-nav");
+
+    document.addEventListener('click', (e) => {
+        if (nav_open && !hidden_nav.contains(e.target)) {
+            toggleNav();
+        }
+    });
+
+    function toggleNav(e) {
+        nav_open = hidden_nav.style.right == "0px";
+        hidden_nav.style.right = nav_open ? "-300px" : "0px";
+        nav_open = !nav_open;
+        e?.stopPropagation();
+    }
+
+    function scrollEle(ele) {
+        toggleNav();
+        document.getElementById(ele).scrollIntoView({behavior: 'smooth', block: "center", inline: "nearest"});
+    }
+</script>
+
+
+<!-- Javascript for share button -->
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const publications = [
+            {id: 1, url: "http://example.com/publication1"},
+            {id: 2, url: "http://example.com/publication2"}
+        ];
+        const selectedPublicationId = sessionStorage.getItem('selectedPublicationId'); // Retrieve from sessionStorage
+        const publication = publications.find(pub => pub.id === Number(selectedPublicationId)); // Convert to Number if stored as String
+
+        if (publication) {
+            // Setting Facebook share URL
+            document.getElementById('shareFacebook').href = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(publication.url)}`;
+
+            // Setting Twitter share URL
+            document.getElementById('shareTwitter').href = `https://twitter.com/intent/tweet?text=${encodeURIComponent('Check out this interesting publication!')}&url=${encodeURIComponent(publication.url)}`;
+        } else {
+            console.log('Publication not found or session storage key missing');
+        }
+    });
+</script>
+</html>
