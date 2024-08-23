@@ -1,0 +1,1107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drug Discovery</title>
+    <link rel="stylesheet" href="style2-interactive.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Lora:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <style>
+
+
+        .axis-label {
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .title {
+            font-size: 24px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+    </style>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-38PESE35X3"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-38PESE35X3');
+    </script>
+
+</head>
+<body style="background-color: rgb(255, 255, 255); padding-top: 100px;">
+    <a href="https://tibbtech.com/" target="_blank">
+    <div id="navbar" class="noto">
+            <img src="logo.svg" style="height: 100%;" />
+            <!-- <div onclick="toggleNav(event)">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" style="width: 30px; height: 30px; cursor: pointer">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>              
+            </div> -->
+        </div>
+    </a>
+    <!-- <div id="hidden-nav"> 
+        <div onclick="toggleNav()" style="position: absolute; top: 10px; right: 30px">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" style="width: 20px; height: 20px;">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+            </svg>              
+        </div>  
+        <div onclick="scrollEle('about')">About</div>
+        <div onclick="scrollEle('contact-section')">Contact</div>
+        <div onclick="scrollEle('team')">Team</div>
+    </div> -->
+
+    <main class="main-container">
+        <section class="hero">
+            <div class="hero-content">
+                <div class="hero-title">Multimodal End-to-End Drug Discovery</div>
+                <div class="hero-sub-title">
+                    Introducing our cutting-edge multimodal drug discovery framework, seamlessly integrating 2D, 3D, and 4D analyses to accelerate the discovery of novel therapies, from molecular insights to behavioral outcomes.                </div>
+                <div class="info-container">
+                    <p class="author-info">By Qazi & Asim</p>
+                    <p class="author-info">June 18, 2024</p>
+                </div>
+            
+            <div class="slider">
+                <video controls autoplay muted loop id="DD_video" class="video">
+                    <source src="dd2.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+        </section>
+        
+        <section class="content">
+            <article class="post">
+                <div class="post-container">
+                    <div class="post-text-2">
+                        <p>
+                            In the complex and high-stakes world of drug discovery, the journey from initial concept to a viable 
+                            therapeutic solution is fraught with challenges. Traditional methods, often relying on isolated 
+                            techniques and siloed processes, struggle to keep pace with the growing demand for speed, accuracy, 
+                            and innovation. This is particularly critical in the realm of brain disorders, where the urgency to 
+                            discover effective therapies is heightened by the growing prevalence of conditions like Alzheimer’s, 
+                            Parkinson’s, and epilepsy. According to the Tufts Center for the Study of Drug Development, the 
+                            average cost of bringing a new drug to market now exceeds <b>$2.6 billion</b>, and the process can take over 
+                            a decade to complete. Yet, despite these enormous investments, the success rate remains alarmingly 
+                            low. A report from the Biotechnology Innovation Organization (BIO) reveals that only <b>1 in 8</b> drug 
+                            candidates that enter clinical trials will ultimately receive FDA approval. This fragmented approach 
+                            slows down the pipeline and limits the potential for breakthroughs, leaving wet labs overburdened and 
+                            under-supported. 
+                        </p>
+                    </div>
+                </div>
+            </article>
+
+            <article class="post">
+                <div class="post-container">
+                    <div class="post-text-2">
+                        <h3>The statistics are staggering</h3>
+                        <p>
+                            Only <b>1 in 5,000</b> compounds that enter preclinical testing make it to human trials, reflecting the 
+                            immense challenges researchers face from the earliest stages of drug discovery. This is particularly 
+                            concerning in the context of brain disorders, which affect millions globally. For example, Alzheimer’s
+                            disease alone affects over <b>50 million</b> people worldwide, with that number expected to triple by 2050, 
+                            according to the World Health Organization (WHO). In the United States, nearly <b>6 million</b> people live 
+                            with Alzheimer’s, and the economic burden of brain disorders is projected to exceed <b>$1 trillion</b> 
+                            annually by 2030, as reported by the National Institutes of Health (NIH). Parkinson’s disease, 
+                            another major brain disorder, impacts over <b>10 million</b> people globally, with around <b>60,000</b> new cases 
+                            diagnosed each year in the U.S. Epilepsy, affecting over <b>50 million</b> people worldwide, is one of the 
+                            most common neurological diseases globally, with the economic impact in the U.S. alone estimated to 
+                            be around <b>$15.5 billion</b> annually. Traditional wet lab environments, though essential, are often 
+                            bogged down by the need to repeatedly validate findings across various stages of the discovery 
+                            process. This lack of integration between computational and experimental approaches leads to data 
+                            silos, where insights gained in one phase may not effectively inform the next, resulting in 
+                            inefficiencies and increased risks of errors. Moreover, the shift from 2D cell cultures to 3D 
+                            models—and eventually to complex 4D data—adds further complexity, demanding a level of precision 
+                            and coordination that many current systems struggle to provide. With high costs, lengthy timelines, 
+                            and increasing pressure to innovate, the obstacles facing biologists in drug discovery, especially 
+                            for brain disorders, are both significant and multifaceted.                 
+                            <br><br>
+                            In an era where precision, efficiency, and innovation are paramount, particularly in 
+                            the fight against brain disorders, the industry desperately needs a unified, multimodal end-to-end 
+                            solution that seamlessly integrates diverse methodologies. Such a solution would allow researchers to 
+                            harness the full spectrum of all modalities, transforming the way we discover and 
+                            develop new drugs, and reducing both the time and cost associated with bringing life-saving therapies 
+                            to market.
+        
+                <br><br>
+                
+                <article>
+                    <div class="post-container">
+                        <div class = "post-text-2">
+                            <h3>Introducing your wet lab’s multimodal co-pilot</h3>
+                            <svg id="customPlot" width="800" height="400"></svg>
+                    <p>
+                        Our platform acts as a comprehensive co-pilot in drug discovery, integrating advanced tools and 
+                        methodologies across 2D, 3D, and 4D domains to support and enhance your wet lab capabilities. This 
+                        integration allows for a seamless transition between different phases of drug development, ensuring 
+                        that every piece of data is accurately captured and analyzed.
+                    </p>
+
+                    
+                    <svg id="model-performance-chart" width="800" height="500"></svg>
+                    <svg id="model-performance-line-chart" width="800" height="500"></svg>
+
+                    <br>
+
+                    <h4>
+                        Neuron Segmentation
+                    </h4>
+                    <img src="figs/neuron_detection.svg" alt="Grazing Image" class="inline-image">
+                    <p>
+                        In the 2D domain, our platform excels at processing high-resolution brain slices, allowing for detailed 
+                        neuron segmentation and brain mapping. Utilizing a state-of-the-art neuron segmentation tool that operates
+                        effectively with minimal training data, we ensure precise identification and delineation of neuronal 
+                        structures in 2D images. This segmentation is crucial for understanding the organization and distribution 
+                        of neurons within brain slices, facilitating subsequent analysis and comparison. Moreover, our platform 
+                        supports the identification of specific neuronal subtypes through enhancer-based labeling techniques, 
+                        enabling researchers to target and study distinct populations of neurons within the brain.
+                    </p>
+
+                    <div id="running" class="behavior-section post-container">
+                        <h3 style="word-spacing: 500px;">P4 P56</h3>
+                        <img src="figs/hippocampus and isocortex.svg" alt="Running Image" class="inline-image">                        
+                    </div>
+
+                    <div id="grazing" class="behavior-section post-container" style="display:none;">
+                        <h3 style="word-spacing: 507px;">P4 P14</h3>
+
+                        <img src="figs/hindbrain.svg" alt="Running Image" class="inline-image">                        
+                        
+                    </div>
+
+                    <div id="resting" class="behavior-section post-container" style="display:none;">
+                        <h3 style="word-spacing: 490px;">P56 P14</h3>
+                        <img src="figs/pre-thalamus.svg" alt="Running Image" class="inline-image"> 
+                    </div>
+
+                    <div class="button-container">
+
+                        <button id = 'running_btn' onclick="showSection('running', this)" class="navigate-button default-focused">Hippocampus and Isocortex</button>
+                        <button id = 'grazing_btn' onclick="showSection('grazing', this)" class="navigate-button">Hindbrain</button>
+                        <button id = 'resting_btn' onclick="showSection('resting', this)" class="navigate-button">Pre-Thalamus</button>
+                    </div>
+
+                    <p>
+                        In the 2D domain, our platform excels at processing high-resolution brain slices, allowing for detailed 
+                        neuron segmentation and brain mapping. Utilizing a state-of-the-art neuron segmentation tool that operates
+                        effectively with minimal training data, we ensure precise identification and delineation of neuronal 
+                        structures in 2D images. This segmentation is crucial for understanding the organization and distribution 
+                        of neurons within brain slices, facilitating subsequent analysis and comparison. Moreover, our platform 
+                        supports the identification of specific neuronal subtypes through enhancer-based labeling techniques, 
+                        enabling researchers to target and study distinct populations of neurons within the brain.
+                    </p>
+
+                    <div class="image-section">
+                        <div class="image-container">
+                            <h3>GAD1 (red), CamkIIa-Cre/Ai14 (green)</h3>
+                            <img src="figs/ns1.svg" alt="Neuron Segmentation Image" class="side-image">
+                        </div>
+                        <div class="image-container">
+                            <h3>NISSL staining</h3>
+                            <img src="figs/ns4.svg" alt="Brain Mapping Image" class="side-image">
+                        </div>
+                    </div>
+
+                    <div class="image-section">
+                        <div class="image-container">
+                            <h3>GAD1 (red), Gpr26-CreKO250/Ai14 (green)</h3>
+                            <img src="figs/ns2.svg" alt="Neuron Segmentation Image" class="side-image">
+                        </div>
+                        <div class="image-container">
+                            <h3>CamkIIa mRNA in situ hybridized</h3>
+                            <img src="figs/ns3.svg" alt="Brain Mapping Image" class="side-image">
+                        </div>
+                    </div>
+
+                    <br> 
+                    <p>
+                        When it comes to 3D analysis, our platform extends its capabilities to volumetric brain imaging, 
+                        offering advanced tools for segmenting and analyzing entire brain volumes. The same neuron segmentation 
+                        technology used in 2D is applied to 3D datasets, allowing for the precise identification of neuronal 
+                        structures within the entire brain volume.
+                        <br>
+                    </p>
+
+                    <div class="gif-container">
+                        <img src="giffy.gif" class="gif" alt="Slider Animation">
+                        <img src="3dgiffy.gif" class="gif" alt="Slider Animation">
+                    </div>
+                    <p>
+                        When it comes to 3D analysis, our platform extends its capabilities to volumetric brain imaging, 
+                        offering advanced tools for segmenting and analyzing entire brain volumes. The same neuron segmentation 
+                        technology used in 2D is applied to 3D datasets, allowing for the precise identification of neuronal 
+                        structures within the entire brain volume. This 3D segmentation is vital for understanding the spatial 
+                        relationships and connectivity between neurons, providing insights into brain function and pathology. 
+                        Additionally, our platform facilitates brain-wide gene expression quantification, enabling researchers 
+                        to correlate gene expression patterns with specific neuronal circuits and behaviors, thereby enhancing 
+                        the understanding of the molecular mechanisms underlying brain function.
+                        <br>
+                    </p>
+
+                    <h4>Brain Registration</h4>
+                    <img src="figs/brain_registration.svg" alt="Grazing Image" class="inline-image">
+                    <p>
+                        Our platform also supports accurate brain registration, aligning 2D slices to standardized brain atlases. 
+                        This process ensures that different brain slices can be compared and integrated into a coherent dataset, 
+                        enabling researchers to study variations in neuronal architecture and correlate them with specific brain 
+                        regions. Through robust 3D brain registration, our platform aligns volumetric data to standardized 3D 
+                        brain atlases, essential for comparing brain volumes across different conditions or time points. This 
+                        capability is particularly crucial when analyzing data from multi-center studies, where variations in 
+                        imaging protocols and equipment can introduce inconsistencies. Our registration techniques are designed 
+                        to be resilient to these variations, ensuring that the anatomical integrity of the brain is preserved, 
+                        and enabling researchers to detect subtle changes in brain structure and function that may result from 
+                        drug interventions or disease progression.
+                        <br>
+                    </p>
+
+                    <h3>3D Brain Registration Pipeline</h3>
+                    <video id="controlled-video" class="video" muted playsinline style="width:100%; max-width:1500px">
+                        <source src="figs/SeBRe_GIF3.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <br>
+
+                    <p>
+                        Our platform also supports accurate brain registration, aligning 2D slices to standardized brain atlases. 
+                        This process ensures that different brain slices can be compared and integrated into a coherent dataset, 
+                        enabling researchers to study variations in neuronal architecture and correlate them with specific brain 
+                        regions. Through robust 3D brain registration, our platform aligns volumetric data to standardized 3D 
+                        brain atlases, essential for comparing brain volumes across different conditions or time points. This 
+                        capability is particularly crucial when analyzing data from multi-center studies, where variations in 
+                        imaging protocols and equipment can introduce inconsistencies. Our registration techniques are designed 
+                        to be resilient to these variations, ensuring that the anatomical integrity of the brain is preserved, 
+                        and enabling researchers to detect subtle changes in brain structure and function that may result from 
+                        drug interventions or disease progression.
+                        <br>
+                    </p>
+
+                    <div class="button-container">
+                        <button id="toggleOverlay" class="reg-button">Register Brains</button>
+                    </div>
+                
+                    <div class="image-pair-container">
+                        <div class="image-container3">
+                            <img id="baseImage1" src="figs/reg/reg1.svg" alt="Base Image 1">
+                            <img id="overlayImage1" src="figs/reg/reg_1.svg" alt="Overlay Image 1" style="opacity: 0;">
+                        </div>
+                        <div class="image-container3">
+                            <img id="baseImage2" src="figs/reg/reg2.svg" alt="Base Image 2">
+                            <img id="overlayImage2" src="figs/reg/reg_2.svg" alt="Overlay Image 2" style="opacity: 0;">
+                        </div>
+                    </div>
+
+                    <p>
+                        Our platform also supports accurate brain registration, aligning 2D slices to standardized brain atlases. 
+                        This process ensures that different brain slices can be compared and integrated into a coherent dataset, 
+                        enabling researchers to study variations in neuronal architecture and correlate them with specific brain 
+                        regions. Through robust 3D brain registration, our platform aligns volumetric data to standardized 3D 
+                        brain atlases, essential for comparing brain volumes across different conditions or time points. This 
+                        capability is particularly crucial when analyzing data from multi-center studies, where variations in 
+                        imaging protocols and equipment can introduce inconsistencies. Our registration techniques are designed 
+                        to be resilient to these variations, ensuring that the anatomical integrity of the brain is preserved, 
+                        and enabling researchers to detect subtle changes in brain structure and function that may result from 
+                        drug interventions or disease progression.
+                        <br>
+                    </p>
+                    <h4>
+                        Behavioral Analytics
+                    </h4>
+                    <p>
+                        
+                        Our platform also incorporates behavioral video analytics to assess drug efficacy in 
+                        real-time. This involves analyzing video data that captures dynamic behavioral changes over time, 
+                        providing a temporal dimension to traditional 2D and 3D analyses. By tracking and quantifying animal 
+                        behavior in response to drug treatments, our platform helps researchers understand how these 
+                        interventions affect overall behavior and neurological function. This 4D analysis is particularly 
+                        valuable for studying the efficacy of drugs intended to modify behavior or neurological outcomes. 
+                        It allows for the identification of subtle behavioral changes that may not be apparent in static 2D or 
+                        3D analyses, offering a more comprehensive assessment of a drug’s impact. The ability to correlate 
+                        these behavioral changes with underlying neuronal activity and gene expression profiles makes our 
+                        platform an indispensable tool for advancing neuropharmacology.
+
+                    <img src="4dgiffy.gif" class="gif" alt="Slider Animation">
+
+                    </p>
+                    <br>
+                    <br>
+
+                    <h4>
+                        Integrated Approach
+                    </h4>
+                    <p>
+                        By combining multiple modalities, our platform provides a unified, multimodal approach to 
+                        drug discovery. Whether you’re segmenting neurons in brain slices, analyzing whole brain volumes, or 
+                        assessing behavioral outcomes in real-time, our platform offers the tools and precision needed to drive 
+                        innovation in drug development. This integration ensures that every stage of your research is supported 
+                        by robust data and cutting-edge technology, empowering you to advance new therapies with confidence and 
+                        efficiency. The ability to integrate multi-omic data, including gene expression and epigenetic 
+                        modifications, further enhances the platform’s capacity to uncover the complex biological underpinnings 
+                        of disease, paving the way for the development of highly targeted therapeutic interventions.
+                    </p>
+                    
+                        </div>
+                    </div>
+                </article>
+
+            <br>
+            <article class="post">
+                <div class="post-container">
+                    
+                    <div class="post-text-2">
+                        <h3>The future</h3>
+                    
+                        <p>
+                            The future of drug discovery hinges on the seamless integration of advanced technologies with 
+                            traditional wet lab techniques. As the field evolves, so too must the tools we use to navigate 
+                            its complexities. Our multimodal platform represents not just a technological advancement, but a 
+                            paradigm shift in how we approach the discovery and development of new therapies. By uniting 2D, 
+                            3D, and 4D data within a single, cohesive framework, we ensure that every insight is captured, every 
+                            opportunity is leveraged, and no time is wasted.
+
+                            <br><br>
+                            As a co-pilot to your wet lab, our platform empowers you to overcome the inherent challenges of 
+                            modern drug discovery, delivering faster, more accurate results. This transformation is not merely 
+                            about accelerating processes—it’s about making drug discovery more precise, integrated, and capable 
+                            of achieving the breakthroughs that will define the next era of medicine. The ability to conduct 
+                            comprehensive analyses, from neuron segmentation to behavioral assessments, within a unified 
+                            platform, enables researchers to approach drug discovery holistically, ensuring that every aspect of 
+                            the research is informed by the latest advancements in technology and science.
+
+                            <br><br>
+                            In the coming years, the integration of artificial intelligence with multimodal data analysis will 
+                            further enhance the platform’s capabilities, enabling predictive modeling and the identification of 
+                            novel therapeutic targets. This approach will not only accelerate drug discovery but also increase 
+                            the likelihood of clinical success, ultimately leading to more effective and personalized treatments 
+                            for patients worldwide.
+                        </p>
+                    </div>
+                </div>
+            </article>
+
+
+            <article>
+                <div class="post-container">
+                    <div class = "post-text-2">
+                        <h3>Our platform is more than just a tool</h3>
+                        <p>
+                            Our platform a game-changer in the world of drug discovery. 
+                            By providing a comprehensive suite of advanced technologies that span 2D, 3D, and 4D domains, we 
+                            empower researchers to conduct their work with unprecedented precision and efficiency. From neuron 
+                            segmentation and brain registration to behavioral analytics, our platform ensures that every aspect 
+                            of drug discovery is supported by the most advanced tools available.
+
+                            <br><br>
+                            With our platform as your co-pilot, you can navigate the complexities of drug discovery with 
+                            confidence, knowing that you have the tools you need to drive innovation and deliver groundbreaking 
+                            therapies to patients faster than ever before. The integration of multi-omic analyses, combined with 
+                            cutting-edge imaging and behavioral assessment tools, positions our platform as an essential asset in 
+                            the pursuit of medical breakthroughs. As we continue to refine and expand our capabilities, we remain 
+                            committed to supporting researchers in their quest to improve human health and transform the future of 
+                            medicine.
+                            
+                            <br><br>
+                            This expanded content emphasizes the technical depth of the platform, highlighting its capabilities in 
+                            a way that resonates with professionals in the field. It also underscores the platform’s role in 
+                            integrating various aspects of drug discovery, from molecular to behavioral analysis.                        </p>  
+                    </div>
+                </div>
+            </article>
+            
+            <article>
+                <div class="learn-more">
+                    <h2>Learn more about our work</h2>
+                    <div class="slider-2">        
+                        <a href="https://www.biorxiv.org/content/biorxiv/early/2024/07/22/2024.07.17.603924.full.pdf" target="_blank">
+                            <div class="card">
+                                <div class="card-header">
+                                    <img src="dd.png" alt="drug discovery" class="card-logo">
+                                </div>
+                                <div class="card-body">
+                                    <p class="card-date">2024</p>
+                                    <h3>An enhancer-AAV toolbox to target and manipulate distinct interneuron subtypes</h3>
+                                    <p class="card-participant" style="text-align: left;">
+                                        Elisabetta Furlanis, Min Dai, Brenda Leyva Garcia, Josselyn Vergara, Ana Pereira, Kenneth Pelkey, Thien Tran....
+                                    </p>
+                                </div>
+                            </div>
+                        </a>
+
+                        <a href="https://www.biorxiv.org/content/biorxiv/early/2024/05/17/2024.05.17.594691.full.pdf" target="_blank">
+                            <div class="card">
+                                <div class="card-header">
+                                    <img src="cellseg3d.png" alt="MIT Logo" class="card-logo">
+                                </div>
+                                <div class="card-body">
+                                    <p class="card-date">2024</p>
+                                    <h3>CellSeg3D: self-supervised 3D cell segmentation for microscopy</h3>
+                                    <p class="card-participant" style="text-align: left;">
+                                        Cyril Achard, Timokleia Kousi, Markus Frey, Maxime Vidal, Yves Paychere, Colin Hofmann, Asim Iqbal, Sebastien B Hausmann, Stephane Pages, Mackenzie W Mathis
+                                    </p>
+                                </div>
+                            </div>
+                        </a>
+
+                        <a href="https://ieeexplore.ieee.org/abstract/document/10222341" target="_blank">
+                            <div class="card">
+                                <div class="card-header">
+                                    <img src="3d brain reg.png" alt="MIT Logo" class="card-logo">
+                                </div>
+                                <div class="card-body">
+                                    <p class="card-date">2023</p>
+                                    <h3>3D Brain Registration with Intensity Shift Robustness</h3>
+                                    <p class="card-participant" style="text-align: left;">
+                                        Hassan Mahmood, Asim Iqbal, Syed Mohammed Shamsul Islam, Syed Afaq Ali Shah
+                                    </p>
+                                </div>
+                            </div>
+                        </a>
+
+                        <!-- <a href="https://ieeexplore.ieee.org/abstract/document/10222341" target="_blank">
+                            <div class="card">
+                                <div class="card-header">
+                                    <img src="segmentanyNeuron.png" alt="MIT Logo" class="card-logo">
+                                </div>
+                                <div class="card-body">
+                                    <p class="card-date">2023</p>
+                                    <h3>Segment AnyNeuron</h3>
+                                    <p class="card-participant" style="text-align: left;">
+                                        Taha Razzaq, Ahmed Qazi, Asim Iqbal
+                                    </p>
+                                </div>
+                            </div>
+                        </a> -->
+                        </div>
+                    </div>
+                </div>
+                
+
+
+            </article>
+
+
+
+
+
+            <article>
+                <div class="post">
+                    <h2 class="second-description">Publications</h2>
+                    <div class="list-container" id="publication-lists"></div>
+                    <div class="show-buttons">
+                        <button class="list-show-more" id="show-more" style="display: none;">Show More</button>
+                        <button class="list-show-less" id="show-less" style="display: none;">Show Less</button>
+                    </div>
+                    </div>
+                </div>
+                
+            </article>
+                                                   
+                            
+    </main>
+    <footer>
+        <div class="footer-container center-col" style="margin-top: 30px;">
+            <!-- <div class="social-follow">
+                <span>Follow us on</span>
+                <a href="https://x.com/tibbtech?mx=2" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+            </div> -->
+            © Tibbling Technologies · All Rights Reserved
+        </div>
+    </footer>
+
+    <script src="publications.js"></script>
+
+    
+
+    <script>
+      
+    
+    document.addEventListener("DOMContentLoaded", () => {
+    let lastScrollTop = 0; // Variable to store the last scroll position
+    const navbar = document.getElementById('navbar'); // Get the navbar element
+    
+    window.addEventListener("scroll", function() {
+        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        
+        if (scrollTop > lastScrollTop) {
+            // Downscroll code
+            navbar.style.top = "-15rem"; // Adjust this value to match the navbar's height
+        } else {
+            // Upscroll code
+            navbar.style.top = "0px";
+        }
+        lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // Update lastScrollTop to current position
+    }, false);
+    });
+    
+        var nav_open = false
+        let hidden_nav = document.getElementById("hidden-nav");
+    
+        document.addEventListener('click', (e) => {
+            if (nav_open && !hidden_nav.contains(e.target)) {
+                toggleNav();
+            }
+        });
+    
+        function toggleNav(e) {
+            nav_open = hidden_nav.style.right == "0px";
+            hidden_nav.style.right = nav_open ? "-300px" : "0px";
+            nav_open = !nav_open;
+            e?.stopPropagation();
+        }
+    
+        function scrollEle(ele) {
+            toggleNav();
+            document.getElementById(ele).scrollIntoView({behavior: 'smooth', block: "center", inline: "nearest"});
+        }
+    
+    
+                                            // Reset scroll behavior when scrolled to top
+                                            window.addEventListener('scroll', function() {
+                                            if (window.scrollY <= 50) {
+                                                allowScroll = true; // Re-enable scrolling when the user scrolls back to the top
+                                            }
+                                        });
+    
+                                        document.addEventListener('DOMContentLoaded', function() {
+                                        var navbar = document.getElementById('navbar');
+                                        window.addEventListener('scroll', function() {
+                                            // Add 'scrolled' class to the navbar based on the scroll position
+                                            if (window.pageYOffset > 250) {
+                                                navbar.classList.add('scrolled');
+                                            } else {
+                                                navbar.classList.remove('scrolled');
+                                            }
+                                        });
+                                    });
+
+
+
+    
+    //for truncated cards
+    const cards = document.querySelectorAll('.card-participant');
+    const maxLength = 100; // Adjust the character limit as needed
+
+    cards.forEach(card => {
+        const fullText = card.getAttribute('data-full-text');
+        
+        if (fullText.length > maxLength) {
+            const truncatedText = fullText.substring(0, maxLength) + '...';
+            card.textContent = truncatedText;
+        }
+    });
+    
+    
+    </script>
+
+
+
+    <script>
+   document.addEventListener('DOMContentLoaded', function () {
+    const maxLength = 120; // Set the maximum number of characters
+
+    document.querySelectorAll('.card-participant').forEach(function(cardParticipant) {
+        const fullText = cardParticipant.textContent.trim();
+
+        if (fullText.length > maxLength) {
+            const truncatedText = fullText.substring(0, maxLength) + '...';
+            cardParticipant.innerHTML = truncatedText;
+        }
+    });
+});
+
+</script>   
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const video = document.getElementById('controlled-video');
+        let playedOnce = false;
+    
+        function isInViewport(element) {
+            const rect = element.getBoundingClientRect();
+            return (
+                rect.top >= 0 &&
+                rect.left >= 0 &&
+                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+            );
+        }
+    
+        function playVideoOnce() {
+            if (isInViewport(video) && !playedOnce) {
+                video.play();
+                playedOnce = true;
+    
+                // Event listener to stop the video at the last frame
+                video.addEventListener('timeupdate', function() {
+                    const buffer = 0.05; // Adjust this buffer to fine-tune the exact stopping point
+                    if (video.currentTime >= video.duration - buffer) {
+                        video.pause();
+                        video.currentTime = video.duration - buffer; // Set to last frame
+                    }
+                });
+            }
+        }
+    
+        // Attach scroll and resize event listeners to check if the video is in the viewport
+        window.addEventListener('scroll', playVideoOnce);
+        window.addEventListener('resize', playVideoOnce);
+    
+        // Optionally, trigger the check when the page first loads
+        playVideoOnce();
+    });
+</script>
+
+<script src="https://d3js.org/d3.v7.min.js"></script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const data = [
+            {model: 'Ours', performance: 90},
+            {model: 'Model B', performance: 80},
+            {model: 'Model C', performance: 86},
+            {model: 'Model D', performance: 68},
+            {model: 'Model E', performance: 70},
+            {model: 'Model F', performance: 75}
+        ];
+
+        const margin = {top: 40, right: 20, bottom: 60, left: 100},
+              width = 800 - margin.left - margin.right,
+              height = 300 - margin.top - margin.bottom;
+
+        const svg = d3.select("#model-performance-chart")
+                      .attr("width", width + margin.left + margin.right)
+                      .attr("height", height + margin.top + margin.bottom)
+                      .append("g")
+                      .attr("transform", `translate(${margin.left},${margin.top})`);
+
+        // Set the y scale (band scale) with reduced padding for less distance between bars
+        const y = d3.scaleBand()
+                    .domain(data.map(d => d.model))
+                    .range([0, height])
+                    .padding(0.3); // Reduce padding to minimize the space between bars
+
+        // Set the x scale (linear scale)
+        const x = d3.scaleLinear()
+                    .domain([0, d3.max(data, d => d.performance)])
+                    .range([0, width]);
+
+        // Append y-axis (Models)
+        svg.append("g")
+           .call(d3.axisLeft(y));
+
+        // Append x-axis (Performance)
+        svg.append("g")
+           .attr("transform", `translate(0,${height})`)
+           .call(d3.axisBottom(x).ticks(5));
+
+        // Add the bars with Inferno colormap and a glowing effect for the "Ours" model
+        svg.selectAll(".bar")
+           .data(data)
+           .enter().append("rect")
+           .attr("class", "bar")
+           .attr("y", d => y(d.model) + y.bandwidth() / 2 - y.bandwidth() / 10) // Align the bar vertically with the text
+           .attr("x", 0) // Start bars at the left
+           .attr("height", y.bandwidth() / 5) // Make the bars thinner; adjust this value to control bar thickness
+           .attr("width", 0) // Initial width is 0 for animation
+           .attr("fill", d => {
+                if (d.model === 'Ours') return '#ffd700'; // Bright yellow for "Ours" model
+                if (d.model === 'Model B') return '#f98e09'; // Orange
+                if (d.model === 'Model C') return '#d94701'; // Reddish-orange
+                if (d.model === 'Model D') return '#a41a00'; // Dark red
+                if (d.model === 'Model E') return '#67001f'; // Maroon
+                if (d.model === 'Model F') return '#3b0f4b'; // Dark purple
+            })
+           .attr("rx", y.bandwidth() / 20) // Slightly round the open end
+           .attr("ry", y.bandwidth() / 20) // Round the open end only
+           .style("filter", d => d.model === 'Ours' ? 'drop-shadow(0px 0px 8px #fcffa4)' : 'none'); // Add glow effect for "Ours"
+
+        // Add labels for x-axis and y-axis
+        svg.append("text")
+           .attr("class", "axis-label")
+           .attr("x", width / 2)
+           .attr("y", height + margin.bottom - 10)
+           .attr("text-anchor", "middle")
+           .text("Performance (%)");
+
+        svg.append("text")
+           .attr("class", "axis-label")
+           .attr("x", -height / 2)
+           .attr("y", -margin.left + 15)
+           .attr("text-anchor", "middle")
+           .attr("transform", "rotate(-90)")
+           .text("Models");
+
+        // Function to handle scroll event
+        function handleScroll() {
+            const chartPosition = document.getElementById("model-performance-chart").getBoundingClientRect().top;
+            const windowHeight = window.innerHeight;
+
+            // Trigger the animation when the chart is within the viewport
+            if (chartPosition < windowHeight - 100) {
+                svg.selectAll(".bar")
+                   .transition()
+                   .duration(1500) // Duration of animation
+                   .attr("width", d => x(d.performance)); // Final width based on performance value
+
+                // Remove the event listener after the animation starts
+                window.removeEventListener("scroll", handleScroll);
+            }
+        }
+
+        // Attach the scroll event listener
+        window.addEventListener("scroll", handleScroll);
+    });
+</script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Data for the line chart
+        const lineData = [
+            {section: 0, modelA: 1.8, modelB: 2.2, modelC: 2.0},
+            {section: 10, modelA: 2.0, modelB: 2.5, modelC: 2.3},
+            {section: 20, modelA: 2.1, modelB: 2.8, modelC: 2.4},
+            {section: 30, modelA: 1.9, modelB: 2.6, modelC: 2.2},
+            // Add more data points as needed
+            {section: 190, modelA: 2.5, modelB: 3.1, modelC: 3.2},
+            {section: 200, modelA: 2.4, modelB: 3.0, modelC: 3.1}
+        ];
+
+        const margin = {top: 40, right: 20, bottom: 60, left: 60},
+              width = 800 - margin.left - margin.right,
+              height = 350 - margin.top - margin.bottom;
+
+        const svgLine = d3.select("#model-performance-line-chart")
+                          .attr("width", width + margin.left + margin.right)
+                          .attr("height", height + margin.top + margin.bottom)
+                          .append("g")
+                          .attr("transform", `translate(${margin.left},${margin.top})`);
+
+        const xLine = d3.scaleLinear()
+                        .domain(d3.extent(lineData, d => d.section))
+                        .range([0, width]);
+
+        const yLine = d3.scaleLinear()
+                        .domain([1.7, 3.8])
+                        .range([height, 0]);
+
+        const lineA = d3.line()
+                        .x(d => xLine(d.section))
+                        .y(d => yLine(d.modelA))
+                        .curve(d3.curveMonotoneX);
+
+        const lineB = d3.line()
+                        .x(d => xLine(d.section))
+                        .y(d => yLine(d.modelB))
+                        .curve(d3.curveMonotoneX);
+
+        const lineC = d3.line()
+                        .x(d => xLine(d.section))
+                        .y(d => yLine(d.modelC))
+                        .curve(d3.curveMonotoneX);
+
+        svgLine.append("g")
+               .attr("transform", `translate(0,${height})`)
+               .call(d3.axisBottom(xLine));
+
+        svgLine.append("g")
+               .call(d3.axisLeft(yLine));
+
+        // Add the lines with stroke-dasharray for animation
+        svgLine.append("path")
+               .datum(lineData)
+               .attr("class", "lineA")
+               .attr("d", lineA)
+               .attr("stroke", "#ffd700")
+               .attr("fill", "none")
+               .attr("stroke-width", 2)
+               .attr("stroke-dasharray", function () {
+                   return this.getTotalLength();
+               })
+               .attr("stroke-dashoffset", function () {
+                   return this.getTotalLength();
+               });
+
+        svgLine.append("path")
+               .datum(lineData)
+               .attr("class", "lineB")
+               .attr("d", lineB)
+               .attr("stroke", "black")
+               .attr("fill", "none")
+               .attr("stroke-width", 2)
+               .attr("stroke-dasharray", function () {
+                   return this.getTotalLength();
+               })
+               .attr("stroke-dashoffset", function () {
+                   return this.getTotalLength();
+               });
+
+        svgLine.append("path")
+               .datum(lineData)
+               .attr("class", "lineC")
+               .attr("d", lineC)
+               .attr("stroke", "purple")
+               .attr("fill", "none")
+               .attr("stroke-width", 2)
+               .attr("stroke-dasharray", function () {
+                   return this.getTotalLength();
+               })
+               .attr("stroke-dashoffset", function () {
+                   return this.getTotalLength();
+               });
+
+        // Add labels to axes
+        svgLine.append("text")
+               .attr("class", "axis-label")
+               .attr("x", width / 2)
+               .attr("y", height + margin.bottom - 10)
+               .attr("text-anchor", "middle")
+               .text("Section Number");
+
+        svgLine.append("text")
+               .attr("class", "axis-label")
+               .attr("x", -height / 2)
+               .attr("y", -margin.left + 15)
+               .attr("text-anchor", "middle")
+               .attr("transform", "rotate(-90)")
+               .text("MSE Score");
+
+        const legend = svgLine.selectAll(".legend")
+                              .data(["Ours", "Model B", "Model C"])
+                              .enter().append("g")
+                              .attr("class", "legend")
+                              .attr("transform", (d, i) => `translate(0,${i * 20})`);
+
+        legend.append("rect")
+              .attr("x", width - 18)
+              .attr("width", 18)
+              .attr("height", 18)
+              .style("fill", (d, i) => ["#ffd700", "black", "purple"][i]);
+
+        legend.append("text")
+              .attr("x", width - 24)
+              .attr("y", 9)
+              .attr("dy", ".35em")
+              .style("text-anchor", "end")
+              .text(d => d);
+
+        // Function to handle scroll event for the line chart
+        function handleScrollLine() {
+            const chartPosition = document.getElementById("model-performance-line-chart").getBoundingClientRect().top;
+            const windowHeight = window.innerHeight;
+
+            if (chartPosition < windowHeight - 100) {
+                svgLine.selectAll("path")
+                       .transition()
+                       .duration(2000)
+                       .attr("stroke-dashoffset", 3);
+
+                window.removeEventListener("scroll", handleScrollLine);
+            }
+        }
+
+        window.addEventListener("scroll", handleScrollLine);
+    });
+
+    function showSection(section, clickedButton) {
+        var sections = document.getElementsByClassName("behavior-section");
+        for (var i = 0; i < sections.length; i++) {
+            sections[i].style.display = "none";
+            }
+        
+        document.getElementById(section).style.display = "block";
+        
+        var buttons = document.getElementsByClassName('navigate-button');
+        console.log(buttons);
+        for (var i = 0; i < buttons.length; i++) {
+            buttons[i].classList.remove('default-focused');
+        }
+        // Add active class to the clicked button
+        clickedButton.classList.add('default-focused');
+    }
+</script>
+
+
+<script>
+    let slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const toggleOverlayButton = document.getElementById('toggleOverlay');
+        const overlayImage1 = document.getElementById('overlayImage1');
+        const overlayImage2 = document.getElementById('overlayImage2');
+        
+        let isOverlayVisible = false;
+
+        toggleOverlayButton.addEventListener('click', function() {
+            if (!isOverlayVisible) {  // Only allow the action once
+                isOverlayVisible = true;
+                overlayImage1.style.opacity = '1';
+                overlayImage2.style.opacity = '1';
+                toggleOverlayButton.classList.add('pressed');
+            }
+        });
+    });
+</script>
+
+<script>
+    // Set up the SVG
+    const svg = d3.select("#customPlot");
+    const width = +svg.attr("width");
+    const height = +svg.attr("height");
+
+    // Define the start, middle, and end points for the lines
+    const startPoints = [
+        {x: 50, y: 100},
+        {x: 50, y: 200},
+        {x: 50, y: 300}
+    ];
+
+    const endPoints = [
+        {x: 750, y: 100},
+        {x: 750, y: 200},
+        {x: 750, y: 300}
+    ];
+
+    const midX = width / 2;
+    const midY = height / 2;
+
+    // Define subtle colors representing 2D, 3D, and video
+    const lineColors = ["#B3CDE3", "#CCEBC5", "#DECBE4"]; // Light Blue for 2D, Light Green for 3D, Light Purple for Video
+
+    // Draw the lines without animating yet
+    const paths = startPoints.map((start, i) => {
+        return svg.append("path")
+            .attr("d", `M${start.x},${start.y} 
+                        Q${midX},${midY - 50 + i * 50} 
+                        ${midX},${midY - 50 + i * 50}
+                        T${endPoints[i].x},${endPoints[i].y}`)
+            .attr("stroke", lineColors[i])
+            .attr("stroke-width", 3)
+            .attr("fill", "none");
+    });
+
+    // Function to trigger the animation
+    function animateLines() {
+        paths.forEach((path, i) => {
+            const totalLength = path.node().getTotalLength();
+
+            path
+                .attr("stroke-dasharray", totalLength + " " + totalLength)
+                .attr("stroke-dashoffset", totalLength)
+                .transition()
+                .duration(2000)
+                .ease(d3.easeLinear)
+                .attr("stroke-dashoffset", totalLength / 2) // Animate to mid-point (the image)
+                .on("end", () => {
+                    // Pause effect inside the image
+                    path.transition()
+                        .duration(1000)
+                        .ease(d3.easeElastic)
+                        .attr("stroke-width", 5)
+                        .transition()
+                        .duration(1000)
+                        .ease(d3.easeLinear)
+                        .attr("stroke-width", 3)
+                        .attr("stroke-dashoffset", 0); // Continue to the end point
+                });
+        });
+    }
+
+    // Function to check if the section is in the viewport
+    function isInViewport() {
+        const rect = svg.node().getBoundingClientRect();
+        return rect.top >= 0 && rect.bottom <= (window.innerHeight || document.documentElement.clientHeight);
+    }
+
+    // Event listener to trigger animation on scroll
+    window.addEventListener('scroll', function() {
+        if (isInViewport()) {
+            animateLines();
+            // Remove event listener after animation is triggered
+            window.removeEventListener('scroll', arguments.callee);
+        }
+    });
+
+    // Add images and small text labels
+    const inputImages = ["figs/2d.svg", "figs/3d.svg", "figs/video.svg"]; // Updated for 2D, 3D, Video
+    const outputImages = ["figs/output2d.svg", "figs/output3d.svg", "figs/outputvideo.svg"]; // Updated for 2D, 3D, Video outputs
+    const inputLabels = ["2D Analysis", "3D Analysis", "Video Analysis"];
+    const outputLabels = ["2D Output", "3D Output", "Video Output"];
+
+    startPoints.forEach((start, i) => {
+        // Input images and text
+        svg.append("image")
+            .attr("xlink:href", inputImages[i])
+            .attr("x", start.x - 40)
+            .attr("y", start.y - 20)
+            .attr("width", 30)
+            .attr("height", 30);
+
+        svg.append("text")
+            .attr("x", start.x - 40)
+            .attr("y", start.y - 25)
+            .attr("text-anchor", "middle")
+            .attr("font-size", "12px")
+            .attr("fill", "#000")
+            .text(inputLabels[i]);
+
+        // Output images and text
+        svg.append("image")
+            .attr("xlink:href", outputImages[i])
+            .attr("x", endPoints[i].x + 10)
+            .attr("y", endPoints[i].y - 20)
+            .attr("width", 30)
+            .attr("height", 30);
+
+        svg.append("text")
+            .attr("x", endPoints[i].x + 25)
+            .attr("y", endPoints[i].y - 25)
+            .attr("text-anchor", "middle")
+            .attr("font-size", "12px")
+            .attr("fill", "#000")
+            .text(outputLabels[i]);
+    });
+
+    // Add the image in the middle
+    svg.append("image")
+    .attr("xlink:href", "figs/logo.svg")
+    .attr("x", midX - 75)  // Adjusted for new size
+    .attr("y", midY - 75)  // Adjusted for new size
+    .attr("width", 150)    // Increased width
+    .attr("height", 150)   // Increased height
+    .raise(); // Ensure the image is on top
+</script>
+
+</body>
+</html>
