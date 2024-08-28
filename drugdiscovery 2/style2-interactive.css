@@ -1309,4 +1309,198 @@ button:hover {
     cursor: pointer;
 }
 
+#chartsContainer {
+    display: flex;
+    justify-content: center; /* Aligns the charts in the center horizontally */
+    flex-wrap: nowrap; /* Prevents wrapping, keeping the plots side by side */
+}
 
+.chart {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 5px; /* Reduces the space between the charts */
+    width: 100%; /* Ensures the charts fit within the container */
+    max-width: 300px; /* Keeps the charts compact */
+    height: auto; /* Ensures the height adjusts proportionally */
+}
+
+@media (max-width: 1024px) {
+    .chart {
+        max-width: 250px; /* Reduces chart width for medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    #chartsContainer {
+        flex-wrap: wrap; /* Allows wrapping on smaller screens */
+    }
+
+    .chart {
+        max-width: 100%; /* Charts take full width on small screens */
+        margin-bottom: 20px; /* Adds space between charts when wrapped */
+    }
+}
+
+#visualization-container {
+    display: inline-block;  /* Inline-block allows side-by-side placement */
+    position: relative;
+    width: 400px;  /* Match image size */
+    height: 400px;
+    margin: 0 30px;  /* Add equal margin between the containers */
+}
+
+#container-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: visible;  /* Allow overflow on the sides */
+    width: 100%;
+    text-align: center;
+    padding: 20px 0; /* Adjust as necessary */
+}
+
+#slider-instruction {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 18px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    color: #333;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    white-space: nowrap;
+}
+
+#image-layer-yellow, #image-layer-green, #image-layer-red {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 400px;
+    height: 400px;
+    transform-origin: top left;
+    transform: scale(1);
+}
+
+#intensity-layer-yellow, #intensity-layer-green, #intensity-layer-red {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 350px;
+    height: 350px;
+}
+
+#slider-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    position: relative;
+    z-index: 10;
+}
+
+#intensity-slider {
+    -webkit-appearance: none;
+    width: 100%; /* Make sure the slider stretches to its container */
+    background: transparent; /* Removes the default background */
+    margin: 0;
+    margin-left: 0px;
+    margin-top: -320px;
+    margin-bottom: 0px;
+    position: relative;
+    z-index: 20;
+}
+
+#intensity-slider::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, #bbbbb9, #e9e9e3);
+    border-radius: 5px;
+}
+
+#intensity-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: #000000; /* Set thumb color to black */
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    border: 2px solid #ccc;
+}
+
+#tooltip {
+    position: absolute;
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 5px;
+    display: none;
+}
+
+#intensity-slider::-moz-range-thumb {
+    width: 50px;
+    height: 50px;
+    background: #000000; /* Set thumb color to black */
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    border: 2px solid #ccc;
+}
+
+#intensity-slider::-ms-thumb {
+    width: 50px;
+    height: 50px;
+    background: #000000; /* Set thumb color to black */
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    border: 2px solid #ccc;
+}
+
+#top-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px; /* Adjust as needed to control spacing */
+}
+
+
+#container11 {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Aligns both videos at the top */
+    width: 100%;
+    max-width: 1200px;
+    height: 100%;
+    padding-top: 10px;
+}
+
+video {
+    display: block; /* Ensures no extra space at the bottom */
+    margin: 0;
+}
+
+.gif11 {
+    width: 45%;
+    height: auto;
+    border: 1px solid #ccc;
+}
+
+.plot11 {
+    width: 90%;
+    height: 350px;
+    margin: 10px
+}
+
+.tooltip-chord {
+    position: absolute;
+    text-align: center;
+    padding: 8px;
+    background: lightsteelblue;
+    border-radius: 5px;
+    pointer-events: none;
+    font-size: 12px;
+}

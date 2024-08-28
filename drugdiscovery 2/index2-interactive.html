@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Lora:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
     <style>
 
 
@@ -99,33 +100,21 @@
                 <div class="post-container">
                     <div class="post-text-2">
                         <h3>The statistics are staggering</h3>
-                        <p>
-                            Only <b>1 in 5,000</b> compounds that enter preclinical testing make it to human trials, reflecting the 
-                            immense challenges researchers face from the earliest stages of drug discovery. This is particularly 
-                            concerning in the context of brain disorders, which affect millions globally. For example, Alzheimer’s
-                            disease alone affects over <b>50 million</b> people worldwide, with that number expected to triple by 2050, 
-                            according to the World Health Organization (WHO). In the United States, nearly <b>6 million</b> people live 
-                            with Alzheimer’s, and the economic burden of brain disorders is projected to exceed <b>$1 trillion</b> 
-                            annually by 2030, as reported by the National Institutes of Health (NIH). Parkinson’s disease, 
-                            another major brain disorder, impacts over <b>10 million</b> people globally, with around <b>60,000</b> new cases 
-                            diagnosed each year in the U.S. Epilepsy, affecting over <b>50 million</b> people worldwide, is one of the 
-                            most common neurological diseases globally, with the economic impact in the U.S. alone estimated to 
-                            be around <b>$15.5 billion</b> annually. Traditional wet lab environments, though essential, are often 
-                            bogged down by the need to repeatedly validate findings across various stages of the discovery 
-                            process. This lack of integration between computational and experimental approaches leads to data 
-                            silos, where insights gained in one phase may not effectively inform the next, resulting in 
-                            inefficiencies and increased risks of errors. Moreover, the shift from 2D cell cultures to 3D 
-                            models—and eventually to complex 4D data—adds further complexity, demanding a level of precision 
-                            and coordination that many current systems struggle to provide. With high costs, lengthy timelines, 
-                            and increasing pressure to innovate, the obstacles facing biologists in drug discovery, especially 
-                            for brain disorders, are both significant and multifaceted.                 
-                            <br><br>
-                            In an era where precision, efficiency, and innovation are paramount, particularly in 
-                            the fight against brain disorders, the industry desperately needs a unified, multimodal end-to-end 
-                            solution that seamlessly integrates diverse methodologies. Such a solution would allow researchers to 
-                            harness the full spectrum of all modalities, transforming the way we discover and 
-                            develop new drugs, and reducing both the time and cost associated with bringing life-saving therapies 
-                            to market.
+                        <br>
+                        <div id="chartsContainer" style="text-align: center;">
+                            <div id="costPlot" style="display: inline-block; margin: 0 10px;"></div>
+                            <div id="disorderPlot" style="display: inline-block; margin: 0 10px;"></div>
+                            <div id="usBrainDisorderPlot" style="display: inline-block; margin: 0 10px;"></div>
+                        </div>
+                        <br>
+                    <p>
+                        In an era where precision, efficiency, and innovation are paramount, particularly in 
+                        the fight against brain disorders, the industry desperately needs a unified, multimodal end-to-end 
+                        solution that seamlessly integrates diverse methodologies. Such a solution would allow researchers to 
+                        utilize the full spectrum of all modalities, transforming the way we discover and 
+                        develop new drugs, and reducing both the time and cost associated with bringing life-saving therapies 
+                        to market.
+                    </p>
         
                 <br><br>
                 
@@ -134,6 +123,8 @@
                         <div class = "post-text-2">
                             <h3>Introducing your wet lab’s multimodal co-pilot</h3>
                             <svg id="customPlot" width="800" height="400"></svg>
+                    <br>
+
                     <p>
                         Our platform acts as a comprehensive co-pilot in drug discovery, integrating advanced tools and 
                         methodologies across 2D, 3D, and 4D domains to support and enhance your wet lab capabilities. This 
@@ -141,27 +132,25 @@
                         that every piece of data is accurately captured and analyzed.
                     </p>
 
-                    
-                    <svg id="model-performance-chart" width="800" height="500"></svg>
-                    <svg id="model-performance-line-chart" width="800" height="500"></svg>
-
                     <br>
+                    <br>
+                    <h3>
+                        2D Data
+                    </h3>
+                    <img src="1.png" style="width:200px" class="inline-image">
 
-                    <h4>
-                        Neuron Segmentation
-                    </h4>
-                    <img src="figs/neuron_detection.svg" alt="Grazing Image" class="inline-image">
                     <p>
-                        In the 2D domain, our platform excels at processing high-resolution brain slices, allowing for detailed 
-                        neuron segmentation and brain mapping. Utilizing a state-of-the-art neuron segmentation tool that operates
-                        effectively with minimal training data, we ensure precise identification and delineation of neuronal 
-                        structures in 2D images. This segmentation is crucial for understanding the organization and distribution 
-                        of neurons within brain slices, facilitating subsequent analysis and comparison. Moreover, our platform 
-                        supports the identification of specific neuronal subtypes through enhancer-based labeling techniques, 
-                        enabling researchers to target and study distinct populations of neurons within the brain.
+                        Our platform excels in high-resolution neuron detection and segmentation, 
+                        using advanced AI that requires minimal training data. This ensures precise identification of 
+                        neuronal structures and supports the study of specific neuronal subtypes, enhancing research on 
+                        distinct neuron populations.
                     </p>
+                    
 
-                    <div id="running" class="behavior-section post-container">
+                    <img src="figs/neuron_detection.svg" alt="Grazing Image" class="inline-image">
+                    
+
+                    <!-- <div id="running" class="behavior-section post-container">
                         <h3 style="word-spacing: 500px;">P4 P56</h3>
                         <img src="figs/hippocampus and isocortex.svg" alt="Running Image" class="inline-image">                        
                     </div>
@@ -183,16 +172,12 @@
                         <button id = 'running_btn' onclick="showSection('running', this)" class="navigate-button default-focused">Hippocampus and Isocortex</button>
                         <button id = 'grazing_btn' onclick="showSection('grazing', this)" class="navigate-button">Hindbrain</button>
                         <button id = 'resting_btn' onclick="showSection('resting', this)" class="navigate-button">Pre-Thalamus</button>
-                    </div>
+                    </div> -->
 
                     <p>
-                        In the 2D domain, our platform excels at processing high-resolution brain slices, allowing for detailed 
-                        neuron segmentation and brain mapping. Utilizing a state-of-the-art neuron segmentation tool that operates
-                        effectively with minimal training data, we ensure precise identification and delineation of neuronal 
-                        structures in 2D images. This segmentation is crucial for understanding the organization and distribution 
-                        of neurons within brain slices, facilitating subsequent analysis and comparison. Moreover, our platform 
-                        supports the identification of specific neuronal subtypes through enhancer-based labeling techniques, 
-                        enabling researchers to target and study distinct populations of neurons within the brain.
+                        Our platform efficiently processes brains labeled with a variety of genetic markers and staining 
+                        techniques, enabling detailed analysis of neuronal populations and gene expression patterns across 
+                        different experimental setups.
                     </p>
 
                     <div class="image-section">
@@ -200,10 +185,12 @@
                             <h3>GAD1 (red), CamkIIa-Cre/Ai14 (green)</h3>
                             <img src="figs/ns1.svg" alt="Neuron Segmentation Image" class="side-image">
                         </div>
+
                         <div class="image-container">
-                            <h3>NISSL staining</h3>
-                            <img src="figs/ns4.svg" alt="Brain Mapping Image" class="side-image">
+                            <h3>CamkIIa mRNA in situ hybridized</h3>
+                            <img src="figs/ns3.svg" alt="Brain Mapping Image" class="side-image">
                         </div>
+                        
                     </div>
 
                     <div class="image-section">
@@ -212,77 +199,125 @@
                             <img src="figs/ns2.svg" alt="Neuron Segmentation Image" class="side-image">
                         </div>
                         <div class="image-container">
-                            <h3>CamkIIa mRNA in situ hybridized</h3>
-                            <img src="figs/ns3.svg" alt="Brain Mapping Image" class="side-image">
+                            <h3>NISSL staining</h3>
+                            <img src="figs/ns4.svg" alt="Brain Mapping Image" class="side-image">
                         </div>
+                        
                     </div>
 
                     <br> 
-                    <p>
-                        When it comes to 3D analysis, our platform extends its capabilities to volumetric brain imaging, 
-                        offering advanced tools for segmenting and analyzing entire brain volumes. The same neuron segmentation 
-                        technology used in 2D is applied to 3D datasets, allowing for the precise identification of neuronal 
-                        structures within the entire brain volume.
-                        <br>
-                    </p>
+                    
 
-                    <div class="gif-container">
+                    <!-- <div class="gif-container">
                         <img src="giffy.gif" class="gif" alt="Slider Animation">
                         <img src="3dgiffy.gif" class="gif" alt="Slider Animation">
-                    </div>
+                    </div> -->
+
                     <p>
-                        When it comes to 3D analysis, our platform extends its capabilities to volumetric brain imaging, 
-                        offering advanced tools for segmenting and analyzing entire brain volumes. The same neuron segmentation 
-                        technology used in 2D is applied to 3D datasets, allowing for the precise identification of neuronal 
-                        structures within the entire brain volume. This 3D segmentation is vital for understanding the spatial 
-                        relationships and connectivity between neurons, providing insights into brain function and pathology. 
-                        Additionally, our platform facilitates brain-wide gene expression quantification, enabling researchers 
-                        to correlate gene expression patterns with specific neuronal circuits and behaviors, thereby enhancing 
-                        the understanding of the molecular mechanisms underlying brain function.
-                        <br>
+                        Utilize the intensity slider to fine-tune neuron segmentation by selecting the optimal intensity 
+                        threshold, enabling precise detection and quantification of individual neurons labeled with specific 
+                        enhancers, while filtering out non-target signals for accurate analysis.
                     </p>
 
-                    <h4>Brain Registration</h4>
-                    <img src="figs/brain_registration.svg" alt="Grazing Image" class="inline-image">
-                    <p>
-                        Our platform also supports accurate brain registration, aligning 2D slices to standardized brain atlases. 
-                        This process ensures that different brain slices can be compared and integrated into a coherent dataset, 
-                        enabling researchers to study variations in neuronal architecture and correlate them with specific brain 
-                        regions. Through robust 3D brain registration, our platform aligns volumetric data to standardized 3D 
-                        brain atlases, essential for comparing brain volumes across different conditions or time points. This 
-                        capability is particularly crucial when analyzing data from multi-center studies, where variations in 
-                        imaging protocols and equipment can introduce inconsistencies. Our registration techniques are designed 
-                        to be resilient to these variations, ensuring that the anatomical integrity of the brain is preserved, 
-                        and enabling researchers to detect subtle changes in brain structure and function that may result from 
-                        drug interventions or disease progression.
-                        <br>
-                    </p>
+                    <div class="button-container">
+                        <button id="toggle-mask" class="reg-button" style="z-index: 10; margin-top: 5px; margin-bottom: -5px; background-color: black;">Turn Segmentation Masks On/Off</button>
+                    </div>  
 
-                    <h3>3D Brain Registration Pipeline</h3>
+                    <div id="container-wrapper">
+                        <!-- Top Image with Bounding Boxes -->
+                        <div id="visualization-container">
+                            <svg id="top-image" width="350" height="350" style="position: relative; margin-left: -15px; margin-right: -30px;">
+                                <image xlink:href="figs/brain_sect_23.png" width="350" height="350"></image>
+                                
+                                <!-- Bounding Boxes on Top Image -->
+                                <rect id="bbox-yellow" x="130" y="90" width="30" height="30" fill="none" stroke="orange" stroke-width="2"></rect>
+                            
+                                <!-- Green Area Bounding Box -->
+                                <rect id="bbox-green" x="140" y="140" width="30" height="30" fill="none" stroke="green" stroke-width="2"></rect>
+                                
+                                <!-- Red Area Bounding Box -->
+                                <rect id="bbox-red" x="200" y="230" width="30" height="30" fill="none" stroke="red" stroke-width="2"></rect>
+                            </svg>
+                        
+                            <div id="top-image-caption" style="text-align: center; margin-top: -15px; margin-left: 13.2px">
+                                <p style="text-align: center; font-size: 14px; font-family: 'Montserrat', sans-serif; font-weight: bold; color: #333;">
+                                    Brain Section with Multiple Genetic Markers
+                                </p>
+                            </div>
+                        </div>
+                    
+                        <!-- Yellow Channel -->
+                        <div id="visualization-container" style="margin: 0 5px; position: relative;">
+                            <img id="image-layer-yellow" src="threshold visualization/yellow/876.png" alt="Image" style="border: 5px solid orange; width: 350px; height: 350px;">
+                            <img id="mask-layer-yellow" src="threshold visualization/yellow/876_mask.png" style="border: 5px solid orange; width: 350px; height: 350px; opacity: 0; position: absolute; top: 0; left: 0; z-index: 0;">
+                            <svg id="intensity-layer-yellow" style="width: 350px; height: 350px;"></svg>
+                            <div id="slider-container">
+                                <input type="range" class="intensity-yellow" id="intensity-slider" min="0" max="1" step="0.01" value="0">
+                            </div>
+                            <div id="slider-instruction" style="font-size: 17px;">Genetic Marker 1 Intensity Threshold Slider</div>
+                        </div>
+                    
+                        <!-- Green Channel -->
+                        <div id="visualization-container" style="margin: 0 5px; position: relative;">
+                            <img id="image-layer-green" src="threshold visualization/green/281.png" alt="Image" style="border: 5px solid green; width: 350px; height: 350px;">
+                            <img id="mask-layer-green" src="threshold visualization/green/281_mask.png" style="border: 5px solid green; width: 350px; height: 350px; opacity: 0; position: absolute; top: 0; left: 0; z-index: 0;">
+                            <svg id="intensity-layer-green" style="width: 350px; height: 350px;"></svg>
+                            <div id="slider-container">
+                                <input type="range" class="intensity-green" id="intensity-slider" min="0" max="1" step="0.01" value="0">
+                            </div>
+                            <div id="slider-instruction" style="font-size: 17px;">Genetic Marker 2 Intensity Threshold Slider</div>
+                        </div>
+                    
+                        <!-- Red Channel -->
+                        <div id="visualization-container" style="margin: 0 5px; position: relative;">
+                            <img id="image-layer-red" src="threshold visualization/red/1924.png" alt="Image" style="border: 5px solid red; width: 350px; height: 350px;">
+                            <img id="mask-layer-red" src="threshold visualization/red/1924_mask.png" style="border: 5px solid red; width: 350px; height: 350px; opacity: 0; position: absolute; top: 0; left: 0; z-index: 0;">
+                            <svg id="intensity-layer-red" style="width: 350px; height: 350px;"></svg>
+                            <div id="slider-container">
+                                <input type="range" class="intensity-red" id="intensity-slider" min="0" max="1" step="0.01" value="0">
+                            </div>
+                            <div id="slider-instruction" style="font-size: 17px;">Genetic Marker 3 Intensity Threshold Slider</div>
+                        </div>
+                    </div>                    
+                                      
+                    <div id="tooltip"></div>
+                    <br>
+                    <p>
+                        Our model significantly outperforms current state-of-the-art approaches, as evidenced by its superior performance. 
+                        The HD95 score is a critical indicator of accuracy in medical imaging, particularly in assessing how closely 
+                        segmented regions align with ground truth data. Our model is more precise in capturing complex anatomical structures, 
+                        offering a clear advantage in tasks where accurate boundary delineation is crucial.
+                    </p>
+                    <svg id="model-performance-chart" width="800" height="500"></svg>
+
+                    <br>
+                    <br>
+                    <h3>3D Data</h3>
+                    <img src="2.png" style="width:200px" class="inline-image">
+
+                    <p>
+                        Our platform provides precise brain registration by aligning brain atlases to 2D and 3D datasets, 
+                        ensuring accurate spatial correspondence for comparative anatomical analysis. This process enables the 
+                        robust integration of our atlas with various imaging modalities, facilitating the detailed mapping of 
+                        anatomical regions, crucial for understanding brain structure and function relationships.
+                    </p>
                     <video id="controlled-video" class="video" muted playsinline style="width:100%; max-width:1500px">
                         <source src="figs/SeBRe_GIF3.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
                     <br>
-
                     <p>
-                        Our platform also supports accurate brain registration, aligning 2D slices to standardized brain atlases. 
-                        This process ensures that different brain slices can be compared and integrated into a coherent dataset, 
-                        enabling researchers to study variations in neuronal architecture and correlate them with specific brain 
-                        regions. Through robust 3D brain registration, our platform aligns volumetric data to standardized 3D 
-                        brain atlases, essential for comparing brain volumes across different conditions or time points. This 
-                        capability is particularly crucial when analyzing data from multi-center studies, where variations in 
-                        imaging protocols and equipment can introduce inconsistencies. Our registration techniques are designed 
-                        to be resilient to these variations, ensuring that the anatomical integrity of the brain is preserved, 
-                        and enabling researchers to detect subtle changes in brain structure and function that may result from 
-                        drug interventions or disease progression.
-                        <br>
+                        Accurately registered brain images ensure that each anatomical region is mapped consistently across 
+                        different imaging modalities, enabling precise localization and comparative analysis. This meticulous 
+                        alignment facilitates a deeper understanding of complex brain structures and their functions, providing 
+                        a robust foundation for neuroanatomical studies.
                     </p>
-
+                    <img src="figs/brain_registration.svg" alt="Grazing Image" class="inline-image">
+                                        
+                    <br>
                     <div class="button-container">
                         <button id="toggleOverlay" class="reg-button">Register Brains</button>
                     </div>
-                
                     <div class="image-pair-container">
                         <div class="image-container3">
                             <img id="baseImage1" src="figs/reg/reg1.svg" alt="Base Image 1">
@@ -294,90 +329,73 @@
                         </div>
                     </div>
 
-                    <p>
-                        Our platform also supports accurate brain registration, aligning 2D slices to standardized brain atlases. 
-                        This process ensures that different brain slices can be compared and integrated into a coherent dataset, 
-                        enabling researchers to study variations in neuronal architecture and correlate them with specific brain 
-                        regions. Through robust 3D brain registration, our platform aligns volumetric data to standardized 3D 
-                        brain atlases, essential for comparing brain volumes across different conditions or time points. This 
-                        capability is particularly crucial when analyzing data from multi-center studies, where variations in 
-                        imaging protocols and equipment can introduce inconsistencies. Our registration techniques are designed 
-                        to be resilient to these variations, ensuring that the anatomical integrity of the brain is preserved, 
-                        and enabling researchers to detect subtle changes in brain structure and function that may result from 
-                        drug interventions or disease progression.
-                        <br>
-                    </p>
-                    <h4>
-                        Behavioral Analytics
-                    </h4>
-                    <p>
-                        
-                        Our platform also incorporates behavioral video analytics to assess drug efficacy in 
-                        real-time. This involves analyzing video data that captures dynamic behavioral changes over time, 
-                        providing a temporal dimension to traditional 2D and 3D analyses. By tracking and quantifying animal 
-                        behavior in response to drug treatments, our platform helps researchers understand how these 
-                        interventions affect overall behavior and neurological function. This 4D analysis is particularly 
-                        valuable for studying the efficacy of drugs intended to modify behavior or neurological outcomes. 
-                        It allows for the identification of subtle behavioral changes that may not be apparent in static 2D or 
-                        3D analyses, offering a more comprehensive assessment of a drug’s impact. The ability to correlate 
-                        these behavioral changes with underlying neuronal activity and gene expression profiles makes our 
-                        platform an indispensable tool for advancing neuropharmacology.
+                    <!-- <div style="display: flex; flex-wrap: wrap; justify-content: space-between;">
+                        <video class="synced-video" width="48%" autoplay loop muted playsinline style="margin-bottom:10px; border-radius:15px;">
+                            <source src="3d visuall 11.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <video class="synced-video" width="48%" autoplay loop muted playsinline style="margin-bottom:10px; border-radius:15px;">
+                            <source src="3d visuall 12.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <video class="synced-video" width="48%" autoplay loop muted playsinline style="margin-bottom:10px; margin-top:10px; border-radius:15px;">
+                            <source src="3d visuall 21.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <video class="synced-video" width="48%" autoplay loop muted playsinline style="margin-bottom:10px; margin-top:10px; border-radius:15px;">
+                            <source src="3d visuall 22.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div> -->
 
-                    <img src="4dgiffy.gif" class="gif" alt="Slider Animation">
+                    
+                                        
+                    <div style="position: relative; z-index: 1000; background-color: white; display: flex; justify-content: center; align-items: center; height: 100vh;">                        <svg id="PerformancePlot" width="800" height="500"></svg>
+                    </div>
 
-                    </p>
                     <br>
                     <br>
+                    <h3>
+                        4D Data
+                    </h3>
+                    <img src="3.png" style="width:200px" class="inline-image">
 
-                    <h4>
-                        Integrated Approach
-                    </h4>
-                    <p>
-                        By combining multiple modalities, our platform provides a unified, multimodal approach to 
-                        drug discovery. Whether you’re segmenting neurons in brain slices, analyzing whole brain volumes, or 
-                        assessing behavioral outcomes in real-time, our platform offers the tools and precision needed to drive 
-                        innovation in drug development. This integration ensures that every stage of your research is supported 
-                        by robust data and cutting-edge technology, empowering you to advance new therapies with confidence and 
-                        efficiency. The ability to integrate multi-omic data, including gene expression and epigenetic 
-                        modifications, further enhances the platform’s capacity to uncover the complex biological underpinnings 
-                        of disease, paving the way for the development of highly targeted therapeutic interventions.
-                    </p>
+                    <!-- <img src="4dgiffy.gif" class="gif" alt="Slider Animation"> -->
+
+                    <div id="container11">
+                        <video id="videoGif" width="55.5%" autoplay loop muted playsinline style="margin-top:8px; object-fit: cover; object-position: center; border-radius: 15px; z-index: 2;">
+                            <source src="4d gif.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <div style="width: 55%; margin-left: -40px; z-index: 0;">
+                            <video id="video11" width="130%" autoplay loop muted playsinline style="object-fit: cover; object-position: center;">
+                                <source src="kp_tracking_blog2.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                    </div>
+                
+
+                    <br>
+                    
                     
                         </div>
                     </div>
                 </article>
 
-            <br>
             <article class="post">
                 <div class="post-container">
                     
                     <div class="post-text-2">
-                        <h3>The future</h3>
-                    
-                        <p>
-                            The future of drug discovery hinges on the seamless integration of advanced technologies with 
-                            traditional wet lab techniques. As the field evolves, so too must the tools we use to navigate 
-                            its complexities. Our multimodal platform represents not just a technological advancement, but a 
-                            paradigm shift in how we approach the discovery and development of new therapies. By uniting 2D, 
-                            3D, and 4D data within a single, cohesive framework, we ensure that every insight is captured, every 
-                            opportunity is leveraged, and no time is wasted.
+                        <h3>Multimodal Insights</h3>
+                        <svg id="customPlot2" width="800" height="400"></svg>
+                        
+                        <div id="plots-container" style="display: flex;">
+                            <div id="tooltip-chord" class="tooltip-chord" style="opacity: 0;"></div>
+                            <svg id="chordPlot"></svg>
+                        </div>
 
-                            <br><br>
-                            As a co-pilot to your wet lab, our platform empowers you to overcome the inherent challenges of 
-                            modern drug discovery, delivering faster, more accurate results. This transformation is not merely 
-                            about accelerating processes—it’s about making drug discovery more precise, integrated, and capable 
-                            of achieving the breakthroughs that will define the next era of medicine. The ability to conduct 
-                            comprehensive analyses, from neuron segmentation to behavioral assessments, within a unified 
-                            platform, enables researchers to approach drug discovery holistically, ensuring that every aspect of 
-                            the research is informed by the latest advancements in technology and science.
-
-                            <br><br>
-                            In the coming years, the integration of artificial intelligence with multimodal data analysis will 
-                            further enhance the platform’s capabilities, enabling predictive modeling and the identification of 
-                            novel therapeutic targets. This approach will not only accelerate drug discovery but also increase 
-                            the likelihood of clinical success, ultimately leading to more effective and personalized treatments 
-                            for patients worldwide.
-                        </p>
+                        
                     </div>
                 </div>
             </article>
@@ -406,11 +424,12 @@
                             <br><br>
                             This expanded content emphasizes the technical depth of the platform, highlighting its capabilities in 
                             a way that resonates with professionals in the field. It also underscores the platform’s role in 
-                            integrating various aspects of drug discovery, from molecular to behavioral analysis.                        </p>  
+                            integrating various aspects of drug discovery, from molecular to behavioral analysis. 
+                       </p>  
                     </div>
                 </div>
             </article>
-            
+
             <article>
                 <div class="learn-more">
                     <h2>Learn more about our work</h2>
@@ -659,112 +678,123 @@
 <script>
     document.addEventListener('DOMContentLoaded', function () {
         const data = [
-            {model: 'Ours', performance: 90},
-            {model: 'Model B', performance: 80},
-            {model: 'Model C', performance: 86},
-            {model: 'Model D', performance: 68},
-            {model: 'Model E', performance: 70},
-            {model: 'Model F', performance: 75}
+            {model: 'Ours', performance: 10.0, percentage: ""},
+            {model: 'UNetr', performance: 8.7, percentage: "21.9%"},
+            {model: 'TransUNet', performance: 7.2, percentage: "26.6%"},
+            {model: 'UltraUNet', performance: 6.6, percentage: "28.1%"},
+            {model: 'SegDiff', performance: 5.1, percentage: "29.5%"},
+            {model: 'BAT', performance: 4.1, percentage: "35.5%"},
+            {model: 'MedSAM', performance: 3.2, percentage: "36.4%"},
+            {model: 'MT-SEG', performance: 2.5, percentage: "36.7%"},
+            {model: 'FAT-Net', performance: 1.5, percentage: "44.9%"},
+            {model: 'BEAL', performance: 1.2, percentage: "50.9%"},
+            {model: 'ResUNet', performance: 0.8, percentage: "51.8%"}
         ];
-
-        const margin = {top: 40, right: 20, bottom: 60, left: 100},
+    
+        const margin = {top: 80, right: 20, bottom: 60, left: 150},
               width = 800 - margin.left - margin.right,
-              height = 300 - margin.top - margin.bottom;
-
+              height = 500 - margin.top - margin.bottom;
+    
         const svg = d3.select("#model-performance-chart")
                       .attr("width", width + margin.left + margin.right)
                       .attr("height", height + margin.top + margin.bottom)
                       .append("g")
                       .attr("transform", `translate(${margin.left},${margin.top})`);
-
-        // Set the y scale (band scale) with reduced padding for less distance between bars
+    
         const y = d3.scaleBand()
                     .domain(data.map(d => d.model))
                     .range([0, height])
-                    .padding(0.3); // Reduce padding to minimize the space between bars
-
-        // Set the x scale (linear scale)
+                    .padding(0.3);
+    
         const x = d3.scaleLinear()
                     .domain([0, d3.max(data, d => d.performance)])
                     .range([0, width]);
-
-        // Append y-axis (Models)
+    
         svg.append("g")
-           .call(d3.axisLeft(y));
-
-        // Append x-axis (Performance)
+           .call(d3.axisLeft(y).tickSize(0)) // Remove tick marks
+           .selectAll("text")
+           .style("font-size", "14px"); // Increase font size of y-axis labels
+    
         svg.append("g")
            .attr("transform", `translate(0,${height})`)
            .call(d3.axisBottom(x).ticks(5));
-
-        // Add the bars with Inferno colormap and a glowing effect for the "Ours" model
+    
         svg.selectAll(".bar")
            .data(data)
            .enter().append("rect")
            .attr("class", "bar")
-           .attr("y", d => y(d.model) + y.bandwidth() / 2 - y.bandwidth() / 10) // Align the bar vertically with the text
-           .attr("x", 0) // Start bars at the left
-           .attr("height", y.bandwidth() / 5) // Make the bars thinner; adjust this value to control bar thickness
-           .attr("width", 0) // Initial width is 0 for animation
-           .attr("fill", d => {
-                if (d.model === 'Ours') return '#ffd700'; // Bright yellow for "Ours" model
-                if (d.model === 'Model B') return '#f98e09'; // Orange
-                if (d.model === 'Model C') return '#d94701'; // Reddish-orange
-                if (d.model === 'Model D') return '#a41a00'; // Dark red
-                if (d.model === 'Model E') return '#67001f'; // Maroon
-                if (d.model === 'Model F') return '#3b0f4b'; // Dark purple
-            })
-           .attr("rx", y.bandwidth() / 20) // Slightly round the open end
-           .attr("ry", y.bandwidth() / 20) // Round the open end only
-           .style("filter", d => d.model === 'Ours' ? 'drop-shadow(0px 0px 8px #fcffa4)' : 'none'); // Add glow effect for "Ours"
-
-        // Add labels for x-axis and y-axis
+           .attr("y", d => y(d.model) + y.bandwidth() / 2 - y.bandwidth() / 10)
+           .attr("x", 0)
+           .attr("height", y.bandwidth() / 5)
+           .attr("width", 0)
+           .attr("fill", d => d.model === 'Ours' ? 'black' : '#d3d3d3') // Dark blue for "Ours" and light blue for others
+           .attr("rx", y.bandwidth() / 20)
+           .attr("ry", y.bandwidth() / 20);  
+  
         svg.append("text")
            .attr("class", "axis-label")
            .attr("x", width / 2)
            .attr("y", height + margin.bottom - 10)
            .attr("text-anchor", "middle")
-           .text("Performance (%)");
-
+           .text("Inverted HD95 Score");
+    
+    
+        // Add performance gain arrows
+        svg.selectAll(".arrow")
+           .data(data)
+           .enter().append("text")
+           .attr("class", "arrow")
+           .attr("x", d => x(d.performance) + 5)
+           .attr("y", d => y(d.model) + y.bandwidth() / 2)
+           .attr("text-anchor", "start")
+           .attr("font-size", "14px") // Increase font size of performance increase percentages
+           .attr("fill", "black")
+           .text(d => d.percentage)
+           .append("tspan")
+           .attr("x", d => x(d.performance) + d.percentage.length * 7 + 10) // Extend arrow from percentage to the end of the plot
+           .attr("dy", "0.2em")
+           .text(d => d.model !== 'Ours' ? "→" : ""); // Use a right arrow
+    
+        // Add performance gain indicator text
         svg.append("text")
-           .attr("class", "axis-label")
-           .attr("x", -height / 2)
-           .attr("y", -margin.left + 15)
+           .attr("x", width / 2)
+           .attr("y", -10) // Adjusted to make room for the title
            .attr("text-anchor", "middle")
-           .attr("transform", "rotate(-90)")
-           .text("Models");
-
-        // Function to handle scroll event
+           .style("font-size", "14px") // Slightly larger font size for the title
+           .style("fill", "black")
+           .text("→ Indicates performance gain of our model over competing models");
+    
         function handleScroll() {
-            const chartPosition = document.getElementById("model-performance-chart").getBoundingClientRect().top;
+            const chartPosition = document.getElementById("model-performance-chart").getBoundingClientRect().top+200;
             const windowHeight = window.innerHeight;
-
-            // Trigger the animation when the chart is within the viewport
+    
             if (chartPosition < windowHeight - 100) {
                 svg.selectAll(".bar")
                    .transition()
-                   .duration(1500) // Duration of animation
-                   .attr("width", d => x(d.performance)); // Final width based on performance value
-
-                // Remove the event listener after the animation starts
+                   .duration(1500)
+                   .attr("width", d => x(d.performance));
+    
                 window.removeEventListener("scroll", handleScroll);
             }
         }
-
-        // Attach the scroll event listener
+    
         window.addEventListener("scroll", handleScroll);
     });
 </script>
 
 <script>
     document.addEventListener('DOMContentLoaded', function () {
-        // Data for the line chart
+        // Data for the line chart with more scatter points
         const lineData = [
             {section: 0, modelA: 1.8, modelB: 2.2, modelC: 2.0},
             {section: 10, modelA: 2.0, modelB: 2.5, modelC: 2.3},
             {section: 20, modelA: 2.1, modelB: 2.8, modelC: 2.4},
             {section: 30, modelA: 1.9, modelB: 2.6, modelC: 2.2},
-            // Add more data points as needed
+            {section: 50, modelA: 2.2, modelB: 2.9, modelC: 2.5},
+            {section: 70, modelA: 2.3, modelB: 3.0, modelC: 2.7},
+            {section: 100, modelA: 2.4, modelB: 3.1, modelC: 2.9},
+            {section: 130, modelA: 2.3, modelB: 3.0, modelC: 2.8},
+            {section: 160, modelA: 2.5, modelB: 3.2, modelC: 3.0},
             {section: 190, modelA: 2.5, modelB: 3.1, modelC: 3.2},
             {section: 200, modelA: 2.4, modelB: 3.0, modelC: 3.1}
         ];
@@ -810,24 +840,10 @@
                .call(d3.axisLeft(yLine));
 
         // Add the lines with stroke-dasharray for animation
-        svgLine.append("path")
+        const pathA = svgLine.append("path")
                .datum(lineData)
                .attr("class", "lineA")
                .attr("d", lineA)
-               .attr("stroke", "#ffd700")
-               .attr("fill", "none")
-               .attr("stroke-width", 2)
-               .attr("stroke-dasharray", function () {
-                   return this.getTotalLength();
-               })
-               .attr("stroke-dashoffset", function () {
-                   return this.getTotalLength();
-               });
-
-        svgLine.append("path")
-               .datum(lineData)
-               .attr("class", "lineB")
-               .attr("d", lineB)
                .attr("stroke", "black")
                .attr("fill", "none")
                .attr("stroke-width", 2)
@@ -838,11 +854,11 @@
                    return this.getTotalLength();
                });
 
-        svgLine.append("path")
+        const pathB = svgLine.append("path")
                .datum(lineData)
-               .attr("class", "lineC")
-               .attr("d", lineC)
-               .attr("stroke", "purple")
+               .attr("class", "lineB")
+               .attr("d", lineB)
+               .attr("stroke", "#d3d3d3")
                .attr("fill", "none")
                .attr("stroke-width", 2)
                .attr("stroke-dasharray", function () {
@@ -852,21 +868,76 @@
                    return this.getTotalLength();
                });
 
-        // Add labels to axes
-        svgLine.append("text")
-               .attr("class", "axis-label")
-               .attr("x", width / 2)
-               .attr("y", height + margin.bottom - 10)
-               .attr("text-anchor", "middle")
-               .text("Section Number");
+        const pathC = svgLine.append("path")
+               .datum(lineData)
+               .attr("class", "lineC")
+               .attr("d", lineC)
+               .attr("stroke", "grey")
+               .attr("fill", "none")
+               .attr("stroke-width", 2)
+               .attr("stroke-dasharray", function () {
+                   return this.getTotalLength();
+               })
+               .attr("stroke-dashoffset", function () {
+                   return this.getTotalLength();
+               });
 
-        svgLine.append("text")
-               .attr("class", "axis-label")
-               .attr("x", -height / 2)
-               .attr("y", -margin.left + 15)
-               .attr("text-anchor", "middle")
-               .attr("transform", "rotate(-90)")
-               .text("MSE Score");
+        // Add scatter points for each model with animation
+        svgLine.selectAll(".dotA")
+            .data(lineData)
+            .enter().append("circle")
+            .attr("class", "dotA")
+            .attr("cx", d => xLine(d.section))
+            .attr("cy", height) // Start from below
+            .attr("r", 0)       // Start with radius 0
+            .attr("fill", "black");
+
+        svgLine.selectAll(".dotB")
+            .data(lineData)
+            .enter().append("circle")
+            .attr("class", "dotB")
+            .attr("cx", d => xLine(d.section))
+            .attr("cy", height) // Start from below
+            .attr("r", 0)       // Start with radius 0
+            .attr("fill", "#d3d3d3");
+
+        svgLine.selectAll(".dotC")
+            .data(lineData)
+            .enter().append("circle")
+            .attr("class", "dotC")
+            .attr("cx", d => xLine(d.section))
+            .attr("cy", height) // Start from below
+            .attr("r", 0)       // Start with radius 0
+            .attr("fill", "grey");
+
+        // Function to animate scatter points and lines
+        function animateScatterAndLines() {
+            svgLine.selectAll("circle")
+                .transition()
+                .duration(1000)
+                .delay((d, i) => i * 50)
+                .attr("cy", d => yLine(d.modelA))  // modelA is for dotA, similarly for dotB and dotC
+                .attr("r", 6)
+                .on("end", function (d, i) {
+                    if (i === lineData.length - 1) {
+                        animateLines();
+                    }
+                });
+
+            svgLine.selectAll(".dotB")
+                .transition()
+                .duration(1000)
+                .delay((d, i) => i * 50)
+                .attr("cy", d => yLine(d.modelB))
+                .attr("r", 6);
+
+            svgLine.selectAll(".dotC")
+                .transition()
+                .duration(1000)
+                .delay((d, i) => i * 50)
+                .attr("cy", d => yLine(d.modelC))
+                .attr("r", 6);
+        }
 
         const legend = svgLine.selectAll(".legend")
                               .data(["Ours", "Model B", "Model C"])
@@ -878,7 +949,7 @@
               .attr("x", width - 18)
               .attr("width", 18)
               .attr("height", 18)
-              .style("fill", (d, i) => ["#ffd700", "black", "purple"][i]);
+              .style("fill", (d, i) => ["black", "#d3d3d3", "grey"][i]);
 
         legend.append("text")
               .attr("x", width - 24)
@@ -887,24 +958,32 @@
               .style("text-anchor", "end")
               .text(d => d);
 
+        // Function to animate lines after scatter points
+        function animateLines() {
+            svgLine.selectAll("path")
+                .transition()
+                .duration(2000)
+                .attr("stroke-dashoffset", 0);
+        }
+
         // Function to handle scroll event for the line chart
         function handleScrollLine() {
             const chartPosition = document.getElementById("model-performance-line-chart").getBoundingClientRect().top;
             const windowHeight = window.innerHeight;
 
             if (chartPosition < windowHeight - 100) {
-                svgLine.selectAll("path")
-                       .transition()
-                       .duration(2000)
-                       .attr("stroke-dashoffset", 3);
-
+                animateScatterAndLines();
                 window.removeEventListener("scroll", handleScrollLine);
             }
         }
 
         window.addEventListener("scroll", handleScrollLine);
     });
+</script>
 
+
+
+<script>
     function showSection(section, clickedButton) {
         var sections = document.getElementsByClassName("behavior-section");
         for (var i = 0; i < sections.length; i++) {
@@ -975,133 +1054,1216 @@ function showSlides(n) {
 </script>
 
 <script>
+// Set up the SVG
+const svg = d3.select("#customPlot");
+const width = +svg.attr("width");
+const height = +svg.attr("height");
+
+// Define the start, middle, and end points for the lines
+const startPoints = [
+    {x: 50, y: 100},
+    {x: 50, y: 200},
+    {x: 50, y: 300}
+];
+
+const endPoints = [
+    {x: 750, y: 100},
+    {x: 750, y: 200},
+    {x: 750, y: 300}
+];
+
+const midX = width / 2;
+const midY = height / 2;
+
+// Define subtle colors representing 2D, 3D, and video, then change to darker after TibbTech
+const initialLineColors = ["#D3D3D3", "#A9A9A9", "#808080"]; // Light Grey shades for before passing TibbTech
+const finalLineColors = ["#000000", "#000000", "#000000"]; // Black after passing TibbTech
+
+// Draw the lines without animating yet
+const paths = startPoints.map((start, i) => {
+    const path = svg.append("path")
+        .attr("d", `M${start.x},${start.y} 
+                    Q${midX},${midY - 50 + i * 50} 
+                    ${midX},${midY - 50 + i * 50}
+                    T${endPoints[i].x - 50},${endPoints[i].y}`)
+        .attr("stroke", initialLineColors[i])
+        .attr("stroke-width", 3)
+        .attr("fill", "none");
+
+    const totalLength = path.node().getTotalLength();
+
+    path
+        .attr("stroke-dasharray", totalLength + " " + totalLength)
+        .attr("stroke-dashoffset", totalLength); // Hide the path initially
+
+    return path;
+});
+
+// Function to trigger the animation
+function animateLines() {
+    paths.forEach((path, i) => {
+        const totalLength = path.node().getTotalLength();
+
+        path.transition()
+            .duration(2000)
+            .ease(d3.easeLinear)
+            .attr("stroke-dashoffset", totalLength / 2) // Animate to mid-point (TibbTech)
+            .on("end", () => {
+                // Pop effect on the logo
+                d3.select("#logo")
+                    .transition()
+                    .duration(300)
+                    .attr("width", 180)   // Increase size
+                    .attr("height", 180)
+                    .attr("x", midX - 90) // Adjust position to keep centered
+                    .attr("y", midY - 90)
+                    .transition()
+                    .duration(300)
+                    .attr("width", 150)   // Return to original size
+                    .attr("height", 150)
+                    .attr("x", midX - 75) // Reset position
+                    .attr("y", midY - 75);
+
+                // Continue the animation after the logo effect
+                path.transition()
+                    .duration(1000)
+                    .ease(d3.easeLinear)
+                    .attr("stroke", finalLineColors[i]) // Change to black after passing TibbTech
+                    .attr("stroke-width", 5)
+                    .transition()
+                    .duration(1000)
+                    .ease(d3.easeLinear)
+                    .attr("stroke-width", 3)
+                    .attr("stroke-dashoffset", 0)
+                    .on("end", () => {
+                        // Show and play GIF after line reaches the end
+                        d3.select(`#outputGif${i}`)
+                            .attr("opacity", 1) // Make GIF visible
+                            .attr("xlink:href", outputImages[i]); // Set the GIF source
+                    });
+            });
+    });
+}
+
+// Function to check if the section is in the viewport
+function isInViewport() {
+    const rect = svg.node().getBoundingClientRect();
+    return rect.top >= 0 && rect.bottom <= (window.innerHeight || document.documentElement.clientHeight);
+}
+
+// Event listener to trigger animation on scroll
+window.addEventListener('scroll', function() {
+    if (isInViewport()) {
+        animateLines();
+        // Remove event listener after animation is triggered
+        window.removeEventListener('scroll', arguments.callee);
+    }
+});
+
+// Add images and small text labels
+const inputImages = ["1.png", "2.png", "3.png"]; // Use PNGs for inputs
+const outputImages = ["giffy.gif", "3dgiffy.gif", "4dgiffy.gif"]; // Use GIFs for outputs
+const inputLabels = ["2D Data", "3D Data", "Video Data"];
+const outputLabels = ["2D Output", "3D Output", "Video Output"];
+
+startPoints.forEach((start, i) => {
+    // Input images and text
+    svg.append("image")
+        .attr("xlink:href", inputImages[i])
+        .attr("x", start.x - 40)
+        .attr("y", start.y - 20)
+        .attr("width", 60) // Increased size
+        .attr("height", 60); // Increased size
+
+    svg.append("text")
+        .attr("x", start.x - 10)
+        .attr("y", start.y - 25)
+        .attr("text-anchor", "middle")
+        .attr("font-size", "15px")
+        .attr("fill", "#000")
+        .text(inputLabels[i]);
+
+    // Output GIF placeholders and text
+    svg.append("image")
+        .attr("id", `outputGif${i}`)
+        .attr("xlink:href", "") // Initially no source to keep it hidden
+        .attr("x", endPoints[i].x - 50)
+        .attr("y", endPoints[i].y - 20)
+        .attr("width", 100) // Increased size
+        .attr("height", 60) // Increased size
+        .attr("opacity", 0); // Hide the GIF initially
+
+    svg.append("text")
+        .attr("x", endPoints[i].x)
+        .attr("y", endPoints[i].y - 25)
+        .attr("text-anchor", "middle")
+        .attr("font-size", "15px")
+        .attr("fill", "#000")
+        .text(outputLabels[i]);
+});
+
+// Add the image in the middle with pop effect on intersection
+svg.append("image")
+    .attr("id", "logo")
+    .attr("xlink:href", "figs/logo6.svg")
+    .attr("x", midX - 75)  // Adjusted for new size
+    .attr("y", midY - 75)  // Adjusted for new size
+    .attr("width", 150)    // Original width
+    .attr("height", 150)   // Original height
+    .raise(); // Ensure the image is on top
+</script>
+
+<script>
+    // Margin and dimensions
+    const margin = { top: 40, right: 10, bottom: 40, left: 50 };
+    const plotWidth = 400 - margin.left - margin.right;
+    const plotHeight = 350 - margin.top - margin.bottom;
+
+    // Data for Cost of Drug Discovery
+    const data1 = [
+        { year: 2000, cost: 1.0 },
+        { year: 2005, cost: 1.2 },
+        { year: 2010, cost: 1.5 },
+        { year: 2015, cost: 2.0 },
+        { year: 2020, cost: 2.4 },
+        { year: 2025, cost: 2.7 }
+    ];
+
+    // Data for Brain Disorders Worldwide (Prevalence)
+    const data2 = [
+        { year: 1990, count: 1.8 },  // 1.8 billion
+        { year: 1995, count: 1.9 },  // 1.9 billion
+        { year: 2000, count: 2.0 },  // 2.0 billion
+        { year: 2005, count: 2.2 },  // 2.2 billion
+        { year: 2010, count: 2.4 },  // 2.4 billion
+        { year: 2015, count: 2.5 },  // 2.5 billion
+        { year: 2017, count: 2.62 }, // 2.62 billion
+        { year: 2018, count: 2.7 },  // 2.7 billion
+        { year: 2019, count: 2.78 }, // 2.78 billion
+        { year: 2020, count: 2.87 }, // 2.87 billion
+        { year: 2022, count: 2.95 }, // 2.95 billion
+        { year: 2025, count: 3.0 }   // Estimated 3.0 billion
+    ];
+
+
+    function createBarChart(svgId, data, xLabel, yLabel, color, title, annotation) {
+        const svg = d3.select(svgId)
+            .append("svg")
+            .attr("width", plotWidth + margin.left + margin.right)
+            .attr("height", plotHeight + margin.top + margin.bottom)
+            .append("g")
+            .attr("transform", `translate(${margin.left},${margin.top})`);
+    
+        // Add title
+        svg.append("text")
+            .attr("x", plotWidth / 2)
+            .attr("y", -25)
+            .attr("text-anchor", "middle")
+            .style("font-size", "16px")
+            .style("font-weight", "bold")
+            .text(title);
+    
+        const x = d3.scaleBand().domain(data.map(d => d.year)).range([0, plotWidth]).padding(0.3);
+        const y = d3.scaleLinear().domain([0, d3.max(data, d => d[yLabel])]).range([plotHeight, 0]);
+    
+        svg.append("g")
+            .attr("transform", `translate(0,${plotHeight})`)
+            .call(d3.axisBottom(x).tickFormat(d3.format("d")));
+    
+        svg.append("g").call(d3.axisLeft(y));
+    
+        const bars = svg.selectAll(".bar")
+            .data(data)
+            .enter().append("rect")
+            .attr("class", "bar")
+            .attr("x", d => x(d.year))
+            .attr("width", x.bandwidth())
+            .attr("y", d => y(0))
+            .attr("height", 0)
+            .attr("fill", color);
+    
+        // Add labels
+        const labels = svg.selectAll(".label")
+            .data(data)
+            .enter().append("text")
+            .attr("class", "label")
+            .attr("x", d => x(d.year) + x.bandwidth() / 2)
+            .attr("y", d => y(0))
+            .attr("text-anchor", "middle")
+            .style("font-size", "12px")
+            .style("fill", color)
+            .text(d => `${d[yLabel]}B`);
+    
+        // Add annotation
+        svg.append("text")
+            .attr("x", plotWidth - 10)
+            .attr("y", plotHeight + 30)  // Adjusted Y-position
+            .attr("text-anchor", "end")
+            .style("font-size", "10px")
+            .style("fill", "gray")
+            .text(annotation)
+            .raise();
+    
+        // Create the animation function
+        function animateBars() {
+            bars.transition()
+                .duration(1500)
+                .delay((d, i) => i * 300)
+                .attr("y", d => y(d[yLabel]))
+                .attr("height", d => plotHeight - y(d[yLabel]));
+    
+            labels.transition()
+                .duration(1500)
+                .delay((d, i) => i * 300)
+                .attr("y", d => y(d[yLabel]) - 5);
+        }
+    
+        // Observe when the element enters the viewport
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateBars(); // Trigger animation
+                    observer.unobserve(entry.target); // Stop observing once animation is triggered
+                }
+            });
+        });
+    
+        observer.observe(document.querySelector(svgId + " svg"));
+    }
+
+    function createLineChart(svgId, data, xLabel, yLabel, color, title, annotation) {
+        const svg = d3.select(svgId)
+            .append("svg")
+            .attr("width", plotWidth + margin.left + margin.right)
+            .attr("height", plotHeight + margin.top + margin.bottom)
+            .append("g")
+            .attr("transform", `translate(${margin.left},${margin.top})`);
+    
+        // Add title
+        svg.append("text")
+            .attr("x", plotWidth / 2)
+            .attr("y", -25)
+            .attr("text-anchor", "middle")
+            .style("font-size", "16px")
+            .style("font-weight", "bold")
+            .text(title);
+    
+        const x = d3.scaleLinear().domain(d3.extent(data, d => d.year)).range([0, plotWidth]);
+        const y = d3.scaleLinear().domain([1.7, 3.0]).range([plotHeight, 0]); // Adjusted Y-axis
+    
+        svg.append("g")
+            .attr("transform", `translate(0,${plotHeight})`)
+            .call(d3.axisBottom(x).tickFormat(d3.format("d")));
+    
+        svg.append("g").call(d3.axisLeft(y));
+    
+        const line = d3.line()
+            .x(d => x(d.year))
+            .y(d => y(d[yLabel]));
+    
+        // Create path for the line
+        const path = svg.append("path")
+            .datum(data)
+            .attr("fill", "none")
+            .attr("stroke", color)
+            .attr("stroke-width", 2)
+            .attr("d", line)
+            .attr("stroke-dasharray", function() {
+                return this.getTotalLength();
+            })
+            .attr("stroke-dashoffset", function() {
+                return this.getTotalLength();
+            });
+    
+        // Add annotation
+        svg.append("text")
+            .attr("x", plotWidth - 10)
+            .attr("y", plotHeight + 30)
+            .attr("text-anchor", "end")
+            .style("font-size", "10px")
+            .style("fill", "gray")
+            .text(annotation)
+            .raise();
+    
+        // Animation function
+        function animateLine() {
+            path.transition()
+                .duration(4000)
+                .attr("stroke-dashoffset", 0);
+        }
+    
+        // Use IntersectionObserver to trigger animation on scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateLine(); // Trigger animation
+                    observer.unobserve(entry.target); // Stop observing once animation is triggered
+                }
+            });
+        });
+    
+        observer.observe(document.querySelector(svgId + " svg"));
+    }
+
+    function createMultiLineChart(svgId, data, color1, color2, color3, title, annotation, legendOffsetX = 10) {
+        const svg = d3.select(svgId)
+            .append("svg")
+            .attr("width", plotWidth + margin.left + margin.right)
+            .attr("height", plotHeight + margin.top + margin.bottom)
+            .append("g")
+            .attr("transform", `translate(${margin.left},${margin.top})`);
+    
+        // Add title
+        svg.append("text")
+            .attr("x", plotWidth / 2)
+            .attr("y", -25)
+            .attr("text-anchor", "middle")
+            .style("font-size", "16px")
+            .style("font-weight", "bold")
+            .text(title);
+    
+        const x = d3.scaleLinear().domain(d3.extent(data, d => d.year)).range([0, plotWidth]);
+        const y = d3.scaleLinear().domain([0, d3.max(data, d => Math.max(d.alzheimers, d.parkinsons, d.other)) / 1e6]).range([plotHeight, 0]);
+    
+        // Reduce the number of ticks on the x-axis, showing only every 5th year
+        svg.append("g")
+            .attr("transform", `translate(0,${plotHeight})`)
+            .call(d3.axisBottom(x).tickFormat(d3.format("d")).ticks(Math.ceil(data.length / 5)));
+    
+        svg.append("g")
+            .call(d3.axisLeft(y).tickFormat(d => `${d}M`)); // Format y-axis labels in millions
+    
+        // Line generators
+        const line1 = d3.line()
+            .x(d => x(d.year))
+            .y(d => y(d.alzheimers / 1e6));  // Convert to millions
+        
+        const line2 = d3.line()
+            .x(d => x(d.year))
+            .y(d => y(d.parkinsons / 1e6));  // Convert to millions
+    
+        const line3 = d3.line()
+            .x(d => x(d.year))
+            .y(d => y(d.other / 1e6));  // Convert to millions
+    
+        // Create paths for lines
+        const path1 = svg.append("path")
+            .datum(data)
+            .attr("fill", "none")
+            .attr("stroke", color1)
+            .attr("stroke-width", 2)
+            .attr("d", line1)
+            .attr("stroke-dasharray", function() {
+                return this.getTotalLength();
+            })
+            .attr("stroke-dashoffset", function() {
+                return this.getTotalLength();
+            });
+    
+        const path2 = svg.append("path")
+            .datum(data)
+            .attr("fill", "none")
+            .attr("stroke", color2)
+            .attr("stroke-width", 2)
+            .attr("d", line2)
+            .attr("stroke-dasharray", function() {
+                return this.getTotalLength();
+            })
+            .attr("stroke-dashoffset", function() {
+                return this.getTotalLength();
+            });
+    
+        const path3 = svg.append("path")
+            .datum(data)
+            .attr("fill", "none")
+            .attr("stroke", color3)
+            .attr("stroke-width", 2)
+            .attr("d", line3)
+            .attr("stroke-dasharray", function() {
+                return this.getTotalLength();
+            })
+            .attr("stroke-dashoffset", function() {
+                return this.getTotalLength();
+            });
+    
+        // Animation function
+        function animateLines() {
+            path1.transition()
+                .duration(4000)
+                .attr("stroke-dashoffset", 0);
+    
+            path2.transition()
+                .duration(4000)
+                .attr("stroke-dashoffset", 0);
+    
+            path3.transition()
+                .duration(4000)
+                .attr("stroke-dashoffset", 0);
+        }
+    
+        // Add legend in the top-left corner with adjustable x-offset
+        const legendData = [
+            { label: "Alzheimer's", color: color1 },
+            { label: "Parkinson's", color: color2 },
+            { label: "Other brain disorders", color: color3 }
+        ];
+    
+        const legend = svg.selectAll(".legend")
+            .data(legendData)
+            .enter().append("g")
+            .attr("class", "legend")
+            .attr("transform", (d, i) => `translate(${legendOffsetX},${i * 20})`); // Adjust legend position with legendOffsetX
+    
+        legend.append("rect")
+            .attr("x", 0)  // Align to the left
+            .attr("width", 18)
+            .attr("height", 18)
+            .style("fill", d => d.color);
+    
+        legend.append("text")
+            .attr("x", 24)  // Align text to the right of the rectangles
+            .attr("y", 9)
+            .attr("dy", ".35em")
+            .style("text-anchor", "start")  // Align text to the left
+            .style("font-size", "14px")
+            .text(d => d.label);
+    
+        // Add annotation
+        svg.append("text")
+            .attr("x", plotWidth - 10)
+            .attr("y", plotHeight + 30)
+            .attr("text-anchor", "end")
+            .style("font-size", "10px")
+            .style("fill", "gray")
+            .text(annotation)
+            .raise();
+    
+        // Use IntersectionObserver to trigger animation on scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateLines(); // Trigger animation
+                    observer.unobserve(entry.target); // Stop observing once animation is triggered
+                }
+            });
+        });
+    
+        observer.observe(document.querySelector(svgId + " svg"));
+    }
+        
+    // Create the bar charts side by side
+    d3.select("#chartsContainer")
+        .append("div")
+        .attr("id", "costPlot")
+        .attr("class", "chart")
+        .style("width", plotWidth + margin.left + margin.right + "px");
+    
+    d3.select("#chartsContainer")
+        .append("div")
+        .attr("id", "disorderPlot")
+        .attr("class", "chart")
+        .style("width", plotWidth + margin.left + margin.right + "px");
+    
+    d3.select("#chartsContainer")
+        .append("div")
+        .attr("id", "usBrainDisorderPlot")
+        .attr("class", "chart")
+        .style("width", plotWidth + margin.left + margin.right + "px");
+    
+    createBarChart("#costPlot", data1, 'year', 'cost', "black",
+                    "Average Cost to Develop a New Drug",
+                    "Projected cost of $2.7B by 2025");
+    
+    createLineChart("#disorderPlot", data2, 'year', 'count', "black",
+                    "Increase in Brain Disorders Worldwide",
+                    "Projected increase to 3B by 2025");
+
+    d3.json("us_brain2.json").then(data => {
+        createMultiLineChart("#usBrainDisorderPlot", data, "#d3d3d3", "grey", "black", "Trends in Brain Disorders in the US", "");
+    });
+
+</script>
+
+<script>
+ // Assuming the original image size
+const originalWidth = 1600;  // Original image width
+const originalHeight = 1200; // Original image height
+
+// Displayed image size in your HTML/CSS
+const displayedWidth = 350;  // Displayed image width
+const displayedHeight = 350; // Displayed image height
+
+// Calculate scale factors
+const scaleFactorX = displayedWidth / originalWidth;
+const scaleFactorY = displayedHeight / originalHeight;
+
+// Initialize visualization
+const svg_tv = d3.select("#intensity-layer-yellow");
+const slider = d3.selectAll(".intensity-yellow").attr("value", 0);
+const tooltip = d3.select("#umap-tooltip");
+
+// Load intensity data and scale the coordinates
+d3.json("threshold visualization/yellow/intensity_data.json").then(data => {
+    // Apply the scaling
+    const scaledData = data.map(d => ({
+        x: d.x * scaleFactorX,
+        y: d.y * scaleFactorY,
+        intensity: d.intensity
+    }));
+
+    // Create bounding boxes on the image
+    const rects = svg_tv.selectAll("rect")
+        .data(scaledData)
+        .enter().append("rect")
+        .attr("x", d => d.x - 10)  // Adjust for bounding box positioning
+        .attr("y", d => d.y - 10)  // Adjust for bounding box positioning
+        .attr("width", 20)  // Size of the bounding box
+        .attr("height", 20)  // Size of the bounding box
+        .attr("fill", "none")
+        .attr("stroke", "lightgrey")
+        .attr("stroke-width", 1.5)
+        .attr("class", "neuron-bbox")
+        .on("mouseover", (event, d) => {
+            d3.select(event.currentTarget).attr("stroke-width", 3);
+            tooltip.style("display", "inline-block")
+                   .style("left", `${event.pageX + 10}px`)
+                   .style("top", `${event.pageY + 10}px`)
+                   .html(`x: ${d.x}, y: ${d.y}<br>Intensity: ${d.intensity.toFixed(2)}`);
+        })
+        .on("mouseout", () => {
+            d3.select(event.currentTarget).attr("stroke-width", 1.5);
+            tooltip.style("display", "none");
+        });
+
+    // Update bounding boxes based on slider input
+    slider.on("input", function() {
+        const threshold = parseFloat(this.value);
+        rects.attr("visibility", d => d.intensity >= threshold ? "visible" : "hidden");
+    });
+});
+</script>
+
+<script>
+     // Assuming the original image size
+ const originalWidth2 = 1600;  // Original image width
+ const originalHeight2 = 1200; // Original image height
+ 
+ // Displayed image size in your HTML/CSS
+ const displayedWidth2 = 350;  // Displayed image width
+ const displayedHeight2 = 350; // Displayed image height
+ 
+ // Calculate scale factors
+ const scaleFactorX2 = displayedWidth2 / originalWidth2;
+ const scaleFactorY2 = displayedHeight2 / originalHeight2;
+ 
+ // Initialize visualization
+ const svg_tv2 = d3.select("#intensity-layer-green");
+ const slider2 = d3.selectAll(".intensity-green").attr("value", 0);
+ const tooltip2 = d3.select("#umap-tooltip");
+ 
+ // Load intensity data and scale the coordinates
+ d3.json("threshold visualization/green/intensity_data.json").then(data => {
+     // Apply the scaling
+     const scaledData2 = data.map(d => ({
+         x: d.x * scaleFactorX2,
+         y: d.y * scaleFactorY2,
+         intensity: d.intensity
+     }));
+ 
+     // Create bounding boxes on the image
+     const rects2 = svg_tv2.selectAll("rect")
+         .data(scaledData2)
+         .enter().append("rect")
+         .attr("x", d => d.x - 10)  // Adjust for bounding box positioning
+         .attr("y", d => d.y - 10)  // Adjust for bounding box positioning
+         .attr("width", 20)  // Size of the bounding box
+         .attr("height", 20)  // Size of the bounding box
+         .attr("fill", "none")
+         .attr("stroke", "lightgrey")
+         .attr("stroke-width", 1.5)
+         .attr("class", "neuron-bbox")
+         .on("mouseover", (event, d) => {
+             d3.select(event.currentTarget).attr("stroke-width", 3);
+             tooltip2.style("display", "inline-block")
+                    .style("left", `${event.pageX + 10}px`)
+                    .style("top", `${event.pageY + 10}px`)
+                    .html(`x: ${d.x}, y: ${d.y}<br>Intensity: ${d.intensity.toFixed(2)}`);
+         })
+         .on("mouseout", () => {
+             d3.select(event.currentTarget).attr("stroke-width", 1.5);
+             tooltip2.style("display", "none");
+         });
+ 
+     // Update bounding boxes based on slider input
+     slider2.on("input", function() {
+         const threshold = parseFloat(this.value);
+         rects2.attr("visibility", d => d.intensity >= threshold ? "visible" : "hidden");
+     });
+ });
+</script>
+
+<script>
+    // Assuming the original image size
+const originalWidth3 = 1600;  // Original image width
+const originalHeight3 = 1200; // Original image height
+
+// Displayed image size in your HTML/CSS
+const displayedWidth3 = 350;  // Displayed image width
+const displayedHeight3 = 350; // Displayed image height
+
+// Calculate scale factors
+const scaleFactorX3 = displayedWidth2 / originalWidth2;
+const scaleFactorY3 = displayedHeight2 / originalHeight2;
+
+// Initialize visualization
+const svg_tv3 = d3.select("#intensity-layer-red");
+const slider3 = d3.selectAll(".intensity-red").attr("value", 0);
+const tooltip3 = d3.select("#umap-tooltip");
+
+// Load intensity data and scale the coordinates
+d3.json("threshold visualization/red/intensity_data.json").then(data => {
+    // Apply the scaling
+    const scaledData3 = data.map(d => ({
+        x: d.x * scaleFactorX2,
+        y: d.y * scaleFactorY2,
+        intensity: d.intensity
+    }));
+
+    // Create bounding boxes on the image
+    const rects3 = svg_tv3.selectAll("rect")
+        .data(scaledData3)
+        .enter().append("rect")
+        .attr("x", d => d.x - 10)  // Adjust for bounding box positioning
+        .attr("y", d => d.y - 10)  // Adjust for bounding box positioning
+        .attr("width", 20)  // Size of the bounding box
+        .attr("height", 20)  // Size of the bounding box
+        .attr("fill", "none")
+        .attr("stroke", "lightgrey")
+        .attr("stroke-width", 1.5)
+        .attr("class", "neuron-bbox")
+        .on("mouseover", (event, d) => {
+            d3.select(event.currentTarget).attr("stroke-width", 3);
+            tooltip3.style("display", "inline-block")
+                   .style("left", `${event.pageX + 10}px`)
+                   .style("top", `${event.pageY + 10}px`)
+                   .html(`x: ${d.x}, y: ${d.y}<br>Intensity: ${d.intensity.toFixed(2)}`);
+        })
+        .on("mouseout", () => {
+            d3.select(event.currentTarget).attr("stroke-width", 1.5);
+            tooltip3.style("display", "none");
+        });
+
+    // Update bounding boxes based on slider input
+    slider3.on("input", function() {
+        const threshold = parseFloat(this.value);
+        rects3.attr("visibility", d => d.intensity >= threshold ? "visible" : "hidden");
+    });
+});
+</script>
+
+<script>
+    const videoGif = document.getElementById('videoGif');
+    const videoTracking = document.getElementById('video11');
+
+    // Variable to adjust playback speed of the first video
+    const gifSpeedFactor = 5.0; // Adjust this value to speed up or slow down the first video
+    const trackingSpeedFactor = 3.87; // Adjust this value to speed up or slow down the second video
+
+    // Set playback speed for each video independently
+    videoGif.playbackRate = gifSpeedFactor;
+    videoTracking.playbackRate = trackingSpeedFactor;
+
+    videoGif.addEventListener('loadedmetadata', function() {
+        // Log the actual durations after speed adjustment for reference
+        console.log('Adjusted GIF Video Duration:', videoGif.duration / gifSpeedFactor);
+    });
+
+    videoTracking.addEventListener('loadedmetadata', function() {
+        // Log the actual durations after speed adjustment for reference
+        console.log('Adjusted Tracking Video Duration:', videoTracking.duration / trackingSpeedFactor);
+    });
+</script>
+
+<script>
+    // Set the initial state of mask layers to be visible
+    const maskLayers = ['yellow', 'green', 'red'].map(color => document.getElementById(`mask-layer-${color}`));
+    maskLayers.forEach(maskLayer => {
+        maskLayer.style.opacity = '0.5';  // Show masks with 50% opacity by default
+    });
+
+    document.getElementById('toggle-mask').addEventListener('click', function() {
+        const button = document.getElementById('toggle-mask');
+        let masksVisible = false;
+
+        maskLayers.forEach(maskLayer => {
+            if (maskLayer.style.opacity === '0') {
+                maskLayer.style.opacity = '0.5';  // Show masks with 50% opacity
+                masksVisible = true;
+            } else {
+                maskLayer.style.opacity = '0';  // Hide masks
+            }
+        });
+
+        // Update button color based on mask visibility
+        if (masksVisible) {
+            button.style.backgroundColor = 'black';
+        } else {
+            button.style.backgroundColor = 'grey';
+        }
+    });
+</script>
+
+<script>
     // Set up the SVG
-    const svg = d3.select("#customPlot");
-    const width = +svg.attr("width");
-    const height = +svg.attr("height");
+    const svg13 = d3.select("#customPlot2");
+    const width13 = +svg13.attr("width");
+    const height13 = +svg13.attr("height");
 
     // Define the start, middle, and end points for the lines
-    const startPoints = [
+    const startPoints13 = [
         {x: 50, y: 100},
         {x: 50, y: 200},
         {x: 50, y: 300}
     ];
 
-    const endPoints = [
-        {x: 750, y: 100},
-        {x: 750, y: 200},
-        {x: 750, y: 300}
+    const endPoints13 = [
+        {x: 450, y: 100},
+        {x: 450, y: 200},
+        {x: 450, y: 300}
     ];
 
-    const midX = width / 2;
-    const midY = height / 2;
+    const end2Points13 = [
+        {x: 550, y: 100},
+        {x: 550, y: 200},
+        {x: 550, y: 300}
+    ];
 
-    // Define subtle colors representing 2D, 3D, and video
-    const lineColors = ["#B3CDE3", "#CCEBC5", "#DECBE4"]; // Light Blue for 2D, Light Green for 3D, Light Purple for Video
+    const convergencePoint13 = {x: width13 - 50, y: height13 / 2}; // Convergence point for the lines to the right
+
+    const midX13 = 250;  // Bring the logo more to the left
+    const midY13 = height13 / 2;
+
+    // Define subtle colors representing 2D, 3D, and video, then change to darker after TibbTech
+    const initialLineColors13 = ["#D3D3D3", "#A9A9A9", "#808080"]; // Light Grey shades for before passing TibbTech
+    const finalLineColors13 = ["#000000", "#000000", "#000000"]; // Black after passing TibbTech
 
     // Draw the lines without animating yet
-    const paths = startPoints.map((start, i) => {
-        return svg.append("path")
+    const paths13 = startPoints13.map((start, i) => {
+        const path13 = svg13.append("path")
             .attr("d", `M${start.x},${start.y} 
-                        Q${midX},${midY - 50 + i * 50} 
-                        ${midX},${midY - 50 + i * 50}
-                        T${endPoints[i].x},${endPoints[i].y}`)
-            .attr("stroke", lineColors[i])
-            .attr("stroke-width", 3)
+                        Q${midX13},${midY13 - 50 + i * 50} 
+                        ${midX13},${midY13 - 50 + i * 50}
+                        T${endPoints13[i].x - 50},${endPoints13[i].y}`)
+            .attr("stroke", initialLineColors13[i])
+            .attr("stroke-width", 2)
             .attr("fill", "none");
+
+        const totalLength13 = path13.node().getTotalLength();
+
+        path13
+            .attr("stroke-dasharray", totalLength13 + " " + totalLength13)
+            .attr("stroke-dashoffset", totalLength13); // Hide the path initially
+
+        return path13;
     });
 
     // Function to trigger the animation
-    function animateLines() {
-        paths.forEach((path, i) => {
-            const totalLength = path.node().getTotalLength();
-
-            path
-                .attr("stroke-dasharray", totalLength + " " + totalLength)
-                .attr("stroke-dashoffset", totalLength)
-                .transition()
-                .duration(2000)
+    function animateLines13() {
+        paths13.forEach((path, i) => {
+            const totalLength13 = path.node().getTotalLength();
+    
+            // Create final path and immediately lower it
+            const finalPath = svg13.append("path")
+                .attr("d", `M${endPoints13[i].x},${endPoints13[i].y} 
+                            Q${end2Points13[i].x},${end2Points13[i].y} 
+                            ${convergencePoint13.x},${convergencePoint13.y}`)
+                .attr("stroke", finalLineColors13[i])
+                .attr("stroke-width", 2)
+                .attr("fill", "none")
+                .attr("stroke-dasharray", function() {
+                    const totalLengthFinal = this.getTotalLength();
+                    return totalLengthFinal + " " + totalLengthFinal;
+                })
+                .attr("stroke-dashoffset", function() {
+                    return this.getTotalLength();
+                });
+    
+            // Lower the final path so it's behind the GIFs from the start
+            finalPath.lower();
+    
+            // Animate the main path
+            path.transition()
+                .duration(1000)
                 .ease(d3.easeLinear)
-                .attr("stroke-dashoffset", totalLength / 2) // Animate to mid-point (the image)
+                .attr("stroke-dashoffset", totalLength13 / 2) // Animate to mid-point (TibbTech)
                 .on("end", () => {
-                    // Pause effect inside the image
-                    path.transition()
-                        .duration(1000)
-                        .ease(d3.easeElastic)
-                        .attr("stroke-width", 5)
+                    // Pop effect on the logo
+                    d3.select("#logo13")
                         .transition()
-                        .duration(1000)
+                        .duration(300)
+                        .attr("width", 150)   // Increase size
+                        .attr("height", 150)
+                        .attr("x", midX13 - 75) // Adjust position to keep centered
+                        .attr("y", midY13 - 75)
+                        .transition()
+                        .duration(300)
+                        .attr("width", 130)   // Return to original size
+                        .attr("height", 130)
+                        .attr("x", midX13 - 65) // Reset position
+                        .attr("y", midY13 - 65);
+    
+                    // Continue the animation after the logo effect
+                    path.transition()
+                        .duration(300)
                         .ease(d3.easeLinear)
-                        .attr("stroke-width", 3)
-                        .attr("stroke-dashoffset", 0); // Continue to the end point
+                        .attr("stroke", finalLineColors13[i]) // Change to black after passing TibbTech
+                        .attr("stroke-width", 4)
+                        .transition()
+                        .duration(800)
+                        .ease(d3.easeLinear)
+                        .attr("stroke-width", 2)
+                        .attr("stroke-dashoffset", 0)
+                        .on("end", () => {
+                            // Show and play GIF after line reaches the end
+                            d3.select(`#outputGif13${i}`)
+                                .attr("xlink:href", outputImages13[i]) // Set the GIF source
+                                .attr("opacity", 1) // Make GIF visible
+                                .transition()
+                                .duration(50)
+                                .ease(d3.easeLinear)
+                                .on("end", () => {
+                                    // Animate the final path
+                                    finalPath.transition()
+                                        .duration(1000)
+                                        .ease(d3.easeLinear)
+                                        .attr("stroke-dashoffset", 0);
+                                });
+                        });
                 });
         });
     }
 
-    // Function to check if the section is in the viewport
-    function isInViewport() {
-        const rect = svg.node().getBoundingClientRect();
-        return rect.top >= 0 && rect.bottom <= (window.innerHeight || document.documentElement.clientHeight);
-    }
-
-    // Event listener to trigger animation on scroll
+    // Trigger the animation based on the viewport
     window.addEventListener('scroll', function() {
-        if (isInViewport()) {
-            animateLines();
+        if (isInViewport13()) {
+            animateLines13();
             // Remove event listener after animation is triggered
             window.removeEventListener('scroll', arguments.callee);
         }
     });
 
-    // Add images and small text labels
-    const inputImages = ["figs/2d.svg", "figs/3d.svg", "figs/video.svg"]; // Updated for 2D, 3D, Video
-    const outputImages = ["figs/output2d.svg", "figs/output3d.svg", "figs/outputvideo.svg"]; // Updated for 2D, 3D, Video outputs
-    const inputLabels = ["2D Analysis", "3D Analysis", "Video Analysis"];
-    const outputLabels = ["2D Output", "3D Output", "Video Output"];
+    // Function to check if the section is in the viewport
+    function isInViewport13() {
+        const rect13 = svg13.node().getBoundingClientRect();
+        return rect13.top >= 0 && rect13.bottom <= (window.innerHeight || document.documentElement.clientHeight);
+    }
 
-    startPoints.forEach((start, i) => {
+    // Add images and small text labels
+    const inputImages13 = ["1.png", "2.png", "3.png"]; // Use PNGs for inputs
+    const outputImages13 = ["threshold visualization/yellow/876.png", "figs/3axis.svg", "4dgiffy.gif"]; // Use GIFs for outputs
+    const inputLabels13 = ["2D Data", "3D Data", "Video Data"];
+    const outputLabels13 = ["2D Output", "3D Output", "Video Output"];
+
+    startPoints13.forEach((start, i) => {
         // Input images and text
-        svg.append("image")
-            .attr("xlink:href", inputImages[i])
+        svg13.append("image")
+            .attr("xlink:href", inputImages13[i])
             .attr("x", start.x - 40)
             .attr("y", start.y - 20)
-            .attr("width", 30)
-            .attr("height", 30);
+            .attr("width", 50) // Increased size
+            .attr("height", 50); // Increased size
 
-        svg.append("text")
-            .attr("x", start.x - 40)
+        svg13.append("text")
+            .attr("x", start.x - 15)
             .attr("y", start.y - 25)
             .attr("text-anchor", "middle")
-            .attr("font-size", "12px")
+            .attr("font-size", "14px")
             .attr("fill", "#000")
-            .text(inputLabels[i]);
+            .text(inputLabels13[i]);
 
-        // Output images and text
-        svg.append("image")
-            .attr("xlink:href", outputImages[i])
-            .attr("x", endPoints[i].x + 10)
-            .attr("y", endPoints[i].y - 20)
-            .attr("width", 30)
-            .attr("height", 30);
+        // Output GIF placeholders and text
+        svg13.append("image")
+        .attr("id", `outputGif13${i}`)
+        .attr("xlink:href", outputImages13[i]) // Set the first image source
+        .attr("x", endPoints13[i].x - 50)
+        .attr("y", endPoints13[i].y - 20)
+        .attr("width", 80) // Increased size
+        .attr("height", 50) // Increased size
+        .style("z-index", "10");
+    
+        if (i === 0) {
+            svg13.append("image")
+                .attr("id", `overlayGif13${i}`)
+                .attr("xlink:href", "threshold visualization/yellow/876_mask.png") // Replace with the second image source
+                .attr("x", endPoints13[i].x - 50)
+                .attr("y", endPoints13[i].y - 20)
+                .attr("width", 80) // Same size as the first image
+                .attr("height", 50) // Same size as the first image
+                .attr("opacity", 0.5) // Set the opacity of the second image
+                .style("z-index", "11"); // Ensure this image is on top of the first one
+        }
 
-        svg.append("text")
-            .attr("x", endPoints[i].x + 25)
-            .attr("y", endPoints[i].y - 25)
+        svg13.append("text")
+            .attr("x", endPoints13[i].x-10)
+            .attr("y", endPoints13[i].y - 25)
             .attr("text-anchor", "middle")
-            .attr("font-size", "12px")
+            .attr("font-size", "14px")
             .attr("fill", "#000")
-            .text(outputLabels[i]);
+            .text(outputLabels13[i]);
     });
 
-    // Add the image in the middle
-    svg.append("image")
-    .attr("xlink:href", "figs/logo.svg")
-    .attr("x", midX - 75)  // Adjusted for new size
-    .attr("y", midY - 75)  // Adjusted for new size
-    .attr("width", 150)    // Increased width
-    .attr("height", 150)   // Increased height
-    .raise(); // Ensure the image is on top
+    // Add the image in the middle with pop effect on intersection
+    svg13.append("image")
+        .attr("id", "logo13")
+        .attr("xlink:href", "figs/logo6.svg")
+        .attr("x", midX13 - 65)  // Adjusted for new size
+        .attr("y", midY13 - 65)  // Adjusted for new size
+        .attr("width", 130)    // Original width
+        .attr("height", 130)   // Original height
+        .raise(); // Ensure the image is on top
+
+    // Add text labels at the convergence point
+    svg13.append("text")
+    .attr("x", convergencePoint13.x)
+    .attr("y", convergencePoint13.y - 60)  // Adjust the y-position for the first line
+    .attr("text-anchor", "middle")
+    .attr("font-size", "15px")
+    .attr("fill", "#000")
+    .raise()
+    .html('<tspan x="' + (convergencePoint13.x) + '" dy="0">Multimodal</tspan><tspan x="' + (convergencePoint13.x) + '" dy="15">Insights</tspan>')
+    .raise();  // Raise the z-index of the text above the lines
+
+    svg13.append("image")
+        .attr("id", "chord")
+        .attr("xlink:href", "chordplot.svg")
+        .attr("x", convergencePoint13.x-30)  // Adjusted for new size
+        .attr("y", convergencePoint13.y-35)  // Adjusted for new size
+        .attr("width", 70)    // Original width
+        .attr("height", 70)   // Original height
+        .raise(); // Ensure the image is on top
+    
 </script>
+
+<script>
+    document.querySelectorAll('.synced-video').forEach(video => {
+        video.playbackRate = 4.0;  // Set all videos to play at double speed
+    });
+</script>
+
+<script>
+    // Load the data from JSON file
+    d3.json("synthetic_chord_data_biology_grounded_with_keypoints.json").then(function(data) {
+
+        const width = 800; // Increase width to give more space
+        const height = 800; // Increase height to give more space
+        const innerRadius = Math.min(width, height) * 0.3;
+        const outerRadius = innerRadius * 1.1; // Increase outer radius slightly
+
+        const svg = d3.select("#chordPlot")
+            .attr("width", width)
+            .attr("height", height)
+            .append("g")
+            .attr("transform", `translate(${width / 2},${height / 2})`); // Center the plot
+
+        // Create tooltip
+        const tooltip = d3.select("#tooltip-chord");
+
+        // Convert data to matrix form for chord diagram
+        const categories = [...new Set(data.map(d => d.source).concat(data.map(d => d.target)))];
+        const index = {};
+        categories.forEach((cat, i) => index[cat] = i);
+        
+        const matrix = Array(categories.length).fill(0).map(() => Array(categories.length).fill(0));
+        data.forEach(d => {
+            matrix[index[d.source]][index[d.target]] = d.value;
+        });
+
+        // Create the chord layout
+        const chord = d3.chord()
+            .padAngle(0.05)
+            .sortSubgroups(d3.descending)
+            .sortChords(d3.descending)(matrix);
+
+        const arc = d3.arc()
+            .innerRadius(innerRadius)
+            .outerRadius(outerRadius);
+
+        const ribbon = d3.ribbon()
+            .radius(innerRadius);
+
+        const color = d3.scaleOrdinal(d3.schemeCategory10)
+            .domain(d3.range(categories.length));
+
+        // Add group arcs with labels
+        svg.append("g")
+            .selectAll("g")
+            .data(chord.groups)
+            .enter().append("g")
+            .append("path")
+            .style("fill", d => color(d.index))
+            .style("stroke", d => d3.rgb(color(d.index)).darker())
+            .attr("d", arc);
+
+        svg.append("g")
+            .selectAll("text")
+            .data(chord.groups)
+            .enter().append("text")
+            .each(function(d) { d.angle = (d.startAngle + d.endAngle) / 2; })
+            .attr("dy", ".35em")
+            .attr("transform", function(d) {
+                return `rotate(${d.angle * 180 / Math.PI - 90}) translate(${outerRadius + 20})` + // Increase translate distance
+                    (d.angle > Math.PI ? "rotate(180)" : "");
+            })
+            .attr("text-anchor", function(d) { return d.angle > Math.PI ? "end" : null; })
+            .style("font-size", "13px") // Reduce font size
+            .text((d, i) => categories[d.index]);
+
+        // Add the ribbons (chords)
+        const ribbons = svg.append("g")
+            .attr("fill-opacity", 0.67)
+            .selectAll("path")
+            .data(chord)
+            .enter().append("path")
+            .attr("d", ribbon)
+            .style("fill", d => color(d.target.index))
+            .style("stroke", d => d3.rgb(color(d.target.index)).darker())
+            .on("mouseover", function(event, d) {
+                // Dim all other ribbons
+                ribbons.style("opacity", 0.1);
+                d3.select(this).style("opacity", 1); // Highlight the hovered ribbon
+
+                // Show tooltip
+                tooltip.transition().duration(200).style("opacity", .9);
+                tooltip.html(`
+                    <strong>Source:</strong> ${categories[d.source.index]}<br>
+                    <strong>Target:</strong> ${categories[d.target.index]}<br>
+                    <strong>Value:</strong> ${d.source.value}<br>
+                `)
+                .style("left", (event.pageX + 5) + "px")
+                .style("top", (event.pageY - 28) + "px");
+            })
+            .on("mouseout", function(d) {
+                // Reset all ribbons to full opacity
+                ribbons.style("opacity", 0.67);
+
+                // Hide tooltip
+                tooltip.transition().duration(500).style("opacity", 0);
+            });
+
+    });
+</script>
+
+<script>
+    // Data from the table
+    const data76 = [
+        { model: "VoxelMorph", score: 0.4729 },
+        { model: "TransMorph", score: 0.5495 },
+        { model: "Fourier Net", score: 0.5991 },
+        { model: "SynthMorph", score: 0.6605 },
+        { model: "Ours", score: 0.7771 },
+    ];
+
+    const margin76 = { top: 20, right: 20, bottom: 30, left: 40 };
+    const width76 = 700 - margin76.left - margin76.right;
+    const height76 = 300 - margin76.top - margin76.bottom;
+
+    const svg76 = d3.select("#PerformancePlot")
+        .attr("width", width76 + margin76.left + margin76.right)
+        .attr("height", height76 + margin76.top + margin76.bottom)
+        .append("g")
+        .attr("transform", `translate(${margin76.left},${margin76.top})`);
+
+    const x76 = d3.scaleBand()
+        .domain(data76.map(d => d.model))
+        .range([0, width76])
+        .padding(0.1);
+
+    const y76 = d3.scaleLinear()
+        .domain([0.45, 0.8])
+        .range([height76, 0]);
+
+    svg76.append("text")
+        .attr("x", width76 / 2)
+        .attr("y", -margin76.top / 4)  // Position the title above the plot
+        .attr("text-anchor", "middle")
+        .attr("font-size", "15px")
+        .attr("fill", "black")
+        .text("Performance Comparison with Competing Models");
+
+    svg76.append("g")
+        .attr("class", "x-axis76")
+        .attr("transform", `translate(0,${height76})`)
+        .call(d3.axisBottom(x76))
+        .style("font-size", "15px");
+
+    svg76.append("g")
+        .attr("class", "y-axis76")
+        .call(d3.axisLeft(y76))
+        .style("font-size", "6px");
+
+    const bars76 = svg76.selectAll(".bar76")
+        .data(data76)
+        .enter()
+        .append("rect")
+        .attr("class", "bar76")
+        .attr("x", d => x76(d.model))
+        .attr("y", height76)
+        .attr("width", x76.bandwidth())
+        .attr("height", 0)
+        .attr("fill", d => d.model.includes("Ours") ? "black" : "grey"); // Highlight "Ours" model in black
+
+    // Function to trigger the animation
+    function animateBars76() {
+        bars76.transition()
+            .duration(1500)
+            .attr("y", d => y76(d.score))
+            .attr("height", d => height76 - y76(d.score))
+            .on("end", function() {
+                const ours = data76.find(d => d.model === "Ours").score;
+    
+                const text = svg76.append("text")
+                    .attr("x", x76("Ours") + x76.bandwidth() / 2)
+                    .attr("y", y76(ours) - 10)
+                    .attr("text-anchor", "middle")
+                    .attr("font-size", "15px")
+                    .attr("fill", "charcoal")
+                    .attr("opacity", 0)  // Start with text invisible
+                    .text("17% higher");
+    
+                // Animate the appearance of the text
+                text.transition()
+                    .duration(1000)
+                    .attr("opacity", 1);  // Fade in the text
+            });
+    }
+
+    // Add y-axis label
+    svg76.append("text")
+        .attr("x", -height76 / 2)
+        .attr("y", -margin76.left - 30)
+        .attr("transform", "rotate(-90)")
+        .attr("text-anchor", "middle")
+        .attr("font-size", "14px")
+        .attr("fill", "black")
+        .text("DICE Score");
+
+    // Function to check if the section is in the viewport
+    function isInViewport76() {
+        const rect76 = document.getElementById('PerformancePlot').getBoundingClientRect();
+        return rect76.top >= 0 && rect76.bottom <= (window.innerHeight || document.documentElement.clientHeight);
+    }
+
+    // Trigger the animation based on the viewport
+    window.addEventListener('scroll', function() {
+        if (isInViewport76()) {
+            animateBars76();
+            // Remove event listener after animation is triggered
+            window.removeEventListener('scroll', arguments.callee);
+        }
+    });
+</script>
+
+
 
 </body>
 </html>
