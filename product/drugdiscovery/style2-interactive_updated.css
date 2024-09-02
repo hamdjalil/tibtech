@@ -126,7 +126,7 @@ body {
 h3, h5 {
     text-align: left; /* Left-align all headings */
     font-family: 'Inter Tight', serif;
-    font-size: 2em;
+    font-size: 1.8em;
     font-weight: 200;
 }
 
@@ -1669,3 +1669,4 @@ video {
         margin-top: -60px;
     }
 }
+
