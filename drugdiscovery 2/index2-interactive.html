@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0">
     <title>Drug Discovery</title>
     <link rel="stylesheet" href="style2-interactive.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Lora:wght@400;700&display=swap" rel="stylesheet">
@@ -31,6 +31,50 @@
       gtag('config', 'G-38PESE35X3');
     </script>
 
+    <!-- NEW CODE -->
+    <script>
+        function resizeCharts(){
+            var body = document.getElementsByTagName('body')[0];
+
+            if(body.clientWidth > 768)
+                return;
+
+            // CustomPlot
+            var cp = document.getElementById('customPlot');
+            cp.style.scale = (body.clientWidth / (cp.clientWidth+80))
+            cp.style.transformOrigin = 'top left'
+            cp.style.marginBottom = `-${(1-cp.style.scale-0.05)*100}%`;
+
+            // CustomPlot2
+            var cp2 = document.getElementById('customPlot2');
+            cp2.style.scale = (body.clientWidth / (cp2.clientWidth+80))
+            cp2.style.transformOrigin = 'top left'
+            cp2.style.marginBottom = `-${(1-cp2.style.scale+0.15)*100}%`;
+
+            // model-performance-chart
+            var mpc = document.getElementById('model-performance-chart');
+            mpc.style.scale = (body.clientWidth / (mpc.clientWidth+80))
+            mpc.style.transformOrigin = 'top left'
+            mpc.style.marginBottom = `-${(1-mpc.style.scale-0.05)*100}%`;
+
+            // chartsContainer
+            var cc = document.getElementById('chartsContainer');
+            cc.style.scale = (body.clientWidth / (cc.clientWidth+80))
+            cc.style.transformOrigin = 'top left'
+            cc.style.marginBottom = `-${(1-cc.style.scale-0.05)*100}%`;
+
+            // PerformancePlot
+            var pp = document.querySelector('#PerformancePlot g');
+            pp.style.scale = (body.clientWidth / (880))
+            pp.style.transformOrigin = 'top left'
+            document.getElementById('PerformancePlot').style.marginBottom = `-${(1-pp.style.scale-0.05-0.1)*100}%`;
+        }
+
+        window.addEventListener('resize',resizeCharts);
+        window.addEventListener('load',resizeCharts);
+    </script>
+    <!--  -->
+
 </head>
 <body style="background-color: rgb(255, 255, 255); padding-top: 100px;">
     <a href="https://tibbtech.com/" target="_blank">
@@ -57,20 +101,20 @@
     <main class="main-container">
         <section class="hero">
             <div class="hero-content">
+                <div class="info-container">
                 <div class="hero-title">Multimodal End-to-End Drug Discovery</div>
                 <div class="hero-sub-title">
                     Introducing our cutting-edge multimodal drug discovery framework, seamlessly integrating 2D, 3D, and 4D analyses to accelerate the discovery of novel therapies, from molecular insights to behavioral outcomes.                </div>
-                <div class="info-container">
-                    <p class="author-info">By Qazi & Asim</p>
-                    <p class="author-info">June 18, 2024</p>
+                    <!-- <p class="author-info">By Qazi & Asim</p> -->
+                    <!-- <p class="author-info">June 18, 2024</p> -->
                 </div>
             
-            <div class="slider">
-                <video controls autoplay muted loop id="DD_video" class="video">
-                    <source src="dd2.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-            </div>
+                <div class="slider">
+                    <video controls autoplay muted loop id="DD_video" class="video">
+                        <source src="2.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
         </div>
         </section>
         
@@ -80,17 +124,17 @@
                     <div class="post-text-2">
                         <p>
                             In the complex and high-stakes world of drug discovery, the journey from initial concept to a viable 
-                            therapeutic solution is fraught with challenges. Traditional methods, often relying on isolated 
+                            therapeutic solution is fraught with challenges. Traditional methods which often rely on isolated 
                             techniques and siloed processes, struggle to keep pace with the growing demand for speed, accuracy, 
-                            and innovation. This is particularly critical in the realm of brain disorders, where the urgency to 
+                            and innovation. This is particularly critical in brain disorders, where the urgency to 
                             discover effective therapies is heightened by the growing prevalence of conditions like Alzheimer’s, 
-                            Parkinson’s, and epilepsy. According to the Tufts Center for the Study of Drug Development, the 
-                            average cost of bringing a new drug to market now exceeds <b>$2.6 billion</b>, and the process can take over 
+                            Parkinson’s, and epilepsy. 
+                            According to the <a style="color: black;" href="https://csdd.tufts.edu/" target="_blank"> Tufts Center for the Study of Drug Development</a>, the 
+                            average cost of bringing a new drug to market now exceeds <a style="color: black;" href="https://www.scientificamerican.com/article/cost-to-develop-new-pharmaceutical-drug-now-exceeds-2-5b/#:~:text=A%20new%20report%20published%20by,the%20center%20made%20in%202003." target="_blank"><b>$2.6 billion</b></a>, and the process can take over 
                             a decade to complete. Yet, despite these enormous investments, the success rate remains alarmingly 
-                            low. A report from the Biotechnology Innovation Organization (BIO) reveals that only <b>1 in 8</b> drug 
+                            low. A report from the <a style="color: black;" href="https://www.bio.org/ia-reports" target="_blank">Biotechnology Innovation Organization (BIO)</a> reveals that only <a style="color: black;" href="https://go.bio.org/rs/490-EHZ-999/images/ClinicalDevelopmentSuccessRates2011_2020.pdf" target="_blank"><b>1 in 13</b></a> drug 
                             candidates that enter clinical trials will ultimately receive FDA approval. This fragmented approach 
-                            slows down the pipeline and limits the potential for breakthroughs, leaving wet labs overburdened and 
-                            under-supported. 
+                            slows down drug development, limiting breakthroughs and overburdening wet labs.
                         </p>
                     </div>
                 </div>
@@ -108,6 +152,15 @@
                         </div>
                         <br>
                     <p>
+                        <p>The urgency to address brain disorders is staggering based on the statistics from the 
+                            <a style="color: black;" href="https://www.healthdata.org/research-analysis/gbd" target="_blank">
+                            Global Burden of Disease (GBD)</a> study. In the U.S., Alzheimer’s affects around <b>4.9 million</b> 
+                            people, with numbers projected to triple by 2050. Parkinson’s disease, the fastest-growing 
+                            neurological disorder, currently impacts nearly <b>1.3 million</b> Americans, a figure expected to rise to 
+                            by 2030. These conditions emphasize the critical need for innovative drug discovery 
+                            solutions.</p> 
+                    </p>
+                    <p>
                         In an era where precision, efficiency, and innovation are paramount, particularly in 
                         the fight against brain disorders, the industry desperately needs a unified, multimodal end-to-end 
                         solution that seamlessly integrates diverse methodologies. Such a solution would allow researchers to 
@@ -115,9 +168,7 @@
                         develop new drugs, and reducing both the time and cost associated with bringing life-saving therapies 
                         to market.
                     </p>
-        
-                <br><br>
-                
+                        
                 <article>
                     <div class="post-container">
                         <div class = "post-text-2">
@@ -126,27 +177,23 @@
                     <br>
 
                     <p>
-                        Our platform acts as a comprehensive co-pilot in drug discovery, integrating advanced tools and 
-                        methodologies across 2D, 3D, and 4D domains to support and enhance your wet lab capabilities. This 
-                        integration allows for a seamless transition between different phases of drug development, ensuring 
-                        that every piece of data is accurately captured and analyzed.
+                        Our platform integrates advanced tools across 2D, 3D, and 
+                        4D data modalities, enhancing your wet lab’s capabilities with precision and efficiency. This integration allows for 
+                        a seamless transition between different phases of drug development, ensuring that every piece of data is 
+                        accurately captured and analyzed.
                     </p>
 
-                    <br>
-                    <br>
                     <h3>
                         2D Data
                     </h3>
                     <img src="1.png" style="width:200px" class="inline-image">
 
                     <p>
-                        Our platform excels in high-resolution neuron detection and segmentation, 
-                        using advanced AI that requires minimal training data. This ensures precise identification of 
-                        neuronal structures and supports the study of specific neuronal subtypes, enhancing research on 
-                        distinct neuron populations.
+                        Our platform excels in neuron detection and segmentation, utilizing advanced AI that requires minimal 
+                        training data. This capability ensures precise identification of neuronal structures and facilitates 
+                        the study of specific neuronal subtypes, advancing research on distinct neuron populations. 
                     </p>
                     
-
                     <img src="figs/neuron_detection.svg" alt="Grazing Image" class="inline-image">
                     
 
@@ -175,11 +222,10 @@
                     </div> -->
 
                     <p>
-                        Our platform efficiently processes brains labeled with a variety of genetic markers and staining 
-                        techniques, enabling detailed analysis of neuronal populations and gene expression patterns across 
-                        different experimental setups.
+                        An integrated intensity control allows you to fine-tune neuron segmentation, ensuring precise 
+                        detection and quantification of neurons labeled with specific enhancers while filtering out non-target 
+                        signals for accurate analysis.
                     </p>
-
                     <div class="image-section">
                         <div class="image-container">
                             <h3>GAD1 (red), CamkIIa-Cre/Ai14 (green)</h3>
@@ -208,13 +254,8 @@
                     <br> 
                     
 
-                    <!-- <div class="gif-container">
-                        <img src="giffy.gif" class="gif" alt="Slider Animation">
-                        <img src="3dgiffy.gif" class="gif" alt="Slider Animation">
-                    </div> -->
-
                     <p>
-                        Utilize the intensity slider to fine-tune neuron segmentation by selecting the optimal intensity 
+                        Our platform also provides an intensity control to fine-tune neuron segmentation by selecting the optimal intensity 
                         threshold, enabling precise detection and quantification of individual neurons labeled with specific 
                         enhancers, while filtering out non-target signals for accurate analysis.
                     </p>
@@ -223,9 +264,9 @@
                         <button id="toggle-mask" class="reg-button" style="z-index: 10; margin-top: 5px; margin-bottom: -5px; background-color: black;">Turn Segmentation Masks On/Off</button>
                     </div>  
 
-                    <div id="container-wrapper">
+                    <div id="container-wrapper"  style="display: flex; flex-wrap: nowrap;">
                         <!-- Top Image with Bounding Boxes -->
-                        <div id="visualization-container">
+                        <div id="visualization-container" style="width: 350px">
                             <svg id="top-image" width="350" height="350" style="position: relative; margin-left: -15px; margin-right: -30px;">
                                 <image xlink:href="figs/brain_sect_23.png" width="350" height="350"></image>
                                 
@@ -241,42 +282,42 @@
                         
                             <div id="top-image-caption" style="text-align: center; margin-top: -15px; margin-left: 13.2px">
                                 <p style="text-align: center; font-size: 14px; font-family: 'Montserrat', sans-serif; font-weight: bold; color: #333;">
-                                    Brain Section with Multiple Genetic Markers
+                                    Brain Section with Multiple  Biomarkers
                                 </p>
                             </div>
                         </div>
                     
                         <!-- Yellow Channel -->
-                        <div id="visualization-container" style="margin: 0 5px; position: relative;">
+                        <div id="visualization-container" style="margin: 0 5px; position: relative;width: 350px">
                             <img id="image-layer-yellow" src="threshold visualization/yellow/876.png" alt="Image" style="border: 5px solid orange; width: 350px; height: 350px;">
                             <img id="mask-layer-yellow" src="threshold visualization/yellow/876_mask.png" style="border: 5px solid orange; width: 350px; height: 350px; opacity: 0; position: absolute; top: 0; left: 0; z-index: 0;">
                             <svg id="intensity-layer-yellow" style="width: 350px; height: 350px;"></svg>
                             <div id="slider-container">
                                 <input type="range" class="intensity-yellow" id="intensity-slider" min="0" max="1" step="0.01" value="0">
                             </div>
-                            <div id="slider-instruction" style="font-size: 17px;">Genetic Marker 1 Intensity Threshold Slider</div>
+                            <div id="slider-instruction" style="font-size: 17px;"> Biomarker 1 Intensity Control</div>
                         </div>
                     
                         <!-- Green Channel -->
-                        <div id="visualization-container" style="margin: 0 5px; position: relative;">
+                        <div id="visualization-container" style="margin: 0 5px; position: relative;width: 350px">
                             <img id="image-layer-green" src="threshold visualization/green/281.png" alt="Image" style="border: 5px solid green; width: 350px; height: 350px;">
                             <img id="mask-layer-green" src="threshold visualization/green/281_mask.png" style="border: 5px solid green; width: 350px; height: 350px; opacity: 0; position: absolute; top: 0; left: 0; z-index: 0;">
                             <svg id="intensity-layer-green" style="width: 350px; height: 350px;"></svg>
                             <div id="slider-container">
                                 <input type="range" class="intensity-green" id="intensity-slider" min="0" max="1" step="0.01" value="0">
                             </div>
-                            <div id="slider-instruction" style="font-size: 17px;">Genetic Marker 2 Intensity Threshold Slider</div>
+                            <div id="slider-instruction" style="font-size: 17px;"> Biomarker 2 Intensity Control</div>
                         </div>
                     
                         <!-- Red Channel -->
-                        <div id="visualization-container" style="margin: 0 5px; position: relative;">
+                        <div id="visualization-container" style="margin: 0 5px; position: relative;width: 350px">
                             <img id="image-layer-red" src="threshold visualization/red/1924.png" alt="Image" style="border: 5px solid red; width: 350px; height: 350px;">
                             <img id="mask-layer-red" src="threshold visualization/red/1924_mask.png" style="border: 5px solid red; width: 350px; height: 350px; opacity: 0; position: absolute; top: 0; left: 0; z-index: 0;">
                             <svg id="intensity-layer-red" style="width: 350px; height: 350px;"></svg>
                             <div id="slider-container">
                                 <input type="range" class="intensity-red" id="intensity-slider" min="0" max="1" step="0.01" value="0">
                             </div>
-                            <div id="slider-instruction" style="font-size: 17px;">Genetic Marker 3 Intensity Threshold Slider</div>
+                            <div id="slider-instruction" style="font-size: 17px;"> Biomarker 3 Intensity Control</div>
                         </div>
                     </div>                    
                                       
@@ -308,13 +349,18 @@
                     <br>
                     <p>
                         Accurately registered brain images ensure that each anatomical region is mapped consistently across 
-                        different imaging modalities, enabling precise localization and comparative analysis. This meticulous 
+                        different imaging modalities, enabling precise localization and comparative analysis. This
                         alignment facilitates a deeper understanding of complex brain structures and their functions, providing 
                         a robust foundation for neuroanatomical studies.
                     </p>
                     <img src="figs/brain_registration.svg" alt="Grazing Image" class="inline-image">
                                         
-                    <br>
+                    <p>
+                        Precise 3D brain registration ensures accurate alignment of brain regions, enabling consistent neuron 
+                        quantification within specific areas. This technology allows for reliable counting and analysis of 
+                        neurons in specific brain regions offering clearer insights into brain 
+                        function and neurological conditions.
+                    </p>
                     <div class="button-container">
                         <button id="toggleOverlay" class="reg-button">Register Brains</button>
                     </div>
@@ -328,6 +374,13 @@
                             <img id="overlayImage2" src="figs/reg/reg_2.svg" alt="Overlay Image 2" style="opacity: 0;">
                         </div>
                     </div>
+
+                    <p>
+                        Our model outperforms leading competing models by a significant margin. Utilizing
+                        advanced algorithms, we ensure that each anatomical region is mapped with precision, enabling 
+                        researchers to gain deeper insights into the brain’s architecture. This precision is crucial for accurate 
+                        neuroanatomical studies, driving innovation and discovery in neuroscience.
+                    </p>
 
                     <!-- <div style="display: flex; flex-wrap: wrap; justify-content: space-between;">
                         <video class="synced-video" width="48%" autoplay loop muted playsinline style="margin-bottom:10px; border-radius:15px;">
@@ -347,54 +400,82 @@
                             Your browser does not support the video tag.
                         </video>
                     </div> -->
-
-                    
                                         
-                    <div style="position: relative; z-index: 1000; background-color: white; display: flex; justify-content: center; align-items: center; height: 100vh;">                        <svg id="PerformancePlot" width="800" height="500"></svg>
+                    <div style="position: relative; z-index: 1000; background-color: white; display: flex; justify-content: center; align-items: center;">                        
+                        <svg id="PerformancePlot" width="800" height="500"></svg>
                     </div>
 
                     <br>
                     <br>
                     <h3>
                         4D Data
-                    </h3>
+                    </h3>                
+
                     <img src="3.png" style="width:200px" class="inline-image">
 
-                    <!-- <img src="4dgiffy.gif" class="gif" alt="Slider Animation"> -->
-
-                    <div id="container11">
-                        <video id="videoGif" width="55.5%" autoplay loop muted playsinline style="margin-top:8px; object-fit: cover; object-position: center; border-radius: 15px; z-index: 2;">
-                            <source src="4d gif.mp4" type="video/mp4">
+                    <p>
+                        Our platform offers precise 4D tracking of animal behavior, allowing for the detailed analysis of 
+                        movement and task performance over time. By capturing and tracking key points, researchers 
+                        can accurately assess how animals interact with their environment and respond to specific tasks. This 
+                        level of monitoring is crucial for understanding behavioral changes, providing essential insights for 
+                        evaluating the efficacy of interventions or treatments.
+                    </p>
+                
+                    <div class="button-container">
+                        <button id="toggleButton-tracking" class="reg-button" style="z-index: 10; margin-top: 5px; margin-bottom: -5px; background-color: grey;">Start keypoint tracking </button>
+                    </div>
+                    <div id="container-tracking">
+                        <video id="videoBase-tracking" autoplay muted loop style="border-radius: 20px;">
+                            <source src="mouse-vid2.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
-                        <div style="width: 55%; margin-left: -40px; z-index: 0;">
-                            <video id="video11" width="130%" autoplay loop muted playsinline style="object-fit: cover; object-position: center;">
-                                <source src="kp_tracking_blog2.mp4" type="video/mp4">
-                                Your browser does not support the video tag.
-                            </video>
-                        </div>
-                    </div>
-                
-
+                        <video id="videoOverlay-tracking" autoplay muted loop style="border-radius: 20px;">
+                            <source src="4d video.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div> 
                     <br>
-                    
-                    
-                        </div>
-                    </div>
-                </article>
 
+                    <p>
+                        Our platform quantifies the animal’s performance in various tasks, 
+                        such as motor coordination, spatial memory, and more. This enables researchers and clinicians 
+                        to monitor progress, identify areas of improvement, and make data-driven decisions in their studies. 
+                        Whether you’re focusing on rehabilitation, learning processes, or cognitive assessments, our tool 
+                        delivers the high-resolution tracking needed to quantify and understand behavioral outcomes.
+                    </p>
+
+                    </div>
+                </div>
+            </article>
+
+                <br>
             <article class="post">
                 <div class="post-container">
                     
                     <div class="post-text-2">
                         <h3>Multimodal Insights</h3>
-                        <svg id="customPlot2" width="800" height="400"></svg>
+                        <p>
+                            Our platform seamlessly integrates 2D, 3D, and 4D data, offering a holistic view of biological 
+                            processes. This multimodal approach correlates structural, functional, and dynamic data, driving 
+                            groundbreaking discoveries.
+                        </p>
+
+                        <svg id="customPlot2" width="800" height="400"></svg> 
                         
                         <div id="plots-container" style="display: flex;">
                             <div id="tooltip-chord" class="tooltip-chord" style="opacity: 0;"></div>
                             <svg id="chordPlot"></svg>
                         </div>
 
+                        <p>
+
+                            The chord plot illustrates the intricate relationships between biomarkers, brain regions, and 
+                            behavioral tasks. By mapping these connections, our platform helps you identify how specific  
+                            biomarkers are expressed in brain regions and, consequently, how their expression correlated to
+                            performance in behavioral task. This is one example of how multimodal insights can help you uncover 
+                            the mechanisms behind these outcomes, providing a deeper understanding of brain function and behavior.
+
+                        </p>
                         
                     </div>
                 </div>
@@ -406,25 +487,16 @@
                     <div class = "post-text-2">
                         <h3>Our platform is more than just a tool</h3>
                         <p>
-                            Our platform a game-changer in the world of drug discovery. 
-                            By providing a comprehensive suite of advanced technologies that span 2D, 3D, and 4D domains, we 
-                            empower researchers to conduct their work with unprecedented precision and efficiency. From neuron 
-                            segmentation and brain registration to behavioral analytics, our platform ensures that every aspect 
-                            of drug discovery is supported by the most advanced tools available.
+                            Our platform redefines drug discovery by bridging spatial genomics with advanced neuroimaging and 
+                            behavioral analytics. We offer seamless integration from neuron segmentation to mapping gene 
+                            expression in brain region, enabling precise correlation between molecular data 
+                            and brain function.
 
                             <br><br>
-                            With our platform as your co-pilot, you can navigate the complexities of drug discovery with 
-                            confidence, knowing that you have the tools you need to drive innovation and deliver groundbreaking 
-                            therapies to patients faster than ever before. The integration of multi-omic analyses, combined with 
-                            cutting-edge imaging and behavioral assessment tools, positions our platform as an essential asset in 
-                            the pursuit of medical breakthroughs. As we continue to refine and expand our capabilities, we remain 
-                            committed to supporting researchers in their quest to improve human health and transform the future of 
-                            medicine.
-                            
-                            <br><br>
-                            This expanded content emphasizes the technical depth of the platform, highlighting its capabilities in 
-                            a way that resonates with professionals in the field. It also underscores the platform’s role in 
-                            integrating various aspects of drug discovery, from molecular to behavioral analysis. 
+                            This holistic approach accelerates the discovery of targeted therapies by directly linking genetic 
+                            insights to behavioral outcomes. With cutting-edge tools across 2D, 3D, and 4D data modalities, our platform 
+                            is indispensable for driving innovation, ensuring that every step from molecular analysis to 
+                            behavioral assessment is executed with precision and efficiency.
                        </p>  
                     </div>
                 </div>
@@ -1085,7 +1157,7 @@ const paths = startPoints.map((start, i) => {
         .attr("d", `M${start.x},${start.y} 
                     Q${midX},${midY - 50 + i * 50} 
                     ${midX},${midY - 50 + i * 50}
-                    T${endPoints[i].x - 50},${endPoints[i].y}`)
+                    T${endPoints[i].x - 30},${endPoints[i].y}`)
         .attr("stroke", initialLineColors[i])
         .attr("stroke-width", 3)
         .attr("fill", "none");
@@ -1140,6 +1212,20 @@ function animateLines() {
                         d3.select(`#outputGif${i}`)
                             .attr("opacity", 1) // Make GIF visible
                             .attr("xlink:href", outputImages[i]); // Set the GIF source
+
+                        if (i == 0){
+                                svg.append("image")
+                                .attr("id", `overlayGif${0}`)
+                                .attr("xlink:href", "threshold visualization/yellow/876_mask.png") // Replace with the second image source
+                                .attr("x", endPoints[i].x - 60)
+                                .attr("y", endPoints[i].y - 20)
+                                .attr("width", 120) // Same size as the first image
+                                .attr("height", 60) // Same size as the first image
+                                .attr("opacity", 0.5) // Set the opacity of the second image
+                                .style("z-index", "11"); // Ensure this image is on top of the first one
+                        
+                            
+                        }
                     });
             });
     });
@@ -1162,7 +1248,7 @@ window.addEventListener('scroll', function() {
 
 // Add images and small text labels
 const inputImages = ["1.png", "2.png", "3.png"]; // Use PNGs for inputs
-const outputImages = ["giffy.gif", "3dgiffy.gif", "4dgiffy.gif"]; // Use GIFs for outputs
+const outputImages = ["threshold visualization/yellow/876.png", "figs/smol br.png", "4dgiffy.gif"]; // Use GIFs for outputs
 const inputLabels = ["2D Data", "3D Data", "Video Data"];
 const outputLabels = ["2D Output", "3D Output", "Video Output"];
 
@@ -1184,14 +1270,29 @@ startPoints.forEach((start, i) => {
         .text(inputLabels[i]);
 
     // Output GIF placeholders and text
-    svg.append("image")
+
+    if (i === 1){
+
+        svg.append("image")
         .attr("id", `outputGif${i}`)
         .attr("xlink:href", "") // Initially no source to keep it hidden
-        .attr("x", endPoints[i].x - 50)
-        .attr("y", endPoints[i].y - 20)
-        .attr("width", 100) // Increased size
+        .attr("x", endPoints[i].x - 68)
+        .attr("y", endPoints[i].y - 30)
+        .attr("width", 120) // Increased size
         .attr("height", 60) // Increased size
         .attr("opacity", 0); // Hide the GIF initially
+    }
+
+    else  {
+        svg.append("image")
+        .attr("id", `outputGif${i}`)
+        .attr("xlink:href", "") // Initially no source to keep it hidden
+        .attr("x", endPoints[i].x - 60)
+        .attr("y", endPoints[i].y - 20)
+        .attr("width", 120) // Increased size
+        .attr("height", 60) // Increased size
+        .attr("opacity", 0); // Hide the GIF initially
+    }
 
     svg.append("text")
         .attr("x", endPoints[i].x)
@@ -1205,7 +1306,7 @@ startPoints.forEach((start, i) => {
 // Add the image in the middle with pop effect on intersection
 svg.append("image")
     .attr("id", "logo")
-    .attr("xlink:href", "figs/logo6.svg")
+    .attr("xlink:href", "figs/logo7.svg")
     .attr("x", midX - 75)  // Adjusted for new size
     .attr("y", midY - 75)  // Adjusted for new size
     .attr("width", 150)    // Original width
@@ -1579,7 +1680,7 @@ svg.append("image")
                     "Projected increase to 3B by 2025");
 
     d3.json("us_brain2.json").then(data => {
-        createMultiLineChart("#usBrainDisorderPlot", data, "#d3d3d3", "grey", "black", "Trends in Brain Disorders in the US", "");
+        createMultiLineChart("#usBrainDisorderPlot", data, "#d3d3d3", "grey", "black", "Increase in Brain Disorders in the US", "");
     });
 
 </script>
@@ -1761,7 +1862,7 @@ d3.json("threshold visualization/red/intensity_data.json").then(data => {
 });
 </script>
 
-<script>
+<!-- <script>
     const videoGif = document.getElementById('videoGif');
     const videoTracking = document.getElementById('video11');
 
@@ -1782,7 +1883,7 @@ d3.json("threshold visualization/red/intensity_data.json").then(data => {
         // Log the actual durations after speed adjustment for reference
         console.log('Adjusted Tracking Video Duration:', videoTracking.duration / trackingSpeedFactor);
     });
-</script>
+</script> -->
 
 <script>
     // Set the initial state of mask layers to be visible
@@ -1960,7 +2061,7 @@ d3.json("threshold visualization/red/intensity_data.json").then(data => {
 
     // Add images and small text labels
     const inputImages13 = ["1.png", "2.png", "3.png"]; // Use PNGs for inputs
-    const outputImages13 = ["threshold visualization/yellow/876.png", "figs/3axis.svg", "4dgiffy.gif"]; // Use GIFs for outputs
+    const outputImages13 = ["threshold visualization/yellow/876.png", "figs/smol br.png", "4dgiffy.gif"]; // Use GIFs for outputs
     const inputLabels13 = ["2D Data", "3D Data", "Video Data"];
     const outputLabels13 = ["2D Output", "3D Output", "Video Output"];
 
@@ -1981,15 +2082,25 @@ d3.json("threshold visualization/red/intensity_data.json").then(data => {
             .attr("fill", "#000")
             .text(inputLabels13[i]);
 
-        // Output GIF placeholders and text
-        svg13.append("image")
-        .attr("id", `outputGif13${i}`)
-        .attr("xlink:href", outputImages13[i]) // Set the first image source
-        .attr("x", endPoints13[i].x - 50)
-        .attr("y", endPoints13[i].y - 20)
-        .attr("width", 80) // Increased size
-        .attr("height", 50) // Increased size
-        .style("z-index", "10");
+            if (i === 1) {
+                svg13.append("image")
+                    .attr("id", `outputGif13${i}`)
+                    .attr("xlink:href", outputImages13[i]) // Set the image source
+                    .attr("x", endPoints13[i].x - 55) // Position to the left
+                    .attr("y", endPoints13[i].y - 50)
+                    .attr("width", 120) // Adjust width
+                    .attr("height", 110); // Adjust height
+
+            } else {
+                svg13.append("image")
+                    .attr("id", `outputGif13${i}`)
+                    .attr("xlink:href", outputImages13[i]) // Set the image source
+                    .attr("x", endPoints13[i].x - 50)
+                    .attr("y", (i === 2) ? endPoints13[i].y - 25 : endPoints13[i].y - 20)
+                    .attr("width", 100) // Increased size
+                    .attr("height", 70) // Increased size
+                    .style("z-index", "10");
+            }
     
         if (i === 0) {
             svg13.append("image")
@@ -1997,14 +2108,14 @@ d3.json("threshold visualization/red/intensity_data.json").then(data => {
                 .attr("xlink:href", "threshold visualization/yellow/876_mask.png") // Replace with the second image source
                 .attr("x", endPoints13[i].x - 50)
                 .attr("y", endPoints13[i].y - 20)
-                .attr("width", 80) // Same size as the first image
-                .attr("height", 50) // Same size as the first image
+                .attr("width", 100) // Same size as the first image
+                .attr("height", 70) // Same size as the first image
                 .attr("opacity", 0.5) // Set the opacity of the second image
                 .style("z-index", "11"); // Ensure this image is on top of the first one
         }
 
         svg13.append("text")
-            .attr("x", endPoints13[i].x-10)
+            .attr("x", endPoints13[i].x)
             .attr("y", endPoints13[i].y - 25)
             .attr("text-anchor", "middle")
             .attr("font-size", "14px")
@@ -2015,7 +2126,7 @@ d3.json("threshold visualization/red/intensity_data.json").then(data => {
     // Add the image in the middle with pop effect on intersection
     svg13.append("image")
         .attr("id", "logo13")
-        .attr("xlink:href", "figs/logo6.svg")
+        .attr("xlink:href", "figs/logo7.svg")
         .attr("x", midX13 - 65)  // Adjusted for new size
         .attr("y", midY13 - 65)  // Adjusted for new size
         .attr("width", 130)    // Original width
@@ -2035,7 +2146,7 @@ d3.json("threshold visualization/red/intensity_data.json").then(data => {
 
     svg13.append("image")
         .attr("id", "chord")
-        .attr("xlink:href", "chordplot.svg")
+        .attr("xlink:href", "chordplot.png")
         .attr("x", convergencePoint13.x-30)  // Adjusted for new size
         .attr("y", convergencePoint13.y-35)  // Adjusted for new size
         .attr("width", 70)    // Original width
@@ -2052,24 +2163,52 @@ d3.json("threshold visualization/red/intensity_data.json").then(data => {
 
 <script>
     // Load the data from JSON file
-    d3.json("synthetic_chord_data_biology_grounded_with_keypoints.json").then(function(data) {
-
-        const width = 800; // Increase width to give more space
-        const height = 800; // Increase height to give more space
-        const innerRadius = Math.min(width, height) * 0.3;
-        const outerRadius = innerRadius * 1.1; // Increase outer radius slightly
+    d3.json("synthetic_chord_data_mouse_neuroscience_v8.json").then(function(data) {
+        const width = 850; 
+        const height = 750; 
+        const innerRadius = Math.min(width, 700) * 0.3;
+        const outerRadius = innerRadius * 1.2; 
 
         const svg = d3.select("#chordPlot")
             .attr("width", width)
             .attr("height", height)
             .append("g")
-            .attr("transform", `translate(${width / 2},${height / 2})`); // Center the plot
+            .attr("transform", `translate(${width / 2},${height / 2})`); 
 
         // Create tooltip
         const tooltip = d3.select("#tooltip-chord");
 
+        // Categories with "Genetic Marker" changed to "Fluorescent Marker"
+        //const categories = [
+            //" ", " ", " ", " ", " ", " ",  // Spacer between markers and brain regions
+            //"Biomarker A", "Biomarker B", "Biomarker C", 
+            //"Biomarker D", "Biomarker E", "Biomarker F",
+            //" ", " ", " ", " ", " ", " ",  // Spacer between markers and brain regions
+            //"Hippocampus", "Prefrontal Cortex", "Amygdala", "Striatum", "Cerebellum", "Thalamus",
+            //" ", " ", " ", " ", " ", " ",  // Spacer between brain regions and behavioral tasks
+            //"Memory Recall", "Spatial Navigation", "Decision Making", "Attention", "Fear Response", 
+          //  "Motor Coordination", "Motor Learning", "Sensory Processing"
+        //];
+
+        const categories = [
+        " ", " ", " ", " ", " ", " "," ", " ",  // Spacer between markers and brain regions
+        "Biomarker A", "Biomarker B", "Biomarker C", 
+        "Biomarker D", "Biomarker E", "Biomarker F",
+        " ", " ", " ", " ", " ", " ", " ", " ",  // Spacer between markers and brain regions
+        "Hippocampus", "Prefrontal Cortex", "Amygdala", 
+        "Striatum", "Cerebellum", "Thalamus",
+        " ", " ", " ", " ", " ", " ", " ", " ", // Spacer between brain regions and behavioral tasks
+        "Morris Water Maze", 
+        "Fear Conditioning", 
+        "Novel Object Recognition", 
+        "Rotarod Test", 
+        "Elevated Plus Maze", 
+        "Open Field Test", 
+        "Sensory Processing",
+        "T-Maze"
+    ];
+
         // Convert data to matrix form for chord diagram
-        const categories = [...new Set(data.map(d => d.source).concat(data.map(d => d.target)))];
         const index = {};
         categories.forEach((cat, i) => index[cat] = i);
         
@@ -2082,7 +2221,7 @@ d3.json("threshold visualization/red/intensity_data.json").then(data => {
         const chord = d3.chord()
             .padAngle(0.05)
             .sortSubgroups(d3.descending)
-            .sortChords(d3.descending)(matrix);
+            (matrix);
 
         const arc = d3.arc()
             .innerRadius(innerRadius)
@@ -2093,6 +2232,23 @@ d3.json("threshold visualization/red/intensity_data.json").then(data => {
 
         const color = d3.scaleOrdinal(d3.schemeCategory10)
             .domain(d3.range(categories.length));
+
+        const biomarkerColor = d3.scaleSequential(d3.interpolateBlues).domain([0, 5]);
+        const brainRegionColor = d3.scaleSequential(d3.interpolateReds).domain([6, 11]);
+        const taskColor = d3.scaleSequential(d3.interpolateGreens).domain([12, 19]);
+        
+        // Function to assign color based on index
+        function assignColor(index) {
+            if (index >= 0 && index <= 5) {
+                return biomarkerColor(index); // Biomarkers
+            } else if (index >= 8 && index <= 13) {
+                return brainRegionColor(index); // Brain Regions
+            } else if (index >= 16 && index <= 23) {
+                return taskColor(index); // Behavioral Tasks
+            } else {
+                return "#ccc"; // Default color for spacers or unassigned
+            }
+        }
 
         // Add group arcs with labels
         svg.append("g")
@@ -2109,47 +2265,120 @@ d3.json("threshold visualization/red/intensity_data.json").then(data => {
             .data(chord.groups)
             .enter().append("text")
             .each(function(d) { d.angle = (d.startAngle + d.endAngle) / 2; })
-            .attr("dy", ".35em")
+            .attr("dy", ".45em")
             .attr("transform", function(d) {
-                return `rotate(${d.angle * 180 / Math.PI - 90}) translate(${outerRadius + 20})` + // Increase translate distance
+                return `rotate(${d.angle * 180 / Math.PI - 90}) translate(${outerRadius + 5})` + 
                     (d.angle > Math.PI ? "rotate(180)" : "");
             })
             .attr("text-anchor", function(d) { return d.angle > Math.PI ? "end" : null; })
-            .style("font-size", "13px") // Reduce font size
-            .text((d, i) => categories[d.index]);
+            .style("font-size", "15px")
+            .text((d, i) => categories[d.index])
+
+        // Define color scales for each category type
+        const colorBiomarker = d3.scaleOrdinal()
+        .domain(["Biomarker A", "Biomarker B", "Biomarker C", "Biomarker D", "Biomarker E", "Biomarker F"])
+        .range(d3.schemeBlues[7].slice(1));  // Example using shades of blue
+
+        const colorBrainRegion = d3.scaleOrdinal()
+        .domain(["Hippocampus", "Prefrontal Cortex", "Amygdala", "Striatum", "Cerebellum", "Thalamus"])
+        .range(d3.schemeReds[7].slice(1));  // Example using shades of red
+
+        const colorTask = d3.scaleOrdinal()
+        .domain(["Morris Water Maze", "T-Maze", "Fear Conditioning", "Rotarod Test", "Elevated Plus Maze", "Open Field Test", "Novel Object Recognition", "Sensory Processing"])
+        .range(d3.schemeGreens[9].slice(1));  // Example using shades of green
+
+        // Function to assign colors based on category type
+        function assignColor(d) {
+        const category = categories[d.index];
+        if (category.startsWith("Biomarker")) {
+            return colorBiomarker(category);
+        } else if (["Hippocampus", "Prefrontal Cortex", "Amygdala", "Striatum", "Cerebellum", "Thalamus"].includes(category)) {
+            return colorBrainRegion(category);
+        } else {
+            return colorTask(category);
+        }
+        }
+
+        function assignColor2(d) {
+            const category = categories[d.index];
+            if (category.startsWith("Biomarker")) {
+                return colorBrainRegion(category);
+            } else if (["Hippocampus", "Prefrontal Cortex", "Amygdala", "Striatum", "Cerebellum", "Thalamus"].includes(category)) {
+                return colorTask(category);
+            } else {
+                return colorBiomarker(category);
+            }
+            }
 
         // Add the ribbons (chords)
+
+        svg.append("g")
+            .selectAll("g")
+            .data(chord.groups)
+            .enter().append("g")
+            .append("path")
+            .style("fill", d => assignColor2(d))
+            .style("stroke", d => d3.rgb(assignColor2(d)).darker())
+            .attr("d", arc);
+
         const ribbons = svg.append("g")
-            .attr("fill-opacity", 0.67)
-            .selectAll("path")
-            .data(chord)
-            .enter().append("path")
-            .attr("d", ribbon)
-            .style("fill", d => color(d.target.index))
-            .style("stroke", d => d3.rgb(color(d.target.index)).darker())
-            .on("mouseover", function(event, d) {
-                // Dim all other ribbons
-                ribbons.style("opacity", 0.1);
-                d3.select(this).style("opacity", 1); // Highlight the hovered ribbon
+        .attr("fill-opacity", 0.67)
+        .selectAll("path")
+        .data(chord)
+        .enter().append("path")
+        .attr("d", ribbon)
+        .style("fill", d => assignColor(d.target))
+        .style("stroke", d => d3.rgb(assignColor(d.target)).darker())
+        .on("mouseover", function(event, d) {
+            // Dim all ribbons
+            ribbons.style("opacity", 0.1);
 
-                // Show tooltip
-                tooltip.transition().duration(200).style("opacity", .9);
-                tooltip.html(`
-                    <strong>Source:</strong> ${categories[d.source.index]}<br>
-                    <strong>Target:</strong> ${categories[d.target.index]}<br>
-                    <strong>Value:</strong> ${d.source.value}<br>
-                `)
-                .style("left", (event.pageX + 5) + "px")
-                .style("top", (event.pageY - 28) + "px");
-            })
-            .on("mouseout", function(d) {
-                // Reset all ribbons to full opacity
-                ribbons.style("opacity", 0.67);
+            // Highlight only the connected chords
+            ribbons.filter(r => {
+                const isRelated = (r.source.index === d.source.index && r.target.index === d.target.index) ||
+                                (r.source.index === d.target.index || r.target.index === d.target.index) ||
+                                (r.source.index === d.source.index || r.target.index === d.source.index);
+                return isRelated;
+            }).style("opacity", 1);
 
-                // Hide tooltip
-                tooltip.transition().duration(500).style("opacity", 0);
-            });
+            // Show tooltip with updated lingo
+            const source = categories[d.source.index];
+            const target = categories[d.target.index];
+            const value = d.source.value;
 
+            let tooltipContent = '';
+
+            if (source.includes("Biomarker") && (target.includes("Hippocampus") || 
+            target.includes("Striatum") || target.includes("Cerebellum") || 
+            target.includes("Prefrontal Cortex") || target.includes("Amygdala") || target.includes("Thalamus"))) {
+                tooltipContent = `
+                    <strong>${source} is expressed at ${value}% in the ${target}</strong><br>
+                `;
+            } else if (source.includes("Hippocampus") || source.includes("Striatum") || source.includes("Cerebellum") ||
+                    source.includes("Prefrontal Cortex") || source.includes("Amygdala") || source.includes("Thalamus")) {
+                tooltipContent = `
+                    <strong>${value}% increased activity in the ${source} during the ${target} task</strong><br>
+                `;
+            } else if (source.includes("Morris Water Maze") || source.includes("Fear Conditioning") || source.includes("Rotarod Test") ||
+                    source.includes("Elevated Plus Maze") || source.includes("Open Field Test") || 
+                    source.includes("Novel Object Recognition") || source.includes("Sensory Processing") || source.includes("T-Maze")) {
+                tooltipContent = `
+                    <strong>Performance in ${source} improved by ${value}% due to the expression of ${target}</strong><br>
+                `;
+            }
+
+            tooltip.transition().duration(200).style("opacity", .9);
+            tooltip.html(tooltipContent)
+            .style("left", (event.pageX + 5) + "px")
+            .style("top", (event.pageY - 28) + "px");
+        })
+        .on("mouseout", function(d) {
+            // Reset all ribbons to full opacity
+            ribbons.style("opacity", 0.67);
+
+            // Hide tooltip
+            tooltip.transition().duration(500).style("opacity", 0);
+        });
     });
 </script>
 
@@ -2163,7 +2392,7 @@ d3.json("threshold visualization/red/intensity_data.json").then(data => {
         { model: "Ours", score: 0.7771 },
     ];
 
-    const margin76 = { top: 20, right: 20, bottom: 30, left: 40 };
+    const margin76 = { top: 20, right: 20, bottom: 30, left: 100 }; // Adjusted left margin for y-axis labels
     const width76 = 700 - margin76.left - margin76.right;
     const height76 = 300 - margin76.top - margin76.bottom;
 
@@ -2173,14 +2402,14 @@ d3.json("threshold visualization/red/intensity_data.json").then(data => {
         .append("g")
         .attr("transform", `translate(${margin76.left},${margin76.top})`);
 
-    const x76 = d3.scaleBand()
-        .domain(data76.map(d => d.model))
-        .range([0, width76])
-        .padding(0.1);
-
-    const y76 = d3.scaleLinear()
+    const x76 = d3.scaleLinear()
         .domain([0.45, 0.8])
-        .range([height76, 0]);
+        .range([0, width76]);
+
+    const y76 = d3.scaleBand()
+        .domain(data76.map(d => d.model))
+        .range([0, height76])
+        .padding(0.2); // Adjusted padding for thinner bars
 
     svg76.append("text")
         .attr("x", width76 / 2)
@@ -2194,41 +2423,40 @@ d3.json("threshold visualization/red/intensity_data.json").then(data => {
         .attr("class", "x-axis76")
         .attr("transform", `translate(0,${height76})`)
         .call(d3.axisBottom(x76))
-        .style("font-size", "15px");
+        .style("font-size", "10px");
 
     svg76.append("g")
         .attr("class", "y-axis76")
         .call(d3.axisLeft(y76))
-        .style("font-size", "6px");
+        .style("font-size", "12px");
 
     const bars76 = svg76.selectAll(".bar76")
         .data(data76)
         .enter()
         .append("rect")
         .attr("class", "bar76")
-        .attr("x", d => x76(d.model))
-        .attr("y", height76)
-        .attr("width", x76.bandwidth())
-        .attr("height", 0)
+        .attr("y", d => y76(d.model))
+        .attr("x", 0)
+        .attr("height", y76.bandwidth())
+        .attr("width", 0)
         .attr("fill", d => d.model.includes("Ours") ? "black" : "grey"); // Highlight "Ours" model in black
 
     // Function to trigger the animation
     function animateBars76() {
         bars76.transition()
             .duration(1500)
-            .attr("y", d => y76(d.score))
-            .attr("height", d => height76 - y76(d.score))
+            .attr("width", d => x76(d.score))
             .on("end", function() {
                 const ours = data76.find(d => d.model === "Ours").score;
     
                 const text = svg76.append("text")
-                    .attr("x", x76("Ours") + x76.bandwidth() / 2)
-                    .attr("y", y76(ours) - 10)
-                    .attr("text-anchor", "middle")
+                    .attr("x", x76(ours) - 70) // Position the text slightly after the bar
+                    .attr("y", y76("Ours") + y76.bandwidth() - 45) // Center the text vertically within the bar
+                    .attr("text-anchor", "start")
                     .attr("font-size", "15px")
                     .attr("fill", "charcoal")
                     .attr("opacity", 0)  // Start with text invisible
-                    .text("17% higher");
+                    .text("17% better");
     
                 // Animate the appearance of the text
                 text.transition()
@@ -2237,11 +2465,10 @@ d3.json("threshold visualization/red/intensity_data.json").then(data => {
             });
     }
 
-    // Add y-axis label
+    // Add x-axis label
     svg76.append("text")
-        .attr("x", -height76 / 2)
-        .attr("y", -margin76.left - 30)
-        .attr("transform", "rotate(-90)")
+        .attr("x", width76 / 2)
+        .attr("y", height76 + margin76.bottom )
         .attr("text-anchor", "middle")
         .attr("font-size", "14px")
         .attr("fill", "black")
@@ -2263,7 +2490,27 @@ d3.json("threshold visualization/red/intensity_data.json").then(data => {
     });
 </script>
 
+<script>
+    // Existing tracking overlay functionality
+    document.getElementById('toggleButton-tracking').addEventListener('click', function() {
+        const overlayVideo = document.getElementById('videoOverlay-tracking');
+        const toggleButton = document.getElementById('toggleButton-tracking');
+        
+        if (overlayVideo.style.opacity == 0 || overlayVideo.style.opacity === '') {
+            overlayVideo.style.opacity = 1; // Show the overlay video
+            toggleButton.style.backgroundColor = 'black'; // Change button color to black
+            toggleButton.style.color = 'white'; // Optional: change text color to white for contrast
+        } else {
+            // overlayVideo.style.opacity = 0; // Hide the overlay video
+            // toggleButton.style.backgroundColor = 'grey'; // Revert button background color
+            // toggleButton.style.color = ''; // Revert button text color
+        } 
+    });
+</script>
 
+<script>
+    document.getElementById('DD_video').playbackRate = 2.0;
+</script>
 
 </body>
 </html>
