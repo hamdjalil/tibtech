@@ -1351,6 +1351,7 @@ button:hover {
     width: 400px;  /* Match image size */
     height: 400px;
     margin: 0 30px;  /* Add equal margin between the containers */
+    padding-bottom: 450px;
 }
 
 #container-wrapper {
@@ -1373,8 +1374,7 @@ button:hover {
     font-weight: 300;
     color: #333;
     text-align: center;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-bottom: 60px;
     white-space: nowrap;
 }
 
@@ -1400,9 +1400,10 @@ button:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 400px;
+    height: 10px;
     position: relative;
     z-index: 10;
+    margin-top: 200px;
 }
 
 #intensity-slider {

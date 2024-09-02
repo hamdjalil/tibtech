@@ -160,7 +160,7 @@
                     <p>
                         <p>The urgency to address brain disorders is staggering based on the statistics from the 
                             <a style="color: black;" href="https://www.healthdata.org/research-analysis/gbd" target="_blank">
-                            Global Burden of Disease (GBD)</a> study. In the U.S., Alzheimer’s affects around <b>4.9 million</b> 
+                            Global Burden of Disease (GBD)</a> study. In the U.S., Alzheimer’s affects around <b>5 million</b> 
                             people, with numbers projected to triple by 2050. Parkinson’s disease, the fastest-growing 
                             neurological disorder, currently impacts nearly <b>1.3 million</b> Americans, a figure expected to rise to 
                             by 2030. These conditions emphasize the critical need for innovative drug discovery 
@@ -523,31 +523,31 @@
                             </div>
                         </a>
 
-                        <a href="https://www.biorxiv.org/content/biorxiv/early/2024/05/17/2024.05.17.594691.full.pdf" target="_blank">
+                        <a href="https://www.biorxiv.org/content/10.1101/2024.08.24.609505v1.full.pdf" target="_blank">
                             <div class="card">
                                 <div class="card-header">
-                                    <img src="cellseg3d.png" alt="MIT Logo" class="card-logo">
+                                    <img src="segmentanyNeuron.png" alt="MIT Logo" class="card-logo">
                                 </div>
                                 <div class="card-body">
                                     <p class="card-date">2024</p>
-                                    <h3>CellSeg3D: self-supervised 3D cell segmentation for microscopy</h3>
+                                    <h3>Segment AnyNeuron</h3>
                                     <p class="card-participant" style="text-align: left;">
-                                        Cyril Achard, Timokleia Kousi, Markus Frey, Maxime Vidal, Yves Paychere, Colin Hofmann, Asim Iqbal, Sebastien B Hausmann, Stephane Pages, Mackenzie W Mathis
+                                        Taha Razzaq, Ahmed Qazi, Asim Iqbal
                                     </p>
                                 </div>
                             </div>
                         </a>
 
-                        <a href="https://ieeexplore.ieee.org/abstract/document/10222341" target="_blank">
+                        <a href="https://www.biorxiv.org/content/10.1101/2024.08.24.609508v1.full.pdf" target="_blank">
                             <div class="card">
                                 <div class="card-header">
-                                    <img src="3d brain reg.png" alt="MIT Logo" class="card-logo">
+                                    <img src="3d brain disorder.png" alt="MIT Logo" class="card-logo">
                                 </div>
                                 <div class="card-body">
                                     <p class="card-date">2023</p>
-                                    <h3>3D Brain Registration with Intensity Shift Robustness</h3>
+                                    <h3>Multimodal 3D Image Registration for Mapping Brain Disorders</h3>
                                     <p class="card-participant" style="text-align: left;">
-                                        Hassan Mahmood, Asim Iqbal, Syed Mohammed Shamsul Islam, Syed Afaq Ali Shah
+                                        Hassan Mahmood, Syed Mohammed Shamsul Islam, Asim Iqbal
                                     </p>
                                 </div>
                             </div>
@@ -1179,7 +1179,7 @@ function animateLines() {
         const totalLength = path.node().getTotalLength();
 
         path.transition()
-            .duration(2000)
+            .duration(1000)
             .ease(d3.easeLinear)
             .attr("stroke-dashoffset", totalLength / 2) // Animate to mid-point (TibbTech)
             .on("end", () => {
@@ -1205,7 +1205,7 @@ function animateLines() {
                     .attr("stroke", finalLineColors[i]) // Change to black after passing TibbTech
                     .attr("stroke-width", 5)
                     .transition()
-                    .duration(1000)
+                    .duration(800)
                     .ease(d3.easeLinear)
                     .attr("stroke-width", 3)
                     .attr("stroke-dashoffset", 0)
@@ -1252,8 +1252,7 @@ window.addEventListener('scroll', function() {
 const inputImages = ["1.png", "2.png", "3.png"]; // Use PNGs for inputs
 const outputImages = ["threshold visualization/yellow/876.png", "figs/smol br.png", "4dgiffy.gif"]; // Use GIFs for outputs
 const inputLabels = ["2D Data", "3D Data", "Video Data"];
-const outputLabels = ["2D Output", "3D Output", "Video Output"];
-
+const outputLabels = ["Spatial Genomics", "Brainwide Gene Expression", "Behavioral Assessment"];
 startPoints.forEach((start, i) => {
     // Input images and text
     svg.append("image")
@@ -1297,12 +1296,13 @@ startPoints.forEach((start, i) => {
     }
 
     svg.append("text")
-        .attr("x", endPoints[i].x)
+        .attr("x", endPoints[i].x+50)
         .attr("y", endPoints[i].y - 25)
-        .attr("text-anchor", "middle")
+        .attr("text-anchor", "end")
         .attr("font-size", "15px")
         .attr("fill", "#000")
-        .text(outputLabels[i]);
+        .text(outputLabels[i])
+        .style('z-index', "100");
 });
 
 // Add the image in the middle with pop effect on intersection
@@ -2065,7 +2065,7 @@ d3.json("threshold visualization/red/intensity_data.json").then(data => {
     const inputImages13 = ["1.png", "2.png", "3.png"]; // Use PNGs for inputs
     const outputImages13 = ["threshold visualization/yellow/876.png", "figs/smol br.png", "4dgiffy.gif"]; // Use GIFs for outputs
     const inputLabels13 = ["2D Data", "3D Data", "Video Data"];
-    const outputLabels13 = ["2D Output", "3D Output", "Video Output"];
+    const outputLabels13 = ["Spatial Genomics", "Brainwide Gene Expression", "Behavioral Assessment"];
 
     startPoints13.forEach((start, i) => {
         // Input images and text
