@@ -10,6 +10,36 @@ document.addEventListener("DOMContentLoaded", () => {
             url: 'https://www.biorxiv.org/content/biorxiv/early/2024/07/22/2024.07.17.603924.full.pdf'
         },
         {
+            id: 22,
+            date: '2024',
+            title: 'Segment AnyNeuron',
+            authors: 'Taha Razzaq, Ahmed Qazi, Asim Iqbal',
+            conference: 'bioRxiv',
+            abstract: 'Image segmentation plays an integral part in neuroimage analysis and is crucial for understanding brain disorders. Deep Learning (DL) models have shown exponential success in computer vision tasks over the years, including image segmentation. However, to achieve optimal performance, DL models require extensive annotated data for training, which is often the bottleneck to expediting brain-wide image analysis. For segmenting cellular structures such as neurons, the annotation process is cumbersome and time-consuming due to the inherent structural, intensity, and background variations present in the data caused by genetic markers, imaging techniques, etc. We propose an Active Learning-based neuron segmentation framework (Segment AnyNeuron), which incorporates state-of-the-art image segmentation modules - Detectron2 and HQ SAM, and requires minimal ground truth annotation to achieve high precision for brain-wide segmentation of neurons. Our framework can classify and segment completely unseen neuronal data by selecting the most representative samples for manual annotation, thus avoiding the cold-start problem common in Active Learning. We demonstrate the effectiveness of our framework for automated brain-wide segmentation of neurons on a variety of open-source neuron imaging datasets, acquired from different scanners and a variety of transgenic mouse lines.',
+            url: 'https://www.biorxiv.org/content/10.1101/2024.08.24.609505v1.full.pdf'
+        },
+        
+        {
+            id: 20,
+            date: '2024',
+            title: 'Multimodal 3D Image Registration for Mapping Brain Disorders',
+            authors: 'Hassan Mahmood, Syed Mohammed Shamsul Islam, Asim Iqbal',
+            conference: 'bioRxiv',
+            abstract: 'We introduce an AI-driven approach for robust 3D brain image registration, addressing challenges posed by diverse hardware scanners and imaging sites. Our model trained using an SSIM-driven loss function, prioritizes structural coherence over voxel-wise intensity matching, making it uniquely robust to inter-scanner and intra-modality variations. This innovative end-to-end framework combines global alignment and non-rigid registration modules, specifically designed to handle structural, intensity, and domain variances in 3D brain imaging data. Our approach outperforms the baseline model in handling these shifts, achieving results that align closely with clinical ground-truth measurements. We demonstrate its efficacy on 3D brain data from healthy individuals and dementia patients, with particular success in quantifying brain atrophy, a key biomarker for Alzheimer’s disease and other brain disorders. By effectively managing variability in multisite, multi-scanner neuroimaging studies, our approach enhances the precision of atrophy measurements for clinical trials and longitudinal studies. This advancement promises to improve diagnostic and prognostic capabilities for neurodegenerative disorders.',
+            url: 'https://www.biorxiv.org/content/10.1101/2024.08.24.609508v1.full.pdf'
+        },
+
+        {
+            id: 21,
+            date: '2024',
+            title: 'NeuroAtlas: An Artificial Intelligence-based Framework for Annotation,<br> Segmentation and Registration of Large Scale Biomedical Imaging Data',
+            authors: 'Hassan Mahmood, Farah Nawar, Syed Mohammed Shamsul Islam, Asim Iqbal',
+            conference: 'bioRxiv',
+            abstract: 'With increasing neuroimaging modalities and data diversity, mapping brain regions to a standard atlas template has become a challenging problem. Machine learning in general and deep learning, in particular, have been providing robust solutions for several neuroimaging tasks, including brain image registration and segmentation. However, these methods require a large amount of data for groundtruth labels, annotated by human experts, which is time-consuming. In this work, we introduce NeuroAtlas, an AI-based framework for atlas generation and brain region segmentation. We showcase an end-to-end solution for brain registration and segmentation by providing i) a deep learning modeling suite with a variety of high-performing model architectures to map a brain atlas onto the input brain section and ii) a Graphical User Interface (GUI)-based plugin for large-scale data annotation with a feature of modifying the predicted labels for active learning. We demonstrate a robust performance of our framework on the human brains, captured through various imaging modalities and age groups, and demonstrate its application for mouse brains as well. NeuroAtlas tool will be open-sourced and entirely compatible with both local as well as cloud-based computing so that users can easily adapt to their neuroimaging custom datasets.',
+            url: 'https://www.biorxiv.org/content/10.1101/2024.08.24.609507v1.full.pdf'
+        },
+
+        {
             id: 2,
             date: '2024',
             title: 'AnimalFormer: Multimodal Vision Framework for Behavior-based Precision Livestock Farming',
@@ -18,6 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
             abstract: 'We introduce a multimodal vision framework for precision livestock farming, harnessing the power of GroundingDINO, HQSAM, and ViTPose models. This integrated suite enables comprehensive behavioral analytics from video data without invasive animal tagging. GroundingDINO generates accurate bounding boxes around livestock, while HQSAM segments individual animals within these boxes. ViTPose estimates key body points, facilitating posture and movement analysis. Demonstrated on a sheep dataset with grazing, running, sitting, standing, and walking activities, our framework extracts invaluable insights:activity and grazing patterns, interaction dynamics, and detailed postural evaluations. Applicable across species and video resolutions, this framework revolutionizes noninvasive livestock monitoring for activity detection, counting, health assessments, and posture analyses. It empowers data-driven farm management, optimizing animal welfare and productivity through AI-powered behavioral understanding.',
             url: 'https://arxiv.org/pdf/2406.09711'
         },
+
         {
             id: 3,
             date: '2024',
