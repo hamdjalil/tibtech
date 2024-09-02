@@ -108,10 +108,11 @@
         <section class="hero">
             <div class="hero-content">
                 <div class="info-container">
-                <div class="hero-title">Multimodal End-to-End Drug Discovery</div>
+                <div class="hero-title">Multimodal Artificial Intelligence-driven Drug Discovery</div>
                 <div class="hero-sub-title">
-                    Introducing our cutting-edge multimodal drug discovery framework, seamlessly integrating 2D, 3D, and 4D analyses to accelerate the discovery of novel therapies, from molecular insights to behavioral outcomes.                </div>
-                    <!-- <p class="author-info">By Qazi & Asim</p> -->
+                    Tibbling Technologies' multimodal drug discovery AI framework, seamlessly integrates genetics, imaging and behavioral data to accelerate drug discovery.                </div>
+                    <br>
+                    <p class="author-info">Asim Iqbal, PhD</p>
                     <!-- <p class="author-info">June 18, 2024</p> -->
                 </div>
             
@@ -129,12 +130,12 @@
                 <div class="post-container">
                     <div class="post-text-2">
                         <p>
-                            In the complex and high-stakes world of drug discovery, the journey from initial concept to a viable 
-                            therapeutic solution is fraught with challenges. Traditional methods which often rely on isolated 
-                            techniques and siloed processes, struggle to keep pace with the growing demand for speed, accuracy, 
-                            and innovation. This is particularly critical in brain disorders, where the urgency to 
-                            discover effective therapies is heightened by the growing prevalence of conditions like Alzheimer’s, 
-                            Parkinson’s, and epilepsy. 
+                            The journey from <b>initial concept to a viable 
+                            therapeutic solution </b>has several challenges in drug development. Traditional computational techniques 
+                            struggle to keep pace with the growing demand for speed, accuracy, 
+                            and innovation required for drug discovery. In addition, they rely on a single data modality to discover relevant features and miss out the meaningful information present across <b> multimoda datasets</b>. This is particularly critical in understanding complex neurological disorders, 
+                            where the urgency to discover effective therapies is heightened by the growing prevalence of conditions like <b>Alzheimer’s, 
+                            Parkinson’s, Autism spectrum disorder (ASD), Amyotrophic lateral sclerosis (ALS), Mutiple Sclerosis, and Cerebral palsy (CP)</b>, etc., to mention a few. 
                             According to the <a style="color: black;" href="https://csdd.tufts.edu/" target="_blank"> Tufts Center for the Study of Drug Development</a>, the 
                             average cost of bringing a new drug to market now exceeds <a style="color: black;" href="https://www.scientificamerican.com/article/cost-to-develop-new-pharmaceutical-drug-now-exceeds-2-5b/#:~:text=A%20new%20report%20published%20by,the%20center%20made%20in%202003." target="_blank"><b>$2.6 billion</b></a>, and the process can take over 
                             a decade to complete. Yet, despite these enormous investments, the success rate remains alarmingly 
@@ -149,15 +150,15 @@
             <article class="post">
                 <div class="post-container">
                     <div class="post-text-2">
-                        <h3>The statistics are staggering</h3>
+                        <!-- <h3>The statistics are staggering</h3> -->
                         <br>
-                        <div id="chartsContainer" style="text-align: center;">
+                        <div id="chartsContainer" style="text-align: center; margin-top:-50px;">
                             <div id="costPlot" style="display: inline-block; margin: 0 10px;"></div>
                             <div id="disorderPlot" style="display: inline-block; margin: 0 10px;"></div>
                             <div id="usBrainDisorderPlot" style="display: inline-block; margin: 0 10px;"></div>
                         </div>
                         <br>
-                    <p>
+                    <!-- <p>
                         <p>The urgency to address brain disorders is staggering based on the statistics from the 
                             <a style="color: black;" href="https://www.healthdata.org/research-analysis/gbd" target="_blank">
                             Global Burden of Disease (GBD)</a> study. In the U.S., Alzheimer’s affects around <b>5 million</b> 
@@ -173,31 +174,104 @@
                         utilize the full spectrum of all modalities, transforming the way we discover and 
                         develop new drugs, and reducing both the time and cost associated with bringing life-saving therapies 
                         to market.
-                    </p>
-                        
+                    </p> -->
+                
                 <article>
                     <div class="post-container">
                         <div class = "post-text-2">
-                            <h3>Introducing your wet lab’s multimodal co-pilot</h3>
-                            <svg id="customPlot" width="800" height="400"></svg>
+                            <h3>Our Multimodal AI framework for brain-wide drug discovery</h3>
+                            <svg style="margin-top:-30px;" id="customPlot" width="800" height="400"></svg>
                     <br>
 
                     <p>
-                        Our platform integrates advanced tools across 2D, 3D, and 
+                        Our <b>Multimodal AI framework</b> consists of advanced machine learning models to discover the relevant features in the molecular, spatial genomics, and 
+                        behavioral data to expedite the drug discovery process. Working closely with our partners, we <b>accelerate</b> the end-to-end drug discovery process through 
+                        analysing their complex multimodal (<b>genetics, imaging and behavioral</b>) data for their customized needs. Following shows a glimpse of our framework:
+                        <!-- Our platform integrates advanced  across 2D, 3D, and 
                         4D data modalities, enhancing your wet lab’s capabilities with precision and efficiency. This integration allows for 
                         a seamless transition between different phases of drug development, ensuring that every piece of data is 
-                        accurately captured and analyzed.
+                        accurately captured and analyzed. -->
                     </p>
 
+                    <br><br><br><br>
+
                     <h3>
-                        2D Data
+                        High-precision spatial gene expression quantification <img src="1.png" style="width:50px; margin-bottom: -10px;" class="inline-image">
                     </h3>
-                    <img src="1.png" style="width:200px" class="inline-image">
+                    <!-- <img src="1.png" style="width:100px" class="inline-image"> -->
 
                     <p>
-                        Our platform excels in neuron detection and segmentation, utilizing advanced AI that requires minimal 
-                        training data. This capability ensures precise identification of neuronal structures and facilitates 
-                        the study of specific neuronal subtypes, advancing research on distinct neuron populations. 
+                        Our platform consists of a high-performing deep neural network to classify, localize and segment cellular features. This capability ensures precise identification of neuronal structures and facilitates 
+                        the role of specific neuronal subtypes in drug design. 
+                    </p>
+
+                    <div class="button-container">
+                        <button id="toggle-mask" class="reg-button" style="z-index: 10; margin-top: 5px; margin-bottom: -5px; background-color: black;">Turn segmentation masks on/off</button>
+                    </div>  
+
+                    <div id="container-wrapper"  style="display: flex; flex-wrap: nowrap;">
+                        <!-- Top Image with Bounding Boxes -->
+                        <div id="visualization-container" style="width: 350px">
+                            <svg id="top-image" width="350" height="350" style="position: relative; margin-left: -15px; margin-right: -30px;">
+                                <image xlink:href="figs/brain_sect_23.png" width="350" height="350"></image>
+                                
+                                <!-- Bounding Boxes on Top Image -->
+                                <rect id="bbox-yellow" x="130" y="90" width="30" height="30" fill="none" stroke="orange" stroke-width="2"></rect>
+                            
+                                <!-- Green Area Bounding Box -->
+                                <rect id="bbox-green" x="140" y="140" width="30" height="30" fill="none" stroke="green" stroke-width="2"></rect>
+                                
+                                <!-- Red Area Bounding Box -->
+                                <rect id="bbox-red" x="200" y="230" width="30" height="30" fill="none" stroke="red" stroke-width="2"></rect>
+                            </svg>
+                        
+                            <div id="top-image-caption" style="text-align: center; margin-top: -15px; margin-left: 13.2px">
+                                <p style="text-align: center; font-size: 14px; font-family: 'Montserrat', sans-serif; font-weight: bold; color: #333;">
+                                    Brain Section with Multiple Genetic Markers
+                                </p>
+                            </div>
+                        </div>
+                    
+                        <!-- Yellow Channel -->
+                        <div id="visualization-container" style="margin: 0 5px; position: relative;width: 350px">
+                            <img id="image-layer-yellow" src="threshold visualization/yellow/876.png" alt="Image" style="border: 5px solid orange; width: 350px; height: 350px;">
+                            <img id="mask-layer-yellow" src="threshold visualization/yellow/876_mask.png" style="border: 5px solid orange; width: 350px; height: 350px; opacity: 0; position: absolute; top: 0; left: 0; z-index: 0;">
+                            <svg id="intensity-layer-yellow" style="width: 350px; height: 350px;"></svg>
+                            <div id="slider-container">
+                                <input type="range" class="intensity-yellow" id="intensity-slider" min="0" max="1" step="0.01" value="0">
+                            </div>
+                            <div id="slider-instruction" style="font-size: 17px;"> Genetic Marker 1 Intensity Control</div>
+                        </div>
+                    
+                        <!-- Green Channel -->
+                        <div id="visualization-container" style="margin: 0 5px; position: relative;width: 350px">
+                            <img id="image-layer-green" src="threshold visualization/green/281.png" alt="Image" style="border: 5px solid green; width: 350px; height: 350px;">
+                            <img id="mask-layer-green" src="threshold visualization/green/281_mask.png" style="border: 5px solid green; width: 350px; height: 350px; opacity: 0; position: absolute; top: 0; left: 0; z-index: 0;">
+                            <svg id="intensity-layer-green" style="width: 350px; height: 350px;"></svg>
+                            <div id="slider-container">
+                                <input type="range" class="intensity-green" id="intensity-slider" min="0" max="1" step="0.01" value="0">
+                            </div>
+                            <div id="slider-instruction" style="font-size: 17px;"> Genetic Marker 2 Intensity Control</div>
+                        </div>
+                    
+                        <!-- Red Channel -->
+                        <div id="visualization-container" style="margin: 0 5px; position: relative;width: 350px">
+                            <img id="image-layer-red" src="threshold visualization/red/1924.png" alt="Image" style="border: 5px solid red; width: 350px; height: 350px;">
+                            <img id="mask-layer-red" src="threshold visualization/red/1924_mask.png" style="border: 5px solid red; width: 350px; height: 350px; opacity: 0; position: absolute; top: 0; left: 0; z-index: 0;">
+                            <svg id="intensity-layer-red" style="width: 350px; height: 350px;"></svg>
+                            <div id="slider-container">
+                                <input type="range" class="intensity-red" id="intensity-slider" min="0" max="1" step="0.01" value="0">
+                            </div>
+                            <div id="slider-instruction" style="font-size: 17px;"> Genetic Marker 3 Intensity Control</div>
+                        </div>
+                    </div>                    
+                                      
+                    <div id="tooltip"></div>
+
+                    <p>
+                        An integrated intensity control allows us to fine-tune cellular segmentation, ensuring precise 
+                        detection and quantification of neurons labeled with specific drug enhancers while filtering out the non-target 
+                        signals for accurate assesment.
                     </p>
                     
                     <img src="figs/neuron_detection.svg" alt="Grazing Image" class="inline-image">
@@ -227,19 +301,14 @@
                         <button id = 'resting_btn' onclick="showSection('resting', this)" class="navigate-button">Pre-Thalamus</button>
                     </div> -->
 
-                    <p>
-                        An integrated intensity control allows you to fine-tune neuron segmentation, ensuring precise 
-                        detection and quantification of neurons labeled with specific enhancers while filtering out non-target 
-                        signals for accurate analysis.
-                    </p>
                     <div class="image-section">
                         <div class="image-container">
-                            <h3>GAD1 (red), CamkIIa-Cre/Ai14 (green)</h3>
+                            <h6 style="text-align: center">GAD1 (red), CamkIIa-Cre/Ai14 (green)</h6>
                             <img src="figs/ns1.svg" alt="Neuron Segmentation Image" class="side-image">
                         </div>
 
                         <div class="image-container">
-                            <h3>CamkIIa mRNA in situ hybridized</h3>
+                            <h6 style="text-align: center">CamkIIa mRNA in situ hybridized</h6>
                             <img src="figs/ns3.svg" alt="Brain Mapping Image" class="side-image">
                         </div>
                         
@@ -247,11 +316,11 @@
 
                     <div class="image-section">
                         <div class="image-container">
-                            <h3>GAD1 (red), Gpr26-CreKO250/Ai14 (green)</h3>
+                            <h6 style="text-align: center">GAD1 (red), Gpr26-CreKO250/Ai14 (green)</h6>
                             <img src="figs/ns2.svg" alt="Neuron Segmentation Image" class="side-image">
                         </div>
                         <div class="image-container">
-                            <h3>NISSL staining</h3>
+                            <h6 style="text-align: center">NISSL staining</h6>
                             <img src="figs/ns4.svg" alt="Brain Mapping Image" class="side-image">
                         </div>
                         
@@ -259,116 +328,30 @@
 
                     <br> 
                     
+                    
 
-                    <p>
+                    <!-- <p>
                         Our platform also provides an intensity control to fine-tune neuron segmentation by selecting the optimal intensity 
                         threshold, enabling precise detection and quantification of individual neurons labeled with specific 
                         enhancers, while filtering out non-target signals for accurate analysis.
+                    </p> -->
+
+                    
+                    <br>
+                    <p>
+                        Our AI model significantly outperforms current state-of-the-art approaches, as evident by its superior performance. 
+                        The HD95 score is a critical indicator of accuracy in biomedical imaging, particularly in assessing how closely 
+                        segmented cellular structures align with the ground-truth data.
                     </p>
+                    <svg id="model-performance-chart" width="800" height="500" style="margin-top:-30px; margin-bottom:50px"></svg>
+
+                    <br><br><br><br>
+                    <h3>Brain-wide spatial genomics <img src="2.png" style="width:50px; margin-bottom: -10px;" class="inline-image">
+                    </h3>
+                    <!-- <img src="2.png" style="width:200px" class="inline-image"> -->
 
                     <div class="button-container">
-                        <button id="toggle-mask" class="reg-button" style="z-index: 10; margin-top: 5px; margin-bottom: -5px; background-color: black;">Turn Segmentation Masks On/Off</button>
-                    </div>  
-
-                    <div id="container-wrapper"  style="display: flex; flex-wrap: nowrap;">
-                        <!-- Top Image with Bounding Boxes -->
-                        <div id="visualization-container" style="width: 350px">
-                            <svg id="top-image" width="350" height="350" style="position: relative; margin-left: -15px; margin-right: -30px;">
-                                <image xlink:href="figs/brain_sect_23.png" width="350" height="350"></image>
-                                
-                                <!-- Bounding Boxes on Top Image -->
-                                <rect id="bbox-yellow" x="130" y="90" width="30" height="30" fill="none" stroke="orange" stroke-width="2"></rect>
-                            
-                                <!-- Green Area Bounding Box -->
-                                <rect id="bbox-green" x="140" y="140" width="30" height="30" fill="none" stroke="green" stroke-width="2"></rect>
-                                
-                                <!-- Red Area Bounding Box -->
-                                <rect id="bbox-red" x="200" y="230" width="30" height="30" fill="none" stroke="red" stroke-width="2"></rect>
-                            </svg>
-                        
-                            <div id="top-image-caption" style="text-align: center; margin-top: -15px; margin-left: 13.2px">
-                                <p style="text-align: center; font-size: 14px; font-family: 'Montserrat', sans-serif; font-weight: bold; color: #333;">
-                                    Brain Section with Multiple  Biomarkers
-                                </p>
-                            </div>
-                        </div>
-                    
-                        <!-- Yellow Channel -->
-                        <div id="visualization-container" style="margin: 0 5px; position: relative;width: 350px">
-                            <img id="image-layer-yellow" src="threshold visualization/yellow/876.png" alt="Image" style="border: 5px solid orange; width: 350px; height: 350px;">
-                            <img id="mask-layer-yellow" src="threshold visualization/yellow/876_mask.png" style="border: 5px solid orange; width: 350px; height: 350px; opacity: 0; position: absolute; top: 0; left: 0; z-index: 0;">
-                            <svg id="intensity-layer-yellow" style="width: 350px; height: 350px;"></svg>
-                            <div id="slider-container">
-                                <input type="range" class="intensity-yellow" id="intensity-slider" min="0" max="1" step="0.01" value="0">
-                            </div>
-                            <div id="slider-instruction" style="font-size: 17px;"> Biomarker 1 Intensity Control</div>
-                        </div>
-                    
-                        <!-- Green Channel -->
-                        <div id="visualization-container" style="margin: 0 5px; position: relative;width: 350px">
-                            <img id="image-layer-green" src="threshold visualization/green/281.png" alt="Image" style="border: 5px solid green; width: 350px; height: 350px;">
-                            <img id="mask-layer-green" src="threshold visualization/green/281_mask.png" style="border: 5px solid green; width: 350px; height: 350px; opacity: 0; position: absolute; top: 0; left: 0; z-index: 0;">
-                            <svg id="intensity-layer-green" style="width: 350px; height: 350px;"></svg>
-                            <div id="slider-container">
-                                <input type="range" class="intensity-green" id="intensity-slider" min="0" max="1" step="0.01" value="0">
-                            </div>
-                            <div id="slider-instruction" style="font-size: 17px;"> Biomarker 2 Intensity Control</div>
-                        </div>
-                    
-                        <!-- Red Channel -->
-                        <div id="visualization-container" style="margin: 0 5px; position: relative;width: 350px">
-                            <img id="image-layer-red" src="threshold visualization/red/1924.png" alt="Image" style="border: 5px solid red; width: 350px; height: 350px;">
-                            <img id="mask-layer-red" src="threshold visualization/red/1924_mask.png" style="border: 5px solid red; width: 350px; height: 350px; opacity: 0; position: absolute; top: 0; left: 0; z-index: 0;">
-                            <svg id="intensity-layer-red" style="width: 350px; height: 350px;"></svg>
-                            <div id="slider-container">
-                                <input type="range" class="intensity-red" id="intensity-slider" min="0" max="1" step="0.01" value="0">
-                            </div>
-                            <div id="slider-instruction" style="font-size: 17px;"> Biomarker 3 Intensity Control</div>
-                        </div>
-                    </div>                    
-                                      
-                    <div id="tooltip"></div>
-                    <br>
-                    <p>
-                        Our model significantly outperforms current state-of-the-art approaches, as evidenced by its superior performance. 
-                        The HD95 score is a critical indicator of accuracy in medical imaging, particularly in assessing how closely 
-                        segmented regions align with ground truth data. Our model is more precise in capturing complex anatomical structures, 
-                        offering a clear advantage in tasks where accurate boundary delineation is crucial.
-                    </p>
-                    <svg id="model-performance-chart" width="800" height="500"></svg>
-
-                    <br>
-                    <br>
-                    <h3>3D Data</h3>
-                    <img src="2.png" style="width:200px" class="inline-image">
-
-                    <p>
-                        Our platform provides precise brain registration by aligning brain atlases to 2D and 3D datasets, 
-                        ensuring accurate spatial correspondence for comparative anatomical analysis. This process enables the 
-                        robust integration of our atlas with various imaging modalities, facilitating the detailed mapping of 
-                        anatomical regions, crucial for understanding brain structure and function relationships.
-                    </p>
-                    <video id="controlled-video" class="video" muted playsinline style="width:100%; max-width:1500px">
-                        <source src="figs/SeBRe_GIF3.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                    <br>
-                    <p>
-                        Accurately registered brain images ensure that each anatomical region is mapped consistently across 
-                        different imaging modalities, enabling precise localization and comparative analysis. This
-                        alignment facilitates a deeper understanding of complex brain structures and their functions, providing 
-                        a robust foundation for neuroanatomical studies.
-                    </p>
-                    <img src="figs/brain_registration.svg" alt="Grazing Image" class="inline-image">
-                                        
-                    <p>
-                        Precise 3D brain registration ensures accurate alignment of brain regions, enabling consistent neuron 
-                        quantification within specific areas. This technology allows for reliable counting and analysis of 
-                        neurons in specific brain regions offering clearer insights into brain 
-                        function and neurological conditions.
-                    </p>
-                    <div class="button-container">
-                        <button id="toggleOverlay" class="reg-button">Register Brains</button>
+                        <button id="toggleOverlay" class="reg-button pressed">Register Brains</button>
                     </div>
                     <div class="image-pair-container">
                         <div class="image-container3">
@@ -382,10 +365,33 @@
                     </div>
 
                     <p>
-                        Our model outperforms leading competing models by a significant margin. Utilizing
-                        advanced algorithms, we ensure that each anatomical region is mapped with precision, enabling 
-                        researchers to gain deeper insights into the brain’s architecture. This precision is crucial for accurate 
-                        neuroanatomical studies, driving innovation and discovery in neuroscience.
+                        Next, our framework performs precise image registration by mapping the standard brain atlases to 2D/3D brain volumes of different genetic markers, 
+                        ensuring for accurate brain-wide spatial genomics.
+                    </p>
+                    <video id="controlled-video" class="video" muted playsinline style="width:100%; max-width:1500px">
+                        <source src="figs/SeBRe_GIF3.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <br>
+                    <!-- <p>
+                        Accurately registered brain images ensure that each anatomical region is mapped consistently across 
+                        different imaging modalities, enabling precise localization and comparative analysis. This
+                        alignment facilitates a deeper understanding of complex brain structures and their functions, providing 
+                        a robust foundation for neuroanatomical studies.
+                    </p> -->
+                    <img src="figs/brain_registration.svg" alt="Grazing Image" class="inline-image">
+                                        
+                    <!-- <p>
+                        Precise 3D brain registration ensures accurate alignment of brain regions, enabling consistent neuron 
+                        quantification within specific areas. This technology allows for reliable counting and analysis of 
+                        neurons in specific brain regions offering clearer insights into brain 
+                        function and neurological conditions.
+                    </p> -->
+                    
+
+                    <p>
+                        Our deep neural network outperforms the existing image registration models by a significant margin, ensuring that each anatomical region is mapped with precision, enabling 
+                        scientists to gain spatially-localised performance of their drug enhancers.
                     </p>
 
                     <!-- <div style="display: flex; flex-wrap: wrap; justify-content: space-between;">
@@ -408,27 +414,27 @@
                     </div> -->
                                         
                     <div style="position: relative; z-index: 1000; background-color: white; display: flex; justify-content: center; align-items: center;">                        
-                        <svg id="PerformancePlot" width="800" height="500"></svg>
+                        <svg id="PerformancePlot" width="800" height="500" style="margin-bottom:50px"></svg>
                     </div>
 
                     <br>
                     <br>
-                    <h3>
-                        4D Data
-                    </h3>                
+                    <br><br><br><br>
+                    <h3>Behavior assesment for drug efficacy <img src="3.png" style="width:50px; margin-bottom: -10px; " class="inline-image">
+                    </h3>              
 
-                    <img src="3.png" style="width:200px" class="inline-image">
+                    <!-- <img src="3.png" style="width:200px" class="inline-image"> -->
 
                     <p>
-                        Our platform offers precise 4D tracking of animal behavior, allowing for the detailed analysis of 
-                        movement and task performance over time. By capturing and tracking key points, researchers 
-                        can accurately assess how animals interact with their environment and respond to specific tasks. This 
+                        Our platform offers precise tracking of animal behavior, allowing for the detailed analysis of 
+                        movement and task performance of each joint over time. By capturing and tracking key-points, we 
+                        can accurately assess the performance of each drug enhancer in freely moving animals for specific tasks. This 
                         level of monitoring is crucial for understanding behavioral changes, providing essential insights for 
                         evaluating the efficacy of interventions or treatments.
                     </p>
                 
                     <div class="button-container">
-                        <button id="toggleButton-tracking" class="reg-button" style="z-index: 10; margin-top: 5px; margin-bottom: -5px; background-color: grey;">Start keypoint tracking </button>
+                        <button id="toggleButton-tracking" class="reg-button pressed" style="z-index: 10; margin-top: 5px; margin-bottom: -5px; background-color: grey;">Start keypoint tracking </button>
                     </div>
                     <div id="container-tracking">
                         <video id="videoBase-tracking" autoplay muted loop style="border-radius: 20px;">
@@ -443,10 +449,10 @@
                     <br>
 
                     <p>
-                        Our platform quantifies the animal’s performance in various tasks, 
+                        Our AI-driven framework quantifies the animals’ performance in various tasks, 
                         such as motor coordination, spatial memory, and more. This enables researchers and clinicians 
-                        to monitor progress, identify areas of improvement, and make data-driven decisions in their studies. 
-                        Whether you’re focusing on rehabilitation, learning processes, or cognitive assessments, our tool 
+                        to monitor progress, identify areas of improvement, and make data-driven decisions in their drug assesment. 
+                        Whether you’re focusing on rehabilitation, learning processes, or cognitive assessments, our model 
                         delivers the high-resolution tracking needed to quantify and understand behavioral outcomes.
                     </p>
 
@@ -454,28 +460,31 @@
                 </div>
             </article>
 
-                <br>
+            <br>
+                    <br>
+                    <br><br><br><br>
             <article class="post">
                 <div class="post-container">
                     
                     <div class="post-text-2">
-                        <h3>Multimodal Insights</h3>
-                        
+                        <h3>AI-driven multimodal drug discovery <img src="1.png" style="width:50px; margin-bottom: -10px; " class="inline-image"><img src="2.png" style="width:50px; margin-bottom: -10px; margin-left:-18px;" class="inline-image"><img src="3.png" style="width:50px; margin-bottom: -10px; margin-left:-18px;" class="inline-image"></h3>
 
-                        <svg id="customPlot2" width="800" height="400"></svg> 
-                        
                         <div id="plots-container" style="display: flex;">
                             <div id="tooltip-chord" class="tooltip-chord" style="opacity: 0;"></div>
                             <svg id="chordPlot"></svg>
                         </div>
+                        
+
+                        <!-- <svg id="customPlot2" width="800" height="400"></svg>  -->
+                        <br>
+                        
 
                         <p>
 
-                            The chord plot illustrates the intricate relationships between biomarkers, brain regions, and 
-                            behavioral tasks. By mapping these connections, our platform helps you identify how specific  
-                            biomarkers are expressed in brain regions and, consequently, how their expression correlated to
-                            performance in behavioral task. This is one example of how multimodal insights can help you uncover 
-                            the mechanisms behind these outcomes, providing a deeper understanding of brain function and behavior.
+                            By mapping the multimodal data insights, we provide our partners access to determine the brain-wide efficacy of their drug enhancers and how their expression correlates to the behavioral assesment. 
+                            These multimodal insights provide us a deep understanding of disease and help in designing neurological treatment plans. 
+                            The chord plot illustrates the intricate relationships between sample genetic markers, brain regions, and 
+                            behavioral tasks.
 
                         </p>
                         
@@ -484,7 +493,7 @@
             </article>
 
 
-            <article>
+            <!-- <article>
                 <div class="post-container">
                     <div class = "post-text-2">
                         <h3>Our platform is more than just a tool</h3>
@@ -502,11 +511,32 @@
                        </p>  
                     </div>
                 </div>
-            </article>
+            </article> -->
+            
+            <div class="learn-more" style="padding-top:100px"></div>
+            <a href="https://www.biorxiv.org/content/10.1101/2024.07.17.603924v1" target="_blank" style="text-decoration: none; color: inherit;">
+            <h2>Read more on our partnership with:</h2>
+                <div class="center-col audiowide" style="row-gap: 5px; margin-bottom: 80px;">
+                    <div class="experience-row center-row" style="display: flex; align-items: center;">
+                        <div class="center-col experience-col" style="display: flex; flex-direction: column; align-items: center; margin-right: 20px;">
+                            <img src="/assets/experience/partners/Broad.png" height="50" style="margin-bottom: 30px; margin-top:30px" />
+                            <img src="/assets/experience/partners/HMS.png" height="55" style="margin-bottom: 10px;" />
+                        </div>
+                        <p style="font-size: 4em; font-family: 'Roboto', sans-serif; margin: 0 20px; line-height: 1; text-align: center; display: flex; align-items: center; justify-content: center;">
+                            x
+                        </p>
+                        <img src="logo.svg" height="135" style="vertical-align: middle;" />
+                    </div>
+                </div>
+            </a>
+            </div>
+
+                
+
 
             <article>
-                <div class="learn-more">
-                    <h2>Learn more about our work</h2>
+                <div class="learn-more" style="padding-top:150px">
+                    <h2>Read more about our Multimodal AI framework</h2>
                     <div class="slider-2">        
                         <a href="https://www.biorxiv.org/content/biorxiv/early/2024/07/22/2024.07.17.603924.full.pdf" target="_blank">
                             <div class="card">
@@ -1114,14 +1144,26 @@ function showSlides(n) {
         const overlayImage1 = document.getElementById('overlayImage1');
         const overlayImage2 = document.getElementById('overlayImage2');
         
-        let isOverlayVisible = false;
+        let isOverlayVisible = true; // Default to true
+
+        // Set initial state to visible and apply the pressed style
+        overlayImage1.style.opacity = '1';
+        overlayImage2.style.opacity = '1';
+        toggleOverlayButton.classList.add('pressed');
 
         toggleOverlayButton.addEventListener('click', function() {
-            if (!isOverlayVisible) {  // Only allow the action once
+            if (!isOverlayVisible) {  
                 isOverlayVisible = true;
                 overlayImage1.style.opacity = '1';
                 overlayImage2.style.opacity = '1';
                 toggleOverlayButton.classList.add('pressed');
+                toggleOverlayButton.classList.remove('not-pressed');
+            } else {
+                isOverlayVisible = false;
+                overlayImage1.style.opacity = '0';
+                overlayImage2.style.opacity = '0';
+                toggleOverlayButton.classList.remove('pressed');
+                toggleOverlayButton.classList.add('not-pressed');
             }
         });
     });
@@ -1251,8 +1293,8 @@ window.addEventListener('scroll', function() {
 // Add images and small text labels
 const inputImages = ["1.png", "2.png", "3.png"]; // Use PNGs for inputs
 const outputImages = ["threshold visualization/yellow/876.png", "figs/smol br.png", "4dgiffy.gif"]; // Use GIFs for outputs
-const inputLabels = ["2D Data", "3D Data", "Video Data"];
-const outputLabels = ["Spatial Genomics", "Brainwide Gene Expression", "Behavioral Assessment"];
+const inputLabels = ['data modality 1', 'data modality 2', 'data modality N']//["2D Data", "3D Data", "Video Data"];
+const outputLabels = ["genetic features", "brainwide spatial genomics", "behavioral assays outcome"];
 startPoints.forEach((start, i) => {
     // Input images and text
     svg.append("image")
@@ -1266,7 +1308,7 @@ startPoints.forEach((start, i) => {
         .attr("x", start.x - 10)
         .attr("y", start.y - 25)
         .attr("text-anchor", "middle")
-        .attr("font-size", "15px")
+        .attr("font-size", "12px")
         .attr("fill", "#000")
         .text(inputLabels[i]);
 
@@ -1319,8 +1361,8 @@ svg.append("image")
 <script>
     // Margin and dimensions
     const margin = { top: 40, right: 10, bottom: 40, left: 50 };
-    const plotWidth = 400 - margin.left - margin.right;
-    const plotHeight = 350 - margin.top - margin.bottom;
+    const plotWidth = 280 - margin.left - margin.right;
+    const plotHeight = 300 - margin.top - margin.bottom;
 
     // Data for Cost of Drug Discovery
     const data1 = [
@@ -1362,8 +1404,7 @@ svg.append("image")
             .attr("x", plotWidth / 2)
             .attr("y", -25)
             .attr("text-anchor", "middle")
-            .style("font-size", "16px")
-            .style("font-weight", "bold")
+            .style("font-size", "13px")
             .text(title);
     
         const x = d3.scaleBand().domain(data.map(d => d.year)).range([0, plotWidth]).padding(0.3);
@@ -1447,8 +1488,7 @@ svg.append("image")
             .attr("x", plotWidth / 2)
             .attr("y", -25)
             .attr("text-anchor", "middle")
-            .style("font-size", "16px")
-            .style("font-weight", "bold")
+            .style("font-size", "13px")
             .text(title);
     
         const x = d3.scaleLinear().domain(d3.extent(data, d => d.year)).range([0, plotWidth]);
@@ -1521,8 +1561,7 @@ svg.append("image")
             .attr("x", plotWidth / 2)
             .attr("y", -25)
             .attr("text-anchor", "middle")
-            .style("font-size", "16px")
-            .style("font-weight", "bold")
+            .style("font-size", "13px")
             .text(title);
     
         const x = d3.scaleLinear().domain(d3.extent(data, d => d.year)).range([0, plotWidth]);
@@ -1674,15 +1713,15 @@ svg.append("image")
         .style("width", plotWidth + margin.left + margin.right + "px");
     
     createBarChart("#costPlot", data1, 'year', 'cost', "black",
-                    "Average Cost to Develop a New Drug",
-                    "Projected cost of $2.7B by 2025");
+                    "average cost to develop a new Drug",
+                    "projected cost of $2.7B by 2025");
     
     createLineChart("#disorderPlot", data2, 'year', 'count', "black",
-                    "Increase in Brain Disorders Worldwide",
-                    "Projected increase to 3B by 2025");
+                    "increase in brain disorders worldwide",
+                    "projected increase to 3B by 2025");
 
     d3.json("us_brain2.json").then(data => {
-        createMultiLineChart("#usBrainDisorderPlot", data, "#d3d3d3", "grey", "black", "Increase in Brain Disorders in the US", "");
+        createMultiLineChart("#usBrainDisorderPlot", data, "#d3d3d3", "grey", "black", "increase in brain disorders in the US", "");
     });
 
 </script>
@@ -2146,14 +2185,15 @@ d3.json("threshold visualization/red/intensity_data.json").then(data => {
     .html('<tspan x="' + (convergencePoint13.x) + '" dy="0">Multimodal</tspan><tspan x="' + (convergencePoint13.x) + '" dy="15">Insights</tspan>')
     .raise();  // Raise the z-index of the text above the lines
 
-    svg13.append("image")
+   svg13.append("image")
         .attr("id", "chord")
         .attr("xlink:href", "chordplot.png")
-        .attr("x", convergencePoint13.x-30)  // Adjusted for new size
-        .attr("y", convergencePoint13.y-35)  // Adjusted for new size
-        .attr("width", 70)    // Original width
-        .attr("height", 70)   // Original height
-        .raise(); // Ensure the image is on top
+        .attr("x", convergencePoint13.x-40)  // Adjusted for new size
+        .attr("y", convergencePoint13.y-45)  // Adjusted for new size
+        .attr("width", 100)    // Original width
+        .attr("height", 100)   // Original height
+        .raise(); // Ensure the image is on top -->
+
     
 </script>
 
@@ -2197,8 +2237,8 @@ d3.json("threshold visualization/red/intensity_data.json").then(data => {
         "Biomarker A", "Biomarker B", "Biomarker C", 
         "Biomarker D", "Biomarker E", "Biomarker F",
         " ", " ", " ", " ", " ", " ", " ", " ",  // Spacer between markers and brain regions
-        "Hippocampus", "Prefrontal Cortex", "Amygdala", 
-        "Striatum", "Cerebellum", "Thalamus",
+        "Hippocampus", "Thalamus", "Amygdala", 
+        "Striatum", "Cerebellum", "Prefrontal Cortex",
         " ", " ", " ", " ", " ", " ", " ", " ", // Spacer between brain regions and behavioral tasks
         "Morris Water Maze", 
         "Fear Conditioning", 
@@ -2236,7 +2276,7 @@ d3.json("threshold visualization/red/intensity_data.json").then(data => {
             .domain(d3.range(categories.length));
 
         const biomarkerColor = d3.scaleSequential(d3.interpolateBlues).domain([0, 5]);
-        const brainRegionColor = d3.scaleSequential(d3.interpolateReds).domain([6, 11]);
+        const brainRegionColor = d3.scaleSequential(d3.interpolateRgb("yellow", "orange")).domain([6, 11]);
         const taskColor = d3.scaleSequential(d3.interpolateGreens).domain([12, 19]);
         
         // Function to assign color based on index
@@ -2275,19 +2315,20 @@ d3.json("threshold visualization/red/intensity_data.json").then(data => {
             .attr("text-anchor", function(d) { return d.angle > Math.PI ? "end" : null; })
             .style("font-size", "15px")
             .text((d, i) => categories[d.index])
+            .text((d, i) => categories[d.index].replace("Biomarker", "Genetic Marker"));
 
         // Define color scales for each category type
         const colorBiomarker = d3.scaleOrdinal()
         .domain(["Biomarker A", "Biomarker B", "Biomarker C", "Biomarker D", "Biomarker E", "Biomarker F"])
-        .range(d3.schemeBlues[7].slice(1));  // Example using shades of blue
+        .range(d3.quantize(d3.interpolateYlOrBr, 6));  // Interpolates 6 shades of yellow
 
-        const colorBrainRegion = d3.scaleOrdinal()
-        .domain(["Hippocampus", "Prefrontal Cortex", "Amygdala", "Striatum", "Cerebellum", "Thalamus"])
-        .range(d3.schemeReds[7].slice(1));  // Example using shades of red
+            const colorBrainRegion = d3.scaleOrdinal()
+            .domain(["Hippocampus", "Prefrontal Cortex", "Amygdala", "Striatum", "Cerebellum", "Thalamus"])
+            .range(d3.schemeGreens[7].slice(1));  // Example using shades of red
 
-        const colorTask = d3.scaleOrdinal()
-        .domain(["Morris Water Maze", "T-Maze", "Fear Conditioning", "Rotarod Test", "Elevated Plus Maze", "Open Field Test", "Novel Object Recognition", "Sensory Processing"])
-        .range(d3.schemeGreens[9].slice(1));  // Example using shades of green
+            const colorTask = d3.scaleOrdinal()
+            .domain(["Morris Water Maze", "T-Maze", "Fear Conditioning", "Rotarod Test", "Elevated Plus Maze", "Open Field Test", "Novel Object Recognition", "Sensory Processing"])
+            .range(d3.schemeBlues[9].slice(1));  // Example using shades of green
 
         // Function to assign colors based on category type
         function assignColor(d) {
@@ -2351,10 +2392,10 @@ d3.json("threshold visualization/red/intensity_data.json").then(data => {
             let tooltipContent = '';
 
             if (source.includes("Biomarker") && (target.includes("Hippocampus") || 
-            target.includes("Striatum") || target.includes("Cerebellum") || 
-            target.includes("Prefrontal Cortex") || target.includes("Amygdala") || target.includes("Thalamus"))) {
+                target.includes("Striatum") || target.includes("Cerebellum") || 
+                target.includes("Prefrontal Cortex") || target.includes("Amygdala") || target.includes("Thalamus"))) {
                 tooltipContent = `
-                    <strong>${source} is expressed at ${value}% in the ${target}</strong><br>
+                    <strong>${source.replace("Biomarker", "Genetic Marker")} is expressed at ${value}% in the ${target}</strong><br>
                 `;
             } else if (source.includes("Hippocampus") || source.includes("Striatum") || source.includes("Cerebellum") ||
                     source.includes("Prefrontal Cortex") || source.includes("Amygdala") || source.includes("Thalamus")) {
@@ -2365,14 +2406,14 @@ d3.json("threshold visualization/red/intensity_data.json").then(data => {
                     source.includes("Elevated Plus Maze") || source.includes("Open Field Test") || 
                     source.includes("Novel Object Recognition") || source.includes("Sensory Processing") || source.includes("T-Maze")) {
                 tooltipContent = `
-                    <strong>Performance in ${source} improved by ${value}% due to the expression of ${target}</strong><br>
+                    <strong>Performance in ${source} improved by ${value}% due to the expression of ${target.replace("Biomarker", "Genetic Marker")}</strong><br>
                 `;
             }
 
             tooltip.transition().duration(200).style("opacity", .9);
             tooltip.html(tooltipContent)
-            .style("left", (event.pageX + 5) + "px")
-            .style("top", (event.pageY - 28) + "px");
+    .style("left", (event.pageX + 5) + "px")
+    .style("top", (event.pageY - 28) + "px");
         })
         .on("mouseout", function(d) {
             // Reset all ribbons to full opacity
@@ -2381,6 +2422,41 @@ d3.json("threshold visualization/red/intensity_data.json").then(data => {
             // Hide tooltip
             tooltip.transition().duration(500).style("opacity", 0);
         });
+
+        const legend = svg.append("g")
+        .attr("class", "legend")
+        .attr("transform", `translate(${-width / 2 + 20},${height / 2 - 50})`);  // Positioning it at the bottom left
+    
+    // Data for the legend
+    const legendData = [
+        { label: "Brain Regions", color: d3.interpolateBlues(0.5) },
+        { label: "Behavioral Tasks", color: d3.interpolateYlOrBr(0.5) },
+        { label: "Genetic Markers", color: d3.interpolateGreens(0.5) }
+    ];
+    
+    // Append legend items
+    legend.selectAll("g")
+        .data(legendData)
+        .enter().append("g")
+        .attr("class", "legend-item")
+        .attr("transform", (d, i) => `translate(${210+ i * 150}, 30)`);  // Positioning items horizontally
+    
+    // Append color boxes
+    legend.selectAll(".legend-item")
+        .append("rect")
+        .attr("x", 0)
+        .attr("y", 0)
+        .attr("width", 20)
+        .attr("height", 20)
+        .attr("fill", d => d.color);
+    
+    // Append labels
+    legend.selectAll(".legend-item")
+        .append("text")
+        .attr("x", 30)
+        .attr("y", 15)  // Aligning text vertically with the rectangles
+        .attr("font-size", "14px")
+        .text(d => d.label);
     });
 </script>
 
@@ -2493,20 +2569,29 @@ d3.json("threshold visualization/red/intensity_data.json").then(data => {
 </script>
 
 <script>
-    // Existing tracking overlay functionality
-    document.getElementById('toggleButton-tracking').addEventListener('click', function() {
+    document.addEventListener('DOMContentLoaded', function() {
         const overlayVideo = document.getElementById('videoOverlay-tracking');
         const toggleButton = document.getElementById('toggleButton-tracking');
-        
-        if (overlayVideo.style.opacity == 0 || overlayVideo.style.opacity === '') {
-            overlayVideo.style.opacity = 1; // Show the overlay video
-            toggleButton.style.backgroundColor = 'black'; // Change button color to black
-            toggleButton.style.color = 'white'; // Optional: change text color to white for contrast
-        } else {
-            // overlayVideo.style.opacity = 0; // Hide the overlay video
-            // toggleButton.style.backgroundColor = 'grey'; // Revert button background color
-            // toggleButton.style.color = ''; // Revert button text color
-        } 
+
+        // Set initial state: Overlay is visible, button is in pressed state
+        overlayVideo.style.opacity = '1';
+        toggleButton.classList.add('pressed');
+        toggleButton.style.backgroundColor = 'black'; 
+        toggleButton.style.color = 'white';
+
+        toggleButton.addEventListener('click', function() {
+            if (overlayVideo.style.opacity == 1) {
+                overlayVideo.style.opacity = 0; // Hide the overlay video
+                toggleButton.classList.remove('pressed');
+                toggleButton.style.backgroundColor = 'grey'; // Revert button background color
+                toggleButton.style.color = ''; // Revert button text color
+            } else {
+                overlayVideo.style.opacity = 1; // Show the overlay video
+                toggleButton.classList.add('pressed');
+                toggleButton.style.backgroundColor = 'black'; // Change button color to black
+                toggleButton.style.color = 'white'; // Optional: change text color to white for contrast
+            }
+        });
     });
 </script>
 
