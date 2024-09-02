@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Template</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Lora:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-38PESE35X3"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-38PESE35X3');
+    </script>
+
+</head>
+<body style="background-color: rgb(255, 255, 255); padding-top: 100px;">
+    <a href="https://tibbtech.com/" target="_blank">
+    <div id="navbar" class="noto">
+            <img src="logo.svg" style="height: 100%;" />
+            <!-- <div onclick="toggleNav(event)">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" style="width: 30px; height: 30px; cursor: pointer">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>              
+            </div> -->
+        </div>
+    </a>
+    <!-- <div id="hidden-nav"> 
+        <div onclick="toggleNav()" style="position: absolute; top: 10px; right: 30px">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" style="width: 20px; height: 20px;">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+            </svg>              
+        </div>  
+        <div onclick="scrollEle('about')">About</div>
+        <div onclick="scrollEle('contact-section')">Contact</div>
+        <div onclick="scrollEle('team')">Team</div>
+    </div> -->
+
+    <main class="main-container">
+        <section class="hero">
+            <div class="hero-content">
+                <div class="hero-title">ExerAIde: an AI-Powered Personalized Rehabilitation Platform</div>
+                <div class="hero-sub-title">
+                    Introducing AlphaFold 3, a new AI model developed by Google DeepMind and Isomorphic Labs. By accurately predicting the structure of proteins, DNA, RNA, ligands, and more, and how they interact, we hope it will transform our understanding of the biological world and drug discovery.
+                </div>
+                <div class="info-container">
+                    <p class="author-info">By Qazi & Asim</p>
+                    <p class="author-info">June 18, 2024</p>
+                </div>
+            
+            <div class="slider">
+                <video controls autoplay muted loop id="ExerAIde_video" class="video">
+                    <source src="Rehab_figures/ExerAIde - animation.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+        </section>
+        
+        <section class="content">
+            <article class="post">
+                <div class="post-container">
+                    <div class="post-text-2">
+                        <!-- <h3>What's under the hood?</h3> -->
+                        <p>
+                            In the world of rehabilitation, one-size-fits-all treatment plans are quickly becoming a thing of the past. Personalized therapy is at the forefront of this change, offering tailored treatment plans that address each individual's unique needs. This approach speeds up recovery by focusing on the specific physiological aspects that require attention.
+                        </p>
+                        <br>
+                        <p>
+                            With the advent of machine learning, we now have powerful tools to analyze complex multimodal data like never before. This technology helps pinpoint the exact movements and joints that need improvement, allowing therapists to create highly customized rehabilitation programs. These individualized plans ensure that patients receive the most effective care possible, making recovery faster and more efficient. Personalized therapy is proving to be a game-changer in the field, promising better outcomes for everyone, whether they're recovering from a sports injury or dealing with other physical challenges.
+                        </p>
+                    </div>
+                   
+                    
+                </div>
+            </article>
+
+            <article class="post">
+                <div class="post-container">
+                    <div class="post-text-2">
+                        <h3>Enter: ExerAIde</h3>
+                        <p>
+                            The demand for personalized therapy that caters to individual needs is more crucial than ever. Enter ExerAIde, our cutting-edge solution that uses the power of machine learning to provide customized sports therapy, ensuring optimal recovery and performance.
+                        </p>
+                    </div>
+                    <img src="Rehab_figures/Figure 1 CV4Sports-Page-3.drawio.svg" alt="Image 1" class="inline-image-2">
+                    <p class="caption">
+                        Figure 1: Our comprehensive analysis framework designed for personalized therapy. It provides a clear overview of the data flow and processing steps within our end-to-end solution, demonstrating how advanced machine learning techniques are employed to analyze and improve joint movements for optimized rehabilitation.
+                    </p>
+                    <br>
+                    <div class="post-text-2">
+                        <p>
+                            ExerAIde offers a scalable solution adaptable to various rehabilitation needs, from sports injuries to physiotherapy. Delivering critical insights for optimizing recovery protocols, monitoring progress, and enhancing therapeutic interventions, ExerAIde transcends traditional methodologies. It facilitates precision rehabilitation and proactive health monitoring through advanced motion analysis, without the need for invasive procedures or constant supervision. The non-invasive nature of ExerAIde ensures minimal discomfort to patients, leading to more accurate assessments and a deeper understanding of their recovery process.                        
+                        </p>
+
+                        <br> 
+                </div>
+        
+                <br>
+                <article>
+                    <div class="post-container">
+                        <div class = "post-text-2">
+                            <h2>ExerAIde in Action</h2>
+                    <p>
+                        ExerAIde utilizes advanced motion analysis techniques to enhance rehabilitation exercises. By capturing skeletal motion during exercises at distinct time frames, it visualizes joint positions and displacement fields, highlighting differences in movement patterns. ExerAIde employs a Random Forest Classifier (RFC), which significantly outperforms other classifiers such as SVM, AdaBoost, XGBoost, and Logistic Regression. This ensures a high level of accuracy in identifying critical joints and distinguishing between healthy and unhealthy movements. Additionally, the strong alignment of ExerAIde’s joint importance ranking with actual displacement fields validates its effectiveness. This allows therapists to develop highly personalized therapy programs, leading to better recovery outcomes and improved patient performance.
+                    </p>
+                        </div>
+                        <img src="Rehab_figures/Skeleton_figure.png" alt="Image 2", class="inline-image-2">
+                    <p class="caption">Figure 2: Left) Visualization of the skeletal motion and the displacement fields.<br> 
+                        Mid) Performance comparison with other methods.<br>
+                        Right) Spearman correlation comparison, depicting the strong alignment of our framework’s joint importance ranking with the ground truth displacement fields.
+                    </p>
+                    <img src="Rehab_figures/Figure 2 CV4Sports-Page-1.svg" alt="Image 3" class="inline-image-2">
+                            <p class="caption">
+                                Figure 3: Comparative analysis of healthy vs. unhealthy movements across nine exercises in standing and sitting positions. Depth sensor images (upper panel) show exercises with corresponding VQ-VAE-derived embeddings (lower panel), where red and green dots indicate unhealthy and healthy movements. Keypoints colored by importance, with blue circles highlighting significant joints for distinguishing movement quality, emphasize the critical role of specific joints in rehabilitation assessment.
+                            </p>
+                            <div class = "post-text-2">
+                            <p>
+                                To further enhance the analysis, ExerAIde incorporates Vector Quantized Variational AutoEncoder (VQ-VAE) derived quantized latent space embeddings. This technique provides a comprehensive view of movement quality across various exercises. In the comparative analysis shown, the top row displays depth sensor images of a subject performing nine different exercises in both standing and sitting positions. These images provide a visual reference for the range of motion involved in each exercise.
+
+                                The lower panel of the analysis presents scatter plots that correspond to each exercise, where red and green dots represent unhealthy and healthy movements, respectively. The keypoints are colored based on their importance, determined by the RFC, using an inferno heatmap color scheme from low (yellow) to high (black) importance. Notably, blue circles highlight the joints with the maximum distance between centroids of healthy and unhealthy clusters, emphasizing their crucial role in distinguishing movement quality.
+                                
+                                This visualization underscores the importance of specific joints in assessing movement patterns and helps therapists pinpoint areas that require more focused attention. By leveraging this detailed and visually intuitive analysis, ExerAIde enables more effective monitoring and adjustment of rehabilitation programs, ultimately leading to improved patient outcomes.
+                            </p>
+                        </div>
+                    </div>
+                </article>
+
+            <br>
+            <article class="post">
+                <div class="post-container">
+                    
+                    <div class="post-text-2">
+                        <h2>Rehabilitation</h2>
+                    
+                        <p>
+                            To further support rehabilitation and physiotherapy efforts, ExerAIde provides a qualitative analysis across a temporal sequence of frames for each exercise in standing position, as depicted in Figure 4. By superimposing keypoints on each frame, ExerAIde captures the full range of motion for each exercise. The heatmap gradient indicates joint importance based on RFC findings, ranging from low (yellow) to high (black), which aids in the visual comparison of execution quality.
+
+                            Each exercise is meticulously analyzed frame by frame, showcasing how different joints contribute to the overall movement. This detailed analysis allows therapists to identify which joints are most critical during specific exercises. The bottom-right corner of the figure lists the most significant joints in descending order of importance for each exercise, providing a comprehensive understanding of movement dynamics.
+
+                            ExerAIde's detailed motion analysis is particularly beneficial for rehabilitation and physiotherapy. By focusing on the most critical joints, therapists can design targeted exercises that address specific weaknesses or issues. This ensures that rehabilitation programs are both effective and efficient, leading to faster and more complete recovery. The temporal analysis helps in tracking progress over time, allowing for adjustments in therapy plans based on the evolving needs of the patient.
+
+                            Furthermore, this detailed feedback allows therapists to modify exercises in real-time, ensuring that patients perform movements correctly and avoid potentially harmful patterns. The visualization of joint importance also helps in educating patients about their movements, fostering better engagement and compliance with their rehabilitation program. Overall, ExerAIde's advanced analysis capabilities make it an invaluable tool for enhancing rehabilitation and physiotherapy outcomes, promoting optimal recovery and improved patient performance.
+                        </p>
+                    </div>
+
+                    <img src="Rehab_figures/Figure_3_resized.svg" alt="Image 4" class="inline-image-2">
+                        <p class="caption">
+                            Figure 4: Qualitative analysis of exercises in standing position with keypoints overlaid on each frame, capturing motion range. A heatmap gradient (yellow to black) indicates joint importance based on RFC findings, aiding visual comparison of execution quality. The bottom-right lists the most significant joints for each exercise, offering a comprehensive understanding of movement dynamics.
+                        </p>
+                    
+                </div>
+            </article>
+
+
+            <article>
+                <div class="post-container">
+                    <div class = "post-text-2">
+                        <h2>Conclusion</h2>
+                        <p>
+                            omes but also empowers patients and therapists with valuable data, leading to better recovery and overall performance.
+                        </p>  
+                    </div>
+                </div>
+            </article>
+
+            <article>
+                <div class="learn-more">
+                    <h2 >Learn more about ExerAIde</h2>
+
+                    <div class="slider-2">        
+                            <div class="card">
+                                <div class="card-header">
+                                    <img src="card-images/card-1.jpg" alt="MIT Logo" class="card-logo">
+                                </div>
+                                <div class="card-body">
+                                    <p class="card-date">2015-2016</p>
+                                    <h3>Visiting Researcher in Brain and Cognitive Sciences Department</h3>
+                                    <p class="card-participant" style="text-align: left;">
+                                        Worked on predicting neural responses in primate visual cortex through performance optimized deep
+                                    </p>
+                                </div>
+
+                        </div>
+                                
+                            <div class="card">
+                                <div class="card-header">
+                                    <img src="card-images/card-1.jpg" alt="MIT Logo" class="card-logo">
+                                </div>
+                                <div class="card-body">
+                                    <p class="card-date">2015-2016</p>
+                                    <h3>Visiting Researcher in Brain and Cognitive Sciences Department</h3>
+                                    <p class="card-participant" style="text-align: left;">
+                                        Worked on predicting neural responses in primate visual cortex through performance optimized deep neural networks
+                                    </p>
+                                </div>
+                        </div>
+                            
+                            <div class="card">
+                                <div class="card-header">
+                                    <img src="card-images/card-1.jpg" alt="MIT Logo" class="card-logo">
+                                </div>
+                                <div class="card-body">
+                                    <p class="card-date">2015-2016</p>
+                                    <h3>Visiting Researcher in Brain and Cognitive Sciences Department</h3>
+                                    <p class="card-participant" style="text-align: left;">
+                                        Worked on predicting neural responses in primate visual cortex through performance optimized deep neural networks Worked on predicting neural responses in primate visual cortex through performance optimized deep neural networks Worked on predicting neural responses in primate visual cortex through performance optimized deep neural networks
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+
+
+            </article>
+
+
+
+
+            <article>
+                <div class="post">
+                    <h2 class="second-description">Publications</h2>
+                    <div class="list-container" id="publication-lists"></div>
+                    <div class="show-buttons">
+                        <button class="list-show-more" id="show-more" style="display: none;">Show More</button>
+                        <button class="list-show-less" id="show-less" style="display: none;">Show Less</button>
+                    </div>
+                    </div>
+                </div>
+                
+            </article>
+                            
+                            <!-- Add more articles as needed -->
+                       
+                            
+    </main>
+    <footer>
+        <div class="footer-container center-col" style="margin-top: 30px;">
+            <!-- <div class="social-follow">
+                <span>Follow us on</span>
+                <a href="https://x.com/tibbtech?mx=2" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+            </div> -->
+            © Tibbling Technologies · All Rights Reserved
+        </div>
+    </footer>
+
+    <script src="publications.js"></script>
+
+    
+
+    <script>
+      
+    
+    document.addEventListener("DOMContentLoaded", () => {
+    let lastScrollTop = 0; // Variable to store the last scroll position
+    const navbar = document.getElementById('navbar'); // Get the navbar element
+    
+    window.addEventListener("scroll", function() {
+        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        
+        if (scrollTop > lastScrollTop) {
+            // Downscroll code
+            navbar.style.top = "-15rem"; // Adjust this value to match the navbar's height
+        } else {
+            // Upscroll code
+            navbar.style.top = "0px";
+        }
+        lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // Update lastScrollTop to current position
+    }, false);
+    });
+    
+        var nav_open = false
+        let hidden_nav = document.getElementById("hidden-nav");
+    
+        document.addEventListener('click', (e) => {
+            if (nav_open && !hidden_nav.contains(e.target)) {
+                toggleNav();
+            }
+        });
+    
+        function toggleNav(e) {
+            nav_open = hidden_nav.style.right == "0px";
+            hidden_nav.style.right = nav_open ? "-300px" : "0px";
+            nav_open = !nav_open;
+            e?.stopPropagation();
+        }
+    
+        function scrollEle(ele) {
+            toggleNav();
+            document.getElementById(ele).scrollIntoView({behavior: 'smooth', block: "center", inline: "nearest"});
+        }
+    
+    
+                                            // Reset scroll behavior when scrolled to top
+                                            window.addEventListener('scroll', function() {
+                                            if (window.scrollY <= 50) {
+                                                allowScroll = true; // Re-enable scrolling when the user scrolls back to the top
+                                            }
+                                        });
+    
+                                        document.addEventListener('DOMContentLoaded', function() {
+                                        var navbar = document.getElementById('navbar');
+                                        window.addEventListener('scroll', function() {
+                                            // Add 'scrolled' class to the navbar based on the scroll position
+                                            if (window.pageYOffset > 250) {
+                                                navbar.classList.add('scrolled');
+                                            } else {
+                                                navbar.classList.remove('scrolled');
+                                            }
+                                        });
+                                    });
+
+
+
+    
+    //for truncated cards
+    const cards = document.querySelectorAll('.card-participant');
+    const maxLength = 100; // Adjust the character limit as needed
+
+    cards.forEach(card => {
+        const fullText = card.getAttribute('data-full-text');
+        
+        if (fullText.length > maxLength) {
+            const truncatedText = fullText.substring(0, maxLength) + '...';
+            card.textContent = truncatedText;
+        }
+    });
+    
+    
+    </script>
+
+
+
+    <script>
+   document.addEventListener('DOMContentLoaded', function () {
+    const maxLength = 120; // Set the maximum number of characters
+
+    document.querySelectorAll('.card-participant').forEach(function(cardParticipant) {
+        const fullText = cardParticipant.textContent.trim();
+
+        if (fullText.length > maxLength) {
+            const truncatedText = fullText.substring(0, maxLength) + '...';
+            cardParticipant.innerHTML = truncatedText;
+        }
+    });
+});
+
+</script>    
+        
+    
+</body>
+</html>
