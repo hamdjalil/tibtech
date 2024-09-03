@@ -35,45 +35,56 @@
     <script>
         function resizeCharts(){
             var body = document.getElementsByTagName('body')[0];
-
-            if(body.clientWidth > 786)
+            
+            if(body.clientWidth > 800)
                 return;
-
+        
             // CustomPlot
             var cp = document.getElementById('customPlot');
-            cp.style.scale = (body.clientWidth / (cp.clientWidth+80))
-            cp.style.transformOrigin = 'top left'
-            cp.style.marginBottom = `-${(1-cp.style.scale-0.05)*100}%`;
-
+            if(cp){
+                cp.style.scale = (body.clientWidth / (cp.clientWidth+80))
+                cp.style.transformOrigin = 'top left'
+                cp.style.marginBottom = `-${(1-cp.style.scale-0.05)*100}%`;
+            }
+            
             // CustomPlot2
-            //var cp2 = document.getElementById('customPlot2');
-            //cp2.style.scale = (body.clientWidth / (cp2.clientWidth+80))
-            //cp2.style.transformOrigin = 'top left'
-            //cp2.style.marginBottom = `-${(1-cp2.style.scale+0.025)*100}%`;
-
+            var cp2 = document.getElementById('customPlot2');
+            if(cp2){
+                cp2.style.scale = (body.clientWidth / (cp2.clientWidth+80))
+                cp2.style.transformOrigin = 'top left'
+                cp2.style.marginBottom = `-${(1-cp2.style.scale+0.025)*100}%`;
+            }
 
             // model-performance-chart
-            var mpc = document.getElementById('model-performance-chart');
-            mpc.style.scale = (body.clientWidth / (mpc.clientWidth+80))
-            mpc.style.transformOrigin = 'top left'
-            mpc.style.marginBottom = `-${(1-mpc.style.scale-0.05)*100}%`;
+            var mpc = document.querySelector('#model-performance-chart g');
+            if(mpc){
+                mpc.style.scale = (body.clientWidth / (mpc.clientWidth+80))
+                mpc.style.transformOrigin = 'top left'
+                mpc.style.marginBottom = `-${(1-mpc.style.scale-0.05)*100}%`;
+            }
 
             // chartsContainer
             var cc = document.getElementById('chartsContainer');
-            cc.style.scale = (body.clientWidth / (cc.clientWidth+80))
-            cc.style.transformOrigin = 'top left'
-            cc.style.marginBottom = `-${(1-cc.style.scale-0.05)*100}%`;
+            if(cc){
+                cc.style.scale = (body.clientWidth / (cc.clientWidth+80))
+                cc.style.transformOrigin = 'top left'
+                cc.style.marginBottom = `-${(1-cc.style.scale-0.05)*100}%`;
+            }
 
             // PerformancePlot
             var pp = document.querySelector('#PerformancePlot g');
-            pp.style.scale = (body.clientWidth / (880))
-            pp.style.transformOrigin = 'top left'
-            document.getElementById('PerformancePlot').style.marginBottom = `-${(1-pp.style.scale-0.05-0.1)*100}%`;
+            if(pp){
+                pp.style.scale = (body.clientWidth / (880))
+                pp.style.transformOrigin = 'top left'
+                document.getElementById('PerformancePlot').style.marginBottom = `-${(1-pp.style.scale-0.05-0.1)*100}%`;
+            }
 
-            var pp = document.querySelector('#chordPlot g');
-            pp.style.scale = (body.clientWidth / (880))
-            pp.style.transformOrigin = 'top left'
-            document.getElementById('chordPlot').style.marginBottom = `-${(1-pp.style.scale-0.05-0.1)*100}%`;
+            var chp = document.querySelector('#chordPlot g');
+            if(chp){
+                chp.style.scale = (body.clientWidth / (880))
+                chp.style.transformOrigin = 'top left'
+                document.getElementById('chordPlot').style.marginBottom = `-${(1-chp.style.scale-0.05-0.1)*100}%`;
+            }
         }
 
         window.addEventListener('resize',resizeCharts);
@@ -133,7 +144,7 @@
                             The journey from <b>initial concept to a viable 
                             therapeutic solution </b>has several challenges in drug development. Traditional computational techniques 
                             struggle to keep pace with the growing demand for speed, accuracy, 
-                            and innovation required for drug discovery. In addition, they rely on a single data modality to discover relevant features and miss out the meaningful information present across <b>multimodal datasets</b>. This is particularly critical in understanding complex neurological disorders, 
+                            and innovation required for drug discovery. In addition, they rely on a single data modality to discover relevant features and miss out the meaningful information present across <b> multimoda datasets</b>. This is particularly critical in understanding complex neurological disorders, 
                             where the urgency to discover effective therapies is heightened by the growing prevalence of conditions like <b>Alzheimer’s, 
                             Parkinson’s, Autism spectrum disorder (ASD), Amyotrophic lateral sclerosis (ALS), Mutiple Sclerosis, and Cerebral palsy (CP)</b>, etc., to mention a few. 
                             According to the <a style="color: black;" href="https://csdd.tufts.edu/" target="_blank"> Tufts Center for the Study of Drug Development</a>, the 
@@ -343,7 +354,7 @@
                         The HD95 score is a critical indicator of accuracy in biomedical imaging, particularly in assessing how closely 
                         segmented cellular structures align with the ground-truth data.
                     </p>
-                    <svg id="model-performance-chart" width="800" height="500" style="margin: auto; padding:auto;"></svg>
+                    <svg id="model-performance-chart" width="800" height="500" style="margin-top:-30px; margin-bottom:50px"></svg>
 
                     <br><br><br><br>
                     <h3><b>Brain-wide spatial genomics </b><img src="2.png" style="width:50px; margin-bottom: -10px;" class="inline-image">
@@ -512,17 +523,17 @@
                     </div>
                 </div>
             </article> -->
-            
+
             <h4>References</h2>
-                <p style="font-size:15px;">
+                <p style="font-size:15px">
                     • T Razzaq, A Qazi, A Iqbal, 2024. Segment AnyNeuron. <i>bioRxiv</i>, pp.2024-08.<br>
                     • A Iqbal, et al., 2019. Developing a brain atlas through deep learning. <i>Nature Machine Intelligence</i>, 1(6), pp.277-287.<br>
                     • A Iqbal, et al., 2019. DeNeRD: high-throughput detection of neurons for brain-wide analysis with deep learning. <i>Scientific Reports</i>, 9(1), p.13828.
                 </p>
             
-        <div class="learn-more" style="padding-top:100px">
+            <div class="learn-more" style="padding-top:100px"></div>
             <a href="https://www.biorxiv.org/content/10.1101/2024.07.17.603924v1" target="_blank" style="text-decoration: none; color: inherit;">
-                <h2>Read more on our partnership with:</h2>
+            <h2>Read more on our partnership with:</h2>
                 <div class="center-col audiowide" style="row-gap: 5px; margin-bottom: 80px;">
                     <div class="experience-row center-row" style="display: flex; align-items: center;">
                         <div class="center-col experience-col" style="display: flex; flex-direction: column; align-items: center; margin-right: 20px;">
@@ -536,7 +547,7 @@
                     </div>
                 </div>
             </a>
-        </div>
+            </div>
 
                 
 
