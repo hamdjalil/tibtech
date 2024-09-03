@@ -31,66 +31,6 @@
       gtag('config', 'G-38PESE35X3');
     </script>
 
-    <!-- NEW CODE -->
-    <script>
-        function resizeCharts(){
-            var body = document.getElementsByTagName('body')[0];
-            
-            if(body.clientWidth > 800)
-                return;
-        
-            // CustomPlot
-            var cp = document.getElementById('customPlot');
-            if(cp){
-                cp.style.scale = (body.clientWidth / (cp.clientWidth+80))
-                cp.style.transformOrigin = 'top left'
-                cp.style.marginBottom = `-${(1-cp.style.scale-0.05)*100}%`;
-            }
-            
-            // CustomPlot2
-            var cp2 = document.getElementById('customPlot2');
-            if(cp2){
-                cp2.style.scale = (body.clientWidth / (cp2.clientWidth+80))
-                cp2.style.transformOrigin = 'top left'
-                cp2.style.marginBottom = `-${(1-cp2.style.scale+0.025)*100}%`;
-            }
-
-            // model-performance-chart
-            var mpc = document.querySelector('#model-performance-chart g');
-            if(mpc){
-                mpc.style.scale = (body.clientWidth / (mpc.clientWidth+80))
-                mpc.style.transformOrigin = 'top left'
-                mpc.style.marginBottom = `-${(1-mpc.style.scale-0.05)*100}%`;
-            }
-
-            // chartsContainer
-            var cc = document.getElementById('chartsContainer');
-            if(cc){
-                cc.style.scale = (body.clientWidth / (cc.clientWidth+80))
-                cc.style.transformOrigin = 'top left'
-                cc.style.marginBottom = `-${(1-cc.style.scale-0.05)*100}%`;
-            }
-
-            // PerformancePlot
-            var pp = document.querySelector('#PerformancePlot g');
-            if(pp){
-                pp.style.scale = (body.clientWidth / (880))
-                pp.style.transformOrigin = 'top left'
-                document.getElementById('PerformancePlot').style.marginBottom = `-${(1-pp.style.scale-0.05-0.1)*100}%`;
-            }
-
-            var chp = document.querySelector('#chordPlot g');
-            if(chp){
-                chp.style.scale = (body.clientWidth / (880))
-                chp.style.transformOrigin = 'top left'
-                document.getElementById('chordPlot').style.marginBottom = `-${(1-chp.style.scale-0.05-0.1)*100}%`;
-            }
-        }
-
-        window.addEventListener('resize',resizeCharts);
-        window.addEventListener('load',resizeCharts);
-    </script>
-    <!--  -->
 
 </head>
 <body style="background-color: rgb(255, 255, 255); padding-top: 100px;">
@@ -726,7 +666,7 @@
     cards.forEach(card => {
         const fullText = card.getAttribute('data-full-text');
         
-        if (fullText.length > maxLength) {
+        if (fullText?.length > maxLength) {
             const truncatedText = fullText.substring(0, maxLength) + '...';
             card.textContent = truncatedText;
         }
@@ -807,8 +747,8 @@
             {model: 'ResUNet', performance: 0.8, percentage: "51.8%"}
         ];
     
-        const margin = {top: 80, right: 20, bottom: 60, left: 150},
-              width = 800 - margin.left - margin.right,
+        const margin = {top: 80, right: 50, bottom: 60, left: 50},
+              width = Math.min(window.screen.width, 700) - margin.left - margin.right,
               height = 500 - margin.top - margin.bottom;
     
         const svg = d3.select("#model-performance-chart")
@@ -829,8 +769,8 @@
         svg.append("g")
            .call(d3.axisLeft(y).tickSize(0)) // Remove tick marks
            .selectAll("text")
-           .style("font-size", "14px"); // Increase font size of y-axis labels
-    
+           .style("font-size", function(d) { return window.screen.width > 800 ? "15px" : "8px"; })
+
         svg.append("g")
            .attr("transform", `translate(0,${height})`)
            .call(d3.axisBottom(x).ticks(5));
@@ -876,7 +816,7 @@
            .attr("x", width / 2)
            .attr("y", -10) // Adjusted to make room for the title
            .attr("text-anchor", "middle")
-           .style("font-size", "14px") // Slightly larger font size for the title
+           .style("font-size", function(d) { return window.screen.width > 800 ? "15px" : "10px"; })
            .style("fill", "black")
            .text("→ Indicates performance gain of our model over competing models");
     
@@ -915,9 +855,9 @@
             {section: 200, modelA: 2.4, modelB: 3.0, modelC: 3.1}
         ];
 
-        const margin = {top: 40, right: 20, bottom: 60, left: 60},
-              width = 800 - margin.left - margin.right,
-              height = 350 - margin.top - margin.bottom;
+        const margin = {top: 50, right: 20, bottom: 30, left: 200},
+              width = Math.min(window.screen.width, 700)- margin.left - margin.right,
+              height = 300 - margin.top - margin.bottom;
 
         const svgLine = d3.select("#model-performance-line-chart")
                           .attr("width", width + margin.left + margin.right)
@@ -1119,7 +1059,7 @@
 </script>
 
 
-<script>
+<!-- <script>
     let slideIndex = 1;
 showSlides(slideIndex);
 
@@ -1149,6 +1089,7 @@ function showSlides(n) {
   dots[slideIndex-1].className += " active";
 }
 </script>
+-->
 
 <script>
     document.addEventListener('DOMContentLoaded', function() {
@@ -1179,13 +1120,13 @@ function showSlides(n) {
             }
         });
     });
-</script>
+</script> 
 
 <script>
 // Set up the SVG
 const svg = d3.select("#customPlot");
-const width = +svg.attr("width");
-const height = +svg.attr("height");
+const width = Math.min(window.screen.width, 800)
+const height = 400
 
 // Define the start, middle, and end points for the lines
 const startPoints = [
@@ -1195,12 +1136,12 @@ const startPoints = [
 ];
 
 const endPoints = [
-    {x: 750, y: 100},
-    {x: 750, y: 200},
-    {x: 750, y: 300}
+    {x: width-(width*0.18), y: 100},
+    {x: width-(width*0.18), y: 200},
+    {x: width-(width*0.18), y: 300}
 ];
 
-const midX = width / 2;
+const midX = width / 2.3;
 const midY = height / 2;
 
 // Define subtle colors representing 2D, 3D, and video, then change to darker after TibbTech
@@ -1350,10 +1291,10 @@ startPoints.forEach((start, i) => {
     }
 
     svg.append("text")
-        .attr("x", endPoints[i].x+50)
+        .attr("x", endPoints[i].x+40)
         .attr("y", endPoints[i].y - 25)
         .attr("text-anchor", "end")
-        .attr("font-size", "15px")
+        .style("font-size", function(d) { return window.screen.width > 800 ? "12px" : "8px"; })        
         .attr("fill", "#000")
         .text(outputLabels[i])
         .style('z-index', "100");
@@ -1368,7 +1309,9 @@ svg.append("image")
     .attr("width", 150)    // Original width
     .attr("height", 150)   // Original height
     .raise(); // Ensure the image is on top
+
 </script>
+
 
 <script>
     // Margin and dimensions
@@ -1967,7 +1910,7 @@ d3.json("threshold visualization/red/intensity_data.json").then(data => {
     });
 </script>
 
-<script>
+<!-- <script>
     // Set up the SVG
     const svg13 = d3.select("#customPlot2");
     const width13 = +svg13.attr("width");
@@ -2204,10 +2147,9 @@ d3.json("threshold visualization/red/intensity_data.json").then(data => {
         .attr("y", convergencePoint13.y-45)  // Adjusted for new size
         .attr("width", 100)    // Original width
         .attr("height", 100)   // Original height
-        .raise(); // Ensure the image is on top -->
-
+        .raise(); // Ensure the image is on top
     
-</script>
+</script> -->
 
 <script>
     document.querySelectorAll('.synced-video').forEach(video => {
@@ -2218,10 +2160,21 @@ d3.json("threshold visualization/red/intensity_data.json").then(data => {
 <script>
     // Load the data from JSON file
     d3.json("synthetic_chord_data_mouse_neuroscience_v8.json").then(function(data) {
-        const width = 850; 
-        const height = 750; 
-        const innerRadius = Math.min(width, 700) * 0.3;
-        const outerRadius = innerRadius * 1.2; 
+        const width = Math.min(window.screen.width, 850); 
+        const height = width; 
+
+        let innerRadius = 0
+        let outerRadius = 0
+
+        if (width < 800) {
+            console.log("width less than 800")
+            innerRadius = Math.min(width, 750) * 0.2;  // Multiply innerRadius by 0.3 if width is less than 850
+            outerRadius = innerRadius * 1.2;  // Update outerRadius based on the new innerRadius
+        } else {
+            console.log("width more than 800")
+            innerRadius =  Math.min(width, 750) * 0.3;
+            outerRadius = innerRadius * 1.2;  // Maintain the outerRadius calculation
+        }
 
         const svg = d3.select("#chordPlot")
             .attr("width", width)
@@ -2325,7 +2278,7 @@ d3.json("threshold visualization/red/intensity_data.json").then(data => {
                     (d.angle > Math.PI ? "rotate(180)" : "");
             })
             .attr("text-anchor", function(d) { return d.angle > Math.PI ? "end" : null; })
-            .style("font-size", "15px")
+            .style("font-size", function(d) { return window.screen.width > 800 ? "15px" : "8px"; })
             .text((d, i) => categories[d.index])
             .text((d, i) => categories[d.index].replace("Biomarker", "Genetic Marker"));
 
@@ -2446,28 +2399,29 @@ d3.json("threshold visualization/red/intensity_data.json").then(data => {
         { label: "Genetic Markers", color: d3.interpolateGreens(0.5) }
     ];
     
+    const itemSpacing = width / legendData.length - 10;  // Calculate spacing between legend item
     // Append legend items
     legend.selectAll("g")
         .data(legendData)
         .enter().append("g")
         .attr("class", "legend-item")
-        .attr("transform", (d, i) => `translate(${210+ i * 150}, 30)`);  // Positioning items horizontally
-    
+        .attr("transform", (d, i) => `translate(${(i * itemSpacing)}, 30)`);  // Dynamically positioning items    
+        
     // Append color boxes
     legend.selectAll(".legend-item")
         .append("rect")
         .attr("x", 0)
         .attr("y", 0)
-        .attr("width", 20)
+        .attr("width", 18)
         .attr("height", 20)
         .attr("fill", d => d.color);
     
     // Append labels
     legend.selectAll(".legend-item")
         .append("text")
-        .attr("x", 30)
+        .attr("x", 20)
         .attr("y", 15)  // Aligning text vertically with the rectangles
-        .attr("font-size", "14px")
+        .style("font-size", function(d) { return window.screen.width > 800 ? "14px" : "8px"; })
         .text(d => d.label);
     });
 </script>
@@ -2482,8 +2436,8 @@ d3.json("threshold visualization/red/intensity_data.json").then(data => {
         { model: "Ours", score: 0.7771 },
     ];
 
-    const margin76 = { top: 20, right: 20, bottom: 30, left: 100 }; // Adjusted left margin for y-axis labels
-    const width76 = 700 - margin76.left - margin76.right;
+    const margin76 = { top: 20, right: 20, bottom: 30, left: 80 }; // Adjusted left margin for y-axis labels
+    const width76 = Math.min(window.screen.width, 700) - margin76.left - margin76.right;
     const height76 = 300 - margin76.top - margin76.bottom;
 
     const svg76 = d3.select("#PerformancePlot")
@@ -2504,10 +2458,10 @@ d3.json("threshold visualization/red/intensity_data.json").then(data => {
     svg76.append("text")
         .attr("x", width76 / 2)
         .attr("y", -margin76.top / 4)  // Position the title above the plot
-        .attr("text-anchor", "middle")
-        .attr("font-size", "15px")
+        .attr("text-anchor", function(d) { return window.screen.width > 800 ? "middle" : "middle"; })
         .attr("fill", "black")
-        .text("Performance Comparison with Competing Models");
+        .text("Performance Comparison with Competing Models")
+        .style("font-size", function(d) { return window.screen.width > 800 ? "15px" : "10px"; });
 
     svg76.append("g")
         .attr("class", "x-axis76")
@@ -2610,6 +2564,9 @@ d3.json("threshold visualization/red/intensity_data.json").then(data => {
 <script>
     document.getElementById('DD_video').playbackRate = 2.0;
 </script>
+
+
+
 
 </body>
 </html>
