@@ -1685,27 +1685,3 @@ video {
 
 }
 
-/* Tablet screens (max-width: 1024px) */
-@media (max-width: 1024px) {
-    .inline-image {
-        max-width: 50px; /* Reduce max-width */
-        margin-right: 20px; /* Adjust margins */
-    }
-}
-
-/* Small tablet and large phone screens (max-width: 800px) */
-@media (max-width: 800px) {
-    .inline-image {
-        max-width: 40px; /* Further reduce max-width */
-        margin-right: 20px; /* Adjust margins */
-    }
-}
-
-/* Mobile screens (max-width: 480px) */
-@media (max-width: 480px) {
-    .inline-image {
-        max-width: 30px; /* Ensure image takes full width */
-        margin-right: 20px; 
-        border-radius: 5px; /* Reduce border radius for small screens */
-    }
-}
