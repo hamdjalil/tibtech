@@ -775,7 +775,7 @@
     
                 // Event listener to stop the video at the last frame
                 video.addEventListener('timeupdate', function() {
-                    const buffer = 0.05; // Adjust this buffer to fine-tune the exact stopping point
+                    const buffer = 0.1; // Adjust this buffer to fine-tune the exact stopping point
                     if (video.currentTime >= video.duration - buffer) {
                         video.pause();
                         video.currentTime = video.duration - buffer; // Set to last frame
