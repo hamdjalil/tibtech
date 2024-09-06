@@ -47,9 +47,9 @@ document.addEventListener("DOMContentLoaded", () => {
                 date: '2024',
                 title: 'CellSeg3D: self-supervised 3D cell segmentation for microscopy',
                 authors: 'Cyril Achard, Timokleia Kousi, Markus Frey, Maxime Vidal, Yves Paychere, Colin Hofmann, Asim Iqbal, Sebastien B Hausmann, Stephane Pages, Mackenzie W Mathis',
-                conference: 'bioRxiv',
+                conference: 'eLife',
                 abstract: 'Understanding the complex three-dimensional structure of cells is crucial across many disciplines in biology and especially in neuroscience. Here, we introduce a novel 3D self-supervised learning method designed to address the inherent complexity of quantifying cells in 3D volumes, often in cleared neural tissue. We offer a new 3D mesoSPIM dataset and show that CellSeg3D can match state-of-the-art supervised methods. Our contributions are made accessible through a Python package with full GUI integration in napari.',
-                url: 'https://www.biorxiv.org/content/biorxiv/early/2024/05/17/2024.05.17.594691.full.pdf'
+                url: 'https://elifesciences.org/reviewed-preprints/99848v1'
             },
             {
                 id: 5,
