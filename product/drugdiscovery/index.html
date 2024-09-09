@@ -747,7 +747,7 @@
             {model: 'ResUNet', performance: 0.8, percentage: "51.8%"}
         ];
     
-        const margin = {top: 80, right: 50, bottom: 60, left: 50},
+        const margin = {top: 80, right: 50, bottom: 60, left: 60},
               width = Math.min(window.screen.width, 700) - margin.left - margin.right,
               height = 500 - margin.top - margin.bottom;
     
@@ -769,7 +769,7 @@
         svg.append("g")
            .call(d3.axisLeft(y).tickSize(0)) // Remove tick marks
            .selectAll("text")
-           .style("font-size", function(d) { return window.screen.width > 800 ? "15px" : "8px"; })
+           .style("font-size", function(d) { return window.screen.width > 800 ? "12px" : "8px"; })
 
         svg.append("g")
            .attr("transform", `translate(0,${height})`)
