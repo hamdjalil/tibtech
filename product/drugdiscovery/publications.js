@@ -43,6 +43,15 @@ document.addEventListener("DOMContentLoaded", () => {
                 url: 'https://openaccess.thecvf.com/content/CVPR2024W/CVsports/papers/Qazi_ExerAIde_AI-assisted_Multimodal_Diagnosis_for_Enhanced_Sports_Performance_and_Personalised_CVPRW_2024_paper.pdf'
             },
             {
+                id: 20,
+                date: '2024',
+                title: 'AnimalFormer: Multimodal Vision Framework for Behavior-based Precision Livestock Farming',
+                authors: 'Ahmed Qazi, Taha Razzaq, Asim Iqbal',
+                conference: 'Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition',
+                abstract: 'We introduce a multimodal vision framework for precision livestock farming, harnessing the power of GroundingDINO, HQSAM, and ViTPose models. This integrated suite enables comprehensive behavioral analytics from video data without invasive animal tagging. GroundingDINO generates accurate bounding boxes around livestock, while HQSAM segments individual animals within these boxes. ViTPose estimates key body points, facilitating posture and movement analysis. Demonstrated on a sheep dataset with grazing, running, sitting, standing, and walking activities, our framework extracts invaluable insights:activity and grazing patterns, interaction dynamics, and detailed postural evaluations. Applicable across species and video resolutions, this framework revolutionizes noninvasive livestock monitoring for activity detection, counting, health assessments, and posture analyses. It empowers data-driven farm management, optimizing animal welfare and productivity through AI-powered behavioral understanding.',
+                url: 'https://arxiv.org/pdf/2406.09711'
+            },
+            {
                 id: 4,
                 date: '2024',
                 title: 'CellSeg3D: self-supervised 3D cell segmentation for microscopy',
