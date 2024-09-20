@@ -22,6 +22,17 @@ body {
 }
 
 
+.axis-label {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.title {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
 .head {
     margin-top: -15px;
     text-align: center; /* Left-align all headings */
@@ -327,8 +338,9 @@ h1 {
     float: center; 
     margin-top: 10px;
     margin-bottom: 15px; /* Added margin-bottom for spacing */
-    margin-left: 20px;
+    margin-left: 0px;
     margin-right: 20px;
+    margin-top: -30px;
     /* Make the image float to the right of the text */
 }
 
@@ -1690,3 +1702,77 @@ video {
 
 }
 
+#video11-container {
+    position: relative;
+    width: 80%;
+    max-width: 800px;
+    height: 450px;
+    margin-bottom: 25px;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.video11 {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 55px;
+    opacity: 0;
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+    transform: translateX(0) scale(1); /* Reset the position and scale of the video */
+    z-index: 2;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.video11.active {
+    opacity: 1;
+    transform: translateX(0) scale(1); /* Active video stays in the center at full size */
+    z-index: 2;
+}
+
+.video11.fade-out {
+    opacity: 0;
+    transform: translateX(0) scale(0.9); /* Slightly shrink the video when fading out */
+}
+
+/* Animation for moving out to the right with scaling down */
+.video11.move-out-right {
+    transform: translateX(100%) scale(0.5); /* Move out to the right and shrink */
+    opacity: 0;
+}
+
+/* Animation for moving in from the left with scaling up */
+.video11.move-in-left {
+    transform: translateX(0) scale(1); /* Start from the left and small size */
+    opacity: 1;
+}
+
+.video11.active.move-in-left {
+    transform: translateX(0) scale(1); /* Move to center and scale up to full size */
+}
+
+/* Position the heading above the video container */
+.video11-heading {
+    opacity: 0;
+    margin-bottom: 15px; /* Adjust margin for space between heading and video */
+    font-size: 24px;
+    text-align: left;
+    transition: opacity 0.2s ease-in-out;
+    z-index: 1; /* No need for absolute positioning */
+    position: absolute; /* Keep the heading outside of the video container */
+    z-index: 100;
+}
+
+.video11-heading.active {
+    opacity: 1;
+}
+
+.video11-heading.fade-out {
+    opacity: 0;
+}
+
+.video11-heading.fade-in {
+    opacity: 1;
+}

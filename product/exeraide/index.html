@@ -9,21 +9,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
-    <style>
-
-
-        .axis-label {
-            font-size: 12px;
-            font-weight: bold;
-        }
-
-        .title {
-            font-size: 24px;
-            text-align: center;
-            margin-bottom: 20px;
-        }
-    </style>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-38PESE35X3"></script>
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
@@ -59,9 +47,9 @@
         <section class="hero">
             <div class="hero-content">
                 <div class="info-container">
-                <div class="hero-title">Multimodal Artificial Intelligence-driven Drug Discovery</div>
+                <div class="hero-title">Multimodal Artificial Intelligence-driven Personalized Rehabilitation</div>
                 <div class="hero-sub-title">
-                    Tibbling Technologies' multimodal drug discovery AI framework, seamlessly integrates genetics, imaging and behavioral data to accelerate drug discovery.                </div>
+                    Tibbling Technologies' multimodal rehabilitation AI framework, seamlessly integrates video, imaging and behavioral data to accelerate recovery.                </div>
                     <br>
                     <p class="author-info">Asim Iqbal, PhD</p>
                     <!-- <p class="author-info">June 18, 2024</p> -->
@@ -103,11 +91,11 @@
                     <div class="post-text-2">
                         <!-- <h3>The statistics are staggering</h3> -->
                         <br>
-                        <div id="chartsContainer" style="text-align: center; margin-top:-50px;">
+                        <div id="chartsContainer" style="text-align: center; margin-top: -50px;">
                             <div id="costPlot" style="display: inline-block; margin: 0 10px;"></div>
-                            <div id="disorderPlot" style="display: inline-block; margin: 0 10px;"></div>
-                            <div id="usBrainDisorderPlot" style="display: inline-block; margin: 0 10px;"></div>
-                        </div>
+                            <div id="globalDisordersPlot" style="display: inline-block; margin: 0 10px;"></div>
+                            <div id="usDisordersPlot" style="display: inline-block; margin: 0 10px;"></div>
+                          </div>          
                         <br>
                     <!-- <p>
                         <p>The urgency to address brain disorders is staggering based on the statistics from the 
@@ -147,143 +135,16 @@
                     <br><br><br><br>
 
                     <h3>
-                        <b>High-precision spatial gene expression quantification</b> <img src="1.png" style="width:50px; margin-bottom: -10px;" class="inline-image">
+                        <b>Our solution</b>
                     </h3>
-                    <!-- <img src="1.png" style="width:100px" class="inline-image"> -->
-
-                    <p>
-                        Our platform consists of a high-performing deep neural network to classify, localize and segment cellular features. This capability ensures precise identification of neuronal structures and facilitates 
-                        the role of specific neuronal subtypes in drug design. 
-                    </p>
-
-                    <div id="container-wrapper"  style="display: flex; flex-wrap: nowrap;">
-                        <!-- Top Image with Bounding Boxes -->
-                        <div id="visualization-container" style="width: 350px">
-                            <svg id="top-image" width="350" height="350" style="position: relative; margin-left: -15px; margin-right: -30px;">
-                                <image xlink:href="figs/brain_sect_23.png" width="350" height="350"></image>
-                                
-                                <!-- Bounding Boxes on Top Image -->
-                                <rect id="bbox-yellow" x="130" y="90" width="30" height="30" fill="none" stroke="orange" stroke-width="2"></rect>
-                            
-                                <!-- Green Area Bounding Box -->
-                                <rect id="bbox-green" x="140" y="140" width="30" height="30" fill="none" stroke="green" stroke-width="2"></rect>
-                                
-                                <!-- Red Area Bounding Box -->
-                                <rect id="bbox-red" x="200" y="230" width="30" height="30" fill="none" stroke="red" stroke-width="2"></rect>
-                            </svg>
-                        
-                            <div id="top-image-caption" style="text-align: center; margin-top: -15px; margin-left: 13.2px">
-                                <p style="text-align: center; font-size: 14px; font-family: 'Montserrat', sans-serif; font-weight: bold; color: #333;">
-                                    Brain Section with Multiple Genetic Markers
-                                </p>
-                            </div>
-                        </div>
-                    
-                        <!-- Yellow Channel -->
-                        <div id="visualization-container" style="margin: 0 5px; position: relative;width: 350px">
-                            <img id="image-layer-yellow" src="threshold visualization/yellow/876.png" alt="Image" style="border: 5px solid orange; width: 350px; height: 350px;">
-                            <img id="mask-layer-yellow" src="threshold visualization/yellow/876_mask.png" style="border: 5px solid orange; width: 350px; height: 350px; opacity: 0; position: absolute; top: 0; left: 0; z-index: 0;">
-                            <svg id="intensity-layer-yellow" style="width: 350px; height: 350px;"></svg>
-                            <div id="slider-container">
-                                <input type="range" class="intensity-yellow" id="intensity-slider" min="0" max="1" step="0.01" value="0">
-                            </div>
-                            <div id="slider-instruction" style="font-size: 17px;"> Genetic Marker 1 Intensity Control</div>
-                        </div>
-                    
-                        <!-- Green Channel -->
-                        <div id="visualization-container" style="margin: 0 5px; position: relative;width: 350px">
-                            <img id="image-layer-green" src="threshold visualization/green/281.png" alt="Image" style="border: 5px solid green; width: 350px; height: 350px;">
-                            <img id="mask-layer-green" src="threshold visualization/green/281_mask.png" style="border: 5px solid green; width: 350px; height: 350px; opacity: 0; position: absolute; top: 0; left: 0; z-index: 0;">
-                            <svg id="intensity-layer-green" style="width: 350px; height: 350px;"></svg>
-                            <div id="slider-container">
-                                <input type="range" class="intensity-green" id="intensity-slider" min="0" max="1" step="0.01" value="0">
-                            </div>
-                            <div id="slider-instruction" style="font-size: 17px;"> Genetic Marker 2 Intensity Control</div>
-                        </div>
-                    
-                        <!-- Red Channel -->
-                        <div id="visualization-container" style="margin: 0 5px; position: relative;width: 350px">
-                            <img id="image-layer-red" src="threshold visualization/red/1924.png" alt="Image" style="border: 5px solid red; width: 350px; height: 350px;">
-                            <img id="mask-layer-red" src="threshold visualization/red/1924_mask.png" style="border: 5px solid red; width: 350px; height: 350px; opacity: 0; position: absolute; top: 0; left: 0; z-index: 0;">
-                            <svg id="intensity-layer-red" style="width: 350px; height: 350px;"></svg>
-                            <div id="slider-container">
-                                <input type="range" class="intensity-red" id="intensity-slider" min="0" max="1" step="0.01" value="0">
-                            </div>
-                            <div id="slider-instruction" style="font-size: 17px;"> Genetic Marker 3 Intensity Control</div>
-                        </div>
-                    </div>                    
-                    <div class="button-container">
-                        <button id="toggle-mask" class="reg-button" style="z-index: 10; margin-top: -25px; margin-bottom: 10px; background-color: black;">Turn segmentation masks on/off</button>
-                    </div>  
-                    <div id="tooltip"></div>
-
-                    <p>
-                        An integrated intensity control allows us to fine-tune cellular segmentation, ensuring precise 
-                        detection and quantification of neurons labeled with specific drug enhancers while filtering out the non-target 
-                        signals for accurate assesment.
+                    <img src="ExerAIde.svg" alt="Image 1" class="inline-image-2">
+                    <p class="caption">
+                        Figure 1: Our comprehensive analysis framework designed for personalized therapy. It provides a clear overview of the data flow and processing steps within our end-to-end solution, demonstrating how advanced machine learning techniques are employed to analyze and improve joint movements for optimized rehabilitation.
                     </p>
                     
-                    <img src="figs/neuron_detection.svg" alt="Grazing Image" class="inline-image">
-                    
-
-                    <!-- <div id="running" class="behavior-section post-container">
-                        <h3 style="word-spacing: 500px;">P4 P56</h3>
-                        <img src="figs/hippocampus and isocortex.svg" alt="Running Image" class="inline-image">                        
-                    </div>
-
-                    <div id="grazing" class="behavior-section post-container" style="display:none;">
-                        <h3 style="word-spacing: 507px;">P4 P14</h3>
-
-                        <img src="figs/hindbrain.svg" alt="Running Image" class="inline-image">                        
-                        
-                    </div>
-
-                    <div id="resting" class="behavior-section post-container" style="display:none;">
-                        <h3 style="word-spacing: 490px;">P56 P14</h3>
-                        <img src="figs/pre-thalamus.svg" alt="Running Image" class="inline-image"> 
-                    </div>
-
-                    <div class="button-container">
-
-                        <button id = 'running_btn' onclick="showSection('running', this)" class="navigate-button default-focused">Hippocampus and Isocortex</button>
-                        <button id = 'grazing_btn' onclick="showSection('grazing', this)" class="navigate-button">Hindbrain</button>
-                        <button id = 'resting_btn' onclick="showSection('resting', this)" class="navigate-button">Pre-Thalamus</button>
-                    </div> -->
-
-                    <div class="image-section">
-                        <div class="image-container">
-                            <h6 style="text-align: center">GAD1 (red), CamkIIa-Cre/Ai14 (green)</h6>
-                            <img src="figs/ns1.svg" alt="Neuron Segmentation Image" class="side-image">
-                        </div>
-
-                        <div class="image-container">
-                            <h6 style="text-align: center">CamkIIa mRNA in situ hybridized</h6>
-                            <img src="figs/ns3.svg" alt="Brain Mapping Image" class="side-image">
-                        </div>
-                        
-                    </div>
-
-                    <div class="image-section">
-                        <div class="image-container">
-                            <h6 style="text-align: center">GAD1 (red), Gpr26-CreKO250/Ai14 (green)</h6>
-                            <img src="figs/ns2.svg" alt="Neuron Segmentation Image" class="side-image">
-                        </div>
-                        <div class="image-container">
-                            <h6 style="text-align: center">NISSL staining</h6>
-                            <img src="figs/ns4.svg" alt="Brain Mapping Image" class="side-image">
-                        </div>
-                        
-                    </div>
 
                     <br> 
-                    
-                    
-
-                    <!-- <p>
-                        Our platform also provides an intensity control to fine-tune neuron segmentation by selecting the optimal intensity 
-                        threshold, enabling precise detection and quantification of individual neurons labeled with specific 
-                        enhancers, while filtering out non-target signals for accurate analysis.
-                    </p> -->
+                
 
                     
                     <br>
@@ -292,75 +153,23 @@
                         The HD95 score is a critical indicator of accuracy in biomedical imaging, particularly in assessing how closely 
                         segmented cellular structures align with the ground-truth data.
                     </p>
-                    <svg id="model-performance-chart" width="800" height="500" style="margin-top:-30px; margin-bottom:50px"></svg>
 
                     <br><br><br><br>
-                    <h3><b>Brain-wide spatial genomics </b><img src="2.png" style="width:50px; margin-bottom: -10px;" class="inline-image">
+                    <h3><b>Brain-wide spatial genomics </b>
                     </h3>
-                    <!-- <img src="2.png" style="width:200px" class="inline-image"> -->
 
-                    <div class="button-container">
-                        <button id="toggleOverlay" class="reg-button pressed">Register Brains</button>
-                    </div>
-                    <div class="image-pair-container">
-                        <div class="image-container3">
-                            <img id="baseImage1" src="figs/reg/reg1.svg" alt="Base Image 1">
-                            <img id="overlayImage1" src="figs/reg/reg_1.svg" alt="Overlay Image 1" style="opacity: 0;">
-                        </div>
-                        <div class="image-container3">
-                            <img id="baseImage2" src="figs/reg/reg2.svg" alt="Base Image 2">
-                            <img id="overlayImage2" src="figs/reg/reg_2.svg" alt="Overlay Image 2" style="opacity: 0;">
-                        </div>
-                    </div>
+
 
                     <p>
                         Next, our framework performs precise image registration by mapping the standard brain atlases to 2D/3D brain volumes of different genetic markers, 
                         ensuring for accurate brain-wide spatial genomics.
                     </p>
-                    <video id="controlled-video" class="video" muted playsinline style="width:100%; max-width:1500px">
-                        <source src="figs/SeBRe_GIF3.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                    <br>
-                    <!-- <p>
-                        Accurately registered brain images ensure that each anatomical region is mapped consistently across 
-                        different imaging modalities, enabling precise localization and comparative analysis. This
-                        alignment facilitates a deeper understanding of complex brain structures and their functions, providing 
-                        a robust foundation for neuroanatomical studies.
-                    </p> -->
-                    <img src="figs/brain_registration.svg" alt="Grazing Image" class="inline-image">
-                                        
-                    <!-- <p>
-                        Precise 3D brain registration ensures accurate alignment of brain regions, enabling consistent neuron 
-                        quantification within specific areas. This technology allows for reliable counting and analysis of 
-                        neurons in specific brain regions offering clearer insights into brain 
-                        function and neurological conditions.
-                    </p> -->
                     
 
                     <p>
                         Our deep neural network outperforms the existing image registration models by a significant margin, ensuring that each anatomical region is mapped with precision, enabling 
                         scientists to gain spatially-localised performance of their drug enhancers.
                     </p>
-
-                    <!-- <div style="display: flex; flex-wrap: wrap; justify-content: space-between;">
-                        <video class="synced-video" width="48%" autoplay loop muted playsinline style="margin-bottom:10px; border-radius:15px;">
-                            <source src="3d visuall 11.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                        <video class="synced-video" width="48%" autoplay loop muted playsinline style="margin-bottom:10px; border-radius:15px;">
-                            <source src="3d visuall 12.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                        <video class="synced-video" width="48%" autoplay loop muted playsinline style="margin-bottom:10px; margin-top:10px; border-radius:15px;">
-                            <source src="3d visuall 21.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                        <video class="synced-video" width="48%" autoplay loop muted playsinline style="margin-bottom:10px; margin-top:10px; border-radius:15px;">
-                            <source src="3d visuall 22.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                    </div> -->
                                         
                     <div style="position: relative; z-index: 1000; background-color: white; display: flex; justify-content: center; align-items: center;">                        
                         <svg id="PerformancePlot" width="800" height="500" style="margin-bottom:50px"></svg>
@@ -369,10 +178,9 @@
                     <br>
                     <br>
                     <br><br><br><br>
-                    <h3><b>Behavior assesment for drug efficacy</b> <img src="3.png" style="width:50px; margin-bottom: -10px; " class="inline-image">
+                    <h3><b>Behavior assesment for drug efficacy</b> 
                     </h3>              
 
-                    <!-- <img src="3.png" style="width:200px" class="inline-image"> -->
 
                     <p>
                         Our platform offers precise tracking of animal behavior, allowing for the detailed analysis of 
@@ -382,19 +190,6 @@
                         evaluating the efficacy of interventions or treatments.
                     </p>
                 
-                    <div class="button-container">
-                        <button id="toggleButton-tracking" class="reg-button pressed" style="z-index: 10; margin-top: 5px; margin-bottom: -5px; background-color: grey;">Start keypoint tracking </button>
-                    </div>
-                    <div id="container-tracking">
-                        <video id="videoBase-tracking" autoplay muted loop style="border-radius: 20px;">
-                            <source src="mouse-vid2.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                        <video id="videoOverlay-tracking" autoplay muted loop style="border-radius: 20px;">
-                            <source src="4d video.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                    </div> 
                     <br>
 
                     <p>
@@ -416,51 +211,19 @@
                 <div class="post-container">
                     
                     <div class="post-text-2">
-                        <h3><b>AI-driven multimodal drug discovery</b> <img src="1.png" style="width:50px; margin-bottom: -10px; " class="inline-image"><img src="2.png" style="width:50px; margin-bottom: -10px; margin-left:-18px;" class="inline-image"><img src="3.png" style="width:50px; margin-bottom: -10px; margin-left:-18px;" class="inline-image"></h3>
+                        <h3><b>AI-driven multimodal drug discovery</b> 
 
                         <div id="plots-container" style="display: flex;">
                             <div id="tooltip-chord" class="tooltip-chord" style="opacity: 0;"></div>
                             <svg id="chordPlot"></svg>
                         </div>
                         
-
-                        <!-- <svg id="customPlot2" width="800" height="400"></svg>  -->
                         <br>
-                        
-
-                        <p>
-
-                            By mapping the multimodal data insights, we provide our partners access to determine the brain-wide efficacy of their drug enhancers and how their expression correlates to the behavioral assesment. 
-                            These multimodal insights provide us a deep understanding of disease and help in designing neurological treatment plans. 
-                            The chord plot illustrates the intricate relationships between sample genetic markers, brain regions, and 
-                            behavioral tasks.
-
-                        </p>
-                        
+                    
                     </div>
                 </div>
             </article>
 
-
-            <!-- <article>
-                <div class="post-container">
-                    <div class = "post-text-2">
-                        <h3>Our platform is more than just a tool</h3>
-                        <p>
-                            Our platform redefines drug discovery by bridging spatial genomics with advanced neuroimaging and 
-                            behavioral analytics. We offer seamless integration from neuron segmentation to mapping gene 
-                            expression in brain region, enabling precise correlation between molecular data 
-                            and brain function.
-
-                            <br><br>
-                            This holistic approach accelerates the discovery of targeted therapies by directly linking genetic 
-                            insights to behavioral outcomes. With cutting-edge tools across 2D, 3D, and 4D data modalities, our platform 
-                            is indispensable for driving innovation, ensuring that every step from molecular analysis to 
-                            behavioral assessment is executed with precision and efficiency.
-                       </p>  
-                    </div>
-                </div>
-            </article> -->
 
             <h4>References</h2>
                 <p style="font-size:15px">
@@ -468,25 +231,6 @@
                     • A Iqbal, et al., 2019. Developing a brain atlas through deep learning. <i>Nature Machine Intelligence</i>, 1(6), pp.277-287.<br>
                     • A Iqbal, et al., 2019. DeNeRD: high-throughput detection of neurons for brain-wide analysis with deep learning. <i>Scientific Reports</i>, 9(1), p.13828.
                 </p>
-            
-            <div class="learn-more" style="padding-top:100px"></div>
-            <a href="https://www.biorxiv.org/content/10.1101/2024.07.17.603924v1" target="_blank" style="text-decoration: none; color: inherit;">
-            <h2>Read more on our partnership with:</h2>
-                <div class="center-col audiowide" style="row-gap: 5px; margin-bottom: 80px;">
-                    <div class="experience-row center-row" style="display: flex; align-items: center;">
-                        <div class="center-col experience-col" style="display: flex; flex-direction: column; align-items: center; margin-right: 20px;">
-                            <img src="/assets/experience/partners/Broad.png" height="50" style="margin-bottom: 30px; margin-top:30px" />
-                            <img src="/assets/experience/partners/HMS.png" height="55" style="margin-bottom: 10px;" />
-                        </div>
-                        <p style="font-size: 4em; font-family: 'Roboto', sans-serif; margin: 0 20px; line-height: 1; text-align: center; display: flex; align-items: center; justify-content: center;">
-                            x
-                        </p>
-                        <img src="logo.svg" height="135" style="vertical-align: middle;" />
-                    </div>
-                </div>
-            </a>
-            </div>
-
                 
 
 
@@ -592,6 +336,7 @@
 
 
 
+    <script src="script.js"></script>
 
 </body>
 </html>

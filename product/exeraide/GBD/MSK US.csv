@@ -1,0 +1,36 @@
+Location,Year,Age,Sex,Cause of death or injury,Measure,Value,Lower bound,Upper bound
+United States of America,1990,All ages,Both,Musculoskeletal disorders,YLDs,7132368.025785418,5181544.148861764,9621731.046567917
+United States of America,1991,All ages,Both,Musculoskeletal disorders,YLDs,7233276.277574024,5250411.816917479,9760418.798359971
+United States of America,1992,All ages,Both,Musculoskeletal disorders,YLDs,7340174.552719078,5338228.696138061,9882400.73992438
+United States of America,1993,All ages,Both,Musculoskeletal disorders,YLDs,7449378.603558061,5417743.984554155,9994157.287598783
+United States of America,1994,All ages,Both,Musculoskeletal disorders,YLDs,7559230.441541947,5500989.378003509,10108884.79271229
+United States of America,1995,All ages,Both,Musculoskeletal disorders,YLDs,7679397.062656107,5591787.913708252,10237609.64979536
+United States of America,1996,All ages,Both,Musculoskeletal disorders,YLDs,7799031.396181513,5677979.80574883,10343017.13826498
+United States of America,1997,All ages,Both,Musculoskeletal disorders,YLDs,7923057.435469195,5771098.779511184,10482890.574907515
+United States of America,1998,All ages,Both,Musculoskeletal disorders,YLDs,8050256.729027437,5860858.388550019,10618992.902745968
+United States of America,1999,All ages,Both,Musculoskeletal disorders,YLDs,8178885.040793784,5960404.302161356,10778205.897368217
+United States of America,2000,All ages,Both,Musculoskeletal disorders,YLDs,8315843.620943368,6075527.961101493,10964456.65281891
+United States of America,2001,All ages,Both,Musculoskeletal disorders,YLDs,8460065.79779907,6178573.468691062,11155845.218640327
+United States of America,2002,All ages,Both,Musculoskeletal disorders,YLDs,8616044.928638354,6297866.403110335,11368511.60674452
+United States of America,2003,All ages,Both,Musculoskeletal disorders,YLDs,8779546.354005216,6416053.755617991,11575631.859267466
+United States of America,2004,All ages,Both,Musculoskeletal disorders,YLDs,8941502.178088669,6537022.036928475,11809092.43556859
+United States of America,2005,All ages,Both,Musculoskeletal disorders,YLDs,9100752.609098798,6656375.537859658,12022940.756756606
+United States of America,2006,All ages,Both,Musculoskeletal disorders,YLDs,9255936.392321112,6766489.755515775,12247164.371026134
+United States of America,2007,All ages,Both,Musculoskeletal disorders,YLDs,9419270.587274982,6879641.521417205,12479888.77715835
+United States of America,2008,All ages,Both,Musculoskeletal disorders,YLDs,9585783.12754369,7000905.013102587,12740135.502091927
+United States of America,2009,All ages,Both,Musculoskeletal disorders,YLDs,9747747.947388284,7111263.707214341,12998292.52526342
+United States of America,2010,All ages,Both,Musculoskeletal disorders,YLDs,9905629.604410404,7232361.489570432,13220319.33480266
+United States of America,2011,All ages,Both,Musculoskeletal disorders,YLDs,10058944.168613886,7348838.05603762,13425382.02497238
+United States of America,2012,All ages,Both,Musculoskeletal disorders,YLDs,10220824.147382963,7474238.189058582,13635763.101193022
+United States of America,2013,All ages,Both,Musculoskeletal disorders,YLDs,10384201.457478238,7599372.321635203,13852959.516692815
+United States of America,2014,All ages,Both,Musculoskeletal disorders,YLDs,10545974.5802667,7731313.607169578,14042687.476201843
+United States of America,2015,All ages,Both,Musculoskeletal disorders,YLDs,10704569.731338505,7848722.515952553,14251691.094192658
+United States of America,2016,All ages,Both,Musculoskeletal disorders,YLDs,10887266.776199494,7994807.195355532,14482278.087078832
+United States of America,2017,All ages,Both,Musculoskeletal disorders,YLDs,11111362.57542652,8168460.703526975,14759573.435512666
+United States of America,2018,All ages,Both,Musculoskeletal disorders,YLDs,11340880.654201224,8341424.193430506,15056576.285112703
+United States of America,2019,All ages,Both,Musculoskeletal disorders,YLDs,11536262.53250365,8485924.81547814,15314131.016635047
+United States of America,2020,All ages,Both,Musculoskeletal disorders,YLDs,11672505.455818232,8594883.612368463,15460678.503220856
+United States of America,2021,All ages,Both,Musculoskeletal disorders,YLDs,11763281.839521203,8664978.163639685,15578275.753631674
+
+"Institute for Health Metrics and Evaluation (IHME). GBD Compare Data Visualization. Global Burden of Disease (GBD) Study 2021. Seattle, WA: IHME, University of Washington, 2023. Available from http://vizhub.healthdata.org/gbd-compare. (Accessed 9/16/2024)."
+"For terms and conditions of use, please visit http://www.healthdata.org/about/terms-and-conditions"

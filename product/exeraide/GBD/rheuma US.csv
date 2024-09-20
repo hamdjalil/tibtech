@@ -1,0 +1,36 @@
+Location,Year,Age,Sex,Cause of death or injury,Measure,Value,Lower bound,Upper bound
+United States of America,1990,All ages,Both,Rheumatoid arthritis,YLDs,97779.68785950344,67478.51287897452,132703.79738261102
+United States of America,1991,All ages,Both,Rheumatoid arthritis,YLDs,97309.42570259742,67055.3817378984,131497.08570590487
+United States of America,1992,All ages,Both,Rheumatoid arthritis,YLDs,97301.90566604324,66859.27646194599,131815.48192605277
+United States of America,1993,All ages,Both,Rheumatoid arthritis,YLDs,97711.56748810424,67378.02462748314,132910.4993933857
+United States of America,1994,All ages,Both,Rheumatoid arthritis,YLDs,98468.48158596054,67431.74050935607,133768.1662182514
+United States of America,1995,All ages,Both,Rheumatoid arthritis,YLDs,99701.17129973591,69047.14373130801,135335.37151464084
+United States of America,1996,All ages,Both,Rheumatoid arthritis,YLDs,101563.96767169471,69997.40640210948,138401.4382475489
+United States of America,1997,All ages,Both,Rheumatoid arthritis,YLDs,104455.05696664084,72516.20933689109,141458.37705147197
+United States of America,1998,All ages,Both,Rheumatoid arthritis,YLDs,107869.12874094404,75487.7800700558,145856.60608269356
+United States of America,1999,All ages,Both,Rheumatoid arthritis,YLDs,111469.98385792928,77461.82085709777,150877.0967773564
+United States of America,2000,All ages,Both,Rheumatoid arthritis,YLDs,114828.59144580526,79566.4633010034,155306.74136291211
+United States of America,2001,All ages,Both,Rheumatoid arthritis,YLDs,118144.26946676668,81672.85111583823,160212.224941193
+United States of America,2002,All ages,Both,Rheumatoid arthritis,YLDs,121709.24441662732,83867.92690562275,164531.02468383365
+United States of America,2003,All ages,Both,Rheumatoid arthritis,YLDs,125487.91368269836,87387.09908149861,169410.42229254113
+United States of America,2004,All ages,Both,Rheumatoid arthritis,YLDs,129123.9060618934,89738.11690086703,175120.3791890684
+United States of America,2005,All ages,Both,Rheumatoid arthritis,YLDs,132916.5420076447,92221.98372485868,179795.91334129305
+United States of America,2006,All ages,Both,Rheumatoid arthritis,YLDs,136586.15459488897,94192.52355395362,184403.90461749607
+United States of America,2007,All ages,Both,Rheumatoid arthritis,YLDs,140410.25412440774,96843.4515215227,189989.8161655492
+United States of America,2008,All ages,Both,Rheumatoid arthritis,YLDs,144267.76221993685,99470.956653345,195345.95749659085
+United States of America,2009,All ages,Both,Rheumatoid arthritis,YLDs,148087.05655617052,101903.51958022943,200805.0946270292
+United States of America,2010,All ages,Both,Rheumatoid arthritis,YLDs,151760.16883450365,105172.45862103764,205282.48858554932
+United States of America,2011,All ages,Both,Rheumatoid arthritis,YLDs,155227.4912557229,107915.22208089172,209354.52560027083
+United States of America,2012,All ages,Both,Rheumatoid arthritis,YLDs,158882.01447370465,110417.1243128912,215008.83910896585
+United States of America,2013,All ages,Both,Rheumatoid arthritis,YLDs,162378.63293533152,112442.40659074098,219762.86415193992
+United States of America,2014,All ages,Both,Rheumatoid arthritis,YLDs,165848.74350962878,115106.25419654672,223768.05385013556
+United States of America,2015,All ages,Both,Rheumatoid arthritis,YLDs,169075.5790731649,117116.82466448296,229227.17540991405
+United States of America,2016,All ages,Both,Rheumatoid arthritis,YLDs,172092.84564773136,120270.92770404991,232370.21526903697
+United States of America,2017,All ages,Both,Rheumatoid arthritis,YLDs,175094.16151675864,121867.96010270796,237494.14008819577
+United States of America,2018,All ages,Both,Rheumatoid arthritis,YLDs,177972.48912077607,123239.09842515354,240641.7508910153
+United States of America,2019,All ages,Both,Rheumatoid arthritis,YLDs,180729.4575142463,126416.81135846168,243629.2350857323
+United States of America,2020,All ages,Both,Rheumatoid arthritis,YLDs,183537.06235456385,129000.212781186,248590.51956406672
+United States of America,2021,All ages,Both,Rheumatoid arthritis,YLDs,185860.46048866084,129757.43201612894,251039.6573646894
+
+"Institute for Health Metrics and Evaluation (IHME). GBD Compare Data Visualization. Global Burden of Disease (GBD) Study 2021. Seattle, WA: IHME, University of Washington, 2023. Available from http://vizhub.healthdata.org/gbd-compare. (Accessed 9/16/2024)."
+"For terms and conditions of use, please visit http://www.healthdata.org/about/terms-and-conditions"
