@@ -325,7 +325,7 @@ video.addEventListener('timeupdate', function() {
 
         // Dynamically calculate distances based on screen size and move elements
         moveDown(".animate-title", -0.075, 2); // Move title down 7.5% of screen height
-        moveDown(".animate-subtitle", 0.55, 2); // Move subtitle down 55% of screen height
+        moveDown(".animate-subtitle", 0.53, 2); // Move subtitle down 55% of screen height
 
         // Set timeout for moving them back up after 7 seconds
         setTimeout(function() {
@@ -422,12 +422,11 @@ analyzeJointsBtn.addEventListener('click', function () {
 });
 
 // Create an IntersectionObserver to detect when the full video enters the viewport
-const observer2 = new IntersectionObserver((entries) => {
+const observer2 = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
         if (entry.intersectionRatio === 1) { // When the entire video is fully in the viewport (100%)
             videoBase.play(); // Start playing when the full video is in the viewport
-        } else {
-            videoBase.pause(); // Pause the video when the full video is not fully visible
+            observer.unobserve(videoBase); // Unobserve the video after it starts playing once
         }
     });
 }, { threshold: 1 }); // Set threshold to 1 (100%) so that the callback fires only when the entire video is visible
