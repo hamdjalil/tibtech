@@ -259,66 +259,6 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-document.addEventListener('DOMContentLoaded', function() {
-    const videos = [
-        { id: 'video1', headingId: 'heading1', speed: 15.0, headingText: 'Sports Rehabilitation' },
-        { id: 'video2', headingId: 'heading2', speed: 15.0, headingText: 'Old Age' },
-        { id: 'video3', headingId: 'heading3', speed: 15.0, headingText: 'Disease-based Therapy' }
-    ];
-
-    let currentVideoIndex = 0;
-    const videoElements = videos.map(v => document.getElementById(v.id));
-    const headingElements = videos.map(v => document.getElementById(v.headingId));
-
-    // Function to play the next video and transition heading
-    function playNextVideo() {
-        const currentVideoElement = videoElements[currentVideoIndex];
-        const currentHeadingElement = headingElements[currentVideoIndex];
-
-        const nextVideoIndex = (currentVideoIndex + 1) % videos.length;
-        const nextVideoElement = videoElements[nextVideoIndex];
-        const nextHeadingElement = headingElements[nextVideoIndex];
-
-        // Animate the current video moving out to the right
-        currentVideoElement.classList.add('move-out-right');
-        currentHeadingElement.classList.add('fade-out');
-
-        nextVideoElement.classList.add('move-in-left');
-        nextHeadingElement.classList.add('fade-in');
-
-        // Wait for the fade-out animation to complete
-        setTimeout(() => {
-            // Remove the current video from view
-            currentVideoElement.classList.remove('active', 'move-out-right');
-            nextVideoElement.classList.add('active');
-            nextVideoElement.classList.remove('move-in-left');
-
-            // Remove the current heading from view and show the next heading
-            currentHeadingElement.classList.remove('active', 'fade-out');
-            nextHeadingElement.classList.add('active');
-            nextHeadingElement.classList.remove('fade-in');
-
-            // Play the next video
-            nextVideoElement.playbackRate = videos[nextVideoIndex].speed;
-            nextVideoElement.currentTime = 0;
-            nextVideoElement.play();
-
-            currentVideoIndex = nextVideoIndex;
-        }, 1000); // Wait for animation to complete (matches the CSS transition time)
-    }
-
-    // Attach ended event listener to each video to play the next video when one ends
-    videoElements.forEach((videoElement) => {
-        videoElement.addEventListener('ended', playNextVideo);
-    });
-
-    // Play the first video with correct speed and heading
-    const firstVideoElement = videoElements[0];
-    const firstHeadingElement = headingElements[0];
-    firstVideoElement.playbackRate = videos[0].speed;
-    firstVideoElement.play();
-    firstHeadingElement.classList.add('active');
-});
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -465,9 +405,7 @@ analyzeJointsBtn.addEventListener('click', function () {
 
         // Ensure video pauses at the last frame (just before the end)
         const pauseAtLastFrame = function () {
-
-            if (videoBase.currentTime >= videoBase.duration-1) {
-
+            if (videoBase.currentTime >= videoBase.duration - 1) {
                 videoBase.pause(); // Pause at the last frame
                 videoBase.removeEventListener('timeupdate', pauseAtLastFrame); // Remove listener once video is paused
             }
@@ -482,3 +420,17 @@ analyzeJointsBtn.addEventListener('click', function () {
         videoBase.play(); // Start video again
     }
 });
+
+// Create an IntersectionObserver to detect when the full video enters the viewport
+const observer2 = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.intersectionRatio === 1) { // When the entire video is fully in the viewport (100%)
+            videoBase.play(); // Start playing when the full video is in the viewport
+        } else {
+            videoBase.pause(); // Pause the video when the full video is not fully visible
+        }
+    });
+}, { threshold: 1 }); // Set threshold to 1 (100%) so that the callback fires only when the entire video is visible
+
+// Observe the video element
+observer2.observe(videoBase);
