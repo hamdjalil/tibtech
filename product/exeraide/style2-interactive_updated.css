@@ -45,6 +45,7 @@ body {
     flex-direction: column;
     align-items: center;
     margin-bottom: 20px;
+    position: relative;
 }
 
 .hero-content {
@@ -198,8 +199,6 @@ h1 {
     box-sizing: border-box;
     background-color: white;
     transition: top 0.4s ease-in-out; /* Smooth transition for hiding/showing the navbar */
-
-    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2);
     z-index: 19;
 }
 
@@ -242,13 +241,16 @@ h1 {
     margin-top: -100px;
 }
 
-.hero .author-info {
-    font-size: 0.9em;
+.author-info {
+    position: relative;
+    font-size: 1.2em;
     color: #666;
     font-family: 'Lora', serif;
-    margin-bottom: -10px;
     text-align: center;
+    
 }
+
+
 
 
 .hero .main-image {
@@ -287,7 +289,9 @@ h1 {
 }
 
 .content {
+    position: relative;
     width: 100%;
+    padding: auto;
 }
 
 
@@ -300,14 +304,15 @@ h1 {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    position: relative;
 }
 
 .post-text {
     width: 100%;
-    max-width: 1200px; /* Adjust this value as needed */
+    max-width: 850px; /* Adjust this value as needed */
     text-align: left;
     font-family: 'Inter Tight', serif;
-    
+    padding-top: 100vh;
 }
 
 .post-text-2 {
@@ -315,6 +320,7 @@ h1 {
     max-width: 850px; /* Adjust this value as needed */
     text-align: left;
     font-family: 'Inter Tight', serif;
+
     
 }
 
@@ -340,7 +346,6 @@ h1 {
     margin-bottom: 15px; /* Added margin-bottom for spacing */
     margin-left: 0px;
     margin-right: 20px;
-    margin-top: -30px;
     /* Make the image float to the right of the text */
 }
 
@@ -636,49 +641,6 @@ h1 {
 
 .demo {
     width: 80%;
-}
-
-
-#navbar {
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 10px 40px 10px 40px;
-    box-sizing: border-box;
-    background-color: white;
-    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2);
-    z-index: 19;
-}
-
-#hidden-nav {
-    position: fixed;
-    z-index: 20;
-    top: 0;
-    height: 100%;
-    width: 300px;
-    /* background-color: #36454F; */
-    background-color: #373737;
-    right: -300px;
-    transition: all 0.5s;
-    color: white;
-    padding: 60px 30px;
-    box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    row-gap: 30px;
-}
-
-#hidden-nav > div:hover{
-    cursor: pointer;
-    opacity: 0.5;
 }
 
 .tagline {
@@ -1118,12 +1080,9 @@ button.list-show-more:focus, button.list-show-less:focus {
         padding:0px;
     }
     .learn-more h2 {
-        .learn-more h2 {
             margin-top:50px;
             margin-bottom:50px;
             margin-right:0px;
-        
-        }
     }
     .post .second-description {
         margin:30px;
@@ -1555,7 +1514,7 @@ video {
 }
 
 #videoBase-tracking, #videoOverlay-tracking {
-    position: absolute;
+    position: relative;
     top: 0;
     left: 0;
     width: 100%;
@@ -1775,4 +1734,212 @@ video {
 
 .video11-heading.fade-in {
     opacity: 1;
+}
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.hero {
+    position: absolute;
+    width: 100%;
+    height: 100vh;  /* Full screen height */
+    top: 0;  /* Ensure it starts from the top */
+    overflow: hidden;
+}
+
+#navbar {
+    height: 5rem;
+    width: 100%; /* Ensures full width */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 0.625rem 2.5rem;
+    box-sizing: border-box;
+    background-color: rgba(255, 255, 255, 0); /* Start with transparent background */
+    z-index: 19;
+    transition: top 0.1s ease-in-out, background-color 0.1s ease-in-out; /* Adjusted transition timing */
+}
+
+
+#navbar.scrolled {
+    background-color: rgba(255, 255, 255, 1); /* Transition to white background when scrolled */
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: background-color 1s ease-in-out; /* Smooth transition for background color */
+}
+
+
+#hidden-nav {
+    position: fixed; /* Fixed position */
+    z-index: 20; /* Above the main navbar for overlay effect */
+    top: 0; /* Aligns to the top of the viewport */
+    height: 100%; /* Full height of the viewport */
+    width: 18.75rem; /* Width of the hidden navigation */
+    background-color: #aaaaaa; /* Background color */
+    right: -300px; /* Starts hidden to the right of the viewport */
+    transition: right 0.5s; /* Smooth transition for sliding in/out */
+    color: white; /* Text color */
+    padding: 3.75rem 1.875rem; /* Padding inside the hidden navigation */
+    box-sizing: border-box; /* Includes padding in width and height calculations */
+    font-family: Arial, Helvetica, sans-serif; /* Font family for text */
+    font-size: 1.25rem; /* Font size for text */
+    display: flex; /* Enables the use of flexbox properties */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    row-gap: 1.875rem; /* Space between items */
+}
+
+#hidden-nav > div:hover {
+    cursor: pointer; /* Changes the cursor to indicate clickable items */
+    opacity: 0.5; /* Transparency effect on hover */
+}
+
+.video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh; /* Full height of the viewport */
+    z-index: -1;
+    overflow: hidden; /* Ensure the video stays within the container */
+}
+
+.video {
+    width: 100vw; /* Set the width to 100% of the viewport width */
+    height: 100vh; /* Set the height to 100% of the viewport height */
+    object-fit: cover; /* This will ensure the video covers the container */
+    object-position: center; /* Center the video */
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Dim effect */
+    z-index: 1;
+}
+
+.hero-content {
+    position: absolute;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;  /* Align the content at the top */
+    align-items: center;
+    text-align: center;
+    padding-top: 10vh;  /* Responsive padding using viewport height */
+    width: 100%;
+}
+
+.hero-title {
+    padding-top: 30vh; /* Default padding for small to medium screens */
+    font-size: 4vw; /* Use viewport width for font size */
+    font-weight: bold;
+    color: white;
+    font-family: 'Inter Tight','Montserrat', serif;
+    font-weight: 500;
+    line-height: 1.3;
+    text-align: center;
+}
+
+.hero-sub-title {
+    color: white;
+    font-family: 'Inter Tight', 'Georgia', serif;
+    font-size: 1.5vw; /* Use viewport width for font size */
+    line-height: 1.6;
+    margin: auto;
+    text-align: center;
+    width: 80%;
+}
+
+/* Add media queries for larger screens */
+@media (min-width: 1200px) {
+    .hero-title {
+        padding-top: 30vh; /* Increase padding for larger screens */
+        font-size: 3vw; /* Slightly smaller font size */
+    }
+
+    .hero-sub-title {
+        font-size: 1.2vw; /* Adjust font size for larger screens */
+        line-height: 1.8; /* Adjust line height */
+        width: 70%; /* Slightly reduce width to fit properly */
+    }
+}
+
+@media (min-width: 1600px) {
+    .hero-title {
+        padding-top: 20vh; /* Further increase padding for very large screens */
+        font-size: 2.5vw; /* Reduce font size on very large screens */
+    }
+
+    .hero-sub-title {
+        font-size: 1.1vw; /* Reduce font size on very large screens */
+        width: 60%; /* Adjust width for better readability */
+    }
+}
+
+/* Move down keyframes */
+/* Move down keyframes */
+@keyframes move-down {
+    0% {
+        transform: translateY(0);
+        color: white;
+    }
+    100% {
+        transform: translateY(var(--move-distance)); /* Use CSS variable for the down distance */
+        color: black;
+    }
+}
+
+/* Move up back to original position keyframes */
+@keyframes move-up {
+    0% {
+        transform: translateY(var(--move-distance)); /* Start from the moved-down position */
+        color: black;
+    }
+    100% {
+        transform: translateY(0); /* Move back to the original position */
+        color: white;
+    }
+}
+
+.animate-title,
+.animate-subtitle {
+    animation: none; /* Initially, no animation */
+}
+
+/* Ensure animation retains its final state */
+.animate-title,
+.animate-subtitle {
+    animation-fill-mode: forwards; /* Keep the final state of the animation */
+}
+
+/* Breathe effect on hover */
+.inline-image-2:hover {
+    transform: scale(1.05); /* Slightly zoom in */
+    animation: breathe 2s infinite; /* Add breathe animation */
+}
+
+/* Define breathe effect */
+@keyframes breathe {
+    0% {
+        transform: scale(1); /* Start at normal size */
+    }
+    50% {
+        transform: scale(1.1); /* Zoom in slightly */
+    }
+    100% {
+        transform: scale(1); /* Return to normal size */
+    }
 }

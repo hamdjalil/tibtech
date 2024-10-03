@@ -321,3 +321,164 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// Hide the navbar initially and show when user scrolls
+window.onscroll = function() { toggleNavbar() };
+
+function toggleNavbar() {
+    const navbar = document.getElementById("navbar");
+    if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+        navbar.style.top = "0";  // Show the navbar
+    } else {
+        navbar.style.top = "-100px";  // Hide the navbar
+    }
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// Function to reset the elements to their original position (no animation)
+function resetPosition(className) {
+    const element = document.querySelector(className);
+    element.style.animation = 'none'; // Remove any running animation
+    element.style.transform = 'translateY(0)'; // Reset to original position
+    element.style.color = 'white'; // Reset the color
+    element.style.removeProperty('--move-distance'); // Remove the custom property
+    element.style.removeProperty('animation'); // Make sure we reset the inline animation
+}
+
+// Function to restart the animations (re-apply classes)
+function restartAnimations() {
+    const heroContent = document.querySelector(".hero-content");
+    heroContent.classList.remove("down-animation-triggered");
+
+    // Wait for a short delay to let the browser apply the removal
+    setTimeout(function() {
+        heroContent.classList.add("down-animation-triggered");
+    }, 100); // Short delay to re-apply the class and restart animations
+}
+
+// Function to move element down with dynamic ratio based on screen size
+function moveDown(className, baseDistanceRatio, duration) {
+    const element = document.querySelector(className);
+    const screenHeight = window.innerHeight; // Get the viewport height
+    const moveDistance = baseDistanceRatio * screenHeight; // Calculate move distance based on ratio and screen height
+
+    element.style.animation = `move-down ${duration}s ease-in-out forwards`;
+    element.style.setProperty('--move-distance', `${moveDistance}px`); // Apply dynamic distance in pixels
+}
+
+// Function to move element back to the original position (move up)
+function moveUpToOriginalPosition(className, duration) {
+    const element = document.querySelector(className);
+    element.style.animation = `move-up ${duration}s ease-in-out forwards`;
+    element.style.setProperty('--move-new-distance', `0px`); // Move back to original position
+}
+
+// Get the video element
+const video = document.getElementById("DD_video");
+
+// Add an event listener for time updates to trigger the animation
+video.addEventListener('timeupdate', function() {
+    // Trigger the downward animation at 22 seconds
+    if (video.currentTime >= 22 && !document.querySelector(".hero-content").classList.contains("down-animation-triggered")) {
+        document.querySelector(".hero-content").classList.add("down-animation-triggered");
+
+        // Dynamically calculate distances based on screen size and move elements
+        moveDown(".animate-title", -0.075, 2); // Move title down 7.5% of screen height
+        moveDown(".animate-subtitle", 0.55, 2); // Move subtitle down 55% of screen height
+
+        // Set timeout for moving them back up after 7 seconds
+        setTimeout(function() {
+            moveUpToOriginalPosition(".animate-title", 2); // Move title back to original position
+            moveUpToOriginalPosition(".animate-subtitle", 2); // Move subtitle back to original position
+        }, 7000); // 7 second delay before moving back to original position
+    }
+});
+
+// Add an event listener for when the video ends
+video.addEventListener('timeupdate', function() {
+    if (video.currentTime < 22 && document.querySelector(".hero-content").classList.contains("down-animation-triggered")) {
+        document.querySelector(".hero-content").classList.remove("down-animation-triggered");
+}
+});
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    let lastScrollTop = 0;
+    const navbar = document.getElementById('navbar');
+    const navbarHeight = navbar.offsetHeight;
+    const offsetThreshold = 700; // The y offset threshold for triggering the background change
+
+    window.addEventListener("scroll", function() {
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+        // Handle navbar transparency at the top of the page
+        if (scrollTop <= offsetThreshold) {
+            navbar.style.backgroundColor = "rgba(255, 255, 255, 0)";
+            navbar.style.top = "0";  // Make sure navbar is visible at the top
+        } else {
+            navbar.style.backgroundColor = "rgba(255, 255, 255, 1)"; // Add background color when scrolled
+        }
+
+        // Handle navbar hide/show on scroll
+        if (scrollTop > lastScrollTop) {
+            // Scrolling down
+            if (scrollTop > offsetThreshold) {
+                navbar.style.top = `-${navbarHeight}px`; // Hide navbar
+            }
+        } else {
+            // Scrolling up
+            navbar.style.top = "0"; // Show navbar
+        }
+
+        lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // Update lastScrollTop to current position
+    });
+});
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Get the video element and button
+const videoBase = document.getElementById("videoBase-tracking");
+const analyzeJointsBtn = document.getElementById("toggleButton-tracking");
+
+// Event listener to stop the video at 1.5 seconds and reset button
+videoBase.addEventListener('timeupdate', function () {
+    if (videoBase.currentTime >= 1.5 && !analyzeJointsBtn.classList.contains('pressed')) {
+        videoBase.pause(); // Pause the video at 1.5 seconds
+    }
+    
+    // Ensure the button is reset if the video starts from the beginning
+    if (videoBase.currentTime < 1.5 && analyzeJointsBtn.classList.contains('pressed')) {
+        analyzeJointsBtn.classList.remove('pressed');
+        analyzeJointsBtn.style.backgroundColor = 'grey'; // Reset button to grey
+    }
+});
+
+// Event listener for button to play the video till the end
+analyzeJointsBtn.addEventListener('click', function () {
+    if (!analyzeJointsBtn.classList.contains('pressed')) {
+        // If button is not pressed, resume the video and play till the end
+        analyzeJointsBtn.classList.add('pressed'); // Set button to pressed state
+        analyzeJointsBtn.style.backgroundColor = 'black'; // Change button color to black
+        videoBase.play();
+
+        // Ensure video pauses at the last frame (just before the end)
+        const pauseAtLastFrame = function () {
+
+            if (videoBase.currentTime >= videoBase.duration-1) {
+
+                videoBase.pause(); // Pause at the last frame
+                videoBase.removeEventListener('timeupdate', pauseAtLastFrame); // Remove listener once video is paused
+            }
+        };
+
+        videoBase.addEventListener('timeupdate', pauseAtLastFrame);
+    } else {
+        // If the button is pressed (black), reset the video to the beginning and pause at 1.5 again
+        analyzeJointsBtn.classList.remove('pressed');
+        analyzeJointsBtn.style.backgroundColor = 'grey'; // Reset button to grey
+        videoBase.currentTime = 0; // Reset video to the beginning
+        videoBase.play(); // Start video again
+    }
+});
