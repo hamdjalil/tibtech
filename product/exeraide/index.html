@@ -46,7 +46,7 @@
                 <div class="info-container">
                     <div class="hero-title animate-title">ExerAIde</div>
                     <div class="hero-sub-title animate-subtitle">
-                        Our multimodal physical rehabilitation AI framework
+                        Our personalized multimodal physical rehabilitation AI framework
                     </div>
                     <br>
                 </div>
@@ -116,9 +116,9 @@
 
                     <div id="chartsContainer" style="text-align: center; margin-top: -50px;">
                         <div id="costPlot" style="display: inline-block; margin: 0 10px;"></div>
+                        <div id="sportsPlot" style="display: inline-block; margin: 0 10px;"></div>
                         <div id="globalDisordersPlot" style="display: inline-block; margin: 0 10px;"></div>
-                        <div id="usDisordersPlot" style="display: inline-block; margin: 0 10px;"></div>
-                      </div> 
+                    </div> 
                     <p style="margin-top: -280px;">
                         Our <b>Multimodal AI framework</b> consists of advanced machine learning models to discover the relevant features in the molecular, spatial genomics, and 
                         behavioral data to expedite the drug discovery process. Working closely with our partners, we <b>accelerate</b> the end-to-end drug discovery process through 
@@ -132,6 +132,48 @@
                     <br><br><br><br>
 
                     <h3>
+                        <b>Sports Rehabilitation</b>
+                    </h3>
+                    <svg style="margin-top:-100px;" id="customPlot3" width="800" height="400"></svg>
+                    <p>
+                        Our AI model significantly outperforms current state-of-the-art approaches, as evident by its superior performance. 
+                        The HD95 score is a critical indicator of accuracy in biomedical imaging, particularly in assessing how closely 
+                        segmented cellular structures align with the ground-truth data.
+                    </p>
+
+                    
+
+                    <br> 
+                
+
+                    
+                    <br>
+                    <p>
+                        Our AI model significantly outperforms current state-of-the-art approaches, as evident by its superior performance. 
+                        The HD95 score is a critical indicator of accuracy in biomedical imaging, particularly in assessing how closely 
+                        segmented cellular structures align with the ground-truth data.
+                    </p>
+
+                    <div class="button-container">
+                        <button id="toggleButton-tracking" class="reg-button pressed" style="z-index: 10; margin-top: 5px; margin-bottom: -5px; background-color: grey;">
+                            Analyze joints </button>
+                    </div>
+
+                    <video id="videoBase-tracking" autoplay muted loop style="border-radius: 20px;">
+                        <source src="exeraide animation.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <br><br>
+
+                    <p>
+                        Our AI-driven framework quantifies the animals’ performance in various tasks, 
+                        such as motor coordination, spatial memory, and more. This enables researchers and clinicians 
+                        to monitor progress, identify areas of improvement, and make data-driven decisions in their drug assesment. 
+                        Whether you’re focusing on rehabilitation, learning processes, or cognitive assessments, our model 
+                        delivers the high-resolution tracking needed to quantify and understand behavioral outcomes.
+                    </p>
+
+                    <h3>
                         <b>Physical Rehabilitation</b>
                     </h3>
                     <svg style="margin-top:-100px;" id="customPlot" width="800" height="400"></svg>
@@ -141,6 +183,11 @@
                         The HD95 score is a critical indicator of accuracy in biomedical imaging, particularly in assessing how closely 
                         segmented cellular structures align with the ground-truth data.
                     </p>
+
+                    <div id="chartsContainer" style="text-align: center; margin-bottom: -20vh;">
+                        <div id="usDisordersPlot" style="display: inline-block; margin: 0 10px;"></div>
+                    </div>  
+
                     <p>
                         Our platform integrates advanced  across 2D, 3D, and 
                         4D data modalities, enhancing your wet lab’s capabilities with precision and efficiency. This integration allows for 
@@ -186,29 +233,6 @@
 
                     <br><br><br><br>
 
-                    <h3>
-                        <b>Sports Rehabilitation</b>
-                    </h3>
-                    <svg style="margin-top:-100px;" id="customPlot3" width="800" height="400"></svg>
-                    <p>
-                        Our AI model significantly outperforms current state-of-the-art approaches, as evident by its superior performance. 
-                        The HD95 score is a critical indicator of accuracy in biomedical imaging, particularly in assessing how closely 
-                        segmented cellular structures align with the ground-truth data.
-                    </p>
-
-                    
-
-                    <br> 
-                
-
-                    
-                    <br>
-                    <p>
-                        Our AI model significantly outperforms current state-of-the-art approaches, as evident by its superior performance. 
-                        The HD95 score is a critical indicator of accuracy in biomedical imaging, particularly in assessing how closely 
-                        segmented cellular structures align with the ground-truth data.
-                    </p>
-
                     <br><br><br><br>
                     <h3><b>Personalized exercise plans</b>
                     </h3>
@@ -231,15 +255,7 @@
                     </h3>              
 
 
-                    <div class="button-container">
-                        <button id="toggleButton-tracking" class="reg-button pressed" style="z-index: 10; margin-top: 5px; margin-bottom: -5px; background-color: grey;">
-                            Analyze joints </button>
-                    </div>
-
-                    <video id="videoBase-tracking" autoplay muted loop style="border-radius: 20px;">
-                        <source src="exeraide animation.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
+                    
 
                     <br>
                     <p>
@@ -252,88 +268,70 @@
                 
                     <br>
 
-                    <p>
-                        Our AI-driven framework quantifies the animals’ performance in various tasks, 
-                        such as motor coordination, spatial memory, and more. This enables researchers and clinicians 
-                        to monitor progress, identify areas of improvement, and make data-driven decisions in their drug assesment. 
-                        Whether you’re focusing on rehabilitation, learning processes, or cognitive assessments, our model 
-                        delivers the high-resolution tracking needed to quantify and understand behavioral outcomes.
-                    </p>
+                    
 
                     </div>
                 </div>
             </article>
 
-                    <br><br><br><br>
-            <article class="post">
-                <div class="post-container">
-                    
-                    <div class="post-text-2">
-                        <h3><b>AI-driven multimodal drug discovery</b> 
 
-                        <div id="plots-container" style="display: flex;">
-                            <div id="tooltip-chord" class="tooltip-chord" style="opacity: 0;"></div>
-                            <svg id="chordPlot"></svg>
-                        </div>
-                        
-                        <br>
-                    
-                    </div>
-                </div>
-            </article>
-
-
-            <h4>References</h2>
+            <h4>References</h4>
                 <p style="font-size:15px">
                     • A Qazi, A Iqbal, 2024. ExerAIde: AI-assisted Multimodal Diagnosis for Enhanced Sports Performance and Personalised Rehabilitation. <i>Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition</i>, pp.3430-3438.<br>
                 </p>
                 
+            <br><br><br>
+            <h4>Read our research blog on the tech behind ExerAIde</h4>
+                    <div class="info-button-container">
+                        <ul><button class="info-button" onclick="navigateTopaper()" >ExerAIde<i class="fas fa-external-link-alt"></i>
+                        </button></ul>
+            </div>
 
 
             <article>
                 <div class="learn-more" style="padding-top:150px">
-                    <h2>Read more about our Multimodal AI framework</h2>
+                    <h2>Read more about our Multimodal AI</h2>
                     <div class="slider-2">        
+                        <a href="https://openaccess.thecvf.com/content/CVPR2024W/CVsports/papers/Qazi_ExerAIde_AI-assisted_Multimodal_Diagnosis_for_Enhanced_Sports_Performance_and_Personalised_CVPRW_2024_paper.pdf" target="_blank">
+                            <div class="card">
+                                <div class="card-header">
+                                    <img src="exeraide_fig.png" alt="drug discovery" class="card-logo">
+                                </div>
+                                <div class="card-body">
+                                    <p class="card-date">2024</p>
+                                    <h3>ExerAIde: AI-assisted Multimodal Diagnosis for Enhanced Sports Performance and Personalised Rehabilitation</h3>
+                                    <p class="card-participant" style="text-align: left;">
+                                        Ahmed Qazi, Asim Iqbal
+                                    </p>
+                                </div>
+                            </div>
+                        </a>
+
+                        <a href="https://openaccess.thecvf.com/content/CVPR2024W/Vision4Ag/papers/Qazi_AnimalFormer_Multimodal_Vision_Framework_for_Behavior-based_Precision_Livestock_Farming_CVPRW_2024_paper.pdf" target="_blank">
+                            <div class="card">
+                                <div class="card-header">
+                                    <img src="animalformer_fig.png" alt="MIT Logo" class="card-logo">
+                                </div>
+                                <div class="card-body">
+                                    <p class="card-date">2024</p>
+                                    <h3>AnimalFormer: Multimodal Vision Framework for Behavior-based Precision Livestock Farming</h3>
+                                    <p class="card-participant" style="text-align: left;">
+                                        Ahmed Qazi, Taha Razzaq, Asim Iqbal
+                                    </p>
+                                </div>
+                            </div>
+                        </a>
+
                         <a href="https://www.biorxiv.org/content/biorxiv/early/2024/07/22/2024.07.17.603924.full.pdf" target="_blank">
                             <div class="card">
                                 <div class="card-header">
-                                    <img src="dd.png" alt="drug discovery" class="card-logo">
-                                </div>
-                                <div class="card-body">
-                                    <p class="card-date">2024</p>
-                                    <h3>An enhancer-AAV toolbox to target and manipulate distinct interneuron subtypes</h3>
-                                    <p class="card-participant" style="text-align: left;">
-                                        Elisabetta Furlanis, Min Dai, Brenda Leyva Garcia, Josselyn Vergara, Ana Pereira, Kenneth Pelkey, Thien Tran....
-                                    </p>
-                                </div>
-                            </div>
-                        </a>
-
-                        <a href="https://www.biorxiv.org/content/10.1101/2024.08.24.609505v1.full.pdf" target="_blank">
-                            <div class="card">
-                                <div class="card-header">
-                                    <img src="segmentanyNeuron.png" alt="MIT Logo" class="card-logo">
-                                </div>
-                                <div class="card-body">
-                                    <p class="card-date">2024</p>
-                                    <h3>Segment AnyNeuron</h3>
-                                    <p class="card-participant" style="text-align: left;">
-                                        Taha Razzaq, Ahmed Qazi, Asim Iqbal
-                                    </p>
-                                </div>
-                            </div>
-                        </a>
-
-                        <a href="https://www.biorxiv.org/content/10.1101/2024.08.24.609508v1.full.pdf" target="_blank">
-                            <div class="card">
-                                <div class="card-header">
-                                    <img src="3d brain disorder.png" alt="MIT Logo" class="card-logo">
+                                    <img src="dd.png" alt="MIT Logo" class="card-logo">
                                 </div>
                                 <div class="card-body">
                                     <p class="card-date">2023</p>
-                                    <h3>Multimodal 3D Image Registration for Mapping Brain Disorders</h3>
+                                    <h3>An enhancer-AAV toolbox to target and manipulate distinct interneuron subtypes</h3>
                                     <p class="card-participant" style="text-align: left;">
-                                        Hassan Mahmood, Syed Mohammed Shamsul Islam, Asim Iqbal
+                                        Elisabetta Furlanis, Min Dai, Brenda Leyva Garcia, Josselyn Vergara, Ana Pereira, Kenneth Pelkey, Thien Tran....
                                     </p>
                                 </div>
                             </div>
@@ -393,6 +391,8 @@
 
 
     <script src="script.js"></script>
+    <script src="publications.js"></script>
+
 
 </body>
 </html>

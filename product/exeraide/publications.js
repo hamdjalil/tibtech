@@ -1,6 +1,24 @@
 document.addEventListener("DOMContentLoaded", () => {
     const publications = [
         {
+            id: 3,
+            date: '2024',
+            title: 'ExerAIde: AI-assisted Multimodal Diagnosis for Enhanced Sports Performance and Personalised Rehabilitation',
+            authors: 'Ahmed Qazi, Asim Iqbal',
+            conference: 'Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition',
+            abstract: 'The quest for personalized sports therapy has long been a concern for practitioners and patients alike, aiming for recovery protocols that transcend the one-size-fits-all approach. In this study, we introduce a novel framework for personalized sports therapy through automated joint movement analysis. By synthesizing the analytical capabilities of a Random Forest Classifier (RFC) with a Vector Quantized Variational AutoEncoder (VQ-VAE), we systematically discern the nuanced kinematic differences between healthy and pathological exercise movements. The RFC prioritizes the joints by their discriminative influence on movement healthiness, which informs the VQ-VAE’s derivation of a distilled list of pivotal joints. This dual-model approach not only identifies a hierarchy of joint importance but also ascertains the minimal subset of joints critical for distinguishing between healthy and unhealthy movement patterns. The resultant data-driven insight into joint-specific dynamics underpins the development of targeted, individualized rehabilitation programs. Our results exhibit promising directions in sports therapy, showcasing the potential of machine learning in developing personalized therapeutic interventions.',
+            url: 'https://openaccess.thecvf.com/content/CVPR2024W/CVsports/papers/Qazi_ExerAIde_AI-assisted_Multimodal_Diagnosis_for_Enhanced_Sports_Performance_and_Personalised_CVPRW_2024_paper.pdf'
+        },
+        {
+            id: 20,
+            date: '2024',
+            title: 'AnimalFormer: Multimodal Vision Framework for Behavior-based Precision Livestock Farming',
+            authors: 'Ahmed Qazi, Taha Razzaq, Asim Iqbal',
+            conference: 'Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition',
+            abstract: 'We introduce a multimodal vision framework for precision livestock farming, harnessing the power of GroundingDINO, HQSAM, and ViTPose models. This integrated suite enables comprehensive behavioral analytics from video data without invasive animal tagging. GroundingDINO generates accurate bounding boxes around livestock, while HQSAM segments individual animals within these boxes. ViTPose estimates key body points, facilitating posture and movement analysis. Demonstrated on a sheep dataset with grazing, running, sitting, standing, and walking activities, our framework extracts invaluable insights:activity and grazing patterns, interaction dynamics, and detailed postural evaluations. Applicable across species and video resolutions, this framework revolutionizes noninvasive livestock monitoring for activity detection, counting, health assessments, and posture analyses. It empowers data-driven farm management, optimizing animal welfare and productivity through AI-powered behavioral understanding.',
+            url: 'https://openaccess.thecvf.com/content/CVPR2024W/Vision4Ag/papers/Qazi_AnimalFormer_Multimodal_Vision_Framework_for_Behavior-based_Precision_Livestock_Farming_CVPRW_2024_paper.pdf'
+        },
+        {
             id: 1,
             date: '2024',
             title: 'An enhancer-AAV toolbox to target and manipulate distinct interneuron subtypes',
@@ -33,15 +51,6 @@ document.addEventListener("DOMContentLoaded", () => {
             abstract: 'With increasing neuroimaging modalities and data diversity, mapping brain regions to a standard atlas template has become a challenging problem. Machine learning in general and deep learning, in particular, have been providing robust solutions for several neuroimaging tasks, including brain image registration and segmentation. However, these methods require a large amount of data for groundtruth labels, annotated by human experts, which is time-consuming. In this work, we introduce NeuroAtlas, an AI-based framework for atlas generation and brain region segmentation. We showcase an end-to-end solution for brain registration and segmentation by providing i) a deep learning modeling suite with a variety of high-performing model architectures to map a brain atlas onto the input brain section and ii) a Graphical User Interface (GUI)-based plugin for large-scale data annotation with a feature of modifying the predicted labels for active learning. We demonstrate a robust performance of our framework on the human brains, captured through various imaging modalities and age groups, and demonstrate its application for mouse brains as well. NeuroAtlas tool will be open-sourced and entirely compatible with both local as well as cloud-based computing so that users can easily adapt to their neuroimaging custom datasets.',
             url: 'https://www.biorxiv.org/content/10.1101/2024.08.24.609507v1.full.pdf'
         },
-            {
-                id: 3,
-                date: '2024',
-                title: 'ExerAIde: AI-assisted Multimodal Diagnosis for Enhanced Sports Performance and Personalised Rehabilitation',
-                authors: 'Ahmed Qazi, Asim Iqbal',
-                conference: 'Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition',
-                abstract: 'The quest for personalized sports therapy has long been a concern for practitioners and patients alike, aiming for recovery protocols that transcend the one-size-fits-all approach. In this study, we introduce a novel framework for personalized sports therapy through automated joint movement analysis. By synthesizing the analytical capabilities of a Random Forest Classifier (RFC) with a Vector Quantized Variational AutoEncoder (VQ-VAE), we systematically discern the nuanced kinematic differences between healthy and pathological exercise movements. The RFC prioritizes the joints by their discriminative influence on movement healthiness, which informs the VQ-VAE’s derivation of a distilled list of pivotal joints. This dual-model approach not only identifies a hierarchy of joint importance but also ascertains the minimal subset of joints critical for distinguishing between healthy and unhealthy movement patterns. The resultant data-driven insight into joint-specific dynamics underpins the development of targeted, individualized rehabilitation programs. Our results exhibit promising directions in sports therapy, showcasing the potential of machine learning in developing personalized therapeutic interventions.',
-                url: 'https://openaccess.thecvf.com/content/CVPR2024W/CVsports/papers/Qazi_ExerAIde_AI-assisted_Multimodal_Diagnosis_for_Enhanced_Sports_Performance_and_Personalised_CVPRW_2024_paper.pdf'
-            },
             {
                 id: 4,
                 date: '2024',

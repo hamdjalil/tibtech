@@ -15,13 +15,22 @@ const costData = [
 ];
 
 const cost2Data = [
-    { year: 2015, cost: 0.901 },
+    { year: 2015, cost: 0.9 },
     { year: 2020, cost: 1.0 },
     { year: 2025, cost: 1.2 },
     { year: 2030, cost: 1.4 },
     { year: 2035, cost: 1.6 },
     { year: 2040, cost: 1.8 },
     { year: 2050, cost: 2.1 }
+];
+
+const cost3Data = [
+    { year: 2023, cost: 1.5 },
+    { year: 2025, cost: 2.0 },
+    { year: 2027, cost: 2.5 },
+    { year: 2029, cost: 3.0 },
+    { year: 2031, cost: 3.5 },
+    { year: 2033, cost: 4.0 }
 ];
 
 // Updated Data for Global Disorders YLDs (Parkinson's, Rheumatoid Arthritis, Multiple Sclerosis, Stroke, Osteo)
@@ -321,13 +330,14 @@ d3.select("#chartsContainer")
 
 d3.select("#chartsContainer")
     .append("div")
-    .attr("id", "costPlot")
+    .attr("id", "sportsPlot")
     .attr("class", "chart");
 
 d3.select("#chartsContainer")
     .append("div")
-    .attr("id", "usDisordersPlot")
+    .attr("id", "costPlot")
     .attr("class", "chart");
+
 
 // Create the bar charts and animated line charts when they are in view
 const observer = new IntersectionObserver((entries, observer) => {
@@ -336,9 +346,12 @@ const observer = new IntersectionObserver((entries, observer) => {
             if (entry.target.id === 'globalDisordersPlot') {
                 createAnimatedLineChart("#globalDisordersPlot", globalData, "Global Disease YLDs", globalColorMap, "Years Lived with Disability (YLDs)", 18500000);
             } else if (entry.target.id === 'costPlot') {
-                createBarChart("#costPlot", costData, 'year', 'cost', "Global Growth in Rehabilitation Needs", "Projected increase of 2.6B by 2025");
+                createBarChart("#costPlot", costData, 'year', 'cost', "Global Growth in Rehabilitation Needs", "Projected to increase to 2.6B people by 2025");
             } else if (entry.target.id === 'usDisordersPlot') {
                 createAnimatedLineChart("#usDisordersPlot", usData, "US Disease YLDs", usColorMap, "Years Lived with Disability (YLDs)", 550000);
+            }
+            else if (entry.target.id === 'sportsPlot') {
+                createBarChart("#sportsPlot", cost3Data, 'year', 'cost', "Market Size of Sports Rehabilitation", "Projected to increase to $4B by 2033");
             }
             else if (entry.target.id === 'oldagePlot') {
                 createBarChart2("#oldagePlot", cost2Data, 'year', 'cost', "Global Growth in Old Age Rehabilitation Needs", "Projected increase of 2.1B by 2050");
@@ -351,7 +364,7 @@ const observer = new IntersectionObserver((entries, observer) => {
 
 // Add observer to the plots
 document.addEventListener('DOMContentLoaded', function() {
-    const plots = ['#globalDisordersPlot', '#costPlot', '#usDisordersPlot', '#oldagePlot'];
+    const plots = ['#globalDisordersPlot', '#costPlot', '#oldagePlot', '#usDisordersPlot', '#sportsPlot'];
     plots.forEach(plot => {
         const element = document.querySelector(plot);
         if (element) observer.observe(element);
@@ -454,12 +467,14 @@ document.addEventListener("DOMContentLoaded", () => {
     window.addEventListener("scroll", function() {
         const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
-        // Handle navbar transparency at the top of the page
+        // Handle navbar transparency and shadow at the top of the page
         if (scrollTop <= offsetThreshold) {
             navbar.style.backgroundColor = "rgba(255, 255, 255, 0)";
+            navbar.style.boxShadow = "none"; // Remove shadow when transparent
             navbar.style.top = "0";  // Make sure navbar is visible at the top
         } else {
             navbar.style.backgroundColor = "rgba(255, 255, 255, 1)"; // Add background color when scrolled
+            navbar.style.boxShadow = "0 4px 8px rgba(0, 0, 0, 0.1)"; // Add subtle shadow when background is white
         }
 
         // Handle navbar hide/show on scroll
@@ -704,3 +719,11 @@ function createArrowAnimation(svgId, inputImagePath, outputImagePath) {
 createArrowAnimation("customPlot", "sports_injury.svg", "sports_fixed.svg");
 createArrowAnimation("customPlot2", "oldage_injury.svg", "oldage_fixed.svg");
 createArrowAnimation("customPlot3", "bb_injury.svg", "bb_fixed.svg");
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+function navigateTopaper() {
+    window.open('https://tibbtech.com/research/exeraide/',  '_blank'); // Replace with your desired URL
+}
