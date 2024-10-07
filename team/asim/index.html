@@ -415,13 +415,15 @@
     opacity: 0.5; /* Transparency effect on hover */
 }
 
+
 .footer-container {
-    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1); /* Box shadow on top, creating a slight elevation effect */
-    text-align: center; /* Center the text inside the footer */
-    padding: 20px 0; /* Padding for top and bottom */
-    font-size: 14px; /* Appropriate font size for footer text */
-    background-color: #f8f9fa; /* Background color for visibility of the shadow */
-    width: 100%; /* Ensure it spans the full width of the viewport */
+    background: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+    font-family: Times; /* Apply Montserrat globally */
+
 }
 .social-follow {
     align-items: center;
@@ -863,7 +865,11 @@
     </div>
 
     <footer>
-        <div class="footer-container">
+        <div class="footer-container center-col" style="margin-top: 30px;">
+            <!-- <div class="social-follow">
+                <span>Follow us on</span>
+                <a href="https://x.com/tibbtech?mx=2" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+            </div> -->
             © Tibbling Technologies · All Rights Reserved
         </div>
     </footer>
