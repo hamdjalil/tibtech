@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-38PESE35X3"></script>
-    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
 
     <!-- <script>
       window.dataLayer = window.dataLayer || [];
@@ -88,13 +88,6 @@
                 <div class="post-container">
                     <div class="post-text-2">
                         <!-- <h3>The statistics are staggering</h3> -->
-                        <br>
-                        <div id="chartsContainer" style="text-align: center; margin-top: -50px;">
-                            <div id="costPlot" style="display: inline-block; margin: 0 10px;"></div>
-                            <div id="globalDisordersPlot" style="display: inline-block; margin: 0 10px;"></div>
-                            <div id="usDisordersPlot" style="display: inline-block; margin: 0 10px;"></div>
-                          </div>          
-                        <br>
                     <!-- <p>
                         <p>The urgency to address brain disorders is staggering based on the statistics from the 
                             <a style="color: black;" href="https://www.healthdata.org/research-analysis/gbd" target="_blank">
@@ -117,10 +110,16 @@
                     <div class="post-container">
                         <div class = "post-text-2">
                             <h3><b>Our Multimodal AI framework for personalized rehabilitation</b></h3>
-                            <svg style="margin-top:-30px;" id="customPlot" width="800" height="400"></svg>
+                    <br>
+                    <br>
                     <br>
 
-                    <p>
+                    <div id="chartsContainer" style="text-align: center; margin-top: -50px;">
+                        <div id="costPlot" style="display: inline-block; margin: 0 10px;"></div>
+                        <div id="globalDisordersPlot" style="display: inline-block; margin: 0 10px;"></div>
+                        <div id="usDisordersPlot" style="display: inline-block; margin: 0 10px;"></div>
+                      </div> 
+                    <p style="margin-top: -280px;">
                         Our <b>Multimodal AI framework</b> consists of advanced machine learning models to discover the relevant features in the molecular, spatial genomics, and 
                         behavioral data to expedite the drug discovery process. Working closely with our partners, we <b>accelerate</b> the end-to-end drug discovery process through 
                         analysing their complex multimodal (<b>genetics, imaging and behavioral</b>) data for their customized needs. Following shows a glimpse of our framework:
@@ -135,7 +134,8 @@
                     <h3>
                         <b>Physical Rehabilitation</b>
                     </h3>
-                    <img src="general.svg" alt="Image 1" class="inline-image-2">
+                    <svg style="margin-top:-100px;" id="customPlot" width="800" height="400"></svg>
+    
                     <p>
                         Our AI model significantly outperforms current state-of-the-art approaches, as evident by its superior performance. 
                         The HD95 score is a critical indicator of accuracy in biomedical imaging, particularly in assessing how closely 
@@ -158,12 +158,15 @@
                     <h3>
                         <b>Old Age Rehabilitation</b>
                     </h3>
-                    <img src="oldage.svg" alt="Image 1" class="inline-image-2">
+                    <svg style="margin-top:-100px;" id="customPlot2" width="800" height="400"></svg>
                     <p>
                         Our AI model significantly outperforms current state-of-the-art approaches, as evident by its superior performance. 
                         The HD95 score is a critical indicator of accuracy in biomedical imaging, particularly in assessing how closely 
                         segmented cellular structures align with the ground-truth data.
                     </p>
+                    <div id="chartsContainer" style="text-align: center; margin-bottom: -20vh;">
+                        <div id="oldagePlot" style="display: inline-block; margin: 0 10px;"></div>
+                    </div>  
                     <p>
                         Our AI model significantly outperforms current state-of-the-art approaches, as evident by its superior performance. 
                         The HD95 score is a critical indicator of accuracy in biomedical imaging, particularly in assessing how closely 
@@ -186,7 +189,7 @@
                     <h3>
                         <b>Sports Rehabilitation</b>
                     </h3>
-                    <img src="sports.svg" alt="Image 1" class="inline-image-2">
+                    <svg style="margin-top:-100px;" id="customPlot3" width="800" height="400"></svg>
                     <p>
                         Our AI model significantly outperforms current state-of-the-art approaches, as evident by its superior performance. 
                         The HD95 score is a critical indicator of accuracy in biomedical imaging, particularly in assessing how closely 
@@ -210,7 +213,6 @@
                     <h3><b>Personalized exercise plans</b>
                     </h3>
                     <img src="exercises.png" alt="Image 1" class="inline-image-2" style="width:300px;">
-
 
                     <p>
                         Next, our framework performs precise image registration by mapping the standard brain atlases to 2D/3D brain volumes of different genetic markers, 
