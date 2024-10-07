@@ -893,37 +893,39 @@ document.querySelector('.scroll-down-button').addEventListener('click', function
 
 <script>
 
-document.addEventListener("DOMContentLoaded", () => {
-    let lastScrollTop = 0;
-    const navbar = document.getElementById('navbar');
-    const navbarHeight = navbar.offsetHeight;
-    const offsetThreshold = 500; // The y offset threshold for triggering the background change
-
-    window.addEventListener("scroll", function() {
-        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-
-        // Handle navbar transparency at the top of the page
-        if (scrollTop <= offsetThreshold) {
-            navbar.style.backgroundColor = "rgba(255, 255, 255, 0)";
-            navbar.style.top = "0";  // Make sure navbar is visible at the top
-        } else {
-            navbar.style.backgroundColor = "rgba(255, 255, 255, 1)"; // Add background color when scrolled
-        }
-
-        // Handle navbar hide/show on scroll
-        if (scrollTop > lastScrollTop) {
-            // Scrolling down
-            if (scrollTop > offsetThreshold) {
-                navbar.style.top = `-${navbarHeight}px`; // Hide navbar
+    document.addEventListener("DOMContentLoaded", () => {
+        let lastScrollTop = 0;
+        const navbar = document.getElementById('navbar');
+        const navbarHeight = navbar.offsetHeight;
+        const offsetThreshold = 700; // The y offset threshold for triggering the background change
+    
+        window.addEventListener("scroll", function() {
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    
+            // Handle navbar transparency and shadow at the top of the page
+            if (scrollTop <= offsetThreshold) {
+                navbar.style.backgroundColor = "rgba(255, 255, 255, 0)";
+                navbar.style.boxShadow = "none"; // Remove shadow when transparent
+                navbar.style.top = "0";  // Make sure navbar is visible at the top
+            } else {
+                navbar.style.backgroundColor = "rgba(255, 255, 255, 1)"; // Add background color when scrolled
+                navbar.style.boxShadow = "0 4px 8px rgba(0, 0, 0, 0.1)"; // Add subtle shadow when background is white
             }
-        } else {
-            // Scrolling up
-            navbar.style.top = "0"; // Show navbar
-        }
-
-        lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // Update lastScrollTop to current position
+    
+            // Handle navbar hide/show on scroll
+            if (scrollTop > lastScrollTop) {
+                // Scrolling down
+                if (scrollTop > offsetThreshold) {
+                    navbar.style.top = `-${navbarHeight}px`; // Hide navbar
+                }
+            } else {
+                // Scrolling up
+                navbar.style.top = "0"; // Show navbar
+            }
+    
+            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // Update lastScrollTop to current position
+        });
     });
-});
 
 
 
