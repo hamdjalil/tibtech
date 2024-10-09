@@ -59,7 +59,7 @@ const usData = [
 
 // Function to create a bar chart (Cost of Drug Discovery) with gradient color
 // Function to create a bar chart (Cost of Drug Discovery) with progressively darker bars
-function createBarChart(svgId, data, xLabel, yLabel, title, annotation) {
+function createBarChart(svgId, data, xLabel, yLabel, title, annotation, labely) {
     const svg = d3.select(svgId)
         .append("svg")
         .attr("width", plotWidth + margin.left + margin.right)
@@ -82,7 +82,7 @@ function createBarChart(svgId, data, xLabel, yLabel, title, annotation) {
         .text(title);
 
     const x = d3.scaleBand().domain(data.map(d => d.year)).range([0, plotWidth]).padding(0.3);
-    const y = d3.scaleLinear().domain([0, d3.max(data, d => d[yLabel]) + 0.5]).range([plotHeight, 0]);
+    const y = d3.scaleLinear().domain([1.2, d3.max(data, d => d[yLabel]) + 0.5]).range([plotHeight, 0]);
 
     svg.append("g")
         .attr("transform", `translate(0,${plotHeight})`)
@@ -93,10 +93,11 @@ function createBarChart(svgId, data, xLabel, yLabel, title, annotation) {
     svg.append("g").call(d3.axisLeft(y).tickFormat(d => `${d}B`))
         .append("text")
         .attr("fill", "black")
-        .attr("x", -30)
-        .attr("y", 0)
+        .attr("x", -plotHeight/2)
+        .attr("y", -40)
         .attr("text-anchor", "middle")
-        .text("");
+        .text(labely)
+        .attr("transform", "rotate(-90)");
 
     const bars = svg.selectAll(".bar")
         .data(data)
@@ -104,7 +105,7 @@ function createBarChart(svgId, data, xLabel, yLabel, title, annotation) {
         .attr("class", "bar")
         .attr("x", d => x(d.year))
         .attr("width", x.bandwidth())
-        .attr("y", d => y(0))
+        .attr("y", d => y(1.2))
         .attr("height", 0)
         .attr("fill", (d, i) => getColorShade(i, data.length));  // Set color progressively darker
 
@@ -113,7 +114,7 @@ function createBarChart(svgId, data, xLabel, yLabel, title, annotation) {
         .enter().append("text")
         .attr("class", "label")
         .attr("x", d => x(d.year) + x.bandwidth() / 2)
-        .attr("y", d => y(0))
+        .attr("y", d => y(1.2))
         .attr("text-anchor", "middle")
         .style("font-size", "12px")
         .style("fill", "black")
@@ -127,6 +128,7 @@ function createBarChart(svgId, data, xLabel, yLabel, title, annotation) {
         .style("fill", "gray")
         .text(annotation)
         .raise();
+
 
     bars.transition()
         .duration(1500)
@@ -145,7 +147,7 @@ const plotWidth2 = 500 - margin.left - margin.right;
 const plotHeight2 = 350 - margin.top - margin.bottom;
 
 // Function to create a bar chart (Cost of Drug Discovery) with progressively darker bars
-function createBarChart2(svgId, data, xLabel, yLabel, title, annotation) {
+function createBarChart2(svgId, data, xLabel, yLabel, title, annotation, labely) {
     const svg = d3.select(svgId)
         .append("svg")
         .attr("width", plotWidth2 + margin.left + margin.right)
@@ -168,7 +170,7 @@ function createBarChart2(svgId, data, xLabel, yLabel, title, annotation) {
         .text(title);
 
     const x = d3.scaleBand().domain(data.map(d => d.year)).range([0, plotWidth2]).padding(0.3);
-    const y = d3.scaleLinear().domain([0, d3.max(data, d => d[yLabel]) + 0.5]).range([plotHeight2, 0]);
+    const y = d3.scaleLinear().domain([0.4, d3.max(data, d => d[yLabel]) + 0.5]).range([plotHeight2, 0]);
 
     svg.append("g")
         .attr("transform", `translate(0,${plotHeight2})`)
@@ -179,10 +181,11 @@ function createBarChart2(svgId, data, xLabel, yLabel, title, annotation) {
     svg.append("g").call(d3.axisLeft(y).tickFormat(d => `${d}B`))
         .append("text")
         .attr("fill", "black")
-        .attr("x", -30)
-        .attr("y", 0)
+        .attr("x", -plotHeight/2)
+        .attr("y", -40)
         .attr("text-anchor", "middle")
-        .text("");
+        .text(labely)
+        .attr("transform", "rotate(-90)");
 
     const bars = svg.selectAll(".bar")
         .data(data)
@@ -190,7 +193,7 @@ function createBarChart2(svgId, data, xLabel, yLabel, title, annotation) {
         .attr("class", "bar")
         .attr("x", d => x(d.year))
         .attr("width", x.bandwidth())
-        .attr("y", d => y(0))
+        .attr("y", d => y(0.4))
         .attr("height", 0)
         .attr("fill", (d, i) => getColorShade(i, data.length));  // Set color progressively darker
 
@@ -199,7 +202,7 @@ function createBarChart2(svgId, data, xLabel, yLabel, title, annotation) {
         .enter().append("text")
         .attr("class", "label")
         .attr("x", d => x(d.year) + x.bandwidth() / 2)
-        .attr("y", d => y(0))
+        .attr("y", d => y(0.4))
         .attr("text-anchor", "middle")
         .style("font-size", "12px")
         .style("fill", "black")
@@ -226,8 +229,10 @@ function createBarChart2(svgId, data, xLabel, yLabel, title, annotation) {
         .attr("y", d => y(d[yLabel]) - 5);
 }
 
+
+
 // Function to create animated multi-line chart (Parkinson's, 'Rheumatoid Arthiritis' Arthritis, Multiple Sclerosis, Stroke, Osteo)
-function createAnimatedLineChart(svgId, data, title, colorMap, annotation, yMax) {
+function createAnimatedLineChart(svgId, data, title, colorMap, annotation, yMax, yLabel) {
     const svg = d3.select(svgId)
         .append("svg")
         .attr("width", plotWidth + margin.left + margin.right)
@@ -244,7 +249,7 @@ function createAnimatedLineChart(svgId, data, title, colorMap, annotation, yMax)
         .text(title);
 
     const x = d3.scaleLinear().domain(d3.extent(data, d => d.year)).range([0, plotWidth]);
-    const y = d3.scaleLinear().domain([0, yMax + 1000000]).range([plotHeight, 0]);
+    const y = d3.scaleLinear().domain([0.1, yMax + 1000000]).range([plotHeight, 0]);
 
     svg.append("g")
         .attr("transform", `translate(0,${plotHeight})`)
@@ -254,11 +259,13 @@ function createAnimatedLineChart(svgId, data, title, colorMap, annotation, yMax)
 
     svg.append("g").call(d3.axisLeft(y).tickFormat(d => `${d / 1000000}M`))
         .append("text")
+        .attr("transform", "rotate(-90)")
         .attr("fill", "black")
-        .attr("x", -30)
-        .attr("y", -5)
+        .attr("x", -plotHeight/2)
+        .attr("y", -40)
         .attr("text-anchor", "middle")
-        .text("YLDs");
+        .text(yLabel);
+        
 
     const lineGen = (disease) => d3.line().x(d => x(d.year)).y(d => y(d[disease]));
 
@@ -315,6 +322,99 @@ function createAnimatedLineChart(svgId, data, title, colorMap, annotation, yMax)
         .text(annotation);
 }
 
+const plotWidth3 = 500 - margin.left - margin.right;
+const plotHeight3 = 350 - margin.top - margin.bottom;
+
+function createAnimatedLineChart2(svgId, data, title, colorMap, annotation, yMax, yLabel) {
+    const svg = d3.select(svgId)
+        .append("svg")
+        .attr("width", plotWidth3 + margin.left + margin.right)
+        .attr("height", plotHeight3 + margin.top + margin.bottom)
+        .append("g")
+        .attr("transform", `translate(${margin.left},${margin.top})`);
+
+    // Add title
+    svg.append("text")
+        .attr("x", plotWidth3 / 2)
+        .attr("y", -25)
+        .attr("text-anchor", "middle")
+        .style("font-size", "13px")
+        .text(title);
+
+    const x = d3.scaleLinear().domain(d3.extent(data, d => d.year)).range([0, plotWidth3]);
+    const y = d3.scaleLinear().domain([0.1, yMax + 1000000]).range([plotHeight3, 0]);
+
+    svg.append("g")
+        .attr("transform", `translate(0,${plotHeight3})`)
+        .call(d3.axisBottom(x).tickFormat(d3.format("d")))
+        .selectAll("text")
+        .style("font-size", "10px");
+
+    svg.append("g").call(d3.axisLeft(y).tickFormat(d => `${d / 1000000}M`))
+        .append("text")
+        .attr("transform", "rotate(-90)")
+        .attr("fill", "black")
+        .attr("x", -plotHeight3/2)
+        .attr("y", -40)
+        .attr("text-anchor", "middle")
+        .text(yLabel);
+
+    const lineGen = (disease) => d3.line().x(d => x(d.year)).y(d => y(d[disease]));
+
+    const diseases = Object.keys(colorMap);
+
+    diseases.forEach(disease => {
+        const path = svg.append("path")
+            .datum(data)
+            .attr("fill", "none")
+            .attr("stroke", colorMap[disease])
+            .attr("stroke-width", 2)
+            .attr("d", lineGen(disease))
+            .attr("stroke-dasharray", function() {
+                return this.getTotalLength();
+            })
+            .attr("stroke-dashoffset", function() {
+                return this.getTotalLength();
+            });
+
+        // Animate the line drawing
+        path.transition()
+            .duration(4000)
+            .attr("stroke-dashoffset", 0);
+    });
+
+    // Add legend
+    const legend = svg.selectAll(".legend")
+        .data(diseases)
+        .enter().append("g")
+        .attr("class", "legend")
+        .attr("transform", (d, i) => `translate(0,${i * 12})`);
+
+    legend.append("rect")
+        .attr("x", plotWidth3 - 325)
+        .attr("width", 10)
+        .attr("height", 10)
+        .style("fill", d => colorMap[d]);
+
+    legend.append("text")
+        .attr("x", plotWidth3 - 330)
+        .attr("y", 5)
+        .attr("dy", ".35em")
+        .style("text-anchor", "end")
+        .style("font-size", "10px")
+        .text(d => d);
+
+    // Add annotation
+    svg.append("text")
+        .attr("x", plotWidth3 - 10)
+        .attr("y", plotHeight3 + 30)
+        .attr("text-anchor", "end")
+        .style("font-size", "10px")
+        .style("fill", "gray")
+        .text(annotation);
+}
+
+
 const globalColorMap = { 'Parkinson\'s': "black", 'Rheumatoid Arthiritis': "grey", 'Multiple Sclerosis': "purple", Stroke: "brown", Osteoarthiritis: "#d3d3d3" };
 const usColorMap = { 'Parkinson\'s': "black", 'Rheumatoid Arthiritis': "grey", 'Multiple Sclerosis': "purple", Stroke: "brown", Osteoarthiritis: "#d3d3d3" };
 
@@ -344,23 +444,23 @@ const observer = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             if (entry.target.id === 'globalDisordersPlot') {
-                createAnimatedLineChart("#globalDisordersPlot", globalData, "Global Disease YLDs", globalColorMap, "Years Lived with Disability (YLDs)", 18500000);
+                createAnimatedLineChart("#globalDisordersPlot", globalData, "global disease YLDs", globalColorMap, "12M+ Years Lived with Disability (YLDs)", 18500000, "Years Lived with Disability (YLDs)");
             } else if (entry.target.id === 'costPlot') {
-                createBarChart("#costPlot", costData, 'year', 'cost', "Global Growth in Rehabilitation Needs", "Projected to increase to 2.6B people by 2025");
+                createBarChart("#costPlot", costData, 'year', 'cost', "global physical rehabilitation needs", "Projected to increase to 2.6B people by 2025", "Number of people");
             } else if (entry.target.id === 'usDisordersPlot') {
-                createAnimatedLineChart("#usDisordersPlot", usData, "US Disease YLDs", usColorMap, "Years Lived with Disability (YLDs)", 550000);
+                createAnimatedLineChart2("#usDisordersPlot", usData, "USA disease YLDs", usColorMap, "1M+ Years Lived with Disability (YLDs)", 550000, "Years Lived with Disability (YLDs)");
             }
             else if (entry.target.id === 'sportsPlot') {
-                createBarChart("#sportsPlot", cost3Data, 'year', 'cost', "Market Size of Sports Rehabilitation", "Projected to increase to $4B by 2033");
+                createBarChart("#sportsPlot", cost3Data, 'year', 'cost', "global market size of sports rehabilitation", "Projected to increase to $4B by 2033", "Cost of treatment");
             }
             else if (entry.target.id === 'oldagePlot') {
-                createBarChart2("#oldagePlot", cost2Data, 'year', 'cost', "Global Growth in Old Age Rehabilitation Needs", "Projected increase of 2.1B by 2050");
+                createBarChart2("#oldagePlot", cost2Data, 'year', 'cost', "Global Growth in Old Age Rehabilitation Needs", "Projected to increase to 2.1B by 2050", "Number of people");
             }
             // Unobserve after triggering the animation once
             observer.unobserve(entry.target);
         }
     });
-}, { threshold: 0.1 });
+}, { threshold: 0.5 });
 
 // Add observer to the plots
 document.addEventListener('DOMContentLoaded', function() {
@@ -499,7 +599,7 @@ const analyzeJointsBtn = document.getElementById("toggleButton-tracking");
 
 // Event listener to stop the video at 1.5 seconds and reset button
 videoBase.addEventListener('timeupdate', function () {
-    if (videoBase.currentTime >= 1.5 && !analyzeJointsBtn.classList.contains('pressed')) {
+    if (videoBase.currentTime >= 1.4 && !analyzeJointsBtn.classList.contains('pressed')) {
         videoBase.pause(); // Pause the video at 1.5 seconds
     }
     
@@ -535,21 +635,26 @@ analyzeJointsBtn.addEventListener('click', function () {
         videoBase.play(); // Start video again
     }
 });
-
-// Create an IntersectionObserver to detect when the full video enters the viewport
-const observer2 = new IntersectionObserver((entries, observer) => {
+videoBase.play();
+// Create an IntersectionObserver to detect when the video enters or leaves the viewport
+const observer2 = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
-        if (entry.intersectionRatio === 1) { // When the entire video is fully in the viewport (100%)
-            videoBase.play(); // Start playing when the full video is in the viewport
-            observer.unobserve(videoBase); // Unobserve the video after it starts playing once
+        if (entry.isIntersecting) {
+            // When the video enters the viewport, resume playback if not at stop point
+            if (videoBase.currentTime < 1.4 && !analyzeJointsBtn.classList.contains('pressed')) {
+                videoBase.play();
+            }
+        } else {
+            // When the video leaves the viewport, pause it
+            videoBase.pause();
         }
     });
-}, { threshold: 1 }); // Set threshold to 1 (100%) so that the callback fires only when the entire video is visible
+}, { threshold: 0.5 }); // Trigger the callback when 50% of the video is visible
 
 // Observe the video element
 observer2.observe(videoBase);
-
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 function createArrowAnimation(svgId, inputImagePath, outputImagePath) {
     const svg = d3.select(`#${svgId}`);
     const width = Math.min(window.screen.width, 800);
@@ -558,6 +663,18 @@ function createArrowAnimation(svgId, inputImagePath, outputImagePath) {
     // Define the start and end points for the line
     const startPoint = { x: 50, y: 200 }; // Single start point
     const endPoint = { x: width - width * 0.18, y: 200 }; // Single end point
+
+    const startPoints = [
+        {x: 50, y: 100},
+        {x: 50, y: 200},
+        {x: 50, y: 300}
+    ];
+    
+    const endPoints = [
+        {x: width-(width*0.18), y: 100},
+        {x: width-(width*0.18), y: 200},
+        {x: width-(width*0.18), y: 300}
+    ];
 
     const midX = width / 2;
     const midY = height / 2;
@@ -716,9 +833,9 @@ function createArrowAnimation(svgId, inputImagePath, outputImagePath) {
 }
 
 // Example usage
-createArrowAnimation("customPlot", "sports_injury.svg", "sports_fixed.svg");
-createArrowAnimation("customPlot2", "oldage_injury.svg", "oldage_fixed.svg");
-createArrowAnimation("customPlot3", "bb_injury.svg", "bb_fixed.svg");
+// createArrowAnimation("customPlot", "sports_injury.svg", "sports_fixed.svg");
+// createArrowAnimation("customPlot2", "oldage_injury.svg", "oldage_fixed.svg");
+// createArrowAnimation("customPlot3", "bb_injury.svg", "bb_fixed.svg");
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -727,3 +844,169 @@ createArrowAnimation("customPlot3", "bb_injury.svg", "bb_fixed.svg");
 function navigateTopaper() {
     window.open('https://tibbtech.com/research/exeraide/',  '_blank'); // Replace with your desired URL
 }
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+function createArrowAnimation(svgId, inputImagePath, outputImagePath) {
+    const scaleFactor = window.innerWidth < 800 ? 0.6 : 1;
+    const svg = d3.select(`#${svgId}`);
+    const width = Math.min(window.screen.width, 800);
+    const height = 400;
+
+    const startPoint = { x: 40, y: 200 };
+    const endPoint = { x: width - width * 0.18, y: 200 };
+    const midX = width / 2.1;
+    const midY = height / 2;
+
+    const initialLineColor = "#D3D3D3";
+    const finalLineColor = "#000000";
+
+    // Define arrowhead markers (light initially, black later)
+    svg.append("defs").append("marker")
+        .attr("id", `${svgId}-arrowStart`)
+        .attr("viewBox", "0 0 10 10")
+        .attr("refX", 5)
+        .attr("refY", 5)
+        .attr("markerWidth", 6)
+        .attr("markerHeight", 6)
+        .attr("orient", "auto")
+        .append("path")
+        .attr("d", "M 0 0 L 10 5 L 0 10 z")
+        .attr("fill", initialLineColor);
+
+    svg.append("defs").append("marker")
+        .attr("id", `${svgId}-arrowEnd`)
+        .attr("viewBox", "0 0 10 10")
+        .attr("refX", 5)
+        .attr("refY", 5)
+        .attr("markerWidth", 6)
+        .attr("markerHeight", 6)
+        .attr("orient", "auto")
+        .append("path")
+        .attr("d", "M 0 0 L 10 5 L 0 10 z")
+        .attr("fill", initialLineColor);
+
+    // Draw the first arrow (before the logo)
+    const pathBefore = svg.append("path")
+        .attr("d", `M${startPoint.x+165*scaleFactor},${startPoint.y*0.9} 
+                    Q${midX - 100*scaleFactor},${midY*0.9} 
+                    ${midX - 40*scaleFactor},${midY*0.9}`)
+        .attr("stroke", initialLineColor)
+        .attr("stroke-width", 3)
+        .attr("fill", "none");
+
+    const totalLengthBefore = pathBefore.node().getTotalLength();
+    pathBefore
+        .attr("stroke-dasharray", totalLengthBefore + " " + totalLengthBefore)
+        .attr("stroke-dashoffset", totalLengthBefore);
+
+    // Draw the second arrow (after the logo)
+    const pathAfter = svg.append("path")
+        .attr("d", `M${midX + 80 *scaleFactor},${midY*0.9} 
+                    T${endPoint.x - 70*scaleFactor},${endPoint.y*0.9}`)
+        .attr("stroke", initialLineColor)
+        .attr("stroke-width", 3)
+        .attr("fill", "none");
+
+    const totalLengthAfter = pathAfter.node().getTotalLength();
+    pathAfter
+        .attr("stroke-dasharray", totalLengthAfter + " " + totalLengthAfter)
+        .attr("stroke-dashoffset", totalLengthAfter);
+
+    // Function to trigger the animation
+    function animateArrows() {
+        pathBefore.transition()
+            .duration(1000)
+            .ease(d3.easeLinear)
+            .attr("stroke-dashoffset", 0)
+            .on("end", () => {
+                pathBefore.attr("stroke", finalLineColor)
+                    .attr("marker-end", `url(#${svgId}-arrowStart)`);
+                d3.select(`#${svgId}-arrowStart path`)
+                        .transition()
+                        .attr("fill", finalLineColor); 
+
+                // Pop effect on the logo
+                d3.select(`#${svgId}-logo`)
+                    .transition()
+                    .duration(300)
+                    .attr("width", 250 * scaleFactor)
+                    .attr("height", 250 * scaleFactor)
+                    .attr("x", midX - 90 * scaleFactor)
+                    .attr("y", midY - 110)
+                    .transition()
+                    .duration(300)
+                    .attr("width", 200 * scaleFactor)
+                    .attr("height", 200 * scaleFactor)
+                    .attr("x", midX - 75 * scaleFactor)
+                    .attr("y", midY - 100);
+
+                pathAfter.transition()
+                    .duration(1000)
+                    .ease(d3.easeLinear)
+                    .attr("stroke-dashoffset", 0)
+                    .on("end", () => {
+                        // Change the second arrow and line color to dark
+                        pathAfter.attr("stroke", finalLineColor)
+                                 .attr("marker-end", `url(#${svgId}-arrowEnd)`); // Add the arrowhead at the end
+                        
+                        d3.select(`#${svgId}-arrowEnd path`)
+                        .transition()
+                        .duration(100)
+                        .attr("fill", finalLineColor); // Change arrow color
+
+                        // Show and fade-in the output image after line reaches the end
+                        d3.select(`#${svgId}-outputGif`)
+                            .attr("xlink:href", outputImagePath) // Set the GIF source
+                            .transition() // Fade-in effect
+                            .style("opacity", 1); // Make GIF visible gradually
+                    });
+            });
+    }
+
+    // Function to check if the section is in the viewport
+    function isInViewport() {
+        const rect = svg.node().getBoundingClientRect();
+        return rect.top >= 0 && rect.bottom <= (window.innerHeight || document.documentElement.clientHeight);
+    }
+
+    // Event listener to trigger animation on scroll
+    window.addEventListener('scroll', function () {
+        if (isInViewport()) {
+            animateArrows();
+            window.removeEventListener('scroll', arguments.callee);
+        }
+    });
+
+    // Add images and small text labels
+    svg.append("image")
+        .attr("xlink:href", inputImagePath)
+        .attr("x", startPoint.x - 40)
+        .attr("y", startPoint.y - 80)
+        .attr("width", 200 * scaleFactor)
+        .attr("height", 200 * scaleFactor);
+
+    svg.append("image")
+        .attr("id", `${svgId}-outputGif`)
+        .attr("xlink:href", "")
+        .attr("x", endPoint.x - 60)
+        .attr("y", endPoint.y - 80)
+        .attr("width", 200 * scaleFactor)
+        .attr("height", 200 * scaleFactor)
+        .attr("opacity", 0);
+
+    // Add the image in the middle with a pop effect on intersection
+    svg.append("image")
+        .attr("id", `${svgId}-logo`)
+        .attr("xlink:href", "exeraide diagram.svg")
+        .attr("x", midX - 75 * scaleFactor)
+        .attr("y", midY - 100)
+        .attr("width", 200 * scaleFactor)
+        .attr("height", 200 * scaleFactor)
+        .raise();
+}
+
+// Example usage:
+createArrowAnimation("customPlot3", "bb_injury.svg", "bb_fixed.svg");
+createArrowAnimation("customPlot", "sports_injury.svg", "sports_fixed.svg");
+createArrowAnimation("customPlot2", "oldage_injury.svg", "oldage_fixed.svg");

@@ -56,26 +56,6 @@ body {
     width: 100%; /* Ensures the content spans the full width */
 }
 
-.hero-title {
-    font-family: 'Inter Tight','Montserrat', serif;
-    font-size: 3.0em;
-    font-weight: 500;
-    line-height: 1.3;
-    width: calc(var(--video-width) * 1); 
-    text-align: center;
-    margin-top: -100px;
-}
-
-.hero-sub-title {
-    font-family: 'Inter Tight', 'Georgia', serif;
-    font-size: 1em;
-    line-height: 1.6;
-    margin: auto;
-    text-align: center;
-    width: 80%;
-    margin-bottom: -15px;
-    
-}
 .info-container {
     width: 100%; /* Make it span the full width of its parent */
     max-width: 1780px; /* Align with the max-width of the .slider */
@@ -1308,7 +1288,6 @@ button:hover {
     display: flex;
     justify-content: center; /* Aligns the charts in the center horizontally */
     flex-wrap: nowrap; /* Prevents wrapping, keeping the plots side by side */
-    padding-bottom:300px;
 }
 
 .chart {
@@ -1603,23 +1582,14 @@ video {
 }
 
 
+
+
+
 /* NEW CODE */
-@media (max-width: 1000px) {
-    #container-wrapper #visualization-container{
-        margin: 0 5px!important;
-        margin-bottom: 15px!important;
-
-    }
-}
-
 @media (max-width: 1500px) {
     #container-wrapper{
         flex-wrap: wrap!important;
     }
-}
-
-
-@media (max-width: 800px) {
 
     #container-wrapper #visualization-container{
         margin-bottom: 30px!important;
@@ -1628,28 +1598,15 @@ video {
     .hero-title{
         font-size: 2rem;
         margin-top: -60px;
-    }
-}
+        text-align: center;
+        padding-top: 35vh;
 
-/* NEW CODE */
-@media (max-width: 800px) {
-    #container-wrapper{
-        flex-wrap: wrap!important;
-    }
-
-    #container-wrapper #visualization-container{
-        margin-bottom: 30px!important;
-    }
-
-    .hero-title{
-        font-size: 2rem;
-        margin-top: -60px;
-        text-align: left;
     }
     .hero-sub-title{
-        text-align: left!important;
+        text-align: center!important;
         margin-left: 0px;
         margin-right: 0px;
+        font-size: 3em;
     }
 
 }
@@ -1657,6 +1614,14 @@ video {
 @media (max-width: 576px) {
     #chartsContainer{
         padding-bottom: 0px;
+    }
+
+    .hero-title{
+        font-size: 10em;
+        margin-top: -60px;
+        text-align: center;
+        padding-top: 30vh;
+
     }
 
 }
@@ -1866,7 +1831,7 @@ video {
 /* Add media queries for larger screens */
 @media (min-width: 1200px) {
     .hero-title {
-        padding-top: 30vh; /* Increase padding for larger screens */
+        padding-top: 25vh; /* Increase padding for larger screens */
         font-size: 3vw; /* Slightly smaller font size */
     }
 
@@ -1877,17 +1842,8 @@ video {
     }
 }
 
-@media (min-width: 1600px) {
-    .hero-title {
-        padding-top: 20vh; /* Further increase padding for very large screens */
-        font-size: 2.5vw; /* Reduce font size on very large screens */
-    }
 
-    .hero-sub-title {
-        font-size: 1.1vw; /* Reduce font size on very large screens */
-        width: 60%; /* Adjust width for better readability */
-    }
-}
+
 
 /* Move down keyframes */
 /* Move down keyframes */
@@ -1926,9 +1882,37 @@ video {
 }
 
 /* Breathe effect on hover */
-.inline-image-2:hover {
-    transform: scale(1.05); /* Slightly zoom in */
-    animation: breathe 2s infinite; /* Add breathe animation */
+.inline-image-2 {
+    animation: breathe 2s infinite;
+}
+
+@keyframes breathe {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Breathe effect on hover */
+.reg-button {
+    animation: breathe 2s infinite;
+}
+
+@keyframes breathe {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
 }
 
 /* Define breathe effect */
