@@ -845,6 +845,10 @@ function navigateTopaper() {
     window.open('https://tibbtech.com/research/exeraide/',  '_blank'); // Replace with your desired URL
 }
 
+function navigateToCVPRpaper() {
+    window.open('https://openaccess.thecvf.com/content/CVPR2024W/CVsports/papers/Qazi_ExerAIde_AI-assisted_Multimodal_Diagnosis_for_Enhanced_Sports_Performance_and_Personalised_CVPRW_2024_paper.pdf',  '_blank'); // Replace with your desired URL
+}
+
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 function createArrowAnimation(svgId, inputImagePath, outputImagePath) {

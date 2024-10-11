@@ -1883,7 +1883,7 @@ video {
 
 /* Breathe effect on hover */
 .inline-image-2 {
-    animation: breathe 2s infinite;
+    animation: breathe 20s infinite;
 }
 
 @keyframes breathe {
