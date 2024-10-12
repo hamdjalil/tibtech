@@ -351,7 +351,7 @@ function createAnimatedLineChart2(svgId, data, title, colorMap, annotation, yMax
         .attr("transform", `translate(0,${plotHeight3})`)
         .call(d3.axisBottom(x).tickFormat(d3.format("d")))
         .selectAll("text")
-        .style("font-size", "10px");
+        .style("font-size", "9px");
 
     svg.append("g").call(d3.axisLeft(y).tickFormat(d => `${d / 1000000}M`))
         .append("text")
