@@ -107,18 +107,13 @@ body {
     border: none;
     border-radius: 10px;
 }
-@media only screen and (max-width: 800px) {
-    .hero-content {
-        padding-left: 20px; /* Adjust padding for smaller screens */
-    }
-}
-
 
 @media only screen and (max-width: 800px) {
     .hero-content {
-        padding-left: 20px; /* Adjust padding for smaller screens */
+        padding-left: 0px; /* Adjust padding for smaller screens */
     }
 }
+
 
 
 h3, h5 {
