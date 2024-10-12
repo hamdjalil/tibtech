@@ -2027,3 +2027,34 @@ video {
   body.loading {
     overflow: hidden; /* Prevent scrolling during loading */
   }
+
+  /* Add media queries for larger screens */
+@media (max-width: 800px) {
+    #hero-title2 {
+        padding-top: 30vh; /* Increase padding for larger screens */
+        font-size: 8vw; /* Slightly smaller font size */
+    }
+
+    #hero-sub-title2 {
+        font-size: 2vw; /* Adjust font size for larger screens */
+        line-height: 1.8; /* Adjust line height */
+        width: 70%; /* Slightly reduce width to fit properly */
+    }
+}
+
+@media (max-width: 500px) {
+    #hero-title2 {
+        padding-top: 30vh; /* Increase padding for larger screens */
+        font-size: 8vw; /* Slightly smaller font size */
+    }
+
+    #hero-sub-title2 {
+        font-size: 3vw; /* Adjust font size for larger screens */
+        line-height: 1.8; /* Adjust line height */
+        width: 70%; /* Slightly reduce width to fit properly */
+    }
+
+    .author-info{
+        font-size: 3vw; /* Slightly smaller font size */
+    }
+}
