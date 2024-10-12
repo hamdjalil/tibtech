@@ -400,7 +400,7 @@ function createAnimatedLineChart2(svgId, data, title, colorMap, annotation, yMax
         .style("fill", d => colorMap[d]);
 
     legend.append("text")
-        .attr("x", plotWidth3 - (window.screen.width*0.11))
+        .attr("x", plotWidth3 - (window.screen.width*0.101))
         .attr("y", 5)
         .attr("dy", ".35em")
         .style("text-anchor", "end")
