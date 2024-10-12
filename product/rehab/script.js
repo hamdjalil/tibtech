@@ -1036,3 +1036,33 @@ function createArrowAnimation(svgId, inputImagePath, outputImagePath) {
 createArrowAnimation("customPlot3", "bb_injury.svg", "bb_fixed.svg");
 createArrowAnimation("customPlot", "sports_injury.svg", "sports_fixed.svg");
 createArrowAnimation("customPlot2", "oldage_injury.svg", "oldage_fixed.svg");
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    // Prefetch images when the page loads
+    const imageUrls = ["bb_injury.svg", "bb_fixed.svg", "sports_injury.svg", "sports_fixed.svg", "oldage_injury.svg", "oldage_fixed.svg"];
+    imageUrls.forEach(url => {
+        const img = new Image();
+        img.src = url; // Prefetch the image
+    });
+
+    // Create an IntersectionObserver to load images when they are in the viewport
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const image = entry.target;
+                if (image.dataset.src) {
+                    image.src = image.dataset.src; // Set the actual image source
+                    observer.unobserve(image); // Stop observing once loaded
+                }
+            }
+        });
+    }, { threshold: 0.1 });
+
+    // Observe all the lazy-loaded images
+    document.querySelectorAll("img[data-src]").forEach(img => {
+        observer.observe(img);
+    });
+});
