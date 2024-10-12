@@ -1094,3 +1094,21 @@ document.addEventListener("DOMContentLoaded", () => {
         observer.observe(video);
     });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+    const loadingScreen = document.getElementById("loading-screen");
+    const content = document.getElementById("content");
+  
+    window.onload = function () {
+      // Hide loading screen after all resources are loaded
+      loadingScreen.style.display = 'none';
+      content.style.display = 'block'; // Show content
+      document.body.classList.remove('loading');
+    };
+  
+    // Optionally add a timeout if you want to remove the loading screen after a maximum wait time
+    setTimeout(() => {
+      loadingScreen.style.display = 'none';
+      content.style.display = 'block';
+    }, 10000); // 10-second fallback in case of slow loading
+  });
