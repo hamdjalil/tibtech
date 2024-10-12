@@ -143,8 +143,8 @@ function createBarChart(svgId, data, xLabel, yLabel, title, annotation, labely) 
 }
 
 
-const plotWidth2 = 500 - margin.left - margin.right;
 const plotHeight2 = 350 - margin.top - margin.bottom;
+const plotWidth2 = Math.min(window.screen.width, 500) - margin.left - margin.right
 
 // Function to create a bar chart (Cost of Drug Discovery) with progressively darker bars
 function createBarChart2(svgId, data, xLabel, yLabel, title, annotation, labely) {
@@ -322,10 +322,13 @@ function createAnimatedLineChart(svgId, data, title, colorMap, annotation, yMax,
         .text(annotation);
 }
 
-const plotWidth3 = 500 - margin.left - margin.right;
+// const plotWidth3 = 500 - margin.left - margin.right;
 const plotHeight3 = 350 - margin.top - margin.bottom;
+const plotWidth3 = Math.min(window.screen.width, 500) - margin.left - margin.right
 
 function createAnimatedLineChart2(svgId, data, title, colorMap, annotation, yMax, yLabel) {
+    
+
     const svg = d3.select(svgId)
         .append("svg")
         .attr("width", plotWidth3 + margin.left + margin.right)
@@ -391,13 +394,13 @@ function createAnimatedLineChart2(svgId, data, title, colorMap, annotation, yMax
         .attr("transform", (d, i) => `translate(0,${i * 12})`);
 
     legend.append("rect")
-        .attr("x", plotWidth3 - 325)
+        .attr("x", plotWidth3 - (window.screen.width*0.1))
         .attr("width", 10)
         .attr("height", 10)
         .style("fill", d => colorMap[d]);
 
     legend.append("text")
-        .attr("x", plotWidth3 - 330)
+        .attr("x", plotWidth3 - (window.screen.width*0.11))
         .attr("y", 5)
         .attr("dy", ".35em")
         .style("text-anchor", "end")
