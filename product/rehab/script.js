@@ -657,7 +657,7 @@ analyzeJointsBtn.addEventListener('click', function () {
         videoBase.play(); // Start video again
     }
 });
-videoBase.play();
+
 // Create an IntersectionObserver to detect when the video enters or leaves the viewport
 const observer2 = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -1112,3 +1112,5 @@ document.addEventListener("DOMContentLoaded", () => {
         content.style.display = 'block';
     }, 10000); // 10-second fallback in case of slow loading
 });
+
+videoBase.play();
