@@ -1,0 +1,36 @@
+Location,Year,Age,Sex,Cause of death or injury,Measure,Value,Lower bound,Upper bound
+United States of America,1990,All ages,Both,Parkinson's disease,YLDs,41081.38062743573,28601.789882962505,55090.07867633394
+United States of America,1991,All ages,Both,Parkinson's disease,YLDs,43007.58529927196,30196.2832919473,57883.84450620206
+United States of America,1992,All ages,Both,Parkinson's disease,YLDs,44924.15548157783,31366.90588828339,60832.98212727846
+United States of America,1993,All ages,Both,Parkinson's disease,YLDs,46648.224512429886,32604.967410847807,63243.97448753753
+United States of America,1994,All ages,Both,Parkinson's disease,YLDs,48130.231183581614,33712.59920362441,65246.381173933085
+United States of America,1995,All ages,Both,Parkinson's disease,YLDs,49393.481226739714,34760.665039482774,66278.97442418207
+United States of America,1996,All ages,Both,Parkinson's disease,YLDs,50358.209476532174,35714.63097474055,67005.71718615
+United States of America,1997,All ages,Both,Parkinson's disease,YLDs,51189.84255136406,36543.34718317643,68111.24783328979
+United States of America,1998,All ages,Both,Parkinson's disease,YLDs,52015.66501760396,37198.12355204653,69515.55578499741
+United States of America,1999,All ages,Both,Parkinson's disease,YLDs,52714.364599761466,38024.44548723707,70139.8059646857
+United States of America,2000,All ages,Both,Parkinson's disease,YLDs,53729.86723216611,38370.92637301375,71450.52626415092
+United States of America,2001,All ages,Both,Parkinson's disease,YLDs,54807.80471104756,39271.32783438393,72668.31462953883
+United States of America,2002,All ages,Both,Parkinson's disease,YLDs,56094.26452863919,40381.24143513847,74087.74647506612
+United States of America,2003,All ages,Both,Parkinson's disease,YLDs,57536.92878081941,41333.40721849226,75954.2610253393
+United States of America,2004,All ages,Both,Parkinson's disease,YLDs,58937.107313041786,42430.04338515551,78225.14579101178
+United States of America,2005,All ages,Both,Parkinson's disease,YLDs,60483.57885849735,43670.93192936366,79946.60547849373
+United States of America,2006,All ages,Both,Parkinson's disease,YLDs,61897.484154981525,44776.24758339407,81327.30011629905
+United States of America,2007,All ages,Both,Parkinson's disease,YLDs,63626.2555079824,46128.48094440954,83680.4810177204
+United States of America,2008,All ages,Both,Parkinson's disease,YLDs,65487.41423549301,47526.00335653812,86312.46730974692
+United States of America,2009,All ages,Both,Parkinson's disease,YLDs,67171.78797544228,48396.30724087935,88147.20943633377
+United States of America,2010,All ages,Both,Parkinson's disease,YLDs,69050.94969712055,50335.62269742922,90845.74035971957
+United States of America,2011,All ages,Both,Parkinson's disease,YLDs,70818.59888908998,51367.9390591017,93027.81680248892
+United States of America,2012,All ages,Both,Parkinson's disease,YLDs,72762.91939481637,52542.14644700026,95259.3438859032
+United States of America,2013,All ages,Both,Parkinson's disease,YLDs,74944.18216670549,54048.7695578127,99057.53823643006
+United States of America,2014,All ages,Both,Parkinson's disease,YLDs,76977.65875168121,55940.64424118475,102054.0070673365
+United States of America,2015,All ages,Both,Parkinson's disease,YLDs,79239.18909765588,57425.54623758248,104452.90393377827
+United States of America,2016,All ages,Both,Parkinson's disease,YLDs,81485.05922028354,59064.47155605367,107449.47150350096
+United States of America,2017,All ages,Both,Parkinson's disease,YLDs,84105.71434614595,60942.19193689773,110990.96637823404
+United States of America,2018,All ages,Both,Parkinson's disease,YLDs,86999.61160612457,63325.84540765914,114547.85585984556
+United States of America,2019,All ages,Both,Parkinson's disease,YLDs,89818.6844855913,65260.43981692135,118765.5020309114
+United States of America,2020,All ages,Both,Parkinson's disease,YLDs,92335.74191830293,67086.83673104156,121606.77785048384
+United States of America,2021,All ages,Both,Parkinson's disease,YLDs,94409.14413804178,68460.98126583565,125048.59160022938
+
+"Institute for Health Metrics and Evaluation (IHME). GBD Compare Data Visualization. Global Burden of Disease (GBD) Study 2021. Seattle, WA: IHME, University of Washington, 2023. Available from http://vizhub.healthdata.org/gbd-compare. (Accessed 9/16/2024)."
+"For terms and conditions of use, please visit http://www.healthdata.org/about/terms-and-conditions"

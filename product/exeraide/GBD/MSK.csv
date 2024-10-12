@@ -1,0 +1,36 @@
+Location,Year,Age,Sex,Cause of death or injury,Measure,Value,Lower bound,Upper bound
+Global,1990,All ages,Both,Musculoskeletal disorders,YLDs,84481236.86411355,61780868.01454933,112912240.66340011
+Global,1991,All ages,Both,Musculoskeletal disorders,YLDs,86036534.12494546,62838330.27826279,114988504.20433676
+Global,1992,All ages,Both,Musculoskeletal disorders,YLDs,87610086.05428211,63931010.68646349,117102493.69971818
+Global,1993,All ages,Both,Musculoskeletal disorders,YLDs,89210132.52541792,65046119.60269984,119210346.52622569
+Global,1994,All ages,Both,Musculoskeletal disorders,YLDs,90881985.92873745,66247163.74635357,121509502.06192283
+Global,1995,All ages,Both,Musculoskeletal disorders,YLDs,92657434.43322322,67517146.97102639,123828320.01305144
+Global,1996,All ages,Both,Musculoskeletal disorders,YLDs,94465370.19032322,68816094.62315328,126256666.800711
+Global,1997,All ages,Both,Musculoskeletal disorders,YLDs,96183765.00352672,70068953.25566094,128542520.0656031
+Global,1998,All ages,Both,Musculoskeletal disorders,YLDs,97880493.12214392,71333479.67386085,130731595.13569656
+Global,1999,All ages,Both,Musculoskeletal disorders,YLDs,99661497.50821996,72631535.00404194,133130282.51660088
+Global,2000,All ages,Both,Musculoskeletal disorders,YLDs,101624288.2570562,74024104.92048512,135698736.0482937
+Global,2001,All ages,Both,Musculoskeletal disorders,YLDs,103818824.68313472,75616260.4309864,138743717.0780396
+Global,2002,All ages,Both,Musculoskeletal disorders,YLDs,106168748.90259892,77335136.2468771,141942036.06341594
+Global,2003,All ages,Both,Musculoskeletal disorders,YLDs,108610594.38666736,79051511.36251885,145298389.81574833
+Global,2004,All ages,Both,Musculoskeletal disorders,YLDs,111123166.90335092,80843767.10816967,148826105.6436196
+Global,2005,All ages,Both,Musculoskeletal disorders,YLDs,113646498.89207058,82666530.05028397,152270353.55235577
+Global,2006,All ages,Both,Musculoskeletal disorders,YLDs,116262237.67070298,84532694.05685288,155884623.88337204
+Global,2007,All ages,Both,Musculoskeletal disorders,YLDs,119028481.50550844,86478975.85876316,159701434.11446065
+Global,2008,All ages,Both,Musculoskeletal disorders,YLDs,121878471.59673928,88460292.42800063,163560046.82067174
+Global,2009,All ages,Both,Musculoskeletal disorders,YLDs,124762907.05290048,90556904.20844053,167470780.0784251
+Global,2010,All ages,Both,Musculoskeletal disorders,YLDs,127569424.85230725,92581155.41239683,171142051.72429687
+Global,2011,All ages,Both,Musculoskeletal disorders,YLDs,130406553.86859952,94532568.38719584,174921462.19912
+Global,2012,All ages,Both,Musculoskeletal disorders,YLDs,133397650.24524751,96647115.64043564,179048034.89266223
+Global,2013,All ages,Both,Musculoskeletal disorders,YLDs,136475797.0750606,98838102.35343806,183233201.80514595
+Global,2014,All ages,Both,Musculoskeletal disorders,YLDs,139561515.7120866,101050838.05565672,187428848.443304
+Global,2015,All ages,Both,Musculoskeletal disorders,YLDs,142563186.85284367,103217662.70554212,191449260.1846652
+Global,2016,All ages,Both,Musculoskeletal disorders,YLDs,145502705.65558773,105319926.85497744,195359682.80413055
+Global,2017,All ages,Both,Musculoskeletal disorders,YLDs,148443838.72821566,107412159.63604786,199389319.5122776
+Global,2018,All ages,Both,Musculoskeletal disorders,YLDs,151376153.63211048,109493575.82395484,203321244.42640013
+Global,2019,All ages,Both,Musculoskeletal disorders,YLDs,154289627.7144768,111585083.94605611,207133752.56646693
+Global,2020,All ages,Both,Musculoskeletal disorders,YLDs,156483865.1243162,113213321.86779995,210112526.7792413
+Global,2021,All ages,Both,Musculoskeletal disorders,YLDs,158967221.4852185,115030582.53223369,213188882.71227425
+
+"Institute for Health Metrics and Evaluation (IHME). GBD Compare Data Visualization. Global Burden of Disease (GBD) Study 2021. Seattle, WA: IHME, University of Washington, 2023. Available from http://vizhub.healthdata.org/gbd-compare. (Accessed 9/16/2024)."
+"For terms and conditions of use, please visit http://www.healthdata.org/about/terms-and-conditions"

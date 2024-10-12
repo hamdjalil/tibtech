@@ -1,0 +1,36 @@
+Location,Year,Age,Sex,Cause of death or injury,Measure,Value,Lower bound,Upper bound
+United States of America,1990,All ages,Both,Multiple sclerosis,YLDs,68174.41943435036,47754.85718859074,89789.50394390199
+United States of America,1991,All ages,Both,Multiple sclerosis,YLDs,67433.55268580088,47952.68085569503,88828.20331111447
+United States of America,1992,All ages,Both,Multiple sclerosis,YLDs,67000.40084046744,47165.62333567815,87926.04207572265
+United States of America,1993,All ages,Both,Multiple sclerosis,YLDs,66846.79663442844,47606.06433755168,88258.3661085841
+United States of America,1994,All ages,Both,Multiple sclerosis,YLDs,67093.6674601777,47502.05277141762,87369.48410061956
+United States of America,1995,All ages,Both,Multiple sclerosis,YLDs,67817.17005246524,48008.75224921992,88815.26875453771
+United States of America,1996,All ages,Both,Multiple sclerosis,YLDs,69093.20668887699,49133.76635983441,89340.11354997504
+United States of America,1997,All ages,Both,Multiple sclerosis,YLDs,70905.30192390202,50178.05121090879,91993.89790482172
+United States of America,1998,All ages,Both,Multiple sclerosis,YLDs,73108.11601764368,51933.8443982288,94708.0842567523
+United States of America,1999,All ages,Both,Multiple sclerosis,YLDs,75267.28052211854,53334.04934927632,97273.55162928926
+United States of America,2000,All ages,Both,Multiple sclerosis,YLDs,77267.84163031165,55219.28214788652,99475.69559640525
+United States of America,2001,All ages,Both,Multiple sclerosis,YLDs,79147.51708741747,56974.60617410592,102001.10380534074
+United States of America,2002,All ages,Both,Multiple sclerosis,YLDs,81206.80539061342,57803.82508392408,104397.99614164144
+United States of America,2003,All ages,Both,Multiple sclerosis,YLDs,83080.44275215024,59781.79847844715,106660.18596472638
+United States of America,2004,All ages,Both,Multiple sclerosis,YLDs,84984.9293175425,60553.79295425964,109507.84409109232
+United States of America,2005,All ages,Both,Multiple sclerosis,YLDs,86730.84017121835,62067.8206155164,111386.16597222188
+United States of America,2006,All ages,Both,Multiple sclerosis,YLDs,88285.80432681656,63064.273727158,113328.59690425338
+United States of America,2007,All ages,Both,Multiple sclerosis,YLDs,89752.1259533123,63999.38971723367,115454.23771605044
+United States of America,2008,All ages,Both,Multiple sclerosis,YLDs,91186.69374244793,65466.55183170685,117140.32177237923
+United States of America,2009,All ages,Both,Multiple sclerosis,YLDs,92565.61625929056,66562.16795903635,118930.24724499953
+United States of America,2010,All ages,Both,Multiple sclerosis,YLDs,93717.06654474612,67524.41731128632,120472.8952506661
+United States of America,2011,All ages,Both,Multiple sclerosis,YLDs,94930.5369557254,68208.81089148972,121352.05078298252
+United States of America,2012,All ages,Both,Multiple sclerosis,YLDs,96078.42798291246,68775.64585718284,122964.83719349076
+United States of America,2013,All ages,Both,Multiple sclerosis,YLDs,97023.24934478584,69514.56558327473,123665.93896095017
+United States of America,2014,All ages,Both,Multiple sclerosis,YLDs,98012.10976016724,70646.0853847737,125497.05660808417
+United States of America,2015,All ages,Both,Multiple sclerosis,YLDs,98982.51482810274,70659.7524549122,127083.85808084228
+United States of America,2016,All ages,Both,Multiple sclerosis,YLDs,99876.8272405278,71652.92761766838,127022.29090527174
+United States of America,2017,All ages,Both,Multiple sclerosis,YLDs,100461.40150211586,72618.8580500817,129529.64566132886
+United States of America,2018,All ages,Both,Multiple sclerosis,YLDs,101046.7071524488,72913.80711633446,129276.93688305374
+United States of America,2019,All ages,Both,Multiple sclerosis,YLDs,101752.2882450926,73307.11002261942,129874.18458949194
+United States of America,2020,All ages,Both,Multiple sclerosis,YLDs,102262.33569328584,73790.47515882732,130557.81012688072
+United States of America,2021,All ages,Both,Multiple sclerosis,YLDs,102974.25289057074,74007.29385890777,130862.05486936485
+
+"Institute for Health Metrics and Evaluation (IHME). GBD Compare Data Visualization. Global Burden of Disease (GBD) Study 2021. Seattle, WA: IHME, University of Washington, 2023. Available from http://vizhub.healthdata.org/gbd-compare. (Accessed 9/16/2024)."
+"For terms and conditions of use, please visit http://www.healthdata.org/about/terms-and-conditions"

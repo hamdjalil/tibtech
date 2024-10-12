@@ -1,0 +1,36 @@
+Location,Year,Age,Sex,Cause of death or injury,Measure,Value,Lower bound,Upper bound
+United States of America,1990,All ages,Both,Osteoarthritis,YLDs,900534.4971405835,432395.4752842653,1819200.4121265272
+United States of America,1991,All ages,Both,Osteoarthritis,YLDs,925239.1638765368,445107.31954780914,1873019.6738500292
+United States of America,1992,All ages,Both,Osteoarthritis,YLDs,948004.463321258,457589.8760086904,1927546.347169694
+United States of America,1993,All ages,Both,Osteoarthritis,YLDs,968583.5946105,469275.1886262965,1970878.347242352
+United States of America,1994,All ages,Both,Osteoarthritis,YLDs,985309.3640374106,478544.9911388032,2005325.3418911996
+United States of America,1995,All ages,Both,Osteoarthritis,YLDs,1001918.8615883646,487156.8222661133,2038002.4376900548
+United States of America,1996,All ages,Both,Osteoarthritis,YLDs,1008783.5566790662,489120.8711261769,2055100.1871664664
+United States of America,1997,All ages,Both,Osteoarthritis,YLDs,1005640.8645231408,488165.4582424793,2044336.7261784223
+United States of America,1998,All ages,Both,Osteoarthritis,YLDs,999052.4629358238,485465.9441773164,2025191.6776458607
+United States of America,1999,All ages,Both,Osteoarthritis,YLDs,994357.250502291,483319.8354807533,2009686.459177561
+United States of America,2000,All ages,Both,Osteoarthritis,YLDs,1002453.6403022592,486191.9716865352,2022373.9762673615
+United States of America,2001,All ages,Both,Osteoarthritis,YLDs,1013389.8614885916,491841.38171116007,2043993.5457596292
+United States of America,2002,All ages,Both,Osteoarthritis,YLDs,1019737.3866315176,494146.21922430187,2053411.1725164785
+United States of America,2003,All ages,Both,Osteoarthritis,YLDs,1026502.3288162692,496974.75275816896,2066444.537121587
+United States of America,2004,All ages,Both,Osteoarthritis,YLDs,1037504.5372892563,501414.7685926164,2091025.8820946105
+United States of America,2005,All ages,Both,Osteoarthritis,YLDs,1061422.006847896,512609.708966949,2140665.0485674785
+United States of America,2006,All ages,Both,Osteoarthritis,YLDs,1098769.3191571098,532680.9169182082,2210627.4379453603
+United States of America,2007,All ages,Both,Osteoarthritis,YLDs,1147535.1690451663,557478.5723989354,2306590.242000305
+United States of America,2008,All ages,Both,Osteoarthritis,YLDs,1200699.183304466,582543.5902221716,2410528.6294725384
+United States of America,2009,All ages,Both,Osteoarthritis,YLDs,1249847.676650083,607362.8928899264,2501288.576306781
+United States of America,2010,All ages,Both,Osteoarthritis,YLDs,1290716.4017823548,627446.7076400728,2581856.043066879
+United States of America,2011,All ages,Both,Osteoarthritis,YLDs,1321754.5320413243,643156.1953080826,2642502.4490577662
+United States of America,2012,All ages,Both,Osteoarthritis,YLDs,1352813.66203516,659314.3373158748,2702264.940337199
+United States of America,2013,All ages,Both,Osteoarthritis,YLDs,1383700.4571883285,675383.8477740542,2764375.577591479
+United States of America,2014,All ages,Both,Osteoarthritis,YLDs,1413883.796503914,690009.0907986056,2824504.303455841
+United States of America,2015,All ages,Both,Osteoarthritis,YLDs,1446455.6302671446,707324.0625023987,2891850.349077896
+United States of America,2016,All ages,Both,Osteoarthritis,YLDs,1482446.373913373,722974.8412004465,2970484.1604535496
+United States of America,2017,All ages,Both,Osteoarthritis,YLDs,1525523.0984558198,742611.0786483223,3073222.7732959427
+United States of America,2018,All ages,Both,Osteoarthritis,YLDs,1572983.5360452344,762311.0006222946,3168585.952116821
+United States of America,2019,All ages,Both,Osteoarthritis,YLDs,1621243.177508972,787007.6115088325,3268824.1506885868
+United States of America,2020,All ages,Both,Osteoarthritis,YLDs,1683397.8867064614,818027.0087592734,3406035.5033628326
+United States of America,2021,All ages,Both,Osteoarthritis,YLDs,1710760.1214411114,829259.1553527449,3463603.187453442
+
+"Institute for Health Metrics and Evaluation (IHME). GBD Compare Data Visualization. Global Burden of Disease (GBD) Study 2021. Seattle, WA: IHME, University of Washington, 2023. Available from http://vizhub.healthdata.org/gbd-compare. (Accessed 9/16/2024)."
+"For terms and conditions of use, please visit http://www.healthdata.org/about/terms-and-conditions"
