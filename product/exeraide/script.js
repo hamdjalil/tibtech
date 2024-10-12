@@ -454,7 +454,7 @@ const observer = new IntersectionObserver((entries, observer) => {
                 createBarChart("#sportsPlot", cost3Data, 'year', 'cost', "global market size of sports rehabilitation", "Projected to increase to $4B by 2033", "Cost of treatment");
             }
             else if (entry.target.id === 'oldagePlot') {
-                createBarChart2("#oldagePlot", cost2Data, 'year', 'cost', "Global Growth in Old Age Rehabilitation Needs", "Projected to increase to 2.1B by 2050", "Number of people");
+                createBarChart2("#oldagePlot", cost2Data, 'year', 'cost', "global growth in old age rehabilitation needs", "Projected to increase to 2.1B by 2050", "Number of people");
             }
             // Unobserve after triggering the animation once
             observer.unobserve(entry.target);
@@ -520,6 +520,7 @@ function moveDown(className, baseDistanceRatio, duration) {
     element.style.setProperty('--move-distance', `${moveDistance}px`); // Apply dynamic distance in pixels
 }
 
+
 // Function to move element back to the original position (move up)
 function moveUpToOriginalPosition(className, duration) {
     const element = document.querySelector(className);
@@ -537,14 +538,29 @@ video.addEventListener('timeupdate', function() {
         document.querySelector(".hero-content").classList.add("down-animation-triggered");
 
         // Dynamically calculate distances based on screen size and move elements
-        moveDown(".animate-title", -0.075, 2); // Move title down 7.5% of screen height
-        moveDown(".animate-subtitle", 0.53, 2); // Move subtitle down 55% of screen height
+        moveDown(".animate-title", -0.085, 2); // Move title down 7.5% of screen height
+        moveDown(".animate-subtitle", 0.49, 2); // Move subtitle down 55% of screen height
 
         // Set timeout for moving them back up after 7 seconds
         setTimeout(function() {
             moveUpToOriginalPosition(".animate-title", 2); // Move title back to original position
             moveUpToOriginalPosition(".animate-subtitle", 2); // Move subtitle back to original position
-        }, 7000); // 7 second delay before moving back to original position
+        }, 5000); // 7 second delay before moving back to original position
+    }
+
+    // Trigger another moveDown at 40 seconds
+    if (video.currentTime >= 48 && !document.querySelector(".hero-content").classList.contains("third-down-triggered")) {
+        document.querySelector(".hero-content").classList.add("third-down-triggered");
+
+        // Move elements down again or to a different position
+        moveDown(".animate-title", -0.21, 2); // Adjust distance and duration as needed
+        moveDown(".animate-subtitle", -0.21 , 2); // Adjust distance and duration as needed
+        
+        setTimeout(function() {
+            moveUpToOriginalPosition(".animate-title", 2); // Move title back to original position
+            moveUpToOriginalPosition(".animate-subtitle", 2); // Move subtitle back to original position
+        }, 5000); 
+
     }
 });
 
@@ -552,6 +568,9 @@ video.addEventListener('timeupdate', function() {
 video.addEventListener('timeupdate', function() {
     if (video.currentTime < 22 && document.querySelector(".hero-content").classList.contains("down-animation-triggered")) {
         document.querySelector(".hero-content").classList.remove("down-animation-triggered");
+    }
+    if (video.currentTime < 22 && document.querySelector(".hero-content").classList.contains("third-down-triggered")) {
+            document.querySelector(".hero-content").classList.remove("third-down-triggered");
 }
 });
 
@@ -649,7 +668,7 @@ const observer2 = new IntersectionObserver((entries) => {
             videoBase.pause();
         }
     });
-}, { threshold: 0.5 }); // Trigger the callback when 50% of the video is visible
+}, { threshold: 1 }); // Trigger the callback when 50% of the video is visible
 
 // Observe the video element
 observer2.observe(videoBase);

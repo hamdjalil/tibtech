@@ -223,7 +223,7 @@ h1 {
 
 .author-info {
     position: relative;
-    font-size: 1.2em;
+    font-size: 0.9em;
     color: #666;
     font-family: 'Lora', serif;
     text-align: center;
@@ -486,7 +486,6 @@ h1 {
     max-width: 1000%;
     height: auto;
     border:none;
-    border-radius: 10px;
     
 }
 
@@ -1596,7 +1595,7 @@ video {
     }
 
     .hero-title{
-        font-size: 2rem;
+        font-size: 4vw;
         margin-top: -60px;
         text-align: center;
         padding-top: 35vh;
@@ -1831,12 +1830,12 @@ video {
 /* Add media queries for larger screens */
 @media (min-width: 1200px) {
     .hero-title {
-        padding-top: 25vh; /* Increase padding for larger screens */
-        font-size: 3vw; /* Slightly smaller font size */
+        padding-top: 30vh; /* Increase padding for larger screens */
+        font-size: 4vw; /* Slightly smaller font size */
     }
 
     .hero-sub-title {
-        font-size: 1.2vw; /* Adjust font size for larger screens */
+        font-size: 1.5vw; /* Adjust font size for larger screens */
         line-height: 1.8; /* Adjust line height */
         width: 70%; /* Slightly reduce width to fit properly */
     }
@@ -1968,5 +1967,39 @@ video {
     100% {
         transform: scale(1);
         opacity: 1;
+    }
+}
+
+.separator {
+    border: none;
+    border-top: 2px solid grey;
+    width: 20%;
+    margin: 0 auto;
+    margin-top: 98vh;
+    margin-bottom: -95vh;
+    position: relative;
+}
+
+.inline-image-2 {
+    width: 800px;
+    max-width: 100%; /* Ensures the image doesn't exceed the screen width */
+    height: auto; /* Maintains aspect ratio */
+}
+
+@media (max-width: 1200px) {
+    .inline-image-2 {
+        width: 600px;
+    }
+}
+
+@media (max-width: 800px) {
+    .inline-image-2 {
+        width: 400px;
+    }
+}
+
+@media (max-width: 576px) {
+    .inline-image-2 {
+        width: 100%; /* Full width for smaller screens */
     }
 }
