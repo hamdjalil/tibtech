@@ -615,7 +615,66 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Get the video element and button
+const videoBase = document.getElementById("videoBase-tracking");
+const analyzeJointsBtn = document.getElementById("toggleButton-tracking");
 
+// Event listener to stop the video at 1.5 seconds and reset button
+videoBase.addEventListener('timeupdate', function () {
+    if (videoBase.currentTime >= 1.4 && !analyzeJointsBtn.classList.contains('pressed')) {
+        videoBase.pause(); // Pause the video at 1.5 seconds
+    }
+    
+    // Ensure the button is reset if the video starts from the beginning
+    if (videoBase.currentTime < 1.5 && analyzeJointsBtn.classList.contains('pressed')) {
+        analyzeJointsBtn.classList.remove('pressed');
+        analyzeJointsBtn.style.backgroundColor = 'grey'; // Reset button to grey
+    }
+});
+
+// Event listener for button to play the video till the end
+analyzeJointsBtn.addEventListener('click', function () {
+    if (!analyzeJointsBtn.classList.contains('pressed')) {
+        // If button is not pressed, resume the video and play till the end
+        analyzeJointsBtn.classList.add('pressed'); // Set button to pressed state
+        analyzeJointsBtn.style.backgroundColor = 'black'; // Change button color to black
+        videoBase.play();
+
+        // Ensure video pauses at the last frame (just before the end)
+        const pauseAtLastFrame = function () {
+            if (videoBase.currentTime >= videoBase.duration - 1) {
+                videoBase.pause(); // Pause at the last frame
+                videoBase.removeEventListener('timeupdate', pauseAtLastFrame); // Remove listener once video is paused
+            }
+        };
+
+        videoBase.addEventListener('timeupdate', pauseAtLastFrame);
+    } else {
+        // If the button is pressed (black), reset the video to the beginning and pause at 1.5 again
+        analyzeJointsBtn.classList.remove('pressed');
+        analyzeJointsBtn.style.backgroundColor = 'grey'; // Reset button to grey
+        videoBase.currentTime = 0; // Reset video to the beginning
+        videoBase.play(); // Start video again
+    }
+});
+videoBase.play();
+// Create an IntersectionObserver to detect when the video enters or leaves the viewport
+const observer2 = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            // When the video enters the viewport, resume playback if not at stop point
+            if (videoBase.currentTime < 1.4 && !analyzeJointsBtn.classList.contains('pressed')) {
+                videoBase.play();
+            }
+        } else {
+            // When the video leaves the viewport, pause it
+            videoBase.pause();
+        }
+    });
+}, { threshold: 1 }); // Trigger the callback when 50% of the video is visible
+
+// Observe the video element
+observer2.observe(videoBase);
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 function createArrowAnimation(svgId, inputImagePath, outputImagePath) {
@@ -1008,17 +1067,15 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
-document.addEventListener("DOMContentLoaded", () => {
-    const loadingScreen = document.getElementById("loading-screen");
-    const content = document.getElementById("content");
 
+document.addEventListener("DOMContentLoaded", () => {
     // Prefetch video files when the page loads
     const videoUrls = ["priv11.mp4", "priv2.mp4", "exeraidy11_low.mp4", "exeraide animation.mp4"];
     videoUrls.forEach(url => {
         fetch(url); // Prefetch video
     });
 
-    // Create an IntersectionObserver to load videos when in the viewport
+    // Create an IntersectionObserver to load videos when in viewport
     const observer = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -1036,84 +1093,22 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll("video[data-src]").forEach(video => {
         observer.observe(video);
     });
-
-    window.onload = function () {
-        // Hide loading screen after all resources are loaded
-        loadingScreen.style.display = 'none';
-        content.style.display = 'block'; // Show content
-        document.body.classList.remove('loading');
-
-        // Play videos once the page is fully loaded
-        document.querySelectorAll("video").forEach(video => {
-            video.play();
-        });
-    };
-
-    // Fallback to remove the loading screen after 10 seconds
-    setTimeout(() => {
-        loadingScreen.style.display = 'none';
-        content.style.display = 'block';
-        document.body.classList.remove('loading');
-    }, 10000); // 10-second fallback in case of slow loading
 });
 
-// Get the video element and button
-const videoBase = document.getElementById("videoBase-tracking");
-const analyzeJointsBtn = document.getElementById("toggleButton-tracking");
+document.addEventListener("DOMContentLoaded", () => {
+  const loadingScreen = document.getElementById("loading-screen");
+  const content = document.getElementById("content");
 
-// Event listener to stop the video at 1.5 seconds and reset button
-videoBase.addEventListener('timeupdate', function () {
-    if (videoBase.currentTime >= 1.4 && !analyzeJointsBtn.classList.contains('pressed')) {
-        videoBase.pause(); // Pause the video at 1.5 seconds
-    }
+  window.onload = function () {
+    // Hide loading screen after all resources are loaded
+    loadingScreen.style.display = 'none';
+    content.style.display = 'block'; // Show content
+    document.body.classList.remove('loading');
+  };
 
-    // Ensure the button is reset if the video starts from the beginning
-    if (videoBase.currentTime < 1.5 && analyzeJointsBtn.classList.contains('pressed')) {
-        analyzeJointsBtn.classList.remove('pressed');
-        analyzeJointsBtn.style.backgroundColor = 'grey'; // Reset button to grey
-    }
+  // Optionally add a timeout if you want to remove the loading screen after a maximum wait time
+  setTimeout(() => {
+    loadingScreen.style.display = 'none';
+    content.style.display = 'block';
+  }, 10000); // 10-second fallback in case of slow loading
 });
-
-// Event listener for button to play the video till the end
-analyzeJointsBtn.addEventListener('click', function () {
-    if (!analyzeJointsBtn.classList.contains('pressed')) {
-        // If button is not pressed, resume the video and play till the end
-        analyzeJointsBtn.classList.add('pressed'); // Set button to pressed state
-        analyzeJointsBtn.style.backgroundColor = 'black'; // Change button color to black
-        videoBase.play();
-
-        // Ensure video pauses at the last frame (just before the end)
-        const pauseAtLastFrame = function () {
-            if (videoBase.currentTime >= videoBase.duration - 1) {
-                videoBase.pause(); // Pause at the last frame
-                videoBase.removeEventListener('timeupdate', pauseAtLastFrame); // Remove listener once video is paused
-            }
-        };
-
-        videoBase.addEventListener('timeupdate', pauseAtLastFrame);
-    } else {
-        // If the button is pressed (black), reset the video to the beginning and pause at 1.5 again
-        analyzeJointsBtn.classList.remove('pressed');
-        analyzeJointsBtn.style.backgroundColor = 'grey'; // Reset button to grey
-        videoBase.currentTime = 0; // Reset video to the beginning
-        videoBase.play(); // Start video again
-    }
-});
-
-// Create an IntersectionObserver to detect when the video enters or leaves the viewport
-const observer2 = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            // When the video enters the viewport, resume playback if not at stop point
-            if (videoBase.currentTime < 1.4 && !analyzeJointsBtn.classList.contains('pressed')) {
-                videoBase.play();
-            }
-        } else {
-            // When the video leaves the viewport, pause it
-            videoBase.pause();
-        }
-    });
-}, { threshold: 1 }); // Trigger the callback when 50% of the video is visible
-
-// Observe the video element
-observer2.observe(videoBase);
