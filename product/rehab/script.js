@@ -1066,3 +1066,31 @@ document.addEventListener("DOMContentLoaded", () => {
         observer.observe(img);
     });
 });
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    // Prefetch video files when the page loads
+    const videoUrls = ["priv11.mp4", "priv2.mp4", "exeraidy11_low.mp4", "exeraide animation.mp4"];
+    videoUrls.forEach(url => {
+        fetch(url); // Prefetch video
+    });
+
+    // Create an IntersectionObserver to load videos when in viewport
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const video = entry.target;
+                if (video.dataset.src) {
+                    video.src = video.dataset.src; // Load the actual video source
+                    video.load(); // Start loading the video
+                    observer.unobserve(video); // Stop observing once loaded
+                }
+            }
+        });
+    }, { threshold: 0.1 });
+
+    // Observe all lazy-loaded videos
+    document.querySelectorAll("video[data-src]").forEach(video => {
+        observer.observe(video);
+    });
+});
