@@ -1110,5 +1110,5 @@ document.addEventListener("DOMContentLoaded", () => {
   setTimeout(() => {
     loadingScreen.style.display = 'none';
     content.style.display = 'block';
-  }, 10000); // 10-second fallback in case of slow loading
+  }, 20000); // 10-second fallback in case of slow loading
 });
