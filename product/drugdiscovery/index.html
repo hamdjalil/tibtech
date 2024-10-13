@@ -56,6 +56,11 @@
         <div onclick="scrollEle('team')">Team</div>
     </div> -->
 
+    <div id="loading-screen">
+        <div class="spinner"></div>
+        
+    </div>
+
     <main class="main-container">
         <section class="hero">
             <div class="hero-content">
@@ -147,6 +152,7 @@
 
                     <br><br><br><br>
 
+                    
                     <h3>
                         <b>High-precision spatial gene expression quantification</b> <img src="1.png" style="width:50px; margin-bottom: -10px;" class="inline-image">
                     </h3>
@@ -157,6 +163,7 @@
                         the role of specific neuronal subtypes in drug design. 
                     </p>
 
+                    
                     <div id="container-wrapper"  style="display: flex; flex-wrap: nowrap;">
                         <!-- Top Image with Bounding Boxes -->
                         <div id="visualization-container" style="width: 350px">
@@ -179,7 +186,7 @@
                                 </p>
                             </div>
                         </div>
-                    
+                        
                         <!-- Yellow Channel -->
                         <div id="visualization-container" style="margin: 0 5px; position: relative;width: 350px">
                             <img id="image-layer-yellow" src="threshold visualization/yellow/876.png" alt="Image" style="border: 5px solid orange; width: 350px; height: 350px;">
@@ -224,6 +231,7 @@
                         signals for accurate assesment.
                     </p>
                     
+                    
                     <img src="figs/neuron_detection.svg" alt="Grazing Image" class="inline-image">
                     
 
@@ -250,6 +258,8 @@
                         <button id = 'grazing_btn' onclick="showSection('grazing', this)" class="navigate-button">Hindbrain</button>
                         <button id = 'resting_btn' onclick="showSection('resting', this)" class="navigate-button">Pre-Thalamus</button>
                     </div> -->
+
+                    
 
                     <div class="image-section">
                         <div class="image-container">
@@ -303,6 +313,8 @@
                     <div class="button-container">
                         <button id="toggleOverlay" class="reg-button pressed">Register Brains</button>
                     </div>
+
+                    
                     <div class="image-pair-container">
                         <div class="image-container3">
                             <img id="baseImage1" src="figs/reg/reg1.svg" alt="Base Image 1">
@@ -330,7 +342,7 @@
                         a robust foundation for neuroanatomical studies.
                     </p> -->
                     <img src="figs/brain_registration.svg" alt="Grazing Image" class="inline-image">
-                                        
+                    
                     <!-- <p>
                         Precise 3D brain registration ensures accurate alignment of brain regions, enabling consistent neuron 
                         quantification within specific areas. This technology allows for reliable counting and analysis of 
@@ -383,6 +395,7 @@
                         evaluating the efficacy of interventions or treatments.
                     </p>
                 
+                    
                     <div class="button-container">
                         <button id="toggleButton-tracking" class="reg-button pressed" style="z-index: 10; margin-top: 5px; margin-bottom: -5px; background-color: grey;">Start keypoint tracking </button>
                     </div>
@@ -2566,7 +2579,86 @@ d3.json("threshold visualization/red/intensity_data.json").then(data => {
     document.getElementById('DD_video').playbackRate = 2.0;
 </script>
 
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        // Prefetch video files when the page loads
+        const videoUrls = ["priv11.mp4", "priv2.mp4", "exeraidy11_low.mp4", "exeraide animation.mp4"];
+        videoUrls.forEach(url => {
+            fetch(url); // Prefetch video
+        });
+    
+        // Create an IntersectionObserver to load videos when in viewport
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const video = entry.target;
+                    if (video.dataset.src) {
+                        video.src = video.dataset.src; // Load the actual video source
+                        video.load(); // Start loading the video
+                        observer.unobserve(video); // Stop observing once loaded
+                    }
+                }
+            });
+        }, { threshold: 0.1 });
+    
+        // Observe all lazy-loaded videos
+        document.querySelectorAll("video[data-src]").forEach(video => {
+            observer.observe(video);
+        });
+    });
+    
+    document.addEventListener("DOMContentLoaded", () => {
+      const loadingScreen = document.getElementById("loading-screen");
+      const content = document.getElementById("content");
+    
+      window.onload = function () {
+        // Hide loading screen after all resources are loaded
+        loadingScreen.style.display = 'none';
+        content.style.display = 'block'; // Show content
+        document.body.classList.remove('loading');
+      };
+    
+      // Optionally add a timeout if you want to remove the loading screen after a maximum wait time
+      setTimeout(() => {
+        loadingScreen.style.display = 'none';
+        content.style.display = 'block';
+      }, 10000); // 10-second fallback in case of slow loading
+    });
+</script>
 
+<script>
+    // List of files to load
+    const files = ["FINAL.mp4", "1.png", "figs/brain_sect_23.png", "threshold visualization/yellow/876.png", "threshold visualization/yellow/876_mask.png",
+                   "threshold visualization/green/281.png", "threshold visualization/green/281_mask.png", "threshold visualization/red/1924.png", 
+                   "threshold visualization/red/1924_mask.png", "figs/neuron_detection.svg", "figs/ns1.svg", "figs/ns3.svg", "figs/ns2.svg", "figs/ns4.svg",
+                   "2.png", "figs/reg/reg1.svg", "figs/reg/reg_1.svg", "figs/reg/reg2.svg", "figs/reg/reg_2.svg", "figs/SeBRe_GIF3.mp4", "figs/brain_registration.svg",
+                   "3.png", "mouse-vid2.mp4", "4d video.mp4"];
+
+    // Function to simulate loading files
+    function loadFiles() {
+        return new Promise((resolve, reject) => {
+            let loadedFiles = 0;
+            files.forEach((file) => {
+                // Simulate a delay for each file load
+                setTimeout(() => {
+                    loadedFiles++;
+                    console.log(`Loaded: ${file}`);
+                    if (loadedFiles === files.length) {
+                        resolve();
+                    }
+                }, Math.random() * 2000 + 500); // Random delay for file load simulation
+            });
+        });
+    }
+
+    // Show spinner while loading files and reveal the blog content when done
+    window.addEventListener('load', async () => {
+        await loadFiles();
+        document.getElementById('loading-screen').style.display = 'none';
+        document.getElementById('blog-content').style.display = 'block';
+        document.body.classList.remove('loading'); // Allow scrolling
+    });
+</script>
 
 
 </body>
