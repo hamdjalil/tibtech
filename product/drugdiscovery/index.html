@@ -2628,25 +2628,57 @@ d3.json("threshold visualization/red/intensity_data.json").then(data => {
 
 <script>
     // List of files to load
-    const files = ["FINAL.mp4", "1.png", "figs/brain_sect_23.png", "threshold visualization/yellow/876.png", "threshold visualization/yellow/876_mask.png",
-                   "threshold visualization/green/281.png", "threshold visualization/green/281_mask.png", "threshold visualization/red/1924.png", 
-                   "threshold visualization/red/1924_mask.png", "figs/neuron_detection.svg", "figs/ns1.svg", "figs/ns3.svg", "figs/ns2.svg", "figs/ns4.svg",
-                   "2.png", "figs/reg/reg1.svg", "figs/reg/reg_1.svg", "figs/reg/reg2.svg", "figs/reg/reg_2.svg", "figs/SeBRe_GIF3.mp4", "figs/brain_registration.svg",
-                   "3.png", "mouse-vid2.mp4", "4d video.mp4", "figs/smol br.png", "4dgiffy.gif"];
+    const files = [
+        "FINAL.mp4", "1.png", "figs/brain_sect_23.png", 
+        "threshold visualization/yellow/876.png", "threshold visualization/yellow/876_mask.png",
+        "threshold visualization/green/281.png", "threshold visualization/green/281_mask.png", 
+        "threshold visualization/red/1924.png", "threshold visualization/red/1924_mask.png", 
+        "figs/neuron_detection.svg", "figs/ns1.svg", "figs/ns3.svg", "figs/ns2.svg", "figs/ns4.svg",
+        "2.png", "figs/reg/reg1.svg", "figs/reg/reg_1.svg", "figs/reg/reg2.svg", 
+        "figs/reg/reg_2.svg", "figs/SeBRe_GIF3.mp4", "figs/brain_registration.svg",
+        "3.png", "mouse-vid2.mp4", "4d video.mp4", "figs/smol br.png", "4dgiffy.gif"
+    ];
 
-    // Function to simulate loading files
+    // Function to load actual files
     function loadFiles() {
         return new Promise((resolve, reject) => {
             let loadedFiles = 0;
+
+            // Helper function to load image or video
+            function loadFile(file) {
+                return new Promise((resolve, reject) => {
+                    const extension = file.split('.').pop();
+                    
+                    if (["png", "jpg", "gif", "svg"].includes(extension)) {
+                        // Handle images
+                        const img = new Image();
+                        img.src = file;
+                        img.onload = resolve;
+                        img.onerror = reject;
+                    } else if (["mp4", "webm"].includes(extension)) {
+                        // Handle videos
+                        const video = document.createElement('video');
+                        video.src = file;
+                        video.onloadeddata = resolve;
+                        video.onerror = reject;
+                    } else {
+                        // Handle other file types (just resolve for simplicity)
+                        resolve();
+                    }
+                });
+            }
+
+            // Load each file
             files.forEach((file) => {
-                // Simulate a delay for each file load
-                setTimeout(() => {
+                loadFile(file).then(() => {
                     loadedFiles++;
                     console.log(`Loaded: ${file}`);
                     if (loadedFiles === files.length) {
                         resolve();
                     }
-                }, Math.random() * 2000 + 500); // Random delay for file load simulation
+                }).catch((err) => {
+                    console.error(`Failed to load: ${file}`, err);
+                });
             });
         });
     }
