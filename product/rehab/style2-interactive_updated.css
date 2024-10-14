@@ -1815,7 +1815,7 @@ video {
 .hero-sub-title {
     color: white;
     font-family: 'Inter Tight', 'Georgia', serif;
-    font-size: 1.5vw; /* Use viewport width for font size */
+    font-size: 1.4vw; /* Use viewport width for font size */
     line-height: 1.6;
     margin: auto;
     text-align: center;
@@ -1823,16 +1823,19 @@ video {
 }
 
 /* Add media queries for larger screens */
-@media (min-width: 1200px) {
+@media (min-width: 1500px) {
     .hero-title {
-        padding-top: 30vh; /* Increase padding for larger screens */
+        padding-top: 10vh; /* Increase padding for larger screens */
         font-size: 4vw; /* Slightly smaller font size */
     }
 
     .hero-sub-title {
-        font-size: 1.5vw; /* Adjust font size for larger screens */
+        font-size: 1.2vw; /* Adjust font size for larger screens */
         line-height: 1.8; /* Adjust line height */
         width: 70%; /* Slightly reduce width to fit properly */
+    }
+    #hero-title2 {
+        padding-top: 30vh;
     }
 }
 
@@ -2058,3 +2061,5 @@ video {
         font-size: 3vw; /* Slightly smaller font size */
     }
 }
+
+
