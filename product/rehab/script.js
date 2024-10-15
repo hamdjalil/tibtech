@@ -394,13 +394,13 @@ function createAnimatedLineChart2(svgId, data, title, colorMap, annotation, yMax
         .attr("transform", (d, i) => `translate(0,${i * 12})`);
 
     legend.append("rect")
-        .attr("x", plotWidth3 - (window.screen.width*0.1))
+        .attr("x", plotWidth3 - (window.screen.width*0.05))
         .attr("width", 10)
         .attr("height", 10)
         .style("fill", d => colorMap[d]);
 
     legend.append("text")
-        .attr("x", plotWidth3 - (window.screen.width*0.101))
+        .attr("x", plotWidth3 - (window.screen.width*0.051))
         .attr("y", 5)
         .attr("dy", ".35em")
         .style("text-anchor", "end")
