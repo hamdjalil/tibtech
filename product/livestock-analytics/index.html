@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-38PESE35X3"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-38PESE35X3');
+    </script> -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0">
     <title>Livestock Analytics</title>
@@ -9,209 +16,202 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-38PESE35X3"></script>
     <script src="https://d3js.org/d3.v7.min.js"></script>
 
-    <!-- <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-38PESE35X3');
-    </script> -->
+    <style>
+
+
+        .axis-label {
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .title {
+            font-size: 24px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+    </style>
+    
 
 
 </head>
-<body style="background-color: rgb(255, 255, 255); margin: 0;">
-   <!-- NAVBAR -->
-   <a href="https://tibbtech.com/"> 
+<body style="background-color: rgb(255, 255, 255); padding-top: 100px;">
+    <a href="https://tibbtech.com/" target="_blank">
     <div id="navbar" class="noto">
-     <img src="logo.svg" style="height: 100%;">
- </div>
- 
-</a>  
-
-
-    <div id="loading-screen">
-        <div class="spinner"></div>
-        
-    </div>
+            <img src="logo.svg" style="height: 100%;" />
+        </div>
+    </a>
 
     <main class="main-container">
-        <!-- Hero Section -->
         <section class="hero">
-            <div class="video-container">
-                <video autoplay muted loop id="DD_video" class="video">
-                    <source src="AnimalFormer Animation.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-                <div class="overlay"></div>
-            </div>
             <div class="hero-content">
                 <div class="info-container">
-                    <div class="hero-title animate-title">AnimalFormer</div>
-                    <div class="hero-sub-title animate-subtitle">
-                        Our multimodal livestock analytics AI framework
-                    </div>
-                    <br>
+                <div class="hero-title">Multimodal Artificial Intelligence-driven Livestock Analytics</div>
+                <div class="hero-sub-title">
+                    Tibbling Technologies' multimodal AI framework for your end-to-end livestock analytics.                   <br>
+                    <p class="author-info">Asim Iqbal, PhD</p>
+                    <!-- <p class="author-info">June 18, 2024</p> -->
                 </div>
-            </div>
+            
+                <div class="slider">
+                    <div class="image-head-container">
+                        <img src="animalformer-illus-upscaled.png" alt="AnimalFormer Illustration" class="image">
+                    </div>
+                </div>
+        </div>
         </section>
-
-        <div class="hero-title" id="hero-title2" style="margin-top: 65vh; color: black;">
-            Multimodal AI-driven Livestock Analytics
-        </div>
-        <div class="hero-sub-title" id="hero-sub-title2" style="color: black; margin-bottom: -2vh;">
-            Tibbling Technologies’ multimodal AI framework delivers deeper insights for smarter livestock management.               </div>
-            <br>
-            <p class="author-info" style="margin-bottom: -95vh;">Asim Iqbal, PhD</p>
-        </div>
-        <hr class="separator">
         
         <section class="content">
             <article class="post">
                 <div class="post-container">
-                    <div class="post-text">
+                    <div class="post-text-2">
                         <p>
-                            Recovering from physical setbacks—whether sports injuries, chronic conditions, or age-related challenges—can be complex. 
-                            With the need for rehabilitation services expected to reach <b>2.62 billion</b> people by 2025, innovative approaches 
-                            have become essential.
+                            The journey from <b>initial concept to a viable 
+                            therapeutic solution </b>has several challenges in drug development. Traditional computational techniques 
+                            struggle to keep pace with the growing demand for speed, accuracy, 
+                            and innovation required for drug discovery. In addition, they rely on a single data modality to discover relevant features and miss out the meaningful information present across <b>multimodal datasets</b>. This is particularly critical in understanding complex neurological disorders, 
+                            where the urgency to discover effective therapies is heightened by the growing prevalence of conditions like <b>Alzheimer’s, 
+                            Parkinson’s, Autism spectrum disorder (ASD), Amyotrophic lateral sclerosis (ALS), Mutiple Sclerosis, and Cerebral palsy (CP)</b>, etc., to mention a few. 
+                            According to the <a style="color: black;" href="https://csdd.tufts.edu/" target="_blank"> Tufts Center for the Study of Drug Development</a>, the 
+                            average cost of bringing a new drug to market now exceeds <a style="color: black;" href="https://www.scientificamerican.com/article/cost-to-develop-new-pharmaceutical-drug-now-exceeds-2-5b/#:~:text=A%20new%20report%20published%20by,the%20center%20made%20in%202003." target="_blank"><b>$2.6 billion</b></a>, and the process can take over 
+                            a decade to complete. Yet, despite these enormous investments, the success rate remains alarmingly 
+                            low. A report from the <a style="color: black;" href="https://www.bio.org/ia-reports" target="_blank">Biotechnology Innovation Organization (BIO)</a> reveals that only <a style="color: black;" href="https://go.bio.org/rs/490-EHZ-999/images/ClinicalDevelopmentSuccessRates2011_2020.pdf" target="_blank"><b>1 in 13</b></a> drug 
+                            candidates that enter clinical trials will ultimately receive FDA approval. This fragmented approach 
+                            slows down drug development, limiting breakthroughs and overburdening wet labs.
                         </p>
-                        <div id="chartsContainer" style="text-align: center; margin-top: 50px; padding-right: 35px; padding-left: 25px;">
-                            <div id="costPlot" style="display: inline-block; margin: 0 10px;"></div>
-                            <div id="sportsPlot" style="display: inline-block; margin: 0 10px;"></div>
-                            <div id="globalDisordersPlot" style="display: inline-block; margin: 0 10px;"></div>
-                        </div>
-                        <br>
-                        <p>
-                            Athletes, in particular, often face a tough road to recovery after injuries, needing specialized rehabilitation to regain strength and peak performance. 
-                            By 2033, the sports rehabilitation market is set to reach <b>$4 billion</b>, reflecting a rising demand for effective, targeted recovery solutions. 
-                            Beyond sports, chronic conditions like Parkinson’s, arthritis, stroke etc. contribute significantly to global disability, 
-                            with over <b>20 million</b> Years Lived with Disability (YLDs). Moreover, as people age, maintaining mobility and independence 
-                            becomes more challenging which further highlights the need for customized support, to keeps older adults active and engaged in their daily lives.
-                        </p>
-
-                        <p>
-                            Addressing these diverse needs requires a more adaptive and personalized approach. That’s where <b>ExerAIde</b> steps in.
-                        </p>
-        
-                                                
                     </div>
                 </div>
             </article>
 
-            <br><br><br><br>
-        
-            <div class="post-container">
-                <div class="post-text-2">
-                    <h3><b>Our Multimodal AI framework for livestock behavioral analytics</b></h3>
-                    <br>
-                    <p>
-                        <b>ExerAIde</b> uses a <b>multimodal AI framework</b> to provide tailored recovery solutions. It helps 
-                        individuals recovering from sports injuries, chronic conditions, and aging challenges by integrating 
-                        multiple data modalities. Our approach delivers precise, adaptive support, helping users regain strength, 
-                        mobility, and overall well-being. We aim to simplify the rehabilitation journey with a more effective and 
-                        personalized path to recovery.
-                    </p>
+            <article class="post">
+                <div class="post-container">
+                    <div class="post-text-2">
+                
+                <article>
+                    <div class="post-container">
+                        <div class = "post-text-2">
+                            <h3><b>Our Multimodal AI framework for end-to-end livestock analytics</b></h3>
+                            <br>
 
-                    <br><br>
-        
-                    <h4><b>Sports Rehabilitation</b></h4>
-                    <svg style="margin-top:-50px;" id="customPlot3" width="800" height="400"></svg>
-                    <p>
-                        Our framework enhances sports rehabilitation using <b>advanced AI</b> to analyze and refine athletes’ movements. 
-                        It starts by capturing detailed video footage of an athlete’s movements, identifying areas needing adjustment. 
-                        This analysis provides <b>personalized feedback</b> for better form and faster recovery. 
-                        By focusing on each athlete’s needs, our product ensures a tailored process, enabling athletes to regain peak performance and stay on track with their rehabilitation goals.
-                    </p>
-                    <br>
-        
-                    <video id="videoBase-tracking" autoplay muted loop style="border-radius: 20px;">
-                        <source src="AnimalFormer Animation.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                    <div class="button-container">
-                        <button id="toggleButton-tracking" class="reg-button pressed" style="z-index: 10; margin-top: 5px; margin-bottom: -5px; background-color: grey;">
-                            Analyze movement 
-                        </button>
-                    </div>
-        
-                    <p>
-                        Our advanced <b>joint analysis</b> visualizes stress and movement impact on various body parts during activities 
-                        like baseball swings, soccer kicks, tennis serves, basketball shots, and football tackles, among others. 
-                        By tracking motion and identifying which joints are most and least affected, it offers insights into areas 
-                        needing attention. This analysis not only helps design recovery plans tailored to specific needs but also 
-                        suggests adjustments to improve current movements, minimizing injury risks and supporting athletes in their 
-                        journey to full recovery and peak performance.
-                    </p>
+                            <div class="image-container">
+                                <img src="AnimalFormer Flow Diagram.svg" alt="Brain Mapping Image" class="side-image">
+                            </div>
+
+                
+
 
                     <br><br><br><br>
+
+                    <h3><b>Behavior analysis</b>
+                    </h3>              
+
+                    <p>
+                        Next, our framework performs precise image registration by mapping the standard brain atlases to 2D/3D brain volumes of different genetic markers, 
+                        ensuring for accurate brain-wide spatial genomics.
+                    </p>
+                    <br>
+
+
+                    <div class="video-container">
+                        <div class="video-wrapper">
+                            <video id="videoBase-tracking-1" autoplay muted loop style="border-radius: 10px;", class=>
+                                <source src="aniformer1.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            <div class="button-container">
+                                <button id="toggleButton-tracking-1" class="reg-button pressed" style="z-index: 10; margin-top: 5px; margin-bottom: -5px; background-color: grey;">
+                                    Analyze sheep movement
+                                </button>
+                            </div>
+                        </div>
     
-                    <h4><b>Physical Rehabilitation</b></h4>
-                    <div id="chartsContainer" style="text-align: center;">
-                        <div id="usDisordersPlot" style="display: flex; margin: 0 10px; padding-right: 35px; padding-left: 25px;"></div>
+                        <div class="video-wrapper">
+                            <video id="videoBase-tracking-2" autoplay muted loop style="border-radius: 10px;">
+                                <source src="aniformer2.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            <div class="button-container">
+                                <button id="toggleButton-tracking-2" class="reg-button pressed" style="z-index: 10; margin-top: 5px; margin-bottom: -5px; background-color: grey;">
+                                    Analyze cow movement 
+                                </button>
+                            </div>
+                        </div>
+    
+                        <div class="video-wrapper">
+                            <video id="videoBase-tracking-3" autoplay muted loop style="border-radius: 10px;">
+                                <source src="aniformer3.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            <div class="button-container">
+                                <button id="toggleButton-tracking-3" class="reg-button pressed" style="z-index: 10; margin-top: 5px; margin-bottom: -5px; background-color: grey;">
+                                    Analyze horse movement 
+                                </button>
+                            </div>
+                        </div>
                     </div>
+
                     <br>
+
                     <p>
-                        Physical rehabilitation is crucial for individuals with <b>musculoskeletal</b> and <b>neurological disorders</b> like arthritis, Parkinson’s, multiple sclerosis, stroke etc. In the U.S., <b>millions</b> face these challenges, contributing to increased YLDs. Our tailored approach focuses on advanced techniques like motion analysis and targeted therapy, helping patients effectively regain strength, coordination, and mobility.
+                        Next, our framework performs precise image registration by mapping the standard brain atlases to 2D/3D brain volumes of different genetic markers, 
+                        ensuring for accurate brain-wide spatial genomics. 
+                        Ensuring for accurate brain-wide spatial genomics. Next, our framework performs precise image registration by mapping the standard brain atlases to 2D/3D brain volumes of different genetic markers, 
+                        ensuring for accurate brain-wide spatial genomics.
                     </p>
-                            
-                    <svg style="margin-top:-50px;" id="customPlot" width="800" height="400"></svg>
+
+                    <br><br><br><br>
+
+                    <h3><b>Complete end-to-end analytics</b>
+                    </h3> 
+
+                    <p>
+                        Next, our framework performs precise image registration by mapping the standard brain atlases to 2D/3D brain volumes of different genetic markers, 
+                        ensuring for accurate brain-wide spatial genomics. 
+                        Ensuring for accurate brain-wide spatial genomics. Next, our framework performs precise image registration by mapping the standard brain atlases to 2D/3D brain volumes of different genetic markers, 
+                        ensuring for accurate brain-wide spatial genomics.
+                    </p>
+                    <div class="image-container">
+                        <img src="Figure_2.drawio.svg" alt="Brain Mapping Image" class="side-image">
+                    </div>
+
+                    <p>
+                        Next, our framework performs precise image registration by mapping the standard brain atlases to 2D/3D brain volumes of different genetic markers, 
+                        ensuring for accurate brain-wide spatial genomics. 
+                        Ensuring for accurate brain-wide spatial genomics. Next, our framework performs precise image registration by mapping the standard brain atlases to 2D/3D brain volumes of different genetic markers, 
+                        ensuring for accurate brain-wide spatial genomics.
+                    </p>
                     
-                    <p>
-                        Through personalized care, we guide patients to a better quality of life, ensuring therapy meets their specific needs for improved recovery.
-                    </p>
-
                     <br><br><br><br>
-        
-                    <h4><b>Old Age Rehabilitation</b></h4>
-                    <div id="chartsContainer" style="text-align: center;">
-                        <div id="oldagePlot" style="display: inline-block; margin: 0 10px; padding-right: 35px; padding-left: 25px;"></div>
-                    </div>
-                    <p>
-                        The need for rehabilitation services among older adults is also growing rapidly, with over <b>2.1 billion</b> expected to require support by 2050. 
-                        Aging often brings challenges like reduced muscle strength, balance, and flexibility. Tailored rehabilitation helps older adults stay active, adapt to physical changes, and maintain a better quality of life. Personalized programs address specific needs, providing targeted exercises and therapy for optimal recovery.
-                    </p>
-        
-                    <svg style="margin-top:-50px;" id="customPlot2" width="800" height="400"></svg>
-                    <p>
-                        Our solution emphasizes personalized care, using advanced techniques to help older adults regain strength, coordination, and mobility for a better quality of life.
-                    </p>
+                    <h3><b>Performance comparison </b>
+                    </h3>
+                
 
-                    <br><br><br><br>
-        
-                    <h3><b>Tailored workout plans</b></h3>
-                    <br>
-                    <img src="exercises2.png" alt="Image 1" class="inline-image-2" style="width:800px;">
-                    <br>
-                    <p>
-                        Our framework offers <b>tailored exercise plans</b> based on individual needs. After identifying focus areas, it suggests exercises that target specific weaknesses, improving flexibility, strength, or recovery. These customized plans help speed up the rehabilitation process, enabling users to reach their full potential safely and effectively.
-                    </p>
+                <p>
+                    Next, our framework performs precise image registration by mapping the standard brain atlases to 2D/3D brain volumes of different genetic markers, 
+                    ensuring for accurate brain-wide spatial genomics.
+                </p>
 
-                    <br><br><br><br>
-        
-                    <h3><b>Protecting your privacy</b></h3>
-                    <br>
-                    <div style="display: flex; gap: 5px;">
-                        <video autoplay muted loop style="width: 45%; aspect-ratio: 16/9; border-radius: 20px;">
-                            <source src="priv11.mp4" type="video/mp4">
-                        </video>
-                        <video autoplay muted loop style="width: 55%; aspect-ratio: 16/9; border-radius: 15px;">
-                            <source src="priv2.mp4" type="video/mp4">
-                        </video>
-                    </div>
-                    <br>
-                    <p>
-                        We prioritize data privacy throughout the rehabilitation process, ensuring <b>sensitive information remains secure</b>. 
-                        Our methods focus on anonymized video analysis, examining motion patterns without capturing identifiable details. 
-                        This approach allows us to deliver accurate feedback while maintaining patient confidentiality, ensuring both effective rehabilitation and peace of mind.
-                    </p>
+                <div style="position: relative; z-index: 1000; background-color: white; display: flex; justify-content: center; align-items: center;">                        
+                    <svg id="PerformancePlot" width="800" height="500" style="margin-bottom:10px"></svg>
                 </div>
-            </div>
-        </section>
 
-            <div class="post-container">
-                <div class = "post-text-2">
-            <br><br>
+                
+                <br>
+
+                <p>
+                    Our deep neural network outperforms the existing image registration models by a significant margin, ensuring that each anatomical region is mapped with precision, enabling 
+                    scientists to gain spatially-localised performance of their drug enhancers.
+                </p>
+
+                
+
+                    </div>
+                </div>
+            </article>
+
+
+            <br><br><br><br>
             <h4>References</h4>
             <p style="font-size:15px; display: inline;">
                 • A Qazi, T Razzaq, A Iqbal, 2024. AnimalFormer: Multimodal Vision Framework for Behavior-based Precision Livestock Farming. 
@@ -232,6 +232,7 @@
                 <div class="learn-more" style="padding-top:80px">
                     <h2>Read more about our Multimodal AI</h2>
                     <div class="slider-2">        
+
                         <a href="https://openaccess.thecvf.com/content/CVPR2024W/Vision4Ag/papers/Qazi_AnimalFormer_Multimodal_Vision_Framework_for_Behavior-based_Precision_Livestock_Farming_CVPRW_2024_paper.pdf" target="_blank">
                             <div class="card">
                                 <div class="card-header">
@@ -261,8 +262,6 @@
                                 </div>
                             </div>
                         </a>
-
-                        
 
                         <a href="https://www.biorxiv.org/content/biorxiv/early/2024/07/22/2024.07.17.603924.full.pdf" target="_blank">
                             <div class="card">

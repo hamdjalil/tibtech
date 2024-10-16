@@ -1042,7 +1042,7 @@ createArrowAnimation("customPlot2", "oldage_injury.svg", "oldage_fixed.svg");
 
 document.addEventListener("DOMContentLoaded", () => {
     // Prefetch images when the page loads
-    const imageUrls = ["bb_injury.svg", "bb_fixed.svg", "sports_injury.svg", "sports_fixed.svg", "oldage_injury.svg", "oldage_fixed.svg"];
+    const imageUrls = ["bb_injury.svg", "bb_fixed.svg", "sports_injury.svg", "sports_fixed.svg", "oldage_injury.svg", "oldage_fixed.svg", "logo.svg"];
     imageUrls.forEach(url => {
         const img = new Image();
         img.src = url; // Prefetch the image
