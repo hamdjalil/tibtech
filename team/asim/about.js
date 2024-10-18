@@ -10,6 +10,15 @@ document.addEventListener("DOMContentLoaded", () => {
             url: 'https://www.biorxiv.org/content/biorxiv/early/2024/07/22/2024.07.17.603924.full.pdf'
         },
         {
+            id: 23,  
+            date: '2024',
+            title: 'Biologically Realistic Computational Primitives of Neocortex Implemented on<br>Neuromorphic Hardware Improve Vision Transformer Performance',
+            authors: 'Asim Iqbal, Hassan Mahmood, Greg Stuart, Gordon Fishell, Suraj Honnuraiah',
+            conference: 'bioRxiv',
+            abstract: 'Understanding the computational principles of the brain and replicating them on neuromorphic hardware and modern deep learning architectures is crucial for advancing neuro-inspired AI (NeuroAI). Here, we develop an experimentally-constrained biophysical network model of neocortical circuit motifs, focusing on layers 2-3 of the primary visual cortex (V1). We investigate the role of four major cortical interneuron classes in a competitive-cooperative computational primitive and validate these circuit motifs implemented soft winner-take-all (sWTA) computation for gain modulation, signal restoration, and context-dependent multistability. Using a novel parameter mapping technique, we configured IBM\'s TrueNorth (TN) chip to implement sWTA computations, mirroring biological neural dynamics. Retrospectively, we observed a strong correspondence between the biophysical model and the TN hardware parameters, particularly in the roles of four key inhibitory neuron classes: Parvalbumin (feedforward inhibition), Somatostatin (feedback inhibition), VIP (disinhibition), and LAMP5 (gain normalization). Moreover, the sparse coupling of this sWTA motif was also able to simulate a two-state neural state machine on the TN chip, replicating working memory dynamics essential for cognitive tasks. Additionally, integrating the sWTA computation as a pre-processing layer in the Vision Transformer (ViT) enhanced its performance on the MNIST digit classification task, demonstrating improved generalization to previously unseen data and suggesting a mechanism akin to zero-shot learning.',
+            url: 'https://www.biorxiv.org/content/10.1101/2024.10.06.616839v1.full'
+        },
+        {
             id: 22,
             date: '2024',
             title: 'Segment AnyNeuron',

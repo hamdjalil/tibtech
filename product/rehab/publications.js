@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
             abstract: 'The quest for personalized sports therapy has long been a concern for practitioners and patients alike, aiming for recovery protocols that transcend the one-size-fits-all approach. In this study, we introduce a novel framework for personalized sports therapy through automated joint movement analysis. By synthesizing the analytical capabilities of a Random Forest Classifier (RFC) with a Vector Quantized Variational AutoEncoder (VQ-VAE), we systematically discern the nuanced kinematic differences between healthy and pathological exercise movements. The RFC prioritizes the joints by their discriminative influence on movement healthiness, which informs the VQ-VAE’s derivation of a distilled list of pivotal joints. This dual-model approach not only identifies a hierarchy of joint importance but also ascertains the minimal subset of joints critical for distinguishing between healthy and unhealthy movement patterns. The resultant data-driven insight into joint-specific dynamics underpins the development of targeted, individualized rehabilitation programs. Our results exhibit promising directions in sports therapy, showcasing the potential of machine learning in developing personalized therapeutic interventions.',
             url: 'https://openaccess.thecvf.com/content/CVPR2024W/CVsports/papers/Qazi_ExerAIde_AI-assisted_Multimodal_Diagnosis_for_Enhanced_Sports_Performance_and_Personalised_CVPRW_2024_paper.pdf'
         },
+        
         {
             id: 20,
             date: '2024',
@@ -27,6 +28,17 @@ document.addEventListener("DOMContentLoaded", () => {
             abstract: 'In recent years, we and others have identified a number of enhancers that, when incorporated into rAAV vectors, can restrict the transgene expression to particular neuronal populations. Yet, viral tools to access and manipulate fine neuronal subtypes are still limited. Here, we performed systematic analysis of single cell genomic data to identify enhancer candidates for each of the cortical interneuron subtypes. We established a set of enhancer-AAV tools that are highly specific for distinct cortical interneuron populations and striatal cholinergic neurons. These enhancers, when used in the context of different effectors, can target (fluorescent proteins), observe activity (GCaMP) and manipulate (opto- or chemo-genetics) specific neuronal subtypes. We also validated our enhancer-AAV tools across species. Thus, we provide the field with a powerful set of tools to study neural circuits and functions and to develop precise and targeted therapy',
             url: 'https://www.biorxiv.org/content/biorxiv/early/2024/07/22/2024.07.17.603924.full.pdf'
         },
+
+        {
+            id: 23,  
+            date: '2024',
+            title: 'Biologically Realistic Computational Primitives of Neocortex Implemented on<br>Neuromorphic Hardware Improve Vision Transformer Performance',
+            authors: 'Asim Iqbal, Hassan Mahmood, Greg Stuart, Gordon Fishell, Suraj Honnuraiah',
+            conference: 'bioRxiv',
+            abstract: 'Understanding the computational principles of the brain and replicating them on neuromorphic hardware and modern deep learning architectures is crucial for advancing neuro-inspired AI (NeuroAI). Here, we develop an experimentally-constrained biophysical network model of neocortical circuit motifs, focusing on layers 2-3 of the primary visual cortex (V1). We investigate the role of four major cortical interneuron classes in a competitive-cooperative computational primitive and validate these circuit motifs implemented soft winner-take-all (sWTA) computation for gain modulation, signal restoration, and context-dependent multistability. Using a novel parameter mapping technique, we configured IBM\'s TrueNorth (TN) chip to implement sWTA computations, mirroring biological neural dynamics. Retrospectively, we observed a strong correspondence between the biophysical model and the TN hardware parameters, particularly in the roles of four key inhibitory neuron classes: Parvalbumin (feedforward inhibition), Somatostatin (feedback inhibition), VIP (disinhibition), and LAMP5 (gain normalization). Moreover, the sparse coupling of this sWTA motif was also able to simulate a two-state neural state machine on the TN chip, replicating working memory dynamics essential for cognitive tasks. Additionally, integrating the sWTA computation as a pre-processing layer in the Vision Transformer (ViT) enhanced its performance on the MNIST digit classification task, demonstrating improved generalization to previously unseen data and suggesting a mechanism akin to zero-shot learning.',
+            url: 'https://www.biorxiv.org/content/10.1101/2024.10.06.616839v1.full'
+        },
+        
         {id: 13,
             date: '2024',
             title: 'Segment AnyNeuron',

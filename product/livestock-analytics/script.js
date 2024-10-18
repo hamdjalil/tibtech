@@ -30,7 +30,7 @@ function setupVideoFunctionality(videoId, buttonId, pauseTime) {
 
             // Ensure video pauses at the last frame (just before the end)
             const pauseAtLastFrame = function () {
-                if (video.currentTime >= video.duration - 1) {
+                if (video.currentTime >= video.duration) {
                     video.pause(); // Pause at the last frame
                     video.removeEventListener('timeupdate', pauseAtLastFrame); // Remove listener once video is paused
                 }
@@ -124,10 +124,10 @@ function animateBars76() {
             const ours = data76.find(d => d.model === "Ours").score;
 
             const text = svg76.append("text")
-                .attr("x", x76(ours) - 75) // Position the text slightly after the bar
+                .attr("x", x76(ours) - 50) // Position the text slightly after the bar
                 .attr("y", y76("Ours") + y76.bandwidth() - 32.5) // Center the text vertically within the bar
                 .attr("text-anchor", "start")
-                .attr("font-size", "15px")
+                .attr("font-size", "10px")
                 .attr("fill", "charcoal")
                 .attr("opacity", 0)  // Start with text invisible
                 .text("23% better");
