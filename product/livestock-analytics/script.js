@@ -124,10 +124,10 @@ function animateBars76() {
             const ours = data76.find(d => d.model === "Ours").score;
 
             const text = svg76.append("text")
-                .attr("x", x76(ours) - 50) // Position the text slightly after the bar
+                .attr("x", x76(ours) - 70) // Position the text slightly after the bar
                 .attr("y", y76("Ours") + y76.bandwidth() - 32.5) // Center the text vertically within the bar
                 .attr("text-anchor", "start")
-                .attr("font-size", "10px")
+                .attr("font-size", "15px")
                 .attr("fill", "charcoal")
                 .attr("opacity", 0)  // Start with text invisible
                 .text("23% better");
