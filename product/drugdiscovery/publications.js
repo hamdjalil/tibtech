@@ -44,6 +44,16 @@ document.addEventListener("DOMContentLoaded", () => {
                     url: 'https://arxiv.org/pdf/2411.06315'
                 },
 
+                {
+                    id: 25,
+                    date: '2024',
+                    title: 'MortX: A Domain Generalization Benchmark for Mouse Cortex Segmentation and Registration',
+                    authors: 'Asim Iqbal, Romesa Khan, Edith M. Schneider Gasser, Theofanis Karayannis',
+                    conference: 'bioRxiv',
+                    abstract: 'Mesoscale understanding of human brain development is crucial for understanding neurodevelopmental disorders. By applying AI techniques to analyze high-resolution, multi-modal brain imaging datasets across postnatal ages, researchers can study cortical development at the granular level. We introduce MortX, a benchmark dataset of the developing mouse cortex that captures multiple postnatal stages with annotations for distinct anatomical and functional subregions and layers. MortX features high-resolution imaging data including bright-field and fluorescence-labeled neuronal markers. We developed a standardized cortical atlas of genetic markers and manually registered it to brain section images for ground-truth labeling. The dataset serves as a benchmark for domain generalization in neuroimaging, enabling both classical and deep learning models to be trained on source brains and tested on unseen targets. Our results demonstrate generalized model performance and structural invariance across ages. We open-source MortX as a community resource for mouse brain segmentation and registration, emphasizing domain adaptation. This dataset addresses key challenges in mouse brain imaging and advances machine learning models that will help unravel neurodevelopmental disorders.',
+                    url: 'https://www.biorxiv.org/content/10.1101/2024.11.30.626208v1.full.pdf'
+                },
+
         {
             id: 2,
             date: '2024',
