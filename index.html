@@ -16,6 +16,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="icon" href="https://tibbtech.com/assets/logo.svg" type="image/png" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 
     <meta property="og:title" content="Tibbling Technologies" />
     <meta property="og:description" content="We are a research-driven artificial intelligence company with a deep focus in multimodal healthtech." />
@@ -450,6 +451,13 @@
             © Tibbling Technologies · All Rights Reserved
         </div>
     </footer>
+
+    <div id="popup-modal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5); z-index: 9999; align-items: center; justify-content: center;">
+        <div style="background: white; padding: 20px; border-radius: 8px; max-width: 400px; text-align: center; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+            <p id="popup-message" style="margin-bottom: 20px; font-family: 'Roboto', Arial, sans-serif;">Please use a professional/work email address to request a demo.</p>
+            <button id="close-popup" style="padding: 10px 20px; border: none; background: black; color: white; border-radius: 5px; cursor: pointer;">OK</button>
+        </div>
+    </div>
 </body>
 <script>
     const routes = {
@@ -595,25 +603,35 @@
 </script>
 
 <script>
-    // Attach event listener to form submission
     document.querySelector("#demo-form").addEventListener("submit", function (e) {
         const emailInput = document.querySelector("input[name='email']");
         const email = emailInput.value.trim();
-
+    
         // Regex to allow only professional domains
         const professionalEmailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.(com|org|net|edu|gov|io)$/;
         const personalEmailDomains = ["gmail.com", "yahoo.com", "outlook.com", "hotmail.com", "live.com", "icloud.com"];
-
+    
         // Extract domain from email
         const emailDomain = email.split("@")[1];
-
+    
         // Validation logic
         if (!professionalEmailRegex.test(email) || personalEmailDomains.includes(emailDomain)) {
             e.preventDefault(); // Prevent form submission
-            alert("Please use a professional email address to request a demo.");
+    
+            // Show modal popup
+            const popupModal = document.getElementById("popup-modal");
+            const popupMessage = document.getElementById("popup-message");
+            popupMessage.innerText = "Please use a professional/work email address to request a demo.";
+            popupModal.style.display = "flex";
         } else {
-            console.log("Request logged")
+            console.log("Request logged");
         }
+    });
+    
+    // Close popup logic
+    document.getElementById("close-popup").addEventListener("click", function () {
+        const popupModal = document.getElementById("popup-modal");
+        popupModal.style.display = "none";
     });
 </script>
 
