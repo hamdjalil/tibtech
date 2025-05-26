@@ -13,6 +13,13 @@
   
   body {
     @apply bg-deepmind-dark text-white font-custom;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  main {
+    flex: 1;
   }
   
   h1 {
@@ -120,7 +127,7 @@
   min-width: 180px;
 }
 
-/* Video background handling */
+/* Video background handling - now works on all devices */
 .video-bg {
   position: absolute;
   top: 0;
@@ -132,7 +139,87 @@
   z-index: 0;
 }
 
+/* Footer specific fixes */
+footer {
+  margin-top: auto;
+  width: 100%;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 1;
+  min-height: auto;
+}
+
+/* Ensure footer is always visible on all devices */
+footer {
+  position: static;
+  clear: both;
+  overflow: visible;
+}
+
+/* Fix body layout to prevent footer cutoff */
+body {
+  min-height: 100vh;
+  min-height: 100dvh; /* Dynamic viewport height for mobile */
+}
+
+/* Ensure main content doesn't push footer off screen */
+main {
+  padding-bottom: 2rem;
+}
+
+/* Mobile footer improvements - Enhanced for all mobile devices */
 @media (max-width: 767px) {
+  footer {
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important;
+    margin-top: 1rem !important;
+    position: static !important;
+  }
+  
+  footer .container {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+    max-width: 100% !important;
+  }
+  
+  footer .grid {
+    gap: 2rem !important;
+    grid-template-columns: 1fr !important;
+  }
+  
+  footer h4 {
+    font-size: 1.125rem !important;
+    margin-bottom: 1rem !important;
+  }
+  
+  footer ul {
+    margin-bottom: 1.5rem !important;
+  }
+  
+  footer .border-b {
+    margin-bottom: 1.5rem !important;
+    padding-bottom: 1.5rem !important;
+  }
+  
+  footer .mt-6 {
+    margin-top: 1.5rem !important;
+  }
+  
+  footer .pt-6 {
+    padding-top: 1.5rem !important;
+  }
+  
+  /* Ensure footer content doesn't get cut off */
+  footer .lg\\:col-span-2 {
+    grid-column: span 1 !important;
+    margin-bottom: 1.5rem !important;
+  }
+  
+  /* Fix bottom footer spacing on mobile */
+  footer .flex {
+    gap: 1rem !important;
+  }
+  
   #text-1, #text-2, #text-3 {
     position: absolute;
     inset: 0;
@@ -192,6 +279,17 @@
   }
 }
 
+/* Tablet footer improvements */
+@media (min-width: 768px) and (max-width: 1023px) {
+  footer .grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+  
+  footer .lg\\:col-span-2 {
+    grid-column: span 3 !important;
+    margin-bottom: 1rem;
+  }
+}
 
 /* Custom scrollbar */
 ::-webkit-scrollbar {
@@ -209,4 +307,205 @@
 
 ::-webkit-scrollbar-thumb:hover {
   @apply bg-deepmind-gray-500;
+}
+
+/* Mobile responsive text sizing */
+@media (max-width: 640px) {
+  /* Fix for mobile title sizing */
+  h1 {
+    @apply text-2xl font-bold leading-tight;
+    line-height: 1.2 !important;
+  }
+  
+  /* Ensure text is properly centered */
+  .text-center {
+    text-align: center !important;
+  }
+  
+  /* Fix button sizing on mobile */
+  .btn {
+    @apply text-sm px-4 py-2;
+    min-width: 140px;
+  }
+  
+  /* Fix animated text positioning on mobile */
+  #text-1, #text-2, #text-3 {
+    font-size: 1rem !important;
+    line-height: 1.4 !important;
+    padding: 0 1rem;
+  }
+}
+
+/* Tablet sizing */
+@media (min-width: 641px) and (max-width: 768px) {
+  h1 {
+    @apply text-3xl font-bold leading-tight;
+  }
+}
+
+/* Fix for mobile navigation alignment */
+@media (max-width: 768px) {
+  /* Mobile menu items should be properly aligned */
+  nav a, nav summary {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    text-align: left;
+  }
+  
+  /* Ensure mobile background image covers properly */
+  .bg-cover {
+    background-size: cover !important;
+    background-position: center !important;
+  }
+  
+  /* Fix container padding on mobile */
+  .container {
+    @apply px-3;
+  }
+}
+
+/* Fix for mobile hero content positioning */
+@media (max-width: 640px) {
+  .min-h-\[70vh\] {
+    min-height: 80vh !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+}
+
+/* Keyframe animations - add the missing ones */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(2rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Custom fade-up animation for hero */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-up {
+  animation: fadeUp 1s ease-out forwards;
+}
+
+.delay-300 {
+  animation-delay: 0.3s;
+}
+
+.delay-500 {
+  animation-delay: 0.5s;
+}
+
+/* Ensure proper viewport handling - Enhanced for mobile cutoff fix */
+@media (max-width: 768px) {
+  html, body {
+    overflow-x: hidden;
+    width: 100%;
+    min-height: 100vh;
+    min-height: 100dvh; /* Better mobile support */
+  }
+  
+  body {
+    padding-bottom: env(safe-area-inset-bottom, 0);
+  }
+  
+  /* Ensure no content gets cut off */
+  * {
+    box-sizing: border-box;
+  }
+  
+  /* Fix any potential layout issues */
+  .container {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow: visible !important;
+  }
+}
+
+/* Force footer visibility for device emulation */
+#footer-container {
+  width: 100% !important;
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  position: relative !important;
+}
+
+#footer-container footer {
+  visibility: visible !important;
+  opacity: 1 !important;
+  display: block !important;
+  position: static !important;
+  bottom: auto !important;
+}
+
+/* Device-specific fixes for phone emulation */
+@media screen and (max-width: 430px) {
+  footer {
+    padding-bottom: 4rem !important;
+    margin-bottom: 0 !important;
+  }
+}
+
+@media screen and (max-width: 390px) {
+  footer {
+    padding-bottom: 3.5rem !important;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  footer {
+    padding-bottom: 3rem !important;
+  }
+}
+
+/* Additional mobile-specific viewport fixes */
+@media (max-width: 480px) {
+  footer {
+    min-height: auto !important;
+    height: auto !important;
+    padding-bottom: 3rem !important;
+  }
+}
+
+/* Larger mobile devices (iPhone 12 Pro, etc.) */
+@media (min-width: 375px) and (max-width: 767px) {
+  footer {
+    padding-bottom: 2.5rem !important;
+  }
+  
+  footer .container {
+    padding-bottom: 1rem !important;
+  }
+}
+
+/* Very large mobile devices */
+@media (min-width: 414px) and (max-width: 767px) {
+  footer {
+    padding-bottom: 3rem !important;
+  }
 }

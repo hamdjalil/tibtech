@@ -7,8 +7,57 @@ async function loadComponent(containerId, fragmentPath) {
     const resp = await fetch(fragmentPath);
     if (!resp.ok) throw new Error(`Failed to load ${fragmentPath}: ${resp.statusText}`);
     host.innerHTML = await resp.text();
+    
+    // Force a reflow to ensure proper rendering
+    if (containerId === 'footer-container') {
+      host.style.display = 'none';
+      host.offsetHeight; // Trigger reflow
+      host.style.display = '';
+      
+      // Ensure footer is always visible
+      setTimeout(() => {
+        const footer = host.querySelector('footer');
+        if (footer) {
+          footer.style.visibility = 'visible';
+          footer.style.opacity = '1';
+          
+          // Force layout recalculation on mobile
+          if (window.innerWidth <= 768) {
+            footer.style.minHeight = 'auto';
+            footer.style.height = 'auto';
+            footer.style.paddingBottom = '3rem';
+          }
+        }
+      }, 100);
+    }
   } catch (err) {
     console.error(`Couldn't load ${fragmentPath}:`, err);
+  }
+}
+
+// Force footer visibility after DOM is fully loaded
+function ensureFooterVisibility() {
+  const footerContainer = document.getElementById('footer-container');
+  if (footerContainer) {
+    const footer = footerContainer.querySelector('footer');
+    if (footer) {
+      // Force visibility
+      footer.style.visibility = 'visible';
+      footer.style.opacity = '1';
+      footer.style.position = 'static';
+      footer.style.bottom = 'auto';
+      
+      // Mobile-specific fixes
+      if (window.innerWidth <= 768) {
+        footer.style.paddingBottom = '3rem';
+        footer.style.marginTop = '1rem';
+        
+        // Ensure container is properly sized
+        footerContainer.style.width = '100%';
+        footerContainer.style.display = 'block';
+        footerContainer.style.visibility = 'visible';
+      }
+    }
   }
 }
 
@@ -27,6 +76,9 @@ document.addEventListener('DOMContentLoaded', async function() {
     loadComponent('accessibility-container', '/components/accessibility.html')
   ]);
 
+  // Ensure footer is visible after all components are loaded
+  setTimeout(ensureFooterVisibility, 200);
+
   // Initialize core functionality
   initHeaderScroll();
   initNavbarScroll();
@@ -42,6 +94,16 @@ document.addEventListener('DOMContentLoaded', async function() {
   
   // Initialize progress bar if it exists (for blog pages)
   initProgressBar();
+});
+
+// Listen for window resize to re-ensure footer visibility
+window.addEventListener('resize', function() {
+  setTimeout(ensureFooterVisibility, 100);
+});
+
+// Listen for orientation change on mobile devices
+window.addEventListener('orientationchange', function() {
+  setTimeout(ensureFooterVisibility, 300);
 });
 
 // Header scroll behavior with null checks
@@ -264,3 +326,20 @@ export function initProgressBar() {
   window.addEventListener('resize', updateProgress);
   updateProgress(); // Initial update
 }
+
+// Debug function to check footer status
+window.debugFooter = function() {
+  const footerContainer = document.getElementById('footer-container');
+  const footer = footerContainer?.querySelector('footer');
+  
+  console.log('Footer Container:', footerContainer);
+  console.log('Footer Element:', footer);
+  console.log('Footer Computed Style:', footer ? window.getComputedStyle(footer) : 'N/A');
+  console.log('Viewport:', { width: window.innerWidth, height: window.innerHeight });
+  
+  if (footer) {
+    const rect = footer.getBoundingClientRect();
+    console.log('Footer Position:', rect);
+    console.log('Footer Visible:', rect.bottom <= window.innerHeight);
+  }
+};
