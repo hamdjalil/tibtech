@@ -9,6 +9,7 @@
     "preview": "vite preview",
     "build-css": "tailwindcss -i ./src/style.css -o ./style.css --minify",
     "build-github": "npm run build-css"
+
   },
   "devDependencies": {
     "autoprefixer": "^10.4.16",

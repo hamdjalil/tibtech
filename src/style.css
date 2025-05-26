@@ -1,0 +1,212 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap'); */
+
+@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@200..800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-deepmind-dark text-white font-custom;
+  }
+  
+  h1 {
+    @apply text-4xl md:text-5xl lg:text-6xl font-bold leading-tight;
+  }
+  
+  h2 {
+    @apply text-3xl md:text-4xl font-bold leading-tight;
+  }
+  
+  h3 {
+    @apply text-2xl md:text-3xl font-bold;
+  }
+  
+  h4 {
+    @apply text-xl md:text-2xl font-semibold;
+  }
+  
+  p {
+    @apply text-base md:text-lg leading-relaxed;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center px-6 py-3 text-base font-medium rounded-full transition-colors duration-200;
+  }
+  
+  .btn-primary {
+    @apply btn bg-deepmind-blue text-white hover:bg-blue-600;
+  }
+  
+  .btn-secondary {
+    @apply btn bg-gray-700 border-white text-white hover:bg-white/10;
+  }
+  
+  .card {
+    @apply bg-black/20 rounded-lg p-6 transition-transform duration-300 hover:translate-y-[-4px];
+  }
+  
+  .navbar-link {
+    @apply text-deepmind-gray-200 hover:text-white transition-colors duration-200 text-base;
+  }
+  
+  .section {
+    @apply py-16 md:py-24;
+  }
+  
+  .container {
+    @apply mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl;
+  }
+  
+  .gradient-bg {
+    @apply bg-gradient-to-br from-deepmind-dark to-deepmind-darker;
+  }
+  
+  .hero-gradient {
+    background: radial-gradient(circle at top right, rgba(26, 115, 232, 0.2) 0%, rgba(9, 14, 20, 0) 60%),
+                radial-gradient(circle at bottom left, rgba(123, 97, 255, 0.15) 0%, rgba(9, 14, 20, 0) 60%),
+                #0F1923;
+  }
+}
+
+/* Custom animations */
+.slide-up {
+  animation: slideUp 0.6s ease forwards;
+}
+
+.fade-in {
+  animation: fadeIn 0.8s ease forwards;
+}
+
+/* Mobile menu */
+.mobile-menu-enter {
+  opacity: 0;
+  transform: translateY(-10px);
+}
+
+.mobile-menu-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 200ms, transform 200ms;
+}
+
+.mobile-menu-exit {
+  opacity: 1;
+}
+
+.mobile-menu-exit-active {
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 150ms, transform 150ms;
+}
+
+/* Custom solution for dropdown menus */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 50;
+  min-width: 180px;
+}
+
+/* Video background handling */
+.video-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.4;
+  z-index: 0;
+}
+
+@media (max-width: 767px) {
+  #text-1, #text-2, #text-3 {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transform: translateY(2rem);
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+  }
+
+  /* 12 seconds per text, total 36s cycle */
+  #text-1 {
+    animation: fadeSlideUp 9s infinite;
+    animation-delay: 0s;
+  }
+  #text-2 {
+    animation: fadeSlideUp 9s infinite;
+    animation-delay: 3s;
+  }
+  #text-3 {
+    animation: fadeSlideUp 9s infinite;
+    animation-delay: 6s;
+  }
+
+  /* Keyframes breakdown:
+     - 0% - 5.5%: fade in + slide up (~2s)
+     - 5.5% - 11%: fully visible (~2s)
+     - 11% - 14%: fade out + slide down (~1s)
+     - 14% - 33%: hidden (~7s)
+     - rest is idle until next cycle
+  */
+  @keyframes fadeSlideUp {
+    0% {
+      opacity: 0;
+      transform: translateY(2rem);
+    }
+    5.5% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    11% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    14% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    33% {
+      opacity: 0;
+      transform: translateY(2rem);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(2rem);
+    }
+  }
+}
+
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-deepmind-darker;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-deepmind-gray-600 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-deepmind-gray-500;
+}
