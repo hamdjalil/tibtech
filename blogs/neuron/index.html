@@ -25,6 +25,7 @@
   <meta property="og:title" content="Multimodal AI-Powered Drug Discovery">
   <meta property="og:description" content="Tibbling Technologies & Broad Institute—AI-driven neuroimaging pipeline for quantitative cell-type mapping. Partnership with Harvard Medical School for breakthrough neuroscience research.">
   <meta property="og:image" content="https://tibbtech.com/blogs/neuron/cover_photo.png">
+  <meta property="og:image:secure_url" content="https://tibbtech.com/blogs/neuron/cover_photo.png">
   <meta property="og:image:type" content="image/png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
@@ -34,16 +35,24 @@
   <meta property="og:site_name" content="Tibbling Technologies">
   <meta property="og:locale" content="en_US">
 
-  <!-- Twitter Card Meta Tags - Enhanced for X -->
+  <!-- Twitter Card Meta Tags - Enhanced for X with multiple image formats -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@tibbtech">
   <meta name="twitter:creator" content="@tibbtech">
   <meta name="twitter:title" content="Multimodal AI-Powered Drug Discovery">
   <meta name="twitter:description" content="Tibbling Technologies & Broad Institute—AI-driven neuroimaging pipeline for quantitative cell-type mapping. Partnership with Harvard Medical School for breakthrough neuroscience research.">
   <meta name="twitter:image" content="https://tibbtech.com/blogs/neuron/cover_photo.png">
+  <meta name="twitter:image:src" content="https://tibbtech.com/blogs/neuron/cover_photo.png">
   <meta name="twitter:image:alt" content="AI-driven neuroimaging pipeline for drug discovery research">
   <meta name="twitter:domain" content="tibbtech.com">
   <meta name="twitter:url" content="https://tibbtech.com/blogs/neuron/">
+  
+  <!-- Fallback Twitter image in JPG format -->
+  <meta name="twitter:image:jpeg" content="https://tibbtech.com/blogs/neuron/cover_photo.jpg">
+  
+  <!-- Additional image meta for better compatibility -->
+  <meta property="image" content="https://tibbtech.com/blogs/neuron/cover_photo.png">
+  <meta itemprop="image" content="https://tibbtech.com/blogs/neuron/cover_photo.png">
 
   <!-- Additional Meta Tags -->
   <meta name="author" content="Asim Iqbal">
@@ -61,6 +70,9 @@
   <!-- Additional SEO Meta Tags -->
   <meta name="robots" content="index, follow">
   <meta name="keywords" content="AI drug discovery, neuroimaging, machine learning, Broad Institute, Harvard Medical School, spatial genomics">
+  
+  <!-- Preload the social media image -->
+  <link rel="preload" href="https://tibbtech.com/blogs/neuron/cover_photo.png" as="image">
   
 </head>
 
@@ -88,12 +100,14 @@
         distinct interneuron subtypes</strong></a>, is published in <a class="text-deepmind-blue" href="https://www.cell.com/neuron/issue?pii=S0896-6273(24)X0011-2" target="_blank"><em>Neuron</em> (<em>Cell Press</em>)</a> on May 21, 2025.
       </p>
 
-      <!-- hero image -->
+      <!-- hero image - Make sure this loads for social media crawlers -->
       <div class="relative rounded-xl overflow-hidden aspect-video mt-12 shadow-lg">
         <img
           src="./cover_photo.png"
           alt="AI-driven neuroimaging pipeline for drug discovery research" 
-          class="w-full h-full object-cover" />
+          class="w-full h-full object-cover"
+          loading="eager"
+          fetchpriority="high" />
         <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-black/10"></div>
       </div>
     </div>
