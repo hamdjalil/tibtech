@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Tibbling's accessibility statement and commitment to digital inclusivity." />
+    <title>Accessibility - Tibbling</title>
+    <link rel="stylesheet" href="/style.css">
+  </head>
+  <body class="bg-deepmind-dark text-white">
+    <!-- Include Header -->
+    <div id="header-container"></div>
+    
+    <main class="pt-24 pb-16">
+      <div class="container">
+        <!-- Accessibility content will load here -->
+        <div id="accessibility-content-container"></div>
+      </div>
+    </main>
+    
+    <!-- Include Footer -->
+    <div id="footer-container"></div>
+
+    <script type="module">
+      // Import our styles
+      import '../style.css';
+
+      // Load components
+      document.addEventListener('DOMContentLoaded', async function() {
+        // Load header component
+        const headerResponse = await fetch('/components/header.html');
+        const headerHtml = await headerResponse.text();
+        document.getElementById('header-container').innerHTML = headerHtml;
+        
+        // Load accessibility content
+        const accessibilityResponse = await fetch('/components/accessibility.html');
+        const accessibilityHtml = await accessibilityResponse.text();
+        document.getElementById('accessibility-content-container').innerHTML = accessibilityHtml;
+        
+        // Load footer component
+        const footerResponse = await fetch('/components/footer.html');
+        const footerHtml = await footerResponse.text();
+        document.getElementById('footer-container').innerHTML = footerHtml;
+        
+        // Initialize header scroll behavior
+        initHeaderScroll();
+        
+        // Initialize mobile menu
+        initMobileMenu();
+      });
+
+      // Add header scroll behavior
+      function initHeaderScroll() {
+        const header = document.getElementById('site-header');
+        
+        window.addEventListener('scroll', () => {
+          header.classList.add('bg-deepmind-darker', 'shadow-md');
+          header.classList.remove('bg-transparent');
+        });
+        
+        // Set default state for inner pages
+        header.classList.add('bg-deepmind-darker', 'shadow-md');
+        header.classList.remove('bg-transparent');
+      }
+
+      // Mobile menu functionality
+      function initMobileMenu() {
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        if (mobileMenuButton && mobileMenu) {
+          mobileMenuButton.addEventListener('click', () => {
+            const isExpanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+            mobileMenuButton.setAttribute('aria-expanded', !isExpanded);
+            mobileMenu.classList.toggle('hidden');
+          });
+        }
+      }
+
+      // Toggle mobile submenu
+      window.toggleMobileSubmenu = function(id) {
+        const submenu = document.getElementById(id);
+        if (submenu) {
+          submenu.classList.toggle('hidden');
+        }
+      };
+    </script>
+  </body>
+</html>
