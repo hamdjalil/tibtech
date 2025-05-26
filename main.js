@@ -1,6 +1,3 @@
-// Import our styles
-import './style.css';
-
 // Utility function to load components with error handling
 async function loadComponent(containerId, fragmentPath) {
   const host = document.getElementById(containerId);
