@@ -1,3 +1,6 @@
+// Import our styles
+import './style.css';
+
 // Utility function to load components with error handling
 async function loadComponent(containerId, fragmentPath) {
   const host = document.getElementById(containerId);
@@ -14,17 +17,17 @@ async function loadComponent(containerId, fragmentPath) {
 
 // Main initialization
 document.addEventListener('DOMContentLoaded', async function() {
-  // FIXED: Updated paths to match your actual components folder structure
+  // Load all possible components (will skip if containers don't exist)
   await Promise.all([
-    loadComponent('header-container', 'components/header.html'),
-    loadComponent('hero-container', 'components/hero.html'),
-    loadComponent('featured-research-container', 'components/featured-research.html'),
-    loadComponent('impact-section-container', 'components/impact-section.html'),
-    loadComponent('our-work-container', 'components/our-work.html'),
-    loadComponent('partner-section-container', 'components/partner-section.html'),
-    loadComponent('join-section-container', 'components/join-section.html'),
-    loadComponent('footer-container', 'components/footer.html'),
-    loadComponent('accessibility-container', 'components/accessibility.html')
+    loadComponent('header-container', '/components/header.html'),
+    loadComponent('hero-container', '/components/hero.html'),
+    loadComponent('featured-research-container', '/components/featured-research.html'),
+    loadComponent('impact-section-container', '/components/impact-section.html'),
+    loadComponent('our-work-container', '/components/our-work.html'),
+    loadComponent('partner-section-container', '/components/partner-section.html'),
+    loadComponent('join-section-container', '/components/join-section.html'),
+    loadComponent('footer-container', '/components/footer.html'),
+    loadComponent('accessibility-container', '/components/accessibility.html')
   ]);
 
   // Initialize core functionality
