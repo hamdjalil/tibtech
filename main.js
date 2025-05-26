@@ -1,6 +1,3 @@
-// Import our styles
-import './style.css';
-
 // Utility function to load components with error handling
 async function loadComponent(containerId, fragmentPath) {
   const host = document.getElementById(containerId);
@@ -17,7 +14,7 @@ async function loadComponent(containerId, fragmentPath) {
 
 // Main initialization
 document.addEventListener('DOMContentLoaded', async function() {
-  // Load all possible components (will skip if containers don't exist)
+  // FIXED: Updated paths to match your actual components folder structure
   await Promise.all([
     loadComponent('header-container', 'components/header.html'),
     loadComponent('hero-container', 'components/hero.html'),
