@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Grant Deadlines</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #0f0f0f;
+      color: #e5e7eb;
+      margin: 0;
+      padding: 2rem;
+      display: flex;
+      justify-content: center;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1050px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #f1f5f9;
+      margin-bottom: 2rem;
+    }
+
+    .grant {
+      background-color: #1f2937;
+      border-radius: 10px;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .grant-info {
+      flex: 1 1 60%;
+      min-width: 250px;
+    }
+
+    .grant-info h2 {
+      margin: 0;
+      font-size: 1.15rem;
+      color: #60a5fa;
+    }
+
+    .grant-info h2 a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .scope {
+      margin-top: 0.5rem;
+      color: #9ca3af;
+      font-size: 0.95rem;
+    }
+
+    .deadline {
+      flex: 1 1 35%;
+      text-align: right;
+      min-width: 200px;
+    }
+
+    .countdown {
+      font-size: 1.1rem;
+      color: #facc15;
+      font-weight: bold;
+    }
+
+    .datetime {
+      margin-top: 0.3rem;
+      font-size: 0.85rem;
+      color: #cbd5e1;
+    }
+
+    .calendar-link {
+      display: inline-block;
+      margin-top: 0.6rem;
+      font-size: 1rem;
+      color: #22c55e;
+      text-decoration: none;
+    }
+
+    .calendar-link i {
+      transition: transform 0.2s ease;
+    }
+
+    .calendar-link:hover i {
+      transform: scale(1.2);
+      color: #4ade80;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Grant Deadlines</h1>
+    <div id="grants-container"></div>
+  </div>
+
+  <!-- PapaParse for reading CSV -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+  <script>
+    const container = document.getElementById('grants-container');
+
+    function createGrantElement(grant) {
+      const grantDiv = document.createElement("div");
+      grantDiv.className = "grant";
+
+      const infoDiv = document.createElement("div");
+      infoDiv.className = "grant-info";
+      infoDiv.innerHTML = `
+        <h2><a href="${grant.link}" target="_blank">${grant.title}</a></h2>
+        <div class="scope">${grant.scope}</div>
+      `;
+
+      const deadlineDiv = document.createElement("div");
+      deadlineDiv.className = "deadline";
+      const countdownId = `countdown-${Math.random().toString(36).substring(2)}`;
+
+      const formattedDate = grant.deadlinePT.toLocaleString("en-US", {
+        day: "numeric",
+        month: "long",
+        year: "numeric",
+        hour: "numeric",
+        minute: "2-digit",
+        timeZone: "America/Los_Angeles",
+        hour12: true
+      });
+
+      const calendarLink = encodeURI(
+        `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${grant.title}&dates=${formatGoogleDate(grant.deadlinePT)}/${formatGoogleDate(new Date(grant.deadlinePT.getTime() + 3600000))}&details=${grant.link}`
+      );
+
+      deadlineDiv.innerHTML = `
+        <div class="countdown" id="${countdownId}">Loading...</div>
+        <div class="datetime">🕒 ${formattedDate} (PT)</div>
+        <a href="${calendarLink}" target="_blank" class="calendar-link" title="Add to Google Calendar">
+          <i class="fa-solid fa-calendar-plus"></i>
+        </a>
+      `;
+
+      grantDiv.appendChild(infoDiv);
+      grantDiv.appendChild(deadlineDiv);
+      container.appendChild(grantDiv);
+
+      updateCountdown(countdownId, grant.deadlinePT);
+      setInterval(() => updateCountdown(countdownId, grant.deadlinePT), 1000);
+    }
+
+    function updateCountdown(id, deadline) {
+      const now = new Date();
+      const diff = deadline - now;
+      const el = document.getElementById(id);
+
+      if (diff <= 0) {
+        el.innerText = "Deadline Passed";
+        return;
+      }
+
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+      const mins = Math.floor((diff / (1000 * 60)) % 60);
+      const secs = Math.floor((diff / 1000) % 60);
+
+      el.innerText = `${days}d ${hours}h ${mins}m ${secs}s`;
+    }
+
+    function formatGoogleDate(date) {
+      return date.toISOString().replace(/[-:]/g, "").split(".")[0] + "Z";
+    }
+
+    // Load CSV using PapaParse
+    Papa.parse("grants.csv", {
+      download: true,
+      header: true,
+      complete: function(results) {
+        const grants = results.data
+          .filter(g => g.Title && g.deadlinePT)
+          .map(g => ({
+            title: g.Title.trim(),
+            link: g.Link.trim(),
+            scope: g.Scope.trim(),
+            deadlinePT: new Date(g.deadlinePT + " PST")
+          }))
+          .sort((a, b) => a.deadlinePT - b.deadlinePT);
+
+        grants.forEach(createGrantElement);
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Partner Tracker</title>
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #0f0f0f;
+      color: #e5e7eb;
+      padding: 20px;
+    }
+    table a {
+      color: #60a5fa;
+      text-decoration: none;
+    }
+
+    table a:hover {
+      color: #93c5fd;
+      text-decoration: underline;
+    }
+
+    a {
+      color: #60a5fa;
+    }
+    a:hover {
+      color: #93c5fd;
+    }
+    h1 {
+      text-align: center;
+      color: #f1f5f9;
+    }
+
+    .filter-section {
+      margin-bottom: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      background-color: #1f2937;
+      padding: 1rem;
+      border-radius: 8px;
+    }
+
+    .filter-section label {
+      font-size: 0.9rem;
+      color: #9ca3af;
+    }
+
+    .filter-section select {
+      background-color: #111827;
+      color: #e5e7eb;
+      border: 1px solid #374151;
+      border-radius: 5px;
+      padding: 4px 8px;
+    }
+    
+
+    .email-button {
+      padding: 5px 10px;
+      background-color: #2563eb;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .status-dropdown, .date-input, .note-input {
+      background-color: #1f2937;
+      color: #f3f4f6;
+      border: 1px solid #374151;
+      border-radius: 5px;
+      padding: 4px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    th.position-col, td.position-col {
+      width: 100px;
+      max-width: 100px;
+      word-wrap: break-word;
+    }
+
+    .note-input {
+      white-space: normal;
+      word-break: break-word;
+      height: auto;
+    }
+
+    td:nth-child(11) {
+      max-width: 250px;
+    }
+
+    .subcategory-col {
+      width: 130px;
+      max-width: 130px;
+      white-space: normal;
+      word-break: break-word;
+    }
+
+    /* DataTable overrides */
+    table.dataTable {
+      background-color: #111827;
+      color: #e5e7eb;
+    }
+
+    table.dataTable thead {
+      background-color: #1f2937;
+      color: #f3f4f6;
+    }
+
+    table.dataTable tbody tr:nth-child(even) {
+      background-color: #1c1c1c;
+    }
+
+    table.dataTable tbody tr:nth-child(odd) {
+      background-color: #111827;
+    }
+
+    table.dataTable td, table.dataTable th {
+      border-color: #374151;
+    }
+
+    table.dataTable tbody tr:hover {
+      background-color: #374151;
+    }
+
+    table.dataTable.no-footer {
+      border-color: #374151;
+    }
+    div.dataTables_length {
+      margin-top: 1rem;
+      color: #9ca3af;
+    }
+    div.dataTables_info {
+      color: #9ca3af;
+    }
+    div.dataTables_paginate .paginate_button {
+      color: #60a5fa !important;
+    }
+
+  </style>
+</head>
+<body>
+  <h1>Potential Partners</h1>
+
+  <div class="filter-section">
+    <label for="highLevelFilter">High-Level Category:</label>
+    <select id="highLevelFilter">
+      <option value="">All</option>
+      <option value="Drug Discovery">Drug Discovery</option>
+      <option value="Rehab">Rehab</option>
+      <option value="Therapy">Therapy</option>
+    </select>
+
+    <label for="subLevelFilter">Specialization:</label>
+    <select id="subLevelFilter">
+      <option value="">All</option>
+      <option value="ALS">ALS</option>
+      <option value="Parkinsons">Parkinsons</option>
+      <option value="Huntington">Huntington</option>
+      <option value="Alzheimer">Alzheimer</option>
+      <option value="Stroke Rehab">Stroke Rehab</option>
+      <option value="Cognitive Therapy">Cognitive Therapy</option>
+      <option value="2D/3D Imaging">2D/3D Imaging</option>
+    </select>
+
+    <label for="regionFilter">Region:</label>
+    <select id="regionFilter">
+      <option value="">All</option>
+      <option value="US">US</option>
+      <option value="Europe">Europe</option>
+      <option value="UAE">UAE</option>
+      <option value="Australia">Australia</option>
+    </select>
+
+    <label for="typeFilter">Partnership Type:</label>
+    <select id="typeFilter">
+      <option value="">All</option>
+      <option value="Academic">Academic</option>
+      <option value="Industrial">Industrial</option>
+    </select>
+    <div id="customSearchWrapper" style="margin-left:auto;">
+      <label for="partnersTable_filter">Search:</label>
+      <input type="search" id="customSearchBox" placeholder="Search..." style="padding: 4px 8px; background-color: #1f2937; color: #f3f4f6; border: 1px solid #374151; border-radius: 4px;" />
+    </div>
+  </div>
+  
+
+  <table id="partnersTable" class="display" style="width:100%">
+    <thead>
+      <tr>
+        <th>Company</th>
+        <th>Contact Person</th>
+        <th class="position-col">Position</th>
+        <th>Partnership Type</th>
+        <th>Category</th>
+        <th class="subcategory-col">Subcategory</th>
+        <th>Region</th>
+        <th>Status</th>
+        <th>Start Date</th>
+        <th>End Date</th>
+        <th>Notes</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+  <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+  <script>
+    let partnerData = [];
+
+    const statusOptions = ["Not Started", "Contacted", "In Talks", "Connected", "Partnered", "Not Interested", "Completed"];
+
+    function saveToLocalStorage() {
+      localStorage.setItem("partnerData", JSON.stringify(partnerData));
+    }
+
+    function fetchCSVData() {
+      Papa.parse("partners.csv", {
+        download: true,
+        header: true,
+        skipEmptyLines: true,
+        complete: function (results) {
+          partnerData = results.data.map(entry => ({
+            ...entry,
+            status: "Not Started",
+            startDate: "",
+            endDate: "",
+            notes: `${entry.notes || ''} ${entry.Expertise || ''}`.trim()
+          }));
+          saveToLocalStorage();
+          populateTable();
+        }
+      });
+    }
+
+    function populateTable() {
+      const tableBody = $('#partnersTable tbody');
+      tableBody.empty();
+
+      partnerData.forEach((partner, index) => {
+        const statusDropdown = `
+          <select class="status-dropdown" onchange="updateStatus(${index}, this.value)">
+            ${statusOptions.map(opt => `<option value="${opt}" ${opt === partner.status ? 'selected' : ''}>${opt}</option>`).join('')}
+          </select>
+        `;
+
+        const startDateInput = `<input type="date" class="date-input" value="${partner.startDate}" onchange="updateStartDate(${index}, this.value)" />`;
+        const endDateInput = `<input type="date" class="date-input" value="${partner.endDate}" onchange="updateEndDate(${index}, this.value)" />`;
+        const notesInput = `<textarea class="note-input" onchange="updateNotes(${index}, this.value)">${partner.notes}</textarea>`;
+
+        const row = `
+          <tr data-high="${partner.Category}" data-sub="${partner.Subcategory}" data-region="${partner.Region}" data-type="${partner["Partnership Type"]}">
+            <td><a href="${partner.URL}" target="_blank">${partner.Company}</a></td>
+            <td><a href="mailto:${partner.Email}">${partner["Contact person"]}</a></td>
+            <td class="position-col">${partner.Position}</td>
+            <td>${partner["Partnership Type"]}</td>
+            <td>${partner.Category}</td>
+            <td class="subcategory-col">${partner.Subcategory}</td>
+            <td>${partner.Region}</td>
+            <td>${statusDropdown}</td>
+            <td>${startDateInput}</td>
+            <td>${endDateInput}</td>
+            <td>${notesInput}</td>
+          </tr>
+        `;
+        tableBody.append(row);
+      });
+
+      $('#partnersTable').DataTable({
+        dom: '<"top-filter-section">rt<"bottom"lip><"clear">'
+      });
+      // Move search box to custom wrapper
+      $('#partnersTable_filter').hide();
+      $('#customSearchBox').on('keyup', function () {
+        $('#partnersTable').DataTable().search(this.value).draw();
+      });
+
+
+    }
+
+    function filterTable() {
+      const high = $('#highLevelFilter').val();
+      const sub = $('#subLevelFilter').val();
+      const region = $('#regionFilter').val();
+      const type = $('#typeFilter').val();
+
+      const table = $('#partnersTable').DataTable();
+      table.clear();
+
+      const filteredData = partnerData.filter(partner => {
+        const highMatch = !high || partner.Category === high;
+
+        // Handle multiple subcategories
+        const subcategories = partner.Subcategory ? partner.Subcategory.split(',').map(s => s.trim()) : [];
+        const subMatch = !sub || subcategories.includes(sub);
+
+        const regionMatch = !region || partner.Region === region;
+        const typeMatch = !type || partner["Partnership Type"] === type;
+
+        return highMatch && subMatch && regionMatch && typeMatch;
+      });
+
+      filteredData.forEach((partner, index) => {
+        const statusDropdown = `
+          <select class="status-dropdown" onchange="updateStatus(${index}, this.value)">
+            ${statusOptions.map(opt => `<option value="${opt}" ${opt === partner.status ? 'selected' : ''}>${opt}</option>`).join('')}
+          </select>
+        `;
+
+        const startDateInput = `<input type="date" class="date-input" value="${partner.startDate}" onchange="updateStartDate(${index}, this.value)" />`;
+        const endDateInput = `<input type="date" class="date-input" value="${partner.endDate}" onchange="updateEndDate(${index}, this.value)" />`;
+        const notesInput = `<textarea class="note-input" onchange="updateNotes(${index}, this.value)">${partner.notes}</textarea>`;
+
+        table.row.add([
+          `<a href="${partner.URL}" target="_blank">${partner.Company}</a>`,
+          `<a href="mailto:${partner.Email}">${partner["Contact person"]}</a>`,
+          partner.Position,
+          partner["Partnership Type"],
+          partner.Category,
+          partner.Subcategory,
+          partner.Region,
+          statusDropdown,
+          startDateInput,
+          endDateInput,
+          notesInput
+        ]);
+      });
+
+      table.draw();
+    }
+
+    function updateStatus(index, newStatus) {
+      partnerData[index].status = newStatus;
+      saveToLocalStorage();
+    }
+
+    function updateStartDate(index, newDate) {
+      partnerData[index].startDate = newDate;
+      saveToLocalStorage();
+    }
+
+    function updateEndDate(index, newDate) {
+      partnerData[index].endDate = newDate;
+      saveToLocalStorage();
+    }
+
+    function updateNotes(index, newNote) {
+      partnerData[index].notes = newNote;
+      saveToLocalStorage();
+    }
+
+    $(document).ready(function () {
+      if (localStorage.getItem("partnerData")) {
+        partnerData = JSON.parse(localStorage.getItem("partnerData"));
+        populateTable();
+      } else {
+        fetchCSVData();
+      }
+
+      $('#highLevelFilter, #subLevelFilter, #regionFilter, #typeFilter').on('change', function () {
+        filterTable();
+      });
+    });
+  </script>
+</body>
+</html>
