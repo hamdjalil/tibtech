@@ -1,0 +1,93 @@
+.grant {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: white;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 30px;
+    transition: box-shadow 0.3s ease;
+    gap: 20px;
+  }
+  
+  .grant:hover {
+    box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+  }
+  
+  .grant-info {
+    flex: 2;
+  }
+  
+  .grant-info h2 {
+    font-size: 1.5em;
+    margin-bottom: 8px;
+    color: #333;
+  }
+  
+  .grant-info h2 a {
+    color: inherit;
+    text-decoration: none;
+  }
+  
+  .grant-info h2 a:hover {
+    color: #007bff;
+    text-decoration: underline;
+  }
+  
+  .scope {
+    font-size: 0.95em;
+    color: #555;
+    margin-top: 5px;
+    font-family: 'Inter Tight', serif;
+  }
+  
+  .deadline {
+    flex: 1;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 10px;
+  }
+  
+  .countdown {
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #FF745A;
+    font-family: monospace;
+  }
+  
+  .datetime {
+    font-size: 0.85em;
+    color: #666;
+    font-family: 'Inter Tight', serif;
+  }
+  
+  .calendar-link {
+    font-size: 1.3em;
+    color: #945CF1;
+    text-decoration: none;
+    transition: transform 0.2s ease;
+  }
+  
+  .calendar-link:hover {
+    transform: scale(1.2);
+    color: #F465B9;
+  }
+  
+  /* Responsive design */
+  @media (max-width: 768px) {
+    .grant {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .deadline {
+      text-align: left;
+      align-items: flex-start;
+    }
+  }
+  
