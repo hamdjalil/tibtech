@@ -13,22 +13,7 @@
       color: #e5e7eb;
       padding: 20px;
     }
-    table a {
-      color: #60a5fa;
-      text-decoration: none;
-    }
 
-    table a:hover {
-      color: #93c5fd;
-      text-decoration: underline;
-    }
-
-    a {
-      color: #60a5fa;
-    }
-    a:hover {
-      color: #93c5fd;
-    }
     h1 {
       text-align: center;
       color: #f1f5f9;
@@ -56,16 +41,6 @@
       border-radius: 5px;
       padding: 4px 8px;
     }
-    
-
-    .email-button {
-      padding: 5px 10px;
-      background-color: #2563eb;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
 
     .status-dropdown, .date-input, .note-input {
       background-color: #1f2937;
@@ -83,16 +58,6 @@
       word-wrap: break-word;
     }
 
-    .note-input {
-      white-space: normal;
-      word-break: break-word;
-      height: auto;
-    }
-
-    td:nth-child(11) {
-      max-width: 250px;
-    }
-
     .subcategory-col {
       width: 130px;
       max-width: 130px;
@@ -100,7 +65,16 @@
       word-break: break-word;
     }
 
-    /* DataTable overrides */
+    .note-input {
+      white-space: normal;
+      word-break: break-word;
+      height: auto;
+    }
+
+    td:nth-child(12) {
+      max-width: 250px;
+    }
+
     table.dataTable {
       background-color: #111827;
       color: #e5e7eb;
@@ -130,17 +104,22 @@
     table.dataTable.no-footer {
       border-color: #374151;
     }
-    div.dataTables_length {
-      margin-top: 1rem;
+
+    div.dataTables_length, div.dataTables_info {
       color: #9ca3af;
     }
-    div.dataTables_info {
-      color: #9ca3af;
-    }
+
     div.dataTables_paginate .paginate_button {
       color: #60a5fa !important;
     }
 
+    a {
+      color: #60a5fa;
+    }
+
+    a:hover {
+      color: #93c5fd;
+    }
   </style>
 </head>
 <body>
@@ -182,17 +161,13 @@
       <option value="Academic">Academic</option>
       <option value="Industrial">Industrial</option>
     </select>
-    <div id="customSearchWrapper" style="margin-left:auto;">
-      <label for="partnersTable_filter">Search:</label>
-      <input type="search" id="customSearchBox" placeholder="Search..." style="padding: 4px 8px; background-color: #1f2937; color: #f3f4f6; border: 1px solid #374151; border-radius: 4px;" />
-    </div>
   </div>
-  
 
   <table id="partnersTable" class="display" style="width:100%">
     <thead>
       <tr>
         <th>Company</th>
+        <th>Ranking</th> <!-- 🆕 New Column -->
         <th>Contact Person</th>
         <th class="position-col">Position</th>
         <th>Partnership Type</th>
@@ -230,7 +205,8 @@
             status: "Not Started",
             startDate: "",
             endDate: "",
-            notes: `${entry.notes || ''} ${entry.Expertise || ''}`.trim()
+            notes: `${entry.notes || ''} ${entry.Expertise || ''}`.trim(),
+            Ranking: parseInt(entry.Ranking || "9999")
           }));
           saveToLocalStorage();
           populateTable();
@@ -256,6 +232,7 @@
         const row = `
           <tr data-high="${partner.Category}" data-sub="${partner.Subcategory}" data-region="${partner.Region}" data-type="${partner["Partnership Type"]}">
             <td><a href="${partner.URL}" target="_blank">${partner.Company}</a></td>
+            <td>${partner.Ranking}</td>
             <td><a href="mailto:${partner.Email}">${partner["Contact person"]}</a></td>
             <td class="position-col">${partner.Position}</td>
             <td>${partner["Partnership Type"]}</td>
@@ -272,66 +249,9 @@
       });
 
       $('#partnersTable').DataTable({
-        dom: '<"top-filter-section">rt<"bottom"lip><"clear">'
+        dom: '<"top-filter-section">rt<"bottom"lip><"clear">',
+        order: [[1, 'asc']] // ⬅️ Default sort by Ranking column
       });
-      // Move search box to custom wrapper
-      $('#partnersTable_filter').hide();
-      $('#customSearchBox').on('keyup', function () {
-        $('#partnersTable').DataTable().search(this.value).draw();
-      });
-
-
-    }
-
-    function filterTable() {
-      const high = $('#highLevelFilter').val();
-      const sub = $('#subLevelFilter').val();
-      const region = $('#regionFilter').val();
-      const type = $('#typeFilter').val();
-
-      const table = $('#partnersTable').DataTable();
-      table.clear();
-
-      const filteredData = partnerData.filter(partner => {
-        const highMatch = !high || partner.Category === high;
-
-        // Handle multiple subcategories
-        const subcategories = partner.Subcategory ? partner.Subcategory.split(',').map(s => s.trim()) : [];
-        const subMatch = !sub || subcategories.includes(sub);
-
-        const regionMatch = !region || partner.Region === region;
-        const typeMatch = !type || partner["Partnership Type"] === type;
-
-        return highMatch && subMatch && regionMatch && typeMatch;
-      });
-
-      filteredData.forEach((partner, index) => {
-        const statusDropdown = `
-          <select class="status-dropdown" onchange="updateStatus(${index}, this.value)">
-            ${statusOptions.map(opt => `<option value="${opt}" ${opt === partner.status ? 'selected' : ''}>${opt}</option>`).join('')}
-          </select>
-        `;
-
-        const startDateInput = `<input type="date" class="date-input" value="${partner.startDate}" onchange="updateStartDate(${index}, this.value)" />`;
-        const endDateInput = `<input type="date" class="date-input" value="${partner.endDate}" onchange="updateEndDate(${index}, this.value)" />`;
-        const notesInput = `<textarea class="note-input" onchange="updateNotes(${index}, this.value)">${partner.notes}</textarea>`;
-
-        table.row.add([
-          `<a href="${partner.URL}" target="_blank">${partner.Company}</a>`,
-          `<a href="mailto:${partner.Email}">${partner["Contact person"]}</a>`,
-          partner.Position,
-          partner["Partnership Type"],
-          partner.Category,
-          partner.Subcategory,
-          partner.Region,
-          statusDropdown,
-          startDateInput,
-          endDateInput,
-          notesInput
-        ]);
-      });
-
-      table.draw();
     }
 
     function updateStatus(index, newStatus) {
@@ -366,6 +286,28 @@
         filterTable();
       });
     });
+
+    function filterTable() {
+      const high = $('#highLevelFilter').val();
+      const sub = $('#subLevelFilter').val();
+      const region = $('#regionFilter').val();
+      const type = $('#typeFilter').val();
+
+      const table = $('#partnersTable').DataTable();
+      table.rows().every(function () {
+        const row = $(this.node());
+        const highMatch = !high || row.data('high') === high;
+        const subMatch = !sub || row.data('sub') === sub;
+        const regionMatch = !region || row.data('region') === region;
+        const typeMatch = !type || row.data('type') === type;
+
+        if (highMatch && subMatch && regionMatch && typeMatch) {
+          row.show();
+        } else {
+          row.hide();
+        }
+      });
+    }
   </script>
 </body>
 </html>
