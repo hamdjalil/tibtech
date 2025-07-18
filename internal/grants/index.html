@@ -1,7 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <head>
+    <script>
+      const USERNAME = "tibblingai";
+      const PASSWORD = "tibbtech123";
+  
+      const user = prompt("Enter username:");
+      const pass = prompt("Enter password:");
+  
+      if (user !== USERNAME || pass !== PASSWORD) {
+        document.write("<style>body{display:none !important;}</style><h2 style='color:red; text-align:center; margin-top:100px;'>Access Denied</h2>");
+        throw new Error("Access Denied");
+      }
+    </script>
   <meta charset="UTF-8" />
+  <meta http-equiv="Cache-Control" content="no-store" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Grant Deadlines</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
@@ -37,6 +51,10 @@
       justify-content: space-between;
       align-items: center;
       flex-wrap: wrap;
+    }
+    .grant.passed {
+      opacity: 0.5;
+      order: 1; /* Push to bottom in flex container */
     }
 
     .grant-info {
@@ -95,11 +113,21 @@
       transform: scale(1.2);
       color: #4ade80;
     }
+    #grants-container {
+      display: flex;
+      flex-direction: column;
+    }
   </style>
 </head>
 <body>
+ 
   <div class="container">
     <h1>Grant Deadlines</h1>
+    <div style="text-align: right; margin-bottom: 1rem;">
+      <button onclick="showGrantModal()" style="background:#2563eb; color:white; padding:10px 20px; border:none; border-radius:5px;">
+        Add Grant
+      </button>
+    </div>
     <div id="grants-container"></div>
   </div>
 
@@ -147,11 +175,22 @@
 
       grantDiv.appendChild(infoDiv);
       grantDiv.appendChild(deadlineDiv);
+
+      // ✅ Check if already passed
+      const now = new Date();
+      if (grant.deadlinePT < now) {
+        grantDiv.classList.add("passed");
+        grantDiv.style.order = 2; // Push to bottom
+      } else {
+        grantDiv.style.order = 0; // Keep active grants at top
+      }
+
       container.appendChild(grantDiv);
 
       updateCountdown(countdownId, grant.deadlinePT);
       setInterval(() => updateCountdown(countdownId, grant.deadlinePT), 1000);
     }
+
 
     function updateCountdown(id, deadline) {
       const now = new Date();
@@ -176,23 +215,86 @@
     }
 
     // Load CSV using PapaParse
-    Papa.parse("grants.csv", {
-      download: true,
-      header: true,
-      complete: function(results) {
-        const grants = results.data
-          .filter(g => g.Title && g.deadlinePT)
-          .map(g => ({
-            title: g.Title.trim(),
-            link: g.Link.trim(),
-            scope: g.Scope.trim(),
-            deadlinePT: new Date(g.deadlinePT + " PST")
-          }))
-          .sort((a, b) => a.deadlinePT - b.deadlinePT);
+    const storedGrants = localStorage.getItem("customGrants");
 
-        grants.forEach(createGrantElement);
-      }
-    });
+    if (storedGrants) {
+      const grants = JSON.parse(storedGrants).map(g => ({
+        ...g,
+        deadlinePT: new Date(g.deadlinePT)
+      }));
+      grants.forEach(createGrantElement);
+    } else {
+      Papa.parse("grants.csv", {
+        download: true,
+        header: true,
+        complete: function(results) {
+          const grants = results.data
+            .filter(g => g.Title && g.deadlinePT)
+            .map(g => ({
+              title: g.Title.trim(),
+              link: g.Link.trim(),
+              scope: g.Scope.trim(),
+              deadlinePT: new Date(g.deadlinePT + " PST")
+            }))
+            .sort((a, b) => a.deadlinePT - b.deadlinePT);
+
+          localStorage.setItem("customGrants", JSON.stringify(grants));
+          grants.forEach(createGrantElement);
+        }
+      });
+    }
+
+    function showGrantModal() {
+    document.getElementById('grantModal').style.display = 'flex';
+  }
+
+  function hideGrantModal() {
+    document.getElementById('grantModal').style.display = 'none';
+  }
+
+  function addNewGrant() {
+    const title = document.getElementById('grantTitle').value.trim();
+    const link = document.getElementById('grantLink').value.trim();
+    const scope = document.getElementById('grantScope').value.trim();
+    const deadlineStr = document.getElementById('grantDeadline').value;
+
+    if (!title || !link || !scope || !deadlineStr) {
+      alert("Please fill out all fields.");
+      return;
+    }
+
+    const deadlinePT = new Date(new Date(deadlineStr).toLocaleString("en-US", { timeZone: "America/Los_Angeles" }));
+
+    const newGrant = { title, link, scope, deadlinePT };
+
+    // Add to localStorage array
+    let stored = localStorage.getItem("customGrants");
+    let grants = stored ? JSON.parse(stored) : [];
+    grants.push({ ...newGrant, deadlinePT: deadlinePT.toISOString() });
+    localStorage.setItem("customGrants", JSON.stringify(grants));
+
+    createGrantElement(newGrant);
+    hideGrantModal();
+
+    // Clear inputs
+    document.getElementById('grantTitle').value = "";
+    document.getElementById('grantLink').value = "";
+    document.getElementById('grantScope').value = "";
+    document.getElementById('grantDeadline').value = "";
+  }
+
   </script>
+  <div id="grantModal" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background-color:rgba(0,0,0,0.7); z-index:999; justify-content:center; align-items:center;">
+    <div style="background:#1f2937; padding:2rem; border-radius:10px; width:90%; max-width:500px; position:relative;">
+      <button onclick="hideGrantModal()" style="position:absolute; top:10px; right:10px; background:#ef4444; color:white; border:none; border-radius:5px; padding:5px 10px;">X</button>
+      <h3 style="color:#f9fafb; margin-bottom:1rem;">Add New Grant</h3>
+      <input id="grantTitle" placeholder="Title" style="width:100%; padding:8px; margin-bottom:10px;" />
+      <input id="grantLink" placeholder="Link" style="width:100%; padding:8px; margin-bottom:10px;" />
+      <input id="grantScope" placeholder="Scope" style="width:100%; padding:8px; margin-bottom:10px;" />
+      <input id="grantDeadline" type="datetime-local" style="width:100%; padding:8px; margin-bottom:10px;" />
+      <button onclick="addNewGrant()" style="background:#22c55e; color:white; padding:10px 20px; border:none; border-radius:5px;">Add Grant</button>
+    </div>
+  </div>
+  
 </body>
 </html>
