@@ -134,6 +134,34 @@
     a:hover {
       color: #93c5fd;
     }
+    .status-in-talks {
+      background-color: #85864c !important; /* medium green */
+    }
+
+    .status-connected {
+      background-color: #539296 !important; /* darker green */
+    }
+
+    .status-partnered {
+      background-color: #018763 !important; /* teal green */
+    }
+
+    .status-not-interested {
+      background-color: #4b1e1e !important; /* dark red */
+    }
+
+    .status-completed {
+      background-color: #346938 !important; /* dark blue-grey */
+    }
+
+    .status-contacted {
+      background-color: #3e5c8c !important; /* mid gray */
+    }
+
+    .status-not-started {
+      background-color: transparent !important; /* default / transparent */
+    }
+
   </style>
 </head>
   
@@ -241,51 +269,6 @@
     </div>
   </div>
   
-<!-- 
-
-  <div class="filter-section" id="addPartnerForm">
-    <h3 style="width: 100%; color: #f9fafb;">Add New Partner</h3>
-  
-    <input class="status-dropdown" id="addCompany" placeholder="Company" />
-    <input class="status-dropdown" id="addRanking" placeholder="Ranking (number)" type="number" />
-    <input class="status-dropdown" id="addContact" placeholder="Contact Person" />
-    <input class="status-dropdown" id="addPosition" placeholder="Position" />
-    <select class="status-dropdown" id="addType">
-      <option value="">Partnership Type</option>
-      <option value="Academic">Academic</option>
-      <option value="Industrial">Industrial</option>
-    </select>
-    <select class="status-dropdown" id="addCategory">
-      <option value="">Category</option>
-      <option value="Drug Discovery">Drug Discovery</option>
-      <option value="Rehab">Rehab</option>
-      <option value="Therapy">Therapy</option>
-    </select>
-    <select class="status-dropdown" id="addSubcategory">
-      <option value="">Subcategory</option>
-      <option value="ALS">ALS</option>
-      <option value="Parkinsons">Parkinsons</option>
-      <option value="Huntington">Huntington</option>
-      <option value="Alzheimer">Alzheimer</option>
-      <option value="Stroke Rehab">Stroke Rehab</option>
-      <option value="Cognitive Therapy">Cognitive Therapy</option>
-      <option value="2D/3D Imaging">2D/3D Imaging</option>
-    </select>
-    <select class="status-dropdown" id="addRegion">
-      <option value="">Region</option>
-      <option value="US">US</option>
-      <option value="Europe">Europe</option>
-      <option value="UAE">UAE</option>
-      <option value="Australia">Australia</option>
-    </select>
-    <input class="date-input" id="addStartDate" placeholder="Start Date" type="date" />
-    <input class="date-input" id="addEndDate" placeholder="End Date" type="date" />
-    <input class="status-dropdown" id="addEmail" placeholder="Email" />
-    <input class="status-dropdown" id="addURL" placeholder="Website URL" />
-    <textarea class="note-input" id="addNotes" placeholder="Notes or Expertise"></textarea>
-  
-    <button onclick="addNewPartner()" style="background:#2563eb; color:white; padding:10px 20px; border:none; border-radius:5px; margin-top:10px;">Add Partner</button>
-  </div> -->
 
   <table id="partnersTable" class="display" style="width:100%">
     <thead>
@@ -343,6 +326,7 @@
       tableBody.empty();
 
       partnerData.forEach((partner, index) => {
+        const statusClass = "status-" + (partner.status || "not-started").toLowerCase().replace(/\s+/g, "-");
         const statusDropdown = `
           <select class="status-dropdown" onchange="updateStatus(${index}, this.value)">
             ${statusOptions.map(opt => `<option value="${opt}" ${opt === partner.status ? 'selected' : ''}>${opt}</option>`).join('')}
@@ -352,9 +336,9 @@
         const startDateInput = `<input type="date" class="date-input" value="${partner.startDate}" onchange="updateStartDate(${index}, this.value)" />`;
         const endDateInput = `<input type="date" class="date-input" value="${partner.endDate}" onchange="updateEndDate(${index}, this.value)" />`;
         const notesInput = `<textarea class="note-input" onchange="updateNotes(${index}, this.value)">${partner.notes}</textarea>`;
-
+        const rowClass = partner.status === "In Talks" ? "in-talks-row" : "";
         const row = `
-          <tr data-high="${partner.Category}" data-sub="${partner.Subcategory}" data-region="${partner.Region}" data-type="${partner["Partnership Type"]}">
+        <tr class="${statusClass}" data-high="${partner.Category}" data-sub="${partner.Subcategory}" data-region="${partner.Region}" data-type="${partner["Partnership Type"]}">
             <td><a href="${partner.URL}" target="_blank">${partner.Company}</a></td>
             <td>${partner.Ranking}</td>
             <td><a href="mailto:${partner.Email}">${partner["Contact person"]}</a></td>
@@ -381,7 +365,19 @@
     function updateStatus(index, newStatus) {
       partnerData[index].status = newStatus;
       saveToLocalStorage();
+
+      const row = $('#partnersTable tbody tr').eq(index);
+      
+      // Remove any previous status- class
+      row.removeClass(function (i, className) {
+        return (className.match(/(^|\s)status-\S+/g) || []).join(' ');
+      });
+
+      const newClass = "status-" + newStatus.toLowerCase().replace(/\s+/g, "-");
+      row.addClass(newClass);
     }
+
+
 
     function updateStartDate(index, newDate) {
       partnerData[index].startDate = newDate;
