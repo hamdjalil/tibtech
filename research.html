@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Research — Tibbling Technologies</title>
+  <meta name="description" content="Cutting-edge AI and neuroscience research by Tibbling Technologies: publications, datasets, and tools for multimodal healthcare and neuroAI." />
+  <link rel="icon" type="image/png" href="/favicon.ico" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;600;700&family=Lora:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- OG/Twitter -->
+  <meta property="og:title" content="Research — Tibbling Technologies" />
+  <meta property="og:description" content="Explore our latest AI + neuroscience research, datasets, and tools." />
+  <meta property="og:url" content="https://tibbtech.com/research" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://tibbtech.com/assets/TibbTech.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-38PESE35X3"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);} gtag('js', new Date());
+    gtag('config', 'G-38PESE35X3');
+  </script>
+
+  <!-- Styles (light theme only) -->
+  <style>
+    :root{
+      --bg: #ffffff;
+      --bg-elev: #f7f8fb;
+      --fg: #0d1321;
+      --muted: #4b5563;
+      --brand: #1f6fff;
+      --brand-2: #7c3aed;
+      --card: #ffffff;
+      --ring: #1f6fff33;
+      --shadow: 0 12px 30px rgba(0,0,0,.08);
+      --radius: 16px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0; font-family:"Inter Tight", system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial;
+      background: var(--bg); color: var(--fg); line-height:1.55; overflow-x:hidden;
+    }
+    .container{max-width:1200px;margin:0 auto;padding:0 20px}
+    a{color:inherit;text-decoration:none}
+
+    /* Hero */
+    .hero{
+      position:relative; padding:96px 0 48px; overflow:hidden; isolation:isolate;
+      background:
+        radial-gradient(1200px 600px at 80% -10%, #2d3bff0f, transparent 60%),
+        radial-gradient(800px 400px at 0% 0%, #9b5cff14, transparent 60%),
+        linear-gradient(180deg, #ffffff, #f9fbff 65%);
+      border-bottom:1px solid #eaeef5;
+    }
+    .noise{
+      position:absolute; inset:-100px; opacity:.35; mix-blend-mode:multiply; pointer-events:none; z-index:-1;
+      background-image:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="160" height="160" viewBox="0 0 160 160"><filter id="n"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch"/></filter><rect width="100%" height="100%" filter="url(%23n)" opacity=".06"/></svg>');
+      animation: shift 22s linear infinite;
+    }
+    @keyframes shift{from{transform:translateX(0)}to{transform:translateX(-160px)}}
+    .title{font-weight:800; letter-spacing:-.02em; font-size: clamp(2rem, 4vw, 3.25rem); margin:0 0 10px}
+    .subtitle{color:var(--muted); font-size: clamp(1rem, 1.6vw, 1.15rem); max-width:860px}
+
+    /* Toolbar */
+    .toolbar{
+      margin-top:28px; display:flex; flex-wrap:wrap; gap:12px; align-items:center;
+      background: var(--bg-elev); border:1px solid #e9eef8; padding:12px; border-radius:14px; box-shadow: var(--shadow);
+    }
+    .chip{padding:8px 12px;border-radius:999px;border:1px solid #e1e6f2;color:var(--muted); cursor:pointer; user-select:none; transition:.2s transform, .2s background, .2s color}
+    .chip[aria-pressed="true"]{background:linear-gradient(90deg, var(--brand), var(--brand-2)); color:#fff; border-color:transparent}
+    .search{flex:1; display:flex; align-items:center; gap:10px; background:#fff; border:1px solid #e1e6f2; border-radius:999px; padding:10px 14px}
+    .search input{flex:1; background:transparent; border:0; outline:none; color:var(--fg); font-size:15px}
+    .select{appearance:none; background:#fff; color:var(--fg); border:1px solid #e1e6f2; border-radius:10px; padding:10px 14px; cursor:pointer}
+
+    /* Grid (perfect rows + uniform card height) */
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      margin-top: 36px;
+      align-items: stretch;
+    }
+    .card{
+      background:var(--card); border:1px solid #e9ecf3; border-radius:var(--radius); padding:16px;
+      box-shadow: var(--shadow); position:relative; overflow:hidden;
+      transition:.25s transform, .25s box-shadow, .25s border-color;
+      display:flex; flex-direction:column;
+      height: clamp(560px, 62vh, 600px); /* uniform height */
+    }
+    .card:hover{transform:translateY(-4px); border-color:#dfe6f7}
+    .card h3{font-size:1.1rem; letter-spacing:-.01em; margin:0 0 10px; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden; min-height:56px}
+    .imgwrap{position:relative; border-radius:12px; overflow:hidden; aspect-ratio:16/9; background:#eef2ff; z-index:1}
+    .imgwrap img{width:100%; height:100%; object-fit:cover; opacity:0; transition:opacity .5s ease, transform .5s ease}
+    .group:hover .imgwrap img{transform:scale(1.03)}
+    .imgwrap .skeleton{position:absolute; inset:0; background:linear-gradient(90deg,#f3f4f680, #ffffff, #f3f4f680); background-size:200% 100%; animation: shimmer 1.25s linear infinite}
+    @keyframes shimmer{0%{background-position:200% 0}100%{background-position:-200% 0}}
+
+    .meta{display:flex; gap:8px; flex-wrap:wrap; margin:10px 0 12px}
+    .pill{font-size:12px; padding:6px 10px; border:1px solid #e1e6f2; border-radius:999px; color:var(--muted)}
+    .journal-logo{height:36px; width:auto; max-width:140px; object-fit:contain; margin:0 auto; filter:grayscale(0.3) opacity(0.9);}
+    .journal-container{display:flex; justify-content:center; margin:16px 0; height:48px; align-items:center;}
+    .desc{color:var(--muted); font-size:.95rem; display:-webkit-box; -webkit-line-clamp:4; -webkit-box-orient:vertical; overflow:hidden; line-clamp:4;}
+    .actions{display:flex; gap:10px; margin-top:auto; flex-wrap:wrap}
+    .btn{display:inline-flex; align-items:center; gap:8px; padding:10px 12px; border-radius:10px; border:1px solid #e1e6f2; background:#fff; cursor:pointer; transition:.2s transform, .2s background}
+    .btn:hover{transform:translateY(-1px); background:#f5f7ff}
+    .btn.primary{background:linear-gradient(90deg, var(--brand), var(--brand-2)); color:#fff; border:none}
+
+    .footer-cta{margin:64px 0 24px; display:flex; justify-content:center}
+    .cta{display:inline-flex; gap:12px; align-items:center; padding:14px 18px; border-radius:12px; border:1px solid #e1e6f2; background: linear-gradient(90deg, #ffffff, #f7f9ff); transition:.25s transform, .25s background, .25s border}
+    .cta:hover{transform:translateY(-2px); border-color:#dfe6f7; background: linear-gradient(90deg, #ffffff, #eef3ff)}
+    .visually-hidden{position:absolute; left:-9999px; top:auto; width:1px; height:1px; overflow:hidden}
+
+    @media (prefers-reduced-motion: reduce){
+      .noise{animation:none}
+      .card,.btn,.cta{transition:none}
+      .group:hover .imgwrap img{transform:none}
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Optional: your navbar include -->
+  <div id="header-container"></div>
+
+  <header class="hero">
+    <div class="noise" aria-hidden="true"></div>
+    <div class="container">
+      <h1 class="title">Our Research</h1>
+      <p class="subtitle">
+        Breakthroughs at the intersection of <strong>AI</strong>, <strong>neuroscience</strong>, and <strong>multimodal healthcare</strong>.
+        Search, filter, and dive into full papers, preprints, and benchmarks.
+      </p>
+
+      <div class="toolbar" role="region" aria-label="Research filters">
+        <div class="search" role="search">
+          <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M10 18a8 8 0 1 1 5.293-14.293A8 8 0 0 1 10 18Zm11 2l-5.4-5.4"/></svg>
+          <input id="q" type="search" placeholder="Search by title, keywords, venue…" autocomplete="off" />
+        </div>
+
+        <select id="sort" class="select" aria-label="Sort">
+          <option value="newest">Newest first</option>
+          <option value="oldest">Oldest first</option>
+          <option value="az">Title A–Z</option>
+        </select>
+
+        <div id="tags" class="tags" style="display:flex; gap:8px; flex-wrap:wrap">
+          <button class="chip" data-tag="NeuroAI" aria-pressed="false">NeuroAI</button>
+          <button class="chip" data-tag="Imaging" aria-pressed="false">Imaging</button>
+          <button class="chip" data-tag="Segmentation" aria-pressed="false">Segmentation</button>
+          <button class="chip" data-tag="Registration" aria-pressed="false">Registration</button>
+          <button class="chip" data-tag="Hardware" aria-pressed="false">Hardware</button>
+          <button class="chip" data-tag="Healthcare" aria-pressed="false">Healthcare</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container" id="main">
+    <div id="grid" class="grid" aria-live="polite"></div>
+
+    <div class="footer-cta">
+      <a class="cta" href="#footer-container" id="contactLink">
+        <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M3 8l7.9 4.3a2 2 0 0 0 2.2 0L21 8v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8z"/></svg>
+        <span>Interested in collaboration? Let’s talk</span>
+      </a>
+    </div>
+  </main>
+
+  <!-- Optional: your footer include -->
+  <div id="footer-container"></div>
+
+  <!-- Data + Renderer (no dark mode code) -->
+  <script>
+    // Data (same items you supplied; add/edit here)
+    const research = [
+      { title:"An Enhancer-AAV Toolbox for Interneuron Subtypes", img:"/research/aav-icon.png", venue:"Cell Neuron", venueLogo:"/public/research/journals/cell neuron.png", date:"2025-05-21", desc:"Enhancer-AAV tools highly specific for distinct cortical interneuron populations and striatal cholinergic neurons.", link:"https://www.cell.com/neuron/pdf/S0896-6273(25)00349-6.pdf", tags:["NeuroAI","Imaging","Healthcare"] },
+      { title:"Biologically Realistic Computational Primitives", img:"/research/ai mimicks.jpg", venue:"bioRxiv", venueLogo:"/public/research/journals/bioarchive-logo.png", date:"2024-10-06", desc:"Biologically-inspired neocortical primitives on neuromorphic hardware to enhance Vision Transformers.", link:"https://www.biorxiv.org/content/10.1101/2024.10.06.616839v1.full.pdf", tags:["NeuroAI","Hardware"] },
+      { title:"Segment AnyNeuron", img:"/research/segneuron-icon.png", venue:"bioRxiv", venueLogo:"/public/research/journals/bioarchive-logo.png", date:"2024-09-06", desc:"Classify and segment unseen neuronal data via representative sampling to avoid cold-start in Active Learning.", link:"https://www.biorxiv.org/content/biorxiv/early/2024/08/26/2024.08.24.609505.full.pdf", tags:["Segmentation","NeuroAI","Imaging"] },
+      { title:"Multimodal Drug Discovery Framework", img:"/products/drugs.png", venue:"Product", venueLogo:"/public/research/journals/bioarchive-logo.png", date:"2025-03-10", desc:"AI-driven drug discovery integrating spatial genomics, behavior, and multimodal data.", link:"https://www.tibbtech.com/product/drugdiscovery", tags:["Healthcare","NeuroAI"] },
+      { title:"AI-Powered Rehabilitation Technology", img:"/products/exeralde.png", venue:"CVPR 2024 Workshop", venueLogo:"/public/research/journals/cvpr.png", date:"2024-06-20", desc:"Computer vision + AI to enhance patient recovery and optimize therapeutic interventions.", link:"https://openaccess.thecvf.com/content/CVPR2024W/CVsports/papers/Qazi_ExerAIde_AI-assisted_Multimodal_Diagnosis_for_Enhanced_Sports_Performance_and_Personalised_CVPRW_2024_paper.pdf", tags:["Healthcare","Imaging"] },
+      { title:"NeuroAI: Brain-Inspired Computing", img:"/products/neuro.png", venue:"NeurIPS (OpenReview)", venueLogo:"/public/research/journals/neurips.png", date:"2024-12-05", desc:"Bridging neuroscience and AI with biologically-inspired models and neuromorphic implementations.", link:"https://openreview.net/pdf?id=sGLqjAVep4", tags:["NeuroAI","Hardware"] },
+      { title:"3D Brain Image Registration", img:"/public/products/3dmapping.png", venue:"bioRxiv", venueLogo:"/public/research/journals/bioarchive-logo.png", date:"2024-08-24", desc:"Robust 3D brain registration across hardware scanners and sites for clinical applications.", link:"https://www.biorxiv.org/content/10.1101/2024.08.24.609508v1.full.pdf", tags:["Registration","Imaging"] },
+      { title:"NeuReg: Domain-Invariant Registration", img:"/public/products/neuroreg.png", venue:"arXiv", venueLogo:"/public/research/journals/arxiv.png", date:"2024-11-11", desc:"Transformer-based, neuro-inspired 3D registration for mouse and human brains.", link:"https://arxiv.org/pdf/2411.06315", tags:["Registration","NeuroAI","Imaging"] },
+      { title:"MortX: Mouse Cortex Benchmark", img:"/public/products/mousereg.png", venue:"bioRxiv", venueLogo:"/public/research/journals/bioarchive-logo.png", date:"2024-11-30", desc:"Domain generalization benchmark for mouse cortex segmentation/registration.", link:"https://www.biorxiv.org/content/10.1101/2024.11.30.626208v1.full.pdf", tags:["Segmentation","Registration","Imaging"] },
+      { title:"NeuroAtlas: AI Framework", img:"/public/products/neuroatlas.png", venue:"bioRxiv", venueLogo:"/public/research/journals/bioarchive-logo.png", date:"2024-08-24", desc:"Atlas generation and brain-region segmentation with GUI-based annotation tools.", link:"https://www.biorxiv.org/content/10.1101/2024.08.24.609507v1.full.pdf", tags:["Segmentation","Imaging"] },
+      { title:"AnimalFormer: Livestock Vision", img:"/public/products/animalformer.png", venue:"arXiv", venueLogo:"/public/research/journals/arxiv.png", date:"2024-06-15", desc:"Behavior-based precision livestock farming via multimodal vision.", link:"https://arxiv.org/pdf/2406.09711", tags:["Imaging","Healthcare"] },
+      { title:"CellSeg3D: 3D Cell Segmentation", img:"/public/products/cellseg3d.png", venue:"eLife (Reviewed Preprint)", venueLogo:"/public/research/journals/elife.png", date:"2025-02-10", desc:"Self-supervised 3D cell segmentation with mesoSPIM dataset and napari GUI.", link:"https://elifesciences.org/reviewed-preprints/99848v1", tags:["Segmentation","Imaging"] },
+      { title:"Intensity Shift Robust Registration", img:"/public/research/3dreg-icon.png", venue:"IEEE", venueLogo:"/public/research/journals/ieee.png", date:"2023-08-01", desc:"Deep-learning 3D registration robust to intensity shifts with boundary preservation.", link:"https://ieeexplore.ieee.org/abstract/document/10222341", tags:["Registration","Imaging"] },
+      { title:"Brainstem Nuclei Segmentation", img:"/public/products/intensityshift.png", venue:"bioRxiv", venueLogo:"/public/research/journals/bioarchive-logo.png", date:"2023-11-11", desc:"StARQ: domain-invariant brainstem nuclei segmentation and signal quantification.", link:"https://www.biorxiv.org/content/biorxiv/early/2023/11/11/2023.11.07.566040.full.pdf", tags:["Segmentation","Imaging"] },
+      { title:"Fetal Brain Segmentation", img:"/public/products/nature.png", venue:"Nature Scientific Data", venueLogo:"/public/research/journals/nature.png", date:"2021-07-22", desc:"Automatic multi-tissue human fetal brain segmentation benchmark across gestational ages.", link:"https://www.nature.com/articles/s41597-021-00946-3.pdf", tags:["Segmentation","Imaging","Healthcare"] },
+      { title:"Intensity Invariance in Deep Networks", img:"/public/products/invariance.png", venue:"arXiv", venueLogo:"/public/research/journals/arxiv.png", date:"2020-09-21", desc:"SSIM-style loss for intensity-invariant brain image registration.", link:"https://arxiv.org/pdf/2009.10058", tags:["Registration","Imaging"] }
+    ];
+
+    // Helpers
+    const $ = (sel,ctx=document)=>ctx.querySelector(sel);
+    const grid = $('#grid');
+    const q = $('#q');
+    const sortSel = $('#sort');
+    const tagButtons = [...document.querySelectorAll('.chip')];
+    let activeTags = new Set();
+
+    function formatDate(d){
+      try{ return new Date(d).toLocaleDateString(undefined,{year:'numeric',month:'short',day:'numeric'}); }
+      catch{ return d; }
+    }
+
+    function cardTpl(r){
+      const id = encodeURIComponent(r.title);
+      return `
+      <article class="card group" tabindex="0" aria-labelledby="t-${id}">
+        <div class="imgwrap">
+          <div class="skeleton" aria-hidden="true"></div>
+          <img loading="lazy" src="${r.img}" alt="${r.title}" onload="this.style.opacity=1; this.previousElementSibling?.remove();" />
+        </div>
+        <h3 id="t-${id}">${r.title}</h3>
+        <div class="meta">
+          <span class="pill">${formatDate(r.date)}</span>
+          ${r.tags.slice(0,3).map(t=>`<span class="pill">${t}</span>`).join('')}
+        </div>
+        <p class="desc">${r.desc}</p>
+        <div class="journal-container">
+          <img class="journal-logo" src="${r.venueLogo}" alt="${r.venue}" />
+        </div>
+        <div class="actions">
+          <a class="btn primary" href="${r.link}" target="_blank" rel="noopener noreferrer">
+            <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M14 3h7v7h-2V6.4l-8.3 8.3-1.4-1.4L17.6 5H14V3Z"/></svg>
+            Full Paper
+          </a>
+          <button class="btn" onclick="navigator.clipboard.writeText('${r.link}');this.innerHTML='✔ Copied'; setTimeout(()=>this.innerHTML='Share', 900)">
+            Share
+          </button>
+        </div>
+      </article>`;
+    }
+
+    function applyFilters(){
+      const query = q.value.trim().toLowerCase();
+      const sort = sortSel.value;
+      let list = research.filter(r=>{
+        const hay = (r.title + ' ' + r.desc + ' ' + r.venue + ' ' + r.tags.join(' ')).toLowerCase();
+        const textOk = !query || hay.includes(query);
+        const tagsOk = activeTags.size===0 || r.tags.some(t=>activeTags.has(t));
+        return textOk && tagsOk;
+      });
+
+      list.sort((a,b)=>{
+        if(sort==='newest') return new Date(b.date)-new Date(a.date);
+        if(sort==='oldest') return new Date(a.date)-new Date(b.date);
+        return a.title.localeCompare(b.title);
+      });
+
+      grid.innerHTML = list.map(cardTpl).join('') || `<p style="color:var(--muted)">No results. Try different filters.</p>`;
+      injectArticlesJsonLd(list);
+    }
+
+    // Events
+    q.addEventListener('input', applyFilters);
+    sortSel.addEventListener('change', applyFilters);
+    tagButtons.forEach(b=>{
+      b.addEventListener('click', ()=>{
+        const t = b.dataset.tag;
+        if(activeTags.has(t)){ activeTags.delete(t); b.setAttribute('aria-pressed','false'); }
+        else{ activeTags.add(t); b.setAttribute('aria-pressed','true'); }
+        applyFilters();
+      });
+    });
+
+    // JSON-LD
+    function injectArticlesJsonLd(list){
+      const old = document.getElementById('articles-jsonld');
+      if(old) old.remove();
+      const ld = {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "itemListElement": list.map((r,i)=>({
+          "@type": "ScholarlyArticle",
+          "position": i+1,
+          "headline": r.title,
+          "name": r.title,
+          "about": r.tags,
+          "datePublished": r.date,
+          "isAccessibleForFree": true,
+          "url": r.link,
+          "image": r.img,
+          "publisher": {"@type":"Organization","name": r.venue}
+        }))
+      };
+      const s = document.createElement('script');
+      s.type='application/ld+json'; s.id='articles-jsonld'; s.textContent = JSON.stringify(ld);
+      document.head.appendChild(s);
+    }
+    (function injectOrgLd(){
+      const s = document.createElement('script');
+      s.type='application/ld+json';
+      s.textContent = JSON.stringify({
+        "@context":"https://schema.org",
+        "@type":"Organization",
+        "name":"Tibbling Technologies",
+        "url":"https://tibbtech.com",
+        "logo":"https://tibbtech.com/assets/TibbTech.png"
+      });
+      document.head.appendChild(s);
+    })();
+
+    // Initial render
+    applyFilters();
+
+    // Optional: focus anchor after clicking CTA
+    document.getElementById('contactLink').addEventListener('click', ()=>{
+      setTimeout(()=>{ document.getElementById('footer-container').focus?.(); }, 300);
+    });
+  </script>
+
+  <script type="module" src="/main.js"></script>
+</body>
+</html>
