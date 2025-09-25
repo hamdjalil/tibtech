@@ -622,21 +622,39 @@
 
   <!-- Video Section -->
   <section class="section" style="background: white;" id="intro-video">
-    <div style="max-width: 900px; margin: 0 auto; text-align: center;">
+    <div style="max-width: 1000px; margin: 0 auto; text-align: center;">
       <h2 style="color: black; margin-bottom: 20px;">Watch: Soft WTA in Action</h2>
       <p style="color: black; margin-bottom: 40px; max-width: 600px; margin-left: auto; margin-right: auto;">
         See how our brain-inspired AI technology works and learn about the science behind Soft Winner-Take-All networks.
       </p>
       
-      <div style="position: relative; width: 100%; max-width: 800px; margin: 0 auto; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);">
-        <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-          <iframe 
-            src="https://www.youtube.com/embed/PDKhUknuQDg" 
-            title="Soft WTA Technology Overview"
-            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen>
-          </iframe>
+      <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+        <!-- YouTube Video -->
+        <div style="position: relative; width: 100%; max-width: 480px; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);">
+          <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+            <iframe 
+              src="https://www.youtube.com/embed/PDKhUknuQDg" 
+              title="Soft WTA Technology Overview"
+              style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+              allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+        
+        <!-- Local Video -->
+        <div style="position: relative; width: 100%; max-width: 480px; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);">
+          <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+            <video 
+              controls
+              loop
+              style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; border-radius: 12px;"
+              poster="placeholder-poster.jpg">
+              <source src="/blogs/softWTA/assets/wtacode.mp4" type="video/mp4">
+              <source src="your-video-file.webm" type="video/webm">
+              Your browser does not support the video tag.
+            </video>
+          </div>
         </div>
       </div>
       
@@ -655,7 +673,7 @@
     <div style="max-width: 900px; margin: 0 auto;">
       <h2 style="text-align: center; color: black;">The Brain-AI Revolution</h2>
       <p style="text-align: center; max-width: 800px; margin: 0 auto 20px auto;">
-We explore how brain-inspired circuit motifs, particularly soft winner-take-all (sWTA) computations mediated by key interneurons, can be translated into neuromorphic hardware and deep learning models. By mapping these biologically grounded dynamics onto IBM’s TrueNorth chip and integrating them into Vision Transformers, we demonstrate enhanced working memory, stronger generalization, and a pathway toward more human-like intelligence in AI systems.      </p>
+      We explore how brain-inspired circuit motifs, particularly soft winner-take-all (sWTA) computations mediated by key interneurons, can be translated into neuromorphic hardware and deep learning models. By mapping these biologically grounded dynamics onto IBM’s TrueNorth chip and integrating them into Vision Transformers, we demonstrate enhanced working memory, stronger generalization, and a pathway toward more human-like intelligence in AI systems.      </p>
       <div style="display: flex; justify-content: space-around; flex-wrap: wrap; margin-top: 40px; gap: 30px;">
         <div class="author-card" style="text-align: center; flex: 1; min-width: 250px; max-width: 300px; margin: 0 10px; opacity: 0; transform: translateY(20px);">
           <div style="width: 80px; height: 80px; border-radius: 50%; overflow: hidden; margin: 0 auto 15px auto; border: 3px solid rgba(0, 0, 0, 0.2);">
@@ -862,8 +880,7 @@ We tested whether adding a pre-processing winner-take-all (WTA) layer to deep le
       <div class="brain-like-text" style="flex: 1; min-width: 250px;">
         <h2 style="color: black;">Brain-Like Feature Learning</h2>
         <p style="text-align: left; margin-top: 15px; margin-left: 20px;">
-          Feature alignment improves with sWTA, leading to stronger domain generalization. By highlighting the most important features and filtering out noise, sWTA makes models more robust to new environments. In practice, adding sWTA to RefineNet helped it handle the challenge of nighttime driving scenes almost as well as models trained directly on night images—showing how brain-inspired filtering sharpens machine perception across domains.        </p>
-      </div>
+        sWTA improves feature alignment by highlighting key features and filtering noise, boosting domain generalization. When added to RefineNet, it handled nighttime driving nearly as well as models trained on night images showing how brain inspired filtering sharpens perception across domains.      </div>
     </div>
   </section>
 
@@ -1273,6 +1290,51 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
   }, 100); // Small delay to ensure header is loaded
+});
+</script>
+
+<script>
+// Auto-play video on scroll
+document.addEventListener('DOMContentLoaded', function() {
+  const video = document.querySelector('#intro-video video');
+  
+  if (video) {
+    // Create intersection observer to detect when video is in view
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          // Video is in view - try to play it
+          video.play().catch(error => {
+            // Autoplay might be blocked by browser, that's okay
+            console.log('Autoplay blocked:', error);
+          });
+        } else {
+          // Video is out of view - pause it
+          video.pause();
+        }
+      });
+    }, {
+      threshold: 0.5, // Trigger when 50% of video is visible
+      rootMargin: '0px 0px -50px 0px' // Trigger slightly before video is fully in view
+    });
+    
+    // Start observing the video
+    observer.observe(video);
+    
+    // Also handle page visibility changes
+    document.addEventListener('visibilitychange', function() {
+      if (document.hidden) {
+        video.pause();
+      } else {
+        // Check if video is still in view when page becomes visible again
+        const rect = video.getBoundingClientRect();
+        const isInView = rect.top < window.innerHeight && rect.bottom > 0;
+        if (isInView) {
+          video.play().catch(() => {});
+        }
+      }
+    });
+  }
 });
 </script>
 
