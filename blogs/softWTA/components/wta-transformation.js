@@ -77,8 +77,8 @@ class WTATransformation {
       originalContainer.className = 'original-container';
       originalContainer.style.cssText = `
         position: relative;
-        width: 120px;
-        height: 120px;
+        width: 97px;
+        height: 97px;
         overflow: hidden;
         box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
         transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
@@ -119,8 +119,8 @@ class WTATransformation {
         position: absolute;
         top: 0;
         right: -90px;
-        width: 120px;
-        height: 120px;
+        width: 97px;
+        height: 97px;
         overflow: hidden;
         box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
         opacity: 0;
