@@ -633,8 +633,10 @@
         <div style="position: relative; width: 100%; max-width: 480px; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);">
           <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
             <video
+              id="demo-video"
               controls
               loop
+              muted
               style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; border-radius: 12px;"
               poster="placeholder-poster.jpg">
               <source src="/blogs/softWTA/assets/wtacode.mp4" type="video/mp4">
@@ -670,27 +672,27 @@
       <div style="display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 40px; margin-top: 40px; max-width: 1000px; margin-left: auto; margin-right: auto;">
 
         <!-- Australian National University -->
-        <div class="institution-card" style="opacity: 0; transform: translateY(20px);">
+        <div class="institution-card" style="opacity: 1; transform: translateY(0px);">
           <img src="/partners/anu.png" alt="Australian National University" style="height: 60px; object-fit: contain; filter: grayscale(0.3); transition: all 0.3s ease;" onmouseover="this.style.filter='grayscale(0)'; this.style.transform='scale(1.1)'" onmouseout="this.style.filter='grayscale(0.3)'; this.style.transform='scale(1)'">
         </div>
 
         <!-- Monash University -->
-        <div class="institution-card" style="opacity: 0; transform: translateY(20px);">
+        <div class="institution-card" style="opacity: 1; transform: translateY(0px);">
           <img src="/partners/monash-color.svg" alt="Monash University" style="height: 60px; object-fit: contain; filter: grayscale(0.3); transition: all 0.3s ease;" onmouseover="this.style.filter='grayscale(0)'; this.style.transform='scale(1.1)'" onmouseout="this.style.filter='grayscale(0.3)'; this.style.transform='scale(1)'">
         </div>
 
         <!-- Harvard Medical School -->
-        <div class="institution-card" style="opacity: 0; transform: translateY(20px);">
+        <div class="institution-card" style="opacity: 1; transform: translateY(0px);">
           <img src="/partners/harvard-color.svg" alt="Harvard Medical School" style="height: 60px; object-fit: contain; filter: grayscale(0.3); transition: all 0.3s ease;" onmouseover="this.style.filter='grayscale(0)'; this.style.transform='scale(1.1)'" onmouseout="this.style.filter='grayscale(0.3)'; this.style.transform='scale(1)'">
         </div>
 
         <!-- Broad Institute -->
-        <div class="institution-card" style="opacity: 0; transform: translateY(20px);">
+        <div class="institution-card" style="opacity: 1; transform: translateY(0px);">
           <img src="/partners/broad-color.png" alt="Broad Institute" style="height: 60px; object-fit: contain; filter: grayscale(0.3); transition: all 0.3s ease;" onmouseover="this.style.filter='grayscale(0)'; this.style.transform='scale(1.1)'" onmouseout="this.style.filter='grayscale(0.3)'; this.style.transform='scale(1)'">
         </div>
 
         <!-- ETH Zurich -->
-        <div class="institution-card" style="opacity: 0; transform: translateY(20px);">
+        <div class="institution-card" style="opacity: 1; transform: translateY(0px);">
           <img src="/partners/eth-color.png" alt="ETH Zurich" style="height: 60px; object-fit: contain; filter: grayscale(0.3); transition: all 0.3s ease;" onmouseover="this.style.filter='grayscale(0)'; this.style.transform='scale(1.1)'" onmouseout="this.style.filter='grayscale(0.3)'; this.style.transform='scale(1)'">
         </div>
         
@@ -999,12 +1001,14 @@ With SST held constant, increasing PV inhibition acts like a neural brake that l
             institutionCards.forEach((card, index) => {
               setTimeout(() => {
                 card.classList.add('animate');
-              }, index * 200); // Stagger animations by 200ms
+                card.style.opacity = '1';
+                card.style.transform = 'translateY(0)';
+              }, index * 150); // Stagger animations by 150ms
             });
             featureObserver.disconnect(); // Stop observing once triggered
           }
         });
-      }, { threshold: 0.2 }); // Trigger when 20% of the section is visible
+      }, { threshold: 0.3 }); // Trigger when 30% of the section is visible
       
       // Start observing the brain-ai-revolution section
       const revolutionSection = document.getElementById('brain-ai-revolution');
@@ -1321,6 +1325,50 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 </script>
 
+<script>
+// Auto-play demo video on scroll
+document.addEventListener('DOMContentLoaded', function() {
+  const demoVideo = document.getElementById('demo-video');
+
+  if (demoVideo) {
+    // Create intersection observer to detect when demo video is in view
+    const demoObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          // Video is in view - try to play it
+          demoVideo.play().catch(error => {
+            // Autoplay might be blocked by browser, that's okay
+            console.log('Demo video autoplay blocked:', error);
+          });
+        } else {
+          // Video is out of view - pause it
+          demoVideo.pause();
+        }
+      });
+    }, {
+      threshold: 0.5, // Trigger when 50% of video is visible
+      rootMargin: '0px 0px -50px 0px' // Trigger slightly before video is fully in view
+    });
+
+    // Start observing the demo video
+    demoObserver.observe(demoVideo);
+
+    // Also handle page visibility changes for demo video
+    document.addEventListener('visibilitychange', function() {
+      if (document.hidden) {
+        demoVideo.pause();
+      } else {
+        // Check if demo video is still in view when page becomes visible again
+        const rect = demoVideo.getBoundingClientRect();
+        const isInView = rect.top < window.innerHeight && rect.bottom > 0;
+        if (isInView) {
+          demoVideo.play().catch(() => {});
+        }
+      }
+    });
+  }
+});
+</script>
 
 <script type="module" src="/main.js"></script>
 
