@@ -15,6 +15,7 @@
   <script src="components/neocortical-circuit.js"></script>
   <script src="components/neuromorphic-hardware.js"></script>
   <script src="components/wta-directed-graph.js"></script>
+  <script src="components/wta-transformation.js"></script>
 
   <style>
     /* Reset all margins and paddings to eliminate white space */
@@ -806,16 +807,17 @@ Inspired by nature, similar mechanisms power efficient computations in silicon c
     </div>
   </section>
 
-  <section class="section light">
+  <section class="section light no-float">
     <h2 style="color: black;">Your Brain Inspires Clarity in Machines</h2>
-    <p  >Our model mimics neocortical circuits, capturing how excitatory and inhibitory neurons interact.
-          It draws on real measurements from the visual cortex to stay biologically grounded.
-          The result is a soft winner-take-all system, where strong signals rise and weaker ones fade.</p>
-    <p>A sliding window-based computation was employed to amplify key features while reducing domain shifts, resulting in a clearer and more normalized output representation.<p>
-      <img src="assets/4a.png" alt="Experimental slice data" class="inline-image float-animation">
-
-    </section>
-
+    <p>Our model mimics neocortical circuits, capturing how excitatory and inhibitory neurons interact.
+       It draws on real measurements from the visual cortex to stay biologically grounded.</p>
+  
+    <img src="assets/4a.png" alt="Experimental slice data" class="inline-image">
+  
+    <p>A sliding window-based computation was employed to amplify key features while reducing domain shifts, resulting in a clearer and more normalized output representation.</p>
+  
+    <div id="wta-transformation-demo" style="margin: 40px 0;"></div>
+  </section>
   <section class="section centered-figure-section">
     <!-- Heading and subheading above the figures -->
     <div style="text-align: center; margin-bottom: 40px; max-width: 800px; margin-left: auto; margin-right: auto;">
@@ -836,39 +838,7 @@ We tested whether adding a pre-processing winner-take-all (WTA) layer to deep le
     <h2 style="color: black;">Any Image , One Solution</h2>
     <p >AI that understands images across styles, formats, and distortions. One unified approach that works with diverse visual representations.</p>
     
-    <!-- MNIST-type grid -->
-    <div class="side-by-side-showcase">
-      <div class="image-comparison-grid" id="auto-transition-grid">
-        <div class="image-comparison-item">
-          <p class="image-label">MNIST</p>
-          <div class="image-overlay-container">
-            <img src="assets/b1.png" alt="Original MNIST" class="base-image">
-            <img src="assets/a1.png" alt="Processed MNIST" class="overlay-image">
-          </div>
-        </div>
-        <div class="image-comparison-item">
-          <p class="image-label">MNIST-M</p>
-          <div class="image-overlay-container">
-            <img src="assets/b2.png" alt="Original MNIST-M" class="base-image">
-            <img src="assets/a2.png" alt="Processed MNIST-M" class="overlay-image">
-          </div>
-        </div>
-        <div class="image-comparison-item">
-          <p class="image-label">USPS</p>
-          <div class="image-overlay-container">
-            <img src="assets/b3.png" alt="Original SVHN" class="base-image">
-            <img src="assets/a3.png" alt="Processed SVHN" class="overlay-image">
-          </div>
-        </div>
-        <div class="image-comparison-item">
-          <p class="image-label">SVHN</p>
-          <div class="image-overlay-container">
-            <img src="assets/b4.png" alt="Original USPS" class="base-image">
-            <img src="assets/a4.png" alt="Processed USPS" class="overlay-image">
-          </div>
-        </div>
-      </div>
-    </div>
+
 
     <!-- Zero-shot generalization section -->
     <div style="margin-top: 60px;" id="zero-shot-section">
@@ -1048,6 +1018,9 @@ With SST held constant, increasing PV inhibition acts like a neural brake that l
       // Initialize the standalone components in other sections
       window.neuromorphicInstance = new NeuromorphicHardware('neuromorphic-hardware-mapping');
       new WTADiagram('night-vision-wta');
+
+      // Initialize WTA Transformation demo
+      window.wtaTransformationInstance = new WTATransformation('wta-transformation-demo');
 
       // Set up Intersection Observer for animating institution cards when they come into view
       const featureObserver = new IntersectionObserver((entries) => {

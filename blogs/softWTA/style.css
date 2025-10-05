@@ -467,7 +467,6 @@ body.menu-open {
 /* Image hover and animation effects */
 .inline-image, .centered-main-figure, .grid-figure {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  animation: subtle-pulse 6s infinite alternate ease-in-out;
 }
 
 .inline-image:hover, .centered-main-figure:hover, .grid-figure:hover {
@@ -487,9 +486,7 @@ body.menu-open {
 }
 
 /* Additional animation for section images */
-section img:not(.base-image):not(.overlay-image):not(.logo) {
-  animation: subtle-float 8s infinite alternate ease-in-out;
-}
+
 
 @keyframes subtle-float {
   0% {
