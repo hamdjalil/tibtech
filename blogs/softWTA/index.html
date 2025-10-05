@@ -620,32 +620,19 @@
     });
   </script>
 
-  <!-- Video Section -->
-  <section class="section" style="background: white;" id="intro-video">
+  <!-- Demo Section -->
+  <section class="section" style="background: white;" id="intro-demo">
     <div style="max-width: 1000px; margin: 0 auto; text-align: center;">
-      <h2 style="color: black; margin-bottom: 20px;">Watch: Soft WTA in Action</h2>
+      <h2 style="color: black; margin-bottom: 20px;">Try Soft WTA in Action</h2>
       <p style="color: black; margin-bottom: 40px; max-width: 600px; margin-left: auto; margin-right: auto;">
-        See how our brain-inspired AI technology works and learn about the science behind Soft Winner-Take-All networks.
+        Experience our brain-inspired AI technology hands-on with our interactive Google Colab demo.
       </p>
-      
+
       <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
-        <!-- YouTube Video -->
-        <div style="position: relative; width: 100%; max-width: 480px; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);">
-          <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-            <iframe 
-              src="https://www.youtube.com/embed/PDKhUknuQDg" 
-              title="Soft WTA Technology Overview"
-              style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-              allowfullscreen>
-            </iframe>
-          </div>
-        </div>
-        
         <!-- Local Video -->
         <div style="position: relative; width: 100%; max-width: 480px; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);">
           <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-            <video 
+            <video
               controls
               loop
               style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; border-radius: 12px;"
@@ -657,13 +644,19 @@
           </div>
         </div>
       </div>
-      
-      <div style="margin-top: 20px;">
-        <a href="https://www.youtube.com/watch?v=PDKhUknuQDg" target="_blank" style="color: #666; text-decoration: none; font-size: 14px; display: inline-flex; align-items: center; gap: 8px;">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+
+      <div style="margin-top: 30px;">
+        <a href="https://colab.research.google.com/your-colab-link-here" target="_blank" style="display: inline-flex; align-items: center; gap: 12px; background: #000000; color: white !important; text-decoration: none; font-size: 16px; font-weight: 600; padding: 14px 28px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); transition: all 0.3s ease; --colab-logo-dark: #ff6f00; --colab-logo-light: #ffb74d;" onmouseover="this.style.background='#333333'; this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 16px rgba(0, 0, 0, 0.3)'" onmouseout="this.style.background='#000000'; this.style.transform='translateY(0px)'; this.style.boxShadow='0 4px 12px rgba(0, 0, 0, 0.2)'">
+          <svg width="20" height="20" viewBox="0 0 24 24">
+            <g id="colab-logo">
+              <path d="M4.54,9.46,2.19,7.1a6.93,6.93,0,0,0,0,9.79l2.36-2.36A3.59,3.59,0,0,1,4.54,9.46Z" style="fill:var(--colab-logo-dark)"></path>
+              <path d="M2.19,7.1,4.54,9.46a3.59,3.59,0,0,1,5.08,0l1.71-2.93h0l-.1-.08h0A6.93,6.93,0,0,0,2.19,7.1Z" style="fill:var(--colab-logo-light)"></path>
+              <path d="M11.34,17.46h0L9.62,14.54a3.59,3.59,0,0,1-5.08,0L2.19,16.9a6.93,6.93,0,0,0,9,.65l.11-.09" style="fill:var(--colab-logo-light)"></path>
+              <path d="M12,7.1a6.93,6.93,0,0,0,0,9.79l2.36-2.36a3.59,3.59,0,1,1,5.08-5.08L21.81,7.1A6.93,6.93,0,0,0,12,7.1Z" style="fill:var(--colab-logo-light)"></path>
+              <path d="M21.81,7.1,19.46,9.46a3.59,3.59,0,0,1-5.08,5.08L12,16.9A6.93,6.93,0,0,0,21.81,7.1Z" style="fill:var(--colab-logo-dark)"></path>
+            </g>
           </svg>
-          Watch on YouTube
+          Open Interactive Demo in Colab
         </a>
       </div>
     </div>
@@ -671,33 +664,34 @@
 
   <section class="section" id="brain-ai-revolution">
     <div style="max-width: 900px; margin: 0 auto;">
-      <h2 style="text-align: center; color: black;">The Brain-AI Revolution</h2>
+      <h2 style="text-align: center; color: black;">Institutional Collaborations</h2>
       <p style="text-align: center; max-width: 800px; margin: 0 auto 20px auto;">
-      We explore how brain-inspired circuit motifs, particularly soft winner-take-all (sWTA) computations mediated by key interneurons, can be translated into neuromorphic hardware and deep learning models. By mapping these biologically grounded dynamics onto IBM’s TrueNorth chip and integrating them into Vision Transformers, we demonstrate enhanced working memory, stronger generalization, and a pathway toward more human-like intelligence in AI systems.      </p>
-      <div style="display: flex; justify-content: space-around; flex-wrap: wrap; margin-top: 40px; gap: 30px;">
-        <div class="author-card" style="text-align: center; flex: 1; min-width: 250px; max-width: 300px; margin: 0 10px; opacity: 0; transform: translateY(20px);">
-          <div style="width: 80px; height: 80px; border-radius: 50%; overflow: hidden; margin: 0 auto 15px auto; border: 3px solid rgba(0, 0, 0, 0.2);">
-            <img src="assets/asim.jpeg" alt="Dr. Sarah Chen" style="width: 100%; height: 120%; object-fit: cover;">
-          </div>
-          <h3 style="margin: 10px 0 5px 0; color: black;">Dr. Asim Iqbal</h3>
-          <p class="small-text" style="margin: 5px 0; color: black;">Lead Neuroscientist</p>
-          <p class="small-text" style="margin: 0; color: black;">Tibbling Technologies, USA</p>
+      We explore how brain-inspired circuit motifs, particularly soft winner-take-all (sWTA) computations mediated by key interneurons, can be translated into neuromorphic hardware and deep learning models. This research spans multiple world-class institutions and represents a truly collaborative effort in computational neuroscience.      </p>
+      <div style="display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 40px; margin-top: 40px; max-width: 1000px; margin-left: auto; margin-right: auto;">
+
+        <!-- Australian National University -->
+        <div class="institution-card" style="opacity: 0; transform: translateY(20px);">
+          <img src="/partners/anu.png" alt="Australian National University" style="height: 60px; object-fit: contain; filter: grayscale(0.3); transition: all 0.3s ease;" onmouseover="this.style.filter='grayscale(0)'; this.style.transform='scale(1.1)'" onmouseout="this.style.filter='grayscale(0.3)'; this.style.transform='scale(1)'">
         </div>
-       <div class="author-card" style="text-align: center; flex: 1; min-width: 250px; max-width: 300px; margin: 0 10px; opacity: 0; transform: translateY(20px);">
-          <div style="width: 80px; height: 80px; border-radius: 50%; overflow: hidden; margin: 0 auto 15px auto; border: 3px solid rgba(0, 0, 0, 0.2);">
-            <img src="assets/asim.jpeg" alt="Dr. Sarah Chen" style="width: 100%; height: 120%; object-fit: cover;">
-          </div>
-          <h3 style="margin: 10px 0 5px 0; color: black;">Dr. Asim Iqbal</h3>
-          <p class="small-text" style="margin: 5px 0; color: black;">Lead Neuroscientist</p>
-          <p class="small-text" style="margin: 0; color: black;">Tibbling Technologies, USA</p>
+
+        <!-- Monash University -->
+        <div class="institution-card" style="opacity: 0; transform: translateY(20px);">
+          <img src="/partners/monash-color.svg" alt="Monash University" style="height: 60px; object-fit: contain; filter: grayscale(0.3); transition: all 0.3s ease;" onmouseover="this.style.filter='grayscale(0)'; this.style.transform='scale(1.1)'" onmouseout="this.style.filter='grayscale(0.3)'; this.style.transform='scale(1)'">
         </div>
-        <div class="author-card" style="text-align: center; flex: 1; min-width: 250px; max-width: 300px; margin: 0 10px; opacity: 0; transform: translateY(20px);">
-          <div style="width: 80px; height: 80px; border-radius: 50%; overflow: hidden; margin: 0 auto 15px auto; border: 3px solid rgba(0, 0, 0, 0.2);">
-            <img src="assets/asim.jpeg" alt="Dr. Sarah Chen" style="width: 100%; height: 120%; object-fit: cover;">
-          </div>
-          <h3 style="margin: 10px 0 5px 0; color: black;">Dr. Asim Iqbal</h3>
-          <p class="small-text" style="margin: 5px 0; color: black;">Lead Neuroscientist</p>
-          <p class="small-text" style="margin: 0; color: black;">Tibbling Technologies, USA</p>
+
+        <!-- Harvard Medical School -->
+        <div class="institution-card" style="opacity: 0; transform: translateY(20px);">
+          <img src="/partners/harvard-color.svg" alt="Harvard Medical School" style="height: 60px; object-fit: contain; filter: grayscale(0.3); transition: all 0.3s ease;" onmouseover="this.style.filter='grayscale(0)'; this.style.transform='scale(1.1)'" onmouseout="this.style.filter='grayscale(0.3)'; this.style.transform='scale(1)'">
+        </div>
+
+        <!-- Broad Institute -->
+        <div class="institution-card" style="opacity: 0; transform: translateY(20px);">
+          <img src="/partners/broad-color.png" alt="Broad Institute" style="height: 60px; object-fit: contain; filter: grayscale(0.3); transition: all 0.3s ease;" onmouseover="this.style.filter='grayscale(0)'; this.style.transform='scale(1.1)'" onmouseout="this.style.filter='grayscale(0.3)'; this.style.transform='scale(1)'">
+        </div>
+
+        <!-- ETH Zurich -->
+        <div class="institution-card" style="opacity: 0; transform: translateY(20px);">
+          <img src="/partners/eth-color.png" alt="ETH Zurich" style="height: 60px; object-fit: contain; filter: grayscale(0.3); transition: all 0.3s ease;" onmouseover="this.style.filter='grayscale(0)'; this.style.transform='scale(1.1)'" onmouseout="this.style.filter='grayscale(0.3)'; this.style.transform='scale(1)'">
         </div>
         
       </div>
@@ -716,7 +710,7 @@
       }
     }
     
-    .author-card.animate {
+    .institution-card.animate {
       animation: fadeInUp 0.8s forwards;
     } 
   </style>
@@ -1008,15 +1002,15 @@ With SST held constant, increasing PV inhibition acts like a neural brake that l
       window.neuromorphicInstance = new NeuromorphicHardware('neuromorphic-hardware-mapping');
       new WTADiagram('night-vision-wta');
 
-      // Set up Intersection Observer for animating author cards when they come into view
+      // Set up Intersection Observer for animating institution cards when they come into view
       const featureObserver = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            const authorCards = document.querySelectorAll('#brain-ai-revolution .author-card');
-            authorCards.forEach((card, index) => {
+            const institutionCards = document.querySelectorAll('#brain-ai-revolution .institution-card');
+            institutionCards.forEach((card, index) => {
               setTimeout(() => {
                 card.classList.add('animate');
-              }, index * 300); // Stagger animations by 300ms
+              }, index * 200); // Stagger animations by 200ms
             });
             featureObserver.disconnect(); // Stop observing once triggered
           }
