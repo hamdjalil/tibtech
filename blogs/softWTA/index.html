@@ -11,11 +11,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Lora:wght@400;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <script src="components/neuron-graph.js"></script>
   <script src="components/wta-diagram.js"></script>
   <script src="components/neocortical-circuit.js"></script>
   <script src="components/neuromorphic-hardware.js"></script>
-  <script src="components/wta-directed-graph.js"></script>
+  <!-- <script src="components/wta-directed-graph.js"></script> -->
 
   <style>
     /* Reset all margins and paddings to eliminate white space */
@@ -714,7 +713,49 @@
     
     .institution-card.animate {
       animation: fadeInUp 0.8s forwards;
-    } 
+    }
+
+    /* Image overlay transition effects */
+    .image-overlay-container {
+      position: relative;
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+
+    .image-overlay-container .base-image,
+    .image-overlay-container .overlay-image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: opacity 0.4s ease-in-out;
+    }
+
+    .image-overlay-container .base-image {
+      opacity: 1;
+      z-index: 1;
+      position: relative;
+    }
+
+    .image-overlay-container .overlay-image {
+      opacity: 0;
+      z-index: 2;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    /* When active-transition class is added, show overlay image */
+    .image-overlay-container.active-transition .base-image {
+      opacity: 0;
+    }
+
+    .image-overlay-container.active-transition .overlay-image {
+      opacity: 1;
+    }
   </style>
 
   <section class="section light">
@@ -819,20 +860,8 @@ We tested whether adding a pre-processing winner-take-all (WTA) layer to deep le
           <div class="zero-shot-images" style="flex: 2; display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; align-items: center;">
             <div class="zero-shot-item" style="flex: 1; min-width: 280px; max-width: 400px; display: flex; justify-content: center;">
               <div class="image-overlay-container zero-shot-image" style="width: 100%; aspect-ratio: 1.5/1; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);">
-                <img src="assets/b5.png" alt="Original Natural Scene" class="base-image" style="object-fit: cover;">
-                <img src="assets/a5.png" alt="Processed Natural Scene" class="overlay-image" style="object-fit: cover;">
-              </div>
-            </div>
-            <div class="zero-shot-item" style="flex: 1; min-width: 280px; max-width: 400px; display: flex; justify-content: center;">
-              <div class="image-overlay-container zero-shot-image" style="width: 100%; aspect-ratio: 1.5/1; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);">
                 <img src="assets/b6.png" alt="Original Underwater Scene" class="base-image" style="object-fit: cover;">
                 <img src="assets/a6.png" alt="Processed Underwater Scene" class="overlay-image" style="object-fit: cover;">
-              </div>
-            </div>
-            <div class="zero-shot-item" style="flex: 1; min-width: 280px; max-width: 400px; display: flex; justify-content: center;">
-              <div class="image-overlay-container zero-shot-image" style="width: 100%; aspect-ratio: 1.5/1; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);">
-                <img src="assets/b7.png" alt="Original Coral Scene" class="base-image" style="object-fit: cover;">
-                <img src="assets/a7.png" alt="Processed Coral Scene" class="overlay-image" style="object-fit: cover;">
               </div>
             </div>
           </div>
@@ -886,12 +915,7 @@ We tested whether adding a pre-processing winner-take-all (WTA) layer to deep le
     <p >
 With SST held constant, increasing PV inhibition acts like a neural brake that lowers pyramidal responses, suppresses near winners, and sharpens the soft winner take all outcome by preserving the strongest input while silencing weaker competitors. PV chiefly shifts the response offset and enforces competition, whereas SST mainly adjusts the slope and width of tuning to shape gain.    </p>
 
-    <figure class="neuro-team__figure">
-      <div id="neuron-graph" class="neuro-team__canvas"></div>
-      <figcaption class="caption">
-        Interactive schematic of cooperative cell types.
-      </figcaption>
-    </figure>
+    
   </div>
 </section>
 
@@ -983,12 +1007,6 @@ With SST held constant, increasing PV inhibition acts like a neural brake that l
   <script src="script.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', () => {
-      // Initialize the original neuron graph in the side-by-side section
-      new NeuronGraph('neuron-graph');
-      
-      // Initialize the inline components in the WTA section
-      new NeocorticalCircuit('neocortical-circuit-inline');
-      
       // Initialize the standalone components in other sections
       window.neuromorphicInstance = new NeuromorphicHardware('neuromorphic-hardware-mapping');
       new WTADiagram('night-vision-wta');
@@ -1120,7 +1138,11 @@ With SST held constant, increasing PV inhibition acts like a neural brake that l
       const zeroShotContainers = document.querySelectorAll('.zero-shot-image');
       const zeroShotToggle = document.getElementById('zero-shot-toggle');
       const zeroShotSection = document.getElementById('zero-shot-section');
-      
+
+      console.log('Zero-shot toggle found:', !!zeroShotToggle); // Debug log
+      console.log('Zero-shot section found:', !!zeroShotSection); // Debug log
+      console.log('Zero-shot containers found:', zeroShotContainers.length); // Debug log
+
       if (zeroShotContainers.length > 0 && zeroShotToggle && zeroShotSection) {
         let hasAutoTransitioned = false;
         let isShowingZeroShotOverlay = false;
@@ -1135,6 +1157,16 @@ With SST held constant, increasing PV inhibition acts like a neural brake that l
                 zeroShotContainers.forEach(container => {
                   container.classList.add('active-transition');
                 });
+
+                // Also auto-transition the MNIST grid
+                const mnistGrid = document.getElementById('auto-transition-grid');
+                if (mnistGrid) {
+                  const mnistContainers = mnistGrid.querySelectorAll('.image-overlay-container');
+                  mnistContainers.forEach(container => {
+                    container.classList.add('active-transition');
+                  });
+                }
+
                 zeroShotToggle.checked = true;
                 hasAutoTransitioned = true;
               }, 500); // Small delay for smooth entrance
@@ -1147,18 +1179,62 @@ With SST held constant, increasing PV inhibition acts like a neural brake that l
         
         // Toggle switch functionality
         zeroShotToggle.addEventListener('change', function() {
+          console.log('Toggle clicked! Checked:', this.checked); // Debug log
           isShowingZeroShotOverlay = this.checked;
-          
+
+          // Toggle zero-shot images
+          console.log('Zero-shot containers found:', zeroShotContainers.length); // Debug log
           zeroShotContainers.forEach(container => {
             if (isShowingZeroShotOverlay) {
               container.classList.add('active-transition');
+              console.log('Added active-transition to zero-shot container'); // Debug log
             } else {
               container.classList.remove('active-transition');
+              console.log('Removed active-transition from zero-shot container'); // Debug log
             }
           });
+
+          // Also toggle the MNIST grid images
+          const mnistGrid = document.getElementById('auto-transition-grid');
+          if (mnistGrid) {
+            const mnistContainers = mnistGrid.querySelectorAll('.image-overlay-container');
+            console.log('MNIST containers found:', mnistContainers.length); // Debug log
+            mnistContainers.forEach(container => {
+              if (isShowingZeroShotOverlay) {
+                container.classList.add('active-transition');
+                console.log('Added active-transition to MNIST container'); // Debug log
+              } else {
+                container.classList.remove('active-transition');
+                console.log('Removed active-transition from MNIST container'); // Debug log
+              }
+            });
+          } else {
+            console.log('MNIST grid not found!'); // Debug log
+          }
         });
+      } else {
+        // Fallback: Direct toggle without complex logic
+        console.log('Setting up fallback toggle'); // Debug log
+        const zeroShotToggle = document.getElementById('zero-shot-toggle');
+        if (zeroShotToggle) {
+          zeroShotToggle.addEventListener('change', function() {
+            console.log('Fallback toggle clicked:', this.checked); // Debug log
+
+            // Get all image overlay containers in the entire document
+            const allContainers = document.querySelectorAll('.image-overlay-container');
+            console.log('All containers found:', allContainers.length); // Debug log
+
+            allContainers.forEach(container => {
+              if (this.checked) {
+                container.classList.add('active-transition');
+              } else {
+                container.classList.remove('active-transition');
+              }
+            });
+          });
+        }
       }
-      
+
       // Handle toggle switch for Zero-Shot Learning section
       const imageToggle = document.getElementById('image-toggle');
       if (imageToggle) {
