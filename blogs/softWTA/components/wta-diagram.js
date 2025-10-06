@@ -391,24 +391,32 @@ class WTADiagram {
     createLabels() {
         const labels = [
             // Input labels at top
-            {x: '115', y: '15', text: 'Task A', fill: '#4CAF50', id: 'input1-label', size: '11'},
-            {x: '215', y: '15', text: 'Task B', fill: '#2196F3', id: 'input2-label', size: '11'},
+            {x: '130', y: '15', text: 'Task A', fill: '#4CAF50', id: 'input1-label', size: '16'},
+            {x: '230', y: '15', text: 'Task B', fill: '#2196F3', id: 'input2-label', size: '16'},
 
             // Simple static labels based on layman description
-            {x: '80', y: '110', text: 'Mental Workspace 1', fill: '#4CAF50', id: 's1-label', size: '12', weight: 'bold'},
-            {x: '270', y: '110', text: 'Mental Workspace 2', fill: '#2196F3', id: 's2-label', size: '12', weight: 'bold'},
+            {x: '60', y: '95', text: 'Memory', fill: '#4CAF50', id: 's1-label-line1', size: '12', weight: 'bold'},
+            {x: '60', y: '110', text: 'State 1', fill: '#4CAF50', id: 's1-label-line2', size: '12', weight: 'bold'},
+            {x: '290', y: '95', text: 'Memory', fill: '#2196F3', id: 's2-label-line1', size: '12', weight: 'bold'},
+            {x: '290', y: '110', text: 'State 2', fill: '#2196F3', id: 's2-label-line2', size: '12', weight: 'bold'},
+            // {x: '270', y: '110', text: 'Memory Workspace 2', fill: '#2196F3', id: 's2-label', size: '12', weight: 'bold'},
 
-            {x: '100', y: '290', text: 'Task Switcher', fill: '#000000', id: 'p12-label', size: '12', weight: 'bold'},
-            {x: '200', y: '290', text: 'Task Switcher', fill: '#000000', id: 'p21-label', size: '12', weight: 'bold'},
+            {x: '100', y: '300', text: 'State Transition ', fill: '#000000', id: 'p12-label', size: '12', weight: 'bold'},
+            {x: '130', y: '315', text: 'Pointer 1', fill: '#000000', id: 'p12-label', size: '12', weight: 'bold'},
+            {x: '200', y: '300', text: 'State Transition', fill: '#000000', id: 'p21-label', size: '12', weight: 'bold'},
+            {x: '230', y: '315', text: 'Pointer 2', fill: '#000000', id: 'p21-label', size: '12', weight: 'bold'},
 
+            
             // Section labels
-            {x: '350', y: '40', text: 'Information Storage', fill: '#000000', id: 'state-label', size: '12'},
-            {x: '350', y: '210', text: 'Attention Control', fill: '#000000', id: 'pointer-label', size: '12'},
+            {x: '350', y: '40', text: 'Memory State Pool', fill: '#000000', id: 'state-label', size: '12'},
+            {x: '350', y: '210', text: 'Memory State Transition Pool', fill: '#000000', id: 'pointer-label', size: '12'},
 
             // Focus suppression label
-            {x: '480', y: '120', text: 'Focus by', fill: '#87CEEB', id: 'inhibit-label1', size: '10'},
-            {x: '470', y: '135', text: 'Suppressing', fill: '#87CEEB', id: 'inhibit-label2', size: '10'},
-            {x: '475', y: '150', text: 'Irrelevant', fill: '#87CEEB', id: 'inhibit-label3', size: '10'}
+            {x: '495', y: '100', text: 'Focus by', fill: '#87CEEB', id: 'inhibit-label1', size: '12'},
+            {x: '482', y: '115', text: 'Suppressing', fill: '#87CEEB', id: 'inhibit-label2', size: '12'},
+            {x: '495', y: '130', text: 'Irrelevant', fill: '#87CEEB', id: 'inhibit-label3', size: '12'},
+            {x: '495', y: '145', text: 'Memory', fill: '#87CEEB', id: 'inhibit-label4', size: '12'}
+
         ];
         
         labels.forEach(label => {
