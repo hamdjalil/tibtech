@@ -14,7 +14,7 @@
   <script src="components/wta-diagram.js"></script>
   <script src="components/neocortical-circuit.js"></script>
   <script src="components/neuromorphic-hardware.js"></script>
-  <script src="components/wta-directed-graph.js"></script>
+  <!-- <script src="components/wta-directed-graph.js"></script> -->
   <script src="components/wta-transformation.js"></script>
 
   <style>
@@ -592,10 +592,11 @@
             contentDiv.innerHTML = `
               <div class="max-w-4xl">
                 <h1 class="text-balance text-5xl md:text-6xl font-extrabold leading-[1.05] tracking-tight">
-                  AI That Mimics Your Brain's <span class="text-white/70">Winner-Take-All</span> Magic
+                  Domain-Agnostic AI Mirroring Biological Neural Dynamics
                 </h1>
                 <p class="mt-5 text-lg md:text-xl text-white/80">
-                  We cracked neocortex circuits and built AI that learns like you - with human accuracy and zero-shot superpowers.
+                  Brain circuits that evolved to handle change, now powering your AI systems. Consistent performance from controlled environments to unpredictable
+                  real-world scenarios.
                 </p>
                 <div class="mt-8 flex flex-col sm:flex-row gap-3">
                   <a href="https://huggingface.co/spaces/TibbtechUser/Winner_Take_All" class="btn dark" style="display: inline-flex; align-items: center; justify-content: center; border-radius: 25px; padding: 12px 24px; text-decoration: none; font-weight: 500; transition: all 0.3s ease;">
@@ -609,11 +610,20 @@
             `;
           }
           
-          // Update the background video to use SoftWTA video
+          // Replace video with SVG
           const video = heroSection.querySelector('video');
           if (video) {
-            video.innerHTML = '<source src="/blogs/softWTA/assets/2.mp4" type="video/mp4">';
-            video.load(); // Reload video with new source
+            const img = document.createElement('img');
+            img.src = '/blogs/softWTA/assets/hero.svg';
+            img.alt = 'SoftWTA Hero';
+            img.className = video.className;
+            img.style.cssText = video.style.cssText;
+            img.style.objectFit = 'cover'; // or 'contain', 'fill', 'scale-down'
+            img.style.objectPosition = '50% 35%'; // or 'top', 'bottom', 'left right', '50% 20%'
+            img.style.transform = 'scale(1.1) translateY(-10px)';
+            img.style.width = '100%';
+            img.style.height = '100%';
+            video.parentNode.replaceChild(img, video);
           }
         }
       }, 100);
@@ -623,7 +633,7 @@
   <!-- Demo Section -->
   <section class="section" style="background: white;" id="intro-demo">
     <div style="max-width: 1000px; margin: 0 auto; text-align: center;">
-      <h2 style="color: black; margin-bottom: 20px;">Try Soft WTA in Action</h2>
+      <h2 style="color: black; margin-bottom: 20px;">Try WTA in Action</h2>
       <p style="color: black; margin-bottom: 40px; max-width: 600px; margin-left: auto; margin-right: auto;">
         Experience our brain-inspired AI technology hands-on with our interactive Google Colab demo.
       </p>
@@ -668,7 +678,8 @@
     <div style="max-width: 900px; margin: 0 auto;">
       <h2 style="text-align: center; color: black;">Institutional Collaborations</h2>
       <p style="text-align: center; max-width: 800px; margin: 0 auto 20px auto;">
-      We explore how brain-inspired circuit motifs, particularly soft winner-take-all (sWTA) computations mediated by key interneurons, can be translated into neuromorphic hardware and deep learning models. This research spans multiple world-class institutions and represents a truly collaborative effort in computational neuroscience.      </p>
+      We explore how brain-inspired circuit motifs, particularly soft winner-take-all (WTA) computations based on core computational principles utilized in cortical
+      processing, can be translated into neuromorphic hardware and deep learning models. This research spans multiple world-class institutions and represents a collaborative effort in computational neuroscience.      </p>
       <div style="display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 40px; margin-top: 40px; max-width: 1000px; margin-left: auto; margin-right: auto;">
 
         <!-- Australian National University -->
@@ -790,57 +801,39 @@
 
   <section class="section light">
     <div class="biology-meets-silicon" style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 20px; max-width: 900px; margin: 0 auto; align-items: center;">
-      <h2 style="flex: 1; min-width: 300px; margin-bottom: 20px; color: black;">Biology Meets Silicon</h2>
+      <h2 style="flex: 1; min-width: 300px; margin-bottom: 20px; color: black;">Applied Neuro-AI: From Neural Circuits to AI Systems</h2>
       <div style="flex: 1; min-width: 280px; margin-bottom: 20px; margin-top: 30px;">
-        <p style="margin-top: 0;">In winner-take-all systems, the most active neurons dominate by silencing weaker ones.
-This biological principle ensures that only the strongest signals drive decisions.
-Inspired by nature, similar mechanisms power efficient computations in silicon circuits.</p>
+        <p style="margin-top: 0;">We reverse-engineered the visual cortex's winner-take-all dynamics and implemented them directly in AI systems. 4 billion years of neural evolution, now applied as computational primitives in your models.</p>
       </div>
     </div>
-    
+
     <div class="centered-figure-container">
-      <!-- <p class="figure-description">
-        The complete NeuroAI framework: from biological neurons to neuromorphic chips to Vision Transformers.
-      </p> -->
+      <p class="figure-description" style="text-align: center; margin-bottom: 20px; color: #666; font-style: italic; max-width: 600px; margin-left: auto; margin-right: auto;">
+        Complete applied neuro-AI pipeline: from biological neural circuits to computational primitives to AI systems delivering real-world performance
+      </p>
       <img src="assets/fig1.png" alt="NeuroAI Framework Overview" class="centered-main-figure pulse-animation">
-      
+
     </div>
   </section>
 
+
+
   <section class="section light no-float">
-    <h2 style="color: black;">Your Brain Inspires Clarity in Machines</h2>
-    <p>Our model mimics neocortical circuits, capturing how excitatory and inhibitory neurons interact.
-       It draws on real measurements from the visual cortex to stay biologically grounded.</p>
-  
-    <img src="assets/4a.png" alt="Experimental slice data" class="inline-image">
-  
-    <p>A sliding window-based computation was employed to amplify key features while reducing domain shifts, resulting in a clearer and more normalized output representation.</p>
-  
+    <h2 style="color: black;">Brain-Inspired Visual Processing with WTA</h2>
+    <p>Our Winner-Take-All (WTA) algorithm replicates how the visual cortex processes images through competitive neural dynamics. Using experimental data from mouse visual cortex, we engineered sliding window computations with recurrent excitation and lateral inhibition - the same mechanisms your brain uses for robust visual processing.</p>
+
+    <img src="assets/4a.png" alt="WTA Visual Processing Pipeline" class="inline-image">
+
+    <p>This brain-inspired WTA processing is the key to superior domain generalization. By mimicking how biological neurons amplify important visual features while suppressing irrelevant noise, our WTA layer creates robust representations that perform significantly better across diverse image domains and lighting conditions.</p>
+
     <div id="wta-transformation-demo" style="margin: 40px 0;"></div>
-  </section>
-  <section class="section centered-figure-section">
-    <!-- Heading and subheading above the figures -->
-    <div style="text-align: center; margin-bottom: 40px; max-width: 800px; margin-left: auto; margin-right: auto;">
-      <h2 style="color: black; margin-bottom: 20px; padding-bottom: 2px;">Zero-Shot Learning</h2>
-      <p>
-We tested whether adding a pre-processing winner-take-all (WTA) layer to deep learning models, such as Vision Transformers (ViTs), could improve performance on real-world vision tasks. Training on a single source domain and testing on unseen target domains showed consistent accuracy gains. Similar improvements were observed in EfficientNet, CapsuleNet, MobileNet, and ResNet, where the WTA layer enhanced feature generalization and robustness to domain shifts across digit recognition datasets.      </p>
-    </div>
-    
-    <div class="architecture-showcase" style="display: flex; flex-wrap: wrap; gap: 30px; margin: 0 auto; align-items: center; max-width: 1200px;">
-      <!-- Architecture Image on right side -->
-      <div class="architecture-image" style="flex: 2; min-width: 300px;">
-        <img src="assets/4cd.png" alt="sWTA Vision Transformer Architecture" style="width: 100%; max-height: 400px; object-fit: contain;" class="pulse-animation">
-      </div>
-    </div>
   </section>
 
   <section class="section light">
-    <h2 style="color: black;">Any Image , One Solution</h2>
-    <p >AI that understands images across styles, formats, and distortions. One unified approach that works with diverse visual representations.</p>
-    
+    <h2 style="color: black;">Why Brain-Inspired AI Generalizes Better</h2>
+    <p>Neural circuits evolved to handle domain shifts - from bright sunlight to moonlit scenes, your visual cortex adapts seamlessly. Our sWTA implementation captures this biological robustness, delivering consistent improvements across unseen domains.</p>
 
-
-    <!-- Zero-shot generalization section -->
+    <!-- Domain generalization demonstration -->
     <div style="margin-top: 60px;" id="zero-shot-section">
       <div style="max-width: 1200px; margin: 0 auto; padding: 0 40px;">
         <!-- Toggle Switch for Zero-shot Images -->
@@ -854,7 +847,7 @@ We tested whether adding a pre-processing winner-take-all (WTA) layer to deep le
             <span>Processed Images</span>
           </label>
         </div>
-        <div class="zero-shot-layout" style="display: flex; align-items: flex-start; gap: 60px; flex-wrap: wrap; justify-content: center;"> 
+        <div class="zero-shot-layout" style="display: flex; align-items: flex-start; gap: 60px; flex-wrap: wrap; justify-content: center;">
           <!-- 3 images on right -->
           <div class="zero-shot-images" style="flex: 2; display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; align-items: center;">
             <div class="zero-shot-item" style="flex: 1; min-width: 280px; max-width: 400px; display: flex; justify-content: center;">
@@ -867,8 +860,25 @@ We tested whether adding a pre-processing winner-take-all (WTA) layer to deep le
         </div>
       </div>
     </div>
-    
+
   </section>
+
+  <section class="section centered-figure-section">
+    <!-- Heading and subheading above the figures -->
+    <div style="text-align: center; margin-bottom: 40px; max-width: 800px; margin-left: auto; margin-right: auto;">
+      <h2 style="color: black; margin-bottom: 20px; padding-bottom: 2px;">Enterprise-Ready Zero-Shot Learning</h2>
+      <p>
+Our WTA preprocessing layer integrates seamlessly with Vision Transformers, EfficientNet, MobileNet, and ResNet architectures. Training on a single source domain, models achieve consistent accuracy gains when deployed on unseen target domains while improving robustness to real-world domain shifts. </p>
+    </div>
+    
+    <div class="architecture-showcase" style="display: flex; flex-wrap: wrap; gap: 30px; margin: 0 auto; align-items: center; max-width: 1200px;">
+      <!-- Architecture Image on right side -->
+      <div class="architecture-image" style="flex: 2; min-width: 300px;">
+        <img src="assets/4cd.png" alt="sWTA Vision Transformer Architecture" style="width: 100%; max-height: 400px; object-fit: contain;" class="pulse-animation">
+      </div>
+    </div>
+  </section>
+
 
   <section class="section light " id="brain-like-section">
     <div style="margin-top:150px ;"></div>
@@ -891,9 +901,9 @@ We tested whether adding a pre-processing winner-take-all (WTA) layer to deep le
       
       <!-- Heading on right side -->
       <div class="brain-like-text" style="flex: 1; min-width: 250px;">
-        <h2 style="color: black;">Brain-Like Feature Learning</h2>
+        <h2 style="color: black;">Neuro-Inspired Spatial Feature Learning</h2>
         <p style="text-align: left; margin-top: 15px; margin-left: 20px;">
-        sWTA improves feature alignment by highlighting key features and filtering noise, boosting domain generalization. When added to RefineNet, it handled nighttime driving nearly as well as models trained on night images showing how brain inspired filtering sharpens perception across domains.      </div>
+        WTA improves feature alignment by highlighting key features and filtering noise, boosting domain generalization. When added to RefineNet, it handled nighttime driving nearly as well as models trained on night images showing how brain inspired filtering sharpens perception across domains.      </div>
     </div>
   </section>
 
@@ -908,23 +918,15 @@ We tested whether adding a pre-processing winner-take-all (WTA) layer to deep le
     </div>
   </section> -->
 
-  <section class="section neuro-team">
-  <div class="neuro-team__container">
-    <h2 class="section-title">Your Brain’s Super-Team, Now in AI</h2>
-    <p >
-With SST held constant, increasing PV inhibition acts like a neural brake that lowers pyramidal responses, suppresses near winners, and sharpens the soft winner take all outcome by preserving the strongest input while silencing weaker competitors. PV chiefly shifts the response offset and enforces competition, whereas SST mainly adjusts the slope and width of tuning to shape gain.    </p>
-
-    
-  </div>
-</section>
+  
 
   <section class="section light" style="padding: 80px 0;">
     <div class="neuromorphic-section" style="max-width: 1200px; margin: 0 auto; padding: 0 40px;">
       <div class="neuromorphic-layout" style="display: flex; align-items: center; gap: 60px; flex-wrap: wrap;">
         <!-- Title and text on left side -->
         <div class="neuromorphic-text" style="flex: 1; min-width: 300px; max-width: 400px;">
-          <h2 style="color: black; font-size: 2.5rem; font-weight: 600; margin-bottom: 20px; line-height: 1.2;">System That Thinks Like You</h2>
-          <p style="color: #666; font-size: 1.1rem; line-height: 1.6; margin: 0;">We replicated a core cortical computation on neuromorphic hardware and used it to improve established machine learning models. Using IBM TrueNorth, which was designed to mimic brain organization, we implemented soft winner take all dynamics as a preprocessing layer that enhanced robustness and accuracy across tasks.</p>
+          <h2 style="color: black; font-size: 2.5rem; font-weight: 600; margin-bottom: 20px; line-height: 1.2;">Brain-Efficient Computing</h2>
+          <p style="color: #666; font-size: 1.1rem; line-height: 1.6; margin: 0;">Our WTA implementation on IBM TrueNorth neuromorphic chips delivers the computational efficiency of biological neural networks. Validated for enterprise workloads with improved energy efficiency while maintaining accuracy gains. Scalable architecture designed for enterprise deployment across edge and cloud environments.</p>
         </div>
         
         <!-- Figure on right side -->
@@ -949,23 +951,20 @@ With SST held constant, increasing PV inhibition acts like a neural brake that l
         
         <!-- Title and text on right side -->
         <div class="night-vision-text" style="flex: 1; min-width: 300px; max-width: 450px;">
-          <h2 style="color: black; font-size: 2.5rem; font-weight: 600; margin-bottom: 24px; line-height: 1.2;">Neural State Machine with sWTA Dynamics</h2>
-          <p style="color: #555; font-size: 1.15rem; line-height: 1.7; margin-bottom: 49px;">The state pool uses soft winner take all dynamics to keep one state, such as S1 or S2, active at a time through balanced excitation and inhibition. The pointer pool, linked by cross-inhibitory interactions, manages transitions between states, allowing the system to preserve memory while flexibly switching based on inputs.</p>
-          <!-- <p style="color: #777; font-size: 1rem; line-height: 1.6; margin: 0; font-style: italic;">Real-time enhancement without pre-training on specific lighting conditions.</p> -->
+          <h2 style="color: black; font-size: 2.5rem; font-weight: 600; margin-bottom: 24px; line-height: 1.2;">Working Memory Architecture for Cognitive AI</h2>
+          <p style="color: #555; font-size: 1.15rem; line-height: 1.7; margin-bottom: 49px;">Our neural state machine implements the brain's working memory system using coupled WTA populations. Memory states persist through balanced excitation and inhibition, while pointer networks enable context-dependent transitions. This cognitive architecture enables AI systems to maintain and manipulate information like biological neural networks.</p>
         </div>
       </div>
     </div>
   </section>
 
   <section class="section light">
-  <h2 style="color: black;">Bridging Neuroscience and AI</h2>
+  <h2 style="color: black;">Scalable Neuro-AI for Enterprise</h2>
     <p>
-    First computationally efficient system that truly mimics brain circuits unlocking working memory, decision making, and biological learning.Computer vision to medical imaging to autonomous vehicles.We're making AI <strong>fundamentally more brain-like</strong>.
+    The first computationally efficient system that truly replicates brain circuits for Domain-Agnostic AI.
+    Learn how we engineered biological neural circuits for AI systems. Our research paper reveals the complete methodology.
   </p>
-  <p>
-    The future: biological intelligence on silicon.
-  </p>
-  <a href="https://www.biorxiv.org/content/10.1101/2024.10.06.616839v2.full.pdf" target="_blank" class="btn dark">Read our Paper</a>
+  <a href="https://www.biorxiv.org/content/10.1101/2024.10.06.616839v2.full.pdf" target="_blank" class="btn dark" style="padding: 16px 40px; font-size: 16px; font-weight: 700; letter-spacing: 0.5px; border-radius: 12px; text-decoration: none; border: 2px solid transparent; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);" onmouseover="this.style.borderColor='#ffffff'; this.style.transform='scale(1.05)'" onmouseout="this.style.borderColor='transparent'; this.style.transform='scale(1)'">Read our Research</a>
 </section>
 
 
