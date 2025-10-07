@@ -1,5 +1,4 @@
-// Import our styles
-import './style.css';
+// Styles are now imported in HTML files instead of JS modules
 
 // Utility function to load components with error handling
 async function loadComponent(containerId, fragmentPath) {
