@@ -1,70 +1,298 @@
-<!-- Start: Featured Research Component -->
-<section class="section bg-black">
-  <div class="container">
-    <div class="max-w-3xl mx-auto text-center mb-16">
-      <h2 class="mb-6">Research</h2>
-      <!-- <p class="text-deepmind-gray-300">Our interdisciplinary team combines expertise in AI, medicine, and data science to create transformative healthcare solutions</p> -->
-    </div>
-    
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      <!-- Research Card 1 -->
-      <div class="card group">
-        <div class="relative rounded-lg overflow-hidden mb-4 aspect-video">
-          <img src="../public/research/aav-icon.png" alt="AlphaFold" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
-        </div>
-        <!-- <span class="inline-block px-3 py-1 bg-deepmind-blue/20 text-deepmind-blue rounded-full text-sm mb-3">Science</span> -->
-        <h3 class="text-xl font-semibold mb-2">An Enhancer-AAV Toolbox for Interneuron Subtypes</h3>
-        <p class="text-deepmind-gray-300 mb-4">We
-          established a set of enhancer-AAV tools that are highly specific for distinct cortical interneuron populations
-          and striatal cholinergic neurons.</p>
-        <a href="https://www.cell.com/neuron/fulltext/S0896-6273(25)00349-6" target="_blank" class="text-deepmind-blue hover:underline font-medium inline-flex items-center">
-          Learn more
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" viewBox="0 0 20 20" fill="currentColor">
-            <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
-          </svg>
-        </a>
-      </div>
-      
-      <div class="card group">
-        <div class="relative rounded-lg overflow-hidden mb-4 aspect-video">
-          <img src="../public/research/ai_mimicks.jpg" alt="Reinforcement Learning" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
-        </div>
-        <!-- <span class="inline-block px-3 py-1 bg-deepmind-teal/20 text-deepmind-teal rounded-full text-sm mb-3">Research</span> -->
-        <h3 class="text-xl font-semibold mb-2">Biologically Realistic Computational Primitives of Neocortex Implemented on Neuromorphic Hardware Improve Vision Transformer Performance</h3>
-        <p class="text-deepmind-gray-300 mb-4">Implementation of biologically-inspired neocortical computational primitives on neuromorphic hardware to enhance Vision Transformer architectures, bridging neuroscience principles with advanced AI performance.</p>
-        <a href="https://techxplore.com/news/2024-10-ai-mimics-neocortex-winner-approach.html" target="_blank" class="text-deepmind-blue hover:underline font-medium inline-flex items-center">
-          Learn more
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" viewBox="0 0 20 20" fill="currentColor">
-            <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
-          </svg>
-        </a>
-      </div>
+<!-- Featured Research — Above-the-Fold (Desktop) -->
+<section class="section fit-dvh bg-gray-50 relative overflow-hidden">
+  <!-- Simple background blobs (no blur) -->
+  <!-- <div class="absolute inset-0 pointer-events-none">
+    <div class="absolute bottom-0 right-0 w-1/4 h-1/4 bg-blue-200 opacity-10 rounded-full"></div>
+  </div> -->
 
-      <!-- Research Card 2 -->
-      <div class="card group">
-        <div class="relative rounded-lg overflow-hidden mb-4 aspect-video">
-          <img src="../public/research/segneuron-icon.png" alt="Gemini" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+  <div class="container relative z-10 grid lg:grid-rows-[auto,1fr,auto] lg:gap-4">
+    <!-- Header -->
+    <header class="text-center lg:mb-0 mb-8 reveal">
+      <h2 class="leading-tight tracking-tight mb-2 text-3xl md:text-4xl lg:text-4xl font-extrabold mt-12">
+        <span class="text-gray-900">Recognized by </span>
+        <span class="bg-gradient-to-r from-blue-600 via-teal-600 to-purple-600 bg-clip-text text-transparent animate-gradient-x">
+          Scholars and Industry Peers
+        </span>
+      </h2>
+
+      <p class="text-gray-600 max-w-2xl mx-auto text-sm md:text-base mb-7">
+        Cutting-edge publications and frameworks advancing NeuroAI and healthcare.
+      </p>
+    </header>
+
+    <!-- Tiles (3 across) -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:items-stretch lg:mb-0 mb-10">
+      <!-- Tile 1 -->
+      <article class="group magnetic-card reveal">
+        <!-- Card: 4-row grid keeps media + footer aligned -->
+        <div class="rounded-2xl overflow-hidden ring-1 ring-black/5 bg-white/90 backdrop-blur h-full
+                    grid grid-rows-[auto,160px,1fr,auto] gap-2">
+          <!-- Row 1: Header (fixed two lines for title) -->
+          <div class="px-5 pt-5 pb-2">
+            <div class="flex items-center gap-2 mb-3 text-xs text-gray-600">
+              <span class="inline-block w-2 h-2 rounded-full bg-gradient-to-r from-blue-500 to-teal-500"></span>
+              <span>Cell Neuron</span><span class="text-gray-300">•</span><span>2025</span>
+            </div>
+            <h3 class="text-base md:text-lg font-semibold text-gray-900 leading-snug line-clamp-2 min-h-[3.1rem]">
+              An Enhancer-AAV Toolbox for Interneuron Subtypes
+            </h3>
+          </div>
+
+          <!-- Row 2: Media (fixed height) -->
+          <div class="relative mx-5 rounded-xl overflow-hidden bg-gradient-to-br from-gray-100 to-gray-200">
+            <img src="/research/aav-icon.png" alt="AAV Toolbox Research"
+                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.03]" />
+            <span class="shine"></span>
+          </div>
+
+          <!-- Row 3: Body (reserve 2 lines for blurb) -->
+          <div class="px-5 flex flex-col gap-3">
+            <div class="flex flex-wrap gap-2">
+              <span class="tag">Neuron (Cell)</span>
+              <span class="tag">AAV • Interneurons</span>
+              <span class="tag">2025</span>
+            </div>
+            <p class="text-gray-600 text-sm line-clamp-2 min-h-[2.6rem]">
+              We established a set of enhancer-AAV tools highly specific for distinct cortical interneuron populations and striatal cholinergic neurons.
+            </p>
+          </div>
+
+          <!-- Row 4: Footer (always aligned) -->
+          <div class="px-5 pb-5 flex items-center justify-between">
+            <img src="/research/journals/cell neuron.png" alt="Cell Neuron" class="h-6 w-auto object-contain opacity-80" />
+            <a href="https://www.cell.com/neuron/pdf/S0896-6273(25)00349-6.pdf" target="_blank" class="paper-btn compact">
+              <span>Full Paper</span>
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 4h6m0 0v6m0-6L10 14"/>
+              </svg>
+            </a>
+          </div>
         </div>
-        <!-- <span class="inline-block px-3 py-1 bg-deepmind-purple/20 text-deepmind-purple rounded-full text-sm mb-3">AI Systems</span> -->
-        <h3 class="text-xl font-semibold mb-2">Segment AnyNeuron</h3>
-        <p class="text-deepmind-gray-300 mb-4">Our framework can classify and segment unseen neuronal
-          data by selecting the most representative samples, thus avoiding the
-          cold-start problem faced in Active Learning.</p>
-        <a href="https://www.biorxiv.org/content/10.1101/2024.08.24.609505v1" target="_blank" class="text-deepmind-blue hover:underline font-medium inline-flex items-center">
-          Learn more
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" viewBox="0 0 20 20" fill="currentColor">
-            <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
-          </svg>
-        </a>
-      </div>
-      
-      <!-- Research Card 3 -->
-      
+      </article>
+
+      <!-- Tile 2 -->
+      <article class="group magnetic-card reveal" style="--stagger:1">
+        <div class="rounded-2xl overflow-hidden ring-1 ring-black/5 bg-white/90 backdrop-blur h-full
+                    grid grid-rows-[auto,160px,1fr,auto] gap-2">
+          <div class="px-5 pt-5 pb-2">
+            <div class="flex items-center gap-2 mb-3 text-xs text-gray-600">
+              <span class="inline-block w-2 h-2 rounded-full bg-gradient-to-r from-blue-500 to-teal-500"></span>
+              <span>PNAS</span><span class="text-gray-300">•</span><span>2025</span>
+            </div>
+            <h3 class="text-base md:text-lg font-semibold text-gray-900 leading-snug line-clamp-2 min-h-[3.1rem]">
+              Biologically Realistic Computational Primitives
+            </h3>
+          </div>
+
+          <div class="relative mx-5 rounded-xl overflow-hidden bg-gradient-to-br from-gray-100 to-gray-200">
+            <img src="/research/ai mimicks.jpg" alt="Neuromorphic Hardware Research"
+                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.03]" />
+            <span class="shine"></span>
+          </div>
+
+          <div class="px-5 flex flex-col gap-3">
+            <div class="flex flex-wrap gap-2">
+              <span class="tag">PNAS</span>
+              <span class="tag">NeuroAI • ViT</span>
+              <span class="tag">2025</span>
+            </div>
+            <p class="text-gray-600 text-sm line-clamp-2 min-h-[2.6rem]">
+              Biologically-inspired neocortical computational primitives on neuromorphic hardware to enhance Vision Transformers.
+            </p>
+          </div>
+
+          <div class="px-5 pb-5 flex items-center justify-between">
+            <img src="/research/PNAS-logo-dark.jpg" alt="pnas" class="h-4 w-auto object-contain opacity-80" />
+            <a href="https://www.biorxiv.org/content/10.1101/2024.10.06.616839v1.full.pdf" target="_blank" class="paper-btn compact">
+              <span>Full Paper</span>
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 4h6m0 0v6m0-6L10 14"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Tile 3 -->
+      <article class="group magnetic-card reveal" style="--stagger:2">
+        <div class="rounded-2xl overflow-hidden ring-1 ring-black/5 bg-white/90 backdrop-blur h-full
+                    grid grid-rows-[auto,160px,1fr,auto] gap-2">
+          <div class="px-5 pt-5 pb-2">
+            <div class="flex items-center gap-2 mb-3 text-xs text-gray-600">
+              <span class="inline-block w-2 h-2 rounded-full bg-gradient-to-r from-blue-500 to-teal-500"></span>
+              <span>CVPR</span><span class="text-gray-300">•</span><span>2025</span>
+            </div>
+            <h3 class="text-base md:text-lg font-semibold text-gray-900 leading-snug line-clamp-2 min-h-[3.1rem]">
+              Segment AnyNeuron
+            </h3>
+          </div>
+
+          <div class="relative mx-5 rounded-xl overflow-hidden bg-gradient-to-br from-gray-100 to-gray-200">
+            <img src="/research/segneuron-icon.png" alt="Segment AnyNeuron Research"
+                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.03]" />
+            <span class="shine"></span>
+          </div>
+
+          <div class="px-5 flex flex-col gap-3">
+            <div class="flex flex-wrap gap-2">
+              <span class="tag">CVPR</span>
+              <span class="tag">Active Learning</span>
+              <span class="tag">2025</span>
+            </div>
+            <p class="text-gray-600 text-sm line-clamp-2 min-h-[2.6rem]">
+              Classifies and segments unseen neuronal data via representative samples—avoiding cold-start in Active Learning.
+            </p>
+          </div>
+
+          <div class="px-5 pb-5 flex items-center justify-between">
+            <img src="/research/cvpr.png" alt="bioRxiv" class="h-6 w-auto object-contain opacity-80" />
+            <a href="https://www.biorxiv.org/content/biorxiv/early/2024/08/26/2024.08.24.609505.full.pdf" target="_blank" class="paper-btn compact">
+              <span>Full Paper</span>
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 4h6m0 0v6m0-6L10 14"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </article>
     </div>
-    
-    <!-- <div class="mt-12 text-center">
-      <a href="#" class="btn-secondary">View all research</a>
-    </div> -->
+
+    <!-- Compact CTA -->
+    <div class="text-center reveal">
+      <a href="/research.html" class="cta-btn compact relative inline-flex items-center gap-2 px-6 py-3 rounded-xl">
+        <span class="label">Explore All Research</span>
+        <svg class="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+        </svg>
+        <span class="sparkles" aria-hidden="true"></span>
+      </a>
+    </div>
   </div>
 </section>
-<!-- End: Featured Research Component -->
+
+<style>
+  /* Full-viewport fit on desktop; normal flow below lg */
+  .fit-dvh{ padding-top:3rem; padding-bottom:3rem; }
+  @media (min-width:1024px){
+    .fit-dvh{ min-height:100dvh; padding-top:2.5rem; padding-bottom:2rem; }
+  }
+
+  /* reveal motion (kept subtle) */
+  .reveal{opacity:1; transform:none}
+  .reveal.inview{animation:fadeUp .6s cubic-bezier(.22,.61,.36,1) both}
+  .reveal.inview{animation-delay: calc(var(--stagger,0) * 70ms)}
+  @keyframes fadeUp{from{opacity:0; transform: translateY(10px)} to{opacity:1; transform:none}}
+
+  /* animated gradient text */
+  .animate-gradient-x{ background-size:300% 300%; animation:grad 5s ease infinite }
+  @keyframes grad{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+
+  /* line clamp utility (if Tailwind plugin not present) */
+  .line-clamp-2{
+    display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden;
+  }
+
+  /* tags & buttons (reuse, slightly tighter) */
+  .tag{
+    padding:.28rem .55rem; border-radius:9999px;
+    background: rgba(255,255,255,.9); border:1px solid rgba(0,0,0,.06);
+    color:#0f172a; font-size:.72rem; font-weight:600;
+    backdrop-filter: blur(6px);
+  }
+  .paper-btn{
+    display:inline-flex; align-items:center; gap:.45rem;
+    padding:.5rem .75rem; border-radius:.6rem;
+    color:#0f172a; background:#fff; border:1px solid rgba(0,0,0,.06);
+    box-shadow: 0 6px 16px rgba(15,23,42,.08);
+    transition: transform .18s ease, box-shadow .18s ease, background .18s ease;
+    white-space:nowrap;
+  }
+  .paper-btn:hover{ transform: translateY(-1px); background:#f8fafc; box-shadow: 0 10px 20px rgba(15,23,42,.12); }
+  .paper-btn.compact{ padding:.45rem .7rem; font-size:.85rem }
+
+  .cta-btn{
+    color:#0f172a; font-weight:600; background:#fff;
+    border:1px solid rgba(0,0,0,.08); border-radius:1rem;
+    box-shadow: inset 0 0 0 1px rgba(255,255,255,.5), 0 8px 24px rgba(15,23,42,.08);
+    transition: transform .2s ease, box-shadow .2s ease;
+  }
+  .cta-btn.compact{ padding:.75rem 1rem; border-radius:.9rem }
+  .label{
+    background: linear-gradient(90deg, #0f172a, #334155);
+    -webkit-background-clip:text; background-clip:text; color:transparent;
+  }
+  .cta-btn::before{
+    content:""; position:absolute; inset:-2px; border-radius:inherit; z-index:-1;
+    background: linear-gradient(120deg, rgba(59,130,246,.55), rgba(45,212,191,.55), rgba(147,51,234,.55));
+    filter: blur(10px); opacity:.45; transition:opacity .3s ease;
+    background-size:200% 200%; animation:aura 6s linear infinite;
+  }
+  @keyframes aura{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+  .sparkles{
+    position:absolute; inset:0; border-radius:inherit; pointer-events:none; opacity:0; transition:opacity .25s ease;
+    background:
+      radial-gradient(6px 6px at 22% 35%, rgba(59,130,246,.9), transparent 60%),
+      radial-gradient(5px 5px at 74% 58%, rgba(45,212,191,.9), transparent 60%),
+      radial-gradient(4px 4px at 42% 82%, rgba(147,51,234,.9), transparent 60%);
+  }
+  .cta-btn:hover{ transform: translateY(-1px); box-shadow: inset 0 0 0 1px rgba(255,255,255,.7), 0 12px 28px rgba(15,23,42,.12); }
+  .cta-btn:hover::before{ opacity:.8 }
+  .cta-btn:hover .sparkles{ opacity:1 }
+
+  /* shine sweep */
+  .shine{
+    position:absolute; inset:0; content:"";
+    background: linear-gradient(120deg, transparent 30%, rgba(255,255,255,.25) 50%, transparent 70%);
+    transform: translateX(-120%);
+    transition: transform .6s ease;
+    mix-blend-mode: screen; pointer-events:none;
+  }
+  .group:hover .shine{ transform: translateX(120%); }
+
+  /* magnetic (kept subtle) */
+  .magnetic-card{ transition: transform .12s ease-out; transform-style:preserve-3d; }
+
+  @media (min-width:1280px){
+    /* on xl screens, bump media row slightly if desired */
+    .grid.grid-rows-\[auto\,160px\,1fr\,auto\]{ grid-template-rows: auto 180px 1fr auto; }
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    .reveal, .reveal.inview{ animation:none !important; opacity:1 !important; transform:none !important }
+    .animate-gradient-x, .shine, .cta-btn::before{ animation:none !important }
+    .magnetic-card{ transition:none }
+  }
+</style>
+
+<script>
+  // reveal
+  const io = 'IntersectionObserver' in window ? new IntersectionObserver((entries)=>{
+    for (const e of entries){ if(e.isIntersecting){ e.target.classList.add('inview'); io.unobserve(e.target); } }
+  }, {threshold:.15, rootMargin:'0px 0px -10% 0px'}) : null;
+  document.querySelectorAll('.reveal').forEach(el=>{ if(io) io.observe(el); else el.classList.add('inview'); });
+
+  // magnetic
+  document.querySelectorAll('.magnetic-card').forEach(card=>{
+    let raf; const k=0.02;
+    function upd(e){ const r=card.getBoundingClientRect(); const x=e.clientX-(r.left+r.width/2); const y=e.clientY-(r.top+r.height/2);
+      card.style.transform=`translate(${x*k}px,${y*k}px) rotateX(${y*k}deg) rotateY(${x*k}deg)`; raf=null;}
+    card.addEventListener('mousemove',e=>{ if(!raf) raf=requestAnimationFrame(()=>upd(e)); });
+    card.addEventListener('mouseleave',()=>{ card.style.transform='translate(0,0) rotateX(0) rotateY(0)'; });
+  });
+
+  // particles (desktop only)
+  const container = document.querySelector('.particles-container');
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const weak = (navigator.hardwareConcurrency && navigator.hardwareConcurrency <= 2);
+  if(container && !reduce){
+    let count=0, max=(weak?14:24);
+    const id = setInterval(()=>{
+      if(count>=max){ clearInterval(id); return; }
+      const p=document.createElement('div'); p.className='particle';
+      const size=Math.random()*4+2; p.style.width=`${size}px`; p.style.height=`${size}px`;
+      p.style.left=`${Math.random()*100}%`; const dur=Math.random()*4+8; p.style.animationDuration=`${dur}s`;
+      p.style.animationDelay=`${Math.random()*1.5}s`; container.appendChild(p); count++;
+      setTimeout(()=>p.remove(), (dur+2)*1000);
+    }, 220);
+  }
+</script>

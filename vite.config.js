@@ -3,7 +3,8 @@ export default {
       host: '0.0.0.0',
       allowedHosts: [
         'localhost',
-        'b785-36-255-33-176.ngrok-free.app'
+        'b785-36-255-33-176.ngrok-free.app',
+        'cc5fb8e02233.ngrok-free.app'
       ]
     }
   }
