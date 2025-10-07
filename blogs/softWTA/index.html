@@ -589,10 +589,22 @@
       setTimeout(() => {
         const heroSection = document.getElementById('hero-section');
         if (heroSection) {
-          // Remove the dark overlay to brighten the hero
-          const darkOverlay = heroSection.querySelector('.bg-black\\/50');
-          if (darkOverlay) {
-            darkOverlay.remove();
+          // Add a dark overlay to make text more readable
+          const existingOverlay = heroSection.querySelector('.custom-dark-overlay');
+          if (!existingOverlay) {
+            const darkOverlay = document.createElement('div');
+            darkOverlay.className = 'custom-dark-overlay';
+            darkOverlay.style.cssText = `
+              position: absolute;
+              top: 0;
+              left: 0;
+              right: 0;
+              bottom: 0;
+              background: rgba(0, 0, 0, 0.4);
+              z-index: 1;
+              pointer-events: none;
+            `;
+            heroSection.appendChild(darkOverlay);
           }
           
           // Reduce aurora overlay opacity to make it brighter
@@ -604,21 +616,23 @@
           // Update the hero content for SoftWTA
           const contentDiv = heroSection.querySelector('.container');
           if (contentDiv) {
+            contentDiv.style.position = 'relative';
+            contentDiv.style.zIndex = '10';
             contentDiv.innerHTML = `
               <div class="max-w-4xl">
                 <h1 class="text-balance text-5xl md:text-6xl font-extrabold leading-[1.05] tracking-tight" style="color: white !important; text-shadow: 0 0 20px rgba(0,0,0,0.8), 0 2px 4px rgba(0,0,0,0.5);">
                   Domain-Agnostic AI Mirroring Biological Neural Dynamics
                 </h1>
-                <p class="mt-5 text-lg md:text-xl text-white/80" style="color: white !important; text-shadow: 0 0 15px rgba(0,0,0,0.7), 0 1px 3px rgba(0,0,0,0.5);">
+                <p class="mt-5 text-lg md:text-xl text-white/80" style="color: white !important; text-shadow: 0 0 25px rgba(0,0,0,0.9), 0 2px 8px rgba(0,0,0,0.8), 0 4px 12px rgba(0,0,0,0.6);">
                   Brain circuits that evolved to handle change, now powering your AI systems. Consistent performance from controlled environments to unpredictable
                   real-world scenarios.
                 </p>
                 <div class="mt-8 flex flex-col sm:flex-row gap-3">
-                  <a href="https://huggingface.co/spaces/TibbtechUser/Winner_Take_All" class="btn dark" style="display: inline-flex; align-items: center; justify-content: center; border-radius: 25px; padding: 12px 24px; text-decoration: none; font-weight: 500; transition: all 0.3s ease; gap: 8px; background: #000000; color: white; font-size: 14px;">
+                  <a href="https://huggingface.co/spaces/TibbtechUser/Winner_Take_All" target="_blank" class="btn dark" style="display: inline-flex; align-items: center; justify-content: center; border-radius: 25px; padding: 12px 24px; text-decoration: none; font-weight: 500; transition: all 0.3s ease; gap: 8px; background: #000000; color: white; font-size: 14px;">
                     <img src="/blogs/softWTA/assets/huggingface_logo-noborder.svg" width="20" height="20" alt="HuggingFace">
                     HuggingFace Demo
                   </a>
-                  <a href="https://colab.research.google.com/drive/1qhoWkJEPcUeWUgoqe7Zu6PykzGjMg7e6#scrollTo=IKIAqk8dBrmp" class="btn dark" style="display: inline-flex; align-items: center; justify-content: center; border-radius: 25px; padding: 12px 24px; text-decoration: none; font-weight: 500; transition: all 0.3s ease; gap: 8px; background: #000000; color: white; font-size: 14px;">
+                  <a href="https://colab.research.google.com/drive/1qhoWkJEPcUeWUgoqe7Zu6PykzGjMg7e6#scrollTo=IKIAqk8dBrmp" target="_blank" class="btn dark" style="display: inline-flex; align-items: center; justify-content: center; border-radius: 25px; padding: 12px 24px; text-decoration: none; font-weight: 500; transition: all 0.3s ease; gap: 8px; background: #000000; color: white; font-size: 14px;">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
                       <path d="M4.54,9.46,2.19,7.1a6.93,6.93,0,0,0,0,9.79l2.36-2.36A3.59,3.59,0,0,1,4.54,9.46Z" fill="#ff6f00"/>
                       <path d="M2.19,7.1,4.54,9.46a3.59,3.59,0,0,1,5.08,0l1.71-2.93h0l-.1-.08h0A6.93,6.93,0,0,0,2.19,7.1Z" fill="#ffb74d"/>
@@ -991,7 +1005,10 @@ Our WTA preprocessing layer integrates seamlessly with Vision Transformers, Effi
     The first computationally efficient system that truly replicates brain circuits for Domain-Agnostic AI.
     Learn how we engineered biological neural circuits for AI systems. Our research paper reveals the complete methodology.
   </p>
-  <a href="https://www.biorxiv.org/content/10.1101/2024.10.06.616839v2.full.pdf" target="_blank" class="btn dark" style="padding: 16px 40px; font-size: 16px; font-weight: 700; letter-spacing: 0.5px; border-radius: 12px; text-decoration: none; border: 2px solid transparent; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);" onmouseover="this.style.borderColor='#ffffff'; this.style.transform='scale(1.05)'" onmouseout="this.style.borderColor='transparent'; this.style.transform='scale(1)'">Read our Research</a>
+  <a href="https://www.pnas.org/doi/10.1073/pnas.2504164122" target="_blank" class="btn dark" style="display: inline-flex; align-items: center; gap: 8px; padding: 16px 40px; font-size: 16px; font-weight: 700; letter-spacing: 0.5px; border-radius: 12px; text-decoration: none; border: 2px solid transparent; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);" onmouseover="this.style.borderColor='#ffffff'; this.style.transform='scale(1.05)'" onmouseout="this.style.borderColor='transparent'; this.style.transform='scale(1)'">
+    <img src="/blogs/softWTA/assets/logo-light-pnas.svg" width="60" height="30" alt="PNAS">
+    Read our Research
+  </a>
 </section>
 
 
