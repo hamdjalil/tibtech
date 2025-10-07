@@ -3,12 +3,72 @@ class WTADiagram {
     constructor(containerId) {
         this.containerId = containerId;
         this.svg = null;
+        this.captionElement = null;
         this.animationPhase = 0;
         this.pulseIntensity = 0;
         this.animationId = null;
         this.isPlaying = true;
         this.dataParticles = [];
         this.flowPaths = [];
+        this.currentCaptionIndex = 0;
+        this.captionTimer = 0;
+        this.captionDuration = 180; // Frames to show each caption (3 seconds at 60fps)
+
+        // Dynamic captions explaining the neural state machine
+        this.captions = [
+            "State 1 actively maintained in working memory through excitatory activity",
+            "Competitive inhibition suppresses alternative states to ensure single-state dominance",
+            "Transition signals activate pointer neurons to switch between memory states",
+            "State 2 becomes dominant while State 1 activity is suppressed",
+            "Persistent neural activity maintains new state until next transition input",
+            "Cross-inhibitory coupling ensures only one state remains active at a time"
+        ];
+
+        // Dynamic label states for different phases - layman-friendly
+        this.labelStates = [
+            // Phase 0: Mental workspace 1 active
+            {
+                s1: {desc: 'Active mental', desc2: 'workspace'},
+                s2: {desc: 'Inactive mental', desc2: 'workspace'},
+                p12: {desc: 'Switch to', desc2: 'workspace 2'},
+                p21: {desc: 'Switch to', desc2: 'workspace 1'}
+            },
+            // Phase 1: Inhibition suppressing irrelevant info
+            {
+                s1: {desc: 'Being suppressed', desc2: 'losing focus'},
+                s2: {desc: 'Getting attention', desc2: 'gaining focus'},
+                p12: {desc: 'Switching thoughts', desc2: 'to workspace 2'},
+                p21: {desc: 'Suppressing', desc2: 'irrelevant info'}
+            },
+            // Phase 2: Switching between thoughts/tasks
+            {
+                s1: {desc: 'Losing focus', desc2: 'switching out'},
+                s2: {desc: 'Gaining focus', desc2: 'switching in'},
+                p12: {desc: 'Task switching', desc2: 'in progress'},
+                p21: {desc: 'Preparing next', desc2: 'task switch'}
+            },
+            // Phase 3: Mental workspace 2 active
+            {
+                s1: {desc: 'Inactive mental', desc2: 'workspace'},
+                s2: {desc: 'Active mental', desc2: 'workspace'},
+                p12: {desc: 'Task switch', desc2: 'completed'},
+                p21: {desc: 'Switch back to', desc2: 'workspace 1'}
+            },
+            // Phase 4: Holding information persistently
+            {
+                s1: {desc: 'Quietly waiting', desc2: 'in background'},
+                s2: {desc: 'Holding info', desc2: 'actively'},
+                p12: {desc: 'Ready for next', desc2: 'task switch'},
+                p21: {desc: 'Active switcher', desc2: 'for return'}
+            },
+            // Phase 5: Focusing by suppressing distractions
+            {
+                s1: {desc: 'Suppressed by', desc2: 'active focus'},
+                s2: {desc: 'Focused by', desc2: 'suppressing others'},
+                p12: {desc: 'Waiting until', desc2: 'focus shifts'},
+                p21: {desc: 'Maintaining', desc2: 'current focus'}
+            }
+        ];
 
         this.init();
     }
@@ -24,6 +84,7 @@ class WTADiagram {
     createHTML() {
         const container = document.getElementById(this.containerId);
         const svgId = `wtaSvg-${this.containerId}`;
+        const captionId = `wtaCaption-${this.containerId}`;
         container.innerHTML = `
             <div class="wta-diagram-container" style="
                 width: 100%;
@@ -45,6 +106,23 @@ class WTADiagram {
                 ">
                     <!-- SVG content will be added programmatically -->
                 </svg>
+                <div id="${captionId}" class="wta-dynamic-caption" style="
+                    margin-top: 15px;
+                    padding: 12px 16px;
+                    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+                    border-radius: 8px;
+                    border-left: 4px solid #2563eb;
+                    font-family: 'Inter Tight', sans-serif;
+                    font-size: 14px;
+                    line-height: 1.5;
+                    color: #374151;
+                    min-height: 60px;
+                    display: flex;
+                    align-items: center;
+                    transition: all 0.5s ease;
+                ">
+                    <span class="caption-text">Neural State Machine with sWTA Dynamics: Managing working memory through competitive inhibition</span>
+                </div>
                 <style>
                     @media (max-width: 768px) {
                         .wta-diagram-container {
@@ -53,6 +131,11 @@ class WTADiagram {
                         #${svgId} {
                             height: 300px !important;
                             min-height: 250px !important;
+                        }
+                        .wta-dynamic-caption {
+                            font-size: 13px !important;
+                            padding: 10px 12px !important;
+                            min-height: 50px !important;
                         }
                     }
                     @media (max-width: 480px) {
@@ -63,6 +146,11 @@ class WTADiagram {
                             height: 250px !important;
                             min-height: 200px !important;
                         }
+                        .wta-dynamic-caption {
+                            font-size: 12px !important;
+                            padding: 8px 10px !important;
+                            min-height: 45px !important;
+                        }
                     }
                 </style>
             </div>
@@ -71,8 +159,10 @@ class WTADiagram {
 
     setupSVG() {
         const svgId = `wtaSvg-${this.containerId}`;
+        const captionId = `wtaCaption-${this.containerId}`;
         this.svg = document.getElementById(svgId);
-        
+        this.captionElement = document.getElementById(captionId);
+
         // Create SVG defs for filters
         const defs = document.createElementNS('http://www.w3.org/2000/svg', 'defs');
         
@@ -301,26 +391,39 @@ class WTADiagram {
     createLabels() {
         const labels = [
             // Input labels at top
-            // {x: '135', y: '35', text: 'Input 1', fill: '#4CAF50', id: 'input1-label', size: '12'},
-            // {x: '235', y: '35', text: 'Input 2', fill: '#2196F3', id: 'input2-label', size: '12'},
-            
-            // Pool labels
-            {x: '90', y: '110', text: 'S1', fill: '#4CAF50', id: 's1-label', size: '14'},
-            {x: '290', y: '110', text: 'S2', fill: '#2196F3', id: 's2-label', size: '14'},
-            {x: '120', y: '300', text: 'P12', fill: '#000000', id: 'p12-label', size: '14'},
-            {x: '220', y: '300', text: 'P21', fill: '#000000', id: 'p21-label', size: '14'},
+            {x: '130', y: '15', text: 'Task A', fill: '#4CAF50', id: 'input1-label', size: '16'},
+            {x: '230', y: '15', text: 'Task B', fill: '#2196F3', id: 'input2-label', size: '16'},
+
+            // Simple static labels based on layman description
+            {x: '60', y: '95', text: 'Memory', fill: '#4CAF50', id: 's1-label-line1', size: '12', weight: 'bold'},
+            {x: '60', y: '110', text: 'State 1', fill: '#4CAF50', id: 's1-label-line2', size: '12', weight: 'bold'},
+            {x: '290', y: '95', text: 'Memory', fill: '#2196F3', id: 's2-label-line1', size: '12', weight: 'bold'},
+            {x: '290', y: '110', text: 'State 2', fill: '#2196F3', id: 's2-label-line2', size: '12', weight: 'bold'},
+            // {x: '270', y: '110', text: 'Memory Workspace 2', fill: '#2196F3', id: 's2-label', size: '12', weight: 'bold'},
+
+            {x: '100', y: '300', text: 'State Transition ', fill: '#000000', id: 'p12-label', size: '12', weight: 'bold'},
+            {x: '130', y: '315', text: 'Pointer 1', fill: '#000000', id: 'p12-label', size: '12', weight: 'bold'},
+            {x: '200', y: '300', text: 'State Transition', fill: '#000000', id: 'p21-label', size: '12', weight: 'bold'},
+            {x: '230', y: '315', text: 'Pointer 2', fill: '#000000', id: 'p21-label', size: '12', weight: 'bold'},
+
             
             // Section labels
-            {x: '350', y: '40', text: 'state WTA pool', fill: '#000000', id: 'state-label', size: '14'},
-            {x: '340', y: '210', text: 'pointer WTA pool', fill: '#000000', id: 'pointer-label', size: '14'},
-            {x: '180', y: '200', text: 'γ', fill: '#FF6B35', id: 'gamma-label', size: '14'},
-            {x: '200', y: '190', text: 'φ', fill: '#FF6B35', id: 'phi-label', size: '14'}
+            {x: '350', y: '40', text: 'Memory State Pool', fill: '#000000', id: 'state-label', size: '12'},
+            {x: '350', y: '210', text: 'Memory State Transition Pool', fill: '#000000', id: 'pointer-label', size: '12'},
+
+            // Focus suppression label
+            {x: '495', y: '100', text: 'Focus by', fill: '#87CEEB', id: 'inhibit-label1', size: '12'},
+            {x: '482', y: '115', text: 'Suppressing', fill: '#87CEEB', id: 'inhibit-label2', size: '12'},
+            {x: '495', y: '130', text: 'Irrelevant', fill: '#87CEEB', id: 'inhibit-label3', size: '12'},
+            {x: '495', y: '145', text: 'Memory', fill: '#87CEEB', id: 'inhibit-label4', size: '12'}
+
         ];
         
         labels.forEach(label => {
             const text = this.createSVGElement('text', {
                 x: label.x, y: label.y, fill: label.fill,
-                'font-size': label.size || '14', 'font-weight': 'bold',
+                'font-size': label.size || '14',
+                'font-weight': label.weight || 'normal',
                 'font-family': 'Inter Tight, Roboto, sans-serif', id: label.id
             });
             text.textContent = label.text;
@@ -401,6 +504,9 @@ class WTADiagram {
     }
 
     updateAnimation() {
+        // Update dynamic captions
+        this.updateCaptions();
+
         // Update existing node animations
         const flowPhase = Math.sin(this.animationPhase);
         const glowIntensity = 0.5 + 0.5 * Math.sin(this.animationPhase * 1.2);
@@ -488,6 +594,55 @@ class WTADiagram {
             }
         });
     }
+
+    updateCaptions() {
+        if (!this.captionElement) return;
+
+        // Increment caption timer
+        this.captionTimer++;
+
+        // Check if it's time to change caption
+        if (this.captionTimer >= this.captionDuration) {
+            this.captionTimer = 0;
+            this.currentCaptionIndex = (this.currentCaptionIndex + 1) % this.captions.length;
+
+            // Update caption text with fade effect
+            const captionTextElement = this.captionElement.querySelector('.caption-text');
+            if (captionTextElement) {
+                // Fade out
+                this.captionElement.style.opacity = '0.5';
+                this.captionElement.style.transform = 'translateY(5px)';
+
+                // Change text after brief delay
+                setTimeout(() => {
+                    captionTextElement.textContent = this.captions[this.currentCaptionIndex];
+
+                    // Fade back in
+                    this.captionElement.style.opacity = '1';
+                    this.captionElement.style.transform = 'translateY(0)';
+
+                    // Change border color based on caption theme
+                    const borderColors = [
+                        '#4CAF50', // State 1 - green
+                        '#FF6B35', // Inhibition - orange
+                        '#2196F3', // Transition - blue
+                        '#2196F3', // State 2 - blue
+                        '#9C27B0', // Persistence - purple
+                        '#FF5722'  // Coupling - red
+                    ];
+                    this.captionElement.style.borderLeftColor = borderColors[this.currentCaptionIndex];
+                }, 200);
+            }
+
+        }
+
+        // Add subtle pulsing effect to caption based on animation phase
+        if (this.captionElement) {
+            const pulse = 1 + 0.02 * Math.sin(this.animationPhase * 0.5);
+            this.captionElement.style.transform = `scale(${pulse}) translateY(0)`;
+        }
+    }
+
 
     startAnimation() {
         const animate = () => {

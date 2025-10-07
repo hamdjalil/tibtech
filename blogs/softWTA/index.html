@@ -4,6 +4,21 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Soft WTA · Tibbling Technologies</title>
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://tibtech.com/blogs/softWTA/">
+  <meta property="og:title" content="Domain-Agnostic AI Mirroring Biological Neural Dynamics">
+  <meta property="og:description" content="Brain circuits that evolved to handle change, now powering your AI systems. Consistent performance from controlled environments to unpredictable real-world scenarios.">
+  <meta property="og:image" content="assets/fig1.png">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://tibtech.com/blogs/softWTA/">
+  <meta property="twitter:title" content="Domain-Agnostic AI Mirroring Biological Neural Dynamics">
+  <meta property="twitter:description" content="Brain circuits that evolved to handle change, now powering your AI systems. Consistent performance from controlled environments to unpredictable real-world scenarios.">
+  <meta property="twitter:image" content="assets/fig1.png">
+
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="animations.css" />
@@ -11,11 +26,11 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Lora:wght@400;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <script src="components/neuron-graph.js"></script>
   <script src="components/wta-diagram.js"></script>
   <script src="components/neocortical-circuit.js"></script>
   <script src="components/neuromorphic-hardware.js"></script>
-  <script src="components/wta-directed-graph.js"></script>
+  <!-- <script src="components/wta-directed-graph.js"></script> -->
+  <script src="components/wta-transformation.js"></script>
 
   <style>
     /* Reset all margins and paddings to eliminate white space */
@@ -574,10 +589,22 @@
       setTimeout(() => {
         const heroSection = document.getElementById('hero-section');
         if (heroSection) {
-          // Remove the dark overlay to brighten the hero
-          const darkOverlay = heroSection.querySelector('.bg-black\\/50');
-          if (darkOverlay) {
-            darkOverlay.remove();
+          // Add a dark overlay to make text more readable
+          const existingOverlay = heroSection.querySelector('.custom-dark-overlay');
+          if (!existingOverlay) {
+            const darkOverlay = document.createElement('div');
+            darkOverlay.className = 'custom-dark-overlay';
+            darkOverlay.style.cssText = `
+              position: absolute;
+              top: 0;
+              left: 0;
+              right: 0;
+              bottom: 0;
+              background: rgba(0, 0, 0, 0.4);
+              z-index: 1;
+              pointer-events: none;
+            `;
+            heroSection.appendChild(darkOverlay);
           }
           
           // Reduce aurora overlay opacity to make it brighter
@@ -589,81 +616,96 @@
           // Update the hero content for SoftWTA
           const contentDiv = heroSection.querySelector('.container');
           if (contentDiv) {
+            contentDiv.style.position = 'relative';
+            contentDiv.style.zIndex = '10';
             contentDiv.innerHTML = `
               <div class="max-w-4xl">
-                <h1 class="text-balance text-5xl md:text-6xl font-extrabold leading-[1.05] tracking-tight">
-                  AI That Mimics Your Brain's <span class="text-white/70">Winner-Take-All</span> Magic
+                <h1 class="text-balance text-5xl md:text-6xl font-extrabold leading-[1.05] tracking-tight" style="color: white !important; text-shadow: 0 0 20px rgba(0,0,0,0.8), 0 2px 4px rgba(0,0,0,0.5);">
+                  Domain-Agnostic AI Mirroring Biological Neural Dynamics
                 </h1>
-                <p class="mt-5 text-lg md:text-xl text-white/80">
-                  We cracked neocortex circuits and built AI that learns like you - with human accuracy and zero-shot superpowers.
+                <p class="mt-5 text-lg md:text-xl text-white/80" style="color: white !important; text-shadow: 0 0 25px rgba(0,0,0,0.9), 0 2px 8px rgba(0,0,0,0.8), 0 4px 12px rgba(0,0,0,0.6);">
+                  Brain circuits that evolved to handle change, now powering your AI systems. Consistent performance from controlled environments to unpredictable
+                  real-world scenarios.
                 </p>
                 <div class="mt-8 flex flex-col sm:flex-row gap-3">
-                  <a href="https://huggingface.co/spaces/TibbtechUser/Winner_Take_All" class="btn dark" style="display: inline-flex; align-items: center; justify-content: center; border-radius: 25px; padding: 12px 24px; text-decoration: none; font-weight: 500; transition: all 0.3s ease;">
-                    → Try the demo
+                  <a href="https://huggingface.co/spaces/TibbtechUser/Winner_Take_All" target="_blank" class="btn dark" style="display: inline-flex; align-items: center; justify-content: center; border-radius: 25px; padding: 12px 24px; text-decoration: none; font-weight: 500; transition: all 0.3s ease; gap: 8px; background: #000000; color: white; font-size: 14px;">
+                    <img src="/blogs/softWTA/assets/huggingface_logo-noborder.svg" width="20" height="20" alt="HuggingFace">
+                    HuggingFace Demo
                   </a>
-                  <a href="#intro-video" class="inline-flex items-center justify-center rounded-full bg-white/10 px-6 py-3 text-sm font-semibold backdrop-blur-md transition hover:bg-white/20">
-                    Watch the video
+                  <a href="https://colab.research.google.com/drive/1qhoWkJEPcUeWUgoqe7Zu6PykzGjMg7e6#scrollTo=IKIAqk8dBrmp" target="_blank" class="btn dark" style="display: inline-flex; align-items: center; justify-content: center; border-radius: 25px; padding: 12px 24px; text-decoration: none; font-weight: 500; transition: all 0.3s ease; gap: 8px; background: #000000; color: white; font-size: 14px;">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                      <path d="M4.54,9.46,2.19,7.1a6.93,6.93,0,0,0,0,9.79l2.36-2.36A3.59,3.59,0,0,1,4.54,9.46Z" fill="#ff6f00"/>
+                      <path d="M2.19,7.1,4.54,9.46a3.59,3.59,0,0,1,5.08,0l1.71-2.93h0l-.1-.08h0A6.93,6.93,0,0,0,2.19,7.1Z" fill="#ffb74d"/>
+                      <path d="M11.34,17.46h0L9.62,14.54a3.59,3.59,0,0,1-5.08,0L2.19,16.9a6.93,6.93,0,0,0,9,.65l.11-.09" fill="#ffb74d"/>
+                      <path d="M12,7.1a6.93,6.93,0,0,0,0,9.79l2.36-2.36a3.59,3.59,0,1,1,5.08-5.08L21.81,7.1A6.93,6.93,0,0,0,12,7.1Z" fill="#ffb74d"/>
+                      <path d="M21.81,7.1,19.46,9.46a3.59,3.59,0,0,1-5.08,5.08L12,16.9A6.93,6.93,0,0,0,21.81,7.1Z" fill="#ff6f00"/>
+                    </svg>
+                    Colab Demo
                   </a>
                 </div>
               </div>
             `;
           }
           
-          // Update the background video to use SoftWTA video
+          // Replace video with SVG
           const video = heroSection.querySelector('video');
           if (video) {
-            video.innerHTML = '<source src="/blogs/softWTA/assets/2.mp4" type="video/mp4">';
-            video.load(); // Reload video with new source
+            const img = document.createElement('img');
+            img.src = '/blogs/softWTA/assets/hero.svg';
+            img.alt = 'SoftWTA Hero';
+            img.className = video.className;
+            img.style.cssText = video.style.cssText;
+            img.style.objectFit = 'cover'; // or 'contain', 'fill', 'scale-down'
+            img.style.objectPosition = '50% 35%'; // or 'top', 'bottom', 'left right', '50% 20%'
+            img.style.transform = 'scale(1.1) translateY(-10px)';
+            img.style.width = '100%';
+            img.style.height = '100%';
+            video.parentNode.replaceChild(img, video);
           }
         }
       }, 100);
     });
   </script>
 
-  <!-- Video Section -->
-  <section class="section" style="background: white;" id="intro-video">
+  <!-- Demo Section -->
+  <section class="section" style="background: white;" id="intro-demo">
     <div style="max-width: 1000px; margin: 0 auto; text-align: center;">
-      <h2 style="color: black; margin-bottom: 20px;">Watch: Soft WTA in Action</h2>
+      <h2 style="color: black; margin-bottom: 20px;">Try WTA in Action</h2>
       <p style="color: black; margin-bottom: 40px; max-width: 600px; margin-left: auto; margin-right: auto;">
-        See how our brain-inspired AI technology works and learn about the science behind Soft Winner-Take-All networks.
+        Experience our brain-inspired AI technology hands-on with our interactive Google Colab demo.
       </p>
-      
+
       <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
-        <!-- YouTube Video -->
-        <div style="position: relative; width: 100%; max-width: 480px; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);">
-          <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-            <iframe 
-              src="https://www.youtube.com/embed/PDKhUknuQDg" 
-              title="Soft WTA Technology Overview"
-              style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-              allowfullscreen>
-            </iframe>
-          </div>
-        </div>
-        
         <!-- Local Video -->
-        <div style="position: relative; width: 100%; max-width: 480px; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);">
+        <div style="position: relative; width: 100%; max-width: 800px; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);">
           <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-            <video 
+            <video
+              id="demo-video"
               controls
               loop
+              muted
               style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; border-radius: 12px;"
               poster="placeholder-poster.jpg">
-              <source src="/blogs/softWTA/assets/wtacode.mp4" type="video/mp4">
+              <source src="/blogs/softWTA/assets/wta-gif-v2.mp4" type="video/mp4">
               <source src="your-video-file.webm" type="video/webm">
               Your browser does not support the video tag.
             </video>
           </div>
         </div>
       </div>
-      
-      <div style="margin-top: 20px;">
-        <a href="https://www.youtube.com/watch?v=PDKhUknuQDg" target="_blank" style="color: #666; text-decoration: none; font-size: 14px; display: inline-flex; align-items: center; gap: 8px;">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+
+      <div style="margin-top: 30px;">
+        <a href="https://colab.research.google.com/drive/1qhoWkJEPcUeWUgoqe7Zu6PykzGjMg7e6#scrollTo=IKIAqk8dBrmp" target="_blank" style="display: inline-flex; align-items: center; gap: 12px; background: #000000; color: white !important; text-decoration: none; font-size: 16px; font-weight: 600; padding: 14px 28px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); transition: all 0.3s ease; --colab-logo-dark: #ff6f00; --colab-logo-light: #ffb74d;" onmouseover="this.style.background='#333333'; this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 16px rgba(0, 0, 0, 0.3)'" onmouseout="this.style.background='#000000'; this.style.transform='translateY(0px)'; this.style.boxShadow='0 4px 12px rgba(0, 0, 0, 0.2)'">
+          <svg width="20" height="20" viewBox="0 0 24 24">
+            <g id="colab-logo">
+              <path d="M4.54,9.46,2.19,7.1a6.93,6.93,0,0,0,0,9.79l2.36-2.36A3.59,3.59,0,0,1,4.54,9.46Z" style="fill:var(--colab-logo-dark)"></path>
+              <path d="M2.19,7.1,4.54,9.46a3.59,3.59,0,0,1,5.08,0l1.71-2.93h0l-.1-.08h0A6.93,6.93,0,0,0,2.19,7.1Z" style="fill:var(--colab-logo-light)"></path>
+              <path d="M11.34,17.46h0L9.62,14.54a3.59,3.59,0,0,1-5.08,0L2.19,16.9a6.93,6.93,0,0,0,9,.65l.11-.09" style="fill:var(--colab-logo-light)"></path>
+              <path d="M12,7.1a6.93,6.93,0,0,0,0,9.79l2.36-2.36a3.59,3.59,0,1,1,5.08-5.08L21.81,7.1A6.93,6.93,0,0,0,12,7.1Z" style="fill:var(--colab-logo-light)"></path>
+              <path d="M21.81,7.1,19.46,9.46a3.59,3.59,0,0,1-5.08,5.08L12,16.9A6.93,6.93,0,0,0,21.81,7.1Z" style="fill:var(--colab-logo-dark)"></path>
+            </g>
           </svg>
-          Watch on YouTube
+          Open Interactive Demo in Colab
         </a>
       </div>
     </div>
@@ -671,33 +713,39 @@
 
   <section class="section" id="brain-ai-revolution">
     <div style="max-width: 900px; margin: 0 auto;">
-      <h2 style="text-align: center; color: black;">The Brain-AI Revolution</h2>
+      <h2 style="text-align: center; color: black;">Institutional Collaborations</h2>
       <p style="text-align: center; max-width: 800px; margin: 0 auto 20px auto;">
-      We explore how brain-inspired circuit motifs, particularly soft winner-take-all (sWTA) computations mediated by key interneurons, can be translated into neuromorphic hardware and deep learning models. By mapping these biologically grounded dynamics onto IBM’s TrueNorth chip and integrating them into Vision Transformers, we demonstrate enhanced working memory, stronger generalization, and a pathway toward more human-like intelligence in AI systems.      </p>
-      <div style="display: flex; justify-content: space-around; flex-wrap: wrap; margin-top: 40px; gap: 30px;">
-        <div class="author-card" style="text-align: center; flex: 1; min-width: 250px; max-width: 300px; margin: 0 10px; opacity: 0; transform: translateY(20px);">
-          <div style="width: 80px; height: 80px; border-radius: 50%; overflow: hidden; margin: 0 auto 15px auto; border: 3px solid rgba(0, 0, 0, 0.2);">
-            <img src="assets/asim.jpeg" alt="Dr. Sarah Chen" style="width: 100%; height: 120%; object-fit: cover;">
-          </div>
-          <h3 style="margin: 10px 0 5px 0; color: black;">Dr. Asim Iqbal</h3>
-          <p class="small-text" style="margin: 5px 0; color: black;">Lead Neuroscientist</p>
-          <p class="small-text" style="margin: 0; color: black;">Tibbling Technologies, USA</p>
+      We explore how brain-inspired circuit motifs, particularly soft winner-take-all (WTA) computations based on core computational principles utilized in cortical
+      processing, can be translated into neuromorphic hardware and deep learning models. This research spans multiple world-class institutions and represents a collaborative effort in computational neuroscience.      </p>
+      <div style="display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 40px; margin-top: 40px; max-width: 1000px; margin-left: auto; margin-right: auto;">
+        <!-- Tibbling -->
+        <div class="institution-card" style="opacity: 1; transform: translateY(0px);">
+          <img src="/logo.png" alt="Tibbling" style="height: 70px; object-fit: contain; filter: grayscale(0.3); transition: all 0.3s ease;" onmouseover="this.style.filter='grayscale(0)'; this.style.transform='scale(1.1)'" onmouseout="this.style.filter='grayscale(0.3)'; this.style.transform='scale(1)'">
         </div>
-       <div class="author-card" style="text-align: center; flex: 1; min-width: 250px; max-width: 300px; margin: 0 10px; opacity: 0; transform: translateY(20px);">
-          <div style="width: 80px; height: 80px; border-radius: 50%; overflow: hidden; margin: 0 auto 15px auto; border: 3px solid rgba(0, 0, 0, 0.2);">
-            <img src="assets/asim.jpeg" alt="Dr. Sarah Chen" style="width: 100%; height: 120%; object-fit: cover;">
-          </div>
-          <h3 style="margin: 10px 0 5px 0; color: black;">Dr. Asim Iqbal</h3>
-          <p class="small-text" style="margin: 5px 0; color: black;">Lead Neuroscientist</p>
-          <p class="small-text" style="margin: 0; color: black;">Tibbling Technologies, USA</p>
+
+        <!-- Broad Institute -->
+        <div class="institution-card" style="opacity: 1; transform: translateY(0px);">
+          <img src="/partners/broad-color.png" alt="Broad Institute" style="height: 50px; object-fit: contain; filter: grayscale(0.3); transition: all 0.3s ease;" onmouseover="this.style.filter='grayscale(0)'; this.style.transform='scale(1.1)'" onmouseout="this.style.filter='grayscale(0.3)'; this.style.transform='scale(1)'">
         </div>
-        <div class="author-card" style="text-align: center; flex: 1; min-width: 250px; max-width: 300px; margin: 0 10px; opacity: 0; transform: translateY(20px);">
-          <div style="width: 80px; height: 80px; border-radius: 50%; overflow: hidden; margin: 0 auto 15px auto; border: 3px solid rgba(0, 0, 0, 0.2);">
-            <img src="assets/asim.jpeg" alt="Dr. Sarah Chen" style="width: 100%; height: 120%; object-fit: cover;">
-          </div>
-          <h3 style="margin: 10px 0 5px 0; color: black;">Dr. Asim Iqbal</h3>
-          <p class="small-text" style="margin: 5px 0; color: black;">Lead Neuroscientist</p>
-          <p class="small-text" style="margin: 0; color: black;">Tibbling Technologies, USA</p>
+
+        <!-- ETH Zurich -->
+        <div class="institution-card" style="opacity: 1; transform: translateY(0px);">
+          <img src="/partners/uzh-eth.png" alt="ETH Zurich" style="height: 80px; object-fit: contain; filter: grayscale(0.3); transition: all 0.3s ease;" onmouseover="this.style.filter='grayscale(0)'; this.style.transform='scale(1.1)'" onmouseout="this.style.filter='grayscale(0.3)'; this.style.transform='scale(1)'">
+        </div>
+
+        <!-- Harvard Medical School -->
+        <div class="institution-card" style="opacity: 1; transform: translateY(0px);">
+          <img src="/partners/harvard-color.svg" alt="Harvard Medical School" style="height: 60px; object-fit: contain; filter: grayscale(0.3); transition: all 0.3s ease;" onmouseover="this.style.filter='grayscale(0)'; this.style.transform='scale(1.1)'" onmouseout="this.style.filter='grayscale(0.3)'; this.style.transform='scale(1)'">
+        </div>
+  
+        <!-- Australian National University -->
+        <div class="institution-card" style="opacity: 1; transform: translateY(0px);">
+          <img src="/partners/anu.png" alt="Australian National University" style="height: 50px; object-fit: contain; filter: grayscale(0.3); transition: all 0.3s ease;" onmouseover="this.style.filter='grayscale(0)'; this.style.transform='scale(1.1)'" onmouseout="this.style.filter='grayscale(0.3)'; this.style.transform='scale(1)'">
+        </div>
+
+        <!-- Monash University -->
+        <div class="institution-card" style="opacity: 1; transform: translateY(0px);">
+          <img src="/partners/monash-color.svg" alt="Monash University" style="height: 50px; object-fit: contain; filter: grayscale(0.3); transition: all 0.3s ease;" onmouseover="this.style.filter='grayscale(0)'; this.style.transform='scale(1.1)'" onmouseout="this.style.filter='grayscale(0.3)'; this.style.transform='scale(1)'">
         </div>
         
       </div>
@@ -716,106 +764,117 @@
       }
     }
     
-    .author-card.animate {
+    .institution-card.animate {
       animation: fadeInUp 0.8s forwards;
-    } 
+    }
+
+    /* Image overlay transition effects */
+    .image-overlay-container {
+      position: relative;
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+
+    .image-overlay-container .base-image,
+    .image-overlay-container .overlay-image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: opacity 0.4s ease-in-out;
+    }
+
+    .image-overlay-container .base-image {
+      opacity: 1;
+      z-index: 1;
+      position: relative;
+    }
+
+    .image-overlay-container .overlay-image {
+      opacity: 0;
+      z-index: 2;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    /* When active-transition class is added, show overlay image */
+    .image-overlay-container.active-transition .base-image {
+      opacity: 0;
+    }
+
+    .image-overlay-container.active-transition .overlay-image {
+      opacity: 1;
+    }
+
+    /* Footer alignment fixes */
+    #footer-container {
+      text-align: left !important;
+    }
+
+    #footer-container * {
+      text-align: inherit !important;
+    }
+
+    #footer-container .footer-content,
+    #footer-container .social-section,
+    #footer-container .follow-section {
+      display: flex !important;
+      align-items: center !important;
+      justify-content: flex-start !important;
+      text-align: left !important;
+    }
+
+    #footer-container .social-icons {
+      display: flex !important;
+      align-items: center !important;
+      gap: 1rem !important;
+      margin-left: 1rem !important;
+    }
+
+    #footer-container .follow-text {
+      margin-right: 1rem !important;
+    }
   </style>
 
   <section class="section light">
     <div class="biology-meets-silicon" style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 20px; max-width: 900px; margin: 0 auto; align-items: center;">
-      <h2 style="flex: 1; min-width: 300px; margin-bottom: 20px; color: black;">Biology Meets Silicon</h2>
+      <h2 style="flex: 1; min-width: 300px; margin-bottom: 20px; color: black;">Applied NeuroAI: From Neural Circuits to AI Systems</h2>
       <div style="flex: 1; min-width: 280px; margin-bottom: 20px; margin-top: 30px;">
-        <p style="margin-top: 0;">In winner-take-all systems, the most active neurons dominate by silencing weaker ones.
-This biological principle ensures that only the strongest signals drive decisions.
-Inspired by nature, similar mechanisms power efficient computations in silicon circuits.</p>
+        <p style="margin-top: 0;">We reverse-engineered the visual cortex's winner-take-all dynamics and implemented them directly in AI systems. 4 billion years of neural evolution, now applied as computational primitives in your models.</p>
       </div>
     </div>
-    
+
     <div class="centered-figure-container">
-      <!-- <p class="figure-description">
-        The complete NeuroAI framework: from biological neurons to neuromorphic chips to Vision Transformers.
-      </p> -->
+      <p class="figure-description" style="text-align: center; margin-bottom: 20px; color: #666; font-style: italic; max-width: 600px; margin-left: auto; margin-right: auto;">
+        Complete applied neuro-AI pipeline: from biological neural circuits to computational primitives to AI systems delivering real-world performance
+      </p>
       <img src="assets/fig1.png" alt="NeuroAI Framework Overview" class="centered-main-figure pulse-animation">
-      
+
     </div>
   </section>
 
-  <section class="section light">
-    <h2 style="color: black;">Your Brain Inspires Clarity in Machines</h2>
-    <p  >Our model mimics neocortical circuits, capturing how excitatory and inhibitory neurons interact.
-It draws on real measurements from the visual cortex to stay biologically grounded.
-The result is a soft winner-take-all system, where strong signals rise and weaker ones fade.</p>
-    
-    <!-- Interactive Components Row -->
-    <div class="component-container" style="
-      display: flex;
-      justify-content: center;
-      margin: 30px 0;
-      align-items: center;
-    ">
-      <div id="neocortical-circuit-inline"></div>
-    </div>
-     <p>A sliding window-based computation was employed to amplify key features while reducing domain shifts, resulting in a clearer and more normalized output representation.<p>
-    <img src="assets/4a.png" alt="Experimental slice data" class="inline-image float-animation">
-    <!-- <p class="caption">WTA layer enhances contrast using sliding window mechanism.</p> -->
 
-    </section>
 
-  <section class="section centered-figure-section">
-    <!-- Heading and subheading above the figures -->
-    <div style="text-align: center; margin-bottom: 40px; max-width: 800px; margin-left: auto; margin-right: auto;">
-      <h2 style="color: black; margin-bottom: 20px; padding-bottom: 2px;">Zero-Shot Learning</h2>
-      <p>
-We tested whether adding a pre-processing winner-take-all (WTA) layer to deep learning models, such as Vision Transformers (ViTs), could improve performance on real-world vision tasks. Training on a single source domain and testing on unseen target domains showed consistent accuracy gains. Similar improvements were observed in EfficientNet, CapsuleNet, MobileNet, and ResNet, where the WTA layer enhanced feature generalization and robustness to domain shifts across digit recognition datasets.      </p>
-    </div>
-    
-    <div class="architecture-showcase" style="display: flex; flex-wrap: wrap; gap: 30px; margin: 0 auto; align-items: center; max-width: 1200px;">
-      <!-- Architecture Image on right side -->
-      <div class="architecture-image" style="flex: 2; min-width: 300px;">
-        <img src="assets/4cd.png" alt="sWTA Vision Transformer Architecture" style="width: 100%; max-height: 400px; object-fit: contain;" class="pulse-animation">
-      </div>
-    </div>
+  <section class="section light no-float">
+    <h2 style="color: black;">Brain-Inspired Visual Processing with WTA</h2>
+    <p>Our Winner-Take-All (WTA) algorithm replicates how the visual cortex processes images through competitive neural dynamics. Using experimental data from mouse visual cortex, we engineered sliding window computations with recurrent excitation and lateral inhibition - the same mechanisms your brain uses for robust visual processing.</p>
+
+    <img src="assets/4a.png" alt="WTA Visual Processing Pipeline" class="inline-image">
+
+    <p>This brain-inspired WTA processing is the key to superior domain generalization. By mimicking how biological neurons amplify important visual features while suppressing irrelevant noise, our WTA layer creates robust representations that perform significantly better across diverse image domains and lighting conditions.</p>
+
+    <div id="wta-transformation-demo" style="margin: 40px 0; padding: 0;"></div>
   </section>
 
   <section class="section light">
-    <h2 style="color: black;">Any Image , One Solution</h2>
-    <p >AI that understands images across styles, formats, and distortions. One unified approach that works with diverse visual representations.</p>
-    
-    <!-- MNIST-type grid -->
-    <div class="side-by-side-showcase">
-      <div class="image-comparison-grid" id="auto-transition-grid">
-        <div class="image-comparison-item">
-          <p class="image-label">MNIST</p>
-          <div class="image-overlay-container">
-            <img src="assets/b1.png" alt="Original MNIST" class="base-image">
-            <img src="assets/a1.png" alt="Processed MNIST" class="overlay-image">
-          </div>
-        </div>
-        <div class="image-comparison-item">
-          <p class="image-label">MNIST-M</p>
-          <div class="image-overlay-container">
-            <img src="assets/b2.png" alt="Original MNIST-M" class="base-image">
-            <img src="assets/a2.png" alt="Processed MNIST-M" class="overlay-image">
-          </div>
-        </div>
-        <div class="image-comparison-item">
-          <p class="image-label">USPS</p>
-          <div class="image-overlay-container">
-            <img src="assets/b3.png" alt="Original SVHN" class="base-image">
-            <img src="assets/a3.png" alt="Processed SVHN" class="overlay-image">
-          </div>
-        </div>
-        <div class="image-comparison-item">
-          <p class="image-label">SVHN</p>
-          <div class="image-overlay-container">
-            <img src="assets/b4.png" alt="Original USPS" class="base-image">
-            <img src="assets/a4.png" alt="Processed USPS" class="overlay-image">
-          </div>
-        </div>
-      </div>
-    </div>
+    <h2 style="color: black;">Why Brain-Inspired AI Generalizes Better</h2>
+    <p>Neural circuits evolved to handle domain shifts - from bright sunlight to moonlit scenes, your visual cortex adapts seamlessly. Our sWTA implementation captures this biological robustness, delivering consistent improvements across unseen domains.</p>
 
-    <!-- Zero-shot generalization section -->
+    <!-- Domain generalization demonstration -->
     <div style="margin-top: 60px;" id="zero-shot-section">
       <div style="max-width: 1200px; margin: 0 auto; padding: 0 40px;">
         <!-- Toggle Switch for Zero-shot Images -->
@@ -829,33 +888,38 @@ We tested whether adding a pre-processing winner-take-all (WTA) layer to deep le
             <span>Processed Images</span>
           </label>
         </div>
-        <div class="zero-shot-layout" style="display: flex; align-items: flex-start; gap: 60px; flex-wrap: wrap; justify-content: center;"> 
+        <div class="zero-shot-layout" style="display: flex; align-items: flex-start; gap: 60px; flex-wrap: wrap; justify-content: center;">
           <!-- 3 images on right -->
           <div class="zero-shot-images" style="flex: 2; display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; align-items: center;">
-            <div class="zero-shot-item" style="flex: 1; min-width: 280px; max-width: 400px; display: flex; justify-content: center;">
-              <div class="image-overlay-container zero-shot-image" style="width: 100%; aspect-ratio: 1.5/1; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);">
-                <img src="assets/b5.png" alt="Original Natural Scene" class="base-image" style="object-fit: cover;">
-                <img src="assets/a5.png" alt="Processed Natural Scene" class="overlay-image" style="object-fit: cover;">
-              </div>
-            </div>
-            <div class="zero-shot-item" style="flex: 1; min-width: 280px; max-width: 400px; display: flex; justify-content: center;">
+            <div class="zero-shot-item" style="flex: 1; min-width: 280px; max-width: 800px; display: flex; justify-content: center;">
               <div class="image-overlay-container zero-shot-image" style="width: 100%; aspect-ratio: 1.5/1; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);">
                 <img src="assets/b6.png" alt="Original Underwater Scene" class="base-image" style="object-fit: cover;">
                 <img src="assets/a6.png" alt="Processed Underwater Scene" class="overlay-image" style="object-fit: cover;">
-              </div>
-            </div>
-            <div class="zero-shot-item" style="flex: 1; min-width: 280px; max-width: 400px; display: flex; justify-content: center;">
-              <div class="image-overlay-container zero-shot-image" style="width: 100%; aspect-ratio: 1.5/1; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);">
-                <img src="assets/b7.png" alt="Original Coral Scene" class="base-image" style="object-fit: cover;">
-                <img src="assets/a7.png" alt="Processed Coral Scene" class="overlay-image" style="object-fit: cover;">
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-    
+
   </section>
+
+  <section class="section centered-figure-section">
+    <!-- Heading and subheading above the figures -->
+    <div style="text-align: center; margin-bottom: 40px; max-width: 800px; margin-left: auto; margin-right: auto;">
+      <h2 style="color: black; margin-bottom: 20px; padding-bottom: 2px;">Multimodal Zero-Shot Learning</h2>
+      <p>
+Our WTA preprocessing layer integrates seamlessly with Vision Transformers, EfficientNet, MobileNet, and ResNet architectures. Training on a single source domain, models achieve consistent accuracy gains when deployed on unseen target domains while improving robustness to real-world domain shifts. </p>
+    </div>
+    
+    <div class="architecture-showcase" style="display: flex; flex-wrap: wrap; gap: 30px; margin: 0 auto; align-items: center; max-width: 1200px;">
+      <!-- Architecture Image on right side -->
+      <div class="architecture-image" style="flex: 2; min-width: 300px;">
+        <img src="assets/4cd.png" alt="sWTA Vision Transformer Architecture" style="width: 100%; max-height: 400px; object-fit: contain;" class="pulse-animation">
+      </div>
+    </div>
+  </section>
+
 
   <section class="section light " id="brain-like-section">
     <div style="margin-top:150px ;"></div>
@@ -878,9 +942,9 @@ We tested whether adding a pre-processing winner-take-all (WTA) layer to deep le
       
       <!-- Heading on right side -->
       <div class="brain-like-text" style="flex: 1; min-width: 250px;">
-        <h2 style="color: black;">Brain-Like Feature Learning</h2>
+        <h2 style="color: black;">Neuro-Inspired Spatial Feature Learning</h2>
         <p style="text-align: left; margin-top: 15px; margin-left: 20px;">
-        sWTA improves feature alignment by highlighting key features and filtering noise, boosting domain generalization. When added to RefineNet, it handled nighttime driving nearly as well as models trained on night images showing how brain inspired filtering sharpens perception across domains.      </div>
+        WTA improves feature alignment by highlighting key features and filtering noise, boosting domain generalization. When added to RefineNet, it handled nighttime driving nearly as well as models trained on night images showing how brain inspired filtering sharpens perception across domains.      </div>
     </div>
   </section>
 
@@ -895,28 +959,15 @@ We tested whether adding a pre-processing winner-take-all (WTA) layer to deep le
     </div>
   </section> -->
 
-  <section class="section neuro-team">
-  <div class="neuro-team__container">
-    <h2 class="section-title">Your Brain’s Super-Team, Now in AI</h2>
-    <p >
-With SST held constant, increasing PV inhibition acts like a neural brake that lowers pyramidal responses, suppresses near winners, and sharpens the soft winner take all outcome by preserving the strongest input while silencing weaker competitors. PV chiefly shifts the response offset and enforces competition, whereas SST mainly adjusts the slope and width of tuning to shape gain.    </p>
-
-    <figure class="neuro-team__figure">
-      <div id="neuron-graph" class="neuro-team__canvas"></div>
-      <figcaption class="caption">
-        Interactive schematic of cooperative cell types.
-      </figcaption>
-    </figure>
-  </div>
-</section>
+  
 
   <section class="section light" style="padding: 80px 0;">
     <div class="neuromorphic-section" style="max-width: 1200px; margin: 0 auto; padding: 0 40px;">
       <div class="neuromorphic-layout" style="display: flex; align-items: center; gap: 60px; flex-wrap: wrap;">
         <!-- Title and text on left side -->
         <div class="neuromorphic-text" style="flex: 1; min-width: 300px; max-width: 400px;">
-          <h2 style="color: black; font-size: 2.5rem; font-weight: 600; margin-bottom: 20px; line-height: 1.2;">System That Thinks Like You</h2>
-          <p style="color: #666; font-size: 1.1rem; line-height: 1.6; margin: 0;">We replicated a core cortical computation on neuromorphic hardware and used it to improve established machine learning models. Using IBM TrueNorth, which was designed to mimic brain organization, we implemented soft winner take all dynamics as a preprocessing layer that enhanced robustness and accuracy across tasks.</p>
+          <h2 style="color: black; font-size: 2.5rem; font-weight: 600; margin-bottom: 20px; line-height: 1.2;">Brain-Efficient Computing</h2>
+          <p style="color: #666; font-size: 1.1rem; line-height: 1.6; margin: 0;">Our WTA implementation on IBM TrueNorth neuromorphic chips delivers the computational efficiency of biological neural networks. Validated for enterprise workloads with improved energy efficiency while maintaining accuracy gains. Scalable architecture designed for enterprise deployment across edge and cloud environments.</p>
         </div>
         
         <!-- Figure on right side -->
@@ -941,23 +992,23 @@ With SST held constant, increasing PV inhibition acts like a neural brake that l
         
         <!-- Title and text on right side -->
         <div class="night-vision-text" style="flex: 1; min-width: 300px; max-width: 450px;">
-          <h2 style="color: black; font-size: 2.5rem; font-weight: 600; margin-bottom: 24px; line-height: 1.2;">Neural State Machine with sWTA Dynamics</h2>
-          <p style="color: #555; font-size: 1.15rem; line-height: 1.7; margin-bottom: 49px;">The state pool uses soft winner take all dynamics to keep one state, such as S1 or S2, active at a time through balanced excitation and inhibition. The pointer pool, linked by cross-inhibitory interactions, manages transitions between states, allowing the system to preserve memory while flexibly switching based on inputs.</p>
-          <!-- <p style="color: #777; font-size: 1rem; line-height: 1.6; margin: 0; font-style: italic;">Real-time enhancement without pre-training on specific lighting conditions.</p> -->
+          <h2 style="color: black; font-size: 2.5rem; font-weight: 600; margin-bottom: 24px; line-height: 1.2;">Working Memory Architecture for Cognitive AI</h2>
+          <p style="color: #555; font-size: 1.15rem; line-height: 1.7; margin-bottom: 49px;">Our neural state machine implements the brain's working memory system using coupled WTA populations. Memory states persist through balanced excitation and inhibition, while pointer networks enable context-dependent transitions. This cognitive architecture enables AI systems to maintain and manipulate information like biological neural networks.</p>
         </div>
       </div>
     </div>
   </section>
 
   <section class="section light">
-  <h2 style="color: black;">Bridging Neuroscience and AI</h2>
+  <h2 style="color: black;">Scalable NeuroAI for Enterprise</h2>
     <p>
-    First computationally efficient system that truly mimics brain circuits unlocking working memory, decision making, and biological learning.Computer vision to medical imaging to autonomous vehicles.We're making AI <strong>fundamentally more brain-like</strong>.
+    The first computationally efficient system that truly replicates brain circuits for Domain-Agnostic AI.
+    Learn how we engineered biological neural circuits for AI systems. Our research paper reveals the complete methodology.
   </p>
-  <p>
-    The future: biological intelligence on silicon.
-  </p>
-  <a href="https://www.biorxiv.org/content/10.1101/2024.10.06.616839v2.full.pdf" target="_blank" class="btn dark">Read our Paper</a>
+  <a href="https://www.pnas.org/doi/10.1073/pnas.2504164122" target="_blank" class="btn dark" style="display: inline-flex; align-items: center; gap: 8px; padding: 16px 40px; font-size: 16px; font-weight: 700; letter-spacing: 0.5px; border-radius: 12px; text-decoration: none; border: 2px solid transparent; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);" onmouseover="this.style.borderColor='#ffffff'; this.style.transform='scale(1.05)'" onmouseout="this.style.borderColor='transparent'; this.style.transform='scale(1)'">
+    <img src="/blogs/softWTA/assets/logo-light-pnas.svg" width="60" height="30" alt="PNAS">
+    Read our Research
+  </a>
 </section>
 
 
@@ -977,51 +1028,59 @@ With SST held constant, increasing PV inhibition acts like a neural brake that l
     </div>
   </section> -->
 
-  <section class="contact-section" id="contact">
-  <div style="padding-top: 30px;"></div>
-  <h2>
-    Ready to Accelerate Your AI journey?
-  </h2>
-  <!-- <p">
-    Get In Touch With Us
-  </p> -->
-  <div style="padding-bottom:5px; padding-top: 25px;"></div>
-  <form action="https://formspree.io/f/xvoezewb" method="POST" target="_blank" class="contact-form">
-    <input type="email" name="email" placeholder="Your email" required class="form-input" />
-    <textarea name="message" placeholder="Optional message" rows="3" class="form-textarea"></textarea>
-    <button type="submit" class="form-button">Connect</button>
-  </form>
-  <div style="padding-bottom: 39px;"></div>
+  <section class="section" style="background: white; padding: 80px 0;">
+    <div style="max-width: 600px; margin: 0 auto; text-align: center; padding: 0 20px;">
+      <h2 style="color: black; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; border-bottom: 3px solid rgba(37, 99, 235, 0.3); padding-bottom: 0.75rem;">
+        Ready to Accelerate Your NeuroDiscovery?
+      </h2>
 
-</section>
+      <p style="color: #666; margin-bottom: 1.5rem; font-size: 1rem;">Get In Touch With Us</p>
+
+      <form action="https://formspree.io/f/xvoezewb" method="POST" target="_blank" style="max-width: 400px; margin: 0 auto; display: flex; flex-direction: column; gap: 1rem;">
+        <input type="email" placeholder="Your email" name="email" required
+               style="width: 100%; padding: 0.75rem 1rem; border-radius: 0.5rem; background: #f8f9fa; color: black; border: 1px solid #dee2e6; font-size: 1rem; outline: none; transition: all 0.3s ease;"
+               onfocus="this.style.borderColor='#2563eb'; this.style.boxShadow='0 0 0 3px rgba(37, 99, 235, 0.1)'"
+               onblur="this.style.borderColor='#dee2e6'; this.style.boxShadow='none'"/>
+        <textarea placeholder="Optional message" name="message" rows="3"
+                  style="width: 100%; padding: 0.75rem 1rem; border-radius: 0.5rem; background: #f8f9fa; color: black; border: 1px solid #dee2e6; font-size: 1rem; outline: none; resize: none; transition: all 0.3s ease;"
+                  onfocus="this.style.borderColor='#2563eb'; this.style.boxShadow='0 0 0 3px rgba(37, 99, 235, 0.1)'"
+                  onblur="this.style.borderColor='#dee2e6'; this.style.boxShadow='none'"></textarea>
+        <button type="submit" style="background: #2563eb; color: white; padding: 0.75rem 1.5rem; border-radius: 0.5rem; border: none; font-weight: 600; font-size: 1rem; cursor: pointer; transition: all 0.3s ease;"
+                onmouseover="this.style.background='#1d4ed8'"
+                onmouseout="this.style.background='#2563eb'">Connect</button>
+       </form>
+    </div>
+  </section>
+
+  <!-- Include Footer -->
+  <div id="footer-container"></div>
 
   <script src="script.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', () => {
-      // Initialize the original neuron graph in the side-by-side section
-      new NeuronGraph('neuron-graph');
-      
-      // Initialize the inline components in the WTA section
-      new NeocorticalCircuit('neocortical-circuit-inline');
-      
       // Initialize the standalone components in other sections
       window.neuromorphicInstance = new NeuromorphicHardware('neuromorphic-hardware-mapping');
       new WTADiagram('night-vision-wta');
 
-      // Set up Intersection Observer for animating author cards when they come into view
+      // Initialize WTA Transformation demo
+      window.wtaTransformationInstance = new WTATransformation('wta-transformation-demo');
+
+      // Set up Intersection Observer for animating institution cards when they come into view
       const featureObserver = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            const authorCards = document.querySelectorAll('#brain-ai-revolution .author-card');
-            authorCards.forEach((card, index) => {
+            const institutionCards = document.querySelectorAll('#brain-ai-revolution .institution-card');
+            institutionCards.forEach((card, index) => {
               setTimeout(() => {
                 card.classList.add('animate');
-              }, index * 300); // Stagger animations by 300ms
+                card.style.opacity = '1';
+                card.style.transform = 'translateY(0)';
+              }, index * 150); // Stagger animations by 150ms
             });
             featureObserver.disconnect(); // Stop observing once triggered
           }
         });
-      }, { threshold: 0.2 }); // Trigger when 20% of the section is visible
+      }, { threshold: 0.3 }); // Trigger when 30% of the section is visible
       
       // Start observing the brain-ai-revolution section
       const revolutionSection = document.getElementById('brain-ai-revolution');
@@ -1050,20 +1109,12 @@ With SST held constant, increasing PV inhibition acts like a neural brake that l
       const autoTransitionGrid = document.getElementById('auto-transition-grid');
       if (autoTransitionGrid) {
         const overlayContainers = autoTransitionGrid.querySelectorAll('.image-overlay-container');
-        let isHovering = false;
         let isShowingOverlay = false;
         
-        // Track mouse enter/leave to pause auto-transition during hover
-        overlayContainers.forEach(container => {
-          container.addEventListener('mouseenter', () => { isHovering = true; });
-          container.addEventListener('mouseleave', () => { isHovering = false; });
-        });
-        
-        // Auto transition all images together every 1.5 seconds if not being hovered
+        // Auto transition all images together every 1.5 seconds
         setInterval(() => {
-          if (!isHovering) {
             isShowingOverlay = !isShowingOverlay;
-            
+
             // Toggle active-transition class on all containers at once
             overlayContainers.forEach(container => {
               if (isShowingOverlay) {
@@ -1072,43 +1123,36 @@ With SST held constant, increasing PV inhibition acts like a neural brake that l
                 container.classList.remove('active-transition');
               }
             });
-          }
         }, 1500);
       }
       
-      // Brain-Like Feature Learning section with toggle control
+      // Brain-Like Feature Learning section with continuous toggle
       const domainAlignmentImage = document.getElementById('domain-alignment-image');
       const brainLikeToggle = document.getElementById('brain-like-toggle');
       const brainLikeSection = document.getElementById('brain-like-section');
-      
+
       if (domainAlignmentImage && brainLikeToggle && brainLikeSection) {
-        let hasBrainLikeAutoTransitioned = false;
         let isShowingEnhanced = false;
-        
-        // Intersection Observer to trigger auto-transition once on scroll
-        const brainLikeObserver = new IntersectionObserver((entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting && !hasBrainLikeAutoTransitioned) {
-              // Auto-transition once when scrolled into view
-              setTimeout(() => {
-                isShowingEnhanced = true;
-                domainAlignmentImage.style.opacity = '0.3';
-                
-                setTimeout(() => {
-                  domainAlignmentImage.src = 'assets/supp7.1.png';
-                  domainAlignmentImage.alt = 'Domain alignment enhanced';
-                  domainAlignmentImage.style.opacity = '1';
-                  brainLikeToggle.checked = true;
-                }, 400);
-                
-                hasBrainLikeAutoTransitioned = true;
-              }, 500); // Small delay for smooth entrance
+        let brainLikeInterval;
+
+        // Start continuous toggle immediately
+        brainLikeInterval = setInterval(() => {
+          isShowingEnhanced = !isShowingEnhanced;
+          brainLikeToggle.checked = isShowingEnhanced;
+
+          domainAlignmentImage.style.opacity = '0.3';
+
+          setTimeout(() => {
+            if (isShowingEnhanced) {
+              domainAlignmentImage.src = 'assets/supp7.1.png';
+              domainAlignmentImage.alt = 'Domain alignment enhanced';
+            } else {
+              domainAlignmentImage.src = 'assets/supp7.png';
+              domainAlignmentImage.alt = 'Domain alignment';
             }
-          });
-        }, { threshold: 0.3 });
-        
-        // Start observing the brain-like section
-        brainLikeObserver.observe(brainLikeSection);
+            domainAlignmentImage.style.opacity = '1';
+          }, 400);
+        }, 3000);
         
         // Toggle switch functionality
         brainLikeToggle.addEventListener('change', function() {
@@ -1129,39 +1173,25 @@ With SST held constant, increasing PV inhibition acts like a neural brake that l
         });
       }
       
-      // Zero-shot generalization images with toggle control
+      // Zero-shot generalization images with continuous toggle
       const zeroShotContainers = document.querySelectorAll('.zero-shot-image');
       const zeroShotToggle = document.getElementById('zero-shot-toggle');
       const zeroShotSection = document.getElementById('zero-shot-section');
-      
+
+      console.log('Zero-shot toggle found:', !!zeroShotToggle); // Debug log
+      console.log('Zero-shot section found:', !!zeroShotSection); // Debug log
+      console.log('Zero-shot containers found:', zeroShotContainers.length); // Debug log
+
       if (zeroShotContainers.length > 0 && zeroShotToggle && zeroShotSection) {
-        let hasAutoTransitioned = false;
         let isShowingZeroShotOverlay = false;
-        
-        // Intersection Observer to trigger auto-transition once on scroll
-        const zeroShotObserver = new IntersectionObserver((entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting && !hasAutoTransitioned) {
-              // Auto-transition once when scrolled into view
-              setTimeout(() => {
-                isShowingZeroShotOverlay = true;
-                zeroShotContainers.forEach(container => {
-                  container.classList.add('active-transition');
-                });
-                zeroShotToggle.checked = true;
-                hasAutoTransitioned = true;
-              }, 500); // Small delay for smooth entrance
-            }
-          });
-        }, { threshold: 0.3 });
-        
-        // Start observing the zero-shot section
-        zeroShotObserver.observe(zeroShotSection);
-        
-        // Toggle switch functionality
-        zeroShotToggle.addEventListener('change', function() {
-          isShowingZeroShotOverlay = this.checked;
-          
+        let zeroShotInterval;
+
+        // Start continuous toggle immediately
+        zeroShotInterval = setInterval(() => {
+          isShowingZeroShotOverlay = !isShowingZeroShotOverlay;
+          zeroShotToggle.checked = isShowingZeroShotOverlay;
+
+          // Toggle zero-shot images
           zeroShotContainers.forEach(container => {
             if (isShowingZeroShotOverlay) {
               container.classList.add('active-transition');
@@ -1169,9 +1199,58 @@ With SST held constant, increasing PV inhibition acts like a neural brake that l
               container.classList.remove('active-transition');
             }
           });
+
+          // Also toggle the MNIST grid
+          const mnistGrid = document.getElementById('auto-transition-grid');
+          if (mnistGrid) {
+            const mnistContainers = mnistGrid.querySelectorAll('.image-overlay-container');
+            mnistContainers.forEach(container => {
+              if (isShowingZeroShotOverlay) {
+                container.classList.add('active-transition');
+              } else {
+                container.classList.remove('active-transition');
+              }
+            });
+          }
+        }, 3000);
+        
+        // Toggle switch functionality
+        zeroShotToggle.addEventListener('change', function() {
+          console.log('Toggle clicked! Checked:', this.checked); // Debug log
+          isShowingZeroShotOverlay = this.checked;
+
+          // Toggle zero-shot images
+          console.log('Zero-shot containers found:', zeroShotContainers.length); // Debug log
+          zeroShotContainers.forEach(container => {
+            if (isShowingZeroShotOverlay) {
+              container.classList.add('active-transition');
+              console.log('Added active-transition to zero-shot container'); // Debug log
+            } else {
+              container.classList.remove('active-transition');
+              console.log('Removed active-transition from zero-shot container'); // Debug log
+            }
+          });
+
+          // Also toggle the MNIST grid images
+          const mnistGrid = document.getElementById('auto-transition-grid');
+          if (mnistGrid) {
+            const mnistContainers = mnistGrid.querySelectorAll('.image-overlay-container');
+            console.log('MNIST containers found:', mnistContainers.length); // Debug log
+            mnistContainers.forEach(container => {
+              if (isShowingZeroShotOverlay) {
+                container.classList.add('active-transition');
+                console.log('Added active-transition to MNIST container'); // Debug log
+              } else {
+                container.classList.remove('active-transition');
+                console.log('Removed active-transition from MNIST container'); // Debug log
+              }
+            });
+          } else {
+            console.log('MNIST grid not found!'); // Debug log
+          }
         });
       }
-      
+
       // Handle toggle switch for Zero-Shot Learning section
       const imageToggle = document.getElementById('image-toggle');
       if (imageToggle) {
@@ -1338,6 +1417,50 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 </script>
 
+<script>
+// Auto-play demo video on scroll
+document.addEventListener('DOMContentLoaded', function() {
+  const demoVideo = document.getElementById('demo-video');
+
+  if (demoVideo) {
+    // Create intersection observer to detect when demo video is in view
+    const demoObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          // Video is in view - try to play it
+          demoVideo.play().catch(error => {
+            // Autoplay might be blocked by browser, that's okay
+            console.log('Demo video autoplay blocked:', error);
+          });
+        } else {
+          // Video is out of view - pause it
+          demoVideo.pause();
+        }
+      });
+    }, {
+      threshold: 0.5, // Trigger when 50% of video is visible
+      rootMargin: '0px 0px -50px 0px' // Trigger slightly before video is fully in view
+    });
+
+    // Start observing the demo video
+    demoObserver.observe(demoVideo);
+
+    // Also handle page visibility changes for demo video
+    document.addEventListener('visibilitychange', function() {
+      if (document.hidden) {
+        demoVideo.pause();
+      } else {
+        // Check if demo video is still in view when page becomes visible again
+        const rect = demoVideo.getBoundingClientRect();
+        const isInView = rect.top < window.innerHeight && rect.bottom > 0;
+        if (isInView) {
+          demoVideo.play().catch(() => {});
+        }
+      }
+    });
+  }
+});
+</script>
 
 <script type="module" src="/main.js"></script>
 
