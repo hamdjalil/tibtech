@@ -31,13 +31,11 @@ class WTATransformation {
     this.container.style.cssText = `
       position: relative;
       width: 100%;
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 40px 0px;
+      max-width: 1100px;
+      margin: 20px auto;
+      padding: 0;
       min-height: 300px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      display: block;
       background: #ffffff;
       border-radius: 16px;
       overflow: visible;
@@ -52,11 +50,13 @@ class WTATransformation {
     gridContainer.className = 'wta-grid-container';
     gridContainer.style.cssText = `
     display: flex;
-    gap: 80px;
+    gap: 170px;
     align-items: center;
-    justify-content: flex-start;  /* ← was 'left', use flex-start */
+    justify-content: flex-start;
     flex-wrap: wrap;
     width: 100%;
+    margin: 0;
+    padding: 0;
   `;
   
 
@@ -67,18 +67,21 @@ class WTATransformation {
         position: relative;
         display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start;
         gap: 15px;
         min-width: 200px;
+        margin: 0;
+        padding: 0;
       `;
+      
 
       // Original image container
       const originalContainer = document.createElement('div');
       originalContainer.className = 'original-container';
       originalContainer.style.cssText = `
         position: relative;
-        width: 97px;
-        height: 97px;
+        width: 135px;
+        height: 135px;
         overflow: hidden;
         box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
         transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
@@ -118,9 +121,9 @@ class WTATransformation {
       processedContainer.style.cssText = `
         position: absolute;
         top: 0;
-        right: -90px;
-        width: 97px;
-        height: 97px;
+        right: -130px;
+        width: 135px;
+        height: 135px;
         overflow: hidden;
         box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
         opacity: 0;
@@ -143,8 +146,8 @@ class WTATransformation {
       arrow.style.cssText = `
         position: absolute;
         top: 35%;
-        left: 150px;
-        width: 40px;
+        left: 135px;
+        width: 55px;
         height: 2px;
         background:rgb(235, 53, 37);
         opacity: 0;
@@ -176,7 +179,7 @@ class WTATransformation {
         font-weight: 600;
         font-size: 14px;
         color: #374151;
-        text-align: center;
+        text-align: left;
         opacity: 1;
         transition: opacity 0.5s ease;
       `;
@@ -188,12 +191,11 @@ class WTATransformation {
       originalCaption.style.cssText = `
         position: absolute;
         bottom: -35px;
-        left: 50%;
-        transform: translateX(-50%);
+        left: 0;
         font-family: 'Inter Tight', sans-serif;
         font-size: 12px;
         color: #6b7280;
-        text-align: center;
+        text-align: left;
         opacity: 0;
         transition: opacity 0.5s ease;
         white-space: nowrap;
