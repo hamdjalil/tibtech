@@ -41,10 +41,13 @@ jobs:
         
       - name: Build with Vite (optional - for other assets)
         run: npm run build
-        
+
+      - name: Copy public assets to root
+        run: cp -r public/* .
+
       - name: Setup Pages
         uses: actions/configure-pages@v4
-        
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
