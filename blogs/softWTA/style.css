@@ -1486,13 +1486,6 @@ body.menu-open {
   opacity: 0;
 }
 
-.image-overlay-container:hover .overlay-image {
-  opacity: 1;
-}
-
-.image-overlay-container:hover .base-image {
-  opacity: 0;
-}
 
 .transition-container {
   position: relative;
