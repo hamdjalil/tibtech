@@ -1,187 +1,71 @@
-<!-- Start: Impact Section (Responsive + Borderless Visual) -->
-<section class="section bg-gray-50 relative overflow-hidden">
-  <!-- soft blobs (consistent with other sections) -->
-  <div class="absolute inset-0 pointer-events-none">
-    <div class="absolute bottom-0 right-0 w-1/4 h-1/4 bg-blue-200 opacity-10 blur-[100px] rounded-full"></div>
-    <div class="absolute top-0 left-0 w-1/5 h-1/5 bg-teal-200 opacity-10 blur-[100px] rounded-full"></div>
-  </div>
-
-  <div class="container relative z-10">
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-12 items-center">
-      <!-- Content -->
-      <div class="max-w-2xl">
-        <h2 class="mb-4 md:mb-5 text-2xl sm:text-3xl md:text-4xl font-semibold leading-tight tracking-tight reveal inview" style="--stagger:0">
-          <span class="text-black">Transforming </span>
-          <span class="bg-clip-text text-transparent bg-gradient-to-r from-blue-600 via-teal-600 to-purple-600 animate-gradient-x">
-            NeuroDiscovery with AI
-          </span>
-        </h2>
-
-        <p class="text-gray-600 max-w-2xl mx-auto text-sm md:text-base mb-7" style="--stagger:1">
-          From NeuroAI to multimodal healthcare, we’re building advanced AI solutions to tackle some of humanity’s most pressing challenges.
+<!-- Start: Impact Section Component -->
+<section class="section bg-black">
+  <div class="container">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <div>
+        <h2 class="mb-6">Transforming NeuroDiscovery with AI</h2>
+        <p class="text-deepmind-gray-300 mb-6">
+          From NeuroAI to multimodal healthcare, we're building advanced AI solutions to solve some of humanity's most pressing challenges.
         </p>
-
-        <!-- Bullets -->
         <div class="space-y-4">
-          <!-- item -->
-          <div class="flex items-start gap-3 group reveal" style="--stagger:2">
-            <div class="flex-shrink-0 mt-0.5">
-              <div class="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-blue-100 flex items-center justify-center ring-1 ring-black/5 transition-transform motion-safe:group-hover:scale-105">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-blue-700" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+          <!-- Impact Item 1 -->
+          <div class="flex items-start">
+            <div class="flex-shrink-0 mt-1">
+              <div class="w-8 h-8 rounded-full bg-deepmind-blue/20 flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-deepmind-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                 </svg>
               </div>
             </div>
-            <div>
-              <h4 class="text-base sm:text-lg font-medium text-black">Drug Discovery</h4>
-              <p class="text-gray-600 mt-1 text-sm">Foundation models, wet-lab loops, and target prioritization.</p>
+            <div class="ml-4">
+              <h4 class="text-lg font-large">Drug Discovery</h4>
+              <!-- <p class="text-deepmind-gray-400">Accelerating scientific discovery and advancing healthcare through powerful AI models.</p> -->
             </div>
           </div>
-
-          <!-- item -->
-          <div class="flex items-start gap-3 group reveal" style="--stagger:3">
-            <div class="flex-shrink-0 mt-0.5">
-              <div class="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-teal-100 flex items-center justify-center ring-1 ring-black/5 transition-transform motion-safe:group-hover:scale-105">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-teal-700" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+          
+          <!-- Impact Item 2 -->
+          <div class="flex items-start">
+            <div class="flex-shrink-0 mt-1">
+              <div class="w-8 h-8 rounded-full bg-deepmind-teal/20 flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-deepmind-teal" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                 </svg>
               </div>
             </div>
-            <div>
-              <h4 class="text-base sm:text-lg font-medium text-black">Rehabilitation</h4>
-              <p class="text-gray-600 mt-1 text-sm">Edge ML for motion, personalized recovery and remote care.</p>
+            <div class="ml-4">
+              <h4 class="text-lg font-large">Rehabilitation</h4>
+              <!-- <p class="text-deepmind-gray-400">Applying AI to help tackle climate change through improved weather forecasting and energy grid optimization.</p> -->
             </div>
           </div>
-
-          <!-- item -->
-          <div class="flex items-start gap-3 group reveal" style="--stagger:4">
-            <div class="flex-shrink-0 mt-0.5">
-              <div class="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-purple-100 flex items-center justify-center ring-1 ring-black/5 transition-transform motion-safe:group-hover:scale-105">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-purple-700" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+          
+          <!-- Impact Item 3 -->
+          <div class="flex items-start">
+            <div class="flex-shrink-0 mt-1">
+              <div class="w-8 h-8 rounded-full bg-deepmind-purple/20 flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-deepmind-purple" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                 </svg>
               </div>
             </div>
-            <div>
-              <h4 class="text-base sm:text-lg font-medium text-black">NeuroAI</h4>
-              <p class="text-gray-600 mt-1 text-sm">Neural encoding, RL, and brain-inspired architectures.</p>
+            <div class="ml-4">
+              <h4 class="text-lg font-large">NeuroAI</h4>
+              <!-- <p class="text-deepmind-gray-400">Building AI systems that can help uncover new knowledge and accelerate the pace of scientific progress.</p> -->
             </div>
           </div>
         </div>
-
-        <!-- micro stats -->
-        <div class="mt-6 md:mt-8 grid grid-cols-3 gap-3 sm:gap-4 max-w-md">
-          <div class="rounded-xl bg-white/70 backdrop-blur ring-1 ring-black/5 p-3 sm:p-4 text-center reveal" style="--stagger:5">
-            <div class="text-xl sm:text-2xl font-semibold text-black">10x</div>
-            <div class="text-xs text-gray-600">Faster screening*</div>
-          </div>
-          <div class="rounded-xl bg-white/70 backdrop-blur ring-1 ring-black/5 p-3 sm:p-4 text-center reveal" style="--stagger:6">
-            <div class="text-xl sm:text-2xl font-semibold text-black">MM</div>
-            <div class="text-xs text-gray-600">Multimodal ready</div>
-          </div>
-          <div class="rounded-xl bg-white/70 backdrop-blur ring-1 ring-black/5 p-3 sm:p-4 text-center reveal" style="--stagger:7">
-            <div class="text-xl sm:text-2xl font-semibold text-black">HIPAA</div>
-            <div class="text-xs text-gray-600">Aligned workflows</div>
-          </div>
-        </div>
-
-        <p class="mt-3 text-xs text-gray-400 reveal" style="--stagger:8">*Illustrative—varies by dataset, task, and constraints.</p>
+        
       </div>
-
-      <!-- Visual (borderless) -->
-      <div class="relative reveal" style="--stagger:2">
-        <div class="group perspective max-w-[680px] mx-auto magnetic">
-          <div class="relative rounded-2xl overflow-hidden bg-white shadow-lg md:shadow-xl transition-transform duration-500 motion-safe:group-hover:-rotate-1 motion-safe:group-hover:-translate-y-1">
-            <!-- subtle gloss -->
-            <div class="pointer-events-none absolute inset-0 bg-gradient-to-tr from-gray-100/40 to-transparent"></div>
-
-            <!-- borderless image with shine sweep -->
-            <div class="relative aspect-[4/3] flex items-center justify-center overflow-hidden">
-              <img
-                src="https://tibbtech.com/TibbTech.svg"
-                alt="TibbTech"
-                class="w-full h-full object-contain p-6 sm:p-8"
-                loading="lazy"
-                decoding="async"
-              />
-              <span class="shine"></span>
-            </div>
+      
+      <!-- Logo Section (replacing the image) -->
+      <div class="relative rounded-xl overflow-hidden aspect-[4/3] bg-black">
+        <div class="absolute inset-0 flex items-center justify-center">
+          <div class="landing-logo w-full h-full bg-contain bg-center bg-no-repeat bg-white invert"
+               style="background-image: url('https://tibbtech.com/TibbTech.svg')">
           </div>
         </div>
-        <p class="text-center text-sm text-gray-500 mt-3">Trusted technology powering real-world research.</p>
+        <!-- <div class="absolute inset-0 bg-gradient-to-tr from-deepmind-dark/30 to-transparent pointer-events-none"></div> -->
       </div>
     </div>
   </div>
 </section>
-
-<!-- local utilities -->
-<style>
-  /* Reveal: visible by default; animation enhances when .inview is added */
-  .reveal{ opacity:1; transform:none }
-  .reveal.inview{ animation: fadeUp .7s cubic-bezier(.22,.61,.36,1) both; }
-  .reveal.inview{ animation-delay: calc(var(--stagger,0) * 90ms); }
-  @keyframes fadeUp{ from{ opacity:0; transform: translateY(14px) } to{ opacity:1; transform:none } }
-
-  /* Animated gradient text */
-  .animate-gradient-x{ background-size:300% 300%; animation: gradShift 6s ease infinite; }
-  @keyframes gradShift{ 0%{background-position:0% 50%} 50%{background-position:100% 50%} 100%{background-position:0% 50%} }
-
-  /* Image shine sweep */
-  .shine{
-    position:absolute; inset:0; pointer-events:none; mix-blend-mode:screen;
-    background: linear-gradient(120deg, transparent 30%, rgba(255,255,255,.28) 50%, transparent 70%);
-    transform: translateX(-120%);
-    transition: transform .8s ease;
-  }
-  .group:hover .shine{ transform: translateX(120%); }
-
-  /* Magnetic (subtle tilt) */
-  .magnetic{ transform-style:preserve-3d; transition: transform .12s ease-out; }
-  .magnetic:hover{ will-change: transform; }
-
-  /* Motion prefs */
-  @media (prefers-reduced-motion: reduce){
-    .reveal, .reveal.inview{ animation: none !important; opacity:1 !important; transform:none !important }
-    .animate-gradient-x, .shine{ animation: none !important; transition: none !important }
-    .magnetic{ transition: none }
-  }
-</style>
-
-<!-- Tiny JS for scroll-reveal + magnetic tilt (safe fallback if JS blocked) -->
-<script>
-  // Scroll reveal
-  document.addEventListener('DOMContentLoaded', () => {
-    if('IntersectionObserver' in window){
-      const io = new IntersectionObserver((entries)=>{
-        entries.forEach(e=>{
-          if(e.isIntersecting){
-            e.target.classList.add('inview');
-            io.unobserve(e.target);
-          }
-        });
-      }, {threshold: .15, rootMargin: '0px 0px -10% 0px'});
-      document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
-    } else {
-      document.querySelectorAll('.reveal').forEach(el=>el.classList.add('inview'));
-    }
-  });
-
-  // Magnetic tilt (light + throttled)
-  (function(){
-    const els = document.querySelectorAll('.magnetic');
-    els.forEach(card=>{
-      let rafId = null;
-      const k = 0.02; // strength
-      function update(e){
-        const r = card.getBoundingClientRect();
-        const x = e.clientX - (r.left + r.width/2);
-        const y = e.clientY - (r.top + r.height/2);
-        card.style.transform = `translate(${x*k}px, ${y*k}px) rotateX(${y*k}deg) rotateY(${x*k}deg)`;
-        rafId = null;
-      }
-      card.addEventListener('mousemove', (e)=>{ if(!rafId) rafId = requestAnimationFrame(()=>update(e)); });
-      card.addEventListener('mouseleave', ()=>{ card.style.transform = 'translate(0,0) rotateX(0) rotateY(0)'; });
-    });
-  })();
-</script>
-<!-- End: Impact Section (Responsive + Borderless Visual + Motion) -->
+<!-- End: Impact Section Component -->
