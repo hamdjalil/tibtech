@@ -480,7 +480,7 @@
                 </div>
               </details>
 
-              <a href="#partner-section-container" class="block p-2 text-black hover:bg-gray-100 rounded">Contact</a>
+              <a href="/about.html" class="block p-2 text-black hover:bg-gray-100 rounded">About</a>
             </nav>
           </div>
         </div>
@@ -651,44 +651,93 @@
             });
         });
 
-        /* Your original navbar logic (class names aligned) */
+        /* Fixed mobile navbar logic for about page */
         document.addEventListener('DOMContentLoaded', () => {
           const navbar = document.getElementById('navbar');
-          const hero = document.getElementById('hero-section');
+          const mobileToggle = document.getElementById('mobile-menu-toggle');
+          const mobileMenu = document.querySelector('.fixed.top-0.right-0.h-screen.w-64');
+          const backdrop = document.querySelector('label[for="mobile-menu-toggle"].hidden');
 
-          if (!navbar || !hero) return;
+          if (!navbar || !mobileToggle || !mobileMenu) return;
 
-          // Ensure a known starting state
-          navbar.classList.remove('navbar-hidden');
-
-          const closeMobileMenuIfOpen = () => {
-            const toggle = document.getElementById('mobile-menu-toggle');
-            if (toggle && toggle.checked) toggle.checked = false;
+          const closeMobileMenu = () => {
+            mobileToggle.checked = false;
+            // Manually hide the sidebar and backdrop
+            mobileMenu.style.transform = 'translateX(100%)';
+            if (backdrop) {
+              backdrop.style.display = 'none';
+            }
           };
 
-          // Observe hero visibility
-          const io = new IntersectionObserver(
-            (entries) => {
-              const entry = entries[0];
-              if (entry.isIntersecting) {
-                // Any part of hero on screen → show navbar
-                navbar.classList.remove('navbar-hidden');
-              } else {
-                // Completely past hero → hide navbar and switch to scrolled style
-                navbar.classList.add('navbar-hidden','navbar-scrolled');
-                closeMobileMenuIfOpen();
-              }
-            },
-            { root: null, threshold: 0, rootMargin: '0px' }
-          );
-          io.observe(hero);
+          const openMobileMenu = () => {
+            mobileToggle.checked = true;
+            // Manually show the sidebar and backdrop
+            mobileMenu.style.transform = 'translateX(0)';
+            if (backdrop) {
+              backdrop.style.display = 'block';
+            }
+          };
 
-          // Add scrolled style once user moves a bit
+          // Override the toggle behavior
+          const toggleButton = document.querySelector('label[for="mobile-menu-toggle"][aria-label="Toggle Menu"]');
+          if (toggleButton) {
+            toggleButton.addEventListener('click', (e) => {
+              e.preventDefault();
+              if (mobileToggle.checked) {
+                closeMobileMenu();
+              } else {
+                openMobileMenu();
+              }
+            });
+          }
+
+          // Close button
+          const closeButton = document.querySelector('label[for="mobile-menu-toggle"][aria-label="Close Menu"]');
+          if (closeButton) {
+            closeButton.addEventListener('click', (e) => {
+              e.preventDefault();
+              closeMobileMenu();
+            });
+          }
+
+          // Add scrolled style and close mobile menu on scroll
           window.addEventListener('scroll', () => {
             const top = window.scrollY || document.documentElement.scrollTop;
-            if (top > 8) navbar.classList.add('navbar-scrolled');
-            else navbar.classList.remove('navbar-scrolled');
+            if (top > 8) {
+              navbar.classList.add('navbar-scrolled');
+            } else {
+              navbar.classList.remove('navbar-scrolled');
+            }
+
+            // Close mobile menu on scroll
+            if (mobileToggle.checked) {
+              closeMobileMenu();
+            }
           }, { passive: true });
+
+          // Close mobile menu when clicking the backdrop
+          if (backdrop) {
+            backdrop.addEventListener('click', closeMobileMenu);
+          }
+
+          // Close menu when clicking outside
+          document.addEventListener('click', (e) => {
+            if (mobileToggle.checked &&
+                !mobileMenu.contains(e.target) &&
+                !toggleButton.contains(e.target)) {
+              closeMobileMenu();
+            }
+          });
+
+          // Handle escape key
+          document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && mobileToggle.checked) {
+              closeMobileMenu();
+            }
+          });
+
+          // Initialize closed state
+          closeMobileMenu();
         });
     </script>
 </body>
