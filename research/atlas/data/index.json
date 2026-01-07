@@ -1,0 +1,3306 @@
+{
+  "P4": {
+    "animal_314": {
+      "channels": {
+        "C1": [
+          {
+            "image": "C1-r.khan_20190412P3_004-Scene-02-ScanRegion1.czi - r.khan_20190412P3_004-Scene-02-ScanRegion1.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_314/DONE_Ref_2_r.khan_20190412P3_004-Scene-02-ScanRegion1"
+          },
+          {
+            "image": "C1-r.khan_20190412P3_004-Scene-03-ScanRegion2.czi - r.khan_20190412P3_004-Scene-03-ScanRegion2.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_314/DONE_Ref_3_r.khan_20190412P3_004-Scene-03-ScanRegion2"
+          },
+          {
+            "image": "C1-r.khan_20190412P3_004-Scene-06-ScanRegion5.czi - r.khan_20190412P3_004-Scene-06-ScanRegion5.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_314/DONE_Ref_6_r.khan_20190412P3_004-Scene-06-ScanRegion5"
+          },
+          {
+            "image": "C1-r.khan_20190412P3_004-Scene-07-ScanRegion6.czi - r.khan_20190412P3_004-Scene-07-ScanRegion6.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_314/DONE_Ref_7_r.khan_20190412P3_004-Scene-07-ScanRegion6"
+          },
+          {
+            "image": "C1-r.khan_20190412P3_007-Scene-06-ScanRegion5.czi - r.khan_20190412P3_007-Scene-06-ScanRegion5.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_314/DONE_Ref_7_r.khan_20190412P3_007-Scene-06-ScanRegion5"
+          },
+          {
+            "image": "C1-r.khan_20190412P3_007-Scene-12-ScanRegion13.czi - r.khan_20190412P3_007-Scene-12-ScanRegion13.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_314/DONE_Ref_9_r.khan_20190412P3_007-Scene-12-ScanRegion13"
+          },
+          {
+            "image": "C1-r.khan_20190412P3_004-Scene-04-ScanRegion3.czi - r.khan_20190412P3_004-Scene-04-ScanRegion3.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_314/DONE_Ref_10_r.khan_20190412P3_004-Scene-04-ScanRegion3"
+          },
+          {
+            "image": "C1-r.khan_20190412P3_004-Scene-11-ScanRegion10.czi - r.khan_20190412P3_004-Scene-11-ScanRegion10.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_314/DONE_Ref_10_r.khan_20190412P3_004-Scene-11-ScanRegion10"
+          },
+          {
+            "image": "C1-r.khan_20190412P3_005-Scene-08-ScanRegion7.czi - r.khan_20190412P3_005-Scene-08-ScanRegion7.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_314/DONE_Ref_10_r.khan_20190412P3_005-Scene-08-ScanRegion7"
+          },
+          {
+            "image": "C1-r.khan_20190412P3_007-Scene-08-ScanRegion7.czi - r.khan_20190412P3_007-Scene-08-ScanRegion7.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_314/DONE_Ref_10_r.khan_20190412P3_007-Scene-08-ScanRegion7"
+          },
+          {
+            "image": "C1-r.khan_20190412P3_004-Scene-08-ScanRegion7.czi - r.khan_20190412P3_004-Scene-08-ScanRegion7.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_314/DONE_Ref_11_r.khan_20190412P3_004-Scene-08-ScanRegion7"
+          },
+          {
+            "image": "C1-r.khan_20190412P3_005-Scene-07-ScanRegion6.czi - r.khan_20190412P3_005-Scene-07-ScanRegion6.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_314/DONE_Ref_11_r.khan_20190412P3_005-Scene-07-ScanRegion6"
+          },
+          {
+            "image": "C1-r.khan_20190412P3_005-Scene-10-ScanRegion9.czi - r.khan_20190412P3_005-Scene-10-ScanRegion9.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_314/DONE_Ref_11_r.khan_20190412P3_005-Scene-10-ScanRegion9"
+          },
+          {
+            "image": "C1-r.khan_20190412P3_007-Scene-05-ScanRegion4.czi - r.khan_20190412P3_007-Scene-05-ScanRegion4.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_314/DONE_Ref_11_r.khan_20190412P3_007-Scene-05-ScanRegion4"
+          },
+          {
+            "image": "C1-r.khan_20190412P3_007-Scene-07-ScanRegion6.czi - r.khan_20190412P3_007-Scene-07-ScanRegion6.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_314/DONE_Ref_11_r.khan_20190412P3_007-Scene-07-ScanRegion6"
+          },
+          {
+            "image": "C1-r.khan_20190412P3_004-Scene-09-ScanRegion8.czi - r.khan_20190412P3_004-Scene-09-ScanRegion8.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_314/DONE_Ref_12_r.khan_20190412P3_004-Scene-09-ScanRegion8"
+          },
+          {
+            "image": "C1-r.khan_20190412P3_005-Scene-03-ScanRegion2.czi - r.khan_20190412P3_005-Scene-03-ScanRegion2.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_314/DONE_Ref_12_r.khan_20190412P3_005-Scene-03-ScanRegion2"
+          },
+          {
+            "image": "C1-r.khan_20190412P3_007-Scene-09-ScanRegion10.czi - r.khan_20190412P3_007-Scene-09-ScanRegion10.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_314/DONE_Ref_13_r.khan_20190412P3_007-Scene-09-ScanRegion10"
+          },
+          {
+            "image": "C1-r.khan_20190412P3_004-Scene-10-ScanRegion9.czi - r.khan_20190412P3_004-Scene-10-ScanRegion9.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_314/DONE_Ref_14_r.khan_20190412P3_004-Scene-10-ScanRegion9"
+          },
+          {
+            "image": "C1-r.khan_20190412P3_005-Scene-09-ScanRegion8.czi - r.khan_20190412P3_005-Scene-09-ScanRegion8.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_314/DONE_Ref_14_r.khan_20190412P3_005-Scene-09-ScanRegion8"
+          },
+          {
+            "image": "C1-r.khan_20190412P3_004-Scene-05-ScanRegion4.czi - r.khan_20190412P3_004-Scene-05-ScanRegion4.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_314/DONE_Ref_16_r.khan_20190412P3_004-Scene-05-ScanRegion4"
+          },
+          {
+            "image": "C1-r.khan_20190412P3_005-Scene-11-ScanRegion10.czi - r.khan_20190412P3_005-Scene-11-ScanRegion10.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_314/DONE_Ref_16_r.khan_20190412P3_005-Scene-11-ScanRegion10"
+          },
+          {
+            "image": "C1-r.khan_20190412P3_007-Scene-02-ScanRegion1.czi - r.khan_20190412P3_007-Scene-02-ScanRegion1.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_314/DONE_Ref_16_r.khan_20190412P3_007-Scene-02-ScanRegion1"
+          },
+          {
+            "image": "C1-r.khan_20190412P3_007-Scene-10-ScanRegion11.czi - r.khan_20190412P3_007-Scene-10-ScanRegion11.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_314/DONE_Ref_16_r.khan_20190412P3_007-Scene-10-ScanRegion11"
+          }
+        ],
+        "C2": [
+          {
+            "image": "C2-r.khan_20190412P3_004-Scene-02-ScanRegion1.czi - r.khan_20190412P3_004-Scene-02-ScanRegion1.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_314/DONE_Ref_2_r.khan_20190412P3_004-Scene-02-ScanRegion1"
+          },
+          {
+            "image": "C2-r.khan_20190412P3_004-Scene-03-ScanRegion2.czi - r.khan_20190412P3_004-Scene-03-ScanRegion2.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_314/DONE_Ref_3_r.khan_20190412P3_004-Scene-03-ScanRegion2"
+          },
+          {
+            "image": "C2-r.khan_20190412P3_004-Scene-06-ScanRegion5.czi - r.khan_20190412P3_004-Scene-06-ScanRegion5.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_314/DONE_Ref_6_r.khan_20190412P3_004-Scene-06-ScanRegion5"
+          },
+          {
+            "image": "C2-r.khan_20190412P3_004-Scene-07-ScanRegion6.czi - r.khan_20190412P3_004-Scene-07-ScanRegion6.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_314/DONE_Ref_7_r.khan_20190412P3_004-Scene-07-ScanRegion6"
+          },
+          {
+            "image": "C2-r.khan_20190412P3_007-Scene-06-ScanRegion5.czi - r.khan_20190412P3_007-Scene-06-ScanRegion5.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_314/DONE_Ref_7_r.khan_20190412P3_007-Scene-06-ScanRegion5"
+          },
+          {
+            "image": "C2-r.khan_20190412P3_007-Scene-12-ScanRegion13.czi - r.khan_20190412P3_007-Scene-12-ScanRegion13.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_314/DONE_Ref_9_r.khan_20190412P3_007-Scene-12-ScanRegion13"
+          },
+          {
+            "image": "C2-r.khan_20190412P3_004-Scene-04-ScanRegion3.czi - r.khan_20190412P3_004-Scene-04-ScanRegion3.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_314/DONE_Ref_10_r.khan_20190412P3_004-Scene-04-ScanRegion3"
+          },
+          {
+            "image": "C2-r.khan_20190412P3_004-Scene-11-ScanRegion10.czi - r.khan_20190412P3_004-Scene-11-ScanRegion10.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_314/DONE_Ref_10_r.khan_20190412P3_004-Scene-11-ScanRegion10"
+          },
+          {
+            "image": "C2-r.khan_20190412P3_005-Scene-08-ScanRegion7.czi - r.khan_20190412P3_005-Scene-08-ScanRegion7.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_314/DONE_Ref_10_r.khan_20190412P3_005-Scene-08-ScanRegion7"
+          },
+          {
+            "image": "C2-r.khan_20190412P3_007-Scene-08-ScanRegion7.czi - r.khan_20190412P3_007-Scene-08-ScanRegion7.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_314/DONE_Ref_10_r.khan_20190412P3_007-Scene-08-ScanRegion7"
+          },
+          {
+            "image": "C2-r.khan_20190412P3_004-Scene-08-ScanRegion7.czi - r.khan_20190412P3_004-Scene-08-ScanRegion7.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_314/DONE_Ref_11_r.khan_20190412P3_004-Scene-08-ScanRegion7"
+          },
+          {
+            "image": "C2-r.khan_20190412P3_005-Scene-07-ScanRegion6.czi - r.khan_20190412P3_005-Scene-07-ScanRegion6.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_314/DONE_Ref_11_r.khan_20190412P3_005-Scene-07-ScanRegion6"
+          },
+          {
+            "image": "C2-r.khan_20190412P3_005-Scene-10-ScanRegion9.czi - r.khan_20190412P3_005-Scene-10-ScanRegion9.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_314/DONE_Ref_11_r.khan_20190412P3_005-Scene-10-ScanRegion9"
+          },
+          {
+            "image": "C2-r.khan_20190412P3_007-Scene-05-ScanRegion4.czi - r.khan_20190412P3_007-Scene-05-ScanRegion4.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_314/DONE_Ref_11_r.khan_20190412P3_007-Scene-05-ScanRegion4"
+          },
+          {
+            "image": "C2-r.khan_20190412P3_007-Scene-07-ScanRegion6.czi - r.khan_20190412P3_007-Scene-07-ScanRegion6.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_314/DONE_Ref_11_r.khan_20190412P3_007-Scene-07-ScanRegion6"
+          },
+          {
+            "image": "C2-r.khan_20190412P3_004-Scene-09-ScanRegion8.czi - r.khan_20190412P3_004-Scene-09-ScanRegion8.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_314/DONE_Ref_12_r.khan_20190412P3_004-Scene-09-ScanRegion8"
+          },
+          {
+            "image": "C2-r.khan_20190412P3_005-Scene-03-ScanRegion2.czi - r.khan_20190412P3_005-Scene-03-ScanRegion2.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_314/DONE_Ref_12_r.khan_20190412P3_005-Scene-03-ScanRegion2"
+          },
+          {
+            "image": "C2-r.khan_20190412P3_007-Scene-09-ScanRegion10.czi - r.khan_20190412P3_007-Scene-09-ScanRegion10.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_314/DONE_Ref_13_r.khan_20190412P3_007-Scene-09-ScanRegion10"
+          },
+          {
+            "image": "C2-r.khan_20190412P3_004-Scene-10-ScanRegion9.czi - r.khan_20190412P3_004-Scene-10-ScanRegion9.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_314/DONE_Ref_14_r.khan_20190412P3_004-Scene-10-ScanRegion9"
+          },
+          {
+            "image": "C2-r.khan_20190412P3_005-Scene-09-ScanRegion8.czi - r.khan_20190412P3_005-Scene-09-ScanRegion8.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_314/DONE_Ref_14_r.khan_20190412P3_005-Scene-09-ScanRegion8"
+          },
+          {
+            "image": "C2-r.khan_20190412P3_004-Scene-05-ScanRegion4.czi - r.khan_20190412P3_004-Scene-05-ScanRegion4.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_314/DONE_Ref_16_r.khan_20190412P3_004-Scene-05-ScanRegion4"
+          },
+          {
+            "image": "C2-r.khan_20190412P3_005-Scene-11-ScanRegion10.czi - r.khan_20190412P3_005-Scene-11-ScanRegion10.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_314/DONE_Ref_16_r.khan_20190412P3_005-Scene-11-ScanRegion10"
+          },
+          {
+            "image": "C2-r.khan_20190412P3_007-Scene-02-ScanRegion1.czi - r.khan_20190412P3_007-Scene-02-ScanRegion1.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_314/DONE_Ref_16_r.khan_20190412P3_007-Scene-02-ScanRegion1"
+          },
+          {
+            "image": "C2-r.khan_20190412P3_007-Scene-10-ScanRegion11.czi - r.khan_20190412P3_007-Scene-10-ScanRegion11.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_314/DONE_Ref_16_r.khan_20190412P3_007-Scene-10-ScanRegion11"
+          }
+        ],
+        "C3": [
+          {
+            "image": "C3-r.khan_20190412P3_004-Scene-02-ScanRegion1.czi - r.khan_20190412P3_004-Scene-02-ScanRegion1.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_314/DONE_Ref_2_r.khan_20190412P3_004-Scene-02-ScanRegion1"
+          },
+          {
+            "image": "C3-r.khan_20190412P3_004-Scene-03-ScanRegion2.czi - r.khan_20190412P3_004-Scene-03-ScanRegion2.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_314/DONE_Ref_3_r.khan_20190412P3_004-Scene-03-ScanRegion2"
+          },
+          {
+            "image": "C3-r.khan_20190412P3_004-Scene-06-ScanRegion5.czi - r.khan_20190412P3_004-Scene-06-ScanRegion5.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_314/DONE_Ref_6_r.khan_20190412P3_004-Scene-06-ScanRegion5"
+          },
+          {
+            "image": "C3-r.khan_20190412P3_004-Scene-07-ScanRegion6.czi - r.khan_20190412P3_004-Scene-07-ScanRegion6.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_314/DONE_Ref_7_r.khan_20190412P3_004-Scene-07-ScanRegion6"
+          },
+          {
+            "image": "C3-r.khan_20190412P3_007-Scene-06-ScanRegion5.czi - r.khan_20190412P3_007-Scene-06-ScanRegion5.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_314/DONE_Ref_7_r.khan_20190412P3_007-Scene-06-ScanRegion5"
+          },
+          {
+            "image": "C3-r.khan_20190412P3_007-Scene-12-ScanRegion13.czi - r.khan_20190412P3_007-Scene-12-ScanRegion13.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_314/DONE_Ref_9_r.khan_20190412P3_007-Scene-12-ScanRegion13"
+          },
+          {
+            "image": "C3-r.khan_20190412P3_004-Scene-04-ScanRegion3.czi - r.khan_20190412P3_004-Scene-04-ScanRegion3.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_314/DONE_Ref_10_r.khan_20190412P3_004-Scene-04-ScanRegion3"
+          },
+          {
+            "image": "C3-r.khan_20190412P3_004-Scene-11-ScanRegion10.czi - r.khan_20190412P3_004-Scene-11-ScanRegion10.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_314/DONE_Ref_10_r.khan_20190412P3_004-Scene-11-ScanRegion10"
+          },
+          {
+            "image": "C3-r.khan_20190412P3_005-Scene-08-ScanRegion7.czi - r.khan_20190412P3_005-Scene-08-ScanRegion7.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_314/DONE_Ref_10_r.khan_20190412P3_005-Scene-08-ScanRegion7"
+          },
+          {
+            "image": "C3-r.khan_20190412P3_007-Scene-08-ScanRegion7.czi - r.khan_20190412P3_007-Scene-08-ScanRegion7.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_314/DONE_Ref_10_r.khan_20190412P3_007-Scene-08-ScanRegion7"
+          },
+          {
+            "image": "C3-r.khan_20190412P3_004-Scene-08-ScanRegion7.czi - r.khan_20190412P3_004-Scene-08-ScanRegion7.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_314/DONE_Ref_11_r.khan_20190412P3_004-Scene-08-ScanRegion7"
+          },
+          {
+            "image": "C3-r.khan_20190412P3_005-Scene-07-ScanRegion6.czi - r.khan_20190412P3_005-Scene-07-ScanRegion6.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_314/DONE_Ref_11_r.khan_20190412P3_005-Scene-07-ScanRegion6"
+          },
+          {
+            "image": "C3-r.khan_20190412P3_005-Scene-10-ScanRegion9.czi - r.khan_20190412P3_005-Scene-10-ScanRegion9.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_314/DONE_Ref_11_r.khan_20190412P3_005-Scene-10-ScanRegion9"
+          },
+          {
+            "image": "C3-r.khan_20190412P3_007-Scene-05-ScanRegion4.czi - r.khan_20190412P3_007-Scene-05-ScanRegion4.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_314/DONE_Ref_11_r.khan_20190412P3_007-Scene-05-ScanRegion4"
+          },
+          {
+            "image": "C3-r.khan_20190412P3_007-Scene-07-ScanRegion6.czi - r.khan_20190412P3_007-Scene-07-ScanRegion6.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_314/DONE_Ref_11_r.khan_20190412P3_007-Scene-07-ScanRegion6"
+          },
+          {
+            "image": "C3-r.khan_20190412P3_004-Scene-09-ScanRegion8.czi - r.khan_20190412P3_004-Scene-09-ScanRegion8.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_314/DONE_Ref_12_r.khan_20190412P3_004-Scene-09-ScanRegion8"
+          },
+          {
+            "image": "C3-r.khan_20190412P3_005-Scene-03-ScanRegion2.czi - r.khan_20190412P3_005-Scene-03-ScanRegion2.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_314/DONE_Ref_12_r.khan_20190412P3_005-Scene-03-ScanRegion2"
+          },
+          {
+            "image": "C3-r.khan_20190412P3_007-Scene-09-ScanRegion10.czi - r.khan_20190412P3_007-Scene-09-ScanRegion10.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_314/DONE_Ref_13_r.khan_20190412P3_007-Scene-09-ScanRegion10"
+          },
+          {
+            "image": "C3-r.khan_20190412P3_004-Scene-10-ScanRegion9.czi - r.khan_20190412P3_004-Scene-10-ScanRegion9.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_314/DONE_Ref_14_r.khan_20190412P3_004-Scene-10-ScanRegion9"
+          },
+          {
+            "image": "C3-r.khan_20190412P3_005-Scene-09-ScanRegion8.czi - r.khan_20190412P3_005-Scene-09-ScanRegion8.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_314/DONE_Ref_14_r.khan_20190412P3_005-Scene-09-ScanRegion8"
+          },
+          {
+            "image": "C3-r.khan_20190412P3_004-Scene-05-ScanRegion4.czi - r.khan_20190412P3_004-Scene-05-ScanRegion4.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_314/DONE_Ref_16_r.khan_20190412P3_004-Scene-05-ScanRegion4"
+          },
+          {
+            "image": "C3-r.khan_20190412P3_005-Scene-11-ScanRegion10.czi - r.khan_20190412P3_005-Scene-11-ScanRegion10.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_314/DONE_Ref_16_r.khan_20190412P3_005-Scene-11-ScanRegion10"
+          },
+          {
+            "image": "C3-r.khan_20190412P3_007-Scene-02-ScanRegion1.czi - r.khan_20190412P3_007-Scene-02-ScanRegion1.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_314/DONE_Ref_16_r.khan_20190412P3_007-Scene-02-ScanRegion1"
+          },
+          {
+            "image": "C3-r.khan_20190412P3_007-Scene-10-ScanRegion11.czi - r.khan_20190412P3_007-Scene-10-ScanRegion11.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_314/DONE_Ref_16_r.khan_20190412P3_007-Scene-10-ScanRegion11"
+          }
+        ],
+        "C4": [
+          {
+            "image": "C4-r.khan_20190412P3_004-Scene-02-ScanRegion1.czi - r.khan_20190412P3_004-Scene-02-ScanRegion1.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_314/DONE_Ref_2_r.khan_20190412P3_004-Scene-02-ScanRegion1"
+          },
+          {
+            "image": "C4-r.khan_20190412P3_004-Scene-03-ScanRegion2.czi - r.khan_20190412P3_004-Scene-03-ScanRegion2.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_314/DONE_Ref_3_r.khan_20190412P3_004-Scene-03-ScanRegion2"
+          },
+          {
+            "image": "C4-r.khan_20190412P3_004-Scene-06-ScanRegion5.czi - r.khan_20190412P3_004-Scene-06-ScanRegion5.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_314/DONE_Ref_6_r.khan_20190412P3_004-Scene-06-ScanRegion5"
+          },
+          {
+            "image": "C4-r.khan_20190412P3_004-Scene-07-ScanRegion6.czi - r.khan_20190412P3_004-Scene-07-ScanRegion6.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_314/DONE_Ref_7_r.khan_20190412P3_004-Scene-07-ScanRegion6"
+          },
+          {
+            "image": "C4-r.khan_20190412P3_007-Scene-06-ScanRegion5.czi - r.khan_20190412P3_007-Scene-06-ScanRegion5.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_314/DONE_Ref_7_r.khan_20190412P3_007-Scene-06-ScanRegion5"
+          },
+          {
+            "image": "C4-r.khan_20190412P3_007-Scene-12-ScanRegion13.czi - r.khan_20190412P3_007-Scene-12-ScanRegion13.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_314/DONE_Ref_9_r.khan_20190412P3_007-Scene-12-ScanRegion13"
+          },
+          {
+            "image": "C4-r.khan_20190412P3_004-Scene-04-ScanRegion3.czi - r.khan_20190412P3_004-Scene-04-ScanRegion3.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_314/DONE_Ref_10_r.khan_20190412P3_004-Scene-04-ScanRegion3"
+          },
+          {
+            "image": "C4-r.khan_20190412P3_004-Scene-11-ScanRegion10.czi - r.khan_20190412P3_004-Scene-11-ScanRegion10.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_314/DONE_Ref_10_r.khan_20190412P3_004-Scene-11-ScanRegion10"
+          },
+          {
+            "image": "C4-r.khan_20190412P3_005-Scene-08-ScanRegion7.czi - r.khan_20190412P3_005-Scene-08-ScanRegion7.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_314/DONE_Ref_10_r.khan_20190412P3_005-Scene-08-ScanRegion7"
+          },
+          {
+            "image": "C4-r.khan_20190412P3_007-Scene-08-ScanRegion7.czi - r.khan_20190412P3_007-Scene-08-ScanRegion7.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_314/DONE_Ref_10_r.khan_20190412P3_007-Scene-08-ScanRegion7"
+          },
+          {
+            "image": "C4-r.khan_20190412P3_004-Scene-08-ScanRegion7.czi - r.khan_20190412P3_004-Scene-08-ScanRegion7.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_314/DONE_Ref_11_r.khan_20190412P3_004-Scene-08-ScanRegion7"
+          },
+          {
+            "image": "C4-r.khan_20190412P3_005-Scene-07-ScanRegion6.czi - r.khan_20190412P3_005-Scene-07-ScanRegion6.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_314/DONE_Ref_11_r.khan_20190412P3_005-Scene-07-ScanRegion6"
+          },
+          {
+            "image": "C4-r.khan_20190412P3_005-Scene-10-ScanRegion9.czi - r.khan_20190412P3_005-Scene-10-ScanRegion9.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_314/DONE_Ref_11_r.khan_20190412P3_005-Scene-10-ScanRegion9"
+          },
+          {
+            "image": "C4-r.khan_20190412P3_007-Scene-05-ScanRegion4.czi - r.khan_20190412P3_007-Scene-05-ScanRegion4.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_314/DONE_Ref_11_r.khan_20190412P3_007-Scene-05-ScanRegion4"
+          },
+          {
+            "image": "C4-r.khan_20190412P3_007-Scene-07-ScanRegion6.czi - r.khan_20190412P3_007-Scene-07-ScanRegion6.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_314/DONE_Ref_11_r.khan_20190412P3_007-Scene-07-ScanRegion6"
+          },
+          {
+            "image": "C4-r.khan_20190412P3_004-Scene-09-ScanRegion8.czi - r.khan_20190412P3_004-Scene-09-ScanRegion8.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_314/DONE_Ref_12_r.khan_20190412P3_004-Scene-09-ScanRegion8"
+          },
+          {
+            "image": "C4-r.khan_20190412P3_005-Scene-03-ScanRegion2.czi - r.khan_20190412P3_005-Scene-03-ScanRegion2.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_314/DONE_Ref_12_r.khan_20190412P3_005-Scene-03-ScanRegion2"
+          },
+          {
+            "image": "C4-r.khan_20190412P3_007-Scene-09-ScanRegion10.czi - r.khan_20190412P3_007-Scene-09-ScanRegion10.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_314/DONE_Ref_13_r.khan_20190412P3_007-Scene-09-ScanRegion10"
+          },
+          {
+            "image": "C4-r.khan_20190412P3_004-Scene-10-ScanRegion9.czi - r.khan_20190412P3_004-Scene-10-ScanRegion9.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_314/DONE_Ref_14_r.khan_20190412P3_004-Scene-10-ScanRegion9"
+          },
+          {
+            "image": "C4-r.khan_20190412P3_005-Scene-09-ScanRegion8.czi - r.khan_20190412P3_005-Scene-09-ScanRegion8.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_314/DONE_Ref_14_r.khan_20190412P3_005-Scene-09-ScanRegion8"
+          },
+          {
+            "image": "C4-r.khan_20190412P3_004-Scene-05-ScanRegion4.czi - r.khan_20190412P3_004-Scene-05-ScanRegion4.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_314/DONE_Ref_16_r.khan_20190412P3_004-Scene-05-ScanRegion4"
+          },
+          {
+            "image": "C4-r.khan_20190412P3_005-Scene-11-ScanRegion10.czi - r.khan_20190412P3_005-Scene-11-ScanRegion10.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_314/DONE_Ref_16_r.khan_20190412P3_005-Scene-11-ScanRegion10"
+          },
+          {
+            "image": "C4-r.khan_20190412P3_007-Scene-02-ScanRegion1.czi - r.khan_20190412P3_007-Scene-02-ScanRegion1.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_314/DONE_Ref_16_r.khan_20190412P3_007-Scene-02-ScanRegion1"
+          },
+          {
+            "image": "C4-r.khan_20190412P3_007-Scene-10-ScanRegion11.czi - r.khan_20190412P3_007-Scene-10-ScanRegion11.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_314/DONE_Ref_16_r.khan_20190412P3_007-Scene-10-ScanRegion11"
+          }
+        ]
+      }
+    },
+    "animal_315": {
+      "channels": {
+        "C1": [
+          {
+            "image": "C1-r.khan_20190413P3_001-Scene-01-ScanRegion0.czi - r.khan_20190413P3_001-Scene-01-ScanRegion0.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_315/DONE_Ref_3_r.khan_20190413P3_001-Scene-01-ScanRegion0"
+          },
+          {
+            "image": "C1-r.khan_20190412P3_006-Scene-03-ScanRegion2.czi - r.khan_20190412P3_006-Scene-03-ScanRegion2.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_315/DONE_Ref_4_r.khan_20190412P3_006-Scene-03-ScanRegion2"
+          },
+          {
+            "image": "C1-r.khan_20190413P3_001-Scene-02-ScanRegion1.czi - r.khan_20190413P3_001-Scene-02-ScanRegion1.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_315/DONE_Ref_5_r.khan_20190413P3_001-Scene-02-ScanRegion1"
+          },
+          {
+            "image": "C1-r.khan_20190412P3_002-Scene-02-ScanRegion2.czi - r.khan_20190412P3_002-Scene-02-ScanRegion2.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_315/DONE_Ref_6_r.khan_20190412P3_002-Scene-02-ScanRegion2"
+          },
+          {
+            "image": "C1-r.khan_20190412P3_002-Scene-03-ScanRegion3.czi - r.khan_20190412P3_002-Scene-03-ScanRegion3.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_315/DONE_Ref_6_r.khan_20190412P3_002-Scene-03-ScanRegion3"
+          },
+          {
+            "image": "C1-r.khan_20190412P3_006-Scene-04-ScanRegion3.czi - r.khan_20190412P3_006-Scene-04-ScanRegion3.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_315/DONE_Ref_6_r.khan_20190412P3_006-Scene-04-ScanRegion3"
+          },
+          {
+            "image": "C1-r.khan_20190413P3_001-Scene-05-ScanRegion4.czi - r.khan_20190413P3_001-Scene-05-ScanRegion4.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_315/DONE_Ref_6_r.khan_20190413P3_001-Scene-05-ScanRegion4"
+          },
+          {
+            "image": "C1-r.khan_20190413P3_001-Scene-06-ScanRegion5.czi - r.khan_20190413P3_001-Scene-06-ScanRegion5.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_315/DONE_Ref_7_r.khan_20190413P3_001-Scene-06-ScanRegion5"
+          },
+          {
+            "image": "C1-r.khan_20190412P3_002-Scene-04-ScanRegion4.czi - r.khan_20190412P3_002-Scene-04-ScanRegion4.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_315/DONE_Ref_8_r.khan_20190412P3_002-Scene-04-ScanRegion4"
+          },
+          {
+            "image": "C1-r.khan_20190413P3_001-Scene-07-ScanRegion6.czi - r.khan_20190413P3_001-Scene-07-ScanRegion6.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_315/DONE_Ref_9_r.khan_20190413P3_001-Scene-07-ScanRegion6"
+          },
+          {
+            "image": "C1-r.khan_20190412P3_002-Scene-10-ScanRegion10.czi - r.khan_20190412P3_002-Scene-10-ScanRegion10.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_315/DONE_Ref_10_r.khan_20190412P3_002-Scene-10-ScanRegion10"
+          },
+          {
+            "image": "C1-r.khan_20190412P3_006-Scene-14-ScanRegion13.czi - r.khan_20190412P3_006-Scene-14-ScanRegion13.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_315/DONE_Ref_10_r.khan_20190412P3_006-Scene-14-ScanRegion13"
+          },
+          {
+            "image": "C1-r.khan_20190412P3_006-Scene-08-ScanRegion7.czi - r.khan_20190412P3_006-Scene-08-ScanRegion7.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_315/DONE_Ref_12_r.khan_20190412P3_006-Scene-08-ScanRegion7"
+          },
+          {
+            "image": "C1-r.khan_20190413P3_001-Scene-03-ScanRegion2.czi - r.khan_20190413P3_001-Scene-03-ScanRegion2.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_315/DONE_Ref_12_r.khan_20190413P3_001-Scene-03-ScanRegion2"
+          },
+          {
+            "image": "C1-r.khan_20190413P3_001-Scene-04-ScanRegion3.czi - r.khan_20190413P3_001-Scene-04-ScanRegion3.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_315/DONE_Ref_13_r.khan_20190413P3_001-Scene-04-ScanRegion3"
+          },
+          {
+            "image": "C1-r.khan_20190412P3_006-Scene-09-ScanRegion8.czi - r.khan_20190412P3_006-Scene-09-ScanRegion8.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_315/DONE_Ref_14_r.khan_20190412P3_006-Scene-09-ScanRegion8"
+          },
+          {
+            "image": "C1-r.khan_20190413P3_001-Scene-10-ScanRegion10.czi - r.khan_20190413P3_001-Scene-10-ScanRegion10.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_315/DONE_Ref_15_r.khan_20190413P3_001-Scene-10-ScanRegion10"
+          },
+          {
+            "image": "C1-r.khan_20190412P3_002-Scene-05-ScanRegion5.czi - r.khan_20190412P3_002-Scene-05-ScanRegion5.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_315/DONE_Ref_16_r.khan_20190412P3_002-Scene-05-ScanRegion5"
+          },
+          {
+            "image": "C1-r.khan_20190412P3_002-Scene-08-ScanRegion8.czi - r.khan_20190412P3_002-Scene-08-ScanRegion8.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_315/DONE_Ref_16_r.khan_20190412P3_002-Scene-08-ScanRegion8"
+          },
+          {
+            "image": "C1-r.khan_20190412P3_006-Scene-10-ScanRegion9.czi - r.khan_20190412P3_006-Scene-10-ScanRegion9.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_315/DONE_Ref_16_r.khan_20190412P3_006-Scene-10-ScanRegion9"
+          },
+          {
+            "image": "C1-r.khan_20190413P3_001-Scene-08-ScanRegion7.czi - r.khan_20190413P3_001-Scene-08-ScanRegion7.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_315/DONE_Ref_16_r.khan_20190413P3_001-Scene-08-ScanRegion7"
+          },
+          {
+            "image": "C1-r.khan_20190412P3_006-Scene-07-ScanRegion6.czi - r.khan_20190412P3_006-Scene-07-ScanRegion6.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_315/DONE_Ref_17_r.khan_20190412P3_006-Scene-07-ScanRegion6"
+          },
+          {
+            "image": "C1-r.khan_20190412P3_002-Scene-11-ScanRegion11.czi - r.khan_20190412P3_002-Scene-11-ScanRegion11.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_315/DONE_Ref_18_r.khan_20190412P3_002-Scene-11-ScanRegion11"
+          },
+          {
+            "image": "C1-r.khan_20190413P3_001-Scene-09-ScanRegion8.czi - r.khan_20190413P3_001-Scene-09-ScanRegion8.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_315/DONE_Ref_19_r.khan_20190413P3_001-Scene-09-ScanRegion8"
+          },
+          {
+            "image": "C1-r.khan_20190412P3_006-Scene-13-ScanRegion12.czi - r.khan_20190412P3_006-Scene-13-ScanRegion12.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_315/DONE_Ref_20_r.khan_20190412P3_006-Scene-13-ScanRegion12"
+          }
+        ],
+        "C2": [
+          {
+            "image": "C2-r.khan_20190413P3_001-Scene-01-ScanRegion0.czi - r.khan_20190413P3_001-Scene-01-ScanRegion0.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_315/DONE_Ref_3_r.khan_20190413P3_001-Scene-01-ScanRegion0"
+          },
+          {
+            "image": "C2-r.khan_20190412P3_006-Scene-03-ScanRegion2.czi - r.khan_20190412P3_006-Scene-03-ScanRegion2.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_315/DONE_Ref_4_r.khan_20190412P3_006-Scene-03-ScanRegion2"
+          },
+          {
+            "image": "C2-r.khan_20190413P3_001-Scene-02-ScanRegion1.czi - r.khan_20190413P3_001-Scene-02-ScanRegion1.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_315/DONE_Ref_5_r.khan_20190413P3_001-Scene-02-ScanRegion1"
+          },
+          {
+            "image": "C2-r.khan_20190412P3_002-Scene-02-ScanRegion2.czi - r.khan_20190412P3_002-Scene-02-ScanRegion2.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_315/DONE_Ref_6_r.khan_20190412P3_002-Scene-02-ScanRegion2"
+          },
+          {
+            "image": "C2-r.khan_20190412P3_002-Scene-03-ScanRegion3.czi - r.khan_20190412P3_002-Scene-03-ScanRegion3.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_315/DONE_Ref_6_r.khan_20190412P3_002-Scene-03-ScanRegion3"
+          },
+          {
+            "image": "C2-r.khan_20190412P3_006-Scene-04-ScanRegion3.czi - r.khan_20190412P3_006-Scene-04-ScanRegion3.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_315/DONE_Ref_6_r.khan_20190412P3_006-Scene-04-ScanRegion3"
+          },
+          {
+            "image": "C2-r.khan_20190413P3_001-Scene-05-ScanRegion4.czi - r.khan_20190413P3_001-Scene-05-ScanRegion4.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_315/DONE_Ref_6_r.khan_20190413P3_001-Scene-05-ScanRegion4"
+          },
+          {
+            "image": "C2-r.khan_20190413P3_001-Scene-06-ScanRegion5.czi - r.khan_20190413P3_001-Scene-06-ScanRegion5.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_315/DONE_Ref_7_r.khan_20190413P3_001-Scene-06-ScanRegion5"
+          },
+          {
+            "image": "C2-r.khan_20190412P3_002-Scene-04-ScanRegion4.czi - r.khan_20190412P3_002-Scene-04-ScanRegion4.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_315/DONE_Ref_8_r.khan_20190412P3_002-Scene-04-ScanRegion4"
+          },
+          {
+            "image": "C2-r.khan_20190413P3_001-Scene-07-ScanRegion6.czi - r.khan_20190413P3_001-Scene-07-ScanRegion6.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_315/DONE_Ref_9_r.khan_20190413P3_001-Scene-07-ScanRegion6"
+          },
+          {
+            "image": "C2-r.khan_20190412P3_002-Scene-10-ScanRegion10.czi - r.khan_20190412P3_002-Scene-10-ScanRegion10.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_315/DONE_Ref_10_r.khan_20190412P3_002-Scene-10-ScanRegion10"
+          },
+          {
+            "image": "C2-r.khan_20190412P3_006-Scene-14-ScanRegion13.czi - r.khan_20190412P3_006-Scene-14-ScanRegion13.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_315/DONE_Ref_10_r.khan_20190412P3_006-Scene-14-ScanRegion13"
+          },
+          {
+            "image": "C2-r.khan_20190412P3_006-Scene-08-ScanRegion7.czi - r.khan_20190412P3_006-Scene-08-ScanRegion7.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_315/DONE_Ref_12_r.khan_20190412P3_006-Scene-08-ScanRegion7"
+          },
+          {
+            "image": "C2-r.khan_20190413P3_001-Scene-03-ScanRegion2.czi - r.khan_20190413P3_001-Scene-03-ScanRegion2.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_315/DONE_Ref_12_r.khan_20190413P3_001-Scene-03-ScanRegion2"
+          },
+          {
+            "image": "C2-r.khan_20190413P3_001-Scene-04-ScanRegion3.czi - r.khan_20190413P3_001-Scene-04-ScanRegion3.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_315/DONE_Ref_13_r.khan_20190413P3_001-Scene-04-ScanRegion3"
+          },
+          {
+            "image": "C2-r.khan_20190412P3_006-Scene-09-ScanRegion8.czi - r.khan_20190412P3_006-Scene-09-ScanRegion8.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_315/DONE_Ref_14_r.khan_20190412P3_006-Scene-09-ScanRegion8"
+          },
+          {
+            "image": "C2-r.khan_20190413P3_001-Scene-10-ScanRegion10.czi - r.khan_20190413P3_001-Scene-10-ScanRegion10.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_315/DONE_Ref_15_r.khan_20190413P3_001-Scene-10-ScanRegion10"
+          },
+          {
+            "image": "C2-r.khan_20190412P3_002-Scene-05-ScanRegion5.czi - r.khan_20190412P3_002-Scene-05-ScanRegion5.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_315/DONE_Ref_16_r.khan_20190412P3_002-Scene-05-ScanRegion5"
+          },
+          {
+            "image": "C2-r.khan_20190412P3_002-Scene-08-ScanRegion8.czi - r.khan_20190412P3_002-Scene-08-ScanRegion8.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_315/DONE_Ref_16_r.khan_20190412P3_002-Scene-08-ScanRegion8"
+          },
+          {
+            "image": "C2-r.khan_20190412P3_006-Scene-10-ScanRegion9.czi - r.khan_20190412P3_006-Scene-10-ScanRegion9.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_315/DONE_Ref_16_r.khan_20190412P3_006-Scene-10-ScanRegion9"
+          },
+          {
+            "image": "C2-r.khan_20190413P3_001-Scene-08-ScanRegion7.czi - r.khan_20190413P3_001-Scene-08-ScanRegion7.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_315/DONE_Ref_16_r.khan_20190413P3_001-Scene-08-ScanRegion7"
+          },
+          {
+            "image": "C2-r.khan_20190412P3_006-Scene-07-ScanRegion6.czi - r.khan_20190412P3_006-Scene-07-ScanRegion6.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_315/DONE_Ref_17_r.khan_20190412P3_006-Scene-07-ScanRegion6"
+          },
+          {
+            "image": "C2-r.khan_20190412P3_002-Scene-11-ScanRegion11.czi - r.khan_20190412P3_002-Scene-11-ScanRegion11.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_315/DONE_Ref_18_r.khan_20190412P3_002-Scene-11-ScanRegion11"
+          },
+          {
+            "image": "C2-r.khan_20190413P3_001-Scene-09-ScanRegion8.czi - r.khan_20190413P3_001-Scene-09-ScanRegion8.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_315/DONE_Ref_19_r.khan_20190413P3_001-Scene-09-ScanRegion8"
+          },
+          {
+            "image": "C2-r.khan_20190412P3_006-Scene-13-ScanRegion12.czi - r.khan_20190412P3_006-Scene-13-ScanRegion12.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_315/DONE_Ref_20_r.khan_20190412P3_006-Scene-13-ScanRegion12"
+          }
+        ],
+        "C3": [
+          {
+            "image": "C3-r.khan_20190413P3_001-Scene-01-ScanRegion0.czi - r.khan_20190413P3_001-Scene-01-ScanRegion0.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_315/DONE_Ref_3_r.khan_20190413P3_001-Scene-01-ScanRegion0"
+          },
+          {
+            "image": "C3-r.khan_20190412P3_006-Scene-03-ScanRegion2.czi - r.khan_20190412P3_006-Scene-03-ScanRegion2.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_315/DONE_Ref_4_r.khan_20190412P3_006-Scene-03-ScanRegion2"
+          },
+          {
+            "image": "C3-r.khan_20190413P3_001-Scene-02-ScanRegion1.czi - r.khan_20190413P3_001-Scene-02-ScanRegion1.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_315/DONE_Ref_5_r.khan_20190413P3_001-Scene-02-ScanRegion1"
+          },
+          {
+            "image": "C3-r.khan_20190412P3_002-Scene-02-ScanRegion2.czi - r.khan_20190412P3_002-Scene-02-ScanRegion2.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_315/DONE_Ref_6_r.khan_20190412P3_002-Scene-02-ScanRegion2"
+          },
+          {
+            "image": "C3-r.khan_20190412P3_002-Scene-03-ScanRegion3.czi - r.khan_20190412P3_002-Scene-03-ScanRegion3.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_315/DONE_Ref_6_r.khan_20190412P3_002-Scene-03-ScanRegion3"
+          },
+          {
+            "image": "C3-r.khan_20190412P3_006-Scene-04-ScanRegion3.czi - r.khan_20190412P3_006-Scene-04-ScanRegion3.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_315/DONE_Ref_6_r.khan_20190412P3_006-Scene-04-ScanRegion3"
+          },
+          {
+            "image": "C3-r.khan_20190413P3_001-Scene-05-ScanRegion4.czi - r.khan_20190413P3_001-Scene-05-ScanRegion4.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_315/DONE_Ref_6_r.khan_20190413P3_001-Scene-05-ScanRegion4"
+          },
+          {
+            "image": "C3-r.khan_20190413P3_001-Scene-06-ScanRegion5.czi - r.khan_20190413P3_001-Scene-06-ScanRegion5.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_315/DONE_Ref_7_r.khan_20190413P3_001-Scene-06-ScanRegion5"
+          },
+          {
+            "image": "C3-r.khan_20190412P3_002-Scene-04-ScanRegion4.czi - r.khan_20190412P3_002-Scene-04-ScanRegion4.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_315/DONE_Ref_8_r.khan_20190412P3_002-Scene-04-ScanRegion4"
+          },
+          {
+            "image": "C3-r.khan_20190413P3_001-Scene-07-ScanRegion6.czi - r.khan_20190413P3_001-Scene-07-ScanRegion6.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_315/DONE_Ref_9_r.khan_20190413P3_001-Scene-07-ScanRegion6"
+          },
+          {
+            "image": "C3-r.khan_20190412P3_002-Scene-10-ScanRegion10.czi - r.khan_20190412P3_002-Scene-10-ScanRegion10.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_315/DONE_Ref_10_r.khan_20190412P3_002-Scene-10-ScanRegion10"
+          },
+          {
+            "image": "C3-r.khan_20190412P3_006-Scene-14-ScanRegion13.czi - r.khan_20190412P3_006-Scene-14-ScanRegion13.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_315/DONE_Ref_10_r.khan_20190412P3_006-Scene-14-ScanRegion13"
+          },
+          {
+            "image": "C3-r.khan_20190412P3_006-Scene-08-ScanRegion7.czi - r.khan_20190412P3_006-Scene-08-ScanRegion7.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_315/DONE_Ref_12_r.khan_20190412P3_006-Scene-08-ScanRegion7"
+          },
+          {
+            "image": "C3-r.khan_20190413P3_001-Scene-03-ScanRegion2.czi - r.khan_20190413P3_001-Scene-03-ScanRegion2.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_315/DONE_Ref_12_r.khan_20190413P3_001-Scene-03-ScanRegion2"
+          },
+          {
+            "image": "C3-r.khan_20190413P3_001-Scene-04-ScanRegion3.czi - r.khan_20190413P3_001-Scene-04-ScanRegion3.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_315/DONE_Ref_13_r.khan_20190413P3_001-Scene-04-ScanRegion3"
+          },
+          {
+            "image": "C3-r.khan_20190412P3_006-Scene-09-ScanRegion8.czi - r.khan_20190412P3_006-Scene-09-ScanRegion8.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_315/DONE_Ref_14_r.khan_20190412P3_006-Scene-09-ScanRegion8"
+          },
+          {
+            "image": "C3-r.khan_20190413P3_001-Scene-10-ScanRegion10.czi - r.khan_20190413P3_001-Scene-10-ScanRegion10.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_315/DONE_Ref_15_r.khan_20190413P3_001-Scene-10-ScanRegion10"
+          },
+          {
+            "image": "C3-r.khan_20190412P3_002-Scene-05-ScanRegion5.czi - r.khan_20190412P3_002-Scene-05-ScanRegion5.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_315/DONE_Ref_16_r.khan_20190412P3_002-Scene-05-ScanRegion5"
+          },
+          {
+            "image": "C3-r.khan_20190412P3_002-Scene-08-ScanRegion8.czi - r.khan_20190412P3_002-Scene-08-ScanRegion8.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_315/DONE_Ref_16_r.khan_20190412P3_002-Scene-08-ScanRegion8"
+          },
+          {
+            "image": "C3-r.khan_20190412P3_006-Scene-10-ScanRegion9.czi - r.khan_20190412P3_006-Scene-10-ScanRegion9.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_315/DONE_Ref_16_r.khan_20190412P3_006-Scene-10-ScanRegion9"
+          },
+          {
+            "image": "C3-r.khan_20190413P3_001-Scene-08-ScanRegion7.czi - r.khan_20190413P3_001-Scene-08-ScanRegion7.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_315/DONE_Ref_16_r.khan_20190413P3_001-Scene-08-ScanRegion7"
+          },
+          {
+            "image": "C3-r.khan_20190412P3_006-Scene-07-ScanRegion6.czi - r.khan_20190412P3_006-Scene-07-ScanRegion6.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_315/DONE_Ref_17_r.khan_20190412P3_006-Scene-07-ScanRegion6"
+          },
+          {
+            "image": "C3-r.khan_20190412P3_002-Scene-11-ScanRegion11.czi - r.khan_20190412P3_002-Scene-11-ScanRegion11.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_315/DONE_Ref_18_r.khan_20190412P3_002-Scene-11-ScanRegion11"
+          },
+          {
+            "image": "C3-r.khan_20190413P3_001-Scene-09-ScanRegion8.czi - r.khan_20190413P3_001-Scene-09-ScanRegion8.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_315/DONE_Ref_19_r.khan_20190413P3_001-Scene-09-ScanRegion8"
+          },
+          {
+            "image": "C3-r.khan_20190412P3_006-Scene-13-ScanRegion12.czi - r.khan_20190412P3_006-Scene-13-ScanRegion12.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_315/DONE_Ref_20_r.khan_20190412P3_006-Scene-13-ScanRegion12"
+          }
+        ],
+        "C4": [
+          {
+            "image": "C4-r.khan_20190413P3_001-Scene-01-ScanRegion0.czi - r.khan_20190413P3_001-Scene-01-ScanRegion0.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_315/DONE_Ref_3_r.khan_20190413P3_001-Scene-01-ScanRegion0"
+          },
+          {
+            "image": "C4-r.khan_20190412P3_006-Scene-03-ScanRegion2.czi - r.khan_20190412P3_006-Scene-03-ScanRegion2.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_315/DONE_Ref_4_r.khan_20190412P3_006-Scene-03-ScanRegion2"
+          },
+          {
+            "image": "C4-r.khan_20190413P3_001-Scene-02-ScanRegion1.czi - r.khan_20190413P3_001-Scene-02-ScanRegion1.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_315/DONE_Ref_5_r.khan_20190413P3_001-Scene-02-ScanRegion1"
+          },
+          {
+            "image": "C4-r.khan_20190412P3_002-Scene-02-ScanRegion2.czi - r.khan_20190412P3_002-Scene-02-ScanRegion2.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_315/DONE_Ref_6_r.khan_20190412P3_002-Scene-02-ScanRegion2"
+          },
+          {
+            "image": "C4-r.khan_20190412P3_002-Scene-03-ScanRegion3.czi - r.khan_20190412P3_002-Scene-03-ScanRegion3.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_315/DONE_Ref_6_r.khan_20190412P3_002-Scene-03-ScanRegion3"
+          },
+          {
+            "image": "C4-r.khan_20190412P3_006-Scene-04-ScanRegion3.czi - r.khan_20190412P3_006-Scene-04-ScanRegion3.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_315/DONE_Ref_6_r.khan_20190412P3_006-Scene-04-ScanRegion3"
+          },
+          {
+            "image": "C4-r.khan_20190413P3_001-Scene-05-ScanRegion4.czi - r.khan_20190413P3_001-Scene-05-ScanRegion4.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_315/DONE_Ref_6_r.khan_20190413P3_001-Scene-05-ScanRegion4"
+          },
+          {
+            "image": "C4-r.khan_20190413P3_001-Scene-06-ScanRegion5.czi - r.khan_20190413P3_001-Scene-06-ScanRegion5.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_315/DONE_Ref_7_r.khan_20190413P3_001-Scene-06-ScanRegion5"
+          },
+          {
+            "image": "C4-r.khan_20190412P3_002-Scene-04-ScanRegion4.czi - r.khan_20190412P3_002-Scene-04-ScanRegion4.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_315/DONE_Ref_8_r.khan_20190412P3_002-Scene-04-ScanRegion4"
+          },
+          {
+            "image": "C4-r.khan_20190413P3_001-Scene-07-ScanRegion6.czi - r.khan_20190413P3_001-Scene-07-ScanRegion6.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_315/DONE_Ref_9_r.khan_20190413P3_001-Scene-07-ScanRegion6"
+          },
+          {
+            "image": "C4-r.khan_20190412P3_002-Scene-10-ScanRegion10.czi - r.khan_20190412P3_002-Scene-10-ScanRegion10.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_315/DONE_Ref_10_r.khan_20190412P3_002-Scene-10-ScanRegion10"
+          },
+          {
+            "image": "C4-r.khan_20190412P3_006-Scene-14-ScanRegion13.czi - r.khan_20190412P3_006-Scene-14-ScanRegion13.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_315/DONE_Ref_10_r.khan_20190412P3_006-Scene-14-ScanRegion13"
+          },
+          {
+            "image": "C4-r.khan_20190412P3_006-Scene-08-ScanRegion7.czi - r.khan_20190412P3_006-Scene-08-ScanRegion7.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_315/DONE_Ref_12_r.khan_20190412P3_006-Scene-08-ScanRegion7"
+          },
+          {
+            "image": "C4-r.khan_20190413P3_001-Scene-03-ScanRegion2.czi - r.khan_20190413P3_001-Scene-03-ScanRegion2.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_315/DONE_Ref_12_r.khan_20190413P3_001-Scene-03-ScanRegion2"
+          },
+          {
+            "image": "C4-r.khan_20190413P3_001-Scene-04-ScanRegion3.czi - r.khan_20190413P3_001-Scene-04-ScanRegion3.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_315/DONE_Ref_13_r.khan_20190413P3_001-Scene-04-ScanRegion3"
+          },
+          {
+            "image": "C4-r.khan_20190412P3_006-Scene-09-ScanRegion8.czi - r.khan_20190412P3_006-Scene-09-ScanRegion8.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_315/DONE_Ref_14_r.khan_20190412P3_006-Scene-09-ScanRegion8"
+          },
+          {
+            "image": "C4-r.khan_20190413P3_001-Scene-10-ScanRegion10.czi - r.khan_20190413P3_001-Scene-10-ScanRegion10.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_315/DONE_Ref_15_r.khan_20190413P3_001-Scene-10-ScanRegion10"
+          },
+          {
+            "image": "C4-r.khan_20190412P3_002-Scene-05-ScanRegion5.czi - r.khan_20190412P3_002-Scene-05-ScanRegion5.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_315/DONE_Ref_16_r.khan_20190412P3_002-Scene-05-ScanRegion5"
+          },
+          {
+            "image": "C4-r.khan_20190412P3_002-Scene-08-ScanRegion8.czi - r.khan_20190412P3_002-Scene-08-ScanRegion8.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_315/DONE_Ref_16_r.khan_20190412P3_002-Scene-08-ScanRegion8"
+          },
+          {
+            "image": "C4-r.khan_20190412P3_006-Scene-10-ScanRegion9.czi - r.khan_20190412P3_006-Scene-10-ScanRegion9.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_315/DONE_Ref_16_r.khan_20190412P3_006-Scene-10-ScanRegion9"
+          },
+          {
+            "image": "C4-r.khan_20190413P3_001-Scene-08-ScanRegion7.czi - r.khan_20190413P3_001-Scene-08-ScanRegion7.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_315/DONE_Ref_16_r.khan_20190413P3_001-Scene-08-ScanRegion7"
+          },
+          {
+            "image": "C4-r.khan_20190412P3_006-Scene-07-ScanRegion6.czi - r.khan_20190412P3_006-Scene-07-ScanRegion6.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_315/DONE_Ref_17_r.khan_20190412P3_006-Scene-07-ScanRegion6"
+          },
+          {
+            "image": "C4-r.khan_20190412P3_002-Scene-11-ScanRegion11.czi - r.khan_20190412P3_002-Scene-11-ScanRegion11.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_315/DONE_Ref_18_r.khan_20190412P3_002-Scene-11-ScanRegion11"
+          },
+          {
+            "image": "C4-r.khan_20190413P3_001-Scene-09-ScanRegion8.czi - r.khan_20190413P3_001-Scene-09-ScanRegion8.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_315/DONE_Ref_19_r.khan_20190413P3_001-Scene-09-ScanRegion8"
+          },
+          {
+            "image": "C4-r.khan_20190412P3_006-Scene-13-ScanRegion12.czi - r.khan_20190412P3_006-Scene-13-ScanRegion12.czi .png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_315/DONE_Ref_20_r.khan_20190412P3_006-Scene-13-ScanRegion12"
+          }
+        ]
+      }
+    },
+    "animal_GAD1": {
+      "channels": {
+        "GAD": [
+          {
+            "image": "P4_Ref_3_sect1_GAD.jpg",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_GAD1/DONE_Ref_3_sect1_GAD"
+          },
+          {
+            "image": "P4_Ref_4_sect2_GAD.jpg",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_GAD1/DONE_Ref_4_sect2_GAD"
+          },
+          {
+            "image": "P4_Ref_5_sect3_GAD.jpg",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_GAD1/DONE_Ref_5_sect3_GAD"
+          },
+          {
+            "image": "P4_Ref_7_sect4_GAD.jpg",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_GAD1/DONE_Ref_7_sect4_GAD"
+          },
+          {
+            "image": "P4_Ref_8_sect5_GAD.jpg",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_GAD1/DONE_Ref_8_sect5_GAD"
+          },
+          {
+            "image": "P4_Ref_9_sect6_GAD.jpg",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_GAD1/DONE_Ref_9_sect6_GAD"
+          },
+          {
+            "image": "P4_Ref_10_sect7_GAD.jpg",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_GAD1/DONE_Ref_10_sect7_GAD"
+          },
+          {
+            "image": "P4_Ref_12_sect8_GAD.jpg",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_GAD1/DONE_Ref_12_sect8_GAD"
+          },
+          {
+            "image": "P4_Ref_12_sect9_GAD.jpg",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_GAD1/DONE_Ref_12_sect9_GAD"
+          },
+          {
+            "image": "P4_Ref_13_sect10_GAD.jpg",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_GAD1/DONE_Ref_13_sect10_GAD"
+          },
+          {
+            "image": "P4_Ref_14_sect11_GAD.jpg",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_GAD1/DONE_Ref_14_sect11_GAD"
+          },
+          {
+            "image": "P4_Ref_16_sect12_GAD.jpg",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_GAD1/DONE_Ref_16_sect12_GAD"
+          },
+          {
+            "image": "P4_Ref_18_sect13_GAD.jpg",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_GAD1/DONE_Ref_18_sect13_GAD"
+          },
+          {
+            "image": "P4_Ref_19_sect14_GAD.jpg",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_GAD1/DONE_Ref_19_sect14_GAD"
+          },
+          {
+            "image": "P4_Ref_21_sect15_GAD.jpg",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_GAD1/DONE_Ref_21_sect15_GAD"
+          }
+        ]
+      }
+    },
+    "animal_Nissl": {
+      "channels": {
+        "Nissl": [
+          {
+            "image": "P4_Ref_3_sect1_Nissl.jpg",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_Nissl/DONE_Ref_3_sect1_Nissl"
+          },
+          {
+            "image": "P4_Ref_4_sect2_Nissl.jpg",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_Nissl/DONE_Ref_4_sect2_Nissl"
+          },
+          {
+            "image": "P4_Ref_5_sect3_Nissl.jpg",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_Nissl/DONE_Ref_5_sect3_Nissl"
+          },
+          {
+            "image": "P4_Ref_7_sect4_Nissl.jpg",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_Nissl/DONE_Ref_7_sect4_Nissl"
+          },
+          {
+            "image": "P4_Ref_8_sect5_Nissl.jpg",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_Nissl/DONE_Ref_8_sect5_Nissl"
+          },
+          {
+            "image": "P4_Ref_9_sect6_Nissl.jpg",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_Nissl/DONE_Ref_9_sect6_Nissl"
+          },
+          {
+            "image": "P4_Ref_10_sect7_Nissl.jpg",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_Nissl/DONE_Ref_10_sect7_Nissl"
+          },
+          {
+            "image": "P4_Ref_12_sect8_Nissl.jpg",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_Nissl/DONE_Ref_12_sect8_Nissl"
+          },
+          {
+            "image": "P4_Ref_12_sect9_Nissl.jpg",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_Nissl/DONE_Ref_12_sect9_Nissl"
+          },
+          {
+            "image": "P4_Ref_13_sect10_Nissl.jpg",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_Nissl/DONE_Ref_13_sect10_Nissl"
+          },
+          {
+            "image": "P4_Ref_14_sect11_Nissl.jpg",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_Nissl/DONE_Ref_14_sect11_Nissl"
+          },
+          {
+            "image": "P4_Ref_16_sect12_Nissl.jpg",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_Nissl/DONE_Ref_16_sect12_Nissl"
+          },
+          {
+            "image": "P4_Ref_18_sect13_Nissl.jpg",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_Nissl/DONE_Ref_18_sect13_Nissl"
+          },
+          {
+            "image": "P4_Ref_19_sect14_Nissl.jpg",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_Nissl/DONE_Ref_19_sect14_Nissl"
+          },
+          {
+            "image": "P4_Ref_21_sect15_Nissl.jpg",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P4/animal_Nissl/DONE_Ref_21_sect15_Nissl"
+          }
+        ]
+      }
+    }
+  },
+  "P14": {
+    "animal_406": {
+      "channels": {
+        "C1": [
+          {
+            "image": "C1.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_406/DONE_Ref_10_r.khan_21042019_P14_002-Scene-09-ScanRegion8"
+          },
+          {
+            "image": "C1.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_406/DONE_Ref_11_r.khan_21042019_P14_003-Scene-1-ScanRegion0"
+          },
+          {
+            "image": "C1.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_406/DONE_Ref_12_r.khan_21042019_P14_002-Scene-05-ScanRegion4"
+          },
+          {
+            "image": "C1.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_406/DONE_Ref_15_r.khan_21042019_P14_003-Scene-5-ScanRegion4"
+          },
+          {
+            "image": "C1.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_406/DONE_Ref_16_r.khan_21042019_P14_002-Scene-06-ScanRegion5"
+          },
+          {
+            "image": "C1.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_406/DONE_Ref_19_r.khan_21042019_P14_002-Scene-08-ScanRegion7"
+          },
+          {
+            "image": "C1.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_406/DONE_Ref_20_r.khan_21042019_P14_003-Scene-7-ScanRegion8"
+          },
+          {
+            "image": "C1.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_406/DONE_Ref_23_r.khan_21042019_P14_002-Scene-02-ScanRegion1"
+          },
+          {
+            "image": "C1.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_406/DONE_Ref_27_r.khan_21042019_P14_003-Scene-4-ScanRegion3"
+          },
+          {
+            "image": "C1.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_406/DONE_Ref_31_r.khan_21042019_P14_003-Scene-8-ScanRegion9"
+          },
+          {
+            "image": "C1.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_406/DONE_Ref_32_r.khan_21042019_P14_002-Scene-03-ScanRegion2"
+          },
+          {
+            "image": "C1.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_406/DONE_Ref_34_r.khan_21042019_P14_003-Scene-2-ScanRegion1"
+          },
+          {
+            "image": "C1.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_406/DONE_Ref_36_r.khan_21042019_P14_002-Scene-04-ScanRegion3"
+          }
+        ],
+        "C2": [
+          {
+            "image": "C2.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_406/DONE_Ref_10_r.khan_21042019_P14_002-Scene-09-ScanRegion8"
+          },
+          {
+            "image": "C2.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_406/DONE_Ref_11_r.khan_21042019_P14_003-Scene-1-ScanRegion0"
+          },
+          {
+            "image": "C2.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_406/DONE_Ref_12_r.khan_21042019_P14_002-Scene-05-ScanRegion4"
+          },
+          {
+            "image": "C2.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_406/DONE_Ref_15_r.khan_21042019_P14_003-Scene-5-ScanRegion4"
+          },
+          {
+            "image": "C2.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_406/DONE_Ref_16_r.khan_21042019_P14_002-Scene-06-ScanRegion5"
+          },
+          {
+            "image": "C2.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_406/DONE_Ref_19_r.khan_21042019_P14_002-Scene-08-ScanRegion7"
+          },
+          {
+            "image": "C2.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_406/DONE_Ref_20_r.khan_21042019_P14_003-Scene-7-ScanRegion8"
+          },
+          {
+            "image": "C2.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_406/DONE_Ref_23_r.khan_21042019_P14_002-Scene-02-ScanRegion1"
+          },
+          {
+            "image": "C2.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_406/DONE_Ref_27_r.khan_21042019_P14_003-Scene-4-ScanRegion3"
+          },
+          {
+            "image": "C2.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_406/DONE_Ref_31_r.khan_21042019_P14_003-Scene-8-ScanRegion9"
+          },
+          {
+            "image": "C2.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_406/DONE_Ref_32_r.khan_21042019_P14_002-Scene-03-ScanRegion2"
+          },
+          {
+            "image": "C2.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_406/DONE_Ref_34_r.khan_21042019_P14_003-Scene-2-ScanRegion1"
+          },
+          {
+            "image": "C2.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_406/DONE_Ref_36_r.khan_21042019_P14_002-Scene-04-ScanRegion3"
+          }
+        ],
+        "C3": [
+          {
+            "image": "C3.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_406/DONE_Ref_10_r.khan_21042019_P14_002-Scene-09-ScanRegion8"
+          },
+          {
+            "image": "C3.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_406/DONE_Ref_11_r.khan_21042019_P14_003-Scene-1-ScanRegion0"
+          },
+          {
+            "image": "C3.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_406/DONE_Ref_12_r.khan_21042019_P14_002-Scene-05-ScanRegion4"
+          },
+          {
+            "image": "C3.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_406/DONE_Ref_15_r.khan_21042019_P14_003-Scene-5-ScanRegion4"
+          },
+          {
+            "image": "C3.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_406/DONE_Ref_16_r.khan_21042019_P14_002-Scene-06-ScanRegion5"
+          },
+          {
+            "image": "C3.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_406/DONE_Ref_19_r.khan_21042019_P14_002-Scene-08-ScanRegion7"
+          },
+          {
+            "image": "C3.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_406/DONE_Ref_20_r.khan_21042019_P14_003-Scene-7-ScanRegion8"
+          },
+          {
+            "image": "C3.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_406/DONE_Ref_23_r.khan_21042019_P14_002-Scene-02-ScanRegion1"
+          },
+          {
+            "image": "C3.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_406/DONE_Ref_27_r.khan_21042019_P14_003-Scene-4-ScanRegion3"
+          },
+          {
+            "image": "C3.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_406/DONE_Ref_31_r.khan_21042019_P14_003-Scene-8-ScanRegion9"
+          },
+          {
+            "image": "C3.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_406/DONE_Ref_32_r.khan_21042019_P14_002-Scene-03-ScanRegion2"
+          },
+          {
+            "image": "C3.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_406/DONE_Ref_34_r.khan_21042019_P14_003-Scene-2-ScanRegion1"
+          },
+          {
+            "image": "C3.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_406/DONE_Ref_36_r.khan_21042019_P14_002-Scene-04-ScanRegion3"
+          }
+        ],
+        "C4": [
+          {
+            "image": "C4.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_406/DONE_Ref_10_r.khan_21042019_P14_002-Scene-09-ScanRegion8"
+          },
+          {
+            "image": "C4.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_406/DONE_Ref_11_r.khan_21042019_P14_003-Scene-1-ScanRegion0"
+          },
+          {
+            "image": "C4.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_406/DONE_Ref_12_r.khan_21042019_P14_002-Scene-05-ScanRegion4"
+          },
+          {
+            "image": "C4.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_406/DONE_Ref_15_r.khan_21042019_P14_003-Scene-5-ScanRegion4"
+          },
+          {
+            "image": "C4.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_406/DONE_Ref_16_r.khan_21042019_P14_002-Scene-06-ScanRegion5"
+          },
+          {
+            "image": "C4.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_406/DONE_Ref_19_r.khan_21042019_P14_002-Scene-08-ScanRegion7"
+          },
+          {
+            "image": "C4.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_406/DONE_Ref_20_r.khan_21042019_P14_003-Scene-7-ScanRegion8"
+          },
+          {
+            "image": "C4.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_406/DONE_Ref_23_r.khan_21042019_P14_002-Scene-02-ScanRegion1"
+          },
+          {
+            "image": "C4.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_406/DONE_Ref_27_r.khan_21042019_P14_003-Scene-4-ScanRegion3"
+          },
+          {
+            "image": "C4.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_406/DONE_Ref_31_r.khan_21042019_P14_003-Scene-8-ScanRegion9"
+          },
+          {
+            "image": "C4.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_406/DONE_Ref_32_r.khan_21042019_P14_002-Scene-03-ScanRegion2"
+          },
+          {
+            "image": "C4.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_406/DONE_Ref_34_r.khan_21042019_P14_003-Scene-2-ScanRegion1"
+          },
+          {
+            "image": "C4.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_406/DONE_Ref_36_r.khan_21042019_P14_002-Scene-04-ScanRegion3"
+          }
+        ]
+      }
+    },
+    "animal_407": {
+      "channels": {
+        "C1": [
+          {
+            "image": "C1.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_407/DONE_Ref_9_r.khan_21042019_P14_007-Scene-1-ScanRegion0"
+          },
+          {
+            "image": "C1.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_407/DONE_Ref_11_r.khan_21042019_P14_008-Scene-03-ScanRegion2"
+          },
+          {
+            "image": "C1.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_407/DONE_Ref_14_r.khan_21042019_P14_007-Scene-2-ScanRegion1"
+          },
+          {
+            "image": "C1.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_407/DONE_Ref_15_r.khan_21042019_P14_008-Scene-05-ScanRegion4"
+          },
+          {
+            "image": "C1.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_407/DONE_Ref_17_r.khan_21042019_P14_007-Scene-3-ScanRegion2"
+          },
+          {
+            "image": "C1.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_407/DONE_Ref_18_r.khan_21042019_P14_008-Scene-08-ScanRegion7"
+          },
+          {
+            "image": "C1.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_407/DONE_Ref_19_r.khan_21042019_P14_007-Scene-4-ScanRegion3"
+          },
+          {
+            "image": "C1.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_407/DONE_Ref_21_r.khan_21042019_P14_008-Scene-06-ScanRegion5"
+          },
+          {
+            "image": "C1.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_407/DONE_Ref_25_r.khan_21042019_P14_007-Scene-6-ScanRegion5"
+          },
+          {
+            "image": "C1.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_407/DONE_Ref_26_r.khan_21042019_P14_008-Scene-02-ScanRegion1"
+          },
+          {
+            "image": "C1.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_407/DONE_Ref_28_r.khan_21042019_P14_007-Scene-7-ScanRegion6"
+          },
+          {
+            "image": "C1.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_407/DONE_Ref_31_r.khan_21042019_P14_008-Scene-07-ScanRegion6"
+          },
+          {
+            "image": "C1.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_407/DONE_Ref_36_r.khan_21042019_P14_007-Scene-5-ScanRegion4"
+          }
+        ],
+        "C2": [
+          {
+            "image": "C2.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_407/DONE_Ref_9_r.khan_21042019_P14_007-Scene-1-ScanRegion0"
+          },
+          {
+            "image": "C2.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_407/DONE_Ref_11_r.khan_21042019_P14_008-Scene-03-ScanRegion2"
+          },
+          {
+            "image": "C2.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_407/DONE_Ref_14_r.khan_21042019_P14_007-Scene-2-ScanRegion1"
+          },
+          {
+            "image": "C2.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_407/DONE_Ref_15_r.khan_21042019_P14_008-Scene-05-ScanRegion4"
+          },
+          {
+            "image": "C2.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_407/DONE_Ref_17_r.khan_21042019_P14_007-Scene-3-ScanRegion2"
+          },
+          {
+            "image": "C2.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_407/DONE_Ref_18_r.khan_21042019_P14_008-Scene-08-ScanRegion7"
+          },
+          {
+            "image": "C2.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_407/DONE_Ref_19_r.khan_21042019_P14_007-Scene-4-ScanRegion3"
+          },
+          {
+            "image": "C2.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_407/DONE_Ref_21_r.khan_21042019_P14_008-Scene-06-ScanRegion5"
+          },
+          {
+            "image": "C2.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_407/DONE_Ref_25_r.khan_21042019_P14_007-Scene-6-ScanRegion5"
+          },
+          {
+            "image": "C2.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_407/DONE_Ref_26_r.khan_21042019_P14_008-Scene-02-ScanRegion1"
+          },
+          {
+            "image": "C2.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_407/DONE_Ref_28_r.khan_21042019_P14_007-Scene-7-ScanRegion6"
+          },
+          {
+            "image": "C2.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_407/DONE_Ref_31_r.khan_21042019_P14_008-Scene-07-ScanRegion6"
+          },
+          {
+            "image": "C2.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_407/DONE_Ref_36_r.khan_21042019_P14_007-Scene-5-ScanRegion4"
+          }
+        ],
+        "C3": [
+          {
+            "image": "C3.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_407/DONE_Ref_9_r.khan_21042019_P14_007-Scene-1-ScanRegion0"
+          },
+          {
+            "image": "C3.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_407/DONE_Ref_11_r.khan_21042019_P14_008-Scene-03-ScanRegion2"
+          },
+          {
+            "image": "C3.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_407/DONE_Ref_14_r.khan_21042019_P14_007-Scene-2-ScanRegion1"
+          },
+          {
+            "image": "C3.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_407/DONE_Ref_15_r.khan_21042019_P14_008-Scene-05-ScanRegion4"
+          },
+          {
+            "image": "C3.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_407/DONE_Ref_17_r.khan_21042019_P14_007-Scene-3-ScanRegion2"
+          },
+          {
+            "image": "C3.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_407/DONE_Ref_18_r.khan_21042019_P14_008-Scene-08-ScanRegion7"
+          },
+          {
+            "image": "C3.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_407/DONE_Ref_19_r.khan_21042019_P14_007-Scene-4-ScanRegion3"
+          },
+          {
+            "image": "C3.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_407/DONE_Ref_21_r.khan_21042019_P14_008-Scene-06-ScanRegion5"
+          },
+          {
+            "image": "C3.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_407/DONE_Ref_25_r.khan_21042019_P14_007-Scene-6-ScanRegion5"
+          },
+          {
+            "image": "C3.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_407/DONE_Ref_26_r.khan_21042019_P14_008-Scene-02-ScanRegion1"
+          },
+          {
+            "image": "C3.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_407/DONE_Ref_28_r.khan_21042019_P14_007-Scene-7-ScanRegion6"
+          },
+          {
+            "image": "C3.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_407/DONE_Ref_31_r.khan_21042019_P14_008-Scene-07-ScanRegion6"
+          },
+          {
+            "image": "C3.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_407/DONE_Ref_36_r.khan_21042019_P14_007-Scene-5-ScanRegion4"
+          }
+        ],
+        "C4": [
+          {
+            "image": "C4.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_407/DONE_Ref_9_r.khan_21042019_P14_007-Scene-1-ScanRegion0"
+          },
+          {
+            "image": "C4.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_407/DONE_Ref_11_r.khan_21042019_P14_008-Scene-03-ScanRegion2"
+          },
+          {
+            "image": "C4.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_407/DONE_Ref_14_r.khan_21042019_P14_007-Scene-2-ScanRegion1"
+          },
+          {
+            "image": "C4.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_407/DONE_Ref_15_r.khan_21042019_P14_008-Scene-05-ScanRegion4"
+          },
+          {
+            "image": "C4.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_407/DONE_Ref_17_r.khan_21042019_P14_007-Scene-3-ScanRegion2"
+          },
+          {
+            "image": "C4.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_407/DONE_Ref_18_r.khan_21042019_P14_008-Scene-08-ScanRegion7"
+          },
+          {
+            "image": "C4.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_407/DONE_Ref_19_r.khan_21042019_P14_007-Scene-4-ScanRegion3"
+          },
+          {
+            "image": "C4.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_407/DONE_Ref_21_r.khan_21042019_P14_008-Scene-06-ScanRegion5"
+          },
+          {
+            "image": "C4.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_407/DONE_Ref_25_r.khan_21042019_P14_007-Scene-6-ScanRegion5"
+          },
+          {
+            "image": "C4.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_407/DONE_Ref_26_r.khan_21042019_P14_008-Scene-02-ScanRegion1"
+          },
+          {
+            "image": "C4.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_407/DONE_Ref_28_r.khan_21042019_P14_007-Scene-7-ScanRegion6"
+          },
+          {
+            "image": "C4.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_407/DONE_Ref_31_r.khan_21042019_P14_008-Scene-07-ScanRegion6"
+          },
+          {
+            "image": "C4.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_407/DONE_Ref_36_r.khan_21042019_P14_007-Scene-5-ScanRegion4"
+          }
+        ]
+      }
+    },
+    "animal_408": {
+      "channels": {
+        "C1": [
+          {
+            "image": "C1.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_408/DONE_Ref_10_r.khan_21042019_P14_006-Scene-1-ScanRegion0"
+          },
+          {
+            "image": "C1.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_408/DONE_Ref_12_r.khan_21042019_P14_004-Scene-6-ScanRegion6"
+          },
+          {
+            "image": "C1.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_408/DONE_Ref_13_r.khan_21042019_P14_006-Scene-4-ScanRegion3"
+          },
+          {
+            "image": "C1.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_408/DONE_Ref_15_r.khan_21042019_P14_004-Scene-7-ScanRegion7"
+          },
+          {
+            "image": "C1.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_408/DONE_Ref_17_r.khan_21042019_P14_006-Scene-5-ScanRegion4"
+          },
+          {
+            "image": "C1.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_408/DONE_Ref_18_r.khan_21042019_P14_004-Scene-8-ScanRegion8"
+          },
+          {
+            "image": "C1.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_408/DONE_Ref_22_r.khan_21042019_P14_004-Scene-4-ScanRegion4"
+          },
+          {
+            "image": "C1.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_408/DONE_Ref_22_r.khan_21042019_P14_006-Scene-8-ScanRegion7"
+          },
+          {
+            "image": "C1.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_408/DONE_Ref_25_r.khan_21042019_P14_006-Scene-3-ScanRegion2"
+          },
+          {
+            "image": "C1.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_408/DONE_Ref_28_r.khan_21042019_P14_006-Scene-6-ScanRegion5"
+          },
+          {
+            "image": "C1.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_408/DONE_Ref_29_r.khan_21042019_P14_004-Scene-5-ScanRegion5"
+          },
+          {
+            "image": "C1.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_408/DONE_Ref_30_r.khan_21042019_P14_004-Scene-1-ScanRegion0"
+          },
+          {
+            "image": "C1.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_408/DONE_Ref_33_r.khan_21042019_P14_006-Scene-7-ScanRegion6"
+          },
+          {
+            "image": "C1.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_408/DONE_Ref_36_r.khan_21042019_P14_004-Scene-2-ScanRegion2"
+          },
+          {
+            "image": "C1.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_408/DONE_Ref_36_r.khan_21042019_P14_005-Scene-1-ScanRegion0"
+          }
+        ],
+        "C2": [
+          {
+            "image": "C2.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_408/DONE_Ref_10_r.khan_21042019_P14_006-Scene-1-ScanRegion0"
+          },
+          {
+            "image": "C2.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_408/DONE_Ref_12_r.khan_21042019_P14_004-Scene-6-ScanRegion6"
+          },
+          {
+            "image": "C2.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_408/DONE_Ref_13_r.khan_21042019_P14_006-Scene-4-ScanRegion3"
+          },
+          {
+            "image": "C2.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_408/DONE_Ref_15_r.khan_21042019_P14_004-Scene-7-ScanRegion7"
+          },
+          {
+            "image": "C2.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_408/DONE_Ref_17_r.khan_21042019_P14_006-Scene-5-ScanRegion4"
+          },
+          {
+            "image": "C2.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_408/DONE_Ref_18_r.khan_21042019_P14_004-Scene-8-ScanRegion8"
+          },
+          {
+            "image": "C2.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_408/DONE_Ref_22_r.khan_21042019_P14_004-Scene-4-ScanRegion4"
+          },
+          {
+            "image": "C2.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_408/DONE_Ref_22_r.khan_21042019_P14_006-Scene-8-ScanRegion7"
+          },
+          {
+            "image": "C2.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_408/DONE_Ref_25_r.khan_21042019_P14_006-Scene-3-ScanRegion2"
+          },
+          {
+            "image": "C2.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_408/DONE_Ref_28_r.khan_21042019_P14_006-Scene-6-ScanRegion5"
+          },
+          {
+            "image": "C2.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_408/DONE_Ref_29_r.khan_21042019_P14_004-Scene-5-ScanRegion5"
+          },
+          {
+            "image": "C2.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_408/DONE_Ref_30_r.khan_21042019_P14_004-Scene-1-ScanRegion0"
+          },
+          {
+            "image": "C2.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_408/DONE_Ref_33_r.khan_21042019_P14_006-Scene-7-ScanRegion6"
+          },
+          {
+            "image": "C2.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_408/DONE_Ref_36_r.khan_21042019_P14_004-Scene-2-ScanRegion2"
+          },
+          {
+            "image": "C2.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_408/DONE_Ref_36_r.khan_21042019_P14_005-Scene-1-ScanRegion0"
+          }
+        ],
+        "C3": [
+          {
+            "image": "C3.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_408/DONE_Ref_10_r.khan_21042019_P14_006-Scene-1-ScanRegion0"
+          },
+          {
+            "image": "C3.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_408/DONE_Ref_12_r.khan_21042019_P14_004-Scene-6-ScanRegion6"
+          },
+          {
+            "image": "C3.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_408/DONE_Ref_13_r.khan_21042019_P14_006-Scene-4-ScanRegion3"
+          },
+          {
+            "image": "C3.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_408/DONE_Ref_15_r.khan_21042019_P14_004-Scene-7-ScanRegion7"
+          },
+          {
+            "image": "C3.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_408/DONE_Ref_17_r.khan_21042019_P14_006-Scene-5-ScanRegion4"
+          },
+          {
+            "image": "C3.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_408/DONE_Ref_18_r.khan_21042019_P14_004-Scene-8-ScanRegion8"
+          },
+          {
+            "image": "C3.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_408/DONE_Ref_22_r.khan_21042019_P14_004-Scene-4-ScanRegion4"
+          },
+          {
+            "image": "C3.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_408/DONE_Ref_22_r.khan_21042019_P14_006-Scene-8-ScanRegion7"
+          },
+          {
+            "image": "C3.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_408/DONE_Ref_25_r.khan_21042019_P14_006-Scene-3-ScanRegion2"
+          },
+          {
+            "image": "C3.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_408/DONE_Ref_28_r.khan_21042019_P14_006-Scene-6-ScanRegion5"
+          },
+          {
+            "image": "C3.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_408/DONE_Ref_29_r.khan_21042019_P14_004-Scene-5-ScanRegion5"
+          },
+          {
+            "image": "C3.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_408/DONE_Ref_30_r.khan_21042019_P14_004-Scene-1-ScanRegion0"
+          },
+          {
+            "image": "C3.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_408/DONE_Ref_33_r.khan_21042019_P14_006-Scene-7-ScanRegion6"
+          },
+          {
+            "image": "C3.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_408/DONE_Ref_36_r.khan_21042019_P14_004-Scene-2-ScanRegion2"
+          },
+          {
+            "image": "C3.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_408/DONE_Ref_36_r.khan_21042019_P14_005-Scene-1-ScanRegion0"
+          }
+        ],
+        "C4": [
+          {
+            "image": "C4.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_408/DONE_Ref_10_r.khan_21042019_P14_006-Scene-1-ScanRegion0"
+          },
+          {
+            "image": "C4.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_408/DONE_Ref_12_r.khan_21042019_P14_004-Scene-6-ScanRegion6"
+          },
+          {
+            "image": "C4.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_408/DONE_Ref_13_r.khan_21042019_P14_006-Scene-4-ScanRegion3"
+          },
+          {
+            "image": "C4.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_408/DONE_Ref_15_r.khan_21042019_P14_004-Scene-7-ScanRegion7"
+          },
+          {
+            "image": "C4.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_408/DONE_Ref_17_r.khan_21042019_P14_006-Scene-5-ScanRegion4"
+          },
+          {
+            "image": "C4.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_408/DONE_Ref_18_r.khan_21042019_P14_004-Scene-8-ScanRegion8"
+          },
+          {
+            "image": "C4.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_408/DONE_Ref_22_r.khan_21042019_P14_004-Scene-4-ScanRegion4"
+          },
+          {
+            "image": "C4.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_408/DONE_Ref_22_r.khan_21042019_P14_006-Scene-8-ScanRegion7"
+          },
+          {
+            "image": "C4.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_408/DONE_Ref_25_r.khan_21042019_P14_006-Scene-3-ScanRegion2"
+          },
+          {
+            "image": "C4.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_408/DONE_Ref_28_r.khan_21042019_P14_006-Scene-6-ScanRegion5"
+          },
+          {
+            "image": "C4.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_408/DONE_Ref_29_r.khan_21042019_P14_004-Scene-5-ScanRegion5"
+          },
+          {
+            "image": "C4.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_408/DONE_Ref_30_r.khan_21042019_P14_004-Scene-1-ScanRegion0"
+          },
+          {
+            "image": "C4.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_408/DONE_Ref_33_r.khan_21042019_P14_006-Scene-7-ScanRegion6"
+          },
+          {
+            "image": "C4.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_408/DONE_Ref_36_r.khan_21042019_P14_004-Scene-2-ScanRegion2"
+          },
+          {
+            "image": "C4.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_408/DONE_Ref_36_r.khan_21042019_P14_005-Scene-1-ScanRegion0"
+          }
+        ]
+      }
+    },
+    "animal_GAD1": {
+      "channels": {
+        "GAD": [
+          {
+            "image": "P14_Ref_8_sect1_GAD.jpg",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_GAD1/DONE_Ref_8_sect1_GAD"
+          },
+          {
+            "image": "P14_Ref_10_sect2_GAD.jpg",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_GAD1/DONE_Ref_10_sect2_GAD"
+          },
+          {
+            "image": "P14_Ref_11_sect3_GAD.jpg",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_GAD1/DONE_Ref_11_sect3_GAD"
+          },
+          {
+            "image": "P14_Ref_13_sect_4_GAD.jpg",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_GAD1/DONE_Ref_13_sect4_GAD"
+          },
+          {
+            "image": "P14_Ref_14_sect_5_GAD.jpg",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_GAD1/DONE_Ref_14_sect5_GAD"
+          },
+          {
+            "image": "P14_Ref_16_sect6_GAD.jpg",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_GAD1/DONE_Ref_16_sect6_GAD"
+          },
+          {
+            "image": "P14_Ref_21_sect7_GAD.jpg",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_GAD1/DONE_Ref_21_sect7_GAD"
+          },
+          {
+            "image": "P14_Ref_24_sect8_GAD.jpg",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_GAD1/DONE_Ref_24_sect8_GAD"
+          },
+          {
+            "image": "P14_Ref_26_sect9_GAD.jpg",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_GAD1/DONE_Ref_26_sect9_GAD"
+          },
+          {
+            "image": "P14_Ref_27_sect10_GAD.jpg",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_GAD1/DONE_Ref_27_sect10_GAD"
+          },
+          {
+            "image": "P14_Ref_29_sect11_GAD.jpg",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_GAD1/DONE_Ref_29_sect11_GAD"
+          },
+          {
+            "image": "P14_Ref_31_sect12_GAD.jpg",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_GAD1/DONE_Ref_31_sect12_GAD"
+          },
+          {
+            "image": "P14_Ref_32_sect13_GAD.jpg",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_GAD1/DONE_Ref_32_sect13_GAD"
+          },
+          {
+            "image": "P14_Ref_34_sect14_GAD.jpg",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_GAD1/DONE_Ref_34_sect14_GAD"
+          },
+          {
+            "image": "P14_Ref_36_sect15_GAD.jpg",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_GAD1/DONE_Ref_36_sect15_GAD"
+          },
+          {
+            "image": "P14_Ref_37_sect16_GAD.jpg",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_GAD1/DONE_Ref_37_sect16_GAD"
+          }
+        ]
+      }
+    },
+    "animal_Nissl": {
+      "channels": {
+        "Nissl": [
+          {
+            "image": "P14_Ref_8_sect1_Nissl.jpg",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_Nissl/DONE_Ref_8_sect1_Nissl"
+          },
+          {
+            "image": "P14_Ref_10_sect2_Nissl.jpg",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_Nissl/DONE_Ref_10_sect2_Nissl"
+          },
+          {
+            "image": "P14_Ref_11_sect3_Nissl.jpg",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_Nissl/DONE_Ref_11_sect3_Nissl"
+          },
+          {
+            "image": "P14_Ref_13_sect_4_Nissl.jpg",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_Nissl/DONE_Ref_13_sect4_Nissl"
+          },
+          {
+            "image": "P14_Ref_14_sect_5_Nissl.jpg",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_Nissl/DONE_Ref_14_sect5_Nissl"
+          },
+          {
+            "image": "P14_Ref_16_sect6_Nissl.jpg",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_Nissl/DONE_Ref_16_sect6_Nissl"
+          },
+          {
+            "image": "P14_Ref_21_sect7_Nissl.jpg",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_Nissl/DONE_Ref_21_sect7_Nissl"
+          },
+          {
+            "image": "P14_Ref_24_sect8_Nissl.jpg",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_Nissl/DONE_Ref_24_sect8_Nissl"
+          },
+          {
+            "image": "P14_Ref_26_sect9_Nissl.jpg",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_Nissl/DONE_Ref_26_sect9_Nissl"
+          },
+          {
+            "image": "P14_Ref_27_sect10_Nissl.jpg",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_Nissl/DONE_Ref_27_sect10_Nissl"
+          },
+          {
+            "image": "P14_Ref_29_sect11_Nissl.jpg",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_Nissl/DONE_Ref_29_sect11_Nissl"
+          },
+          {
+            "image": "P14_Ref_31_sect12_Nissl.jpg",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_Nissl/DONE_Ref_31_sect12_Nissl"
+          },
+          {
+            "image": "P14_Ref_32_sect13_Nissl.jpg",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_Nissl/DONE_Ref_32_sect13_Nissl"
+          },
+          {
+            "image": "P14_Ref_34_sect14_Nissl.jpg",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_Nissl/DONE_Ref_34_sect14_Nissl"
+          },
+          {
+            "image": "P14_Ref_36_sect15_Nissl.jpg",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_Nissl/DONE_Ref_36_sect15_Nissl"
+          },
+          {
+            "image": "P14_Ref_37_sect16_Nissl.jpg",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P14/animal_Nissl/DONE_Ref_37_sect16_Nissl"
+          }
+        ]
+      }
+    }
+  },
+  "P56": {
+    "animal_334": {
+      "channels": {
+        "C1": [
+          {
+            "image": "C1.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_334/DONE_Ref_1_r.khan_P60_20190502_005-Scene-5-ScanRegion4"
+          },
+          {
+            "image": "C1.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_334/DONE_Ref_1_r.khan_P60_20190502_007-Scene-4-ScanRegion3"
+          },
+          {
+            "image": "C1.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_334/DONE_Ref_2_r.khan_P60_20190502_005-Scene-2-ScanRegion1"
+          },
+          {
+            "image": "C1.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_334/DONE_Ref_3_r.khan_P60_20190502_007-Scene-5-ScanRegion4"
+          },
+          {
+            "image": "C1.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_334/DONE_Ref_5_r.khan_P60_20190502_005-Scene-7-ScanRegion6"
+          },
+          {
+            "image": "C1.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_334/DONE_Ref_6_r.khan_P60_20190502_007-Scene-6-ScanRegion5"
+          },
+          {
+            "image": "C1.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_334/DONE_Ref_8_r.khan_P60_20190502_005-Scene-6-ScanRegion5"
+          },
+          {
+            "image": "C1.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_334/DONE_Ref_10_r.khan_P60_20190502_005-Scene-4-ScanRegion3"
+          },
+          {
+            "image": "C1.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_334/DONE_Ref_10_r.khan_P60_20190502_005-Scene-8-ScanRegion7"
+          },
+          {
+            "image": "C1.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_334/DONE_Ref_10_r.khan_P60_20190502_007-Scene-2-ScanRegion1"
+          },
+          {
+            "image": "C1.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_334/DONE_Ref_10_r.khan_P60_20190502_007-Scene-7-ScanRegion6"
+          },
+          {
+            "image": "C1.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_334/DONE_Ref_11_r.khan_P60_20190502_007-Scene-1-ScanRegion0"
+          },
+          {
+            "image": "C1.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_334/DONE_Ref_14_r.khan_P60_20190502_005-Scene-1-ScanRegion0"
+          },
+          {
+            "image": "C1.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_334/DONE_Ref_16_r.khan_P60_20190502_006-Scene-1-ScanRegion0"
+          },
+          {
+            "image": "C1.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_334/DONE_Ref_17_r.khan_P60_20190502_008"
+          }
+        ],
+        "C2": [
+          {
+            "image": "C2.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_334/DONE_Ref_1_r.khan_P60_20190502_005-Scene-5-ScanRegion4"
+          },
+          {
+            "image": "C2.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_334/DONE_Ref_1_r.khan_P60_20190502_007-Scene-4-ScanRegion3"
+          },
+          {
+            "image": "C2.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_334/DONE_Ref_2_r.khan_P60_20190502_005-Scene-2-ScanRegion1"
+          },
+          {
+            "image": "C2.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_334/DONE_Ref_3_r.khan_P60_20190502_007-Scene-5-ScanRegion4"
+          },
+          {
+            "image": "C2.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_334/DONE_Ref_5_r.khan_P60_20190502_005-Scene-7-ScanRegion6"
+          },
+          {
+            "image": "C2.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_334/DONE_Ref_6_r.khan_P60_20190502_007-Scene-6-ScanRegion5"
+          },
+          {
+            "image": "C2.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_334/DONE_Ref_8_r.khan_P60_20190502_005-Scene-6-ScanRegion5"
+          },
+          {
+            "image": "C2.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_334/DONE_Ref_10_r.khan_P60_20190502_005-Scene-4-ScanRegion3"
+          },
+          {
+            "image": "C2.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_334/DONE_Ref_10_r.khan_P60_20190502_005-Scene-8-ScanRegion7"
+          },
+          {
+            "image": "C2.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_334/DONE_Ref_10_r.khan_P60_20190502_007-Scene-2-ScanRegion1"
+          },
+          {
+            "image": "C2.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_334/DONE_Ref_10_r.khan_P60_20190502_007-Scene-7-ScanRegion6"
+          },
+          {
+            "image": "C2.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_334/DONE_Ref_11_r.khan_P60_20190502_007-Scene-1-ScanRegion0"
+          },
+          {
+            "image": "C2.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_334/DONE_Ref_14_r.khan_P60_20190502_005-Scene-1-ScanRegion0"
+          },
+          {
+            "image": "C2.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_334/DONE_Ref_16_r.khan_P60_20190502_006-Scene-1-ScanRegion0"
+          },
+          {
+            "image": "C2.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_334/DONE_Ref_17_r.khan_P60_20190502_008"
+          }
+        ],
+        "C3": [
+          {
+            "image": "C3.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_334/DONE_Ref_1_r.khan_P60_20190502_005-Scene-5-ScanRegion4"
+          },
+          {
+            "image": "C3.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_334/DONE_Ref_1_r.khan_P60_20190502_007-Scene-4-ScanRegion3"
+          },
+          {
+            "image": "C3.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_334/DONE_Ref_2_r.khan_P60_20190502_005-Scene-2-ScanRegion1"
+          },
+          {
+            "image": "C3.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_334/DONE_Ref_3_r.khan_P60_20190502_007-Scene-5-ScanRegion4"
+          },
+          {
+            "image": "C3.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_334/DONE_Ref_5_r.khan_P60_20190502_005-Scene-7-ScanRegion6"
+          },
+          {
+            "image": "C3.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_334/DONE_Ref_6_r.khan_P60_20190502_007-Scene-6-ScanRegion5"
+          },
+          {
+            "image": "C3.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_334/DONE_Ref_8_r.khan_P60_20190502_005-Scene-6-ScanRegion5"
+          },
+          {
+            "image": "C3.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_334/DONE_Ref_10_r.khan_P60_20190502_005-Scene-4-ScanRegion3"
+          },
+          {
+            "image": "C3.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_334/DONE_Ref_10_r.khan_P60_20190502_005-Scene-8-ScanRegion7"
+          },
+          {
+            "image": "C3.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_334/DONE_Ref_10_r.khan_P60_20190502_007-Scene-2-ScanRegion1"
+          },
+          {
+            "image": "C3.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_334/DONE_Ref_10_r.khan_P60_20190502_007-Scene-7-ScanRegion6"
+          },
+          {
+            "image": "C3.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_334/DONE_Ref_11_r.khan_P60_20190502_007-Scene-1-ScanRegion0"
+          },
+          {
+            "image": "C3.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_334/DONE_Ref_14_r.khan_P60_20190502_005-Scene-1-ScanRegion0"
+          },
+          {
+            "image": "C3.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_334/DONE_Ref_16_r.khan_P60_20190502_006-Scene-1-ScanRegion0"
+          },
+          {
+            "image": "C3.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_334/DONE_Ref_17_r.khan_P60_20190502_008"
+          }
+        ],
+        "C4": [
+          {
+            "image": "C4.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_334/DONE_Ref_1_r.khan_P60_20190502_005-Scene-5-ScanRegion4"
+          },
+          {
+            "image": "C4.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_334/DONE_Ref_1_r.khan_P60_20190502_007-Scene-4-ScanRegion3"
+          },
+          {
+            "image": "C4.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_334/DONE_Ref_2_r.khan_P60_20190502_005-Scene-2-ScanRegion1"
+          },
+          {
+            "image": "C4.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_334/DONE_Ref_3_r.khan_P60_20190502_007-Scene-5-ScanRegion4"
+          },
+          {
+            "image": "C4.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_334/DONE_Ref_5_r.khan_P60_20190502_005-Scene-7-ScanRegion6"
+          },
+          {
+            "image": "C4.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_334/DONE_Ref_6_r.khan_P60_20190502_007-Scene-6-ScanRegion5"
+          },
+          {
+            "image": "C4.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_334/DONE_Ref_8_r.khan_P60_20190502_005-Scene-6-ScanRegion5"
+          },
+          {
+            "image": "C4.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_334/DONE_Ref_10_r.khan_P60_20190502_005-Scene-4-ScanRegion3"
+          },
+          {
+            "image": "C4.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_334/DONE_Ref_10_r.khan_P60_20190502_005-Scene-8-ScanRegion7"
+          },
+          {
+            "image": "C4.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_334/DONE_Ref_10_r.khan_P60_20190502_007-Scene-2-ScanRegion1"
+          },
+          {
+            "image": "C4.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_334/DONE_Ref_10_r.khan_P60_20190502_007-Scene-7-ScanRegion6"
+          },
+          {
+            "image": "C4.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_334/DONE_Ref_11_r.khan_P60_20190502_007-Scene-1-ScanRegion0"
+          },
+          {
+            "image": "C4.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_334/DONE_Ref_14_r.khan_P60_20190502_005-Scene-1-ScanRegion0"
+          },
+          {
+            "image": "C4.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_334/DONE_Ref_16_r.khan_P60_20190502_006-Scene-1-ScanRegion0"
+          },
+          {
+            "image": "C4.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_334/DONE_Ref_17_r.khan_P60_20190502_008"
+          }
+        ]
+      }
+    },
+    "animal_335": {
+      "channels": {
+        "C1": [
+          {
+            "image": "C1.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_335/DONE_Ref_1_r.khan_P60_20190502_011-Scene-2-ScanRegion1"
+          },
+          {
+            "image": "C1.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_335/DONE_Ref_1_r.khan_P60_20190502_011-Scene-6-ScanRegion5"
+          },
+          {
+            "image": "C1.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_335/DONE_Ref_3_r.khan_P60_20190502_003-Scene-2-ScanRegion1"
+          },
+          {
+            "image": "C1.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_335/DONE_Ref_4_r.khan_P60_20190502_011-Scene-7-ScanRegion6"
+          },
+          {
+            "image": "C1.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_335/DONE_Ref_6_r.khan_P60_20190502_003-Scene-7-ScanRegion6"
+          },
+          {
+            "image": "C1.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_335/DONE_Ref_8_r.khan_P60_20190502_003-Scene-5-ScanRegion4"
+          },
+          {
+            "image": "C1.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_335/DONE_Ref_8_r.khan_P60_20190502_011-Scene-3-ScanRegion2"
+          },
+          {
+            "image": "C1.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_335/DONE_Ref_9_r.khan_P60_20190502_011-Scene-1-ScanRegion0"
+          },
+          {
+            "image": "C1.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_335/DONE_Ref_11_r.khan_P60_20190502_003-Scene-1-ScanRegion0"
+          },
+          {
+            "image": "C1.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_335/DONE_Ref_13_r.khan_P60_20190502_003-Scene-4-ScanRegion3"
+          },
+          {
+            "image": "C1.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_335/DONE_Ref_15_r.khan_P60_20190502_011-Scene-4-ScanRegion3"
+          },
+          {
+            "image": "C1.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_335/DONE_Ref_16_r.khan_P60_20190502_003-Scene-6-ScanRegion5"
+          },
+          {
+            "image": "C1.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_335/DONE_Ref_17_r.khan_P60_20190502_002-Scene-2-ScanRegion1"
+          },
+          {
+            "image": "C1.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_335/DONE_Ref_17_r.khan_P60_20190502_004"
+          }
+        ],
+        "C2": [
+          {
+            "image": "C2.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_335/DONE_Ref_1_r.khan_P60_20190502_011-Scene-2-ScanRegion1"
+          },
+          {
+            "image": "C2.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_335/DONE_Ref_1_r.khan_P60_20190502_011-Scene-6-ScanRegion5"
+          },
+          {
+            "image": "C2.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_335/DONE_Ref_3_r.khan_P60_20190502_003-Scene-2-ScanRegion1"
+          },
+          {
+            "image": "C2.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_335/DONE_Ref_4_r.khan_P60_20190502_011-Scene-7-ScanRegion6"
+          },
+          {
+            "image": "C2.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_335/DONE_Ref_6_r.khan_P60_20190502_003-Scene-7-ScanRegion6"
+          },
+          {
+            "image": "C2.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_335/DONE_Ref_8_r.khan_P60_20190502_003-Scene-5-ScanRegion4"
+          },
+          {
+            "image": "C2.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_335/DONE_Ref_8_r.khan_P60_20190502_011-Scene-3-ScanRegion2"
+          },
+          {
+            "image": "C2.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_335/DONE_Ref_9_r.khan_P60_20190502_011-Scene-1-ScanRegion0"
+          },
+          {
+            "image": "C2.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_335/DONE_Ref_11_r.khan_P60_20190502_003-Scene-1-ScanRegion0"
+          },
+          {
+            "image": "C2.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_335/DONE_Ref_13_r.khan_P60_20190502_003-Scene-4-ScanRegion3"
+          },
+          {
+            "image": "C2.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_335/DONE_Ref_15_r.khan_P60_20190502_011-Scene-4-ScanRegion3"
+          },
+          {
+            "image": "C2.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_335/DONE_Ref_16_r.khan_P60_20190502_003-Scene-6-ScanRegion5"
+          },
+          {
+            "image": "C2.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_335/DONE_Ref_17_r.khan_P60_20190502_002-Scene-2-ScanRegion1"
+          },
+          {
+            "image": "C2.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_335/DONE_Ref_17_r.khan_P60_20190502_004"
+          }
+        ],
+        "C3": [
+          {
+            "image": "C3.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_335/DONE_Ref_1_r.khan_P60_20190502_011-Scene-2-ScanRegion1"
+          },
+          {
+            "image": "C3.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_335/DONE_Ref_1_r.khan_P60_20190502_011-Scene-6-ScanRegion5"
+          },
+          {
+            "image": "C3.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_335/DONE_Ref_3_r.khan_P60_20190502_003-Scene-2-ScanRegion1"
+          },
+          {
+            "image": "C3.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_335/DONE_Ref_4_r.khan_P60_20190502_011-Scene-7-ScanRegion6"
+          },
+          {
+            "image": "C3.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_335/DONE_Ref_6_r.khan_P60_20190502_003-Scene-7-ScanRegion6"
+          },
+          {
+            "image": "C3.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_335/DONE_Ref_8_r.khan_P60_20190502_003-Scene-5-ScanRegion4"
+          },
+          {
+            "image": "C3.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_335/DONE_Ref_8_r.khan_P60_20190502_011-Scene-3-ScanRegion2"
+          },
+          {
+            "image": "C3.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_335/DONE_Ref_9_r.khan_P60_20190502_011-Scene-1-ScanRegion0"
+          },
+          {
+            "image": "C3.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_335/DONE_Ref_11_r.khan_P60_20190502_003-Scene-1-ScanRegion0"
+          },
+          {
+            "image": "C3.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_335/DONE_Ref_13_r.khan_P60_20190502_003-Scene-4-ScanRegion3"
+          },
+          {
+            "image": "C3.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_335/DONE_Ref_15_r.khan_P60_20190502_011-Scene-4-ScanRegion3"
+          },
+          {
+            "image": "C3.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_335/DONE_Ref_16_r.khan_P60_20190502_003-Scene-6-ScanRegion5"
+          },
+          {
+            "image": "C3.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_335/DONE_Ref_17_r.khan_P60_20190502_002-Scene-2-ScanRegion1"
+          },
+          {
+            "image": "C3.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_335/DONE_Ref_17_r.khan_P60_20190502_004"
+          }
+        ],
+        "C4": [
+          {
+            "image": "C4.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_335/DONE_Ref_1_r.khan_P60_20190502_011-Scene-2-ScanRegion1"
+          },
+          {
+            "image": "C4.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_335/DONE_Ref_1_r.khan_P60_20190502_011-Scene-6-ScanRegion5"
+          },
+          {
+            "image": "C4.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_335/DONE_Ref_3_r.khan_P60_20190502_003-Scene-2-ScanRegion1"
+          },
+          {
+            "image": "C4.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_335/DONE_Ref_4_r.khan_P60_20190502_011-Scene-7-ScanRegion6"
+          },
+          {
+            "image": "C4.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_335/DONE_Ref_6_r.khan_P60_20190502_003-Scene-7-ScanRegion6"
+          },
+          {
+            "image": "C4.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_335/DONE_Ref_8_r.khan_P60_20190502_003-Scene-5-ScanRegion4"
+          },
+          {
+            "image": "C4.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_335/DONE_Ref_8_r.khan_P60_20190502_011-Scene-3-ScanRegion2"
+          },
+          {
+            "image": "C4.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_335/DONE_Ref_9_r.khan_P60_20190502_011-Scene-1-ScanRegion0"
+          },
+          {
+            "image": "C4.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_335/DONE_Ref_11_r.khan_P60_20190502_003-Scene-1-ScanRegion0"
+          },
+          {
+            "image": "C4.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_335/DONE_Ref_13_r.khan_P60_20190502_003-Scene-4-ScanRegion3"
+          },
+          {
+            "image": "C4.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_335/DONE_Ref_15_r.khan_P60_20190502_011-Scene-4-ScanRegion3"
+          },
+          {
+            "image": "C4.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_335/DONE_Ref_16_r.khan_P60_20190502_003-Scene-6-ScanRegion5"
+          },
+          {
+            "image": "C4.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_335/DONE_Ref_17_r.khan_P60_20190502_002-Scene-2-ScanRegion1"
+          },
+          {
+            "image": "C4.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_335/DONE_Ref_17_r.khan_P60_20190502_004"
+          }
+        ]
+      }
+    },
+    "animal_336": {
+      "channels": {
+        "C1": [
+          {
+            "image": "C1.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_336/DONE_Ref_1_r.khan_P60_20190502_010-Scene-1-ScanRegion0"
+          },
+          {
+            "image": "C1.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_336/DONE_Ref_2_r.khan_P60_20190502_010-Scene-5-ScanRegion4"
+          },
+          {
+            "image": "C1.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_336/DONE_Ref_3_r.khan_P60_20190502_009-Scene-3-ScanRegion2"
+          },
+          {
+            "image": "C1.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_336/DONE_Ref_6_r.khan_P60_20190502_009-Scene-2-ScanRegion1"
+          },
+          {
+            "image": "C1.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_336/DONE_Ref_8_r.khan_P60_20190502_009-Scene-5-ScanRegion5"
+          },
+          {
+            "image": "C1.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_336/DONE_Ref_12_r.khan_P60_20190502_010-Scene-3-ScanRegion2"
+          },
+          {
+            "image": "C1.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_336/DONE_Ref_13_r.khan_P60_20190502_009-Scene-7-ScanRegion7"
+          },
+          {
+            "image": "C1.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_336/DONE_Ref_13_r.khan_P60_20190502_010-Scene-4-ScanRegion3"
+          },
+          {
+            "image": "C1.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_336/DONE_Ref_15_r.khan_P60_20190502_009-Scene-1-ScanRegion0"
+          },
+          {
+            "image": "C1.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_336/DONE_Ref_17_r.khan_P60_20190502_010-Scene-2-ScanRegion1"
+          }
+        ],
+        "C2": [
+          {
+            "image": "C2.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_336/DONE_Ref_1_r.khan_P60_20190502_010-Scene-1-ScanRegion0"
+          },
+          {
+            "image": "C2.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_336/DONE_Ref_2_r.khan_P60_20190502_010-Scene-5-ScanRegion4"
+          },
+          {
+            "image": "C2.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_336/DONE_Ref_3_r.khan_P60_20190502_009-Scene-3-ScanRegion2"
+          },
+          {
+            "image": "C2.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_336/DONE_Ref_6_r.khan_P60_20190502_009-Scene-2-ScanRegion1"
+          },
+          {
+            "image": "C2.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_336/DONE_Ref_8_r.khan_P60_20190502_009-Scene-5-ScanRegion5"
+          },
+          {
+            "image": "C2.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_336/DONE_Ref_12_r.khan_P60_20190502_010-Scene-3-ScanRegion2"
+          },
+          {
+            "image": "C2.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_336/DONE_Ref_13_r.khan_P60_20190502_009-Scene-7-ScanRegion7"
+          },
+          {
+            "image": "C2.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_336/DONE_Ref_13_r.khan_P60_20190502_010-Scene-4-ScanRegion3"
+          },
+          {
+            "image": "C2.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_336/DONE_Ref_15_r.khan_P60_20190502_009-Scene-1-ScanRegion0"
+          },
+          {
+            "image": "C2.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_336/DONE_Ref_17_r.khan_P60_20190502_010-Scene-2-ScanRegion1"
+          }
+        ],
+        "C3": [
+          {
+            "image": "C3.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_336/DONE_Ref_1_r.khan_P60_20190502_010-Scene-1-ScanRegion0"
+          },
+          {
+            "image": "C3.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_336/DONE_Ref_2_r.khan_P60_20190502_010-Scene-5-ScanRegion4"
+          },
+          {
+            "image": "C3.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_336/DONE_Ref_3_r.khan_P60_20190502_009-Scene-3-ScanRegion2"
+          },
+          {
+            "image": "C3.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_336/DONE_Ref_6_r.khan_P60_20190502_009-Scene-2-ScanRegion1"
+          },
+          {
+            "image": "C3.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_336/DONE_Ref_8_r.khan_P60_20190502_009-Scene-5-ScanRegion5"
+          },
+          {
+            "image": "C3.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_336/DONE_Ref_12_r.khan_P60_20190502_010-Scene-3-ScanRegion2"
+          },
+          {
+            "image": "C3.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_336/DONE_Ref_13_r.khan_P60_20190502_009-Scene-7-ScanRegion7"
+          },
+          {
+            "image": "C3.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_336/DONE_Ref_13_r.khan_P60_20190502_010-Scene-4-ScanRegion3"
+          },
+          {
+            "image": "C3.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_336/DONE_Ref_15_r.khan_P60_20190502_009-Scene-1-ScanRegion0"
+          },
+          {
+            "image": "C3.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_336/DONE_Ref_17_r.khan_P60_20190502_010-Scene-2-ScanRegion1"
+          }
+        ],
+        "C4": [
+          {
+            "image": "C4.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_336/DONE_Ref_1_r.khan_P60_20190502_010-Scene-1-ScanRegion0"
+          },
+          {
+            "image": "C4.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_336/DONE_Ref_2_r.khan_P60_20190502_010-Scene-5-ScanRegion4"
+          },
+          {
+            "image": "C4.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_336/DONE_Ref_3_r.khan_P60_20190502_009-Scene-3-ScanRegion2"
+          },
+          {
+            "image": "C4.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_336/DONE_Ref_6_r.khan_P60_20190502_009-Scene-2-ScanRegion1"
+          },
+          {
+            "image": "C4.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_336/DONE_Ref_8_r.khan_P60_20190502_009-Scene-5-ScanRegion5"
+          },
+          {
+            "image": "C4.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_336/DONE_Ref_12_r.khan_P60_20190502_010-Scene-3-ScanRegion2"
+          },
+          {
+            "image": "C4.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_336/DONE_Ref_13_r.khan_P60_20190502_009-Scene-7-ScanRegion7"
+          },
+          {
+            "image": "C4.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_336/DONE_Ref_13_r.khan_P60_20190502_010-Scene-4-ScanRegion3"
+          },
+          {
+            "image": "C4.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_336/DONE_Ref_15_r.khan_P60_20190502_009-Scene-1-ScanRegion0"
+          },
+          {
+            "image": "C4.png",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_336/DONE_Ref_17_r.khan_P60_20190502_010-Scene-2-ScanRegion1"
+          }
+        ]
+      }
+    },
+    "animal_Camk2a_GAD1_1": {
+      "channels": {
+        "1": [
+          {
+            "image": "P56_Ref_3_sect_1.jpg",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_Camk2a_GAD1_1/DONE_Ref_3_sect_1"
+          }
+        ],
+        "2": [
+          {
+            "image": "P56_Ref_3_sect_2.jpg",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_Camk2a_GAD1_1/DONE_Ref_3_sect_2"
+          }
+        ],
+        "3": [
+          {
+            "image": "P56_Ref_4_sect_3.jpg",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_Camk2a_GAD1_1/DONE_Ref_4_sect_3"
+          }
+        ],
+        "4": [
+          {
+            "image": "P56_Ref_5_sect_4.jpg",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_Camk2a_GAD1_1/DONE_Ref_5_sect_4"
+          }
+        ],
+        "5": [
+          {
+            "image": "P56_Ref_6_sect_5.jpg",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_Camk2a_GAD1_1/DONE_Ref_6_sect_5"
+          }
+        ],
+        "6": [
+          {
+            "image": "P56_Ref_7_sect_6.jpg",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_Camk2a_GAD1_1/DONE_Ref_7_sect_6"
+          }
+        ],
+        "7": [
+          {
+            "image": "P56_Ref_7_sect_7.jpg",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_Camk2a_GAD1_1/DONE_Ref_7_sect_7"
+          }
+        ],
+        "8": [
+          {
+            "image": "P56_Ref_8_sect_8.jpg",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_Camk2a_GAD1_1/DONE_Ref_8_sect_8"
+          }
+        ],
+        "9": [
+          {
+            "image": "P56_Ref_9_sect_9.jpg",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_Camk2a_GAD1_1/DONE_Ref_9_sect_9"
+          }
+        ],
+        "10": [
+          {
+            "image": "P56_Ref_10_sect_10.jpg",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_Camk2a_GAD1_1/DONE_Ref_10_sect_10"
+          }
+        ],
+        "11": [
+          {
+            "image": "P56_Ref_10_sect_11.jpg",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_Camk2a_GAD1_1/DONE_Ref_10_sect_11"
+          }
+        ],
+        "12": [
+          {
+            "image": "P56_Ref_11_sect_12.jpg",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_Camk2a_GAD1_1/DONE_Ref_11_sect_12"
+          }
+        ],
+        "13": [
+          {
+            "image": "P56_Ref_12_sect_13.jpg",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_Camk2a_GAD1_1/DONE_Ref_12_sect_13"
+          }
+        ],
+        "14": [
+          {
+            "image": "P56_Ref_13_sect_14.jpg",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_Camk2a_GAD1_1/DONE_Ref_13_sect_14"
+          }
+        ],
+        "15": [
+          {
+            "image": "P56_Ref_14_sect_15.jpg",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_Camk2a_GAD1_1/DONE_Ref_14_sect_15"
+          }
+        ],
+        "16": [
+          {
+            "image": "P56_Ref_14_sect_16.jpg",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_Camk2a_GAD1_1/DONE_Ref_14_sect_16"
+          }
+        ],
+        "17": [
+          {
+            "image": "P56_Ref_15_sect_17.jpg",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_Camk2a_GAD1_1/DONE_Ref_15_sect_17"
+          }
+        ],
+        "18": [
+          {
+            "image": "P56_Ref_16_sect_18.jpg",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_Camk2a_GAD1_1/DONE_Ref_16_sect_18"
+          }
+        ],
+        "19": [
+          {
+            "image": "P56_Ref_17_sect_19.jpg",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_Camk2a_GAD1_1/DONE_Ref_17_sect_19"
+          }
+        ],
+        "20": [
+          {
+            "image": "P56_Ref_17_sect_20.jpg",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_Camk2a_GAD1_1/DONE_Ref_18_sect_20"
+          }
+        ]
+      }
+    },
+    "animal_Camk2a_GAD1_2": {
+      "channels": {
+        "1": [
+          {
+            "image": "Ref_1_sect_1.jpg",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_Camk2a_GAD1_2/DONE_Ref_1_sect_1"
+          }
+        ],
+        "2": [
+          {
+            "image": "Ref_2_sect_2.jpg",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_Camk2a_GAD1_2/DONE_Ref_2_sect_2"
+          }
+        ],
+        "3": [
+          {
+            "image": "Ref_3_sect_3.jpg",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_Camk2a_GAD1_2/DONE_Ref_3_sect_3"
+          }
+        ],
+        "4": [
+          {
+            "image": "Ref_4_sect_4.jpg",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_Camk2a_GAD1_2/DONE_Ref_4_sect_4"
+          }
+        ],
+        "5": [
+          {
+            "image": "Ref_5_sect_5.jpg",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_Camk2a_GAD1_2/DONE_Ref_5_sect_5"
+          }
+        ],
+        "6": [
+          {
+            "image": "Ref_6_sect_6.jpg",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_Camk2a_GAD1_2/DONE_Ref_6_sect_6"
+          }
+        ],
+        "7": [
+          {
+            "image": "Ref_7_sect_7.jpg",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_Camk2a_GAD1_2/DONE_Ref_7_sect_7"
+          }
+        ],
+        "8": [
+          {
+            "image": "Ref_8_sect_8.jpg",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_Camk2a_GAD1_2/DONE_Ref_8_sect_8"
+          }
+        ],
+        "9": [
+          {
+            "image": "Ref_9_sect_9.jpg",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_Camk2a_GAD1_2/DONE_Ref_9_sect_9"
+          }
+        ],
+        "10": [
+          {
+            "image": "Ref_10_sect_10.jpg",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_Camk2a_GAD1_2/DONE_Ref_10_sect_10"
+          }
+        ],
+        "11": [
+          {
+            "image": "Ref_11_sect_11.jpg",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_Camk2a_GAD1_2/DONE_Ref_11_sect_11"
+          }
+        ],
+        "12": [
+          {
+            "image": "Ref_12_sect_12.jpg",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_Camk2a_GAD1_2/DONE_Ref_12_sect_12"
+          }
+        ],
+        "13": [
+          {
+            "image": "Ref_13_sect_13.jpg",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_Camk2a_GAD1_2/DONE_Ref_13_sect_13"
+          }
+        ],
+        "14": [
+          {
+            "image": "Ref_14_sect_14.jpg",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_Camk2a_GAD1_2/DONE_Ref_14_sect_14"
+          }
+        ],
+        "15": [
+          {
+            "image": "Ref_15_sect_15.jpg",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_Camk2a_GAD1_2/DONE_Ref_15_sect_15"
+          }
+        ],
+        "16": [
+          {
+            "image": "Ref_16_sect_16.jpg",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_Camk2a_GAD1_2/DONE_Ref_16_sect_16"
+          }
+        ],
+        "17": [
+          {
+            "image": "Ref_17_sect_17.jpg",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_Camk2a_GAD1_2/DONE_Ref_17_sect_17"
+          }
+        ],
+        "18": [
+          {
+            "image": "Ref_17_sect_18.jpg",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_Camk2a_GAD1_2/DONE_Ref_17_sect_18"
+          }
+        ],
+        "19": [
+          {
+            "image": "Ref_18_sect_19.jpg",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_Camk2a_GAD1_2/DONE_Ref_18_sect_19"
+          }
+        ],
+        "20": [
+          {
+            "image": "Ref_19_sect_20.jpg",
+            "atlas": "atlas_new.png",
+            "path": "MortX_Fresh/P56/animal_Camk2a_GAD1_2/DONE_Ref_19_sect_20"
+          }
+        ]
+      }
+    }
+  }
+}
