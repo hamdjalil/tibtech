@@ -3,26 +3,7 @@
     "animal_314": {
       "channels": {
         "C1": [
-          {
-            "image": "C1-r.khan_20190412P3_004-Scene-02-ScanRegion1.czi - r.khan_20190412P3_004-Scene-02-ScanRegion1.czi .png",
-            "atlas": "atlas_new.png",
-            "path": "Atlas_data/P4/animal_314/DONE_Ref_2_r.khan_20190412P3_004-Scene-02-ScanRegion1"
-          },
-          {
-            "image": "C1-r.khan_20190412P3_004-Scene-03-ScanRegion2.czi - r.khan_20190412P3_004-Scene-03-ScanRegion2.czi .png",
-            "atlas": "atlas_new.png",
-            "path": "Atlas_data/P4/animal_314/DONE_Ref_3_r.khan_20190412P3_004-Scene-03-ScanRegion2"
-          },
-          {
-            "image": "C1-r.khan_20190412P3_004-Scene-06-ScanRegion5.czi - r.khan_20190412P3_004-Scene-06-ScanRegion5.czi .png",
-            "atlas": "atlas_new.png",
-            "path": "Atlas_data/P4/animal_314/DONE_Ref_6_r.khan_20190412P3_004-Scene-06-ScanRegion5"
-          },
-          {
-            "image": "C1-r.khan_20190412P3_004-Scene-07-ScanRegion6.czi - r.khan_20190412P3_004-Scene-07-ScanRegion6.czi .png",
-            "atlas": "atlas_new.png",
-            "path": "Atlas_data/P4/animal_314/DONE_Ref_7_r.khan_20190412P3_004-Scene-07-ScanRegion6"
-          },
+          
           {
             "image": "C1-r.khan_20190412P3_007-Scene-06-ScanRegion5.czi - r.khan_20190412P3_007-Scene-06-ScanRegion5.czi .png",
             "atlas": "atlas_new.png",
@@ -125,26 +106,7 @@
           }
         ],
         "C2": [
-          {
-            "image": "C2-r.khan_20190412P3_004-Scene-02-ScanRegion1.czi - r.khan_20190412P3_004-Scene-02-ScanRegion1.czi .png",
-            "atlas": "atlas_new.png",
-            "path": "Atlas_data/P4/animal_314/DONE_Ref_2_r.khan_20190412P3_004-Scene-02-ScanRegion1"
-          },
-          {
-            "image": "C2-r.khan_20190412P3_004-Scene-03-ScanRegion2.czi - r.khan_20190412P3_004-Scene-03-ScanRegion2.czi .png",
-            "atlas": "atlas_new.png",
-            "path": "Atlas_data/P4/animal_314/DONE_Ref_3_r.khan_20190412P3_004-Scene-03-ScanRegion2"
-          },
-          {
-            "image": "C2-r.khan_20190412P3_004-Scene-06-ScanRegion5.czi - r.khan_20190412P3_004-Scene-06-ScanRegion5.czi .png",
-            "atlas": "atlas_new.png",
-            "path": "Atlas_data/P4/animal_314/DONE_Ref_6_r.khan_20190412P3_004-Scene-06-ScanRegion5"
-          },
-          {
-            "image": "C2-r.khan_20190412P3_004-Scene-07-ScanRegion6.czi - r.khan_20190412P3_004-Scene-07-ScanRegion6.czi .png",
-            "atlas": "atlas_new.png",
-            "path": "Atlas_data/P4/animal_314/DONE_Ref_7_r.khan_20190412P3_004-Scene-07-ScanRegion6"
-          },
+          
           {
             "image": "C2-r.khan_20190412P3_007-Scene-06-ScanRegion5.czi - r.khan_20190412P3_007-Scene-06-ScanRegion5.czi .png",
             "atlas": "atlas_new.png",
@@ -247,26 +209,7 @@
           }
         ],
         "C3": [
-          {
-            "image": "C3-r.khan_20190412P3_004-Scene-02-ScanRegion1.czi - r.khan_20190412P3_004-Scene-02-ScanRegion1.czi .png",
-            "atlas": "atlas_new.png",
-            "path": "Atlas_data/P4/animal_314/DONE_Ref_2_r.khan_20190412P3_004-Scene-02-ScanRegion1"
-          },
-          {
-            "image": "C3-r.khan_20190412P3_004-Scene-03-ScanRegion2.czi - r.khan_20190412P3_004-Scene-03-ScanRegion2.czi .png",
-            "atlas": "atlas_new.png",
-            "path": "Atlas_data/P4/animal_314/DONE_Ref_3_r.khan_20190412P3_004-Scene-03-ScanRegion2"
-          },
-          {
-            "image": "C3-r.khan_20190412P3_004-Scene-06-ScanRegion5.czi - r.khan_20190412P3_004-Scene-06-ScanRegion5.czi .png",
-            "atlas": "atlas_new.png",
-            "path": "Atlas_data/P4/animal_314/DONE_Ref_6_r.khan_20190412P3_004-Scene-06-ScanRegion5"
-          },
-          {
-            "image": "C3-r.khan_20190412P3_004-Scene-07-ScanRegion6.czi - r.khan_20190412P3_004-Scene-07-ScanRegion6.czi .png",
-            "atlas": "atlas_new.png",
-            "path": "Atlas_data/P4/animal_314/DONE_Ref_7_r.khan_20190412P3_004-Scene-07-ScanRegion6"
-          },
+          
           {
             "image": "C3-r.khan_20190412P3_007-Scene-06-ScanRegion5.czi - r.khan_20190412P3_007-Scene-06-ScanRegion5.czi .png",
             "atlas": "atlas_new.png",
@@ -369,26 +312,7 @@
           }
         ],
         "C4": [
-          {
-            "image": "C4-r.khan_20190412P3_004-Scene-02-ScanRegion1.czi - r.khan_20190412P3_004-Scene-02-ScanRegion1.czi .png",
-            "atlas": "atlas_new.png",
-            "path": "Atlas_data/P4/animal_314/DONE_Ref_2_r.khan_20190412P3_004-Scene-02-ScanRegion1"
-          },
-          {
-            "image": "C4-r.khan_20190412P3_004-Scene-03-ScanRegion2.czi - r.khan_20190412P3_004-Scene-03-ScanRegion2.czi .png",
-            "atlas": "atlas_new.png",
-            "path": "Atlas_data/P4/animal_314/DONE_Ref_3_r.khan_20190412P3_004-Scene-03-ScanRegion2"
-          },
-          {
-            "image": "C4-r.khan_20190412P3_004-Scene-06-ScanRegion5.czi - r.khan_20190412P3_004-Scene-06-ScanRegion5.czi .png",
-            "atlas": "atlas_new.png",
-            "path": "Atlas_data/P4/animal_314/DONE_Ref_6_r.khan_20190412P3_004-Scene-06-ScanRegion5"
-          },
-          {
-            "image": "C4-r.khan_20190412P3_004-Scene-07-ScanRegion6.czi - r.khan_20190412P3_004-Scene-07-ScanRegion6.czi .png",
-            "atlas": "atlas_new.png",
-            "path": "Atlas_data/P4/animal_314/DONE_Ref_7_r.khan_20190412P3_004-Scene-07-ScanRegion6"
-          },
+          
           {
             "image": "C4-r.khan_20190412P3_007-Scene-06-ScanRegion5.czi - r.khan_20190412P3_007-Scene-06-ScanRegion5.czi .png",
             "atlas": "atlas_new.png",
@@ -500,11 +424,7 @@
             "atlas": "atlas_new.png",
             "path": "Atlas_data/P4/animal_315/DONE_Ref_3_r.khan_20190413P3_001-Scene-01-ScanRegion0"
           },
-          {
-            "image": "C1-r.khan_20190412P3_006-Scene-03-ScanRegion2.czi - r.khan_20190412P3_006-Scene-03-ScanRegion2.czi .png",
-            "atlas": "atlas_new.png",
-            "path": "Atlas_data/P4/animal_315/DONE_Ref_4_r.khan_20190412P3_006-Scene-03-ScanRegion2"
-          },
+          
           {
             "image": "C1-r.khan_20190413P3_001-Scene-02-ScanRegion1.czi - r.khan_20190413P3_001-Scene-02-ScanRegion1.czi .png",
             "atlas": "atlas_new.png",
@@ -627,11 +547,7 @@
             "atlas": "atlas_new.png",
             "path": "Atlas_data/P4/animal_315/DONE_Ref_3_r.khan_20190413P3_001-Scene-01-ScanRegion0"
           },
-          {
-            "image": "C2-r.khan_20190412P3_006-Scene-03-ScanRegion2.czi - r.khan_20190412P3_006-Scene-03-ScanRegion2.czi .png",
-            "atlas": "atlas_new.png",
-            "path": "Atlas_data/P4/animal_315/DONE_Ref_4_r.khan_20190412P3_006-Scene-03-ScanRegion2"
-          },
+          
           {
             "image": "C2-r.khan_20190413P3_001-Scene-02-ScanRegion1.czi - r.khan_20190413P3_001-Scene-02-ScanRegion1.czi .png",
             "atlas": "atlas_new.png",
@@ -754,11 +670,7 @@
             "atlas": "atlas_new.png",
             "path": "Atlas_data/P4/animal_315/DONE_Ref_3_r.khan_20190413P3_001-Scene-01-ScanRegion0"
           },
-          {
-            "image": "C3-r.khan_20190412P3_006-Scene-03-ScanRegion2.czi - r.khan_20190412P3_006-Scene-03-ScanRegion2.czi .png",
-            "atlas": "atlas_new.png",
-            "path": "Atlas_data/P4/animal_315/DONE_Ref_4_r.khan_20190412P3_006-Scene-03-ScanRegion2"
-          },
+          
           {
             "image": "C3-r.khan_20190413P3_001-Scene-02-ScanRegion1.czi - r.khan_20190413P3_001-Scene-02-ScanRegion1.czi .png",
             "atlas": "atlas_new.png",
@@ -881,11 +793,7 @@
             "atlas": "atlas_new.png",
             "path": "Atlas_data/P4/animal_315/DONE_Ref_3_r.khan_20190413P3_001-Scene-01-ScanRegion0"
           },
-          {
-            "image": "C4-r.khan_20190412P3_006-Scene-03-ScanRegion2.czi - r.khan_20190412P3_006-Scene-03-ScanRegion2.czi .png",
-            "atlas": "atlas_new.png",
-            "path": "Atlas_data/P4/animal_315/DONE_Ref_4_r.khan_20190412P3_006-Scene-03-ScanRegion2"
-          },
+         
           {
             "image": "C4-r.khan_20190413P3_001-Scene-02-ScanRegion1.czi - r.khan_20190413P3_001-Scene-02-ScanRegion1.czi .png",
             "atlas": "atlas_new.png",

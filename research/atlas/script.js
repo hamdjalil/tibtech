@@ -1,4 +1,5 @@
 const DATA_BASE = "https://tibbtech2.s3.amazonaws.com";
+const MAX_DISPLAY_WIDTH = 400;
 
 let INDEX = null;
 let REGION_MAP = {};
@@ -376,13 +377,12 @@ function drawOverlayImage(imagePath, atlasPath, container, imgIdx, onFirstReady)
   canvas.addEventListener("mousemove", e => {
     const rect = canvas.getBoundingClientRect();
 
-    const x = Math.floor(
+   const x = Math.floor(
       (e.clientX - rect.left) * (labelCanvas.width / rect.width)
     );
     const y = Math.floor(
       (e.clientY - rect.top) * (labelCanvas.height / rect.height)
     );
-
     if (
       x < 0 || y < 0 ||
       x >= labelCanvas.width ||
@@ -524,6 +524,37 @@ function renderFullscreenImage() {
     fullscreenLabelCtx.drawImage(atlas, 0, 0);
   }
 
+//   function tryDraw() {
+//   if (loaded < 2) return;
+
+//   const scale = Math.min(1, MAX_DISPLAY_WIDTH / img.width);
+
+//   const displayW = Math.round(img.width * scale);
+//   const displayH = displayW
+//   console.log("")
+//   // Math.round(img.height * scale);
+
+//   // 🔹 Visible canvas = SCALED
+//   canvas.width = displayW;
+//   canvas.height = displayH;
+
+//   ctx.clearRect(0, 0, displayW, displayH);
+
+//   // Base image (scaled)
+//   ctx.drawImage(img, 0, 0, displayW, displayH);
+
+//   // Atlas overlay (scaled, visual only)
+//   ctx.globalAlpha = 0.4;
+//   ctx.drawImage(atlas, 0, 0, displayW, displayH);
+//   ctx.globalAlpha = 1.0;
+
+//   // 🔹 OFFSCREEN label canvas = FULL RES (IMPORTANT)
+//   labelCanvas.width = atlas.width;
+//   labelCanvas.height = atlas.height;
+//   labelCtx.drawImage(atlas, 0, 0);
+
+//   onFirstReady?.();
+// }
   img.onload = () => { loaded++; tryDraw(); };
   atlas.onload = () => { loaded++; tryDraw(); };
 
