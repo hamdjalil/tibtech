@@ -1,150 +1,74 @@
-<!-- Start: Our Partners (Modern, Dual-Lane) -->
-<section class="relative flex items-center justify-center pt-16 md:pt-20 pb-12 overflow-hidden bg-gray-50 text-black">
-  <!-- soft blobs -->
-  <div class="absolute inset-0 pointer-events-none">
-    <div class="absolute bottom-0 right-0 w-1/4 h-1/4 bg-blue-200 opacity-10 blur-[100px] rounded-full"></div>
-    <div class="absolute top-0 left-0 w-1/5 h-1/5 bg-teal-200 opacity-10 blur-[100px] rounded-full"></div>
+<!-- Start: Our Partners Section Component -->
+<section class="relative min-h-[calc(100vh-4rem)] md:min-h-[calc(100vh-5rem)] flex items-center justify-center pt-16 md:pt-20 pb-12 overflow-hidden bg-gradient-to-b from-black via-deepmind-dark to-black text-white">
+  <div class="absolute inset-0">
+    <div class="absolute bottom-0 right-0 w-1/4 h-1/4 bg-deepmind-blue opacity-5 blur-[100px] rounded-full"></div>
+    <div class="absolute top-0 left-0 w-1/5 h-1/5 bg-deepmind-teal opacity-5 blur-[100px] rounded-full"></div>
   </div>
-
+  
   <div class="container relative z-10">
     <div class="max-w-6xl mx-auto text-center">
-      <!-- header chip -->
-      
-
-      <h2 class="mb-4 tracking-tight text-3xl md:text-4xl">
-        <span class="text-black">Endorsed by the</span>
-        <span class="bg-clip-text text-transparent bg-gradient-to-r from-blue-600 via-teal-600 to-purple-600 animate-gradient-x">
-          Industry’s Finest
-        </span>
-      </h2>
-
-      <p class="text-gray-600 max-w-2xl mx-auto text-sm md:text-base mb-7">
+      <h2 class="mb-6">Our Partners</h2>
+      <p class="text-deepmind-gray-200 mb-10 text-xl max-w-2xl mx-auto">
         We collaborate with leading organizations across healthcare and technology to drive innovation and expand the impact of our research.
       </p>
-
-      <!-- Dual-lane marquee -->
-      <div class="relative w-full group" aria-label="Partner logos">
-        <!-- edge fades -->
-        <div class="pointer-events-none absolute inset-y-0 left-0 w-12 md:w-16 bg-gradient-to-r from-gray-50 to-transparent"></div>
-        <div class="pointer-events-none absolute inset-y-0 right-0 w-12 md:w-16 bg-gradient-to-l from-gray-50 to-transparent"></div>
-
-        <!-- Lane A -->
-        <div class="overflow-hidden mask-edges">
-          <div class="marquee" style="--duration:32s">
-            <!-- set 1 -->
-            <div class="logo-tile"><img src="/partners/broad.png" alt="Broad Institute" class="logo-img invertable"></div>
-            <div class="logo-tile"><img src="/partners/stanley.png" alt="Stanley Center" class="logo-img invertable"></div>
-            <div class="logo-tile"><img src="/partners/harvard.png" alt="Harvard Medical School" class="logo-img invertable"></div>
-            <div class="logo-tile"><img src="/partners/bnixweill.png" alt="Burke Neurological Institute" class="logo-img invertable"></div>
-            <div class="logo-tile"><img src="/partners/ecu.png" alt="East Carolina University" class="logo-img invertable"></div>
-            <!-- duplicate set for seamless loop -->
-            <div class="logo-tile"><img src="/partners/broad.png" alt="Broad Institute (duplicate)" class="logo-img invertable" aria-hidden="true"></div>
-            <div class="logo-tile"><img src="/partners/stanley.png" alt="Stanley Center (duplicate)" class="logo-img invertable" aria-hidden="true"></div>
-            <div class="logo-tile"><img src="/partners/harvard.png" alt="Harvard Medical School (duplicate)" class="logo-img invertable" aria-hidden="true"></div>
-            <div class="logo-tile"><img src="/partners/bnixweill.png" alt="Burke Neurological Institute (duplicate)" class="logo-img invertable" aria-hidden="true"></div>
-            <div class="logo-tile"><img src="/partners/ecu.png" alt="East Carolina University (duplicate)" class="logo-img invertable" aria-hidden="true"></div>
-          </div>
+      
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 lg:gap-10">
+        <!-- Partner Logo 1 - Broad -->
+        <div class="bg-white/5 backdrop-blur-sm rounded-lg p-6 border border-white/10 hover:border-white/20 transition-all hover:bg-white/10 flex items-center justify-center h-24">
+          <img src="../public/partners/broad.png" alt="Broad Institute" class="max-h-12 max-w-full filter grayscale hover:grayscale-0 transition-all">
         </div>
-
-        <!-- Lane B (reverse) -->
-        <div class="overflow-hidden mask-edges mt-6">
-          <div class="marquee reverse" style="--duration:36s">
-            <!-- set 1 -->
-            <div class="logo-tile"><img src="/partners/eth-zurich.png" alt="ETH Zurich" class="logo-img invertable"></div>
-            <div class="logo-tile"><img src="/partners/uzh.png" alt="University of Zurich" class="logo-img invertable"></div>
-            <div class="logo-tile"><img src="/partners/znz.png" alt="Zurich Neuroscience Center" class="logo-img invertable"></div>
-            <div class="logo-tile"><img src="/partners/UWMedicine_wht.png" alt="University of Washington" class="logo-img invertable"></div>
-            <!-- duplicate set -->
-            <div class="logo-tile"><img src="/partners/eth-zurich.png" alt="ETH Zurich (duplicate)" class="logo-img invertable" aria-hidden="true"></div>
-            <div class="logo-tile"><img src="/partners/uzh.png" alt="University of Zurich (duplicate)" class="logo-img invertable" aria-hidden="true"></div>
-            <div class="logo-tile"><img src="/partners/znz.png" alt="Zurich Neuroscience Center (duplicate)" class="logo-img invertable" aria-hidden="true"></div>
-            <div class="logo-tile"><img src="/partners/UWMedicine_wht.png" alt="University of Washington (duplicate)" class="logo-img invertable" aria-hidden="true"></div>
-          </div>
+        
+        <!-- Partner Logo 2 - Stanley -->
+        <div class="bg-white/5 backdrop-blur-sm rounded-lg p-6 border border-white/10 hover:border-white/20 transition-all hover:bg-white/10 flex items-center justify-center h-24">
+          <img src="../public/partners/stanley.png" alt="Stanley Center" class="max-h-12 max-w-full filter grayscale hover:grayscale-0 transition-all">
+        </div>
+        
+        <!-- Partner Logo 3 - HMS -->
+        <div class="bg-white/5 backdrop-blur-sm rounded-lg p-6 border border-white/10 hover:border-white/20 transition-all hover:bg-white/10 flex items-center justify-center h-24">
+          <img src="../public/partners/harvard.png" alt="Harvard Medical School" class="max-h-12 max-w-full filter grayscale hover:grayscale-0 transition-all">
+        </div>
+        
+        <!-- Partner Logo 4 - Burke -->
+        <div class="bg-white/5 backdrop-blur-sm rounded-lg p-6 border border-white/10 hover:border-white/20 transition-all hover:bg-white/10 flex items-center justify-center h-24">
+          <img src="../public/partners/bnixweill.png" alt="Burke Neurological Institute" class="max-h-12 max-w-full filter grayscale hover:grayscale-0 transition-all">
+        </div>
+        
+        <!-- Partner Logo 5 - ZNZ -->
+        <div class="bg-white/5 backdrop-blur-sm rounded-lg p-6 border border-white/10 hover:border-white/20 transition-all hover:bg-white/10 flex items-center justify-center h-24">
+          <img src="../public/partners/znz.png" alt="Zurich Neuroscience Center" class="max-h-12 max-w-full filter grayscale hover:grayscale-0 transition-all">
+        </div>
+        
+        <!-- Partner Logo 6 - UZH -->
+        <div class="bg-white/5 backdrop-blur-sm rounded-lg p-6 border border-white/10 hover:border-white/20 transition-all hover:bg-white/10 flex items-center justify-center h-24">
+          <img src="../public/partners/uzh.png" alt="University of Zurich" class="max-h-12 max-w-full filter grayscale hover:grayscale-0 transition-all">
+        </div>
+        
+        <!-- Partner Logo 7 - ETH -->
+        <div class="bg-white/5 backdrop-blur-sm rounded-lg p-6 border border-white/10 hover:border-white/20 transition-all hover:bg-white/10 flex items-center justify-center h-24">
+          <img src="../public/partners/eth-zurich.png" alt="ETH Zurich" class="max-h-12 max-w-full filter grayscale hover:grayscale-0 transition-all">
+        </div>
+        
+        <!-- Partner Logo 8 - UW Medicine -->
+        <div class="bg-white/5 backdrop-blur-sm rounded-lg p-6 border border-white/10 hover:border-white/20 transition-all hover:bg-white/10 flex items-center justify-center h-24">
+          <img src="../public/partners/UWMedicine_wht.png" alt="University of Washington" class="max-h-12 max-w-full filter grayscale hover:grayscale-0 transition-all">
         </div>
       </div>
-
-      <!-- CTA + Contact (polished card) -->
-      <div class="mt-12 mb-8 max-w-xl mx-auto">
-        <div class="rounded-2xl bg-white/80 backdrop-blur border border-black/5 shadow-sm p-6 md:p-7">
-          <div class="flex items-start justify-center gap-4 mb-4">
-            <div>
-              <h3 class="text-xl font-semibold text-gray-900">Partner with us</h3>
-              <p class="text-gray-600 text-sm">Let’s explore a collaboration that moves the field forward.</p>
-            </div>
-            <!-- <a href="#footer-container" class="inline-flex items-center gap-2 rounded-full border border-black/10 px-4 py-2 text-sm font-medium text-gray-900 hover:bg-black/5 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 transition">
-              Learn more
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
-              </svg>
-            </a> -->
-          </div>
-
-          <form action="https://formspree.io/f/xvoezewb" method="POST" target="_blank" class="space-y-3">
-            <label class="sr-only" for="partner-email">Email</label>
-            <input id="partner-email" type="email" name="email" required placeholder="Your email"
-              class="w-full px-4 py-3 rounded-lg bg-white border border-gray-300 text-black placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
-
-            <label class="sr-only" for="partner-message">Message</label>
-            <textarea id="partner-message" name="message" rows="3" placeholder="Optional message"
-              class="w-full px-4 py-3 rounded-lg bg-white border border-gray-300 text-black placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 resize-none"></textarea>
-
-            <button type="submit" class="w-full inline-flex items-center justify-center gap-2 rounded-lg bg-black text-white px-6 py-3 font-medium hover:bg-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 transition">
-              Connect
-            </button>
-          </form>
-        </div>
+      
+      <div class="mt-12 mb-8">
+        <a href="#footer-container" class="btn-secondary mb-8 inline-block">
+          Partner With Us
+        </a>
+        
+        <!-- Contact Form -->
+        <form action="https://formspree.io/f/xvoezewb" method="POST" target="_blank" class="max-w-md mx-auto space-y-4">
+          <input type="email" placeholder="Your email" name="email" required
+                 class="w-full px-4 py-3 rounded-lg bg-deepmind-darker text-white placeholder-deepmind-gray-500 focus:outline-none focus:ring-2 focus:ring-deepmind-blue border border-deepmind-gray-600"/>
+          <textarea placeholder="Optional message" name="message" rows="3"
+                    class="w-full px-4 py-3 rounded-lg bg-deepmind-darker text-white placeholder-deepmind-gray-500 focus:outline-none focus:ring-2 focus:ring-deepmind-blue border border-deepmind-gray-600 resize-none"></textarea>
+          <button type="submit" class="btn-primary px-6 py-3 w-full">Connect</button>
+         </form>
       </div>
     </div>
   </div>
 </section>
-
-<!-- Utilities -->
-<style>
-  /* edge mask so loops are seamless */
-  .mask-edges{
-    -webkit-mask-image: linear-gradient(to right, transparent, #000 48px, #000 calc(100% - 48px), transparent);
-            mask-image: linear-gradient(to right, transparent, #000 48px, #000 calc(100% - 48px), transparent);
-  }
-
-  /* marquee tracks */
-  .marquee{
-    display:flex; align-items:center; gap:2rem;
-    width:max-content; /* shrink-to-content */
-    animation: scroll var(--duration, 30s) linear infinite;
-  }
-  .group:hover .marquee{ animation-play-state: paused; } /* pause on hover */
-  .marquee.reverse{ animation-name: scroll-reverse; }
-
-  @keyframes scroll{ from{ transform: translateX(0); } to{ transform: translateX(-50%); } }
-  @keyframes scroll-reverse{ from{ transform: translateX(-50%); } to{ transform: translateX(0); } }
-
-  /* logo tiles */
-  .logo-tile{
-    background:#fff;
-    border:1px solid #e5e7eb; /* gray-200 */
-    border-radius: .9rem;
-    padding: 1.25rem;
-    height: 5rem; min-width: 220px;
-    display:flex; align-items:center; justify-content:center;
-    box-shadow: 0 4px 18px rgba(0,0,0,.06);
-    transition: box-shadow .25s ease, transform .25s ease, border-color .25s ease;
-  }
-  .logo-tile:hover{ transform: translateY(-2px); border-color:#d1d5db; box-shadow: 0 10px 28px rgba(0,0,0,.10); }
-
-  .logo-img{
-    max-height: 2.5rem; max-width: 100%;
-    transition: transform .3s ease, opacity .3s ease;
-    opacity:1; filter: grayscale(1) contrast(1.05);
-  }
-  .logo-tile:hover .logo-img{ transform: scale(1.03); }
-
-  /* invert helper for white-on-transparent assets; remove with .no-invert on a specific <img> if needed */
-  .invertable{ filter: invert(1) grayscale(1) contrast(1.05); }
-  .no-invert{ filter: none !important; }
-
-  /* motion prefs */
-  @media (prefers-reduced-motion: reduce){
-    .marquee{ animation: none !important; transform: none !important; }
-  }
-</style>
-<!-- End: Our Partners (Modern, Dual-Lane) -->
+<!-- End: Our Partners Section Component -->
