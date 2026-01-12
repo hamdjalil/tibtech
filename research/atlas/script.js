@@ -11,20 +11,24 @@ const DATA_BASE = "data";
 
 const DATA_INDEX = {
   P4: {
-    animal1: ["C1", "C2", "C3", "C4"],
-    animal2: ["C1", "C2", "C3", "C4"],
-    animal3: ["GAD"],
-    animal4: ["Nissl"],
+    animal1: ["GAD"],
+    animal2: ["Nissl"],
+    animal3: ["C1", "C2", "C3", "C4"],
+    animal4: ["C1", "C2", "C3", "C4"],
   },
   P14: {
-    animal1: ["Nissl"],
-    animal2: ["GAD"],
+    animal1: ["GAD"],
+    animal2: ["Nissl"],
     animal3: ["C1", "C2", "C3", "C4"],
     animal4: ["C1", "C2", "C3", "C4"],
     animal5: ["C1", "C2", "C3", "C4"],
   },
   P56: {
-    animal201: ["C1"]
+    animal1: ["GAD"],
+    animal2: ["GAD1"],
+    animal3: ["C1", "C2", "C3", "C4"],
+    animal4: ["C1", "C2", "C3", "C4"],
+    animal5: ["C1", "C2", "C3", "C4"],
   }
 };
 
