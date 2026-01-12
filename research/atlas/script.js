@@ -17,7 +17,11 @@ const DATA_INDEX = {
     animal4: ["Nissl"],
   },
   P14: {
-    animal101: ["C1", "C2"]
+    animal1: ["Nissl"],
+    animal2: ["GAD"],
+    animal3: ["C1", "C2", "C3", "C4"],
+    animal4: ["C1", "C2", "C3", "C4"],
+    animal5: ["C1", "C2", "C3", "C4"],
   },
   P56: {
     animal201: ["C1"]
