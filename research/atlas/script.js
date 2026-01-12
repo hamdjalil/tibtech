@@ -1,101 +1,56 @@
-const DATA_BASE = "https://tibbtech2.s3.amazonaws.com";
-const MAX_DISPLAY_WIDTH = 400;
+const DATA_BASE = "data";
+// "https://tibbtech2.s3.amazonaws.com";
 
-let INDEX = null;
-let REGION_MAP = {};
+/*
+ Folder structure:
+ P4/
+   animal314_C1.png
+   animal314_C2.png
+   animal315_C1.png
+*/
 
-// UI elements
+const DATA_INDEX = {
+  P4: {
+    animal1: ["C1", "C2", "C3", "C4"],
+    animal2: ["C1", "C2", "C3", "C4"],
+    animal3: ["GAD"],
+    animal4: ["Nissl"],
+  },
+  P14: {
+    animal101: ["C1", "C2"]
+  },
+  P56: {
+    animal201: ["C1"]
+  }
+};
+
+// UI elements (already in your HTML)
 const ageEl = document.getElementById("age");
 const animalEl = document.getElementById("animal");
 const channelEl = document.getElementById("channel");
 const viewer = document.getElementById("viewer");
 
-// Fullscreen elements
-const fullscreenOverlay = document.getElementById("fullscreenOverlay");
-const fullscreenCanvas = document.getElementById("fullscreenCanvas");
-const closeFullscreen = document.getElementById("closeFullscreen");
-
-let fullscreenLabelCanvas = null;
-let fullscreenLabelCtx = null;
-
-let currentItems = [];
-let currentFullscreenIndex = 0;
-
-/* ------------------ Load index + region map ------------------ */
-
-fetch("data/index.json")
-  .then(r => r.json())
-  .then(d => {
-    INDEX = d;
-    populateAges();
-  });
-
-fetch("data/regions.json")
-  .then(r => r.json())
-  .then(d => {
-    REGION_MAP = d;
-    console.log("Region map loaded");
-  });
-
-
-const loaderEl = document.getElementById("globalLoader");
-
-function showLoader(text = "Loading…") {
-  loaderEl.style.display = "flex";
-  loaderEl.querySelector(".loader-text").textContent = text;
-}
-
-function hideLoader() {
-  loaderEl.style.display = "none";
-}
-
-/* ------------------ Tooltip ------------------ */
-
-const tooltip = document.createElement("div");
-tooltip.style.position = "fixed";
-tooltip.style.background = "rgba(0,0,0,0.8)";
-tooltip.style.color = "white";
-tooltip.style.padding = "4px 8px";
-tooltip.style.borderRadius = "4px";
-tooltip.style.fontSize = "12px";
-tooltip.style.pointerEvents = "none";
-tooltip.style.display = "none";
-tooltip.style.zIndex = "10000";
-document.body.appendChild(tooltip);
-
-function showTooltip(x, y, text) {
-  tooltip.textContent = text;
-  tooltip.style.left = x + 10 + "px";
-  tooltip.style.top = y + 10 + "px";
-  tooltip.style.display = "block";
-}
-
-function hideTooltip() {
-  tooltip.style.display = "none";
-}
-
-/* ------------------ Dropdowns ------------------ */
+/* ------------------ Populate dropdowns ------------------ */
 
 function populateAges() {
   ageEl.innerHTML = "";
-  Object.keys(INDEX).forEach(age =>
-    ageEl.add(new Option(age, age))
-  );
+  Object.keys(DATA_INDEX).forEach(age => {
+    ageEl.add(new Option(age, age));
+  });
 
-  ageEl.onchange = populateAnimals;
   populateAnimals();
 }
 
 function populateAnimals() {
   animalEl.innerHTML = "";
+
   const age = ageEl.value;
-  if (!INDEX[age]) return;
+  const animals = Object.keys(DATA_INDEX[age] || {});
 
-  Object.keys(INDEX[age]).sort().forEach(animal =>
-    animalEl.add(new Option(animal, animal))
-  );
+  animals.forEach(animal => {
+    animalEl.add(new Option(animal, animal));
+  });
 
-  animalEl.onchange = populateChannels;
   populateChannels();
 }
 
@@ -104,526 +59,48 @@ function populateChannels() {
 
   const age = ageEl.value;
   const animal = animalEl.value;
-  const data = INDEX[age]?.[animal];
+  const channels = DATA_INDEX[age]?.[animal] || [];
 
-  if (!data?.channels) return;
+  channels.forEach(ch => {
+    channelEl.add(new Option(ch, ch));
+  });
 
-  // Use keys in insertion order (from JSON) instead of sorting
-  Object.keys(data.channels).forEach(ch =>
-    channelEl.add(new Option(ch, ch))
-  );
-
-  channelEl.onchange = renderImages;
-  renderImages();
+  renderGrid();
 }
 
-// function renderImages() {
-//   viewer.innerHTML = "";
+/* ------------------ Render grid image ------------------ */
 
-//   const age = ageEl.value;
-//   const animal = animalEl.value;
-//   const channel = channelEl.value;
-
-//   const items = INDEX?.[age]?.[animal]?.channels?.[channel];
-//   if (!items) return;
-
-//   currentItems = items;
-
-//   const grid = document.createElement("div");
-//   grid.className = "image-grid";
-//   viewer.appendChild(grid);
-
-//   items.forEach((item, idx) => {
-//     // Container for label + image
-//     const container = document.createElement("div");
-//     container.style.display = "flex";
-//     container.style.flexDirection = "column";
-//     container.style.alignItems = "center";
-//     container.style.gap = "5px";
-
-//     // Add folder name on top
-//     // const label = document.createElement("div");
-//     // const folderName = item.path.split("/").pop(); // last part of path
-//     // label.textContent = folderName;
-//     // label.style.fontSize = "12px";
-//     // label.style.textAlign = "center";
-//     // label.style.wordBreak = "break-word";
-//     // container.appendChild(label);
-
-//     // Draw image + atlas
-//     drawOverlayImage(
-//       `${DATA_BASE}/${item.path}/${item.image}`,
-//       `${DATA_BASE}/${item.path}/${item.atlas}`,
-//       container,
-//       idx
-//     );
-
-//     grid.appendChild(container);
-//   });
-// }
-
-// function renderImages() {
-//   viewer.innerHTML = "";
-//   showLoader("Loading images…");
-
-//   const items =
-//     INDEX?.[ageEl.value]?.[animalEl.value]?.channels?.[channelEl.value];
-//   if (!items) {
-//     hideLoader();
-//     return;
-//   }
-
-//   currentItems = items;
-
-//   let imagesToLoad = items.length * 2; // image + atlas
-//   let loadedCount = 0;
-
-//   function oneLoaded() {
-//     loadedCount++;
-//     if (loadedCount >= imagesToLoad) {
-//       hideLoader();
-//     }
-//   }
-
-//   const grid = document.createElement("div");
-//   grid.className = "image-grid";
-//   viewer.appendChild(grid);
-
-//   items.forEach((item, idx) => {
-//     const container = document.createElement("div");
-//     container.style.display = "flex";
-//     container.style.flexDirection = "column";
-//     container.style.alignItems = "center";
-
-//     drawOverlayImage(
-//       `${DATA_BASE}/${item.path}/${item.image}`,
-//       `${DATA_BASE}/${item.path}/${item.atlas}`,
-//       container,
-//       idx,
-//       oneLoaded
-//     );
-
-//     grid.appendChild(container);
-//   });
-// }
-
-
-
-function renderImages() {
+function renderGrid() {
   viewer.innerHTML = "";
-  showLoader("Loading images…");
-
-  const items =
-    INDEX?.[ageEl.value]?.[animalEl.value]?.channels?.[channelEl.value];
-  if (!items) {
-    hideLoader();
-    return;
-  }
-
-  currentItems = items;
-
-  let firstImageShown = false;
-
-  function onFirstImageReady() {
-    if (!firstImageShown) {
-      firstImageShown = true;
-      hideLoader();
-    }
-  }
-
-  const grid = document.createElement("div");
-  grid.className = "image-grid";
-  viewer.appendChild(grid);
-
-  items.forEach((item, idx) => {
-    const container = document.createElement("div");
-    container.style.display = "flex";
-    container.style.flexDirection = "column";
-    container.style.alignItems = "center";
-
-    drawOverlayImage(
-      `${DATA_BASE}/${item.path}/${item.image}`,
-      `${DATA_BASE}/${item.path}/${item.atlas}`,
-      container,
-      idx,
-      onFirstImageReady
-    );
-
-    grid.appendChild(container);
-  });
-}
-
-function drawRegionBoundary(ctx, labelCtx, targetRGB, scaleX, scaleY) {
-  const { width, height } = labelCtx.canvas;
-  const imgData = labelCtx.getImageData(0, 0, width, height);
-  const data = imgData.data;
-
-  ctx.save();
-  ctx.strokeStyle = "black";
-  ctx.lineWidth = 1;
-  ctx.beginPath();
-
-  function same(i) {
-    return (
-      data[i] === targetRGB[0] &&
-      data[i + 1] === targetRGB[1] &&
-      data[i + 2] === targetRGB[2]
-    );
-  }
-
-  for (let y = 1; y < height - 1; y++) {
-    for (let x = 1; x < width - 1; x++) {
-      const i = (y * width + x) * 4;
-      if (!same(i)) continue;
-
-      const neighbors = [
-        i - 4,
-        i + 4,
-        i - width * 4,
-        i + width * 4
-      ];
-
-      if (neighbors.some(n => !same(n))) {
-        ctx.rect(
-          x * scaleX,
-          y * scaleY,
-          scaleX,
-          scaleY
-        );
-      }
-    }
-  }
-
-  ctx.stroke();
-  ctx.restore();
-}
-
-/* ------------------ Draw image + atlas + hover ------------------ */
-
-// function drawOverlayImage(imagePath, atlasPath, container, imgIdx) {
-function drawOverlayImage(imagePath, atlasPath, container, imgIdx, onFirstReady)
-{
-
-  const canvas = document.createElement("canvas");
-  canvas.style.cursor = "pointer";
-  const ctx = canvas.getContext("2d");
-
-  // OFFSCREEN canvas for pixel lookup
-  const labelCanvas = document.createElement("canvas");
-  const labelCtx = labelCanvas.getContext("2d", { willReadFrequently: true });
-
-  const img = new Image();
-  const atlas = new Image();
-
-  img.crossOrigin = "anonymous";
-  atlas.crossOrigin = "anonymous";
-
-  let loaded = 0;
-
-  // function tryDraw() {
-  //   if (loaded < 2) return;
-
-  //   canvas.width = img.width;
-  //   canvas.height = img.height;
-
-  //   // draw base image
-  //   ctx.drawImage(img, 0, 0);
-
-  //   // draw atlas overlay (visual)
-  //   ctx.globalAlpha = 0.4;
-  //   ctx.drawImage(atlas, 0, 0, img.width, img.height);
-  //   ctx.globalAlpha = 1.0;
-
-  //   // draw atlas to offscreen canvas (NO alpha)
-  //   labelCanvas.width = atlas.width;
-  //   labelCanvas.height = atlas.height;
-  //   labelCtx.drawImage(atlas, 0, 0);
-  // }
-
-  // img.onload = () => { loaded++; tryDraw(); };
-  // atlas.onload = () => { loaded++; tryDraw(); };
-  
-  function tryDraw() {
-    if (loaded < 2) return;
-
-    canvas.width = img.width;
-    canvas.height = img.height;
-
-    ctx.drawImage(img, 0, 0);
-    ctx.globalAlpha = 0.4;
-    ctx.drawImage(atlas, 0, 0, img.width, img.height);
-    ctx.globalAlpha = 1.0;
-
-    labelCanvas.width = atlas.width;
-    labelCanvas.height = atlas.height;
-    labelCtx.drawImage(atlas, 0, 0);
-
-    // 🔥 hide loader after FIRST image+atlas is drawn
-    onFirstReady?.(); 
-}
-
-  
-  img.onload = () => { loaded++; tryDraw(); };
-  atlas.onload = () => { loaded++; tryDraw(); };
-
-  img.onerror = () => console.error("Failed to load image:", imagePath);
-  atlas.onerror = () => console.error("Failed to load atlas:", atlasPath);
-
-  img.src = encodeURI(imagePath);
-  atlas.src = encodeURI(atlasPath);
-
-  /* -------- Hover region detection -------- */
-
-  canvas.addEventListener("mousemove", e => {
-    const rect = canvas.getBoundingClientRect();
-
-   const x = Math.floor(
-      (e.clientX - rect.left) * (labelCanvas.width / rect.width)
-    );
-    const y = Math.floor(
-      (e.clientY - rect.top) * (labelCanvas.height / rect.height)
-    );
-    if (
-      x < 0 || y < 0 ||
-      x >= labelCanvas.width ||
-      y >= labelCanvas.height
-    ) {
-      hideTooltip();
-      return;
-    }
-
-    const pixel = labelCtx.getImageData(x, y, 1, 1).data;
-    const key = `${pixel[0]},${pixel[1]},${pixel[2]}`;
-
-    const age = ageEl.value;
-    const regionName = REGION_MAP?.[age]?.[key];
-    console.log(key, REGION_MAP[ageEl.value]?.[key]);
-
-
-    if (regionName) {
-      showTooltip(e.clientX, e.clientY, regionName);
-    } else {
-      hideTooltip();
-    }
-  });
-
-  canvas.addEventListener("mouseleave", hideTooltip);
-
-  /* -------- Fullscreen -------- */
-
-  canvas.onclick = () => {
-    currentFullscreenIndex = imgIdx;
-    openFullscreen();
-  };
-
-  container.appendChild(canvas);
-}
-
-/* ------------------ Fullscreen ------------------ */
-
-// function openFullscreen() {
-//   fullscreenOverlay.style.display = "flex";
-//   renderFullscreenImage();
-// }
-
-function openFullscreen() {
-  showLoader("Loading image…");
-  fullscreenOverlay.style.display = "flex";
-  renderFullscreenImage();
-}
-
-// function renderFullscreenImage() {
-//   const item = currentItems[currentFullscreenIndex];
-//   if (!item) return;
-
-//   const ctx = fullscreenCanvas.getContext("2d");
-
-//   const img = new Image();
-//   const atlas = new Image();
-
-//   fullscreenLabelCanvas = document.createElement("canvas");
-//   fullscreenLabelCtx = fullscreenLabelCanvas.getContext("2d", {
-//     willReadFrequently: true
-//   });
-
-//   let loaded = 0;
-
-//   function tryDraw() {
-//     if (loaded < 2) return;
-
-//     // INTERNAL canvas resolution = native image size
-//     fullscreenCanvas.width = img.width;
-//     fullscreenCanvas.height = img.height;
-
-//     ctx.clearRect(0, 0, fullscreenCanvas.width, fullscreenCanvas.height);
-
-//     // draw base image
-//     ctx.drawImage(img, 0, 0);
-
-//     // draw atlas overlay (visual only)
-//     ctx.globalAlpha = 0.6;
-//     ctx.drawImage(atlas, 0, 0);
-//     ctx.globalAlpha = 1.0;
-
-//     // OFFSCREEN atlas (no alpha)
-//     fullscreenLabelCanvas.width = atlas.width;
-//     fullscreenLabelCanvas.height = atlas.height;
-//     fullscreenLabelCtx.drawImage(atlas, 0, 0);
-//   }
-
-//   img.onload = () => { loaded++; tryDraw(); };
-//   atlas.onload = () => { loaded++; tryDraw(); };
-
-//   img.src = `data/${item.path}/${item.image}`;
-//   atlas.src = `data/${item.path}/${item.atlas}`;
-// }
-
-function renderFullscreenImage() {
-  const item = currentItems[currentFullscreenIndex];
-  if (!item) return;
-
-  const ctx = fullscreenCanvas.getContext("2d");
-
-  const img = new Image();
-  const atlas = new Image();
-
-  img.crossOrigin = "anonymous";
-  atlas.crossOrigin = "anonymous";
-
-  fullscreenLabelCanvas = document.createElement("canvas");
-  fullscreenLabelCtx = fullscreenLabelCanvas.getContext("2d", {
-    willReadFrequently: true
-  });
-
-  let loaded = 0;
-
-  function tryDraw() {
-    if (loaded < 2) return;
-
-    // internal resolution = native image
-    fullscreenCanvas.width = img.width;
-    fullscreenCanvas.height = img.height;
-
-    // visual scaling
-    fullscreenCanvas.style.width = "90vw";
-    fullscreenCanvas.style.height = "90vh";
-
-    ctx.clearRect(0, 0, fullscreenCanvas.width, fullscreenCanvas.height);
-
-    // base image
-    ctx.drawImage(img, 0, 0);
-
-    // atlas overlay (visual only)
-    ctx.globalAlpha = 0.6;
-    ctx.drawImage(atlas, 0, 0, img.width, img.height);
-    ctx.globalAlpha = 1.0;
-
-    // OFFSCREEN atlas for hover (NO alpha)
-    fullscreenLabelCanvas.width = atlas.width;
-    fullscreenLabelCanvas.height = atlas.height;
-    fullscreenLabelCtx.drawImage(atlas, 0, 0);
-  }
-
-//   function tryDraw() {
-//   if (loaded < 2) return;
-
-//   const scale = Math.min(1, MAX_DISPLAY_WIDTH / img.width);
-
-//   const displayW = Math.round(img.width * scale);
-//   const displayH = displayW
-//   console.log("")
-//   // Math.round(img.height * scale);
-
-//   // 🔹 Visible canvas = SCALED
-//   canvas.width = displayW;
-//   canvas.height = displayH;
-
-//   ctx.clearRect(0, 0, displayW, displayH);
-
-//   // Base image (scaled)
-//   ctx.drawImage(img, 0, 0, displayW, displayH);
-
-//   // Atlas overlay (scaled, visual only)
-//   ctx.globalAlpha = 0.4;
-//   ctx.drawImage(atlas, 0, 0, displayW, displayH);
-//   ctx.globalAlpha = 1.0;
-
-//   // 🔹 OFFSCREEN label canvas = FULL RES (IMPORTANT)
-//   labelCanvas.width = atlas.width;
-//   labelCanvas.height = atlas.height;
-//   labelCtx.drawImage(atlas, 0, 0);
-
-//   onFirstReady?.();
-// }
-  img.onload = () => { loaded++; tryDraw(); };
-  atlas.onload = () => { loaded++; tryDraw(); };
-
-  img.onerror = () => console.error("Fullscreen image failed:", img.src);
-  atlas.onerror = () => console.error("Fullscreen atlas failed:", atlas.src);
-
-  // ✅ FIXED: use S3 paths
-  img.src = encodeURI(`${DATA_BASE}/${item.path}/${item.image}`);
-  atlas.src = encodeURI(`${DATA_BASE}/${item.path}/${item.atlas}`);
-  hideLoader();
-}
-
-fullscreenCanvas.addEventListener("mousemove", e => {
-  if (!fullscreenLabelCanvas) return;
-
-  const rect = fullscreenCanvas.getBoundingClientRect();
-
-  // Map CSS pixels → image pixels
-  const x = Math.floor(
-    (e.clientX - rect.left) * (fullscreenLabelCanvas.width / rect.width)
-  );
-  const y = Math.floor(
-    (e.clientY - rect.top) * (fullscreenLabelCanvas.height / rect.height)
-  );
-
-  if (
-    x < 0 || y < 0 ||
-    x >= fullscreenLabelCanvas.width ||
-    y >= fullscreenLabelCanvas.height
-  ) {
-    hideTooltip();
-    return;
-  }
-
-  const pixel = fullscreenLabelCtx.getImageData(x, y, 1, 1).data;
-  const key = `${pixel[0]},${pixel[1]},${pixel[2]}`;
 
   const age = ageEl.value;
-  const regionName = REGION_MAP?.[age]?.[key];
+  const animal = animalEl.value;
+  const channel = channelEl.value;
 
-  if (regionName) {
-    showTooltip(e.clientX, e.clientY, regionName);
-  } else {
-    hideTooltip();
-  }
-});
+  if (!age || !animal || !channel) return;
 
-fullscreenCanvas.addEventListener("mouseleave", hideTooltip);
+  const img = document.createElement("img");
 
-/* ------------------ Fullscreen controls ------------------ */
+  img.src = `${DATA_BASE}/${age}/${animal}_${channel}.png`;
+  img.alt = `${animal} ${channel} grid`;
+  img.style.maxWidth = "100%";
+  img.style.borderRadius = "6px";
+  img.style.boxShadow = "0 4px 14px rgba(0,0,0,0.12)";
 
-closeFullscreen.onclick = () => {
-  fullscreenOverlay.style.display = "none";
-};
+  img.onerror = () => {
+    viewer.innerHTML =
+      `<p style="color:#888;">Grid image not found.</p>`;
+  };
 
-document.addEventListener("keydown", e => {
-  if (fullscreenOverlay.style.display !== "flex") return;
+  viewer.appendChild(img);
+}
 
-  if (e.key === "ArrowRight" && currentFullscreenIndex < currentItems.length - 1) {
-    currentFullscreenIndex++;
-    renderFullscreenImage();
-  }
+/* ------------------ Event bindings ------------------ */
 
-  if (e.key === "ArrowLeft" && currentFullscreenIndex > 0) {
-    currentFullscreenIndex--;
-    renderFullscreenImage();
-  }
+ageEl.addEventListener("change", populateAnimals);
+animalEl.addEventListener("change", populateChannels);
+channelEl.addEventListener("change", renderGrid);
 
-  if (e.key === "Escape") {
-    fullscreenOverlay.style.display = "none";
-  }
-});
+/* ------------------ Init ------------------ */
+
+populateAges();

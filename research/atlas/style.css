@@ -801,3 +801,17 @@ h6 {
 @keyframes spin {
   to { transform: rotate(360deg); }
 }
+
+
+#viewer img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 6px;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.12);
+    }
+
+    /* #viewer {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    } */

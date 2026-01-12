@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-38PESE35X3"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-38PESE35X3');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atlas</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Lora:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    
+
+</head>
+<div id="globalLoader">
+  <div class="spinner"></div>
+  <div class="loader-text">Loading data…</div>
+</div>
+<body style="background-color: rgb(255, 255, 255); padding-top: 100px;">
+    <a href="https://tibbtech.com/" target="_blank">
+        <div id="navbar" class="noto" style="position: fixed; top: 0; left: 0; width: 100%; height: 87px; display: flex; align-items: flex-end; padding: 0px 48px 4px 48px; max-width: 1920px; margin: 0 auto; z-index: 50; background-color: rgb(255, 255, 255);">
+            <img src="../../public/logo-small.png" style="height: 80px; width: auto;" />
+        </div>
+    </a>
+    <!-- <div id="hidden-nav"> 
+        <div onclick="toggleNav()" style="position: absolute; top: 10px; right: 30px">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" style="width: 20px; height: 20px;">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+            </svg>              
+        </div>  
+        <div onclick="scrollEle('about')">About</div>
+        <div onclick="scrollEle('contact-section')">Contact</div>
+        <div onclick="scrollEle('team')">Team</div>
+    </div> -->
+
+    <main class="main-container">
+        <section class="hero">
+            <h1 style="font-size: 35px;">Developing Mouse Brain Cortical Atlas</h1>
+            <!-- <p class="title"> Multimodal Vision Framework for Behavior-based Precision Livestock Farming </p> -->
+            <!-- <p class="author-info">Dec 08, 2024</p> -->
+            <!-- <p class="author-info">By Asim <br> Tibbling Technologies</p> -->
+            <!-- <div class="slider">
+                <img src="AnimalFormer_figures/AnimalFormer_Updated_Sheep_Only_Faster.gif" alt="Main Image" class="main-image"> -->
+                <!-- <video controls autoplay muted loop id="AnimalFormer_video" class = "video" >
+                    <source src="AnimalFormer_figures/AnimalFormer Animation.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video> -->
+            <!-- </div> --> 
+        </section>
+        <section class="gallery-section">       
+            <div class="form-container">
+                <p>Please select the mouse age (P4, P14, P56), animal type and channel.</p>
+                <div class="dropdown-row">
+                    <label>Age:
+                        <select id="age" class="styled-select"></select>
+                    </label>
+
+                    <label>Animal:
+                        <select id="animal" class="styled-select"></select>
+                    </label>
+
+                    <label>Channel:
+                        <select id="channel" class="styled-select"></select>
+                    </label>
+                </div>
+            </div>
+            <div class="gallery-container" style="position: relative; display: flex; justify-content: center; align-items: center;">
+            <!-- <button id="prevArrow" class="nav-arrow">&#8592;</button> -->
+            <div id="viewer"></div>
+            <!-- <button id="nextArrow" class="nav-arrow">&#8594;</button> -->
+            </div>
+
+            <!-- Fullscreen overlay -->
+            <div id="fullscreenOverlay">    
+            <span id="closeFullscreen">&times;</span>
+            <canvas id="fullscreenCanvas"></canvas>
+            </div>
+
+            <script src="script.js"></script>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-container center-col" style="margin-top: 30px;">
+            <!-- <div class="social-follow">
+                <span>Follow us on</span>
+                <a href="https://x.com/tibbtech?mx=2" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+            </div> -->
+            © Tibbling Technologies · All Rights Reserved
+        </div>
+    </footer>
+    
+
+    <script>
+        var nav_open = false
+        let hidden_nav = document.getElementById("hidden-nav")
+        // document.getElementById('mouse_btn').addEventListener("focus", focusFunction);
+        // document.getElementById("mouse_btn").focus()
+        
+        document.addEventListener('click', (e) => {
+            if (nav_open && !hidden_nav.contains(e.target)) {
+                toggleNav()
+            }
+        })
+
+        function toggleNav(e) {
+            nav_open = hidden_nav.style.right == "0px"
+            hidden_nav.style.right = nav_open ? "-300px" : "0px"
+            nav_open = !nav_open
+
+            // we do not want this event to propagate to the window event listener
+            e?.stopPropagation()
+        }
+
+        function scrollEle(ele) {
+            toggleNav()
+            document.getElementById(ele).scrollIntoView({ behavior: 'smooth', block: "center", inline: "nearest" })
+        }
+
+        // Slider functionality
+        // var slideIndex = 0;
+        // showSlides(slideIndex);
+
+        // function changeSlide(n) {
+        //     showSlides(slideIndex += n);
+        // }
+        
+        // function showSlides(n) {
+        //     var i;
+        //     var slides = document.getElementsByClassName("main-image");
+        //     if (n >= slides.length) { slideIndex = 0 }
+        //     if (n < 0) { slideIndex = slides.length - 1 }
+        //     for (i = 0; i < slides.length; i++) {
+        //         slides[i].style.display = "none";
+        //     }
+        //     slides[slideIndex].style.display = "block";
+        // }
+
+        // Automatic slideshow
+        // setInterval(function() {
+        //     changeSlide(1);
+        // }, 3000); // Change image every 3 seconds
+
+        
+        // function focusFunction(){
+        //     //Write your script here
+        //     console.log('Focused');
+        //     document.getElementById("mouse_btn").style.backgroundColor = "red";
+        // }
+        // Function to show the selected behavior section
+        function showSection(section, clickedButton) {
+            var sections = document.getElementsByClassName("behavior-section");
+            for (var i = 0; i < sections.length; i++) {
+                sections[i].style.display = "none";
+                }
+            
+            document.getElementById(section).style.display = "block";
+            
+            var buttons = document.getElementsByClassName('navigate-button');
+            console.log(buttons);
+            for (var i = 0; i < buttons.length; i++) {
+                buttons[i].classList.remove('default-focused');
+            }
+            // Add active class to the clicked button
+            clickedButton.classList.add('default-focused');
+        }
+
+        
+        document.addEventListener('DOMContentLoaded', function () {
+            var video = document.getElementById('AnimalFormer_video');
+            video.playbackRate = 2;
+            video.play();
+        });
+
+        function navigateTopaper() {
+            window.open('https://openreview.net/pdf?id=sGLqjAVep4',  '_blank'); // Replace with your desired URL
+        }
+
+        function sendEmail() {
+            var email = 'asim@tibbtech.com'; // Replace with your email address
+            window.location.href = `mailto:${email}`;
+        }
+  
+        
+    </script>
+</body>
+</html>
