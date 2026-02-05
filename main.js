@@ -9,6 +9,10 @@ async function loadComponent(containerId, fragmentPath) {
     const resp = await fetch(fragmentPath);
     if (!resp.ok) throw new Error(`Failed to load ${fragmentPath}: ${resp.statusText}`);
     host.innerHTML = await resp.text();
+    const yearEl = host.querySelector('#year');
+    if (yearEl) {
+      yearEl.textContent = new Date().getFullYear();
+    }
   } catch (err) {
     console.error(`Couldn't load ${fragmentPath}:`, err);
   }
